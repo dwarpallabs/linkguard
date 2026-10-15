@@ -1,0 +1,9 @@
+# Fake shortener responses for offline tests. from(host+path)<TAB>location or "-"<TAB>content type (optional)
+bit.ly/3xAmPl3	http://sbi-rewards-redeem.xyz/claim
+youtu.be/dQw4w9WgXcQ	https://www.youtube.com/watch?v=dQw4w9WgXcQ
+maps.app.goo.gl/abc123	https://www.google.com/maps/place/Chennai
+tinyurl.com/lgtest-sbi-kyc	http://sbi-kyc-verify.xyz/login
+is.gd/lgtestupi	upi://pay?pa=collect.now@ybl&pn=Electricity%20Board&am=4999
+cutt.ly/lgtestapk	http://lg-free-recharge.example.net/Recharge.apk
+t.ly/lgtestct	-	application/vnd.android.package-archive
+bit.ly/lgtest-irctc	https://www.irctc.co.in/nget/train-search

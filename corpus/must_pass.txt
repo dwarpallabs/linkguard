@@ -12,3 +12,22 @@ https://www.flipkart.com/offers	allowlist	shopping
 https://drive.google.com/file/d/abc/view	allowlist	shared file link
 https://sbi.co.in/web/personal-banking	allowlist	real SBI corporate site
 https://www.thehindu.com/news/	allowlist	news
+https://bit.ly/lgtest-irctc	unwrap	shortener to real IRCTC
+https://play.google.com/store/apps/details?id=com.phonepe.app	apk_download	official Play Store page, not an APK
+https://www.thehindu.com/sci-tech/technology/what-is-an-apk-file/article1.ece	apk_download	article mentioning apk
+https://www.mediafire.com/file/lgtest/holiday_photos.zip/file	apk_download	file-share link without an APK
+https://www.axisbank.com/	brand_lookalike	real Axis Bank
+https://www.pnbmetlife.com/	brand_lookalike	real PNB MetLife: pnbmetlife is not the pnb token
+https://www.wsbi.org/	brand_lookalike	wsbi is not the sbi token
+https://www.npci.org.in/what-we-do/upi/product-overview	upi_intent	page about UPI, not a payment link
+https://www.bhimupi.org.in/	upi_intent	official BHIM UPI site
+https://www.livemint.com/money/personal-finance/upi-payment-limits	upi_intent	news about UPI
+https://abc.xyz/	weird_host	Alphabet on .xyz, allowlisted
+https://www.thehindu.com/topic/sbi/	weird_host	brand in path of a normal host
+https://www.ndtv.com/business/hdfc-bank-results	weird_host	brand in path of a normal host
+https://www.example.com/	reputation	not on any blocklist
+https://www.rbi.org.in/	reputation	regulator, allowlisted
+https://lg-test-phishing-awareness.org/	reputation	name resembles a fixture entry but is not listed
+https://cleartax.in/	domain_age	old domain, not allowlisted
+https://in.bookmyshow.com/	domain_age	subdomain of an old domain, not allowlisted
+https://www.lg-old-shop.in/	domain_age	old domain (test fixture date)

@@ -1,0 +1,22 @@
+# Brands scammers imitate. name<TAB>keywords<TAB>official domains
+# Keywords: <=4 chars must be a whole token (sbi, jio); longer ones also match inside labels and one edit away.
+# Official domains: registrable domains, or suffixes starting with "." (".sbi" = every host under the .sbi TLD).
+# Every *.bank.in / *.gov.in host is already allowlisted, so those are not repeated here.
+SBI	sbi,onlinesbi,yonosbi,statebank,statebankofindia	.sbi,sbi.co.in,sbicard.com,sbilife.co.in,sbimf.com,sbigeneral.in,sbisecurities.in
+HDFC Bank	hdfc,hdfcbank,hdfcnetbanking	hdfcbank.com,hdfc.com,hdfclife.com,hdfcergo.com,hdfcfund.com,hdfcsec.com
+ICICI Bank	icici,icicibank	icicibank.com,icicidirect.com,icicilombard.com,iciciprulife.com,icicipruamc.com,icicisecurities.com
+Axis Bank	axisbank	axisbank.com,axisbank.co.in,axisdirect.in,axismf.com
+Punjab National Bank	pnb,pnbindia,netpnb,punjabnationalbank	pnbindia.in,netpnb.com,pnbhousing.com
+PhonePe	phonepe	phonepe.com
+Paytm	paytm	paytm.com,paytm.in,paytmbank.com,paytmmoney.com,paytmmall.com,paytmpayments.bank.in
+Google Pay	gpay,googlepay	google.com,google.co.in
+India Post	indiapost,ippb,ippbonline,indiapostbank	ippbonline.com
+Delhivery	delhivery	delhivery.com
+Blue Dart	bluedart	bluedart.com
+IRCTC	irctc	irctc.co.in,irctc.com,irctctourism.com
+Income Tax Department	incometax,incometaxindia,itrefund	
+UIDAI (Aadhaar)	uidai,aadhaar,aadhar,maadhaar	
+EPFO	epfo,epfindia,uanepf	
+NPCI	npci,bhimupi	npci.org.in,bhimupi.org.in
+Airtel	airtel	airtel.in,airtel.com,airtelxstream.in,airtelpaymentsbank.com
+Jio	jio,myjio,reliancejio	jio.com,jiomart.com,jiocinema.com,jiosaavn.com,jiohotstar.com

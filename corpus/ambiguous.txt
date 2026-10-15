@@ -3,3 +3,6 @@
 http://newstartup-offers.xyz/	domain_age	young domain with no brand hit — should be soft at most
 https://sbicard.com/	allowlist	legit SBI subsidiary on a non-obvious domain — must be on allowlist
 https://pages.razorpay.com/pl_abc	allowlist	legit payment page host used by many small businesses
+https://lg-fresh-store.com/	domain_age	3-day-old domain, no other signal: soft warning
+https://new-offer-portal.in/	domain_age	10-day-old domain: soft warning
+https://lg-mid-age.net/	domain_age	45-day-old domain: should be silent

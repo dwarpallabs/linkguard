@@ -3,7 +3,12 @@
 Open-source Android app that sits between links tapped in WhatsApp/Telegram/SMS and the user's real browser. It inspects the URL in under 300 ms and either forwards silently or shows one plain-language warning. Target users: first-time smartphone users in India. Licence: Apache-2.0.
 
 ## Non-negotiables
-- Never log, store or transmit the URLs a user opens. All v1 checks run on-device. Network is used only for reputation lookups by hash prefix and for feed updates, never with the full URL.
+- Never log, store or transmit the URLs a user opens. All v1 checks run on-device. Network is used only for:
+  - redirect lookups (HEAD, HTTPS) to hosts on `data/…/shorteners.txt`, never to the final destination;
+  - RDAP registration-date lookups that send only the registrable domain (`example.com`), over HTTPS;
+  - reputation lookups by hash prefix;
+  - feed updates.
+  Nothing else, and never the full URL to anyone but a shortener the link already points at. Any in-memory cache dies with the process; nothing about opened links is written to disk.
 - Never add friction to a safe link. If every check passes, the user sees nothing.
 - Never block. The warning always offers "Open anyway".
 - No accounts, no analytics SDKs, no ads, no third-party trackers.
