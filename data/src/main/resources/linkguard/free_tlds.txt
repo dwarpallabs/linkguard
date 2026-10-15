@@ -1,0 +1,19 @@
+# Free or throwaway top-level domains heavily used for scams.
+tk
+ml
+ga
+cf
+gq
+xyz
+top
+icu
+buzz
+cfd
+sbs
+cyou
+monster
+rest
+click
+lol
+quest
+bond

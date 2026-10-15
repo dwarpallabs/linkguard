@@ -1,0 +1,27 @@
+# Link shorteners whose redirects Unwrap follows. Only these hosts are ever contacted.
+bit.ly
+bitly.com
+t.co
+tinyurl.com
+cutt.ly
+is.gd
+v.gd
+t.ly
+rb.gy
+ow.ly
+buff.ly
+shorturl.at
+s.id
+rebrand.ly
+tiny.cc
+goo.gl
+maps.app.goo.gl
+youtu.be
+amzn.to
+amzn.in
+fkrt.it
+fkrt.cc
+wa.link
+lnkd.in
+surl.li
+qr.ae

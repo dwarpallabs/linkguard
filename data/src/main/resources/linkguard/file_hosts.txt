@@ -1,0 +1,19 @@
+# File-sharing hosts. Combined with "apk" in the URL, a link here counts as an app download.
+drive.google.com
+docs.google.com
+dropbox.com
+mediafire.com
+mega.nz
+we.tl
+wetransfer.com
+1drv.ms
+onedrive.live.com
+sendspace.com
+gofile.io
+pixeldrain.com
+anonfiles.com
+file.io
+transfer.sh
+terabox.com
+github.com
+githubusercontent.com

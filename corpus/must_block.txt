@@ -12,3 +12,20 @@ http://bit.ly/3xAmPl3	unwrap	shortener resolving to a must_block target
 upi://pay?pa=scammer@upi&pn=Electricity&am=4999	upi_intent	UPI collect disguised as bill
 http://income-tax-refund-gov.in/claim	brand_lookalike	tax refund phishing
 http://epfo-balance-check.net/	brand_lookalike	EPFO lookalike
+https://tinyurl.com/lgtest-sbi-kyc	unwrap	shortener to SBI KYC lookalike
+https://is.gd/lgtestupi	unwrap	shortener redirecting to a UPI collect request
+https://cutt.ly/lgtestapk	apk_download	shortener to an APK on an unknown host
+https://www.mediafire.com/file/lgtest/WhatsApp_Gold_apk/file	apk_download	APK on a file-share host
+https://t.ly/lgtestct	apk_download	shortener that serves the APK itself (Content-Type only)
+http://hdfcb4nk-netbanking.xyz/login	brand_lookalike	digit swap 4 for a
+http://phonpe-rewards.in/claim	brand_lookalike	one-letter typo of PhonePe
+https://axisbank-kyc-update.com/	brand_lookalike	brand plus KYC on attacker domain
+http://xn--irtel-3ve.com/recharge	brand_lookalike	Cyrillic а homograph of airtel
+upi://pay?pa=kyc.refund@okaxis&pn=SBI%20Refund&am=1	upi_intent	fake refund needing a 1 rupee payment
+upi://pay?pa=lucky.winner@paytm&pn=KBC%20Lottery&am=25000&tn=Processing%20fee	upi_intent	lottery processing fee
+http://192.0.2.44/hdfc/verify	weird_host	raw IP with brand in path
+http://onlinesbi.sbi@198.51.100.7/login	weird_host	userinfo trick showing a real bank host
+https://secure.login.verify.account.lg-update.top/?bank=icici	weird_host	deep subdomains, throwaway TLD, brand in query
+https://login.lg-test-phish.com/	reputation	blocklisted domain (test fixture)
+http://lg-test-malware.net/drop	reputation	blocklisted domain (test fixture)
+https://cdn.lg-test-scam.org/pay	reputation	subdomain of a blocklisted domain (test fixture)

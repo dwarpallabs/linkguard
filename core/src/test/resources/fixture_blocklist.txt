@@ -1,0 +1,4 @@
+# Plain-text blocklist fixture; hashed at load like the real bundle.
+lg-test-phish.com
+lg-test-malware.net
+lg-test-scam.org

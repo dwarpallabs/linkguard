@@ -1,0 +1,2 @@
+# SHA-256 (lowercase hex) of blocked hosts or registrable domains, one per line.
+# Day-zero snapshot. Empty until the feeds pipeline (URLhaus, OpenPhish, PhishTank) fills it.
