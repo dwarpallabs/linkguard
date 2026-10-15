@@ -1,0 +1,14 @@
+# every one must score ≥ 0.7
+# url	expected_check	note
+http://sbi-rewards-redeem.xyz/claim	brand_lookalike	SBI reward points scam
+http://hdfc-kyc-update.top/verify	brand_lookalike	KYC update phishing
+http://indiapost-parcel.in/redelivery	brand_lookalike	courier redelivery fee scam
+http://icici.bank-secure-login.com/	brand_lookalike	brand as subdomain of attacker domain
+http://xn--phnepe-xya.com/	brand_lookalike	punycode homograph
+http://paytm-cashback.co/app/PaytmCashback.apk	apk_download	APK install scam
+http://103.21.58.12/sbi/login	weird_host	raw IP host with brand keyword
+http://irctc-tatkal-booking.tk/	brand_lookalike	free TLD plus brand
+http://bit.ly/3xAmPl3	unwrap	shortener resolving to a must_block target
+upi://pay?pa=scammer@upi&pn=Electricity&am=4999	upi_intent	UPI collect disguised as bill
+http://income-tax-refund-gov.in/claim	brand_lookalike	tax refund phishing
+http://epfo-balance-check.net/	brand_lookalike	EPFO lookalike

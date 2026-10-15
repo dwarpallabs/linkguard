@@ -1,0 +1,48 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Build outputs
+build/
+.kotlin/
+/release
+/debug
+/app/release
+/app/debug
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+output-metadata.json
+
+# Signing keys — never commit
+*.jks
+*.keystore
+keystore.properties
+
+# IDE
+.idea/*
+!.idea/codeStyles/
+.vscode/
+*.swp
+*~
+
+# Logs and heap dumps
+*.log
+*.hprof
+
+# Private notes — never commit
+docs/private/

@@ -1,0 +1,5 @@
+# logged, not asserted; use to tune thresholds
+# url	expected_check	note
+http://newstartup-offers.xyz/	domain_age	young domain with no brand hit — should be soft at most
+https://sbicard.com/	allowlist	legit SBI subsidiary on a non-obvious domain — must be on allowlist
+https://pages.razorpay.com/pl_abc	allowlist	legit payment page host used by many small businesses

@@ -1,0 +1,14 @@
+# every one must score < 0.3 and never show the interstitial
+# url	expected_check	note
+https://www.onlinesbi.sbi/	allowlist	real SBI net banking
+https://netbanking.hdfcbank.com/	allowlist	real HDFC
+https://www.indiapost.gov.in/	allowlist	real India Post
+https://www.irctc.co.in/	allowlist	real IRCTC
+https://www.incometax.gov.in/	allowlist	real income tax portal
+https://youtu.be/dQw4w9WgXcQ	unwrap	legit shortener to YouTube
+https://wa.me/919876543210	allowlist	WhatsApp click-to-chat
+https://maps.app.goo.gl/abc123	unwrap	Google Maps short link
+https://www.flipkart.com/offers	allowlist	shopping
+https://drive.google.com/file/d/abc/view	allowlist	shared file link
+https://sbi.co.in/web/personal-banking	allowlist	real SBI corporate site
+https://www.thehindu.com/news/	allowlist	news
