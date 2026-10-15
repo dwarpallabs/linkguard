@@ -2,4 +2,16 @@
 <resources>
 
     <style name="Theme.Linkguard" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Invisible while forwarding: no background, no dim, no window animation. -->
+    <style name="Theme.Linkguard.Intercept">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
 </resources>

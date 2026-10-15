@@ -1,0 +1,16 @@
+<resources>
+    <!-- TODO: native review. Machine-drafted Tamil; must be checked by a native speaker before release. -->
+    <string name="onboarding_title">இணைப்புகள் திறக்கும் முன் LinkGuard அவற்றைச் சரிபார்க்கிறது</string>
+    <string name="onboarding_body">WhatsApp, Telegram அல்லது SMS-இல் ஒரு இணைப்பைத் தட்டும்போது, LinkGuard முதலில் அதைச் சரிபார்க்கிறது. பாதுகாப்பான இணைப்புகள் உடனே உங்கள் உலாவியில் திறக்கும். ஒரு இணைப்பு மோசடியாகத் தோன்றினால், எச்சரிக்கை காட்டப்படும், அப்போதும் நீங்கள் அதைத் திறக்கலாம்.</string>
+    <string name="onboarding_privacy">நீங்கள் திறக்கும் இணைப்புகளை LinkGuard ஒருபோதும் சேமிப்பதும் இல்லை, அனுப்புவதும் இல்லை. கணக்கு தேவையில்லை.</string>
+
+    <string name="default_heading">படி 1: LinkGuard-ஐ உங்கள் இயல்பு உலாவியாக அமைக்கவும்</string>
+    <string name="default_done">LinkGuard உங்கள் இயல்பு உலாவி</string>
+    <string name="default_button">இயல்பு உலாவியாக அமை</string>
+    <string name="default_hint">அமைப்புகள் திறந்தால், “உலாவி ஆப்ஸ்” என்பதைத் தட்டி LinkGuard-ஐத் தேர்ந்தெடுக்கவும்.</string>
+
+    <string name="browser_heading">படி 2: இணைப்புகளை இதில் திற</string>
+    <string name="browser_none">வேறு உலாவி எதுவும் இல்லை. Chrome போன்ற ஒரு உலாவியை நிறுவவும்.</string>
+
+    <string name="telegram_tip">Telegram பயன்படுத்துகிறீர்களா? LinkGuard இணைப்புகளைச் சரிபார்க்க, அதன் உள்ளமைந்த உலாவியை அணைக்கவும் (Settings → Chat Settings → In-app browser).</string>
+</resources>

@@ -24,3 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "linkguard"
 include(":app")
+include(":core")
+include(":data")
