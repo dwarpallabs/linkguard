@@ -1,4 +1,4 @@
-package com.example.linkguard
+package com.dwarpallabs.linkguard
 
 import org.junit.Test
 

@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.linkguard"
+    namespace = "com.dwarpallabs.linkguard"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.linkguard"
+        applicationId = "com.dwarpallabs.linkguard"
         minSdk = 24
         targetSdk = 37
         versionCode = 1

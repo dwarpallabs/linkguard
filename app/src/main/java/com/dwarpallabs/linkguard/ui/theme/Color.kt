@@ -1,4 +1,4 @@
-package com.example.linkguard.ui.theme
+package com.dwarpallabs.linkguard.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
