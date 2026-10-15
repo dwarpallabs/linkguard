@@ -11,12 +11,20 @@ android {
 
     defaultConfig {
         applicationId = "com.dwarpallabs.linkguard"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions += "distribution"
+    productFlavors {
+        // F-Droid build: must never pull in Google dependencies.
+        create("foss") { dimension = "distribution" }
+        // Play Store build: later adds Play Integrity and Safe Browsing.
+        create("play") { dimension = "distribution" }
     }
 
     buildTypes {
@@ -37,6 +45,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+    implementation(project(":data"))
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)

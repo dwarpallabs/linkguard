@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">linkguard</string>
+    <string name="app_name" translatable="false">LinkGuard</string>
+
+    <string name="onboarding_title">LinkGuard checks links before they open</string>
+    <string name="onboarding_body">When you tap a link in WhatsApp, Telegram or SMS, LinkGuard checks it first. Safe links open straight away in your browser. If a link looks like a scam, you will see a warning, and you can still choose to open it.</string>
+    <string name="onboarding_privacy">LinkGuard never saves or sends the links you open. No account needed.</string>
+
+    <string name="default_heading">Step 1: Make LinkGuard your default browser</string>
+    <string name="default_done">LinkGuard is your default browser</string>
+    <string name="default_button">Set as default browser</string>
+    <string name="default_hint">If Settings opens, tap “Browser app” and choose LinkGuard.</string>
+
+    <string name="browser_heading">Step 2: Open links in</string>
+    <string name="browser_none">No other browser found. Install a browser such as Chrome.</string>
+
+    <string name="telegram_tip">Using Telegram? Turn off its in-app browser (Settings → Chat Settings → In-app browser) so LinkGuard can check links.</string>
 </resources>
