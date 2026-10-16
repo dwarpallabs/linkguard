@@ -34,8 +34,8 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
 
-      - name: Core tests (includes the corpus)
-        run: ./gradlew :core:test --console=plain
+      - name: Core and feeds tests (includes the corpus)
+        run: ./gradlew :core:test :feeds:test --console=plain
 
       - name: App unit tests, builds and lint
         run: ./gradlew :app:testFossDebugUnitTest :app:assembleFossDebug :app:assemblePlayDebug :app:lintFossDebug --console=plain

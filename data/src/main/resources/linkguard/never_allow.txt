@@ -1,0 +1,46 @@
+# Shared hosting and site-builder platforms: anyone can publish under these domains, so they are
+# never allow-listed automatically even if they rank in the Tranco top sites.
+# (Platforms that give each user their own registrable domain via the Public Suffix List, such as
+# *.github.io, *.web.app or *.pages.dev, are already separated and need no entry here.)
+blogspot.com
+wordpress.com
+wixsite.com
+wix.com
+weebly.com
+weeblysite.com
+squarespace.com
+webflow.io
+000webhostapp.com
+godaddysites.com
+site123.me
+jimdofree.com
+strikingly.com
+mystrikingly.com
+tilda.ws
+carrd.co
+notion.site
+notion.so
+sites.google.com
+glitch.me
+replit.app
+repl.co
+ngrok.io
+ngrok-free.app
+ngrok.app
+trycloudflare.com
+workers.dev
+pages.dev
+duckdns.org
+no-ip.com
+ddns.net
+hopto.org
+zapto.org
+freenom.com
+linktr.ee
+bio.link
+telegra.ph
+medium.com
+substack.com
+forms.gle
+typeform.com
+jotform.com
