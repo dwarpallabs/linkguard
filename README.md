@@ -36,6 +36,11 @@ Full policy: [dwarpallabs.com/linkguard/privacy](https://dwarpallabs.com/linkgua
 ## Report a scam link
 In the app: Settings → **Report a link**. Reports go privately to Dwarpal Labs and are never published. When three or more different people report the same website within a week, other LinkGuard users automatically see a soft warning: "reported as a scam by N LinkGuard users this week". Reports alone never cause the strong red warning, and well-known sites can't be reported into a warning.
 
+## Data sources
+- Malware hosts: [URLhaus](https://urlhaus.abuse.ch) by abuse.ch, used under its fair-use terms for not-for-profit projects.
+- Popular sites for the safe list: the [Tranco](https://tranco-list.eu) research ranking (Le Pochat et al., NDSS 2019).
+- Community reports from LinkGuard users.
+
 ## Where the lists live
 The scam blocklist and the safe-site allowlist are kept in the LinkGuard server database, not in this repository, so scammers cannot read them. Phones check the blocklist by 4-byte hash prefix and receive the allowlist as signed hashes. The detection rules (look-alike brands, app downloads, unusual addresses, UPI requests) are all here in the open.
 

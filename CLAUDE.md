@@ -23,7 +23,7 @@ Open-source Android app that sits between links tapped in WhatsApp/Telegram/SMS 
 - `core/` — pure Kotlin/JVM module, no Android imports. URL normalisation, redirect unwrapping, all checks, verdict scoring. 100% unit-testable.
 - `data/` — bundled public data: brands and their official domains, shortener and file-host lists, free TLDs, Public Suffix List, RDAP bootstrap. No allow/block lists.
 - `corpus/` — test URLs: `must_block.txt`, `must_pass.txt`, `ambiguous.txt`. Every check change must keep both files green.
-- `feeds/` — the fetch-normalise-bundle pipeline, runnable locally with `./gradlew :feeds:build`.
+- `feeds/` — daily fetch-normalise pipeline (URLhaus malware hosts → blocklist, Tranco top 10k → allowlist), run by `.github/workflows/feeds.yml`. Reuses `core` normalisation and writes to the server database only; never prints or commits list contents (CI logs are public). Local dry run: `./gradlew :feeds:run`.
 
 ## Conventions
 - Kotlin 2.x, Gradle Kotlin DSL, JUnit 5 for `core/`, Compose UI tests for `app/`.

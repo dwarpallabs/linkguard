@@ -26,3 +26,4 @@ rootProject.name = "linkguard"
 include(":app")
 include(":core")
 include(":data")
+include(":feeds")

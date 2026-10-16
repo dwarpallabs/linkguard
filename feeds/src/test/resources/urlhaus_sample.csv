@@ -1,0 +1,17 @@
+################################################################
+# Synthetic URLhaus-format sample for tests (no real entries)  #
+################################################################
+#
+# id,dateadded,url,url_status,last_online,threat,tags,urlhaus_link,reporter
+"1","2026-10-16 10:00:00","http://lg-feed-dropper.example/app/KYC-Update.apk","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/1/","test"
+"2","2026-10-16 10:00:00","http://lg-feed-dropper.example/second.apk","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/2/","test"
+"3","2026-10-16 10:00:00","http://198.51.100.23:8080/bins/x.sh","online","2026-10-16 10:00:00","malware_download","elf","https://urlhaus.abuse.ch/url/3/","test"
+"4","2026-10-16 10:00:00","https://github.com/someone/repo/releases/download/v1/Rewards.apk","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/4/","test"
+"5","2026-10-16 10:00:00","https://drive.google.com/uc?id=abc&export=download","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/5/","test"
+"6","2026-10-16 10:00:00","https://cdn.lg-popular-site.example/payload.apk","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/6/","test"
+"7","2026-10-16 10:00:00","https://scam-shop.blogspot.com/install.apk","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/7/","test"
+"8","2026-10-16 10:00:00","https://lg-attacker.github.io/x.apk","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/8/","test"
+"9","2026-10-16 10:00:00","http://Mixed-Case.LG-Feed-Host.example./a","online","2026-10-16 10:00:00","malware_download","exe","https://urlhaus.abuse.ch/url/9/","test"
+"10","2026-10-16 10:00:00","http://[2001:db8::1]/x","online","2026-10-16 10:00:00","malware_download","elf","https://urlhaus.abuse.ch/url/10/","test"
+"11","2026-10-16 10:00:00","https://login.sbi.bank.in.lg-evil.example/","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/11/","test"
+"12","2026-10-16 10:00:00","https://netbanking.hdfcbank.com/x.apk","online","2026-10-16 10:00:00","malware_download","apk","https://urlhaus.abuse.ch/url/12/","test"

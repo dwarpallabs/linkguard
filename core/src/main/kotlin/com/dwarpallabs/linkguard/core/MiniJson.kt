@@ -4,7 +4,7 @@ package com.dwarpallabs.linkguard.core
  * Tiny JSON reader for RDAP responses and the RDAP bootstrap file, so `core` needs no JSON library.
  * Produces Map<String, Any?>, List<Any?>, String, Double, Boolean or null.
  */
-internal class MiniJson private constructor(private val text: String) {
+class MiniJson private constructor(private val text: String) {
 
     private var pos = 0
 
