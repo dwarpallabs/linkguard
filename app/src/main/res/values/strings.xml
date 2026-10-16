@@ -5,6 +5,12 @@
     <string name="onboarding_title">LinkGuard checks links before they open</string>
     <string name="onboarding_body">When you tap a link in WhatsApp, Telegram or SMS, LinkGuard checks it first. Safe links open straight away in your browser. If a link looks like a scam, you will see a warning, and you can still choose to open it.</string>
     <string name="onboarding_privacy">LinkGuard never saves or sends the links you open. No account needed.</string>
+    <string name="your_browser">your browser</string>
+    <string name="flow_link">Your link</string>
+    <string name="flow_check">LinkGuard checks it</string>
+    <string name="not_a_browser_title">LinkGuard is not a browser</string>
+    <string name="not_a_browser_body">LinkGuard never shows web pages. It checks each link in a split second and then opens it in %1$s, the browser you already use. Your bookmarks, history, saved passwords and tabs stay exactly as they are.</string>
+    <string name="default_explain">Android will call LinkGuard your “browser app”. That is only so LinkGuard can see links first. Every link still opens in %1$s.</string>
 
     <string name="default_heading">Step 1: Make LinkGuard your default browser</string>
     <string name="default_done">LinkGuard is your default browser</string>

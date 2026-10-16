@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,7 +31,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
@@ -84,6 +87,9 @@ fun HomeScreen(
             if (!isDefault) {
                 Text(stringResource(R.string.onboarding_body), style = MaterialTheme.typography.bodyLarge)
             }
+            val browserName = browsers.firstOrNull { it.packageName == selected }?.label
+                ?: stringResource(R.string.your_browser)
+            NotABrowserCard(browserName)
             Text(
                 stringResource(R.string.onboarding_privacy),
                 style = MaterialTheme.typography.bodyMedium,
@@ -99,6 +105,11 @@ fun HomeScreen(
                     fontWeight = FontWeight.SemiBold,
                 )
             } else {
+                Text(
+                    stringResource(R.string.default_explain, browserName),
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.testTag("default_explain"),
+                )
                 Button(onClick = onSetDefault, modifier = Modifier.fillMaxWidth()) {
                     Text(stringResource(R.string.default_button))
                 }
@@ -159,6 +170,51 @@ fun HomeScreen(
             }
             Spacer(Modifier.height(8.dp))
         }
+    }
+}
+
+/**
+ * Makes clear LinkGuard is a check between the link and the user's own browser, not a browser:
+ * Android's "default browser" wording otherwise suggests it replaces Chrome.
+ */
+@Composable
+private fun NotABrowserCard(browserName: String) {
+    Card(
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+        modifier = Modifier.fillMaxWidth().testTag("not_a_browser"),
+    ) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                modifier = Modifier.semantics(mergeDescendants = true) {},
+            ) {
+                FlowStep("🔗", stringResource(R.string.flow_link))
+                Text("→", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                FlowStep("🛡", stringResource(R.string.flow_check))
+                Text("→", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                FlowStep("🌐", browserName)
+            }
+            Text(
+                stringResource(R.string.not_a_browser_title),
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold,
+            )
+            Text(stringResource(R.string.not_a_browser_body, browserName), style = MaterialTheme.typography.bodyMedium)
+        }
+    }
+}
+
+@Composable
+private fun RowScope.FlowStep(icon: String, label: String) {
+    Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(icon, style = MaterialTheme.typography.titleLarge)
+        Text(
+            label,
+            style = MaterialTheme.typography.labelMedium,
+            textAlign = TextAlign.Center,
+            maxLines = 2,
+        )
     }
 }
 

@@ -6,8 +6,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertIsOff
 import androidx.compose.ui.test.assertIsOn
+import androidx.compose.ui.test.assertTextContains
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -57,6 +59,27 @@ class SettingsScreenTest {
         assertEquals(setOf(CheckId.DOMAIN_AGE), prefs.disabledChecks)
         toggle.performClick()
         assertTrue(prefs.disabledChecks.isEmpty())
+    }
+
+    @Test
+    fun explainsLinkGuardIsNotABrowserUsingTheChosenBrowserName() {
+        val res = InstrumentationRegistry.getInstrumentation().targetContext.resources
+        compose.setContent {
+            LinkguardTheme {
+                HomeScreen(
+                    isDefault = false,
+                    browsers = listOf(com.dwarpallabs.linkguard.browser.BrowserApp("org.mozilla.firefox", "Firefox")),
+                    selected = "org.mozilla.firefox", disabledChecks = emptySet(),
+                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenBrands = {}, onOpenReport = {},
+                )
+            }
+        }
+        compose.onNodeWithTag("not_a_browser").assertExists()
+        compose.onNodeWithText(res.getString(com.dwarpallabs.linkguard.R.string.not_a_browser_title)).assertExists()
+        compose.onNodeWithText(res.getString(com.dwarpallabs.linkguard.R.string.not_a_browser_body, "Firefox")).assertExists()
+        compose.onNodeWithTag("default_explain").assertTextContains(
+            res.getString(com.dwarpallabs.linkguard.R.string.default_explain, "Firefox"),
+        )
     }
 
     @Test
