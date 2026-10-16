@@ -32,7 +32,12 @@ interface Http {
     fun post(url: String, contentType: String, body: String, timeoutMs: Int): HttpResponse? = null
 }
 
-/** [Http] on `HttpURLConnection`: available on both the JVM and Android, no dependencies. */
+/**
+ * [Http] on `HttpURLConnection`: available on both the JVM and Android, no dependencies.
+ *
+ * Connections are left to the platform's keep-alive pool (no `disconnect()` on success), so repeat
+ * requests to the same host skip the TLS handshake, which costs more than the request itself.
+ */
 class UrlConnectionHttp(private val userAgent: String = "Mozilla/5.0 (Linux; Android) LinkGuard") : Http {
 
     override fun head(url: String, timeoutMs: Int): HttpResponse? =
@@ -82,11 +87,11 @@ class UrlConnectionHttp(private val userAgent: String = "Mozilla/5.0 (Linux; And
             headers.forEach { (name, value) -> conn.setRequestProperty(name, value) }
             read(conn)
         } catch (_: IOException) {
+            conn.disconnect()
             null
         } catch (_: RuntimeException) {
-            null
-        } finally {
             conn.disconnect()
+            null
         }
     }
 

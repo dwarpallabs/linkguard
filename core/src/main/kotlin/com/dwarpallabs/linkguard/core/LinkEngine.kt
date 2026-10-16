@@ -14,13 +14,17 @@ import com.dwarpallabs.linkguard.core.checks.WeirdHostCheck
  * Time allowed for one evaluation, including network calls. Links on known shorteners get longer
  * because their real destination is only known after a round-trip.
  */
-data class Budget(val normalMs: Long, val shortenerMs: Long) {
+data class Budget(val normalMs: Long, val shortenerMs: Long, val lookupMs: Long = normalMs) {
     companion object {
-        /** Production budget: decide normal links within 300 ms, short links within 1.5 s. */
-        val INTERACTIVE = Budget(normalMs = 300, shortenerMs = 1_500)
+        /**
+         * Production budget: local checks and RDAP within 300 ms; the LinkGuard server lookup for
+         * links not on the allowlist may take up to 1 s (the app shows "Checking link…" after
+         * 300 ms); short links up to 1.5 s.
+         */
+        val INTERACTIVE = Budget(normalMs = 300, shortenerMs = 1_500, lookupMs = 1_000)
 
         /** No practical limit; for tests and tools. */
-        val UNLIMITED = Budget(normalMs = 60_000, shortenerMs = 60_000)
+        val UNLIMITED = Budget(normalMs = 60_000, shortenerMs = 60_000, lookupMs = 60_000)
 
         /** DomainAge is skipped when less than this is left. */
         const val MIN_LOOKUP_MS = 100L
@@ -87,7 +91,8 @@ class LinkEngine(
 
         val alreadyStrong = signals.any { it.score > Verdict.STRONG_THRESHOLD }
         if (CheckId.REPUTATION !in disabled && !alreadyStrong) {
-            val remaining = deadline - clock()
+            // The server lookup may use the longer lookup budget; DomainAge below keeps the normal one.
+            val remaining = maxOf(deadline, start + budget.lookupMs) - clock()
             val remote = reputation.takeIf { remaining >= Budget.MIN_LOOKUP_MS }
             signals += ReputationCheck(data, remote, timeoutMs = remaining.coerceAtLeast(0).toInt()).run(url)
         }
