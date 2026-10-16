@@ -2,6 +2,7 @@ package com.dwarpallabs.linkguard
 
 import android.content.Context
 import androidx.core.content.edit
+import com.dwarpallabs.linkguard.core.CheckId
 
 /**
  * App settings. Holds only user choices, never URLs or any history of opened links.
@@ -15,7 +16,19 @@ class Prefs(context: Context) {
         get() = prefs.getString(KEY_FORWARD_TO, null)
         set(value) = prefs.edit { putString(KEY_FORWARD_TO, value) }
 
+    /** Checks the user switched off in Settings. Everything is on by default. */
+    var disabledChecks: Set<CheckId>
+        get() = prefs.getStringSet(KEY_DISABLED_CHECKS, emptySet()).orEmpty()
+            .mapNotNull { name -> CheckId.entries.firstOrNull { it.name == name } }
+            .toSet()
+        set(value) = prefs.edit { putStringSet(KEY_DISABLED_CHECKS, value.map { it.name }.toSet()) }
+
+    fun setCheckEnabled(check: CheckId, enabled: Boolean) {
+        disabledChecks = if (enabled) disabledChecks - check else disabledChecks + check
+    }
+
     private companion object {
         const val KEY_FORWARD_TO = "forward_to"
+        const val KEY_DISABLED_CHECKS = "disabled_checks"
     }
 }

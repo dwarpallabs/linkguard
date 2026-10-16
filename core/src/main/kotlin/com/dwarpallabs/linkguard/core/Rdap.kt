@@ -8,6 +8,12 @@ import java.time.format.DateTimeParseException
 /** Parses the IANA RDAP bootstrap file (https://data.iana.org/rdap/dns.json). */
 object RdapBootstrap {
 
+    /** Parses the compact `tld<TAB>https-base-url` file the data module generates from the JSON at build time. */
+    fun parseTsv(lines: Sequence<String>): Map<String, String> = lines
+        .map { it.split('\t') }
+        .filter { it.size == 2 && it[1].startsWith("https://") }
+        .associate { (tld, base) -> tld to base }
+
     /** TLD → base URL. Only HTTPS servers are kept, so the domain name never travels unencrypted. */
     fun parse(json: String): Map<String, String> {
         val root = MiniJson.parse(json) as? Map<*, *> ?: return emptyMap()
@@ -36,10 +42,11 @@ class RdapClient(
     private val timeoutMs: Int = 1_500,
 ) : RegistrationDates {
 
-    override fun creationDate(registrableDomain: String): Instant? {
+    override fun creationDate(registrableDomain: String, timeoutMs: Int): Instant? {
         val tld = registrableDomain.substringAfterLast('.')
         val base = servers[tld] ?: return null
-        val response = http.get(base + "domain/" + registrableDomain, "application/rdap+json", timeoutMs)
+        val timeout = minOf(timeoutMs, this.timeoutMs)
+        val response = http.get(base + "domain/" + registrableDomain, "application/rdap+json", timeout)
             ?: return null
         if (response.status != 200) return null
         return registrationEvent(response.body ?: return null)

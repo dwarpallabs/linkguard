@@ -9,31 +9,30 @@ import java.time.Instant
 
 /** Looks up when a registrable domain was first registered. */
 fun interface RegistrationDates {
-    /** Creation date of [registrableDomain], or null if unknown, unsupported, offline or timed out. */
-    fun creationDate(registrableDomain: String): Instant?
+    /** Creation date of [registrableDomain], or null if unknown, unsupported, offline or not answered within [timeoutMs]. */
+    fun creationDate(registrableDomain: String, timeoutMs: Int): Instant?
 }
 
 /**
  * Process-lifetime, in-memory cache in front of [RegistrationDates]. Never written to disk:
- * a persisted cache would be a history of the sites the user opened.
+ * a persisted cache would be a history of the sites the user opened. Only answers are cached, so a
+ * timeout or offline miss is retried next time.
  */
 class MemoryCachedRegistrationDates(
     private val delegate: RegistrationDates,
     private val maxEntries: Int = 256,
 ) : RegistrationDates {
 
-    private object Unknown
-
-    private val cache = object : LinkedHashMap<String, Any>(16, 0.75f, true) {
-        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<String, Any>?) = size > maxEntries
+    private val cache = object : LinkedHashMap<String, Instant>(16, 0.75f, true) {
+        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<String, Instant>?) = size > maxEntries
     }
 
-    override fun creationDate(registrableDomain: String): Instant? {
+    override fun creationDate(registrableDomain: String, timeoutMs: Int): Instant? {
         synchronized(cache) {
-            cache[registrableDomain]?.let { return it as? Instant }
+            cache[registrableDomain]?.let { return it }
         }
-        val result = delegate.creationDate(registrableDomain)
-        synchronized(cache) { cache[registrableDomain] = result ?: Unknown }
+        val result = delegate.creationDate(registrableDomain, timeoutMs) ?: return null
+        synchronized(cache) { cache[registrableDomain] = result }
         return result
     }
 }
@@ -41,6 +40,7 @@ class MemoryCachedRegistrationDates(
 /** Domain registered less than [maxAge] ago: scam sites are usually days old. */
 class DomainAgeCheck(
     private val dates: RegistrationDates,
+    private val timeoutMs: Int = 1_500,
     private val now: () -> Instant = Instant::now,
     private val maxAge: Duration = Duration.ofDays(30),
 ) : Check {
@@ -48,7 +48,7 @@ class DomainAgeCheck(
     override fun run(url: NormalisedUrl): Signal {
         val domain = url.registrableDomain
         if (!url.isWeb || domain == null) return Signal.none(CheckId.DOMAIN_AGE)
-        val created = dates.creationDate(domain) ?: return Signal.none(CheckId.DOMAIN_AGE)
+        val created = dates.creationDate(domain, timeoutMs) ?: return Signal.none(CheckId.DOMAIN_AGE)
         val age = Duration.between(created, now())
         if (age.isNegative || age >= maxAge) return Signal.none(CheckId.DOMAIN_AGE)
         return Signal(

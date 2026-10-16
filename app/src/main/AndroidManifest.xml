@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+        Network is used only as CLAUDE.md allows: shortener redirect lookups, RDAP registration
+        dates (domain only) and, later, hash-prefix reputation lookups and feed updates.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <!-- Android 11+ package visibility: lets us list installed browsers to forward to. -->
     <queries>
         <intent>
@@ -12,6 +18,7 @@
     </queries>
 
     <application
+        android:name=".LinkGuardApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

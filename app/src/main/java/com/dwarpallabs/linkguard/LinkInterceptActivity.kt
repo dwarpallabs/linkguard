@@ -1,36 +1,109 @@
 package com.dwarpallabs.linkguard
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.core.net.toUri
+import androidx.lifecycle.lifecycleScope
+import com.dwarpallabs.linkguard.InterceptViewModel.State
 import com.dwarpallabs.linkguard.browser.Browsers
+import com.dwarpallabs.linkguard.core.Verdict
+import com.dwarpallabs.linkguard.ui.CheckingCard
+import com.dwarpallabs.linkguard.ui.InterstitialModel
+import com.dwarpallabs.linkguard.ui.InterstitialScreen
+import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
+import kotlinx.coroutines.launch
 
 /**
  * Receives every http/https link once LinkGuard is the default browser.
  *
- * Milestone 1: forwards straight to the chosen browser and finishes, with a translucent theme and
- * no animations so the user never sees it. Milestone 3 adds checks and the interstitial here.
+ * Runs the checks within the budget, then either forwards silently (nothing is ever drawn for a
+ * safe link) or shows the interstitial. Translucent and animation-free so silent forwards are
+ * invisible.
  *
  * Never log, store or transmit the URL.
  */
 class LinkInterceptActivity : ComponentActivity() {
 
+    private val viewModel: InterceptViewModel by viewModels()
+
+    /** Compose is only started once there is something to show, so silent forwards skip its startup cost. */
+    private var composed = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        handle(intent)
+        if (!start(intent)) return
+        lifecycleScope.launch {
+            viewModel.state.collect { state ->
+                when (state) {
+                    is State.Forward -> {
+                        Browsers.forward(this@LinkInterceptActivity, state.url.toUri())
+                        finishWithoutAnimation()
+                    }
+                    State.CheckingSlow, is State.Warn -> showUi()
+                    State.Checking -> Unit
+                }
+            }
+        }
+    }
+
+    private fun showUi() {
+        if (composed) return
+        composed = true
+        enableEdgeToEdge()
+        setContent {
+            val state by viewModel.state.collectAsState()
+            when (val s = state) {
+                State.Checking, is State.Forward -> Unit
+                State.CheckingSlow -> LinkguardTheme { CheckingCard() }
+                is State.Warn -> LinkguardTheme {
+                    InterstitialScreen(
+                        model = InterstitialModel.from(s.verdict),
+                        onGoBack = ::finishWithoutAnimation,
+                        onOpenAnyway = { openAnyway(s.verdict) },
+                    )
+                }
+            }
+        }
     }
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        handle(intent)
+        setIntent(intent)
+        start(intent)
     }
 
-    private fun handle(intent: Intent?) {
+    /** Starts checking the intent's link; finishes and returns false if there is nothing to check. */
+    private fun start(intent: Intent?): Boolean {
         val uri = intent?.data
-        if (uri != null && uri.scheme?.lowercase() in WEB_SCHEMES) {
-            Browsers.forward(this, uri)
+        if (uri == null || uri.scheme?.lowercase() !in WEB_SCHEMES) {
+            finishWithoutAnimation()
+            return false
+        }
+        viewModel.check(uri.toString())
+        return true
+    }
+
+    private fun openAnyway(verdict: Verdict) {
+        val url = verdict.finalUrl
+        if (url != null && url.scheme == "upi") {
+            // A web link that redirected to a UPI request: hand it to the user's UPI app.
+            try {
+                startActivity(Intent(Intent.ACTION_VIEW, url.toUrlString().toUri()))
+            } catch (_: ActivityNotFoundException) {
+                // No UPI app installed; nothing to open.
+            }
+        } else {
+            val raw = intent?.data?.toString() ?: return finishWithoutAnimation()
+            Browsers.forward(this, InterceptViewModel.forwardUrl(raw, verdict).toUri())
         }
         finishWithoutAnimation()
     }

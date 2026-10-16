@@ -13,4 +13,49 @@
     <string name="browser_none">வேறு உலாவி எதுவும் இல்லை. Chrome போன்ற ஒரு உலாவியை நிறுவவும்.</string>
 
     <string name="telegram_tip">Telegram பயன்படுத்துகிறீர்களா? LinkGuard இணைப்புகளைச் சரிபார்க்க, அதன் உள்ளமைந்த உலாவியை அணைக்கவும் (Settings → Chat Settings → In-app browser).</string>
+
+    <string name="settings_checks_heading">LinkGuard எதைச் சரிபார்க்கிறது</string>
+    <string name="check_unwrap">சுருக்கிய இணைப்புகளைப் பின்தொடர்</string>
+    <string name="check_unwrap_desc">bit.ly போன்ற சேவைகளிடம் சுருக்கிய இணைப்பு உண்மையில் எங்கே செல்கிறது என்று கேட்கிறது.</string>
+    <string name="check_apk_download">ஆப் பதிவிறக்கங்கள்</string>
+    <string name="check_brand_lookalike">போலி வங்கி மற்றும் பிராண்ட் இணையதளங்கள்</string>
+    <string name="check_weird_host">வழக்கத்துக்கு மாறான இணைய முகவரிகள்</string>
+    <string name="check_reputation">அறியப்பட்ட மோசடி இணையதளங்கள்</string>
+    <string name="check_domain_age">புத்தம் புதிய இணையதளங்கள்</string>
+    <string name="check_domain_age_desc">இணையதளம் எப்போது உருவாக்கப்பட்டது என்று அதிகாரப்பூர்வ பதிவகத்திடம் கேட்கிறது. இணையதளத்தின் பெயர் மட்டுமே அனுப்பப்படும், முழு இணைப்பு ஒருபோதும் இல்லை.</string>
+    <string name="check_upi_intent">UPI கட்டணக் கோரிக்கைகள்</string>
+
+    <string name="settings_brands">LinkGuard அறிந்த பிராண்டுகள்</string>
+    <string name="settings_brands_desc">இவை போல நடிக்கும் போலி இணையதளங்கள் சுட்டிக்காட்டப்படும்.</string>
+    <string name="brands_intro">இந்த பிராண்டுகள் போல நடிக்கும் இணையதளங்கள் பற்றி LinkGuard எச்சரிக்கிறது. அவற்றின் உண்மையான இணையதளங்கள் கீழே உள்ளன.</string>
+    <string name="brands_gov_only">அதிகாரப்பூர்வ அரசு இணையதளங்கள் (.gov.in)</string>
+
+    <string name="settings_report">இணைப்பைப் புகாரளி</string>
+    <string name="settings_report_desc">LinkGuard தவறவிட்ட மோசடி இணைப்பைப் பற்றி எங்களுக்குச் சொல்லுங்கள்.</string>
+    <string name="report_public_warning">உங்கள் புகார் GitHub-இல் பொது இஷ்யூவாகத் திறக்கும், அதை யார் வேண்டுமானாலும் படிக்கலாம். தொலைபேசி எண், பெயர் அல்லது பிற தனிப்பட்ட விவரங்களைச் சேர்க்க வேண்டாம்.</string>
+    <string name="report_link_label">இணைப்பு</string>
+    <string name="report_note_label">இது மோசடி என்று ஏன் நினைக்கிறீர்கள்? (விருப்பத்தேர்வு)</string>
+    <string name="report_submit">GitHub-இல் புகாரைத் திற</string>
+    <string name="back">பின்செல்</string>
+
+    <string name="interstitial_title_strong">இந்த இணைப்பு மோசடியாக இருக்கலாம்</string>
+    <string name="interstitial_title_soft">இந்த இணைப்பில் கவனமாக இருங்கள்</string>
+    <string name="interstitial_go_back">பின்செல்</string>
+    <string name="interstitial_open_anyway">இருந்தாலும் திற</string>
+    <string name="interstitial_checking">இணைப்பைச் சரிபார்க்கிறது…</string>
+    <string name="interstitial_upi_heading">UPI கட்டணக் கோரிக்கை</string>
+    <string name="interstitial_upi_payee">பெறுபவர்: %1$s</string>
+    <string name="interstitial_upi_amount">தொகை: ₹%1$s</string>
+
+    <string name="warn_apk_download">இந்த இணைப்பு Play Store-க்கு வெளியிலிருந்து ஒரு ஆப்பைப் பதிவிறக்குகிறது. இதுபோன்ற போலி ஆப்கள் உங்கள் செய்திகளைப் படித்து வங்கி OTP-களைத் திருடலாம்.</string>
+    <string name="warn_brand_lookalike">இந்த இணையதளம் %1$s போல நடிக்கிறது. இது %1$s-இன் உண்மையான இணையதளம் அல்ல.</string>
+    <string name="warn_upi_intent">இந்த இணைப்பு UPI மூலம் பணம் அனுப்பச் சொல்கிறது. பணத்தைத் திரும்பப் பெற, பரிசு பெற அல்லது KYC புதுப்பிக்க ஒருபோதும் பணம் செலுத்த வேண்டியதில்லை.</string>
+    <string name="warn_weird_host">உண்மையான நிறுவனங்கள் அரிதாகவே பயன்படுத்தும் வழக்கத்துக்கு மாறான முகவரியை இந்த இணைப்பு பயன்படுத்துகிறது.</string>
+    <string name="warn_weird_host_brand">இந்த இணைப்பு %1$s-ஐக் குறிப்பிடுகிறது, ஆனால் %1$s பயன்படுத்தாத வழக்கத்துக்கு மாறான முகவரியைப் பயன்படுத்துகிறது.</string>
+    <string name="warn_reputation">இந்த இணையதளம் அறியப்பட்ட மோசடி அல்லது தீங்கு விளைவிக்கும் இணையதளங்களின் பட்டியலில் உள்ளது.</string>
+    <plurals name="warn_domain_age">
+        <item quantity="one">இந்த இணையதளம் %d நாளுக்கு முன்பு உருவாக்கப்பட்டது. மோசடி இணையதளங்கள் பெரும்பாலும் புத்தம் புதியவை.</item>
+        <item quantity="other">இந்த இணையதளம் %d நாட்களுக்கு முன்பு உருவாக்கப்பட்டது. மோசடி இணையதளங்கள் பெரும்பாலும் புத்தம் புதியவை.</item>
+    </plurals>
+    <string name="warn_generic">இந்த இணைப்பில் LinkGuard வழக்கத்துக்கு மாறான ஒன்றைக் கண்டறிந்தது.</string>
 </resources>

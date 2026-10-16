@@ -9,9 +9,9 @@ import java.net.IDN
  */
 class PublicSuffixList(lines: Sequence<String>) {
 
-    private val rules = HashSet<String>()
-    private val wildcards = HashSet<String>()
-    private val exceptions = HashSet<String>()
+    private val rules = HashSet<String>(16_384)
+    private val wildcards = HashSet<String>(256)
+    private val exceptions = HashSet<String>(64)
 
     init {
         for (raw in lines) {
@@ -22,6 +22,30 @@ class PublicSuffixList(lines: Sequence<String>) {
                 line.startsWith("*.") -> ascii(line.substring(2))?.let { wildcards += it }
                 else -> ascii(line)?.let { rules += it }
             }
+        }
+    }
+
+    companion object {
+        /**
+         * Fast path for the build-time compact file (one ASCII rule per line, no comments): a plain
+         * index loop, because this runs on every cold start and is mostly interpreted on low-end phones.
+         */
+        fun fromCompact(text: String): PublicSuffixList {
+            val list = PublicSuffixList(emptySequence())
+            var start = 0
+            while (start < text.length) {
+                var end = text.indexOf('\n', start)
+                if (end == -1) end = text.length
+                if (end > start) {
+                    when (text[start]) {
+                        '!' -> list.exceptions.add(text.substring(start + 1, end))
+                        '*' -> list.wildcards.add(text.substring(start + 2, end))
+                        else -> list.rules.add(text.substring(start, end))
+                    }
+                }
+                start = end + 1
+            }
+            return list
         }
     }
 

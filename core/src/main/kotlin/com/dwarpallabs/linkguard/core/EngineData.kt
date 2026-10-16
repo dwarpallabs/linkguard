@@ -11,9 +11,11 @@ class EngineData(
     val shorteners: Set<String>,
     val fileHosts: Set<String>,
     val freeTlds: Set<String>,
-    /** TLD → RDAP base URL (https only, ending in `/`). */
-    val rdapServers: Map<String, String>,
+    rdapServers: () -> Map<String, String>,
 ) {
+    /** TLD → RDAP base URL (https only, ending in `/`). Loaded on first use: only DomainAge needs it. */
+    val rdapServers: Map<String, String> by lazy(rdapServers)
+
     companion object {
         private const val PREFIX = "linkguard/"
 
@@ -27,13 +29,13 @@ class EngineData(
                 brands.flatMap { it.officialDomains }
             val bundled = DomainListSource(allow, lines("blocklist_sha256.txt").cleaned().toList())
             return EngineData(
-                psl = PublicSuffixList(lines("public_suffix_list.dat")),
+                psl = PublicSuffixList.fromCompact(text("public_suffixes.txt")),
                 lists = LayeredLists(extraSources + bundled),
                 brands = brands,
                 shorteners = lines("shorteners.txt").cleaned().toHashSet(),
                 fileHosts = lines("file_hosts.txt").cleaned().toHashSet(),
                 freeTlds = lines("free_tlds.txt").cleaned().toHashSet(),
-                rdapServers = RdapBootstrap.parse(text("rdap_bootstrap.json")),
+                rdapServers = { RdapBootstrap.parseTsv(lines("rdap_servers.tsv")) },
             )
         }
 

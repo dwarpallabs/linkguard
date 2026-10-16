@@ -21,13 +21,15 @@ class Unwrapper(
     private val budgetMs: Long = 2_000,
     private val clock: () -> Long = System::currentTimeMillis,
 ) {
-    fun unwrap(start: NormalisedUrl): UnwrapResult {
-        val deadline = clock() + budgetMs
+    /** Follows redirects for at most [budgetMs] (capped at the constructor's budget). */
+    fun unwrap(start: NormalisedUrl, budgetMs: Long = this.budgetMs): UnwrapResult {
+        val deadline = clock() + minOf(budgetMs, this.budgetMs)
         var current = start
         var hops = 0
         while (hops < maxHops && current.isWeb && isShortener(current)) {
-            val remaining = (deadline - clock()).toInt()
-            val response = http.head(httpsUrl(current), remaining) ?: break
+            val remaining = deadline - clock()
+            if (remaining <= 0) break
+            val response = http.head(httpsUrl(current), remaining.toInt()) ?: break
             if (response.status in 300..399 && response.location != null) {
                 val next = resolve(current, response.location) ?: break
                 hops++

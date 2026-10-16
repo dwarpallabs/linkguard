@@ -13,4 +13,49 @@
     <string name="browser_none">कोई दूसरा ब्राउज़र नहीं मिला। Chrome जैसा कोई ब्राउज़र इंस्टॉल करें।</string>
 
     <string name="telegram_tip">Telegram इस्तेमाल करते हैं? उसका इन-ऐप ब्राउज़र बंद करें (Settings → Chat Settings → In-app browser), ताकि LinkGuard लिंक की जाँच कर सके।</string>
+
+    <string name="settings_checks_heading">LinkGuard क्या जाँचता है</string>
+    <string name="check_unwrap">छोटे लिंक खोलकर देखें</string>
+    <string name="check_unwrap_desc">bit.ly जैसी सेवाओं से पूछता है कि छोटा लिंक असल में कहाँ जाता है।</string>
+    <string name="check_apk_download">ऐप डाउनलोड</string>
+    <string name="check_brand_lookalike">नकली बैंक और ब्रांड वेबसाइटें</string>
+    <string name="check_weird_host">असामान्य वेब पते</string>
+    <string name="check_reputation">जानी-मानी धोखाधड़ी वाली वेबसाइटें</string>
+    <string name="check_domain_age">बिल्कुल नई वेबसाइटें</string>
+    <string name="check_domain_age_desc">आधिकारिक रजिस्ट्री से पूछता है कि वेबसाइट कब बनी थी। सिर्फ़ वेबसाइट का नाम भेजा जाता है, पूरा लिंक कभी नहीं।</string>
+    <string name="check_upi_intent">UPI भुगतान अनुरोध</string>
+
+    <string name="settings_brands">LinkGuard किन ब्रांड को पहचानता है</string>
+    <string name="settings_brands_desc">इनके नाम से बनी नकली वेबसाइटों पर चेतावनी दी जाती है।</string>
+    <string name="brands_intro">LinkGuard उन वेबसाइटों के बारे में चेतावनी देता है जो इन ब्रांड होने का दिखावा करती हैं। इनकी असली वेबसाइटें नीचे दी गई हैं।</string>
+    <string name="brands_gov_only">आधिकारिक सरकारी वेबसाइटें (.gov.in)</string>
+
+    <string name="settings_report">लिंक की शिकायत करें</string>
+    <string name="settings_report_desc">ऐसे धोखाधड़ी वाले लिंक के बारे में बताएँ जिसे LinkGuard नहीं पकड़ पाया।</string>
+    <string name="report_public_warning">आपकी शिकायत GitHub पर एक सार्वजनिक इश्यू के रूप में खुलेगी, जिसे कोई भी पढ़ सकता है। फ़ोन नंबर, नाम या दूसरी निजी जानकारी न लिखें।</string>
+    <string name="report_link_label">लिंक</string>
+    <string name="report_note_label">आपको यह धोखाधड़ी क्यों लगता है? (वैकल्पिक)</string>
+    <string name="report_submit">GitHub पर शिकायत खोलें</string>
+    <string name="back">वापस</string>
+
+    <string name="interstitial_title_strong">यह लिंक धोखाधड़ी हो सकता है</string>
+    <string name="interstitial_title_soft">इस लिंक से सावधान रहें</string>
+    <string name="interstitial_go_back">वापस जाएँ</string>
+    <string name="interstitial_open_anyway">फिर भी खोलें</string>
+    <string name="interstitial_checking">लिंक की जाँच हो रही है…</string>
+    <string name="interstitial_upi_heading">UPI भुगतान अनुरोध</string>
+    <string name="interstitial_upi_payee">किसे भुगतान: %1$s</string>
+    <string name="interstitial_upi_amount">राशि: ₹%1$s</string>
+
+    <string name="warn_apk_download">यह लिंक Play Store के बाहर से एक ऐप डाउनलोड करता है। ऐसे नकली ऐप आपके मैसेज पढ़ सकते हैं और बैंक OTP चुरा सकते हैं।</string>
+    <string name="warn_brand_lookalike">यह वेबसाइट %1$s होने का दिखावा कर रही है। यह %1$s की असली वेबसाइट नहीं है।</string>
+    <string name="warn_upi_intent">यह लिंक आपसे UPI से पैसे भेजने को कहता है। रिफ़ंड, इनाम या KYC अपडेट पाने के लिए कभी भुगतान नहीं करना पड़ता।</string>
+    <string name="warn_weird_host">यह लिंक एक असामान्य पते का इस्तेमाल करता है, जिसका इस्तेमाल असली कंपनियाँ शायद ही करती हैं।</string>
+    <string name="warn_weird_host_brand">इस लिंक में %1$s का नाम है, लेकिन यह ऐसे असामान्य पते का इस्तेमाल करता है जिसका इस्तेमाल %1$s नहीं करता।</string>
+    <string name="warn_reputation">यह वेबसाइट जानी-मानी धोखाधड़ी या नुकसानदेह वेबसाइटों की सूची में है।</string>
+    <plurals name="warn_domain_age">
+        <item quantity="one">यह वेबसाइट %d दिन पहले बनी है। धोखाधड़ी वाली वेबसाइटें अक्सर बिल्कुल नई होती हैं।</item>
+        <item quantity="other">यह वेबसाइट %d दिन पहले बनी है। धोखाधड़ी वाली वेबसाइटें अक्सर बिल्कुल नई होती हैं।</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard को इस लिंक में कुछ असामान्य मिला।</string>
 </resources>
