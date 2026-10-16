@@ -31,3 +31,6 @@ https://lg-test-phishing-awareness.org/	reputation	name resembles a fixture entr
 https://cleartax.in/	domain_age	old domain, not allowlisted
 https://in.bookmyshow.com/	domain_age	subdomain of an old domain, not allowlisted
 https://www.lg-old-shop.in/	domain_age	old domain (test fixture date)
+https://lg-reported-twice.example/offer	reputation	only 2 community reports: below the 3-reporter threshold
+https://www.flipkart.com/big-sale	reputation	50 community reports but allowlisted: immune
+https://lg-reported-dismissed.example/	reputation	server omits dismissed domains (no community signal)

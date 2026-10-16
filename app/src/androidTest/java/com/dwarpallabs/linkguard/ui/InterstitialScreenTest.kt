@@ -47,6 +47,13 @@ class InterstitialScreenTest {
     }
 
     @Test
+    fun communityReportShowsCountWithSoftTitle() {
+        show(InterstitialModel(false, "lg-reported-three.example", "lg-reported-three.example", Reason.Community(12)))
+        compose.onNodeWithTag("title").assertTextContains(res.getString(R.string.interstitial_title_soft))
+        compose.onNodeWithTag("reason").assertTextContains(res.getQuantityString(R.plurals.warn_community, 12, 12))
+    }
+
+    @Test
     fun homographHostIsDisplayedAsPunycode() {
         show(InterstitialModel(true, "xn--irtel-3ve.com", "xn--irtel-3ve.com", Reason.BrandLookalike("Airtel")))
         compose.onNodeWithTag("host").assertTextContains("xn--irtel-3ve.com")

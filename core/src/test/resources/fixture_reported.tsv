@@ -1,0 +1,9 @@
+# Test-only community-report fixture: registrable domain<TAB>distinct reporters in the last 7 days.
+# The real counts live in the LinkGuard server database. The server only sends counts of 3 or more;
+# lg-reported-twice is listed anyway to check the client also ignores small counts.
+lg-reported-twice.example	2
+lg-reported-three.example	3
+lg-reported-twelve.example	12
+lg-reported-forty.example	40
+flipkart.com	50
+lg-reported-and-young.example	5

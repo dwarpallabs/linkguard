@@ -4,6 +4,7 @@ import com.dwarpallabs.linkguard.core.EngineData
 import com.dwarpallabs.linkguard.core.HttpResponse
 import com.dwarpallabs.linkguard.core.Http
 import com.dwarpallabs.linkguard.core.LinkEngine
+import com.dwarpallabs.linkguard.core.ServerVerdicts
 import com.dwarpallabs.linkguard.ui.InterstitialModel
 import com.dwarpallabs.linkguard.ui.InterstitialModel.Reason
 import org.junit.Assert.assertEquals
@@ -76,8 +77,40 @@ class InterceptLogicTest {
                 return HttpResponse(202)
             }
         }
-        assertTrue(ReportClient(http, "https://api.example").send("http://x.top/", "", "0.2.0"))
+        assertTrue(ReportClient(http, "https://api.example").send("http://x.top/", "", "0.2.0", "x.top", "ab".repeat(32)))
         assertEquals(listOf("https://api.example/v1/report"), posts)
+    }
+
+    @Test
+    fun reporterTokenIsStablePerDomainAndUnlinkableAcrossDomains() {
+        val secret = ReporterToken.newSecret()
+        val token = ReporterToken(secret)
+        val a1 = token.forDomain("sbi-kyc.top")
+        assertEquals(a1, token.forDomain("SBI-KYC.top"))
+        assertEquals(64, a1.length)
+        assertTrue(a1 != token.forDomain("hdfc-kyc.top"))
+        assertTrue(a1 != ReporterToken(ReporterToken.newSecret()).forDomain("sbi-kyc.top"))
+    }
+
+    @Test
+    fun reportCarriesTokenButNeverTheSecret() {
+        val secret = ReporterToken.newSecret()
+        val token = ReporterToken(secret).forDomain("sbi-kyc.top")
+        val body = ReportClient.json("http://login.sbi-kyc.top/x", "", "0.2.0", "sbi-kyc.top", token)
+        assertTrue(body.contains("\"domain\":\"sbi-kyc.top\""))
+        assertTrue(body.contains("\"token\":\"$token\""))
+        val hexSecret = secret.joinToString("") { "%02x".format(it) }
+        val b64Secret = java.util.Base64.getEncoder().encodeToString(secret)
+        assertTrue(!body.contains(hexSecret) && !body.contains(b64Secret))
+    }
+
+    @Test
+    fun communityVerdictBecomesSoftCommunityReason() {
+        val h = com.dwarpallabs.linkguard.core.sha256Hex("lg-reported-three.example")
+        val engine = LinkEngine(data, null, null, reputation = { _, _ -> ServerVerdicts(reported = mapOf(h to 3)) })
+        val model = InterstitialModel.from(engine.evaluate("https://lg-reported-three.example/"))
+        assertEquals(Reason.Community(3), model.reason)
+        assertTrue(!model.strong)
     }
 
     private companion object {

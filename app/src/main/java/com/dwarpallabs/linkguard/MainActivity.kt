@@ -21,6 +21,7 @@ import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.browser.Browsers
 import com.dwarpallabs.linkguard.core.Brand
 import com.dwarpallabs.linkguard.core.CheckId
+import com.dwarpallabs.linkguard.core.NormalisedUrl
 import com.dwarpallabs.linkguard.ui.BrandsScreen
 import com.dwarpallabs.linkguard.ui.HomeScreen
 import com.dwarpallabs.linkguard.ui.ReportScreen
@@ -105,12 +106,20 @@ class MainActivity : ComponentActivity() {
         disabledChecks = prefs.disabledChecks
     }
 
-    /** Sends the report only now, because the user tapped Submit. */
+    /** Sends the report only now, because the user tapped Send report. */
     private fun sendReport(link: String, note: String) {
         reportStatus = ReportStatus.SENDING
-        val client = ReportClient((application as LinkGuardApp).http)
+        val app = application as LinkGuardApp
+        val client = ReportClient(app.http)
         lifecycleScope.launch {
-            val ok = withContext(Dispatchers.IO) { client.send(link, note, appVersion()) }
+            val ok = withContext(Dispatchers.IO) {
+                // The website's registrable domain and an anonymous per-website token let the server
+                // count distinct reporters without being able to link one phone's reports together.
+                val parsed = NormalisedUrl.parse(link, app.data.psl)
+                val domain = parsed?.registrableDomain ?: parsed?.host?.takeIf { parsed.isWeb && !parsed.isIpLiteral }
+                val token = domain?.let { ReporterToken.of(Prefs(app)).forDomain(it) }
+                client.send(link, note, appVersion(), domain, token)
+            }
             reportStatus = if (ok) ReportStatus.SENT else ReportStatus.FAILED
         }
     }

@@ -105,8 +105,8 @@ class RemoteListsTest {
             }
         }
         val h = sha256("lg-test-phish.com")
-        val result = HttpReputationLookup(http, "https://api.example").blockedHashes(listOf(h.take(8)), 500)
-        assertEquals(setOf(h), result)
+        val result = HttpReputationLookup(http, "https://api.example").lookup(listOf(h.take(8)), 500)
+        assertEquals(setOf(h), result?.blocked)
         assertEquals(listOf("https://api.example/v1/lookup?p=${h.take(8)}"), urls)
     }
 
@@ -114,12 +114,30 @@ class RemoteListsTest {
     fun reputationCacheAsksOncePerPrefixUntilExpiry() {
         var calls = 0
         var now = 0L
-        val cache = MemoryCachedReputation({ _, _ -> calls++; emptySet() }, ttlMs = 1_000, clock = { now })
-        repeat(3) { cache.blockedHashes(listOf("aaaaaaaa"), 100) }
+        val cache = MemoryCachedReputation({ _, _ -> calls++; ServerVerdicts() }, ttlMs = 1_000, clock = { now })
+        repeat(3) { cache.lookup(listOf("aaaaaaaa"), 100) }
         assertEquals(1, calls)
         now = 2_000
-        cache.blockedHashes(listOf("aaaaaaaa"), 100)
+        cache.lookup(listOf("aaaaaaaa"), 100)
         assertEquals(2, calls)
+    }
+
+    @Test
+    fun lookupResponseParsing() {
+        val a = sha256("a.example"); val b = sha256("b.example"); val c = sha256("c.example")
+        val v = ServerVerdicts.parse("$a\tblock\n$b\treported\t7\n$c\nnot-a-hash\treported\t9\n$b\treported\tx")
+        assertEquals(setOf(a, c), v.blocked)
+        assertEquals(mapOf(b to 7), v.reported)
+    }
+
+    @Test
+    fun cacheKeepsCommunityCountsPerPrefix() {
+        val h = sha256("lg-reported-three.example")
+        var calls = 0
+        val cache = MemoryCachedReputation({ _, _ -> calls++; ServerVerdicts(reported = mapOf(h to 3)) })
+        assertEquals(3, cache.lookup(listOf(h.take(8)), 100)?.reported?.get(h))
+        assertEquals(3, cache.lookup(listOf(h.take(8)), 100)?.reported?.get(h))
+        assertEquals(1, calls)
     }
 
     @Test

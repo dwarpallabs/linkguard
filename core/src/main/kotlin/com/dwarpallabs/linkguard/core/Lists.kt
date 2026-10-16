@@ -70,6 +70,9 @@ data class Brand(val name: String, val keywords: List<String>, val officialDomai
     }
 }
 
+/** Lowercase hex SHA-256 of [text]'s UTF-8 bytes; the hash every list and lookup uses. */
+fun sha256Hex(text: String): String = sha256(text)
+
 internal fun sha256(text: String): String =
     MessageDigest.getInstance("SHA-256").digest(text.toByteArray(Charsets.UTF_8))
         .joinToString("") { "%02x".format(it) }

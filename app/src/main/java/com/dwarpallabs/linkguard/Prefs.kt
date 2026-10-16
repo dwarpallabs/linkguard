@@ -28,6 +28,14 @@ class Prefs(context: Context) {
         get() = prefs.getLong(KEY_ALLOWLIST_CHECKED_AT, 0L)
         set(value) = prefs.edit { putLong(KEY_ALLOWLIST_CHECKED_AT, value) }
 
+    /**
+     * Random per-install secret for anonymous reporter tokens (see [ReporterToken]). Never sent
+     * anywhere; only HMACs derived from it leave the phone, one per reported website.
+     */
+    var reporterSecret: String?
+        get() = prefs.getString(KEY_REPORTER_SECRET, null)
+        set(value) = prefs.edit { putString(KEY_REPORTER_SECRET, value) }
+
     fun setCheckEnabled(check: CheckId, enabled: Boolean) {
         disabledChecks = if (enabled) disabledChecks - check else disabledChecks + check
     }
@@ -36,5 +44,6 @@ class Prefs(context: Context) {
         const val KEY_FORWARD_TO = "forward_to"
         const val KEY_DISABLED_CHECKS = "disabled_checks"
         const val KEY_ALLOWLIST_CHECKED_AT = "allowlist_checked_at"
+        const val KEY_REPORTER_SECRET = "reporter_secret"
     }
 }

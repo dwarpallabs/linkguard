@@ -117,8 +117,12 @@ class WeirdHostCheck(private val data: EngineData, private val matcher: BrandMat
 }
 
 /**
- * Domain is on a blocklist: a local list source (tests, future offline bundle) or the server's
- * blocklist, asked by 4-byte hash prefix so the server never learns which domain was opened.
+ * What the LinkGuard server knows about the domain, asked by 4-byte hash prefix so the server never
+ * learns which domain was opened:
+ *  - on the blocklist (feeds or confirmed) → strong warning;
+ *  - otherwise reported by 3+ distinct LinkGuard users this week → a *soft* warning that says how many.
+ *    Community reports alone can never produce a strong warning (capped at [COMMUNITY_MAX]).
+ * Local list sources (tests, future offline bundle) are consulted first.
  */
 class ReputationCheck(
     private val data: EngineData,
@@ -128,17 +132,34 @@ class ReputationCheck(
 
     override fun run(url: NormalisedUrl): Signal {
         if (!url.isWeb) return Signal.none(CheckId.REPUTATION)
-        if (data.lists.opinion(url.host, url.registrableDomain) == Opinion.BLOCK) return hit("reputation.blocklist")
+        if (data.lists.opinion(url.host, url.registrableDomain) == Opinion.BLOCK) return blocked()
         if (remote == null) return Signal.none(CheckId.REPUTATION)
         val hashes = listOfNotNull(url.host, url.registrableDomain).distinct().map(::sha256)
         val prefixes = hashes.map { it.take(HttpReputationLookup.PREFIX_LENGTH) }.distinct()
-        val blocked = remote.blockedHashes(prefixes, timeoutMs) ?: return Signal.none(CheckId.REPUTATION)
-        return if (hashes.any { it in blocked }) hit("reputation.server") else Signal.none(CheckId.REPUTATION)
+        val verdicts = remote.lookup(prefixes, timeoutMs) ?: return Signal.none(CheckId.REPUTATION)
+        if (hashes.any { it in verdicts.blocked }) return blocked()
+        val reporters = hashes.maxOfOrNull { verdicts.reported[it] ?: 0 } ?: 0
+        val score = communityScore(reporters)
+        if (score == 0.0) return Signal.none(CheckId.REPUTATION)
+        return Signal(
+            CheckId.REPUTATION, score, "reputation.community", "warn_community",
+            mapOf("count" to reporters.toString()),
+        )
     }
 
-    private fun hit(reason: String) = Signal(CheckId.REPUTATION, SCORE, reason, "warn_reputation")
+    private fun blocked() = Signal(CheckId.REPUTATION, SCORE, "reputation.blocklist", "warn_reputation")
 
     companion object {
         const val SCORE = 0.9
+        const val COMMUNITY_MIN_REPORTERS = 3
+        const val COMMUNITY_MAX = 0.6
+
+        /** 3–9 reporters → 0.4, 10–24 → 0.5, 25+ → 0.6. Always below the strong threshold. */
+        fun communityScore(reporters: Int): Double = when {
+            reporters < COMMUNITY_MIN_REPORTERS -> 0.0
+            reporters < 10 -> 0.4
+            reporters < 25 -> 0.5
+            else -> COMMUNITY_MAX
+        }
     }
 }

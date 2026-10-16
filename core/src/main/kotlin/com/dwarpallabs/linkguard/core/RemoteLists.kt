@@ -6,25 +6,63 @@ import java.security.Signature
 import java.security.spec.X509EncodedKeySpec
 import java.util.Base64
 
+/** What the server knows about domains sharing a hash prefix, keyed by full SHA-256 hash. */
+data class ServerVerdicts(
+    /** On the blocklist (feeds or confirmed): strong warning. */
+    val blocked: Set<String> = emptySet(),
+    /** Distinct LinkGuard users who reported the domain in the last 7 days (only sent when 3 or more). */
+    val reported: Map<String, Int> = emptyMap(),
+) {
+    fun forPrefix(prefix: String) = ServerVerdicts(
+        blocked.filter { it.startsWith(prefix) }.toSet(),
+        reported.filterKeys { it.startsWith(prefix) },
+    )
+
+    operator fun plus(other: ServerVerdicts) = ServerVerdicts(blocked + other.blocked, reported + other.reported)
+
+    companion object {
+        /**
+         * Parses `/v1/lookup` lines: `<hash>\tblock`, `<hash>\treported\t<N>`, or a bare `<hash>`
+         * (treated as blocked).
+         */
+        fun parse(body: String): ServerVerdicts {
+            val blocked = HashSet<String>()
+            val reported = HashMap<String, Int>()
+            for (line in body.lineSequence()) {
+                val fields = line.trim().split('\t')
+                val hash = fields[0]
+                if (hash.length != 64) continue
+                when (fields.getOrNull(1)) {
+                    null, "block" -> blocked += hash
+                    "reported" -> fields.getOrNull(2)?.toIntOrNull()?.takeIf { it > 0 }?.let { reported[hash] = it }
+                }
+            }
+            return ServerVerdicts(blocked, reported)
+        }
+    }
+}
+
 /**
- * Asks the LinkGuard server which blocklisted domains share a hash prefix.
+ * Asks the LinkGuard server about domains sharing a hash prefix.
  *
  * Privacy: only 4-byte prefixes (8 hex characters) of SHA-256 hashes ever leave the phone, so the
- * server cannot tell which domain was opened. The full blocklist never leaves the server.
+ * server cannot tell which domain was opened. The full lists never leave the server.
  */
 fun interface ReputationLookup {
-    /** Full hashes on the blocklist that start with any of [prefixes], or null if unavailable. */
-    fun blockedHashes(prefixes: List<String>, timeoutMs: Int): Set<String>?
+    /** Server verdicts for domains starting with any of [prefixes], or null if unavailable. */
+    fun lookup(prefixes: List<String>, timeoutMs: Int): ServerVerdicts?
 }
 
 class HttpReputationLookup(private val http: Http, private val baseUrl: String) : ReputationLookup {
 
-    override fun blockedHashes(prefixes: List<String>, timeoutMs: Int): Set<String>? {
-        require(prefixes.all { it.length == PREFIX_LENGTH && it.all(Char::isLetterOrDigit) }) { "prefixes must be 8 hex chars" }
+    override fun lookup(prefixes: List<String>, timeoutMs: Int): ServerVerdicts? {
+        require(prefixes.all { it.length == PREFIX_LENGTH && it.all { c -> c in '0'..'9' || c in 'a'..'f' } }) {
+            "prefixes must be 8 hex chars"
+        }
         val response = http.get("$baseUrl/v1/lookup?p=${prefixes.joinToString(",")}", "text/plain", timeoutMs, 64 * 1024)
             ?: return null
         if (response.status != 200) return null
-        return response.body.orEmpty().lineSequence().map { it.trim() }.filter { it.length == 64 }.toSet()
+        return ServerVerdicts.parse(response.body.orEmpty())
     }
 
     companion object {
@@ -34,7 +72,7 @@ class HttpReputationLookup(private val http: Http, private val baseUrl: String) 
 
 /**
  * Process-lifetime cache in front of [ReputationLookup], keyed by prefix. Entries expire after
- * [ttlMs] so newly blocked domains are picked up. Never written to disk.
+ * [ttlMs] so newly blocked or reported domains are picked up. Never written to disk.
  */
 class MemoryCachedReputation(
     private val delegate: ReputationLookup,
@@ -43,22 +81,21 @@ class MemoryCachedReputation(
     private val maxEntries: Int = 512,
 ) : ReputationLookup {
 
-    private class Entry(val hashes: Set<String>, val at: Long)
+    private class Entry(val verdicts: ServerVerdicts, val at: Long)
 
     private val cache = object : LinkedHashMap<String, Entry>(16, 0.75f, true) {
         override fun removeEldestEntry(eldest: MutableMap.MutableEntry<String, Entry>?) = size > maxEntries
     }
 
-    override fun blockedHashes(prefixes: List<String>, timeoutMs: Int): Set<String>? {
+    override fun lookup(prefixes: List<String>, timeoutMs: Int): ServerVerdicts? {
         val now = clock()
         val cached = synchronized(cache) { prefixes.associateWith { p -> cache[p]?.takeIf { now - it.at < ttlMs } } }
         val missing = prefixes.filter { cached[it] == null }
-        if (missing.isEmpty()) return cached.values.flatMap { it!!.hashes }.toSet()
-        val fetched = delegate.blockedHashes(missing, timeoutMs) ?: return null
-        synchronized(cache) {
-            missing.forEach { p -> cache[p] = Entry(fetched.filter { it.startsWith(p) }.toSet(), now) }
-        }
-        return fetched + cached.values.filterNotNull().flatMap { it.hashes }
+        val known = cached.values.filterNotNull().fold(ServerVerdicts()) { acc, e -> acc + e.verdicts }
+        if (missing.isEmpty()) return known
+        val fetched = delegate.lookup(missing, timeoutMs) ?: return null
+        synchronized(cache) { missing.forEach { p -> cache[p] = Entry(fetched.forPrefix(p), now) } }
+        return fetched + known
     }
 }
 

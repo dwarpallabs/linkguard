@@ -17,6 +17,8 @@ data class InterstitialModel(
         data class Upi(val payeeName: String?, val payeeAddress: String?, val amount: String?) : Reason
         data class WeirdHost(val brand: String?) : Reason
         data object Reputation : Reason
+        /** Reported as a scam by [count] distinct LinkGuard users this week. Always a soft warning. */
+        data class Community(val count: Int) : Reason
         data class DomainAge(val days: Int) : Reason
         data object Generic : Reason
     }
@@ -32,6 +34,7 @@ data class InterstitialModel(
                 "warn_upi_intent" -> Reason.Upi(details["payee_name"], details["payee_address"], details["amount"])
                 "warn_weird_host" -> Reason.WeirdHost(details["brand"])
                 "warn_reputation" -> Reason.Reputation
+                "warn_community" -> details["count"]?.toIntOrNull()?.let { Reason.Community(it) } ?: Reason.Generic
                 "warn_domain_age" -> details["age_days"]?.toIntOrNull()?.let { Reason.DomainAge(it) } ?: Reason.Generic
                 else -> Reason.Generic
             }

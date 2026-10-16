@@ -29,12 +29,12 @@ LinkGuard never logs, stores or sends the links you open. No accounts, no ads, n
 - ask a domain registry when a website was registered, sending only the domain name (`example.com`), never the full link;
 - ask the LinkGuard server whether a website is a known scam, sending only a 4-byte fingerprint of the website's name, so the server cannot tell which site you opened;
 - download the list of known-safe websites (as fingerprints, signed by Dwarpal Labs);
-- send a report, only when you tap **Send report**.
+- send a report, only when you tap **Send report**. Reports are tied to an anonymous, per-website token, so your reports can't be linked together or traced back to you.
 
 Full policy: [dwarpallabs.com/linkguard/privacy](https://dwarpallabs.com/linkguard/privacy).
 
 ## Report a scam link
-In the app: Settings → **Report a link**. Reports go privately to Dwarpal Labs for review and are never published.
+In the app: Settings → **Report a link**. Reports go privately to Dwarpal Labs and are never published. When three or more different people report the same website within a week, other LinkGuard users automatically see a soft warning: "reported as a scam by N LinkGuard users this week". Reports alone never cause the strong red warning, and well-known sites can't be reported into a warning.
 
 ## Where the lists live
 The scam blocklist and the safe-site allowlist are kept in the LinkGuard server database, not in this repository, so scammers cannot read them. Phones check the blocklist by 4-byte hash prefix and receive the allowlist as signed hashes. The detection rules (look-alike brands, app downloads, unusual addresses, UPI requests) are all here in the open.

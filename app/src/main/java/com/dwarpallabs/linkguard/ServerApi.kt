@@ -16,22 +16,26 @@ object ServerApi {
 }
 
 /**
- * Sends a user's report to the private review queue. Only called when the user taps Submit;
- * the link and note go to Dwarpal Labs and nowhere else.
+ * Sends a user's report to Dwarpal Labs. Only called when the user taps Send report; the link,
+ * note, website name and an anonymous per-website token go to Dwarpal Labs and nowhere else.
  */
 class ReportClient(private val http: Http, private val baseUrl: String = ServerApi.BASE_URL) {
 
-    fun send(link: String, note: String, appVersion: String): Boolean {
-        val response = http.post("$baseUrl/v1/report", "application/json", json(link, note, appVersion), TIMEOUT_MS)
+    fun send(link: String, note: String, appVersion: String, domain: String?, token: String?): Boolean {
+        val body = json(link, note, appVersion, domain, token)
+        val response = http.post("$baseUrl/v1/report", "application/json", body, TIMEOUT_MS)
         return response != null && response.status in 200..299
     }
 
     companion object {
         private const val TIMEOUT_MS = 10_000
 
-        /** Minimal JSON writer for three strings: no JSON library needed. */
-        fun json(link: String, note: String, appVersion: String) =
-            """{"url":${quote(link.take(2_000))},"note":${quote(note.take(1_000))},"app_version":${quote(appVersion)}}"""
+        /** Minimal JSON writer for a few strings: no JSON library needed. */
+        fun json(link: String, note: String, appVersion: String, domain: String? = null, token: String? = null) = buildString {
+            append("""{"url":${quote(link.take(2_000))},"note":${quote(note.take(1_000))},"app_version":${quote(appVersion)}""")
+            if (domain != null && token != null) append(""","domain":${quote(domain)},"token":${quote(token)}""")
+            append('}')
+        }
 
         private fun quote(s: String) = buildString {
             append('"')
