@@ -6,9 +6,7 @@ import com.dwarpallabs.linkguard.core.Http
 import com.dwarpallabs.linkguard.core.LinkEngine
 import com.dwarpallabs.linkguard.ui.InterstitialModel
 import com.dwarpallabs.linkguard.ui.InterstitialModel.Reason
-import java.net.URLDecoder
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -22,7 +20,7 @@ class InterceptLogicTest {
             "https://is.gd/pay" -> HttpResponse(301, location = "upi://pay?pa=collect.now@ybl&pn=Electricity%20Board&am=4999")
             else -> null
         }
-        override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int): HttpResponse? = null
+        override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int, headers: Map<String, String>): HttpResponse? = null
     }
 
     private val engine = LinkEngine(data, redirects, null)
@@ -59,13 +57,27 @@ class InterceptLogicTest {
     }
 
     @Test
-    fun reportUrlIsPrefilledAndEncoded() {
-        val url = ReportLink.issueUrl("http://sbi-kyc.xyz/a?b=c&d=e", "got it on WhatsApp", "1.0")
-        assertTrue(url.startsWith("https://github.com/dwarpallabs/linkguard/issues/new?title="))
-        val body = URLDecoder.decode(url.substringAfter("&body="), "UTF-8")
-        assertTrue(body.contains("`http://sbi-kyc.xyz/a?b=c&d=e`"))
-        assertTrue(body.contains("got it on WhatsApp"))
-        assertFalse(url.substringAfter("&body=").contains("&d=e"))
+    fun reportJsonEscapesUserText() {
+        val json = ReportClient.json("http://sbi-kyc.xyz/a?b=\"c\"", "got it on\nWhatsApp \\ \u0001", "0.2.0")
+        assertEquals(
+            "{\"url\":\"http://sbi-kyc.xyz/a?b=\\\"c\\\"\",\"note\":\"got it on\\nWhatsApp \\\\ \\u0001\",\"app_version\":\"0.2.0\"}",
+            json,
+        )
+    }
+
+    @Test
+    fun reportIsSentOnlyToTheReportEndpoint() {
+        val posts = mutableListOf<String>()
+        val http = object : Http {
+            override fun head(url: String, timeoutMs: Int): HttpResponse? = null
+            override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int, headers: Map<String, String>): HttpResponse? = null
+            override fun post(url: String, contentType: String, body: String, timeoutMs: Int): HttpResponse? {
+                posts += url
+                return HttpResponse(202)
+            }
+        }
+        assertTrue(ReportClient(http, "https://api.example").send("http://x.top/", "", "0.2.0"))
+        assertEquals(listOf("https://api.example/v1/report"), posts)
     }
 
     private companion object {

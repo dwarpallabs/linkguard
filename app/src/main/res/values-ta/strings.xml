@@ -32,10 +32,13 @@
 
     <string name="settings_report">இணைப்பைப் புகாரளி</string>
     <string name="settings_report_desc">LinkGuard தவறவிட்ட மோசடி இணைப்பைப் பற்றி எங்களுக்குச் சொல்லுங்கள்.</string>
-    <string name="report_public_warning">உங்கள் புகார் GitHub-இல் பொது இஷ்யூவாகத் திறக்கும், அதை யார் வேண்டுமானாலும் படிக்கலாம். தொலைபேசி எண், பெயர் அல்லது பிற தனிப்பட்ட விவரங்களைச் சேர்க்க வேண்டாம்.</string>
     <string name="report_link_label">இணைப்பு</string>
     <string name="report_note_label">இது மோசடி என்று ஏன் நினைக்கிறீர்கள்? (விருப்பத்தேர்வு)</string>
-    <string name="report_submit">GitHub-இல் புகாரைத் திற</string>
+    <string name="report_private_info">உங்கள் புகார் தனிப்பட்ட முறையில் Dwarpal Labs-க்குச் செல்லும். இணையதளத்தை LinkGuard பட்டியல்களில் சேர்க்கும் முன் அவர்கள் அதைச் சரிபார்ப்பார்கள். இது ஒருபோதும் வெளியிடப்படாது. தொலைபேசி எண், பெயர் அல்லது பிற தனிப்பட்ட விவரங்களைச் சேர்க்க வேண்டாம்.</string>
+    <string name="report_submit">புகாரை அனுப்பு</string>
+    <string name="report_sending">அனுப்புகிறது…</string>
+    <string name="report_sent">நன்றி. உங்கள் புகார் சரிபார்ப்புக்கு அனுப்பப்பட்டது.</string>
+    <string name="report_failed">புகாரை அனுப்ப முடியவில்லை. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="back">பின்செல்</string>
 
     <string name="interstitial_title_strong">இந்த இணைப்பு மோசடியாக இருக்கலாம்</string>

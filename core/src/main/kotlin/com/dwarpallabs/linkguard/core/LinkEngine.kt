@@ -31,16 +31,20 @@ data class Budget(val normalMs: Long, val shortenerMs: Long) {
  * Runs every check on a link and returns a [Verdict]. Blocking: call it off the main thread.
  *
  * Order: normalise → (upi: only UpiIntent) → unwrap → ApkDownload → Allowlist (stops on a hit)
- * → BrandLookalike, WeirdHost, Reputation, DomainAge. Verdict = max signal.
+ * → BrandLookalike, WeirdHost → Reputation (server, by hash prefix) → DomainAge (RDAP).
+ * Verdict = max signal.
  *
  * ApkDownload runs before the allowlist on purpose: an APK on a trusted file host is still dangerous.
+ * The two network checks are skipped when a local check already gave a strong warning (the answer
+ * cannot change the outcome, so nothing is sent) or when the budget is spent.
  *
- * Pass `http = null` / `registrationDates = null` to run offline (no unwrap, no domain age).
+ * Pass `http = null` / `reputation = null` / `registrationDates = null` to run offline.
  */
 class LinkEngine(
     private val data: EngineData,
     http: Http?,
     private val registrationDates: RegistrationDates?,
+    private val reputation: ReputationLookup? = null,
     private val clock: () -> Long = System::currentTimeMillis,
 ) {
     private val unwrapper = http?.let { Unwrapper(it, data, clock = clock) }
@@ -52,7 +56,6 @@ class LinkEngine(
     private val localChecks: List<Pair<CheckId, Check>> = listOf(
         CheckId.BRAND_LOOKALIKE to BrandLookalikeCheck(matcher),
         CheckId.WEIRD_HOST to WeirdHostCheck(data, matcher),
-        CheckId.REPUTATION to ReputationCheck(data),
     )
 
     /** True if [raw] points at a known link shortener, so evaluation may take [Budget.shortenerMs]. */
@@ -82,8 +85,15 @@ class LinkEngine(
         }
         localChecks.filter { (id, _) -> id !in disabled }.mapTo(signals) { (_, check) -> check.run(url) }
 
+        val alreadyStrong = signals.any { it.score > Verdict.STRONG_THRESHOLD }
+        if (CheckId.REPUTATION !in disabled && !alreadyStrong) {
+            val remaining = deadline - clock()
+            val remote = reputation.takeIf { remaining >= Budget.MIN_LOOKUP_MS }
+            signals += ReputationCheck(data, remote, timeoutMs = remaining.coerceAtLeast(0).toInt()).run(url)
+        }
         val remaining = deadline - clock()
-        if (registrationDates != null && CheckId.DOMAIN_AGE !in disabled && remaining >= Budget.MIN_LOOKUP_MS) {
+        val decided = signals.any { it.score >= DomainAgeCheck.SCORE }
+        if (registrationDates != null && CheckId.DOMAIN_AGE !in disabled && !decided && remaining >= Budget.MIN_LOOKUP_MS) {
             signals += DomainAgeCheck(registrationDates, timeoutMs = remaining.toInt()).run(url)
         }
         return Verdict.of(signals, url)

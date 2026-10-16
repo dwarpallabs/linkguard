@@ -88,7 +88,7 @@ class LinkEngineTest {
             clock[0] += stepMs
             return HttpResponse(301, location = "https://bit.ly/hop$heads")
         }
-        override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int): HttpResponse? = null
+        override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int, headers: Map<String, String>): HttpResponse? = null
     }
 
     @Test

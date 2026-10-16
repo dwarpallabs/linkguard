@@ -19,6 +19,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -70,22 +71,28 @@ fun BrandsScreen(brands: List<Brand>, onBack: () -> Unit) {
     }
 }
 
+/** Progress of a report submission. */
+enum class ReportStatus { IDLE, SENDING, SENT, FAILED }
+
 /**
- * Lets the user report a link as a public GitHub issue. Nothing is sent from the app: it only opens
- * a prefilled issue page in the browser, and the user decides whether to submit it.
+ * Lets the user report a link to Dwarpal Labs' private review queue. Nothing is sent until the
+ * user taps Submit; the report is never published.
  */
 @Composable
-fun ReportScreen(onBack: () -> Unit, onSubmit: (link: String, note: String) -> Unit) {
+fun ReportScreen(status: ReportStatus, onBack: () -> Unit, onSubmit: (link: String, note: String) -> Unit) {
     var link by rememberSaveable { mutableStateOf("") }
     var note by rememberSaveable { mutableStateOf("") }
+    LaunchedEffect(status) {
+        if (status == ReportStatus.SENT) { link = ""; note = "" }
+    }
     SubScreen(stringResource(R.string.settings_report), onBack) { modifier ->
         Column(
             modifier.verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer)) {
+            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)) {
                 Text(
-                    stringResource(R.string.report_public_warning),
+                    stringResource(R.string.report_private_info),
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(16.dp),
                 )
@@ -107,10 +114,23 @@ fun ReportScreen(onBack: () -> Unit, onSubmit: (link: String, note: String) -> U
             )
             Button(
                 onClick = { onSubmit(link.trim(), note.trim()) },
-                enabled = link.isNotBlank(),
+                enabled = link.isNotBlank() && status != ReportStatus.SENDING,
                 modifier = Modifier.fillMaxWidth().testTag("report_submit"),
             ) {
-                Text(stringResource(R.string.report_submit))
+                Text(stringResource(if (status == ReportStatus.SENDING) R.string.report_sending else R.string.report_submit))
+            }
+            when (status) {
+                ReportStatus.SENT -> Text(
+                    stringResource(R.string.report_sent),
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.testTag("report_result"),
+                )
+                ReportStatus.FAILED -> Text(
+                    stringResource(R.string.report_failed),
+                    color = MaterialTheme.colorScheme.error,
+                    modifier = Modifier.testTag("report_result"),
+                )
+                else -> Unit
             }
         }
     }

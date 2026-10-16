@@ -23,6 +23,11 @@ class Prefs(context: Context) {
             .toSet()
         set(value) = prefs.edit { putStringSet(KEY_DISABLED_CHECKS, value.map { it.name }.toSet()) }
 
+    /** When the allowlist download was last checked (epoch millis). List housekeeping only. */
+    var allowlistCheckedAt: Long
+        get() = prefs.getLong(KEY_ALLOWLIST_CHECKED_AT, 0L)
+        set(value) = prefs.edit { putLong(KEY_ALLOWLIST_CHECKED_AT, value) }
+
     fun setCheckEnabled(check: CheckId, enabled: Boolean) {
         disabledChecks = if (enabled) disabledChecks - check else disabledChecks + check
     }
@@ -30,5 +35,6 @@ class Prefs(context: Context) {
     private companion object {
         const val KEY_FORWARD_TO = "forward_to"
         const val KEY_DISABLED_CHECKS = "disabled_checks"
+        const val KEY_ALLOWLIST_CHECKED_AT = "allowlist_checked_at"
     }
 }

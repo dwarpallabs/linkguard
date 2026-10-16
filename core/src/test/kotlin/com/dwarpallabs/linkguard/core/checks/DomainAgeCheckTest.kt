@@ -68,7 +68,7 @@ class DomainAgeCheckTest {
             {"eventAction":"last changed","eventDate":"2026-10-01T00:00:00Z"},
             {"eventAction":"registration","eventDate":"2026-10-12T08:30:00+05:30"}]}"""
         val http = object : FakeHttpBase() {
-            override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int): HttpResponse? {
+            override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int, headers: Map<String, String>): HttpResponse? {
                 requested += url
                 return HttpResponse(200, body = body)
             }
@@ -93,6 +93,6 @@ class DomainAgeCheckTest {
     private open class FakeHttpBase : com.dwarpallabs.linkguard.core.Http {
         val requested = mutableListOf<String>()
         override fun head(url: String, timeoutMs: Int): HttpResponse? = null
-        override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int): HttpResponse? = null
+        override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int, headers: Map<String, String>): HttpResponse? = null
     }
 }
