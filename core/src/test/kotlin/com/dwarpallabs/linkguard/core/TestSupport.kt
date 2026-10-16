@@ -14,7 +14,7 @@ object TestSupport {
 
     val dates: FakeRegistrationDates by lazy { FakeRegistrationDates.fromResource("fake_rdap.tsv") }
 
-    val reputation: FakeReputation by lazy { FakeReputation.fromResource("fixture_blocklist.txt") }
+    val reputation: FakeReputation by lazy { FakeReputation.fromResources("fixture_blocklist.txt", "fixture_reported.tsv") }
 
     /** Engine with a fake network: shorteners, RDAP and the blocklist server answer from fixtures. */
     val engine: LinkEngine by lazy { LinkEngine(data, http, dates, reputation) }
@@ -36,18 +36,30 @@ object TestSupport {
         DomainListSource(resourceLines("fixture_allowlist.txt").map { it.trim() }, emptyList())
 }
 
-/** Plays the blocklist server: answers hash-prefix queries from a plain-text fixture. */
-class FakeReputation(private val blocked: Set<String>) : ReputationLookup {
+/** Plays the LinkGuard server: answers hash-prefix queries from plain-text fixtures. */
+class FakeReputation(
+    private val blocked: Set<String>,
+    private val reported: Map<String, Int> = emptyMap(),
+) : ReputationLookup {
 
     val prefixesSeen = mutableListOf<String>()
 
-    override fun blockedHashes(prefixes: List<String>, timeoutMs: Int): Set<String> {
+    override fun lookup(prefixes: List<String>, timeoutMs: Int): ServerVerdicts {
         prefixesSeen += prefixes
-        return blocked.filter { h -> prefixes.any { h.startsWith(it) } }.toSet()
+        fun match(h: String) = prefixes.any { h.startsWith(it) }
+        return ServerVerdicts(blocked.filter(::match).toSet(), reported.filterKeys(::match))
     }
 
     companion object {
         fun fromResource(name: String) = FakeReputation(TestSupport.resourceLines(name).map { sha256(it.trim()) }.toSet())
+
+        fun fromResources(blockedName: String, reportedName: String) = FakeReputation(
+            TestSupport.resourceLines(blockedName).map { sha256(it.trim()) }.toSet(),
+            TestSupport.resourceLines(reportedName).associate { line ->
+                val (domain, count) = line.split('\t')
+                sha256(domain.trim()) to count.trim().toInt()
+            },
+        )
     }
 }
 

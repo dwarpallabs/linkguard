@@ -109,6 +109,18 @@ class LinkEngineTest {
     }
 
     @Test
+    fun serverLookupGetsTheLongerBudgetButDomainAgeDoesNot() {
+        val clock = longArrayOf(0)
+        var lookupTimeout = -1
+        val server = ReputationLookup { _, timeoutMs -> lookupTimeout = timeoutMs; clock[0] += 600; ServerVerdicts() }
+        val dates = FakeRegistrationDates(emptyMap())
+        LinkEngine(data, null, dates, server, clock = { clock[0] })
+            .evaluate("https://unknown-shop.example/", Budget(normalMs = 300, shortenerMs = 1_500, lookupMs = 1_000))
+        assertTrue(lookupTimeout in 900..1_000) { "lookup timeout was $lookupTimeout" }
+        assertEquals(emptyList<String>(), dates.asked) // 600 ms gone: past the 300 ms DomainAge budget
+    }
+
+    @Test
     fun domainAgeRunsWithinBudget() {
         val dates = FakeRegistrationDates(emptyMap())
         engine(dates = dates).evaluate("https://unknown-shop.example/", Budget.INTERACTIVE)

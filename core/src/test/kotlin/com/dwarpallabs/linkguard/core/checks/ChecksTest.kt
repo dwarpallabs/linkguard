@@ -2,6 +2,8 @@ package com.dwarpallabs.linkguard.core.checks
 
 import com.dwarpallabs.linkguard.core.CheckId
 import com.dwarpallabs.linkguard.core.FakeReputation
+import com.dwarpallabs.linkguard.core.Verdict
+import com.dwarpallabs.linkguard.core.sha256
 import com.dwarpallabs.linkguard.core.TestSupport.data
 import com.dwarpallabs.linkguard.core.TestSupport.url
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -162,7 +164,7 @@ class ChecksTest {
 
         @Test
         fun blocklistedDomainAndSubdomains() {
-            assertEquals("reputation.server", check.run(url("https://lg-test-phish.com/")).reason)
+            assertEquals("reputation.blocklist", check.run(url("https://lg-test-phish.com/")).reason)
             assertEquals(0.9, check.run(url("https://cdn.lg-test-scam.org/pay")).score)
         }
 
@@ -179,6 +181,33 @@ class ChecksTest {
         @Test
         fun serverUnavailableMeansNoSignal() =
             assertFalse(ReputationCheck(data, { _, _ -> null }).run(url("https://lg-test-phish.com/")).fired)
+
+        @Test
+        fun communityReportsGiveSoftWarningsWithTheCount() {
+            val community = ReputationCheck(data, FakeReputation.fromResources("fixture_blocklist.txt", "fixture_reported.tsv"))
+            val three = community.run(url("https://www.lg-reported-three.example/login"))
+            assertEquals("reputation.community", three.reason)
+            assertEquals("warn_community", three.messageKey)
+            assertEquals(0.4, three.score)
+            assertEquals("3", three.details["count"])
+            assertEquals(0.5, community.run(url("https://lg-reported-twelve.example/")).score)
+            assertEquals(0.6, community.run(url("https://lg-reported-forty.example/")).score)
+            assertFalse(community.run(url("https://lg-reported-twice.example/")).fired)
+        }
+
+        @Test
+        fun communityScoreNeverReachesStrong() {
+            listOf(0, 2, 3, 9, 10, 24, 25, 1_000_000).forEach { n ->
+                assertTrue(ReputationCheck.communityScore(n) <= Verdict.STRONG_THRESHOLD) { "n=$n" }
+            }
+            assertEquals(0.0, ReputationCheck.communityScore(2))
+        }
+
+        @Test
+        fun blocklistBeatsCommunityCount() {
+            val both = FakeReputation(setOf(sha256("lg-both.example")), mapOf(sha256("lg-both.example") to 40))
+            assertEquals("reputation.blocklist", ReputationCheck(data, both).run(url("https://lg-both.example/")).reason)
+        }
     }
 
     @Test

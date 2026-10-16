@@ -8,9 +8,10 @@ Open-source Android app that sits between links tapped in WhatsApp/Telegram/SMS 
   - RDAP registration-date lookups that send only the registrable domain (`example.com`), over HTTPS;
   - reputation lookups to `api.dwarpallabs.com` by hash prefix (the first 4 bytes of a domain's SHA-256, never the domain);
   - downloading the signed, hashed allowlist from `api.dwarpallabs.com`;
-  - user-initiated reports (link + optional note) to `api.dwarpallabs.com`, sent only when the user taps Send.
+  - user-initiated reports to `api.dwarpallabs.com`, sent only when the user taps Send: the link, optional note, the website's registrable domain and an anonymous per-website token (HMAC of a secret that never leaves the phone, so one phone's reports cannot be linked together).
   Nothing else, and never the full URL to anyone but a shortener the link already points at. Any in-memory cache dies with the process; nothing about opened links is written to disk.
 - The allowlist and blocklist live in the LinkGuard server database (`dwarpallabs/linkguard-server`), never in this repo. Only test fixtures under `core/src/test/resources` may contain list entries.
+- Community reports work without human review but can only ever add a *soft* warning ("reported by N users", score ≤ 0.6, 3+ distinct reporters in 7 days). They never produce a strong warning and never add a site to the allowlist; allowlisted sites are immune.
 - Never add friction to a safe link. If every check passes, the user sees nothing.
 - Never block. The warning always offers "Open anyway".
 - No accounts, no analytics SDKs, no ads, no third-party trackers.

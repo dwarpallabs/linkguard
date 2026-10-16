@@ -6,3 +6,7 @@ https://pages.razorpay.com/pl_abc	allowlist	legit payment page host used by many
 https://lg-fresh-store.com/	domain_age	3-day-old domain, no other signal: soft warning
 https://new-offer-portal.in/	domain_age	10-day-old domain: soft warning
 https://lg-mid-age.net/	domain_age	45-day-old domain: should be silent
+https://www.lg-reported-three.example/login	reputation	3 reporters this week: soft 'reported by 3 users'
+https://lg-reported-twelve.example/	reputation	12 reporters: soft (0.5)
+https://lg-reported-forty.example/	reputation	40 reporters: soft at the 0.6 cap, never strong
+https://lg-reported-and-young.example/	reputation	5 reporters and a 4-day-old domain: still soft (community never strong)

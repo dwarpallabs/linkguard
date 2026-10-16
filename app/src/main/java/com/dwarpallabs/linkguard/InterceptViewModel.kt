@@ -26,7 +26,7 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         /** Deciding. Nothing is drawn, so a fast safe link is invisible. */
         data object Checking : State
 
-        /** A short link is still being resolved after 300 ms: show "Checking link…". */
+        /** Still checking after 300 ms (short link or server lookup): show "Checking link…". */
         data object CheckingSlow : State
 
         /** Safe: open [url] in the browser without showing anything. */
@@ -56,9 +56,9 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
             }
             val slowCard = launch {
                 delay(budget.normalMs)
-                if (isShortener && _state.value == State.Checking) _state.value = State.CheckingSlow
+                if (_state.value == State.Checking) _state.value = State.CheckingSlow
             }
-            val hardStop = (if (isShortener) budget.shortenerMs else budget.normalMs) + HARD_STOP_MARGIN_MS
+            val hardStop = maxOf(if (isShortener) budget.shortenerMs else budget.normalMs, budget.lookupMs) + HARD_STOP_MARGIN_MS
             val full = withTimeoutOrNull(hardStop) {
                 withContext(Dispatchers.IO) { runInterruptible { app.engine.evaluate(raw, budget, disabled) } }
             }

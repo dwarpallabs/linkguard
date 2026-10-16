@@ -136,6 +136,7 @@ private fun reasonText(reason: Reason): String = when (reason) {
     is Reason.WeirdHost -> reason.brand?.let { stringResource(R.string.warn_weird_host_brand, it) }
         ?: stringResource(R.string.warn_weird_host)
     Reason.Reputation -> stringResource(R.string.warn_reputation)
+    is Reason.Community -> pluralStringResource(R.plurals.warn_community, reason.count, reason.count)
     is Reason.DomainAge -> pluralStringResource(R.plurals.warn_domain_age, reason.days, reason.days)
     Reason.Generic -> stringResource(R.string.warn_generic)
 }

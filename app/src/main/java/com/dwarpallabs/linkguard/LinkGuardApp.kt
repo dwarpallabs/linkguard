@@ -44,8 +44,14 @@ class LinkGuardApp : Application() {
                 }
             }
         })
-        worker.execute { AllowlistUpdater(this, http, allowlist).refreshIfStale() }
         worker.shutdown()
+        // In parallel with loading: open the TLS connection to the LinkGuard server, so the first
+        // link's lookup can reuse it (a lookup for a fixed prefix, carrying nothing about the user
+        // or any link), then refresh the allowlist if it is a day old.
+        Thread({
+            http.get("${ServerApi.BASE_URL}/v1/lookup?p=00000000", "text/plain", WARM_UP_TIMEOUT_MS)
+            AllowlistUpdater(this, http, allowlist).refreshIfStale()
+        }, "server-warm-up").start()
     }
 
     /** Bundled lists. Blocks until loading finishes: call off the main thread. */
@@ -66,5 +72,6 @@ class LinkGuardApp : Application() {
 
     private companion object {
         const val TAG = "LinkGuard"
+        const val WARM_UP_TIMEOUT_MS = 5_000
     }
 }

@@ -34,7 +34,7 @@
     <string name="settings_report_desc">ऐसे धोखाधड़ी वाले लिंक के बारे में बताएँ जिसे LinkGuard नहीं पकड़ पाया।</string>
     <string name="report_link_label">लिंक</string>
     <string name="report_note_label">आपको यह धोखाधड़ी क्यों लगता है? (वैकल्पिक)</string>
-    <string name="report_private_info">आपकी शिकायत निजी तौर पर Dwarpal Labs को जाती है, जो वेबसाइट को LinkGuard की सूचियों में जोड़ने से पहले उसकी जाँच करते हैं। इसे कभी प्रकाशित नहीं किया जाता। कृपया फ़ोन नंबर, नाम या दूसरी निजी जानकारी न लिखें।</string>
+    <string name="report_private_info">आपकी शिकायत निजी तौर पर Dwarpal Labs को जाती है और कभी प्रकाशित नहीं की जाती। जब कई अलग-अलग लोग एक ही वेबसाइट की शिकायत करते हैं, तो दूसरे LinkGuard उपयोगकर्ताओं को अपने-आप चेतावनी दिखती है। आपकी शिकायत से आपकी पहचान नहीं हो सकती। कृपया फ़ोन नंबर, नाम या दूसरी निजी जानकारी न लिखें।</string>
     <string name="report_submit">शिकायत भेजें</string>
     <string name="report_sending">भेजी जा रही है…</string>
     <string name="report_sent">धन्यवाद। आपकी शिकायत जाँच के लिए भेज दी गई है।</string>
@@ -56,6 +56,10 @@
     <string name="warn_weird_host">यह लिंक एक असामान्य पते का इस्तेमाल करता है, जिसका इस्तेमाल असली कंपनियाँ शायद ही करती हैं।</string>
     <string name="warn_weird_host_brand">इस लिंक में %1$s का नाम है, लेकिन यह ऐसे असामान्य पते का इस्तेमाल करता है जिसका इस्तेमाल %1$s नहीं करता।</string>
     <string name="warn_reputation">यह वेबसाइट जानी-मानी धोखाधड़ी या नुकसानदेह वेबसाइटों की सूची में है।</string>
+    <plurals name="warn_community">
+        <item quantity="one">इस हफ़्ते %d LinkGuard उपयोगकर्ता ने इस लिंक की धोखाधड़ी के रूप में शिकायत की है।</item>
+        <item quantity="other">इस हफ़्ते %d LinkGuard उपयोगकर्ताओं ने इस लिंक की धोखाधड़ी के रूप में शिकायत की है।</item>
+    </plurals>
     <plurals name="warn_domain_age">
         <item quantity="one">यह वेबसाइट %d दिन पहले बनी है। धोखाधड़ी वाली वेबसाइटें अक्सर बिल्कुल नई होती हैं।</item>
         <item quantity="other">यह वेबसाइट %d दिन पहले बनी है। धोखाधड़ी वाली वेबसाइटें अक्सर बिल्कुल नई होती हैं।</item>

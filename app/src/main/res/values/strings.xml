@@ -37,7 +37,7 @@
     <string name="settings_report_desc">Tell us about a scam link LinkGuard missed.</string>
     <string name="report_link_label">Link</string>
     <string name="report_note_label">Why do you think it is a scam? (optional)</string>
-    <string name="report_private_info">Your report goes privately to Dwarpal Labs, who check it before adding the website to LinkGuard’s lists. It is never published. Please don’t include phone numbers, names or other personal details.</string>
+    <string name="report_private_info">Your report goes privately to Dwarpal Labs and is never published. When several different people report the same website, other LinkGuard users see a warning automatically. Your report can’t be traced back to you. Please don’t include phone numbers, names or other personal details.</string>
     <string name="report_submit">Send report</string>
     <string name="report_sending">Sending…</string>
     <string name="report_sent">Thank you. Your report was sent for review.</string>
@@ -61,6 +61,10 @@
     <string name="warn_weird_host">This link uses an unusual address that real companies rarely use.</string>
     <string name="warn_weird_host_brand">This link mentions %1$s but uses an unusual address that %1$s does not use.</string>
     <string name="warn_reputation">This website is on a list of known scam or harmful websites.</string>
+    <plurals name="warn_community">
+        <item quantity="one">This link was reported as a scam by %d LinkGuard user this week.</item>
+        <item quantity="other">This link was reported as a scam by %d LinkGuard users this week.</item>
+    </plurals>
     <plurals name="warn_domain_age">
         <item quantity="one">This website was created %d day ago. Scam websites are often brand new.</item>
         <item quantity="other">This website was created %d days ago. Scam websites are often brand new.</item>
