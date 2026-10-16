@@ -4,6 +4,8 @@ LinkGuard is an open-source Android app that sits between the links you tap in W
 It checks each link on your phone in a fraction of a second. Safe links open straight away and you see nothing.
 If a link looks like a scam, you get one plain-language warning in English, Hindi or Tamil. LinkGuard never blocks: you can always choose "Open anyway".
 
+**LinkGuard is not a browser.** Android lists it as your "browser app" only so it can see links first; it never shows web pages and opens every link in the browser you already use (Chrome or any other), so your bookmarks, history, saved passwords and tabs stay exactly as they are.
+
 <p>
   <img src="docs/screenshots/warning_brand_en.png" width="200" alt="Warning: this website is pretending to be HDFC Bank">
   <img src="docs/screenshots/warning_brand_hi.png" width="200" alt="The same warning in Hindi">

@@ -3,6 +3,12 @@
     <string name="onboarding_title">இணைப்புகள் திறக்கும் முன் LinkGuard அவற்றைச் சரிபார்க்கிறது</string>
     <string name="onboarding_body">WhatsApp, Telegram அல்லது SMS-இல் ஒரு இணைப்பைத் தட்டும்போது, LinkGuard முதலில் அதைச் சரிபார்க்கிறது. பாதுகாப்பான இணைப்புகள் உடனே உங்கள் உலாவியில் திறக்கும். ஒரு இணைப்பு மோசடியாகத் தோன்றினால், எச்சரிக்கை காட்டப்படும், அப்போதும் நீங்கள் அதைத் திறக்கலாம்.</string>
     <string name="onboarding_privacy">நீங்கள் திறக்கும் இணைப்புகளை LinkGuard ஒருபோதும் சேமிப்பதும் இல்லை, அனுப்புவதும் இல்லை. கணக்கு தேவையில்லை.</string>
+    <string name="your_browser">உங்கள் உலாவி</string>
+    <string name="flow_link">உங்கள் இணைப்பு</string>
+    <string name="flow_check">LinkGuard சரிபார்க்கிறது</string>
+    <string name="not_a_browser_title">LinkGuard ஒரு உலாவி அல்ல</string>
+    <string name="not_a_browser_body">LinkGuard ஒருபோதும் இணையப் பக்கங்களைக் காட்டாது. ஒவ்வொரு இணைப்பையும் ஒரு நொடியில் சரிபார்த்து, நீங்கள் ஏற்கனவே பயன்படுத்தும் %1$s உலாவியில் திறக்கிறது. உங்கள் புக்மார்க்குகள், வரலாறு, சேமித்த கடவுச்சொற்கள், தாவல்கள் அனைத்தும் அப்படியே இருக்கும்.</string>
+    <string name="default_explain">Android, LinkGuard-ஐ உங்கள் “உலாவி ஆப்ஸ்” என்று குறிப்பிடும். இணைப்புகளை LinkGuard முதலில் பார்க்க மட்டுமே இது. ஒவ்வொரு இணைப்பும் இன்னும் %1$s-இல் தான் திறக்கும்.</string>
 
     <string name="default_heading">படி 1: LinkGuard-ஐ உங்கள் இயல்பு உலாவியாக அமைக்கவும்</string>
     <string name="default_done">LinkGuard உங்கள் இயல்பு உலாவி</string>
