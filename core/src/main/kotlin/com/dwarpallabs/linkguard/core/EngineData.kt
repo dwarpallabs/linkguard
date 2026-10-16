@@ -20,17 +20,28 @@ class EngineData(
         private const val PREFIX = "linkguard/"
 
         /**
-         * Loads the lists bundled by the `data` module from the classpath. [extraSources] are
-         * consulted before the bundled lists, in order.
+         * Registrations under these suffixes are restricted to Indian government bodies and
+         * RBI-regulated banks, so every host under them is allowed.
          */
-        fun loadBundled(extraSources: List<ListSource> = emptyList()): EngineData {
+        val RESTRICTED_SUFFIXES = listOf(".gov.in", ".nic.in", ".bank.in", ".mil.in")
+
+        /**
+         * Loads the lists bundled by the `data` module from the classpath.
+         *
+         * The allowlist and blocklist are not bundled: the allowlist arrives as a signed, hashed
+         * download ([downloadedAllowlist]) and the blocklist stays on the server (see
+         * [ReputationLookup]). Bundled are only public facts: brands' official domains and the
+         * restricted suffixes above. [extraSources] are consulted first, in order.
+         */
+        fun loadBundled(
+            extraSources: List<ListSource> = emptyList(),
+            downloadedAllowlist: HashedAllowlist? = null,
+        ): EngineData {
             val brands = Brand.parseTsv(lines("brands.tsv"))
-            val allow = lines("allowlist.txt").cleaned().toList() +
-                brands.flatMap { it.officialDomains }
-            val bundled = DomainListSource(allow, lines("blocklist_sha256.txt").cleaned().toList())
+            val builtIn = DomainListSource(RESTRICTED_SUFFIXES + brands.flatMap { it.officialDomains }, emptyList())
             return EngineData(
                 psl = PublicSuffixList.fromCompact(text("public_suffixes.txt")),
-                lists = LayeredLists(extraSources + bundled),
+                lists = LayeredLists(extraSources + listOfNotNull(downloadedAllowlist) + builtIn),
                 brands = brands,
                 shorteners = lines("shorteners.txt").cleaned().toHashSet(),
                 fileHosts = lines("file_hosts.txt").cleaned().toHashSet(),

@@ -5,7 +5,10 @@ import android.content.pm.ApplicationInfo
 import android.os.SystemClock
 import android.util.Log
 import com.dwarpallabs.linkguard.core.EngineData
+import com.dwarpallabs.linkguard.core.HashedAllowlist
+import com.dwarpallabs.linkguard.core.HttpReputationLookup
 import com.dwarpallabs.linkguard.core.LinkEngine
+import com.dwarpallabs.linkguard.core.MemoryCachedReputation
 import com.dwarpallabs.linkguard.core.RdapClient
 import com.dwarpallabs.linkguard.core.UrlConnectionHttp
 import com.dwarpallabs.linkguard.core.checks.MemoryCachedRegistrationDates
@@ -15,34 +18,47 @@ import java.util.concurrent.Future
 
 /**
  * Starts loading the bundled lists as soon as the process starts, so the first intercepted link
- * does not pay for parsing them on its own budget.
+ * does not pay for parsing them on its own budget. Also loads the last verified allowlist download
+ * and refreshes it in the background at most once a day.
  */
 class LinkGuardApp : Application() {
 
     private lateinit var dataFuture: Future<EngineData>
 
+    /** Downloaded, signature-checked allowlist hashes. Updated in place; the engine sees changes at once. */
+    val allowlist = HashedAllowlist()
+
+    val http = UrlConnectionHttp()
+
     override fun onCreate() {
         super.onCreate()
-        val loader = Executors.newSingleThreadExecutor { Thread(it, "engine-data") }
-        dataFuture = loader.submit(Callable {
+        val worker = Executors.newSingleThreadExecutor { Thread(it, "engine-data") }
+        dataFuture = worker.submit(Callable {
             val start = SystemClock.elapsedRealtime()
-            EngineData.loadBundled().also {
+            val updater = AllowlistUpdater(this, http, allowlist)
+            updater.loadCached()
+            EngineData.loadBundled(downloadedAllowlist = allowlist).also {
                 // Timing only; never log anything about links.
                 if (applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE != 0) {
-                    Log.i(TAG, "engine data loaded in ${SystemClock.elapsedRealtime() - start} ms")
+                    Log.i(TAG, "engine data loaded in ${SystemClock.elapsedRealtime() - start} ms, allowlist ${allowlist.size}")
                 }
             }
         })
-        loader.shutdown()
+        worker.execute { AllowlistUpdater(this, http, allowlist).refreshIfStale() }
+        worker.shutdown()
     }
 
     /** Bundled lists. Blocks until loading finishes: call off the main thread. */
     val data: EngineData get() = dataFuture.get()
 
-    /** Full engine: follows shortener redirects and asks RDAP registries, within the caller's budget. */
+    /** Full engine: shortener redirects, server blocklist by hash prefix and RDAP, within the caller's budget. */
     val engine: LinkEngine by lazy {
-        val http = UrlConnectionHttp()
-        LinkEngine(data, http, MemoryCachedRegistrationDates(RdapClient(http, data.rdapServers)))
+        LinkEngine(
+            data = data,
+            http = http,
+            registrationDates = MemoryCachedRegistrationDates(RdapClient(http, data.rdapServers)),
+            reputation = MemoryCachedReputation(HttpReputationLookup(http, ServerApi.BASE_URL)),
+        )
     }
 
     /** Offline engine: local checks only, used as the fallback when the network is slow. */

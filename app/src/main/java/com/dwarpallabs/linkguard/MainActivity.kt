@@ -16,7 +16,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.core.net.toUri
+import androidx.lifecycle.lifecycleScope
 import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.browser.Browsers
 import com.dwarpallabs.linkguard.core.Brand
@@ -24,8 +24,10 @@ import com.dwarpallabs.linkguard.core.CheckId
 import com.dwarpallabs.linkguard.ui.BrandsScreen
 import com.dwarpallabs.linkguard.ui.HomeScreen
 import com.dwarpallabs.linkguard.ui.ReportScreen
+import com.dwarpallabs.linkguard.ui.ReportStatus
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 /** First-launch setup and Settings: default browser, forward-to browser, check toggles, brands, reporting. */
@@ -37,6 +39,7 @@ class MainActivity : ComponentActivity() {
     private var browsers by mutableStateOf(emptyList<BrowserApp>())
     private var selected by mutableStateOf<String?>(null)
     private var disabledChecks by mutableStateOf(emptySet<CheckId>())
+    private var reportStatus by mutableStateOf(ReportStatus.IDLE)
 
     // After one refusal Android may silently suppress the role dialog, so switch to Settings.
     private var roleDeclined = false
@@ -80,11 +83,9 @@ class MainActivity : ComponentActivity() {
                         BrandsScreen(brands, onBack = { screen = Screen.HOME })
                     }
                     Screen.REPORT -> ReportScreen(
-                        onBack = { screen = Screen.HOME },
-                        onSubmit = { link, note ->
-                            Browsers.forward(this@MainActivity, ReportLink.issueUrl(link, note, appVersion()).toUri())
-                            screen = Screen.HOME
-                        },
+                        status = reportStatus,
+                        onBack = { reportStatus = ReportStatus.IDLE; screen = Screen.HOME },
+                        onSubmit = ::sendReport,
                     )
                 }
             }
@@ -102,6 +103,16 @@ class MainActivity : ComponentActivity() {
         browsers = Browsers.installed(this)
         selected = Browsers.target(this)
         disabledChecks = prefs.disabledChecks
+    }
+
+    /** Sends the report only now, because the user tapped Submit. */
+    private fun sendReport(link: String, note: String) {
+        reportStatus = ReportStatus.SENDING
+        val client = ReportClient((application as LinkGuardApp).http)
+        lifecycleScope.launch {
+            val ok = withContext(Dispatchers.IO) { client.send(link, note, appVersion()) }
+            reportStatus = if (ok) ReportStatus.SENT else ReportStatus.FAILED
+        }
     }
 
     private fun appVersion(): String =

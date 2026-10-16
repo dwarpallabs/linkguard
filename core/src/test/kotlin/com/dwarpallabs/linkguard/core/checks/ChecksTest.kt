@@ -1,6 +1,7 @@
 package com.dwarpallabs.linkguard.core.checks
 
 import com.dwarpallabs.linkguard.core.CheckId
+import com.dwarpallabs.linkguard.core.FakeReputation
 import com.dwarpallabs.linkguard.core.TestSupport.data
 import com.dwarpallabs.linkguard.core.TestSupport.url
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -156,16 +157,28 @@ class ChecksTest {
 
     @Nested
     inner class Reputation {
-        private val check = ReputationCheck(data)
+        private val server = FakeReputation.fromResource("fixture_blocklist.txt")
+        private val check = ReputationCheck(data, server)
 
         @Test
         fun blocklistedDomainAndSubdomains() {
-            assertEquals(0.9, check.run(url("https://lg-test-phish.com/")).score)
+            assertEquals("reputation.server", check.run(url("https://lg-test-phish.com/")).reason)
             assertEquals(0.9, check.run(url("https://cdn.lg-test-scam.org/pay")).score)
         }
 
         @Test
         fun unlisted() = assertFalse(check.run(url("https://lg-test-phish.com.example.org/")).fired)
+
+        @Test
+        fun sendsOnlyEightHexPrefixes() {
+            check.run(url("https://a.b.lg-test-phish.com/secret/path?token=1"))
+            assertTrue(server.prefixesSeen.isNotEmpty())
+            assertTrue(server.prefixesSeen.all { it.length == 8 && it.all { c -> c in '0'..'9' || c in 'a'..'f' } })
+        }
+
+        @Test
+        fun serverUnavailableMeansNoSignal() =
+            assertFalse(ReputationCheck(data, { _, _ -> null }).run(url("https://lg-test-phish.com/")).fired)
     }
 
     @Test

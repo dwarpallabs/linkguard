@@ -32,10 +32,13 @@
 
     <string name="settings_report">लिंक की शिकायत करें</string>
     <string name="settings_report_desc">ऐसे धोखाधड़ी वाले लिंक के बारे में बताएँ जिसे LinkGuard नहीं पकड़ पाया।</string>
-    <string name="report_public_warning">आपकी शिकायत GitHub पर एक सार्वजनिक इश्यू के रूप में खुलेगी, जिसे कोई भी पढ़ सकता है। फ़ोन नंबर, नाम या दूसरी निजी जानकारी न लिखें।</string>
     <string name="report_link_label">लिंक</string>
     <string name="report_note_label">आपको यह धोखाधड़ी क्यों लगता है? (वैकल्पिक)</string>
-    <string name="report_submit">GitHub पर शिकायत खोलें</string>
+    <string name="report_private_info">आपकी शिकायत निजी तौर पर Dwarpal Labs को जाती है, जो वेबसाइट को LinkGuard की सूचियों में जोड़ने से पहले उसकी जाँच करते हैं। इसे कभी प्रकाशित नहीं किया जाता। कृपया फ़ोन नंबर, नाम या दूसरी निजी जानकारी न लिखें।</string>
+    <string name="report_submit">शिकायत भेजें</string>
+    <string name="report_sending">भेजी जा रही है…</string>
+    <string name="report_sent">धन्यवाद। आपकी शिकायत जाँच के लिए भेज दी गई है।</string>
+    <string name="report_failed">शिकायत नहीं भेजी जा सकी। अपना इंटरनेट कनेक्शन जाँचें और फिर से कोशिश करें।</string>
     <string name="back">वापस</string>
 
     <string name="interstitial_title_strong">यह लिंक धोखाधड़ी हो सकता है</string>

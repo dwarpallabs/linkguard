@@ -1,4 +1,4 @@
-# Plain-text blocklist fixture; hashed at load like the real bundle.
+# Test-only blocklist fixture, served through a fake hash-prefix lookup like the real server.
 lg-test-phish.com
 lg-test-malware.net
 lg-test-scam.org

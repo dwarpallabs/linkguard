@@ -8,14 +8,16 @@ import java.time.Instant
 /** Shared, offline test fixtures. Loading the bundled data once keeps the suite fast. */
 object TestSupport {
 
-    val data: EngineData by lazy { EngineData.loadBundled(listOf(fixtureBlocklist())) }
+    val data: EngineData by lazy { EngineData.loadBundled(listOf(fixtureAllowlist())) }
 
     val http: FakeHttp by lazy { FakeHttp.fromResource("fake_redirects.tsv") }
 
     val dates: FakeRegistrationDates by lazy { FakeRegistrationDates.fromResource("fake_rdap.tsv") }
 
-    /** Engine with fake network: shorteners and RDAP answer from fixtures, nothing leaves the machine. */
-    val engine: LinkEngine by lazy { LinkEngine(data, http, dates) }
+    val reputation: FakeReputation by lazy { FakeReputation.fromResource("fixture_blocklist.txt") }
+
+    /** Engine with a fake network: shorteners, RDAP and the blocklist server answer from fixtures. */
+    val engine: LinkEngine by lazy { LinkEngine(data, http, dates, reputation) }
 
     fun url(raw: String): NormalisedUrl = requireNotNull(NormalisedUrl.parse(raw, data.psl)) { "unparseable: $raw" }
 
@@ -30,8 +32,23 @@ object TestSupport {
             .filter { it.isNotBlank() && !it.startsWith("#") }
             .map { line -> line.split('\t').let { CorpusEntry(it[0], it[1], it[2]) } }
 
-    private fun fixtureBlocklist(): ListSource =
-        DomainListSource(emptyList(), resourceLines("fixture_blocklist.txt").map { sha256(it.trim()) })
+    private fun fixtureAllowlist(): ListSource =
+        DomainListSource(resourceLines("fixture_allowlist.txt").map { it.trim() }, emptyList())
+}
+
+/** Plays the blocklist server: answers hash-prefix queries from a plain-text fixture. */
+class FakeReputation(private val blocked: Set<String>) : ReputationLookup {
+
+    val prefixesSeen = mutableListOf<String>()
+
+    override fun blockedHashes(prefixes: List<String>, timeoutMs: Int): Set<String> {
+        prefixesSeen += prefixes
+        return blocked.filter { h -> prefixes.any { h.startsWith(it) } }.toSet()
+    }
+
+    companion object {
+        fun fromResource(name: String) = FakeReputation(TestSupport.resourceLines(name).map { sha256(it.trim()) }.toSet())
+    }
 }
 
 /** Answers HEAD requests from a table keyed by host + path; anything else is "offline". */
@@ -44,7 +61,7 @@ class FakeHttp(private val responses: Map<String, HttpResponse>) : Http {
         return responses[url.substringAfter("://")]
     }
 
-    override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int): HttpResponse? {
+    override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int, headers: Map<String, String>): HttpResponse? {
         requested += url
         return null
     }

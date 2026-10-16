@@ -6,9 +6,11 @@ Open-source Android app that sits between links tapped in WhatsApp/Telegram/SMS 
 - Never log, store or transmit the URLs a user opens. All v1 checks run on-device. Network is used only for:
   - redirect lookups (HEAD, HTTPS) to hosts on `data/…/shorteners.txt`, never to the final destination;
   - RDAP registration-date lookups that send only the registrable domain (`example.com`), over HTTPS;
-  - reputation lookups by hash prefix;
-  - feed updates.
+  - reputation lookups to `api.dwarpallabs.com` by hash prefix (the first 4 bytes of a domain's SHA-256, never the domain);
+  - downloading the signed, hashed allowlist from `api.dwarpallabs.com`;
+  - user-initiated reports (link + optional note) to `api.dwarpallabs.com`, sent only when the user taps Send.
   Nothing else, and never the full URL to anyone but a shortener the link already points at. Any in-memory cache dies with the process; nothing about opened links is written to disk.
+- The allowlist and blocklist live in the LinkGuard server database (`dwarpallabs/linkguard-server`), never in this repo. Only test fixtures under `core/src/test/resources` may contain list entries.
 - Never add friction to a safe link. If every check passes, the user sees nothing.
 - Never block. The warning always offers "Open anyway".
 - No accounts, no analytics SDKs, no ads, no third-party trackers.
@@ -18,7 +20,7 @@ Open-source Android app that sits between links tapped in WhatsApp/Telegram/SMS 
 ## Architecture
 - `app/` — Android UI: link intercept activity, interstitial, settings. Kotlin, Jetpack Compose.
 - `core/` — pure Kotlin/JVM module, no Android imports. URL normalisation, redirect unwrapping, all checks, verdict scoring. 100% unit-testable.
-- `data/` — bundled lists: Indian brand allowlist, lookalike patterns, shortener domains, feed cache.
+- `data/` — bundled public data: brands and their official domains, shortener and file-host lists, free TLDs, Public Suffix List, RDAP bootstrap. No allow/block lists.
 - `corpus/` — test URLs: `must_block.txt`, `must_pass.txt`, `ambiguous.txt`. Every check change must keep both files green.
 - `feeds/` — the fetch-normalise-bundle pipeline, runnable locally with `./gradlew :feeds:build`.
 

@@ -1,0 +1,11 @@
+# Test-only allowlist fixture: just the public sites the corpus must_pass lines and unit tests use.
+# The real allowlist lives in the LinkGuard server database and reaches phones as a signed, hashed download.
+flipkart.com
+wa.me
+youtube.com
+google.com
+thehindu.com
+livemint.com
+abc.xyz
+ndtv.com
+rbi.org.in

@@ -35,10 +35,13 @@
 
     <string name="settings_report">Report a link</string>
     <string name="settings_report_desc">Tell us about a scam link LinkGuard missed.</string>
-    <string name="report_public_warning">Your report opens as a public issue on GitHub, where anyone can read it. Do not include phone numbers, names or other personal details.</string>
     <string name="report_link_label">Link</string>
     <string name="report_note_label">Why do you think it is a scam? (optional)</string>
-    <string name="report_submit">Open report on GitHub</string>
+    <string name="report_private_info">Your report goes privately to Dwarpal Labs, who check it before adding the website to LinkGuard’s lists. It is never published. Please don’t include phone numbers, names or other personal details.</string>
+    <string name="report_submit">Send report</string>
+    <string name="report_sending">Sending…</string>
+    <string name="report_sent">Thank you. Your report was sent for review.</string>
+    <string name="report_failed">Could not send the report. Check your internet connection and try again.</string>
     <string name="back">Back</string>
 
     <!-- Interstitial -->

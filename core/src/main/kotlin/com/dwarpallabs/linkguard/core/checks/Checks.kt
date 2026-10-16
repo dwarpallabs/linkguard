@@ -4,8 +4,11 @@ import com.dwarpallabs.linkguard.core.Check
 import com.dwarpallabs.linkguard.core.CheckId
 import com.dwarpallabs.linkguard.core.EngineData
 import com.dwarpallabs.linkguard.core.NormalisedUrl
+import com.dwarpallabs.linkguard.core.HttpReputationLookup
 import com.dwarpallabs.linkguard.core.Opinion
+import com.dwarpallabs.linkguard.core.ReputationLookup
 import com.dwarpallabs.linkguard.core.Signal
+import com.dwarpallabs.linkguard.core.sha256
 
 /** Hard allowlist. A hit makes the engine stop and forward silently. Always scores 0. */
 class AllowlistCheck(private val data: EngineData) : Check {
@@ -113,17 +116,27 @@ class WeirdHostCheck(private val data: EngineData, private val matcher: BrandMat
     }
 }
 
-/** Domain is on a blocklist (bundled feeds today; Safe Browsing in the play flavour later). */
-class ReputationCheck(private val data: EngineData) : Check {
+/**
+ * Domain is on a blocklist: a local list source (tests, future offline bundle) or the server's
+ * blocklist, asked by 4-byte hash prefix so the server never learns which domain was opened.
+ */
+class ReputationCheck(
+    private val data: EngineData,
+    private val remote: ReputationLookup? = null,
+    private val timeoutMs: Int = 1_500,
+) : Check {
 
     override fun run(url: NormalisedUrl): Signal {
         if (!url.isWeb) return Signal.none(CheckId.REPUTATION)
-        return if (data.lists.opinion(url.host, url.registrableDomain) == Opinion.BLOCK) {
-            Signal(CheckId.REPUTATION, SCORE, "reputation.blocklist", "warn_reputation")
-        } else {
-            Signal.none(CheckId.REPUTATION)
-        }
+        if (data.lists.opinion(url.host, url.registrableDomain) == Opinion.BLOCK) return hit("reputation.blocklist")
+        if (remote == null) return Signal.none(CheckId.REPUTATION)
+        val hashes = listOfNotNull(url.host, url.registrableDomain).distinct().map(::sha256)
+        val prefixes = hashes.map { it.take(HttpReputationLookup.PREFIX_LENGTH) }.distinct()
+        val blocked = remote.blockedHashes(prefixes, timeoutMs) ?: return Signal.none(CheckId.REPUTATION)
+        return if (hashes.any { it in blocked }) hit("reputation.server") else Signal.none(CheckId.REPUTATION)
     }
+
+    private fun hit(reason: String) = Signal(CheckId.REPUTATION, SCORE, reason, "warn_reputation")
 
     companion object {
         const val SCORE = 0.9
