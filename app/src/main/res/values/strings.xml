@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">LinkGuard</string>
 
+    <!-- Home / first launch -->
     <string name="onboarding_title">LinkGuard checks links before they open</string>
     <string name="onboarding_body">When you tap a link in WhatsApp, Telegram or SMS, LinkGuard checks it first. Safe links open straight away in your browser. If a link looks like a scam, you will see a warning, and you can still choose to open it.</string>
     <string name="onboarding_privacy">LinkGuard never saves or sends the links you open. No account needed.</string>
@@ -14,4 +15,52 @@
     <string name="browser_none">No other browser found. Install a browser such as Chrome.</string>
 
     <string name="telegram_tip">Using Telegram? Turn off its in-app browser (Settings → Chat Settings → In-app browser) so LinkGuard can check links.</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">What LinkGuard checks</string>
+    <string name="check_unwrap">Follow short links</string>
+    <string name="check_unwrap_desc">Asks services like bit.ly where a short link really goes.</string>
+    <string name="check_apk_download">App downloads</string>
+    <string name="check_brand_lookalike">Fake bank and brand websites</string>
+    <string name="check_weird_host">Unusual web addresses</string>
+    <string name="check_reputation">Known scam websites</string>
+    <string name="check_domain_age">Brand-new websites</string>
+    <string name="check_domain_age_desc">Asks the official registry when the website was created. Only the website name is sent, never the full link.</string>
+    <string name="check_upi_intent">UPI payment requests</string>
+
+    <string name="settings_brands">Brands LinkGuard knows</string>
+    <string name="settings_brands_desc">Fake websites pretending to be these are flagged.</string>
+    <string name="brands_intro">LinkGuard warns about websites that pretend to be these brands. Their real websites are listed below.</string>
+    <string name="brands_gov_only">Official government websites (.gov.in)</string>
+
+    <string name="settings_report">Report a link</string>
+    <string name="settings_report_desc">Tell us about a scam link LinkGuard missed.</string>
+    <string name="report_public_warning">Your report opens as a public issue on GitHub, where anyone can read it. Do not include phone numbers, names or other personal details.</string>
+    <string name="report_link_label">Link</string>
+    <string name="report_note_label">Why do you think it is a scam? (optional)</string>
+    <string name="report_submit">Open report on GitHub</string>
+    <string name="back">Back</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">This link may be a scam</string>
+    <string name="interstitial_title_soft">Be careful with this link</string>
+    <string name="interstitial_go_back">Go back</string>
+    <string name="interstitial_open_anyway">Open anyway</string>
+    <string name="interstitial_checking">Checking link…</string>
+    <string name="interstitial_upi_heading">UPI payment request</string>
+    <string name="interstitial_upi_payee">Pay to: %1$s</string>
+    <string name="interstitial_upi_amount">Amount: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">This link downloads an app from outside the Play Store. Fake apps like this can read your messages and steal bank OTPs.</string>
+    <string name="warn_brand_lookalike">This website is pretending to be %1$s. It is not %1$s’s real website.</string>
+    <string name="warn_upi_intent">This link asks you to send money by UPI. You never need to pay to get a refund, a prize or a KYC update.</string>
+    <string name="warn_weird_host">This link uses an unusual address that real companies rarely use.</string>
+    <string name="warn_weird_host_brand">This link mentions %1$s but uses an unusual address that %1$s does not use.</string>
+    <string name="warn_reputation">This website is on a list of known scam or harmful websites.</string>
+    <plurals name="warn_domain_age">
+        <item quantity="one">This website was created %d day ago. Scam websites are often brand new.</item>
+        <item quantity="other">This website was created %d days ago. Scam websites are often brand new.</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard found something unusual about this link.</string>
 </resources>

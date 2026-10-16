@@ -29,9 +29,10 @@ android {
 
     buildTypes {
         release {
+            // Whole-app R8. The template's packageScope (androidx/kotlin/kotlinx only) produced
+            // release builds that crash at startup with IllegalAccessError.
             optimization {
                 enable = true
-                packageScope = setOf("androidx.**", "kotlin.**", "kotlinx.**")
             }
         }
     }

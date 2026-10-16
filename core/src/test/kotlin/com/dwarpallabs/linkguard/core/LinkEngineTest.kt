@@ -80,6 +80,64 @@ class LinkEngineTest {
         assertEquals(Verdict.Level.STRONG, verdict.level)
     }
 
+    /** Each HEAD request "takes" [stepMs] on a fake clock. */
+    private class SlowHttp(private val clock: LongArray, private val stepMs: Long) : Http {
+        var heads = 0
+        override fun head(url: String, timeoutMs: Int): HttpResponse? {
+            heads++
+            clock[0] += stepMs
+            return HttpResponse(301, location = "https://bit.ly/hop$heads")
+        }
+        override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int): HttpResponse? = null
+    }
+
+    @Test
+    fun shortenerBudgetCutsOffSlowRedirects() {
+        val clock = longArrayOf(0)
+        val http = SlowHttp(clock, stepMs = 600)
+        LinkEngine(data, http, null, clock = { clock[0] }).evaluate("https://bit.ly/a", Budget.INTERACTIVE)
+        assertEquals(3, http.heads) // 0, 600, 1200 ms start a request; at 1800 ms the 1.5 s budget is spent
+    }
+
+    @Test
+    fun normalLinksSkipDomainAgeWhenBudgetIsSpent() {
+        val clock = longArrayOf(0)
+        val dates = object : FakeRegistrationDates(emptyMap()) {}
+        val slowCheckClock = { clock[0] += 250; clock[0] }
+        LinkEngine(data, null, dates, clock = slowCheckClock).evaluate("https://unknown-shop.example/", Budget.INTERACTIVE)
+        assertEquals(emptyList<String>(), dates.asked)
+    }
+
+    @Test
+    fun domainAgeRunsWithinBudget() {
+        val dates = FakeRegistrationDates(emptyMap())
+        engine(dates = dates).evaluate("https://unknown-shop.example/", Budget.INTERACTIVE)
+        assertEquals(listOf("unknown-shop.example"), dates.asked)
+    }
+
+    @Test
+    fun disabledChecksDoNotRun() {
+        val raw = "http://hdfc-kyc-update.top/verify"
+        val all = engine().evaluate(raw)
+        val noBrand = engine().evaluate(raw, disabled = setOf(CheckId.BRAND_LOOKALIKE, CheckId.WEIRD_HOST))
+        assertEquals(0.8, all.score)
+        assertEquals(0.0, noBrand.score)
+        assertTrue(noBrand.signals.none { it.check == CheckId.BRAND_LOOKALIKE })
+    }
+
+    @Test
+    fun disablingUnwrapContactsNobody() {
+        val http = FakeHttp.fromResource("fake_redirects.tsv")
+        engine(http).evaluate("https://bit.ly/3xAmPl3", disabled = setOf(CheckId.UNWRAP))
+        assertEquals(emptyList<String>(), http.requested)
+    }
+
+    @Test
+    fun isShortener() {
+        assertTrue(engine().isShortener("https://bit.ly/x"))
+        assertTrue(!engine().isShortener("https://www.irctc.co.in/"))
+    }
+
     @Test
     fun coreHasNoAndroidImports() {
         val offenders = File(System.getProperty("core.main.dir")).walkTopDown()

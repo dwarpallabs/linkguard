@@ -63,11 +63,11 @@ class FakeHttp(private val responses: Map<String, HttpResponse>) : Http {
     }
 }
 
-class FakeRegistrationDates(private val created: Map<String, Instant>) : RegistrationDates {
+open class FakeRegistrationDates(private val created: Map<String, Instant>) : RegistrationDates {
 
     val asked = mutableListOf<String>()
 
-    override fun creationDate(registrableDomain: String): Instant? {
+    override fun creationDate(registrableDomain: String, timeoutMs: Int): Instant? {
         asked += registrableDomain
         return created[registrableDomain]
     }
