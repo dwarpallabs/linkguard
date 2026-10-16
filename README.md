@@ -1,12 +1,53 @@
 # LinkGuard
 
 LinkGuard is an open-source Android app that sits between the links you tap in WhatsApp, Telegram or SMS and your real browser.
-It checks each link on your phone in a fraction of a second. Safe links open straight away, and you see nothing.
-If a link looks like a scam, you get one plain-language warning that explains why. LinkGuard never blocks: you can always choose "Open anyway".
+It checks each link on your phone in a fraction of a second. Safe links open straight away and you see nothing.
+If a link looks like a scam, you get one plain-language warning in English, Hindi or Tamil. LinkGuard never blocks: you can always choose "Open anyway".
 
-**Privacy promise:** LinkGuard never logs, stores or transmits the URLs you open. There are no accounts, no analytics and no trackers.
-Checks run on your device. The only network use is for updating scam lists and for reputation lookups by hash prefix, and the full URL is never sent.
+<p>
+  <img src="docs/screenshots/warning_brand_en.png" width="200" alt="Warning: this website is pretending to be HDFC Bank">
+  <img src="docs/screenshots/warning_brand_hi.png" width="200" alt="The same warning in Hindi">
+  <img src="docs/screenshots/warning_brand_ta.png" width="200" alt="The same warning in Tamil">
+  <img src="docs/screenshots/home_en.png" width="200" alt="Settings: default browser, checks, brands, report a link">
+</p>
 
-Built for first-time smartphone users in India. Supports Android 8 and up.
+## What it catches
+Fake bank and brand websites (SBI, HDFC, PhonePe, Paytm, India Post, IRCTC and more, including look-alike letters and typos), app downloads from outside the Play Store, UPI payment requests hidden behind links, raw-IP and throwaway addresses, brand-new websites, and known scam sites. Short links (bit.ly and others) are followed first so the real destination is checked.
 
-Licensed under [Apache-2.0](LICENSE).
+## Install
+> **v0.1.0 is a pre-release.** Hindi and Tamil text is awaiting native review, and the scam blocklist is not filled yet.
+
+1. Download `linkguard-0.1.0-foss.apk` from [Releases](https://github.com/dwarpallabs/linkguard/releases).
+2. Open it and allow "Install unknown apps" when Android asks.
+3. Open LinkGuard and tap **Set as default browser**. Pick the browser links should open in (Chrome is preselected).
+
+Android 8 or newer. Using Telegram? Turn off its in-app browser (Settings → Chat Settings → In-app browser) so LinkGuard can see links.
+
+## Privacy
+LinkGuard never logs, stores or sends the links you open. No accounts, no ads, no analytics, no trackers. Most checks run entirely on your phone. It goes online only to:
+- ask a link shortener (bit.ly, t.co, …) where a short link leads; that service would see the same request if you opened the link anyway;
+- ask a domain registry when a website was registered, sending only the domain name (`example.com`), never the full link;
+- download scam-list updates.
+
+Full policy: [dwarpallabs.com/linkguard/privacy](https://dwarpallabs.com/linkguard/privacy).
+
+## Report a scam link
+In the app: Settings → **Report a link**. It opens a prefilled public issue here; nothing is sent unless you submit it. Or [open an issue](https://github.com/dwarpallabs/linkguard/issues/new) directly.
+
+## Build from source
+Needs JDK 17+ (Android Studio's bundled JBR works).
+```
+./gradlew :core:test                 # engine + corpus tests (offline)
+./gradlew :app:assembleFossRelease   # unsigned unless signing properties are in ~/.gradle/gradle.properties
+```
+`core/` is pure Kotlin with no Android imports; `corpus/` holds the must-block / must-pass test URLs; `data/` holds the bundled lists. See [CLAUDE.md](CLAUDE.md) for the rules every change follows.
+
+## Verifying the APK
+Release APKs are signed by Dwarpal Labs. Signing certificate SHA-256:
+```
+3b7a7bc8b029e60667a269c9298067f64922f79ec6e8e1ebbf69569795405cee
+```
+Check with `apksigner verify --print-certs linkguard-0.1.0-foss.apk`.
+
+## License
+[Apache-2.0](LICENSE). Bundles the [Public Suffix List](https://publicsuffix.org) (MPL-2.0) and IANA's RDAP bootstrap data.
