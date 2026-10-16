@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      # Actions are pinned to commit SHAs (supply-chain safety); the comment is the tag.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: No signing secrets in the repo
+        run: |
+          if git grep -nE '^\s*linkguard\.(keystore|key)\.?|storePassword\s*=\s*"|keyPassword\s*=\s*"' -- . ':!.github/workflows/ci.yml' ':!app/build.gradle.kts'; then
+            echo "::error::Signing properties belong in ~/.gradle/gradle.properties, never in the repo."
+            exit 1
+          fi
+          if git ls-files | grep -iE '\.(jks|keystore)$'; then
+            echo "::error::Keystore files must never be committed."
+            exit 1
+          fi
+
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+
+      - name: Core tests (includes the corpus)
+        run: ./gradlew :core:test --console=plain
+
+      - name: App unit tests, builds and lint
+        run: ./gradlew :app:testFossDebugUnitTest :app:assembleFossDebug :app:assemblePlayDebug :app:lintFossDebug --console=plain
+
+      - name: foss flavour has no Google dependencies
+        run: |
+          ./gradlew :app:dependencies --configuration fossReleaseRuntimeClasspath --console=plain > foss-deps.txt
+          if grep -E 'com\.google\.android\.gms|com\.google\.firebase|com\.google\.android\.play' foss-deps.txt; then
+            echo "::error::The foss flavour must not depend on Google Play services, Firebase or Play libraries."
+            exit 1
+          fi
+
+      - name: Upload test reports on failure
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: reports
+          path: |
+            core/build/reports/tests/
+            app/build/reports/

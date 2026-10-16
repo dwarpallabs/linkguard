@@ -14,9 +14,23 @@ android {
         minSdk = 26
         targetSdk = 37
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Release signing comes from ~/.gradle/gradle.properties (never the repo). Without those
+    // properties, as in CI or on F-Droid's build servers, the release build is simply unsigned.
+    val keystorePath = providers.gradleProperty("linkguard.keystore").orNull?.trim()
+    signingConfigs {
+        if (keystorePath != null) {
+            create("release") {
+                storeFile = file(keystorePath)
+                storePassword = providers.gradleProperty("linkguard.keystore.password").get()
+                keyAlias = providers.gradleProperty("linkguard.key.alias").get()
+                keyPassword = providers.gradleProperty("linkguard.key.password").get()
+            }
+        }
     }
 
     flavorDimensions += "distribution"
@@ -34,6 +48,7 @@ android {
             optimization {
                 enable = true
             }
+            signingConfig = signingConfigs.findByName("release")
         }
     }
     compileOptions {
