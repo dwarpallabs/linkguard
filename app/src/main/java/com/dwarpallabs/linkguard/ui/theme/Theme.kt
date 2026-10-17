@@ -1,58 +1,81 @@
 package com.dwarpallabs.linkguard.ui.theme
 
-import android.app.Activity
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.ui.graphics.Color
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+/** Link-safety colours, which Material's scheme has no slots for. `onXTint` is the text/icon colour on `xTint`. */
+@Immutable
+data class StatusColors(
+    val safe: Color, val safeTint: Color, val onSafeTint: Color,
+    val caution: Color, val cautionTint: Color, val onCautionTint: Color,
+    val danger: Color, val dangerTint: Color, val onDangerTint: Color,
 )
 
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+private val DayStatus = StatusColors(
+    Safe, SafeTint, OnSafeTint,
+    Caution, CautionTint, OnCautionTint,
+    Danger, DangerTint, OnDangerTint,
 )
 
+private val NightStatus = StatusColors(
+    NightSafe, NightSafeTint, NightSafe,
+    NightCaution, NightCautionTint, NightCaution,
+    NightDanger, NightDangerTint, NightDanger,
+)
+
+val LocalStatusColors = staticCompositionLocalOf { DayStatus }
+
+private val LightColors = lightColorScheme(
+    primary = Indigo, onPrimary = Paper, primaryContainer = IndigoTint, onPrimaryContainer = Indigo,
+    secondary = Indigo, onSecondary = Paper, secondaryContainer = IndigoTint, onSecondaryContainer = Ink,
+    tertiary = Indigo, onTertiary = Paper, tertiaryContainer = IndigoTint, onTertiaryContainer = Ink,
+    background = Paper, onBackground = Ink,
+    surface = Paper, onSurface = Ink, surfaceVariant = PaperRaised, onSurfaceVariant = InkMuted,
+    surfaceContainerLowest = Paper, surfaceContainerLow = PaperRaised, surfaceContainer = PaperRaised,
+    surfaceContainerHigh = PaperRaised, surfaceContainerHighest = PaperRaised,
+    outline = Outline, outlineVariant = OutlineSoft,
+    error = Danger, onError = Paper, errorContainer = DangerTint, onErrorContainer = OnDangerTint,
+)
+
+private val DarkColors = darkColorScheme(
+    primary = NightIndigo, onPrimary = NightBackground, primaryContainer = NightIndigoTint, onPrimaryContainer = NightIndigo,
+    secondary = NightIndigo, onSecondary = NightBackground, secondaryContainer = NightIndigoTint, onSecondaryContainer = NightInk,
+    tertiary = NightIndigo, onTertiary = NightBackground, tertiaryContainer = NightIndigoTint, onTertiaryContainer = NightInk,
+    background = NightBackground, onBackground = NightInk,
+    surface = NightBackground, onSurface = NightInk, surfaceVariant = NightSurface, onSurfaceVariant = NightInkMuted,
+    surfaceContainerLowest = NightBackground, surfaceContainerLow = NightSurface, surfaceContainer = NightSurface,
+    surfaceContainerHigh = NightSurface, surfaceContainerHighest = NightSurface,
+    outline = Outline, outlineVariant = NightOutlineSoft,
+    error = NightDanger, onError = NightBackground, errorContainer = NightDangerTint, onErrorContainer = NightDanger,
+)
+
+/**
+ * No Material You dynamic colour: wallpaper-derived colours could make a warning look like
+ * decoration, so safety colours are identical on every phone.
+ */
 @Composable
 fun LinkguardTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+    CompositionLocalProvider(LocalStatusColors provides if (darkTheme) NightStatus else DayStatus) {
+        MaterialTheme(
+            colorScheme = if (darkTheme) DarkColors else LightColors,
+            typography = Typography,
+            content = content
+        )
     }
+}
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+object LinkguardTheme {
+    val status: StatusColors
+        @Composable @ReadOnlyComposable get() = LocalStatusColors.current
 }

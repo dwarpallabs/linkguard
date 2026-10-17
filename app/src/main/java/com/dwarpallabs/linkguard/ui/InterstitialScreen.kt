@@ -1,6 +1,5 @@
 package com.dwarpallabs.linkguard.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,17 +12,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,47 +29,43 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
 import com.dwarpallabs.linkguard.ui.InterstitialModel.Reason
+import com.dwarpallabs.linkguard.ui.components.PrimaryButton
+import com.dwarpallabs.linkguard.ui.components.SecondaryButton
+import com.dwarpallabs.linkguard.ui.components.Status
+import com.dwarpallabs.linkguard.ui.components.StatusBadge
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
-
-private val SoftAccent = Color(0xFFB45309)
 
 /** The one warning screen. "Go back" is primary; "Open anyway" is always present (never block). */
 @Composable
 fun InterstitialScreen(model: InterstitialModel, onGoBack: () -> Unit, onOpenAnyway: () -> Unit) {
-    val accent = if (model.strong) MaterialTheme.colorScheme.error else SoftAccent
+    val status = LinkguardTheme.status
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
             modifier = Modifier
                 .safeDrawingPadding()
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 24.dp, vertical = 32.dp),
-            verticalArrangement = Arrangement.spacedBy(20.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            Box(
-                Modifier
-                    .size(56.dp)
-                    .background(accent.copy(alpha = 0.12f), RoundedCornerShape(16.dp)),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text("!", color = accent, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Black)
-            }
+            StatusBadge(if (model.strong) Status.DANGER else Status.CAUTION)
             Text(
                 stringResource(if (model.strong) R.string.interstitial_title_strong else R.string.interstitial_title_soft),
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold,
-                color = accent,
+                style = MaterialTheme.typography.headlineSmall,
+                color = if (model.strong) status.onDangerTint else status.onCautionTint,
                 modifier = Modifier.testTag("title"),
             )
 
             if (model.host != null) {
+                // Hosts are always left-to-right, even inside an Urdu or Arabic sentence.
                 Text(
-                    hostText(model.host, model.domain),
-                    style = MaterialTheme.typography.headlineSmall,
+                    hostText(model.host, model.domain, MaterialTheme.colorScheme.onSurfaceVariant),
+                    style = MaterialTheme.typography.displaySmall.copy(textDirection = TextDirection.Ltr),
                     modifier = Modifier.testTag("host"),
                 )
             }
@@ -88,18 +79,9 @@ fun InterstitialScreen(model: InterstitialModel, onGoBack: () -> Unit, onOpenAny
             if (model.reason is Reason.Upi) UpiDetails(model.reason)
 
             Spacer(Modifier.height(8.dp))
-            Button(
-                onClick = onGoBack,
-                modifier = Modifier.fillMaxWidth().height(56.dp).testTag("go_back"),
-                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
-            ) {
-                Text(stringResource(R.string.interstitial_go_back), style = MaterialTheme.typography.titleMedium)
-            }
-            TextButton(
-                onClick = onOpenAnyway,
-                modifier = Modifier.fillMaxWidth().testTag("open_anyway"),
-            ) {
-                Text(stringResource(R.string.interstitial_open_anyway), color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                PrimaryButton(stringResource(R.string.interstitial_go_back), onGoBack, Modifier.testTag("go_back"))
+                SecondaryButton(stringResource(R.string.interstitial_open_anyway), onOpenAnyway, Modifier.testTag("open_anyway"))
             }
         }
     }
@@ -109,7 +91,7 @@ fun InterstitialScreen(model: InterstitialModel, onGoBack: () -> Unit, onOpenAny
 @Composable
 fun CheckingCard() {
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Card(elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)) {
+        Card(elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
             Row(
                 Modifier.padding(horizontal = 24.dp, vertical = 18.dp),
                 verticalAlignment = Alignment.CenterVertically,
@@ -122,9 +104,10 @@ fun CheckingCard() {
     }
 }
 
-private fun hostText(host: String, domain: String?) = buildAnnotatedString {
+/** Registrable domain in bold; anything to its left (`www.`, `login.`) muted, since that is where scammers hide. */
+private fun hostText(host: String, domain: String?, muted: Color) = buildAnnotatedString {
     val start = if (domain != null && host.endsWith(domain)) host.length - domain.length else host.length
-    append(host.substring(0, start))
+    withStyle(SpanStyle(fontWeight = FontWeight.Normal, color = muted)) { append(host.substring(0, start)) }
     withStyle(SpanStyle(fontWeight = FontWeight.Bold)) { append(host.substring(start)) }
 }
 
@@ -144,7 +127,10 @@ private fun reasonText(reason: Reason): String = when (reason) {
 @Composable
 private fun UpiDetails(upi: Reason.Upi) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            contentColor = MaterialTheme.colorScheme.onSurface,
+        ),
         modifier = Modifier.fillMaxWidth().testTag("upi_details"),
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {

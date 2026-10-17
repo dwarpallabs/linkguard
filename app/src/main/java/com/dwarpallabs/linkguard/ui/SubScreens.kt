@@ -10,7 +10,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -32,11 +31,13 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
 import com.dwarpallabs.linkguard.core.Brand
+import com.dwarpallabs.linkguard.ui.components.PrimaryButton
+import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
 @Composable
 private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (Modifier) -> Unit) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(Modifier.padding(padding).padding(horizontal = 20.dp, vertical = 12.dp)) {
+        Column(Modifier.padding(padding).padding(horizontal = 24.dp, vertical = 12.dp)) {
             TextButton(onClick = onBack, modifier = Modifier.testTag("back")) { Text("‹ " + stringResource(R.string.back)) }
             Text(title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             content(Modifier.padding(top = 12.dp))
@@ -62,7 +63,7 @@ fun BrandsScreen(brands: List<Brand>, onBack: () -> Unit) {
                     val domains = brand.officialDomains.joinToString(", ") { if (it.startsWith(".")) "*$it" else it }
                     Text(
                         domains.ifEmpty { stringResource(R.string.brands_gov_only) },
-                        style = MaterialTheme.typography.bodySmall,
+                        style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
@@ -112,22 +113,23 @@ fun ReportScreen(status: ReportStatus, onBack: () -> Unit, onSubmit: (link: Stri
                 minLines = 3,
                 modifier = Modifier.fillMaxWidth().testTag("report_note"),
             )
-            Button(
+            PrimaryButton(
+                stringResource(if (status == ReportStatus.SENDING) R.string.report_sending else R.string.report_submit),
                 onClick = { onSubmit(link.trim(), note.trim()) },
                 enabled = link.isNotBlank() && status != ReportStatus.SENDING,
-                modifier = Modifier.fillMaxWidth().testTag("report_submit"),
-            ) {
-                Text(stringResource(if (status == ReportStatus.SENDING) R.string.report_sending else R.string.report_submit))
-            }
+                modifier = Modifier.testTag("report_submit"),
+            )
             when (status) {
                 ReportStatus.SENT -> Text(
                     stringResource(R.string.report_sent),
-                    color = MaterialTheme.colorScheme.primary,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = LinkguardTheme.status.onSafeTint,
                     modifier = Modifier.testTag("report_result"),
                 )
                 ReportStatus.FAILED -> Text(
                     stringResource(R.string.report_failed),
-                    color = MaterialTheme.colorScheme.error,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = LinkguardTheme.status.onDangerTint,
                     modifier = Modifier.testTag("report_result"),
                 )
                 else -> Unit
