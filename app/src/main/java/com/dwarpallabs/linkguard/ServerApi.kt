@@ -6,7 +6,7 @@ import com.dwarpallabs.linkguard.core.HashedAllowlist
 import com.dwarpallabs.linkguard.core.Http
 import java.io.File
 
-/** The LinkGuard server. See dwarpallabs/linkguard-server. */
+/** The LinkGuard server at api.dwarpallabs.com: hash-prefix lookups, the signed allowlist and reports. */
 object ServerApi {
     const val BASE_URL = "https://api.dwarpallabs.com"
 
