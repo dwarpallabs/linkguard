@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
@@ -20,6 +21,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -28,6 +30,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -39,6 +42,7 @@ import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
 import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.core.CheckId
+import com.dwarpallabs.linkguard.ui.components.FlowIcons
 import com.dwarpallabs.linkguard.ui.components.PrimaryButton
 import com.dwarpallabs.linkguard.ui.components.Status
 import com.dwarpallabs.linkguard.ui.components.StatusBadge
@@ -196,11 +200,11 @@ private fun NotABrowserCard(browserName: String) {
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 modifier = Modifier.semantics(mergeDescendants = true) {},
             ) {
-                FlowStep("🔗", stringResource(R.string.flow_link))
-                Text("→", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                FlowStep("🛡", stringResource(R.string.flow_check))
-                Text("→", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                FlowStep("🌐", browserName)
+                FlowStep(FlowIcons.Link, stringResource(R.string.flow_link))
+                FlowArrow()
+                FlowStep(FlowIcons.Shield, stringResource(R.string.flow_check))
+                FlowArrow()
+                FlowStep(FlowIcons.Globe, browserName)
             }
             Text(
                 stringResource(R.string.not_a_browser_title),
@@ -213,9 +217,13 @@ private fun NotABrowserCard(browserName: String) {
 }
 
 @Composable
-private fun RowScope.FlowStep(icon: String, label: String) {
-    Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(icon, style = MaterialTheme.typography.titleLarge)
+private fun RowScope.FlowStep(icon: ImageVector, label: String) {
+    Column(
+        Modifier.weight(1f),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+    ) {
+        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(32.dp))
         Text(
             label,
             style = MaterialTheme.typography.labelMedium,
@@ -223,6 +231,16 @@ private fun RowScope.FlowStep(icon: String, label: String) {
             maxLines = 2,
         )
     }
+}
+
+@Composable
+private fun FlowArrow() {
+    Icon(
+        FlowIcons.Arrow,
+        contentDescription = null,
+        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.size(20.dp),
+    )
 }
 
 @Composable
