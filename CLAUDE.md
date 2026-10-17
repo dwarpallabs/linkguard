@@ -34,6 +34,7 @@ Open-source Android app that sits between links tapped in WhatsApp/Telegram/SMS 
 
 ## Workflow for Claude
 - The full product spec is in `docs/build-brief.md`. Read the relevant section before starting any milestone.
+- The design system is in `docs/design-system.md`. Follow it for every app screen, website page, graphic and user-facing string (colours, type, spacing, icons, wording).
 - Always start in plan mode for a new milestone. Show the plan; wait for approval.
 - Run `./gradlew :core:test` before declaring any check done.
 - When adding a check, add at least 3 URLs to `must_block.txt` and 3 to `must_pass.txt` that exercise it.
