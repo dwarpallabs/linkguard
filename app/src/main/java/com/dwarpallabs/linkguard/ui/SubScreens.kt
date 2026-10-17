@@ -5,8 +5,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
@@ -31,7 +29,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
-import com.dwarpallabs.linkguard.core.Brand
 
 @Composable
 private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (Modifier) -> Unit) {
@@ -40,33 +37,6 @@ private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (M
             TextButton(onClick = onBack, modifier = Modifier.testTag("back")) { Text("‹ " + stringResource(R.string.back)) }
             Text(title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             content(Modifier.padding(top = 12.dp))
-        }
-    }
-}
-
-/** Read-only list of the bundled brands and their real domains. */
-@Composable
-fun BrandsScreen(brands: List<Brand>, onBack: () -> Unit) {
-    SubScreen(stringResource(R.string.settings_brands), onBack) { modifier ->
-        LazyColumn(modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            item {
-                Text(
-                    stringResource(R.string.brands_intro),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            items(brands, key = { it.name }) { brand ->
-                Column {
-                    Text(brand.name, style = MaterialTheme.typography.titleMedium)
-                    val domains = brand.officialDomains.joinToString(", ") { if (it.startsWith(".")) "*$it" else it }
-                    Text(
-                        domains.ifEmpty { stringResource(R.string.brands_gov_only) },
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
         }
     }
 }

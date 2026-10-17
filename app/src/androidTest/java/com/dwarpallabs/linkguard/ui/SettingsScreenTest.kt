@@ -48,7 +48,7 @@ class SettingsScreenTest {
                     isDefault = true, browsers = emptyList(), selected = null, disabledChecks = disabled,
                     onSetDefault = {}, onSelectBrowser = {},
                     onToggleCheck = { check, enabled -> prefs.setCheckEnabled(check, enabled); disabled = prefs.disabledChecks },
-                    onOpenBrands = {}, onOpenReport = {},
+                    onOpenReport = {},
                 )
             }
         }
@@ -70,7 +70,7 @@ class SettingsScreenTest {
                     isDefault = false,
                     browsers = listOf(com.dwarpallabs.linkguard.browser.BrowserApp("org.mozilla.firefox", "Firefox")),
                     selected = "org.mozilla.firefox", disabledChecks = emptySet(),
-                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenBrands = {}, onOpenReport = {},
+                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenReport = {},
                 )
             }
         }
@@ -88,7 +88,7 @@ class SettingsScreenTest {
             LinkguardTheme {
                 HomeScreen(
                     isDefault = true, browsers = emptyList(), selected = null, disabledChecks = emptySet(),
-                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenBrands = {}, onOpenReport = {},
+                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenReport = {},
                 )
             }
         }

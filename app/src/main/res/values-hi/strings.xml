@@ -31,11 +31,6 @@
     <string name="check_domain_age_desc">आधिकारिक रजिस्ट्री से पूछता है कि वेबसाइट कब बनी थी। सिर्फ़ वेबसाइट का नाम भेजा जाता है, पूरा लिंक कभी नहीं।</string>
     <string name="check_upi_intent">UPI भुगतान अनुरोध</string>
 
-    <string name="settings_brands">LinkGuard किन ब्रांड को पहचानता है</string>
-    <string name="settings_brands_desc">इनके नाम से बनी नकली वेबसाइटों पर चेतावनी दी जाती है।</string>
-    <string name="brands_intro">LinkGuard उन वेबसाइटों के बारे में चेतावनी देता है जो इन ब्रांड होने का दिखावा करती हैं। इनकी असली वेबसाइटें नीचे दी गई हैं।</string>
-    <string name="brands_gov_only">आधिकारिक सरकारी वेबसाइटें (.gov.in)</string>
-
     <string name="settings_report">लिंक की शिकायत करें</string>
     <string name="settings_report_desc">ऐसे धोखाधड़ी वाले लिंक के बारे में बताएँ जिसे LinkGuard नहीं पकड़ पाया।</string>
     <string name="report_link_label">लिंक</string>

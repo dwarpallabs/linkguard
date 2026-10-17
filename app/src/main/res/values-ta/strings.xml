@@ -31,11 +31,6 @@
     <string name="check_domain_age_desc">இணையதளம் எப்போது உருவாக்கப்பட்டது என்று அதிகாரப்பூர்வ பதிவகத்திடம் கேட்கிறது. இணையதளத்தின் பெயர் மட்டுமே அனுப்பப்படும், முழு இணைப்பு ஒருபோதும் இல்லை.</string>
     <string name="check_upi_intent">UPI கட்டணக் கோரிக்கைகள்</string>
 
-    <string name="settings_brands">LinkGuard அறிந்த பிராண்டுகள்</string>
-    <string name="settings_brands_desc">இவை போல நடிக்கும் போலி இணையதளங்கள் சுட்டிக்காட்டப்படும்.</string>
-    <string name="brands_intro">இந்த பிராண்டுகள் போல நடிக்கும் இணையதளங்கள் பற்றி LinkGuard எச்சரிக்கிறது. அவற்றின் உண்மையான இணையதளங்கள் கீழே உள்ளன.</string>
-    <string name="brands_gov_only">அதிகாரப்பூர்வ அரசு இணையதளங்கள் (.gov.in)</string>
-
     <string name="settings_report">இணைப்பைப் புகாரளி</string>
     <string name="settings_report_desc">LinkGuard தவறவிட்ட மோசடி இணைப்பைப் பற்றி எங்களுக்குச் சொல்லுங்கள்.</string>
     <string name="report_link_label">இணைப்பு</string>
