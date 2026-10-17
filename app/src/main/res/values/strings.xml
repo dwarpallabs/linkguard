@@ -34,13 +34,22 @@
     <string name="check_domain_age_desc">Asks the official registry when the website was created. Only the website name is sent, never the full link.</string>
     <string name="check_upi_intent">UPI payment requests</string>
 
-    <string name="settings_brands">Brands LinkGuard knows</string>
-    <string name="settings_brands_desc">Fake websites pretending to be these are flagged.</string>
-    <string name="brands_intro">LinkGuard warns about websites that pretend to be these brands. Their real websites are listed below.</string>
-    <string name="brands_gov_only">Official government websites (.gov.in)</string>
-
     <string name="settings_report">Report a link</string>
     <string name="settings_report_desc">Tell us about a scam link LinkGuard missed.</string>
+    <string name="how_title">How LinkGuard works</string>
+    <string name="how_desc">Why you need it, and how it decides which links to warn about.</string>
+    <string name="how_why_title">Why it’s needed</string>
+    <string name="how_why_body">Scam messages on WhatsApp and SMS often carry links that look real: a fake bank page, a “KYC update” form or an app that steals money. One tap is enough to cause harm, and a fake web address can be hard to spot.</string>
+    <string name="how_where_title">Where LinkGuard sits</string>
+    <string name="how_where_body">LinkGuard sits between the link you tap and your browser. It checks the link in a split second, then opens it in %1$s. It never shows web pages itself.</string>
+    <string name="how_safe_title">Safe links open straight away</string>
+    <string name="how_safe_body">Well-known websites and official ones, such as government (.gov.in) and bank websites, open immediately. If a link looks fine, you see nothing at all.</string>
+    <string name="how_scam_title">Spotting scam links</string>
+    <string name="how_scam_body">LinkGuard looks for the tricks scammers use: websites pretending to be a bank or a well-known brand, app downloads from outside the Play Store, hidden payment requests, brand-new websites and unusual web addresses. It also checks a list of known harmful websites that is updated every day.</string>
+    <string name="how_community_title">Reports from other users</string>
+    <string name="how_community_body">When several LinkGuard users report the same website as a scam, others are warned to be careful.</string>
+    <string name="how_choice_title">You always decide</string>
+    <string name="how_choice_body">LinkGuard never blocks a link. Every warning explains the problem in simple words and offers “Open anyway”. LinkGuard never saves the links you open.</string>
     <string name="report_link_label">Link</string>
     <string name="report_note_label">Why do you think it is a scam? (optional)</string>
     <string name="report_private_info">Your report goes privately to Dwarpal Labs and is never published. When several different people report the same website, other LinkGuard users see a warning automatically. Your report can’t be traced back to you. Please don’t include phone numbers, names or other personal details.</string>

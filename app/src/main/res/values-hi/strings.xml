@@ -31,13 +31,22 @@
     <string name="check_domain_age_desc">आधिकारिक रजिस्ट्री से पूछता है कि वेबसाइट कब बनी थी। सिर्फ़ वेबसाइट का नाम भेजा जाता है, पूरा लिंक कभी नहीं।</string>
     <string name="check_upi_intent">UPI भुगतान अनुरोध</string>
 
-    <string name="settings_brands">LinkGuard किन ब्रांड को पहचानता है</string>
-    <string name="settings_brands_desc">इनके नाम से बनी नकली वेबसाइटों पर चेतावनी दी जाती है।</string>
-    <string name="brands_intro">LinkGuard उन वेबसाइटों के बारे में चेतावनी देता है जो इन ब्रांड होने का दिखावा करती हैं। इनकी असली वेबसाइटें नीचे दी गई हैं।</string>
-    <string name="brands_gov_only">आधिकारिक सरकारी वेबसाइटें (.gov.in)</string>
-
     <string name="settings_report">लिंक की शिकायत करें</string>
     <string name="settings_report_desc">ऐसे धोखाधड़ी वाले लिंक के बारे में बताएँ जिसे LinkGuard नहीं पकड़ पाया।</string>
+    <string name="how_title">LinkGuard कैसे काम करता है</string>
+    <string name="how_desc">इसकी ज़रूरत क्यों है, और यह कैसे तय करता है कि किन लिंक पर चेतावनी देनी है।</string>
+    <string name="how_why_title">इसकी ज़रूरत क्यों है</string>
+    <string name="how_why_body">WhatsApp और SMS पर धोखाधड़ी वाले मैसेज में अक्सर ऐसे लिंक होते हैं जो असली लगते हैं: नकली बैंक पेज, “KYC अपडेट” फ़ॉर्म या पैसे चुराने वाला ऐप। नुकसान के लिए एक टैप काफ़ी है, और नकली वेब पता पहचानना मुश्किल हो सकता है।</string>
+    <string name="how_where_title">LinkGuard कहाँ काम करता है</string>
+    <string name="how_where_body">LinkGuard आपके टैप किए लिंक और आपके ब्राउज़र के बीच रहता है। यह पल भर में लिंक की जाँच करता है, फिर उसे %1$s में खोलता है। यह खुद कभी वेब पेज नहीं दिखाता।</string>
+    <string name="how_safe_title">सुरक्षित लिंक तुरंत खुलते हैं</string>
+    <string name="how_safe_body">जानी-मानी वेबसाइटें और आधिकारिक साइटें, जैसे सरकारी (.gov.in) और बैंक की वेबसाइटें, तुरंत खुल जाती हैं। अगर लिंक ठीक है, तो आपको कुछ भी नहीं दिखता।</string>
+    <string name="how_scam_title">धोखाधड़ी वाले लिंक की पहचान</string>
+    <string name="how_scam_body">LinkGuard धोखेबाज़ों की चालें पहचानता है: बैंक या किसी जाने-माने ब्रांड होने का दिखावा करने वाली वेबसाइटें, Play Store के बाहर से ऐप डाउनलोड, छिपे हुए भुगतान अनुरोध, बिल्कुल नई वेबसाइटें और असामान्य वेब पते। यह जानी-मानी नुकसानदेह वेबसाइटों की एक सूची से भी जाँच करता है, जो हर दिन अपडेट होती है।</string>
+    <string name="how_community_title">दूसरे उपयोगकर्ताओं की शिकायतें</string>
+    <string name="how_community_body">जब कई LinkGuard उपयोगकर्ता एक ही वेबसाइट की धोखाधड़ी के रूप में शिकायत करते हैं, तो दूसरों को सावधान रहने की चेतावनी दी जाती है।</string>
+    <string name="how_choice_title">फ़ैसला हमेशा आपका</string>
+    <string name="how_choice_body">LinkGuard कभी कोई लिंक ब्लॉक नहीं करता। हर चेतावनी आसान शब्दों में समस्या बताती है और “फिर भी खोलें” का विकल्प देती है। LinkGuard आपके खोले गए लिंक कभी सेव नहीं करता।</string>
     <string name="report_link_label">लिंक</string>
     <string name="report_note_label">आपको यह धोखाधड़ी क्यों लगता है? (वैकल्पिक)</string>
     <string name="report_private_info">आपकी शिकायत निजी तौर पर Dwarpal Labs को जाती है और कभी प्रकाशित नहीं की जाती। जब कई अलग-अलग लोग एक ही वेबसाइट की शिकायत करते हैं, तो दूसरे LinkGuard उपयोगकर्ताओं को अपने-आप चेतावनी दिखती है। आपकी शिकायत से आपकी पहचान नहीं हो सकती। कृपया फ़ोन नंबर, नाम या दूसरी निजी जानकारी न लिखें।</string>
