@@ -28,10 +28,18 @@ build/
 *.class
 output-metadata.json
 
-# Signing keys — never commit
+# Signing keys and credentials — never commit
 *.jks
 *.keystore
 keystore.properties
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+.dev.vars
+google-services.json
 
 # IDE
 .idea/*

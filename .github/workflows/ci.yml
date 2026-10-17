@@ -22,8 +22,12 @@ jobs:
             echo "::error::Signing properties belong in ~/.gradle/gradle.properties, never in the repo."
             exit 1
           fi
-          if git ls-files | grep -iE '\.(jks|keystore)$'; then
-            echo "::error::Keystore files must never be committed."
+          if git ls-files | grep -iE '\.(jks|keystore|pem|key|p12|pfx)$|(^|/)(\.env(\..*)?|\.dev\.vars|google-services\.json)$'; then
+            echo "::error::Key and credential files must never be committed."
+            exit 1
+          fi
+          if git grep -nIE -e '-----BEGIN [A-Z ]*PRIVATE KEY-----' -e 'gh[pousr]_[A-Za-z0-9]{36}' -e 'github_pat_[A-Za-z0-9_]{40,}' -e 'AKIA[0-9A-Z]{16}' -e 'AIza[0-9A-Za-z_-]{35}' -- . ':!.github/workflows/ci.yml'; then
+            echo "::error::A private key or API token is committed. Remove it and rotate it."
             exit 1
           fi
 
