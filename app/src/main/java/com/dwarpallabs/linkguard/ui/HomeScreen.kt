@@ -10,16 +10,18 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -28,17 +30,28 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
 import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.core.CheckId
+import com.dwarpallabs.linkguard.ui.components.LineIcons
+import com.dwarpallabs.linkguard.ui.components.PrimaryButton
+import com.dwarpallabs.linkguard.ui.components.Status
+import com.dwarpallabs.linkguard.ui.components.StatusBadge
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
 /** Checks the user can switch off, in display order. The allowlist is always on. */
@@ -76,7 +89,7 @@ fun HomeScreen(
             modifier = Modifier
                 .padding(padding)
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 20.dp, vertical = 24.dp),
+                .padding(horizontal = 24.dp, vertical = 24.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             Text(
@@ -98,24 +111,25 @@ fun HomeScreen(
 
             SectionHeading(stringResource(R.string.default_heading))
             if (isDefault) {
-                Text(
-                    "✓ " + stringResource(R.string.default_done),
-                    style = MaterialTheme.typography.bodyLarge,
-                    color = MaterialTheme.colorScheme.primary,
-                    fontWeight = FontWeight.SemiBold,
-                )
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    StatusBadge(Status.SAFE, size = 40.dp)
+                    Text(
+                        stringResource(R.string.default_done),
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = LinkguardTheme.status.onSafeTint,
+                        fontWeight = FontWeight.SemiBold,
+                    )
+                }
             } else {
                 Text(
                     stringResource(R.string.default_explain, browserName),
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.testTag("default_explain"),
                 )
-                Button(onClick = onSetDefault, modifier = Modifier.fillMaxWidth()) {
-                    Text(stringResource(R.string.default_button))
-                }
+                PrimaryButton(stringResource(R.string.default_button), onSetDefault)
                 Text(
                     stringResource(R.string.default_hint),
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
@@ -134,7 +148,7 @@ fun HomeScreen(
                                     onClick = { onSelectBrowser(browser.packageName) },
                                     role = Role.RadioButton,
                                 )
-                                .padding(vertical = 8.dp),
+                                .heightIn(min = 56.dp),
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             RadioButton(selected = browser.packageName == selected, onClick = null)
@@ -180,20 +194,44 @@ fun HomeScreen(
 @Composable
 private fun NotABrowserCard(browserName: String) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            contentColor = MaterialTheme.colorScheme.onSurface,
+        ),
         modifier = Modifier.fillMaxWidth().testTag("not_a_browser"),
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                modifier = Modifier.semantics(mergeDescendants = true) {},
-            ) {
-                FlowStep("🔗", stringResource(R.string.flow_link))
-                Text("→", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                FlowStep("🛡", stringResource(R.string.flow_check))
-                Text("→", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                FlowStep("🌐", browserName)
+            val steps = listOf(
+                LineIcons.Link to stringResource(R.string.flow_link),
+                LineIcons.Shield to stringResource(R.string.flow_check),
+                LineIcons.Globe to browserName,
+            )
+            // Side by side only while every word fits its column; long words (Tamil, large text)
+            // would otherwise break mid-word, so stack the steps instead.
+            if (flowNeedsStacking(steps.map { it.second })) {
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                    modifier = Modifier.semantics(mergeDescendants = true) {},
+                ) {
+                    steps.forEachIndexed { i, (icon, label) ->
+                        if (i > 0) FlowArrow(Modifier.padding(start = 6.dp).rotate(downRotation()))
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(32.dp))
+                            Text(label, style = MaterialTheme.typography.bodyLarge)
+                        }
+                    }
+                }
+            } else {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    modifier = Modifier.semantics(mergeDescendants = true) {},
+                ) {
+                    steps.forEachIndexed { i, (icon, label) ->
+                        if (i > 0) FlowArrow()
+                        FlowStep(icon, label)
+                    }
+                }
             }
             Text(
                 stringResource(R.string.not_a_browser_title),
@@ -206,17 +244,47 @@ private fun NotABrowserCard(browserName: String) {
 }
 
 @Composable
-private fun RowScope.FlowStep(icon: String, label: String) {
-    Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(icon, style = MaterialTheme.typography.titleLarge)
+private fun RowScope.FlowStep(icon: ImageVector, label: String) {
+    Column(
+        Modifier.weight(1f),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+    ) {
+        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(32.dp))
         Text(
             label,
             style = MaterialTheme.typography.labelMedium,
             textAlign = TextAlign.Center,
-            maxLines = 2,
         )
     }
 }
+
+@Composable
+private fun FlowArrow(modifier: Modifier = Modifier) {
+    Icon(
+        LineIcons.Arrow,
+        contentDescription = null,
+        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = modifier.size(20.dp),
+    )
+}
+
+@Composable
+private fun flowNeedsStacking(labels: List<String>): Boolean {
+    val measurer = rememberTextMeasurer()
+    val style = MaterialTheme.typography.labelMedium
+    val density = LocalDensity.current
+    // Card padding 16 dp each side, two 20 dp arrows, four 6 dp gaps (all inside the 24 dp gutters).
+    val screenWidth = LocalConfiguration.current.screenWidthDp.dp
+    val column = with(density) { ((screenWidth - 48.dp - 32.dp - 40.dp - 24.dp) / 3).toPx() }
+    return labels.any { label ->
+        label.split(' ').any { word -> measurer.measure(word, style, maxLines = 1).size.width > column }
+    }
+}
+
+/** Turns the forward arrow to point down. It is already mirrored in RTL, so it turns the other way there. */
+@Composable
+private fun downRotation() = if (LocalLayoutDirection.current == LayoutDirection.Rtl) -90f else 90f
 
 @Composable
 private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes description: Int?, enabled: Boolean, onToggle: (Boolean) -> Unit) {
@@ -224,7 +292,8 @@ private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes descripti
         modifier = Modifier
             .fillMaxWidth()
             .toggleable(value = enabled, onValueChange = onToggle, role = Role.Switch)
-            .padding(vertical = 10.dp)
+            .heightIn(min = 64.dp)
+            .padding(vertical = 8.dp)
             .testTag("toggle_${check.code}"),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -233,7 +302,7 @@ private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes descripti
             if (description != null) {
                 Text(
                     stringResource(description),
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
@@ -248,11 +317,12 @@ private fun LinkRow(title: String, subtitle: String, onClick: () -> Unit, tag: S
         Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(vertical = 10.dp)
+            .heightIn(min = 64.dp)
+            .padding(vertical = 8.dp)
             .testTag(tag),
     ) {
         Text(title + "  ›", style = MaterialTheme.typography.titleMedium)
-        Text(subtitle, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(subtitle, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 

@@ -6,12 +6,13 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -31,11 +32,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
+import com.dwarpallabs.linkguard.ui.components.LineIcons
+import com.dwarpallabs.linkguard.ui.components.PrimaryButton
+import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
 @Composable
 private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (Modifier) -> Unit) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(Modifier.padding(padding).padding(horizontal = 20.dp, vertical = 12.dp)) {
+        Column(Modifier.padding(padding).padding(horizontal = 24.dp, vertical = 12.dp)) {
             TextButton(onClick = onBack, modifier = Modifier.testTag("back")) { Text("‹ " + stringResource(R.string.back)) }
             Text(title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             content(Modifier.padding(top = 12.dp))
@@ -45,12 +49,12 @@ private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (M
 
 /** Sections of the "How LinkGuard works" screen: icon, title, body. */
 private val HowSections = listOf(
-    Triple("⚠️", R.string.how_why_title, R.string.how_why_body),
-    Triple("🛡", R.string.how_where_title, R.string.how_where_body),
-    Triple("✅", R.string.how_safe_title, R.string.how_safe_body),
-    Triple("🔍", R.string.how_scam_title, R.string.how_scam_body),
-    Triple("👥", R.string.how_community_title, R.string.how_community_body),
-    Triple("👍", R.string.how_choice_title, R.string.how_choice_body),
+    Triple(LineIcons.Warning, R.string.how_why_title, R.string.how_why_body),
+    Triple(LineIcons.Shield, R.string.how_where_title, R.string.how_where_body),
+    Triple(LineIcons.Check, R.string.how_safe_title, R.string.how_safe_body),
+    Triple(LineIcons.Search, R.string.how_scam_title, R.string.how_scam_body),
+    Triple(LineIcons.People, R.string.how_community_title, R.string.how_community_body),
+    Triple(LineIcons.Choice, R.string.how_choice_title, R.string.how_choice_body),
 )
 
 /**
@@ -66,10 +70,15 @@ fun HowItWorksScreen(browserName: String, onBack: () -> Unit) {
         ) {
             HowSections.forEach { (icon, title, body) ->
                 Row(Modifier.semantics(mergeDescendants = true) {}) {
-                    Text(icon, style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(end = 14.dp))
+                    Icon(
+                        icon,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(end = 14.dp).size(28.dp),
+                    )
                     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         Text(stringResource(title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
-                        Text(stringResource(body, browserName), style = MaterialTheme.typography.bodyMedium)
+                        Text(stringResource(body, browserName), style = MaterialTheme.typography.bodyLarge)
                     }
                 }
             }
@@ -118,22 +127,23 @@ fun ReportScreen(status: ReportStatus, onBack: () -> Unit, onSubmit: (link: Stri
                 minLines = 3,
                 modifier = Modifier.fillMaxWidth().testTag("report_note"),
             )
-            Button(
+            PrimaryButton(
+                stringResource(if (status == ReportStatus.SENDING) R.string.report_sending else R.string.report_submit),
                 onClick = { onSubmit(link.trim(), note.trim()) },
                 enabled = link.isNotBlank() && status != ReportStatus.SENDING,
-                modifier = Modifier.fillMaxWidth().testTag("report_submit"),
-            ) {
-                Text(stringResource(if (status == ReportStatus.SENDING) R.string.report_sending else R.string.report_submit))
-            }
+                modifier = Modifier.testTag("report_submit"),
+            )
             when (status) {
                 ReportStatus.SENT -> Text(
                     stringResource(R.string.report_sent),
-                    color = MaterialTheme.colorScheme.primary,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = LinkguardTheme.status.onSafeTint,
                     modifier = Modifier.testTag("report_result"),
                 )
                 ReportStatus.FAILED -> Text(
                     stringResource(R.string.report_failed),
-                    color = MaterialTheme.colorScheme.error,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = LinkguardTheme.status.onDangerTint,
                     modifier = Modifier.testTag("report_result"),
                 )
                 else -> Unit
