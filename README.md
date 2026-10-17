@@ -46,6 +46,9 @@ In the app: Settings → **Report a link**. Reports go privately to Dwarpal Labs
 ## Where the lists live
 The scam blocklist and the safe-site allowlist are kept in the LinkGuard server database, not in this repository, so scammers cannot read them. Phones check the blocklist by 4-byte hash prefix and receive the allowlist as signed hashes. The detection rules (look-alike brands, app downloads, unusual addresses, UPI requests) are all here in the open.
 
+## Contact
+Questions, bugs or privacy concerns: [support@dwarpallabs.com](mailto:support@dwarpallabs.com) or [open an issue](https://github.com/dwarpallabs/linkguard/issues).
+
 ## Build from source
 Needs JDK 17+ (Android Studio's bundled JBR works).
 ```
