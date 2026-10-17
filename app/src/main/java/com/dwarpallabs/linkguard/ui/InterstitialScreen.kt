@@ -106,7 +106,8 @@ fun CheckingCard() {
 
 /** Registrable domain in bold; anything to its left (`www.`, `login.`) muted, since that is where scammers hide. */
 private fun hostText(host: String, domain: String?, muted: Color) = buildAnnotatedString {
-    val start = if (domain != null && host.endsWith(domain)) host.length - domain.length else host.length
+    // No registrable domain (e.g. a raw IP address): the whole host is what the site really is.
+    val start = if (domain != null && host.endsWith(domain)) host.length - domain.length else 0
     withStyle(SpanStyle(fontWeight = FontWeight.Normal, color = muted)) { append(host.substring(0, start)) }
     withStyle(SpanStyle(fontWeight = FontWeight.Bold)) { append(host.substring(start)) }
 }

@@ -30,7 +30,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -38,6 +41,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
 import com.dwarpallabs.linkguard.browser.BrowserApp
@@ -195,16 +199,36 @@ private fun NotABrowserCard(browserName: String) {
         modifier = Modifier.fillMaxWidth().testTag("not_a_browser"),
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                modifier = Modifier.semantics(mergeDescendants = true) {},
-            ) {
-                FlowStep(FlowIcons.Link, stringResource(R.string.flow_link))
-                FlowArrow()
-                FlowStep(FlowIcons.Shield, stringResource(R.string.flow_check))
-                FlowArrow()
-                FlowStep(FlowIcons.Globe, browserName)
+            val steps = listOf(
+                FlowIcons.Link to stringResource(R.string.flow_link),
+                FlowIcons.Shield to stringResource(R.string.flow_check),
+                FlowIcons.Globe to browserName,
+            )
+            // Three side-by-side columns are too narrow for large text: words would break mid-word.
+            if (LocalDensity.current.fontScale > 1.3f) {
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                    modifier = Modifier.semantics(mergeDescendants = true) {},
+                ) {
+                    steps.forEachIndexed { i, (icon, label) ->
+                        if (i > 0) FlowArrow(Modifier.padding(start = 6.dp).rotate(downRotation()))
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(32.dp))
+                            Text(label, style = MaterialTheme.typography.bodyLarge)
+                        }
+                    }
+                }
+            } else {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    modifier = Modifier.semantics(mergeDescendants = true) {},
+                ) {
+                    steps.forEachIndexed { i, (icon, label) ->
+                        if (i > 0) FlowArrow()
+                        FlowStep(icon, label)
+                    }
+                }
             }
             Text(
                 stringResource(R.string.not_a_browser_title),
@@ -228,20 +252,23 @@ private fun RowScope.FlowStep(icon: ImageVector, label: String) {
             label,
             style = MaterialTheme.typography.labelMedium,
             textAlign = TextAlign.Center,
-            maxLines = 2,
         )
     }
 }
 
 @Composable
-private fun FlowArrow() {
+private fun FlowArrow(modifier: Modifier = Modifier) {
     Icon(
         FlowIcons.Arrow,
         contentDescription = null,
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier.size(20.dp),
+        modifier = modifier.size(20.dp),
     )
 }
+
+/** Turns the forward arrow to point down. It is already mirrored in RTL, so it turns the other way there. */
+@Composable
+private fun downRotation() = if (LocalLayoutDirection.current == LayoutDirection.Rtl) -90f else 90f
 
 @Composable
 private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes description: Int?, enabled: Boolean, onToggle: (Boolean) -> Unit) {
