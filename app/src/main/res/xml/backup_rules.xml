@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-   Sample backup rules file; uncomment and customize as necessary.
-   See https://developer.android.com/guide/topics/data/autobackup
-   for details.
-   Note: This file is ignored for devices older than API 31
-   See https://developer.android.com/about/versions/12/backup-restore
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Auto Backup rules for Android 8–11 (Android 12+ uses data_extraction_rules.xml).
+    Only user settings are backed up. Never the reporter secret (it must not leave the phone)
+    and never the allowlist cache (it is downloaded again).
 -->
 <full-backup-content>
-    <!--
-   <include domain="sharedpref" path="."/>
-   <exclude domain="sharedpref" path="device.xml"/>
--->
+    <exclude domain="sharedpref" path="reporter.xml" />
+    <exclude domain="file" path="allowlist.txt" />
+    <exclude domain="file" path="allowlist.sig" />
 </full-backup-content>

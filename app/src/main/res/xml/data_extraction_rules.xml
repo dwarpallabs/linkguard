@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-   Sample data extraction rules file; uncomment and customize as necessary.
-   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
-   for details.
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Backup and device-transfer rules for Android 12+ (Android 8–11 uses backup_rules.xml).
+    Only user settings leave the phone. Never the reporter secret (it must not leave the phone)
+    and never the allowlist cache (it is downloaded again).
 -->
 <data-extraction-rules>
     <cloud-backup>
-        <!-- TODO: Use <include> and <exclude> to control what is backed up.
-        <include .../>
-        <exclude .../>
-        -->
+        <exclude domain="sharedpref" path="reporter.xml" />
+        <exclude domain="file" path="allowlist.txt" />
+        <exclude domain="file" path="allowlist.sig" />
     </cloud-backup>
-    <!--
     <device-transfer>
-        <include .../>
-        <exclude .../>
+        <exclude domain="sharedpref" path="reporter.xml" />
+        <exclude domain="file" path="allowlist.txt" />
+        <exclude domain="file" path="allowlist.sig" />
     </device-transfer>
-    -->
 </data-extraction-rules>
