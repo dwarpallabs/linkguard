@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <!--
-        Network is used only as CLAUDE.md allows: shortener redirect lookups, RDAP registration
+        Network is used only for: shortener redirect lookups, RDAP registration
         dates (domain only) and, later, hash-prefix reputation lookups and feed updates.
     -->
     <uses-permission android:name="android.permission.INTERNET" />
