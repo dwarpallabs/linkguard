@@ -72,7 +72,7 @@ Needs JDK 17+ (Android Studio's bundled JBR works).
 ./gradlew :core:test                 # engine + corpus tests (offline)
 ./gradlew :app:assembleFossRelease   # unsigned unless signing properties are in ~/.gradle/gradle.properties
 ```
-`core/` is pure Kotlin with no Android imports; `corpus/` holds the must-block / must-pass test URLs; `data/` holds the bundled lists. See [CLAUDE.md](CLAUDE.md) for the rules every change follows.
+`core/` is pure Kotlin with no Android imports; `corpus/` holds the must-block / must-pass test URLs; `data/` holds the bundled lists. Every change keeps the privacy rules above and both corpus files green.
 
 ## Verifying the APK
 Release APKs are signed by Dwarpal Labs. Signing certificate SHA-256:

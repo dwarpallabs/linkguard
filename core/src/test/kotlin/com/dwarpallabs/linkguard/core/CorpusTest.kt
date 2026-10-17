@@ -8,7 +8,7 @@ import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.DynamicTest.dynamicTest
 import org.junit.jupiter.api.TestFactory
 
-/** The contract from CLAUDE.md: every check change must keep both corpus files green. */
+/** The project contract: every check change must keep both corpus files green. */
 class CorpusTest {
 
     @TestFactory

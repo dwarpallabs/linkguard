@@ -46,3 +46,6 @@ keystore.properties
 
 # Private notes — never commit
 docs/private/
+
+# Claude Code project instructions stay local (not published)
+/CLAUDE.md

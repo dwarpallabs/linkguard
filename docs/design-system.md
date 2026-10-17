@@ -1,7 +1,7 @@
 # Design system — Dwarpal Labs › LinkGuard
 
 > Read this before touching any screen, string, icon, colour or marketing graphic.
-> `CLAUDE.md` non-negotiables still win where they overlap (never block, never add friction to a safe link, no trackers).
+> The product non-negotiables still win where they overlap (never block, never add friction to a safe link, no trackers).
 
 ---
 
@@ -301,7 +301,7 @@ Speak like a trusted grandchild explaining something to a grandparent: short, re
 ### 9.3 Translation rules
 - **Write each language natively; don't translate word-for-word.** Translators get the *intent* and the English as reference.
 - **Everyday words, not formal/Sanskritised or literary vocabulary.** Hindi: "वापस जाएं" not "प्रत्यावर्तित करें"; Tamil: everyday written Tamil, not classical/literary Tamil. Common English loanwords people actually use (link, WhatsApp, UPI, OTP, app) may stay, written in the native script or Latin as people normally do.
-- Every user-facing string exists in `values/`, `values-hi/`, `values-ta/` (and every future locale) — per `CLAUDE.md`.
+- Every user-facing string exists in `values/`, `values-hi/`, `values-ta/` (and every future locale); `scripts/check_strings.py` enforces it.
 - Use `plurals` resources for counts ("1 person" / "47 people"); Indic and Slavic languages have different plural rules.
 - Never concatenate strings; use placeholders (`%1$s`) so word order can change.
 - Add a translator comment to every string describing where it shows and its max comfortable length.

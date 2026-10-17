@@ -59,7 +59,7 @@ data class Verdict(
         const val SOFT_THRESHOLD = 0.3
         const val STRONG_THRESHOLD = 0.7
 
-        /** Thresholds from CLAUDE.md: < 0.3 silent, 0.3–0.7 soft, > 0.7 strong. */
+        /** Verdict thresholds: < 0.3 silent, 0.3–0.7 soft, > 0.7 strong. */
         fun levelFor(score: Double) = when {
             score < SOFT_THRESHOLD -> Level.SILENT
             score <= STRONG_THRESHOLD -> Level.SOFT
