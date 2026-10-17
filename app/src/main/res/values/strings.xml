@@ -34,11 +34,6 @@
     <string name="check_domain_age_desc">Asks the official registry when the website was created. Only the website name is sent, never the full link.</string>
     <string name="check_upi_intent">UPI payment requests</string>
 
-    <string name="settings_brands">Brands LinkGuard knows</string>
-    <string name="settings_brands_desc">Fake websites pretending to be these are flagged.</string>
-    <string name="brands_intro">LinkGuard warns about websites that pretend to be these brands. Their real websites are listed below.</string>
-    <string name="brands_gov_only">Official government websites (.gov.in)</string>
-
     <string name="settings_report">Report a link</string>
     <string name="settings_report_desc">Tell us about a scam link LinkGuard missed.</string>
     <string name="report_link_label">Link</string>

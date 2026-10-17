@@ -68,7 +68,6 @@ fun HomeScreen(
     onSetDefault: () -> Unit,
     onSelectBrowser: (String) -> Unit,
     onToggleCheck: (CheckId, Boolean) -> Unit,
-    onOpenBrands: () -> Unit,
     onOpenReport: () -> Unit,
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
@@ -158,7 +157,6 @@ fun HomeScreen(
             }
 
             HorizontalDivider()
-            LinkRow(stringResource(R.string.settings_brands), stringResource(R.string.settings_brands_desc), onOpenBrands, "open_brands")
             LinkRow(stringResource(R.string.settings_report), stringResource(R.string.settings_report_desc), onOpenReport, "open_report")
 
             Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)) {
@@ -275,7 +273,7 @@ private fun HomePreview() {
             browsers = listOf(BrowserApp("com.android.chrome", "Chrome"), BrowserApp("org.mozilla.firefox", "Firefox")),
             selected = "com.android.chrome",
             disabledChecks = setOf(CheckId.DOMAIN_AGE),
-            onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenBrands = {}, onOpenReport = {},
+            onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenReport = {},
         )
     }
 }
