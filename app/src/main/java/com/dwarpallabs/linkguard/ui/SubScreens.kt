@@ -2,6 +2,7 @@ package com.dwarpallabs.linkguard.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -23,6 +24,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -37,6 +39,40 @@ private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (M
             TextButton(onClick = onBack, modifier = Modifier.testTag("back")) { Text("‹ " + stringResource(R.string.back)) }
             Text(title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             content(Modifier.padding(top = 12.dp))
+        }
+    }
+}
+
+/** Sections of the "How LinkGuard works" screen: icon, title, body. */
+private val HowSections = listOf(
+    Triple("⚠️", R.string.how_why_title, R.string.how_why_body),
+    Triple("🛡", R.string.how_where_title, R.string.how_where_body),
+    Triple("✅", R.string.how_safe_title, R.string.how_safe_body),
+    Triple("🔍", R.string.how_scam_title, R.string.how_scam_body),
+    Triple("👥", R.string.how_community_title, R.string.how_community_body),
+    Triple("👍", R.string.how_choice_title, R.string.how_choice_body),
+)
+
+/**
+ * Plain-language overview of what LinkGuard does. Deliberately high level: it doesn't list brands,
+ * sources or thresholds, which would mislead users or help scammers.
+ */
+@Composable
+fun HowItWorksScreen(browserName: String, onBack: () -> Unit) {
+    SubScreen(stringResource(R.string.how_title), onBack) { modifier ->
+        Column(
+            modifier.verticalScroll(rememberScrollState()).testTag("how_it_works"),
+            verticalArrangement = Arrangement.spacedBy(20.dp),
+        ) {
+            HowSections.forEach { (icon, title, body) ->
+                Row(Modifier.semantics(mergeDescendants = true) {}) {
+                    Text(icon, style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(end = 14.dp))
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Text(stringResource(title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+                        Text(stringResource(body, browserName), style = MaterialTheme.typography.bodyMedium)
+                    }
+                }
+            }
         }
     }
 }
