@@ -39,8 +39,11 @@ Full policy: [dwarpallabs.com/linkguard/privacy](https://dwarpallabs.com/linkgua
 In the app: Settings → **Report a link**. Reports go privately to Dwarpal Labs and are never published. When three or more different people report the same website within a week, other LinkGuard users automatically see a soft warning: "reported as a scam by N LinkGuard users this week". Reports alone never cause the strong red warning, and well-known sites can't be reported into a warning.
 
 ## Data sources
-- Malware hosts: [URLhaus](https://urlhaus.abuse.ch) by abuse.ch, used under its fair-use terms for not-for-profit projects.
-- Popular sites for the safe list: the [Tranco](https://tranco-list.eu) research ranking (Le Pochat et al., NDSS 2019).
+- Phishing and scam websites: [PhishDestroy destroylist](https://github.com/phishdestroy/destroylist) (MIT), its live root-domain list.
+- Malware hosts: [URLhaus](https://urlhaus.abuse.ch) by abuse.ch, used under its terms for not-for-profit projects.
+- Popular sites for the safe list: the [Tranco](https://tranco-list.eu) research ranking (Le Pochat et al., NDSS 2019). The top 10,000 open without a server check, and no site in the top 100,000 is ever blocked by a feed.
+
+URLhaus and PhishDestroy are free for not-for-profit use. A paid LinkGuard service would need commercial threat feeds instead.
 - Community reports from LinkGuard users.
 
 ## Where the lists live

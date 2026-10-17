@@ -9,8 +9,13 @@ import kotlin.system.exitProcess
  *   ./gradlew :feeds:run                     dry run: fetch, filter, print counts; writes nothing
  *   ./gradlew :feeds:run --args="--apply"    also write to the server database
  *
- * Environment: URLHAUS_AUTH_KEY (abuse.ch Auth-Key); for --apply also CLOUDFLARE_API_TOKEN,
- * CLOUDFLARE_ACCOUNT_ID and LINKGUARD_D1_ID.
+ * Environment: URLHAUS_AUTH_KEY (abuse.ch Auth-Key; without it URLhaus is skipped); for --apply
+ * also CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID and LINKGUARD_D1_ID. FEEDS_MAX_NEW optionally
+ * caps blocklist inserts per run.
+ *
+ * Feeds are independent: one that fails to download is skipped and its rows simply age out, while
+ * the others are still applied. The top-sites list is required (it drives the allowlist and keeps
+ * popular sites from ever being blocked), so without it nothing is written.
  *
  * Output is counts only. Never print list entries: CI logs of this public repo are public, and the
  * lists are kept private on purpose.
@@ -24,14 +29,19 @@ fun main(args: Array<String>) {
         .bufferedReader().readLines()
         .map { it.substringBefore('#').trim().lowercase() }.filter { it.isNotEmpty() }.toSet()
 
-    val urlhausKey = env["URLHAUS_AUTH_KEY"].orEmpty()
-    val malwareUrls = if (urlhausKey.isNotBlank()) {
-        Sources.urlhausOnline(urlhausKey)
-    } else {
-        println("URLHAUS_AUTH_KEY not set: skipping URLhaus")
-        emptyList()
+    val feeds = linkedMapOf<String, List<String>>()
+    fun fetch(name: String, download: () -> List<String>) {
+        try {
+            feeds[name] = download()
+        } catch (e: Exception) {
+            // The message names the feed and HTTP status only; never a list entry.
+            println("$name: skipped (${e.javaClass.simpleName}: ${e.message})")
+        }
     }
-    val ranked = Sources.trancoTop(TOP_SITES)
+    val urlhausKey = env["URLHAUS_AUTH_KEY"].orEmpty()
+    if (urlhausKey.isNotBlank()) fetch("urlhaus") { Sources.urlhausOnline(urlhausKey) } else println("urlhaus: skipped (URLHAUS_AUTH_KEY not set)")
+    fetch("phishdestroy") { Sources.phishDestroyOnline() }
+    val ranked = Sources.trancoTop(IMMUNE_TOP_SITES)
 
     val writer = if (apply) {
         val missing = listOf("CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID", "LINKGUARD_D1_ID").filter { env[it].isNullOrBlank() }
@@ -39,27 +49,33 @@ fun main(args: Array<String>) {
             System.err.println("--apply needs: ${missing.joinToString()}")
             exitProcess(2)
         }
-        ListWriter(D1(env["CLOUDFLARE_ACCOUNT_ID"]!!, env["LINKGUARD_D1_ID"]!!, env["CLOUDFLARE_API_TOKEN"]!!))
+        val maxNew = env["FEEDS_MAX_NEW"]?.toIntOrNull() ?: ListWriter.DEFAULT_MAX_NEW
+        ListWriter(D1(env["CLOUDFLARE_ACCOUNT_ID"]!!, env["LINKGUARD_D1_ID"]!!, env["CLOUDFLARE_API_TOKEN"]!!), maxNew = maxNew)
     } else {
         null
     }
-    val existing = writer?.existingAllowlist().orEmpty()
+    val existingAllow = writer?.existingAllowlist().orEmpty()
 
-    val result = FeedBuilder(data, neverAllow, TOP_SITES)
-        .build(malwareUrls, ranked, existing.filterValues { it != "feed" }.keys)
+    val result = FeedBuilder(data, neverAllow, ALLOW_TOP_SITES)
+        .build(feeds, ranked, existingAllow.filterValues { it != "feed" }.keys)
     result.stats.forEach { (name, n) -> println("$name: $n") }
 
     if (writer == null) {
         println("dry run: nothing written (use --apply)")
         return
     }
-    if (urlhausKey.isBlank()) {
-        System.err.println("refusing to --apply without URLhaus: the feed blocklist would expire unrefreshed")
+    if (feeds.isEmpty()) {
+        System.err.println("refusing to --apply with no feed downloaded: nothing would be refreshed")
         exitProcess(2)
     }
-    val summary = writer.apply(result, existing)
+    val summary = writer.apply(result, existingAllow, writer.existingBlocklist())
     println("allowlist: +${summary.allowAdded} -${summary.allowRemoved}")
-    println("blocklist: ${summary.blockUpserted} feed hosts refreshed, ${summary.blockExpired} expired removed")
+    println("blocklist: ${summary.blockInserted} new, ${summary.blockRefreshed} refreshed, ${summary.blockDeferred} deferred to the next run, ${summary.blockExpired} expired removed")
+    summary.feedsSkipped.forEach { println("$it: not applied today (size changed implausibly)") }
 }
 
-private const val TOP_SITES = 10_000
+/** Top sites that go on the allowlist. */
+private const val ALLOW_TOP_SITES = 10_000
+
+/** Top sites that can never be blocked by a feed. */
+private const val IMMUNE_TOP_SITES = 100_000

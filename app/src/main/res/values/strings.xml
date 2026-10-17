@@ -45,7 +45,7 @@
     <string name="how_safe_title">Safe links open straight away</string>
     <string name="how_safe_body">Well-known websites and official ones, such as government (.gov.in) and bank websites, open immediately. If a link looks fine, you see nothing at all.</string>
     <string name="how_scam_title">Spotting scam links</string>
-    <string name="how_scam_body">LinkGuard looks for the tricks scammers use: websites pretending to be a bank or a well-known brand, app downloads from outside the Play Store, hidden payment requests, brand-new websites and unusual web addresses. It also checks a list of about 1,900 known harmful websites, collected from a leading international security database and updated every day.</string>
+    <string name="how_scam_body">LinkGuard looks for the tricks scammers use: websites pretending to be a bank or a well-known brand, app downloads from outside the Play Store, hidden payment requests, brand-new websites and unusual web addresses. It also checks a list of tens of thousands of known scam and harmful websites, collected from leading international security databases and updated every day.</string>
     <string name="how_community_title">Reports from other users</string>
     <string name="how_community_body">When several LinkGuard users report the same website as a scam, others are warned to be careful.</string>
     <string name="how_choice_title">You always decide</string>
@@ -66,7 +66,7 @@
     <string name="about_source_desc">Free under the Apache-2.0 licence. Anyone can check the code on GitHub.</string>
     <string name="about_contact">Contact us</string>
     <string name="about_credits">Credits</string>
-    <string name="about_credits_body">Known harmful websites: URLhaus by abuse.ch. Popular websites: the Tranco list. Website names: the Public Suffix List (MPL-2.0).</string>
+    <string name="about_credits_body">Scam websites: PhishDestroy. Harmful websites: URLhaus by abuse.ch. Popular websites: the Tranco list. Website names: the Public Suffix List (MPL-2.0).</string>
     <string name="report_link_label">Link</string>
     <string name="report_note_label">Why do you think it is a scam? (optional)</string>
     <string name="report_private_info">Your report goes privately to Dwarpal Labs and is never published. When several different people report the same website, other LinkGuard users see a warning automatically. Your report can’t be traced back to you. Please don’t include phone numbers, names or other personal details.</string>

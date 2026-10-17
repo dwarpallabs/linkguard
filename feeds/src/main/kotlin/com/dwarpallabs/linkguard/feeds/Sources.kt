@@ -30,6 +30,26 @@ object Sources {
         return parseUrlhausCsv(response.body())
     }
 
+    /**
+     * PhishDestroy destroylist (MIT): phishing and scam root domains that currently resolve
+     * ("online"), curated, hosting providers excluded. https://github.com/phishdestroy/destroylist
+     */
+    fun phishDestroyOnline(): List<String> {
+        val request = HttpRequest.newBuilder(URI("https://raw.githubusercontent.com/phishdestroy/destroylist/main/rootlist/online_root_domains.txt"))
+            .header("User-Agent", USER_AGENT)
+            .timeout(Duration.ofMinutes(2))
+            .build()
+        val response = client.send(request, HttpResponse.BodyHandlers.ofString())
+        check(response.statusCode() == 200) { "PhishDestroy download failed: HTTP ${response.statusCode()}" }
+        return parseDomainList(response.body())
+    }
+
+    /** One domain per line; blank lines and `#` comments ignored. */
+    fun parseDomainList(text: String): List<String> = text.lineSequence()
+        .map { it.substringBefore('#').trim().lowercase() }
+        .filter { it.isNotEmpty() }
+        .toList()
+
     /** Tranco research top-sites list (latest), as ranked registrable domains. */
     fun trancoTop(limit: Int): List<String> {
         val request = HttpRequest.newBuilder(URI("https://tranco-list.eu/top-1m.csv.zip"))
