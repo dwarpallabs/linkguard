@@ -15,12 +15,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.lifecycleScope
 import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.browser.Browsers
 import com.dwarpallabs.linkguard.core.CheckId
 import com.dwarpallabs.linkguard.core.NormalisedUrl
 import com.dwarpallabs.linkguard.ui.HomeScreen
+import com.dwarpallabs.linkguard.ui.HowItWorksScreen
 import com.dwarpallabs.linkguard.ui.ReportScreen
 import com.dwarpallabs.linkguard.ui.ReportStatus
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
@@ -28,10 +30,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-/** First-launch setup and Settings: default browser, forward-to browser, check toggles, brands, reporting. */
+/** First-launch setup and Settings: default browser, forward-to browser, check toggles, how it works, reporting. */
 class MainActivity : ComponentActivity() {
 
-    private enum class Screen { HOME, REPORT }
+    private enum class Screen { HOME, HOW, REPORT }
 
     private var isDefault by mutableStateOf(false)
     private var browsers by mutableStateOf(emptyList<BrowserApp>())
@@ -71,7 +73,13 @@ class MainActivity : ComponentActivity() {
                             prefs.setCheckEnabled(check, enabled)
                             disabledChecks = prefs.disabledChecks
                         },
+                        onOpenHowItWorks = { screen = Screen.HOW },
                         onOpenReport = { screen = Screen.REPORT },
+                    )
+                    Screen.HOW -> HowItWorksScreen(
+                        browserName = browsers.firstOrNull { it.packageName == selected }?.label
+                            ?: stringResource(R.string.your_browser),
+                        onBack = { screen = Screen.HOME },
                     )
                     Screen.REPORT -> ReportScreen(
                         status = reportStatus,
