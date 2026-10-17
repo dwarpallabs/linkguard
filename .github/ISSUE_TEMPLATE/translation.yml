@@ -1,0 +1,63 @@
+name: Translation correction
+description: Something in LinkGuard reads wrong in your language
+title: "Translation: "
+labels: [translation]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        LinkGuard's text in Indian languages is machine-translated. Thank you for helping fix it.
+        No GitHub account? Email support@dwarpallabs.com instead.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - Assamese (অসমীয়া)
+        - Bengali (বাংলা)
+        - Bodo (बड़ो)
+        - Dogri (डोगरी)
+        - Gujarati (ગુજરાતી)
+        - Hindi (हिन्दी)
+        - Kannada (ಕನ್ನಡ)
+        - Kashmiri (کٲشُر)
+        - Konkani (कोंकणी)
+        - Maithili (मैथिली)
+        - Malayalam (മലയാളം)
+        - Manipuri (ꯃꯩꯇꯩꯂꯣꯟ)
+        - Marathi (मराठी)
+        - Nepali (नेपाली)
+        - Odia (ଓଡ଼ିଆ)
+        - Punjabi (ਪੰਜਾਬੀ)
+        - Sanskrit (संस्कृतम्)
+        - Santali (ᱥᱟᱱᱛᱟᱲᱤ)
+        - Sindhi (سنڌي)
+        - Tamil (தமிழ்)
+        - Telugu (తెలుగు)
+        - Urdu (اردو)
+        - English
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where in the app?
+      placeholder: e.g. the warning screen, Settings, How LinkGuard works
+  - type: textarea
+    id: wrong
+    attributes:
+      label: The text that is wrong
+      description: Copy it or type it as it appears.
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: How you would say it
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot (optional)
+      description: Drag an image here. Please hide any phone numbers or personal details.

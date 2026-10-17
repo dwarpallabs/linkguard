@@ -1,0 +1,106 @@
+<resources>
+    <!-- Sindhi (sd). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard لنڪون کلڻ کان اڳ انهن جي چڪاس ڪري ٿو</string>
+    <string name="onboarding_body">جڏهن توهان WhatsApp، Telegram يا SMS ۾ ڪنهن لنڪ تي ٽيپ ڪريو ٿا، ته LinkGuard پهريان ان جي چڪاس ڪري ٿو. محفوظ لنڪون سڌيون توهان جي براؤزر ۾ کلي وڃن ٿيون. جيڪڏهن ڪا لنڪ ٺڳيءَ واري لڳي، ته توهان کي خبرداري ڏيکاري ويندي، ۽ توهان پوءِ به ان کي کولي سگهو ٿا.</string>
+    <string name="onboarding_privacy">LinkGuard توهان جون کوليل لنڪون ڪڏهن به محفوظ نٿو ڪري ۽ نه ئي ڪٿي موڪلي ٿو. ڪنهن کاتي جي ضرورت ناهي.</string>
+    <string name="your_browser">توهان جو براؤزر</string>
+    <string name="flow_link">توهان جي لنڪ</string>
+    <string name="flow_check">LinkGuard چڪاس ڪري ٿو</string>
+    <string name="not_a_browser_title">LinkGuard براؤزر ناهي</string>
+    <string name="not_a_browser_body">LinkGuard ڪڏهن به ويب پيج نٿو ڏيکاري. اهو هر لنڪ جي پل ۾ چڪاس ڪري ٿو ۽ پوءِ ان کي %1$s ۾ کولي ٿو، اهو ئي براؤزر جيڪو توهان اڳ ۾ ئي استعمال ڪريو ٿا. توهان جا بڪمارڪ، هسٽري، محفوظ ڪيل پاسورڊ ۽ ٽيب بلڪل ائين ئي رهن ٿا.</string>
+    <string name="default_explain">Android، LinkGuard کي توهان جي “براؤزر ايپ” چوندو. اهو رڳو ان ڪري آهي ته جيئن LinkGuard لنڪ کي پهريان ڏسي سگهي. هر لنڪ پوءِ به %1$s ۾ ئي کلندي.</string>
+
+    <string name="default_heading">قدم 1: LinkGuard کي پنهنجو ڊيفالٽ براؤزر بڻايو</string>
+    <string name="default_done">LinkGuard توهان جو ڊيفالٽ براؤزر آهي</string>
+    <string name="default_button">ڊيفالٽ براؤزر بڻايو</string>
+    <string name="default_hint">جيڪڏهن سيٽنگون کلن، ته “براؤزر ايپ” تي ٽيپ ڪريو ۽ LinkGuard چونڊيو.</string>
+
+    <string name="browser_heading">قدم 2: لنڪون هن ۾ کوليو</string>
+    <string name="browser_none">ٻيو ڪو براؤزر نه مليو. Chrome جهڙو ڪو براؤزر انسٽال ڪريو.</string>
+
+    <string name="telegram_tip">Telegram، Instagram، Facebook ۽ LinkedIn جهڙيون ايپون اڪثر لنڪ ايپ اندر ئي کولين ٿيون، جتي LinkGuard انهن جي چڪاس نٿو ڪري سگهي. ٺڳيءَ وارن لنڪن کان بچڻ لاءِ، ان ايپ جي سيٽنگن ۾ اندروني براؤزر بند ڪريو (Telegram ۾: Settings → Chat Settings → In-app browser)، يا ⋮ تي ٽيپ ڪري “براؤزر ۾ کوليو” چونڊيو.</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard ڇا چڪاسي ٿو</string>
+    <string name="check_unwrap">ننڍيون لنڪون کولي ڏسو</string>
+    <string name="check_unwrap_desc">bit.ly جهڙين سروسن کان پڇي ٿو ته ننڍي لنڪ اصل ۾ ڪٿي وڃي ٿي.</string>
+    <string name="check_apk_download">ايپ ڊائونلوڊ</string>
+    <string name="check_brand_lookalike">جعلي بئنڪ ۽ برانڊ ويب سائيٽون</string>
+    <string name="check_weird_host">عجيب ويب پتا</string>
+    <string name="check_reputation">ڄاتل سڃاتل ٺڳيءَ واريون ويب سائيٽون</string>
+    <string name="check_domain_age">بلڪل نيون ويب سائيٽون</string>
+    <string name="check_domain_age_desc">باقاعده رجسٽري کان پڇي ٿو ته ويب سائيٽ ڪڏهن ٺهي هئي. رڳو ويب سائيٽ جو نالو موڪليو وڃي ٿو، پوري لنڪ ڪڏهن به نه.</string>
+    <string name="check_upi_intent">UPI ادائگي جون درخواستون</string>
+
+    <string name="settings_report">لنڪ جي شڪايت ڪريو</string>
+    <string name="settings_report_desc">اسان کي اهڙي ٺڳيءَ واري لنڪ بابت ٻڌايو جيڪا LinkGuard نه پڪڙي سگهيو.</string>
+    <string name="how_title">LinkGuard ڪيئن ڪم ڪري ٿو</string>
+    <string name="how_desc">ان جي ضرورت ڇو آهي، ۽ اهو ڪيئن طئي ڪري ٿو ته ڪهڙين لنڪن تي خبرداري ڏيڻي آهي.</string>
+    <string name="how_why_title">ان جي ضرورت ڇو آهي</string>
+    <string name="how_why_body">WhatsApp ۽ SMS تي ٺڳيءَ وارن پيغامن ۾ اڪثر اهڙيون لنڪون هونديون آهن جيڪي اصلي لڳنديون آهن: جعلي بئنڪ پيج، “KYC اپڊيٽ” فارم يا پئسا چورائيندڙ ايپ. نقصان لاءِ هڪ ٽيپ ئي ڪافي آهي، ۽ جعلي ويب پتو سڃاڻڻ ڏکيو ٿي سگهي ٿو.</string>
+    <string name="how_where_title">LinkGuard ڪٿي ڪم ڪري ٿو</string>
+    <string name="how_where_body">LinkGuard توهان جي ٽيپ ڪيل لنڪ ۽ توهان جي براؤزر جي وچ ۾ رهي ٿو. اهو پل ۾ لنڪ جي چڪاس ڪري ٿو، پوءِ ان کي %1$s ۾ کولي ٿو. اهو پاڻ ڪڏهن به ويب پيج نٿو ڏيکاري.</string>
+    <string name="how_safe_title">محفوظ لنڪون فوراً کلن ٿيون</string>
+    <string name="how_safe_body">ڄاتل سڃاتل ۽ سرڪاري ويب سائيٽون، جهڙوڪ حڪومت (.gov.in) ۽ بئنڪن جون ويب سائيٽون، فوراً کلي وڃن ٿيون. جيڪڏهن لنڪ ٺيڪ لڳي، ته توهان کي ڪجهه به نظر نٿو اچي.</string>
+    <string name="how_scam_title">ٺڳيءَ وارين لنڪن جي سڃاڻپ</string>
+    <string name="how_scam_body">LinkGuard ٺڳن جون چالون ڳولي ٿو: بئنڪ يا ڪنهن مشهور برانڊ هجڻ جو ڏيکاءُ ڪندڙ ويب سائيٽون، Play Store کان ٻاهران ايپ ڊائونلوڊ، لڪيل ادائگي جون درخواستون، بلڪل نيون ويب سائيٽون ۽ عجيب ويب پتا. اهو لڳ ڀڳ 1,900 ڄاتل سڃاتل نقصانڪار ويب سائيٽن جي هڪ لسٽ سان به ڀيٽ ڪري ٿو، جيڪا هڪ وڏي بين الاقوامي سيڪيورٽي ڊيٽابيس مان ورتل آهي ۽ هر روز اپڊيٽ ٿئي ٿي.</string>
+    <string name="how_community_title">ٻين استعمال ڪندڙن جون شڪايتون</string>
+    <string name="how_community_body">جڏهن ڪيترائي LinkGuard استعمال ڪندڙ هڪ ئي ويب سائيٽ جي ٺڳيءَ طور شڪايت ڪن ٿا، ته ٻين کي محتاط رهڻ جي خبرداري ڏني وڃي ٿي.</string>
+    <string name="how_choice_title">فيصلو هميشه توهان جو</string>
+    <string name="how_choice_body">LinkGuard ڪڏهن به ڪا لنڪ نٿو روڪي. هر خبرداري آسان لفظن ۾ مسئلو ٻڌائي ٿي ۽ “پوءِ به کوليو” جو اختيار ڏئي ٿي. LinkGuard توهان جون کوليل لنڪون ڪڏهن به محفوظ نٿو ڪري.</string>
+    <string name="feedback_title">ترجمو غلط آهي؟ اسان کي ٻڌايو</string>
+    <string name="feedback_desc">LinkGuard جو ترجمو مشين ڪيو آهي. پنهنجي ٻوليءَ جون غلطيون درست ڪرڻ ۾ مدد ڪريو.</string>
+    <string name="feedback_intro">هن ٻوليءَ ۾ LinkGuard جي لکت جو ترجمو مشين ڪيو آهي ۽ ان ۾ غلطيون ٿي سگهن ٿيون. جيڪڏهن ڪجهه غلط لڳي، ته اسان کي غلط لفظ ٻڌايو ۽ اهو به ته توهان ان کي ڪيئن چوندا. جيڪو سڀ کان آسان هجي، اهو استعمال ڪريو:</string>
+    <string name="feedback_email">اسان کي اي ميل ڪريو</string>
+    <string name="feedback_github">GitHub تي ٻڌايو</string>
+    <string name="feedback_github_desc">ان لاءِ مفت GitHub کاتو گهرجي.</string>
+    <string name="feedback_play">Google Play تي رايو لکو</string>
+    <string name="about_title">LinkGuard بابت</string>
+    <string name="about_desc">ورزن، رازداري پاليسي، اوپن سورس ۽ رابطو.</string>
+    <string name="about_version">ورزن %1$s</string>
+    <string name="about_by">Dwarpal Labs پاران ٺاهيل. LinkGuard آزاد آهي ۽ ڪنهن به بئنڪ، ادائگي ايپ، ڪوريئر يا سرڪاري اداري سان ڳنڍيل ناهي.</string>
+    <string name="about_privacy">رازداري پاليسي</string>
+    <string name="about_privacy_desc">توهان جي فون مان ڇا ٻاهر وڃي ٿو، ۽ ڇو.</string>
+    <string name="about_source">اوپن سورس</string>
+    <string name="about_source_desc">Apache-2.0 لائسنس تحت مفت. ڪو به GitHub تي ان جو ڪوڊ چڪاسي سگهي ٿو.</string>
+    <string name="about_contact">اسان سان رابطو ڪريو</string>
+    <string name="about_credits">مهرباني</string>
+    <string name="about_credits_body">ڄاتل سڃاتل نقصانڪار ويب سائيٽون: abuse.ch جي URLhaus. مشهور ويب سائيٽون: Tranco لسٽ. ويب سائيٽن جا نالا: Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">لنڪ</string>
+    <string name="report_note_label">توهان کي اها ٺڳي ڇو لڳي ٿي؟ (ضروري ناهي)</string>
+    <string name="report_private_info">توهان جي شڪايت ڳجهي طور Dwarpal Labs ڏانهن وڃي ٿي ۽ ڪڏهن به شايع نه ڪئي ويندي آهي. جڏهن ڪيترائي مختلف ماڻهو هڪ ئي ويب سائيٽ جي شڪايت ڪن ٿا، ته ٻين LinkGuard استعمال ڪندڙن کي پاڻمرادو خبرداري نظر اچي ٿي. توهان جي شڪايت مان توهان جي سڃاڻپ نٿي ٿي سگهي. مهرباني ڪري فون نمبر، نالا يا ٻي ذاتي معلومات نه لکو.</string>
+    <string name="report_submit">شڪايت موڪليو</string>
+    <string name="report_sending">موڪلي پئي وڃي…</string>
+    <string name="report_sent">مهرباني. توهان جي شڪايت جانچ لاءِ موڪلي وئي آهي.</string>
+    <string name="report_failed">شڪايت موڪلي نه سگهياسين. پنهنجو انٽرنيٽ ڪنيڪشن ڏسو ۽ ٻيهر ڪوشش ڪريو.</string>
+    <string name="back">واپس</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">هي لنڪ ٺڳي ٿي سگهي ٿي</string>
+    <string name="interstitial_title_soft">هن لنڪ کان هوشيار رهو</string>
+    <string name="interstitial_go_back">واپس وڃو</string>
+    <string name="interstitial_open_anyway">پوءِ به کوليو</string>
+    <string name="interstitial_checking">لنڪ جي چڪاس ٿي رهي آهي…</string>
+    <string name="interstitial_upi_heading">UPI ادائگي جي درخواست</string>
+    <string name="interstitial_upi_payee">ڪنهن کي ادائگي: %1$s</string>
+    <string name="interstitial_upi_amount">رقم: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">هي لنڪ Play Store کان ٻاهران هڪ ايپ ڊائونلوڊ ڪري ٿي. اهڙيون جعلي ايپون توهان جا پيغام پڙهي سگهن ٿيون ۽ بئنڪ OTP چوري ڪري سگهن ٿيون.</string>
+    <string name="warn_brand_lookalike">هي ويب سائيٽ %1$s هجڻ جو ڏيکاءُ ڪري رهي آهي. هي %1$s جي اصلي ويب سائيٽ ناهي.</string>
+    <string name="warn_upi_intent">هي لنڪ توهان کي UPI ذريعي پئسا موڪلڻ لاءِ چوي ٿي. ريفنڊ، انعام يا KYC اپڊيٽ وٺڻ لاءِ ڪڏهن به پئسا ڏيڻا نه پوندا آهن.</string>
+    <string name="warn_weird_host">هي لنڪ هڪ عجيب پتو استعمال ڪري ٿي، جيڪو اصلي ڪمپنيون تمام گهٽ استعمال ڪن ٿيون.</string>
+    <string name="warn_weird_host_brand">هن لنڪ ۾ %1$s جو نالو آهي، پر اها هڪ عجيب پتو استعمال ڪري ٿي جيڪو %1$s استعمال نٿو ڪري.</string>
+    <string name="warn_reputation">هي ويب سائيٽ ڄاتل سڃاتل ٺڳيءَ واري يا نقصانڪار ويب سائيٽن جي لسٽ ۾ آهي.</string>
+    <plurals name="warn_community">
+        <item quantity="one">هن هفتي %d LinkGuard استعمال ڪندڙ هن لنڪ جي ٺڳيءَ طور شڪايت ڪئي آهي.</item>
+        <item quantity="other">هن هفتي %d LinkGuard استعمال ڪندڙن هن لنڪ جي ٺڳيءَ طور شڪايت ڪئي آهي.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">هي ويب سائيٽ %d ڏينهن اڳ ٺهي آهي. ٺڳيءَ واريون ويب سائيٽون اڪثر بلڪل نيون هونديون آهن.</item>
+        <item quantity="other">هي ويب سائيٽ %d ڏينهن اڳ ٺهي آهي. ٺڳيءَ واريون ويب سائيٽون اڪثر بلڪل نيون هونديون آهن.</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard کي هن لنڪ ۾ ڪجهه عجيب مليو.</string>
+</resources>

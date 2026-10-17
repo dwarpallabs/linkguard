@@ -1,0 +1,106 @@
+<resources>
+    <!-- Assamese (as). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard-এ লিংক খোলাৰ আগতে সেইবোৰ পৰীক্ষা কৰে</string>
+    <string name="onboarding_body">WhatsApp, Telegram বা SMS-ত কোনো লিংকত টেপ কৰিলে LinkGuard-এ প্ৰথমে সেইটো পৰীক্ষা কৰে। সুৰক্ষিত লিংক লগে লগে আপোনাৰ ব্ৰাউজাৰত খোল খায়। কোনো লিংক প্ৰতাৰণাৰ দৰে লাগিলে আপুনি এটা সতৰ্কবাণী দেখিব, আৰু তথাপিও বিচাৰিলে সেইটো খুলিব পাৰিব।</string>
+    <string name="onboarding_privacy">আপুনি খোলা লিংক LinkGuard-এ কেতিয়াও ৰাখি নাথাকে আৰু ক’লৈকো নপঠিয়ায়। কোনো একাউণ্টৰ প্ৰয়োজন নাই।</string>
+    <string name="your_browser">আপোনাৰ ব্ৰাউজাৰ</string>
+    <string name="flow_link">আপোনাৰ লিংক</string>
+    <string name="flow_check">LinkGuard-এ পৰীক্ষা কৰে</string>
+    <string name="not_a_browser_title">LinkGuard ব্ৰাউজাৰ নহয়</string>
+    <string name="not_a_browser_body">LinkGuard-এ কেতিয়াও ৱেব পেজ নেদেখুৱায়। ই প্ৰতিটো লিংক চকুৰ পলকতে পৰীক্ষা কৰে, তাৰ পিছত %1$s-ত খোলে, যিটো ব্ৰাউজাৰ আপুনি আগৰে পৰা ব্যৱহাৰ কৰি আছে। আপোনাৰ বুকমাৰ্ক, হিষ্ট্ৰি, ছেভ কৰা পাছৱৰ্ড আৰু টেব আগৰ দৰেই থাকিব।</string>
+    <string name="default_explain">Android-এ LinkGuard-ক আপোনাৰ “ব্ৰাউজাৰ এপ” বুলি ক’ব। এইটো কেৱল এই কাৰণে, যাতে LinkGuard-এ লিংকবোৰ আগতে দেখিব পাৰে। প্ৰতিটো লিংক তথাপিও %1$s-তহে খোল খাব।</string>
+
+    <string name="default_heading">স্তৰ ১: LinkGuard-ক আপোনাৰ ডিফল্ট ব্ৰাউজাৰ কৰক</string>
+    <string name="default_done">LinkGuard আপোনাৰ ডিফল্ট ব্ৰাউজাৰ</string>
+    <string name="default_button">ডিফল্ট ব্ৰাউজাৰ কৰক</string>
+    <string name="default_hint">ছেটিংছ খোল খালে “ব্ৰাউজাৰ এপ”-ত টেপ কৰি LinkGuard বাছি লওক।</string>
+
+    <string name="browser_heading">স্তৰ ২: লিংক ইয়াত খোলক</string>
+    <string name="browser_none">আন কোনো ব্ৰাউজাৰ পোৱা নগ’ল। Chrome-ৰ দৰে এটা ব্ৰাউজাৰ ইনষ্টল কৰক।</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook আৰু LinkedIn-ৰ দৰে এপে প্ৰায়ে লিংক এপৰ ভিতৰতে খোলে, য’ত LinkGuard-এ সেইবোৰ পৰীক্ষা কৰিব নোৱাৰে। প্ৰতাৰণাৰ লিংকৰ পৰা বাচিবলৈ সেই এপৰ ছেটিংছত ভিতৰৰ ব্ৰাউজাৰটো বন্ধ কৰক (Telegram-ত: Settings → Chat Settings → In-app browser), নহলে ⋮ টিপি “ব্ৰাউজাৰত খোলক” বাছি লওক।</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard-এ কি কি পৰীক্ষা কৰে</string>
+    <string name="check_unwrap">চুটি লিংক ক’লৈ যায় চোৱা</string>
+    <string name="check_unwrap_desc">bit.ly-ৰ দৰে সেৱাক সোধে, চুটি লিংকটো আচলতে ক’লৈ যায়।</string>
+    <string name="check_apk_download">এপ ডাউনলোড</string>
+    <string name="check_brand_lookalike">নকল বেংক আৰু ব্ৰেণ্ডৰ ৱেবছাইট</string>
+    <string name="check_weird_host">অদ্ভুত ৱেব ঠিকনা</string>
+    <string name="check_reputation">জনাজাত প্ৰতাৰক ৱেবছাইট</string>
+    <string name="check_domain_age">একেবাৰে নতুন ৱেবছাইট</string>
+    <string name="check_domain_age_desc">ৱেবছাইটটো কেতিয়া বনোৱা হৈছিল, সেয়া অফিচিয়েল ৰেজিষ্ট্ৰীক সোধে। কেৱল ৱেবছাইটৰ নামটোহে পঠিওৱা হয়, গোটেই লিংক কেতিয়াও নহয়।</string>
+    <string name="check_upi_intent">UPI-ত টকা খোজা অনুৰোধ</string>
+
+    <string name="settings_report">লিংক ৰিপ’ৰ্ট কৰক</string>
+    <string name="settings_report_desc">LinkGuard-এ ধৰিব নোৱাৰা প্ৰতাৰণাৰ লিংকৰ বিষয়ে আমাক জনাওক।</string>
+    <string name="how_title">LinkGuard-এ কেনেকৈ কাম কৰে</string>
+    <string name="how_desc">ইয়াৰ কিয় প্ৰয়োজন, আৰু কোন লিংকৰ বাবে সতৰ্ক কৰিব সেয়া কেনেকৈ ঠিক কৰে।</string>
+    <string name="how_why_title">কিয় প্ৰয়োজন</string>
+    <string name="how_why_body">WhatsApp আৰু SMS-ৰ প্ৰতাৰণাৰ মেছেজত প্ৰায়ে আচল যেন লগা লিংক থাকে: নকল বেংকৰ পেজ, “KYC আপডেট”-ৰ ফৰ্ম, বা টকা চুৰি কৰা এপ। এবাৰ টেপ কৰিলেই ক্ষতি হ’ব পাৰে, আৰু নকল ৱেব ঠিকনা চিনি পোৱা কঠিন হ’ব পাৰে।</string>
+    <string name="how_where_title">LinkGuard ক’ত থাকে</string>
+    <string name="how_where_body">আপুনি টেপ কৰা লিংক আৰু আপোনাৰ ব্ৰাউজাৰৰ মাজত LinkGuard থাকে। ই চকুৰ পলকতে লিংক পৰীক্ষা কৰে, তাৰ পিছত %1$s-ত খোলে। ই নিজে কেতিয়াও ৱেব পেজ নেদেখুৱায়।</string>
+    <string name="how_safe_title">সুৰক্ষিত লিংক লগে লগে খোল খায়</string>
+    <string name="how_safe_body">জনাজাত ৱেবছাইট আৰু চৰকাৰী (.gov.in) আৰু বেংকৰ দৰে অফিচিয়েল ৱেবছাইট লগে লগে খোল খায়। লিংক ঠিকেই লাগিলে আপুনি একোৱেই নেদেখে।</string>
+    <string name="how_scam_title">প্ৰতাৰণাৰ লিংক চিনি পোৱা</string>
+    <string name="how_scam_body">প্ৰতাৰকে ব্যৱহাৰ কৰা কৌশলবোৰ LinkGuard-এ বিচাৰে: বেংক বা জনাজাত ব্ৰেণ্ড সাজি থকা ৱেবছাইট, Play Store-ৰ বাহিৰৰ পৰা এপ ডাউনলোড, লুকুৱাই ৰখা টকা খোজা অনুৰোধ, একেবাৰে নতুন ৱেবছাইট আৰু অদ্ভুত ৱেব ঠিকনা। ক্ষতিকাৰক বুলি জনা প্ৰায় ১,৯০০টা ৱেবছাইটৰ এখন তালিকাও ই চায়, যিখন এটা আগশাৰীৰ আন্তঃৰাষ্ট্ৰীয় সুৰক্ষা ডাটাবেছৰ পৰা লোৱা আৰু প্ৰতিদিনে আপডেট হয়।</string>
+    <string name="how_community_title">আন ব্যৱহাৰকাৰীৰ ৰিপ’ৰ্ট</string>
+    <string name="how_community_body">কেইবাজনো LinkGuard ব্যৱহাৰকাৰীয়ে একেটা ৱেবছাইটক প্ৰতাৰণা বুলি ৰিপ’ৰ্ট কৰিলে আনক সাৱধান হ’বলৈ কোৱা হয়।</string>
+    <string name="how_choice_title">সিদ্ধান্ত সদায় আপোনাৰ</string>
+    <string name="how_choice_body">LinkGuard-এ কেতিয়াও কোনো লিংক বন্ধ নকৰে। প্ৰতিটো সতৰ্কবাণীয়ে সহজ কথাত সমস্যাটো বুজায় আৰু “তথাপিও খোলক” বাছি লোৱাৰ সুযোগ দিয়ে। আপুনি খোলা লিংক LinkGuard-এ কেতিয়াও ৰাখি নাথাকে।</string>
+    <string name="feedback_title">অনুবাদ ভুল? আমাক জনাওক</string>
+    <string name="feedback_desc">LinkGuard মেচিনেৰে অনুবাদ কৰা। আপোনাৰ ভাষাৰ ভুল শুধৰাবলৈ সহায় কৰক।</string>
+    <string name="feedback_intro">এই ভাষাত LinkGuard-ৰ লিখনি মেচিনেৰে অনুবাদ কৰা, সেয়েহে ভুল থাকিব পাৰে। কিবা ভুল যেন লাগিলে, ভুল শব্দবোৰ আৰু আপুনি কেনেকৈ ক’লেহেঁতেন সেয়া আমাক জনাওক। যিটো আটাইতকৈ সহজ, সেইটো ব্যৱহাৰ কৰক:</string>
+    <string name="feedback_email">আমাক ইমেইল কৰক</string>
+    <string name="feedback_github">GitHub-ত ৰিপ’ৰ্ট কৰক</string>
+    <string name="feedback_github_desc">এটা বিনামূলীয়া GitHub একাউণ্ট লাগিব।</string>
+    <string name="feedback_play">Google Play-ত ৰিভিউ লিখক</string>
+    <string name="about_title">LinkGuard-ৰ বিষয়ে</string>
+    <string name="about_desc">ভাৰ্চন, গোপনীয়তা নীতি, অ’পেন ছ’ৰ্চ আৰু যোগাযোগ।</string>
+    <string name="about_version">ভাৰ্চন %1$s</string>
+    <string name="about_by">Dwarpal Labs-এ বনোৱা। LinkGuard স্বাধীন, কোনো বেংক, পেমেণ্ট এপ, কুৰিয়াৰ বা চৰকাৰী সংস্থাৰ সৈতে জড়িত নহয়।</string>
+    <string name="about_privacy">গোপনীয়তা নীতি</string>
+    <string name="about_privacy_desc">আপোনাৰ ফোনৰ পৰা কি বাহিৰলৈ যায়, আৰু কিয়।</string>
+    <string name="about_source">অ’পেন ছ’ৰ্চ</string>
+    <string name="about_source_desc">Apache-2.0 লাইচেন্সৰ অধীনত বিনামূলীয়া। যিকোনো লোকে GitHub-ত ইয়াৰ ক’ড পৰীক্ষা কৰিব পাৰে।</string>
+    <string name="about_contact">আমাৰ সৈতে যোগাযোগ কৰক</string>
+    <string name="about_credits">কৃতজ্ঞতা</string>
+    <string name="about_credits_body">ক্ষতিকাৰক বুলি জনা ৱেবছাইট: abuse.ch-ৰ URLhaus। জনপ্ৰিয় ৱেবছাইট: Tranco তালিকা। ৱেবছাইটৰ নাম: Public Suffix List (MPL-2.0)।</string>
+    <string name="report_link_label">লিংক</string>
+    <string name="report_note_label">আপোনাৰ কিয় এইটো প্ৰতাৰণা যেন লাগে? (ইচ্ছা হ’লে লিখক)</string>
+    <string name="report_private_info">আপোনাৰ ৰিপ’ৰ্ট গোপনে Dwarpal Labs-লৈ যায় আৰু কেতিয়াও প্ৰকাশ কৰা নহয়। কেইবাজনো বেলেগ বেলেগ মানুহে একেটা ৱেবছাইট ৰিপ’ৰ্ট কৰিলে আন LinkGuard ব্যৱহাৰকাৰীয়ে নিজে নিজে সতৰ্কবাণী দেখে। আপোনাৰ ৰিপ’ৰ্টৰ পৰা আপোনাক বিচাৰি উলিয়াব নোৱাৰি। অনুগ্ৰহ কৰি ফোন নম্বৰ, নাম বা আন ব্যক্তিগত তথ্য নিদিব।</string>
+    <string name="report_submit">ৰিপ’ৰ্ট পঠিয়াওক</string>
+    <string name="report_sending">পঠিওৱা হৈছে…</string>
+    <string name="report_sent">ধন্যবাদ। আপোনাৰ ৰিপ’ৰ্ট চাবলৈ পঠিওৱা হ’ল।</string>
+    <string name="report_failed">ৰিপ’ৰ্ট পঠিয়াব পৰা নগ’ল। ইণ্টাৰনেট সংযোগ চাই আকৌ চেষ্টা কৰক।</string>
+    <string name="back">উভতি যাওক</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">এই লিংকটো প্ৰতাৰণা হ’ব পাৰে</string>
+    <string name="interstitial_title_soft">এই লিংকটোৰ পৰা সাৱধান</string>
+    <string name="interstitial_go_back">উভতি যাওক</string>
+    <string name="interstitial_open_anyway">তথাপিও খোলক</string>
+    <string name="interstitial_checking">লিংক পৰীক্ষা কৰি আছে…</string>
+    <string name="interstitial_upi_heading">UPI-ত টকা খোজা অনুৰোধ</string>
+    <string name="interstitial_upi_payee">যাক দিব: %1$s</string>
+    <string name="interstitial_upi_amount">টকাৰ পৰিমাণ: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">এই লিংকে Play Store-ৰ বাহিৰৰ পৰা এটা এপ ডাউনলোড কৰে। এনে নকল এপে আপোনাৰ মেছেজ পঢ়ি বেংকৰ OTP চুৰি কৰিব পাৰে।</string>
+    <string name="warn_brand_lookalike">এই ৱেবছাইটটোৱে নিজকে %1$s বুলি দেখুৱাইছে। এইটো %1$s-ৰ আচল ৱেবছাইট নহয়।</string>
+    <string name="warn_upi_intent">এই লিংকে আপোনাক UPI-ৰে টকা পঠিয়াবলৈ কৈছে। ৰিফাণ্ড, পুৰস্কাৰ বা KYC আপডেট পাবলৈ কেতিয়াও টকা দিব নালাগে।</string>
+    <string name="warn_weird_host">এই লিংকত এটা অদ্ভুত ঠিকনা আছে, যিটো আচল কোম্পানীয়ে খুব কমহে ব্যৱহাৰ কৰে।</string>
+    <string name="warn_weird_host_brand">এই লিংকত %1$s-ৰ নাম আছে, কিন্তু ই এনে অদ্ভুত ঠিকনা ব্যৱহাৰ কৰে যিটো %1$s-এ ব্যৱহাৰ নকৰে।</string>
+    <string name="warn_reputation">এই ৱেবছাইটটো জনাজাত প্ৰতাৰক বা ক্ষতিকাৰক ৱেবছাইটৰ তালিকাত আছে।</string>
+    <plurals name="warn_community">
+        <item quantity="one">এই সপ্তাহত %d জন LinkGuard ব্যৱহাৰকাৰীয়ে এই লিংকটো প্ৰতাৰণা বুলি ৰিপ’ৰ্ট কৰিছে।</item>
+        <item quantity="other">এই সপ্তাহত %d জন LinkGuard ব্যৱহাৰকাৰীয়ে এই লিংকটো প্ৰতাৰণা বুলি ৰিপ’ৰ্ট কৰিছে।</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">এই ৱেবছাইটটো %d দিন আগতে বনোৱা হৈছে। প্ৰতাৰণাৰ ৱেবছাইট প্ৰায়ে একেবাৰে নতুন হয়।</item>
+        <item quantity="other">এই ৱেবছাইটটো %d দিন আগতে বনোৱা হৈছে। প্ৰতাৰণাৰ ৱেবছাইট প্ৰায়ে একেবাৰে নতুন হয়।</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard-এ এই লিংকটোত কিবা অস্বাভাৱিক কথা পাইছে।</string>
+</resources>

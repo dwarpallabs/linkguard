@@ -3,6 +3,8 @@ package com.dwarpallabs.linkguard
 import android.app.role.RoleManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.content.pm.PackageManager
+import androidx.core.net.toUri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
@@ -21,19 +23,25 @@ import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.browser.Browsers
 import com.dwarpallabs.linkguard.core.CheckId
 import com.dwarpallabs.linkguard.core.NormalisedUrl
+import com.dwarpallabs.linkguard.ui.AboutScreen
+import com.dwarpallabs.linkguard.ui.FeedbackScreen
 import com.dwarpallabs.linkguard.ui.HomeScreen
 import com.dwarpallabs.linkguard.ui.HowItWorksScreen
 import com.dwarpallabs.linkguard.ui.ReportScreen
+import com.dwarpallabs.linkguard.ui.PrivacyPolicyUrl
 import com.dwarpallabs.linkguard.ui.ReportStatus
+import com.dwarpallabs.linkguard.ui.SourceCodeUrl
+import com.dwarpallabs.linkguard.ui.SupportEmail
+import com.dwarpallabs.linkguard.ui.TranslationIssueUrl
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-/** First-launch setup and Settings: default browser, forward-to browser, check toggles, how it works, reporting. */
+/** First-launch setup and Settings: default browser, forward-to browser, check toggles, how it works, reporting, translation feedback, about. */
 class MainActivity : ComponentActivity() {
 
-    private enum class Screen { HOME, HOW, REPORT }
+    private enum class Screen { HOME, HOW, REPORT, FEEDBACK, ABOUT }
 
     private var isDefault by mutableStateOf(false)
     private var browsers by mutableStateOf(emptyList<BrowserApp>())
@@ -75,6 +83,21 @@ class MainActivity : ComponentActivity() {
                         },
                         onOpenHowItWorks = { screen = Screen.HOW },
                         onOpenReport = { screen = Screen.REPORT },
+                        onOpenFeedback = { screen = Screen.FEEDBACK },
+                        onOpenAbout = { screen = Screen.ABOUT },
+                    )
+                    Screen.ABOUT -> AboutScreen(
+                        version = appVersion(),
+                        onPrivacy = { Browsers.forward(this, PrivacyPolicyUrl.toUri()) },
+                        onSource = { Browsers.forward(this, SourceCodeUrl.toUri()) },
+                        onContact = { email("LinkGuard ${appVersion()}") },
+                        onBack = { screen = Screen.HOME },
+                    )
+                    Screen.FEEDBACK -> FeedbackScreen(
+                        onEmail = { email("LinkGuard translation (${resources.configuration.locales[0].displayName})") },
+                        onGitHub = { Browsers.forward(this, TranslationIssueUrl.toUri()) },
+                        onPlay = if (hasPlayStore()) ::openPlayListing else null,
+                        onBack = { screen = Screen.HOME },
                     )
                     Screen.HOW -> HowItWorksScreen(
                         browserName = browsers.firstOrNull { it.packageName == selected }?.label
@@ -122,6 +145,32 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    /** Opens the user's email app with the address and subject filled in; the user writes and sends it. */
+    private fun email(subject: String) {
+        val intent = Intent(Intent.ACTION_SENDTO, "mailto:".toUri())
+            .putExtra(Intent.EXTRA_EMAIL, arrayOf(SupportEmail))
+            .putExtra(Intent.EXTRA_SUBJECT, subject)
+        try {
+            startActivity(intent)
+        } catch (_: ActivityNotFoundException) {
+            Browsers.forward(this, SourceCodeUrl.toUri())
+        }
+    }
+
+    private fun hasPlayStore(): Boolean = try {
+        packageManager.getPackageInfo(PLAY_STORE, 0); true
+    } catch (_: PackageManager.NameNotFoundException) {
+        false
+    }
+
+    private fun openPlayListing() {
+        try {
+            startActivity(Intent(Intent.ACTION_VIEW, "market://details?id=$packageName".toUri()).setPackage(PLAY_STORE))
+        } catch (_: ActivityNotFoundException) {
+            Browsers.forward(this, "https://play.google.com/store/apps/details?id=$packageName".toUri())
+        }
+    }
+
     private fun appVersion(): String =
         packageManager.getPackageInfo(packageName, 0).versionName ?: "?"
 
@@ -138,5 +187,9 @@ class MainActivity : ComponentActivity() {
         } catch (_: ActivityNotFoundException) {
             startActivity(Intent(Settings.ACTION_SETTINGS))
         }
+    }
+
+    private companion object {
+        const val PLAY_STORE = "com.android.vending"
     }
 }

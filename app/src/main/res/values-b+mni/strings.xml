@@ -1,0 +1,104 @@
+<resources>
+    <!-- Manipuri (mni). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">ꯂꯤꯡꯛ ꯍꯥꯡꯗꯣꯛꯠꯔꯤꯉꯩ ꯃꯃꯥꯡꯗ LinkGuard ꯅ ꯌꯦꯡꯁꯤꯜꯂꯤ</string>
+    <string name="onboarding_body">WhatsApp, Telegram ꯅꯠꯔꯒ SMS ꯗ ꯂꯤꯡꯛ ꯑꯃ ꯇꯦꯞ ꯇꯧꯔꯀꯄ ꯃꯇꯃꯗ LinkGuard ꯅ ꯑꯍꯥꯅꯕ ꯃꯗꯨ ꯌꯦꯡꯁꯤꯜꯂꯤ꯫ ꯈꯨꯗꯣꯡꯊꯤꯕ ꯂꯩꯇꯕ ꯂꯤꯡꯛꯁꯤꯡ ꯅꯍꯥꯛꯀꯤ ꯕ꯭ꯔꯥꯎꯖꯔꯗ ꯈꯨꯗꯛꯇꯗ ꯍꯥꯡꯗꯣꯛꯂꯛꯀꯅꯤ꯫ ꯂꯤꯡꯛ ꯑꯃ ꯃꯤꯅꯝꯕꯒꯨꯝ ꯎꯔꯕꯗꯤ ꯅꯍꯥꯛꯅ ꯆꯦꯀꯁꯤꯟꯍꯟꯕ ꯄꯥꯎ ꯑꯃ ꯎꯒꯅꯤ, ꯑꯗꯨꯕꯨ ꯄꯥꯝꯂꯕꯗꯤ ꯃꯗꯨ ꯍꯥꯡꯗꯣꯛꯄ ꯌꯥꯒꯅꯤ꯫</string>
+    <string name="onboarding_privacy">ꯅꯍꯥꯛꯅ ꯍꯥꯡꯗꯣꯛꯂꯤꯕ ꯂꯤꯡꯛꯁꯤꯡ LinkGuard ꯅ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯊꯝꯗꯦ, ꯀꯗꯥꯏꯗꯁꯨ ꯊꯥꯗꯦ꯫ ꯑꯦꯀꯥꯎꯟꯠ ꯃꯊꯧ ꯇꯥꯗꯦ꯫</string>
+    <string name="your_browser">ꯅꯍꯥꯛꯀꯤ ꯕ꯭ꯔꯥꯎꯖꯔ</string>
+    <string name="flow_link">ꯅꯍꯥꯛꯀꯤ ꯂꯤꯡꯛ</string>
+    <string name="flow_check">LinkGuard ꯅ ꯌꯦꯡꯁꯤꯜꯂꯤ</string>
+    <string name="not_a_browser_title">LinkGuard ꯕ꯭ꯔꯥꯎꯖꯔ ꯅꯠꯇꯦ</string>
+    <string name="not_a_browser_body">LinkGuard ꯅ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯋꯦꯕ ꯄꯦꯖ ꯎꯠꯇꯦ꯫ ꯃꯁꯤꯅ ꯂꯤꯡꯛ ꯈꯨꯗꯤꯡꯃꯛ ꯃꯤꯠꯃꯤꯟꯕ ꯈꯔꯗ ꯌꯦꯡꯁꯤꯟꯗꯨꯅ %1$s ꯗ ꯍꯥꯡꯗꯣꯀꯏ, ꯃꯗꯨ ꯅꯍꯥꯛꯅ ꯍꯥꯟꯅꯗꯒꯤ ꯁꯤꯖꯤꯟꯅꯔꯤꯕ ꯕ꯭ꯔꯥꯎꯖꯔꯅꯤ꯫ ꯅꯍꯥꯛꯀꯤ ꯕꯨꯛꯃꯥꯔꯛ, ꯍꯤꯁ꯭ꯇ꯭ꯔꯤ, ꯊꯝꯂꯕ ꯄꯥꯁꯋꯥꯔꯗ ꯑꯃꯁꯨꯡ ꯇꯦꯕꯁꯤꯡ ꯃꯃꯥꯡꯗ ꯂꯩꯔꯝꯕꯒꯨꯝꯅ ꯂꯩꯒꯅꯤ꯫</string>
+    <string name="default_explain">Android ꯅ LinkGuard ꯕꯨ ꯅꯍꯥꯛꯀꯤ “ꯕ꯭ꯔꯥꯎꯖꯔ ꯑꯦꯞ” ꯍꯥꯌꯅ ꯀꯧꯒꯅꯤ꯫ ꯃꯁꯤ LinkGuard ꯅ ꯂꯤꯡꯛꯁꯤꯡ ꯑꯍꯥꯅꯕ ꯎꯕ ꯉꯝꯅꯕ ꯈꯛꯇꯅꯤ꯫ ꯂꯤꯡꯛ ꯈꯨꯗꯤꯡꯃꯛ %1$s ꯗꯃꯛ ꯍꯥꯡꯗꯣꯛꯀꯅꯤ꯫</string>
+
+    <string name="default_heading">ꯈꯣꯡꯊꯥꯡ ꯱: LinkGuard ꯕꯨ ꯅꯍꯥꯛꯀꯤ ꯗꯤꯐꯣꯜꯠ ꯕ꯭ꯔꯥꯎꯖꯔ ꯑꯣꯏꯍꯅꯕꯤꯌꯨ</string>
+    <string name="default_done">LinkGuard ꯅꯍꯥꯛꯀꯤ ꯗꯤꯐꯣꯜꯠ ꯕ꯭ꯔꯥꯎꯖꯔꯅꯤ</string>
+    <string name="default_button">ꯗꯤꯐꯣꯜꯠ ꯕ꯭ꯔꯥꯎꯖꯔ ꯑꯣꯏꯍꯅꯕꯤꯌꯨ</string>
+    <string name="default_hint">ꯁꯦꯇꯤꯡ ꯍꯥꯡꯗꯣꯛꯂꯛꯂꯕꯗꯤ “ꯕ꯭ꯔꯥꯎꯖꯔ ꯑꯦꯞ” ꯇꯦꯞ ꯇꯧꯗꯨꯅ LinkGuard ꯈꯅꯕꯤꯌꯨ꯫</string>
+
+    <string name="browser_heading">ꯈꯣꯡꯊꯥꯡ ꯲: ꯂꯤꯡꯛ ꯍꯥꯡꯗꯣꯛꯀꯗꯕ ꯕ꯭ꯔꯥꯎꯖꯔ</string>
+    <string name="browser_none">ꯑꯇꯣꯞꯄ ꯕ꯭ꯔꯥꯎꯖꯔ ꯐꯪꯈꯤꯗꯦ꯫ Chrome ꯒꯨꯝꯕ ꯕ꯭ꯔꯥꯎꯖꯔ ꯑꯃ ꯏꯟꯁ꯭ꯇꯣꯜ ꯇꯧꯕꯤꯌꯨ꯫</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook ꯑꯃꯁꯨꯡ LinkedIn ꯒꯨꯝꯕ ꯑꯦꯞꯁꯤꯡꯅ ꯃꯇꯝ ꯀꯌꯥꯗ ꯂꯤꯡꯛ ꯑꯦꯞ ꯑꯗꯨꯒꯤ ꯃꯅꯨꯡꯗꯃꯛ ꯍꯥꯡꯗꯣꯀꯏ, ꯃꯐꯝ ꯑꯗꯨꯗ LinkGuard ꯅ ꯌꯦꯡꯁꯤꯟꯕ ꯉꯃꯗꯦ꯫ ꯃꯤꯅꯝꯕ ꯂꯤꯡꯛꯁꯤꯡꯗꯒꯤ ꯉꯥꯀꯊꯣꯛꯅꯕ ꯑꯦꯞ ꯑꯗꯨꯒꯤ ꯁꯦꯇꯤꯡꯗ ꯃꯅꯨꯡꯒꯤ ꯕ꯭ꯔꯥꯎꯖꯔ ꯑꯗꯨ ꯑꯣꯐ ꯇꯧꯕꯤꯌꯨ (Telegram ꯗ: Settings → Chat Settings → In-app browser), ꯅꯠꯔꯒ ⋮ ꯇꯦꯞ ꯇꯧꯗꯨꯅ “ꯕ꯭ꯔꯥꯎꯖꯔꯗ ꯍꯥꯡꯗꯣꯀꯎ” ꯈꯅꯕꯤꯌꯨ꯫</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard ꯅ ꯀꯔꯤ ꯀꯔꯤ ꯌꯦꯡꯁꯤꯜꯂꯤꯕꯒꯦ</string>
+    <string name="check_unwrap">ꯑꯇꯨꯝꯕ ꯂꯤꯡꯛ ꯀꯗꯥꯏꯗ ꯆꯠꯂꯤꯕꯒꯦ ꯌꯦꯡꯕ</string>
+    <string name="check_unwrap_desc">bit.ly ꯒꯨꯝꯕ ꯁꯔꯕꯤꯁꯁꯤꯡꯗ ꯑꯇꯨꯝꯕ ꯂꯤꯡꯛ ꯑꯗꯨ ꯇꯁꯦꯡꯅꯃꯛ ꯀꯗꯥꯏꯗ ꯆꯠꯂꯤꯕꯒꯦ ꯍꯥꯌꯅ ꯍꯪꯏ꯫</string>
+    <string name="check_apk_download">ꯑꯦꯞ ꯗꯥꯎꯅꯂꯣꯗ</string>
+    <string name="check_brand_lookalike">ꯑꯔꯥꯅꯕ ꯕꯦꯡꯛ ꯑꯃꯁꯨꯡ ꯕ꯭ꯔꯦꯟꯗꯀꯤ ꯋꯦꯕꯁꯥꯏꯠ</string>
+    <string name="check_weird_host">ꯇꯣꯉꯥꯟꯕ ꯋꯦꯕ ꯑꯦꯗ꯭ꯔꯦꯁ</string>
+    <string name="check_reputation">ꯃꯤꯅꯝꯕ ꯍꯥꯌꯅ ꯈꯉꯂꯕ ꯋꯦꯕꯁꯥꯏꯠ</string>
+    <string name="check_domain_age">ꯍꯧꯖꯤꯛ ꯁꯦꯝꯂꯕ ꯑꯅꯧꯕ ꯋꯦꯕꯁꯥꯏꯠ</string>
+    <string name="check_domain_age_desc">ꯋꯦꯕꯁꯥꯏꯠ ꯑꯗꯨ ꯀꯩꯔꯃꯗ ꯁꯦꯃꯈꯤꯕꯒꯦ ꯍꯥꯌꯅ ꯑꯣꯐꯤꯁꯤꯌꯜ ꯔꯦꯖꯤꯁ꯭ꯠꯔꯤꯗ ꯍꯪꯏ꯫ ꯋꯦꯕꯁꯥꯏꯠꯀꯤ ꯃꯤꯡ ꯈꯛꯇꯃꯛ ꯊꯥꯏ, ꯃꯄꯨꯡ ꯐꯥꯕ ꯂꯤꯡꯛ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯊꯥꯗꯦ꯫</string>
+    <string name="check_upi_intent">UPI ꯗꯒꯤ ꯁꯦꯜ ꯍꯥꯏꯖꯕ</string>
+
+    <string name="settings_report">ꯂꯤꯡꯛ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯕꯤꯌꯨ</string>
+    <string name="settings_report_desc">LinkGuard ꯅ ꯐꯥꯗꯣꯛ ꯉꯃꯗꯕ ꯃꯤꯅꯝꯕ ꯂꯤꯡꯛ ꯑꯗꯨꯒꯤ ꯃꯔꯃꯗ ꯑꯩꯈꯣꯌꯗ ꯍꯥꯌꯕꯤꯌꯨ꯫</string>
+    <string name="how_title">LinkGuard ꯅ ꯀꯔꯝꯅ ꯊꯕꯛ ꯇꯧꯕꯒꯦ</string>
+    <string name="how_desc">ꯃꯁꯤ ꯀꯔꯤꯒꯤ ꯃꯊꯧ ꯇꯥꯕꯒꯦ, ꯑꯃꯁꯨꯡ ꯀꯔꯤ ꯂꯤꯡꯛꯇ ꯆꯦꯀꯁꯤꯟꯍꯅꯒꯗꯒꯦ ꯍꯥꯌꯕ ꯀꯔꯝꯅ ꯋꯥꯔꯦꯞ ꯂꯧꯕꯒꯦ꯫</string>
+    <string name="how_why_title">ꯀꯔꯤꯒꯤ ꯃꯊꯧ ꯇꯥꯕꯒꯦ</string>
+    <string name="how_why_body">WhatsApp ꯑꯃꯁꯨꯡ SMS ꯗ ꯂꯥꯛꯂꯤꯕ ꯃꯤꯅꯝꯕ ꯃꯦꯁꯦꯖꯁꯤꯡꯗ ꯑꯌꯥꯝꯕ ꯃꯇꯃꯗ ꯑꯁꯦꯡꯕꯒꯨꯝ ꯎꯕ ꯂꯤꯡꯛ ꯂꯩ: ꯑꯔꯥꯅꯕ ꯕꯦꯡꯛ ꯄꯦꯖ, “KYC ꯑꯞꯗꯦꯠ” ꯐꯣꯔꯝ, ꯅꯠꯔꯒ ꯁꯦꯜ ꯍꯨꯟꯕ ꯑꯦꯞ꯫ ꯑꯃꯨꯛ ꯇꯦꯞ ꯇꯧꯔꯕꯁꯨ ꯑꯁꯣꯛꯄ ꯐꯪꯕ ꯌꯥꯏ, ꯑꯃꯁꯨꯡ ꯑꯔꯥꯅꯕ ꯋꯦꯕ ꯑꯦꯗ꯭ꯔꯦꯁ ꯈꯉꯗꯣꯛꯄ ꯀꯟꯅꯕ ꯌꯥꯏ꯫</string>
+    <string name="how_where_title">LinkGuard ꯀꯗꯥꯏꯗ ꯂꯩꯕꯒꯦ</string>
+    <string name="how_where_body">ꯅꯍꯥꯛꯅ ꯇꯦꯞ ꯇꯧꯔꯤꯕ ꯂꯤꯡꯛ ꯑꯃꯁꯨꯡ ꯅꯍꯥꯛꯀꯤ ꯕ꯭ꯔꯥꯎꯖꯔꯒꯤ ꯃꯔꯛꯇ LinkGuard ꯂꯩ꯫ ꯃꯁꯤꯅ ꯃꯤꯠꯃꯤꯟꯕ ꯈꯔꯗ ꯂꯤꯡꯛ ꯌꯦꯡꯁꯤꯟꯗꯨꯅ %1$s ꯗ ꯍꯥꯡꯗꯣꯀꯏ꯫ ꯃꯁꯥꯅ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯋꯦꯕ ꯄꯦꯖ ꯎꯠꯇꯦ꯫</string>
+    <string name="how_safe_title">ꯈꯨꯗꯣꯡꯊꯤꯕ ꯂꯩꯇꯕ ꯂꯤꯡꯛ ꯈꯨꯗꯛꯇꯗ ꯍꯥꯡꯗꯣꯛꯂꯛꯀꯅꯤ</string>
+    <string name="how_safe_body">ꯃꯤꯌꯥꯝꯅ ꯈꯉꯕ ꯋꯦꯕꯁꯥꯏꯠꯁꯤꯡ ꯑꯃꯁꯨꯡ ꯂꯩꯉꯥꯛꯀꯤ (.gov.in) ꯑꯃꯁꯨꯡ ꯕꯦꯡꯛꯀꯤ ꯑꯣꯐꯤꯁꯤꯌꯜ ꯋꯦꯕꯁꯥꯏꯠꯁꯤꯡ ꯈꯨꯗꯛꯇꯗ ꯍꯥꯡꯗꯣꯛꯂꯛꯀꯅꯤ꯫ ꯂꯤꯡꯛ ꯑꯃ ꯐꯕꯒꯨꯝ ꯎꯔꯕꯗꯤ ꯅꯍꯥꯛꯅ ꯀꯔꯤꯒꯨꯝꯕ ꯑꯃꯠꯇ ꯎꯔꯣꯏ꯫</string>
+    <string name="how_scam_title">ꯃꯤꯅꯝꯕ ꯂꯤꯡꯛ ꯈꯉꯗꯣꯛꯄ</string>
+    <string name="how_scam_body">ꯃꯤꯅꯝꯕ ꯃꯤꯁꯤꯡꯅ ꯁꯤꯖꯤꯟꯅꯕ ꯂꯝꯕꯤꯁꯤꯡ LinkGuard ꯅ ꯊꯤꯏ: ꯕꯦꯡꯛ ꯅꯠꯔꯒ ꯃꯤꯌꯥꯝꯅ ꯈꯉꯕ ꯕ꯭ꯔꯦꯟꯗ ꯑꯣꯏꯅ ꯃꯁꯥ ꯎꯠꯂꯤꯕ ꯋꯦꯕꯁꯥꯏꯠ, Play Store ꯒꯤ ꯃꯄꯥꯟꯗꯒꯤ ꯑꯦꯞ ꯗꯥꯎꯅꯂꯣꯗ, ꯂꯣꯠꯂꯕ ꯁꯦꯜ ꯍꯥꯏꯖꯕ, ꯍꯧꯖꯤꯛ ꯁꯦꯝꯂꯕ ꯑꯅꯧꯕ ꯋꯦꯕꯁꯥꯏꯠ ꯑꯃꯁꯨꯡ ꯇꯣꯉꯥꯟꯕ ꯋꯦꯕ ꯑꯦꯗ꯭ꯔꯦꯁ꯫ ꯑꯁꯣꯛꯄ ꯄꯤꯕ ꯍꯥꯌꯅ ꯈꯉꯂꯕ ꯋꯦꯕꯁꯥꯏꯠ ꯱,꯹꯰꯰ ꯔꯣꯝꯒꯤ ꯂꯤꯁ꯭ꯠ ꯑꯃꯁꯨ ꯌꯦꯡꯏ, ꯃꯁꯤ ꯃꯥꯂꯦꯃꯒꯤ ꯃꯃꯤꯡ ꯂꯩꯕ ꯁꯦꯛꯌꯨꯔꯤꯇꯤ ꯗꯦꯇꯥꯕꯦꯁ ꯑꯃꯗꯒꯤ ꯂꯧꯈꯤꯕꯅꯤ ꯑꯃꯁꯨꯡ ꯅꯨꯃꯤꯠ ꯈꯨꯗꯤꯡꯒꯤ ꯑꯅꯧꯕ ꯑꯣꯏꯍꯜꯂꯤ꯫</string>
+    <string name="how_community_title">ꯑꯇꯣꯞꯄ ꯁꯤꯖꯤꯟꯅꯔꯤꯕ ꯃꯤꯁꯤꯡꯒꯤ ꯔꯤꯄꯣꯔꯠ</string>
+    <string name="how_community_body">LinkGuard ꯁꯤꯖꯤꯟꯅꯔꯤꯕ ꯃꯤ ꯀꯌꯥꯅ ꯋꯦꯕꯁꯥꯏꯠ ꯑꯃꯃꯛꯇꯕꯨ ꯃꯤꯅꯝꯕꯅꯤ ꯍꯥꯌꯅ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯔꯕꯗꯤ ꯑꯇꯣꯞꯄꯁꯤꯡꯗ ꯆꯦꯀꯁꯤꯟꯅꯕ ꯍꯥꯌꯖꯩ꯫</string>
+    <string name="how_choice_title">ꯋꯥꯔꯦꯞ ꯃꯇꯝ ꯄꯨꯝꯕꯗ ꯅꯍꯥꯛꯅ ꯂꯧꯏ</string>
+    <string name="how_choice_body">LinkGuard ꯅ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯂꯤꯡꯛ ꯊꯤꯡꯗꯦ꯫ ꯆꯦꯀꯁꯤꯟꯍꯟꯕ ꯈꯨꯗꯤꯡꯃꯛꯅ ꯑꯋꯥꯕ ꯑꯗꯨ ꯂꯥꯏꯕ ꯋꯥꯍꯩꯗ ꯇꯥꯛꯂꯤ ꯑꯃꯁꯨꯡ “ꯑꯗꯨꯝ ꯑꯣꯏꯅꯃꯛ ꯍꯥꯡꯗꯣꯀꯎ” ꯈꯅꯕ ꯌꯥꯍꯜꯂꯤ꯫ ꯅꯍꯥꯛꯅ ꯍꯥꯡꯗꯣꯛꯂꯤꯕ ꯂꯤꯡꯛꯁꯤꯡ LinkGuard ꯅ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯊꯝꯗꯦ꯫</string>
+    <string name="feedback_title">ꯍꯟꯗꯣꯛꯄ ꯑꯁꯣꯌꯕ ꯂꯩꯔꯥ? ꯑꯩꯈꯣꯌꯗ ꯍꯥꯌꯕꯤꯌꯨ</string>
+    <string name="feedback_desc">LinkGuard ꯃꯦꯁꯤꯟꯅ ꯍꯟꯗꯣꯛꯈꯤꯕꯅꯤ꯫ ꯅꯍꯥꯛꯀꯤ ꯂꯣꯟꯗ ꯂꯩꯔꯤꯕ ꯑꯁꯣꯌꯕꯁꯤꯡ ꯁꯦꯃꯗꯣꯛꯅꯕ ꯃꯇꯦꯡ ꯄꯥꯡꯕꯤꯌꯨ꯫</string>
+    <string name="feedback_intro">ꯂꯣꯟ ꯑꯁꯤꯗ LinkGuard ꯒꯤ ꯏꯔꯤꯕꯁꯤꯡ ꯃꯦꯁꯤꯟꯅ ꯍꯟꯗꯣꯛꯈꯤꯕꯅꯤ, ꯃꯔꯝ ꯑꯗꯨꯅ ꯑꯁꯣꯌꯕ ꯂꯩꯕ ꯌꯥꯏ꯫ ꯀꯔꯤꯒꯨꯝꯕ ꯑꯃ ꯑꯔꯥꯅꯕꯒꯨꯝ ꯐꯥꯎꯔꯕꯗꯤ, ꯑꯁꯣꯌꯕ ꯋꯥꯍꯩꯁꯤꯡ ꯑꯃꯁꯨꯡ ꯅꯍꯥꯛꯅ ꯀꯔꯝꯅ ꯍꯥꯌꯒꯗꯒꯦ ꯍꯥꯌꯕ ꯑꯩꯈꯣꯌꯗ ꯍꯥꯌꯕꯤꯌꯨ꯫ ꯈ꯭ꯕꯥꯏꯗꯒꯤ ꯂꯥꯏꯕ ꯑꯗꯨ ꯁꯤꯖꯤꯟꯅꯕꯤꯌꯨ:</string>
+    <string name="feedback_email">ꯑꯩꯈꯣꯌꯗ ꯏꯃꯦꯜ ꯊꯥꯕꯤꯌꯨ</string>
+    <string name="feedback_github">GitHub ꯗ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯕꯤꯌꯨ</string>
+    <string name="feedback_github_desc">ꯃꯃꯜ ꯂꯩꯇꯕ GitHub ꯑꯦꯀꯥꯎꯟꯠ ꯑꯃ ꯃꯊꯧ ꯇꯥꯏ꯫</string>
+    <string name="feedback_play">Google Play ꯗ ꯔꯤꯕꯤꯎ ꯏꯕꯤꯌꯨ</string>
+    <string name="about_title">LinkGuard ꯒꯤ ꯃꯔꯃꯗ</string>
+    <string name="about_desc">ꯕꯔꯖꯟ, ꯄ꯭ꯔꯥꯏꯕꯦꯁꯤ ꯄꯣꯂꯤꯁꯤ, ꯑꯣꯄꯟ ꯁꯣꯔꯁ ꯑꯃꯁꯨꯡ ꯄꯥꯎ ꯐꯥꯎꯅꯕ꯫</string>
+    <string name="about_version">ꯕꯔꯖꯟ %1$s</string>
+    <string name="about_by">Dwarpal Labs ꯅ ꯁꯦꯃꯈꯤꯕꯅꯤ꯫ LinkGuard ꯑꯁꯤ ꯃꯁꯥ ꯃꯊꯟꯇ ꯂꯦꯞꯄꯅꯤ, ꯕꯦꯡꯛ, ꯁꯦꯜ ꯄꯤꯕ ꯑꯦꯞ, ꯀꯨꯔꯤꯌꯔ ꯅꯠꯔꯒ ꯂꯩꯉꯥꯛꯀꯤ ꯑꯣꯐꯤꯁ ꯑꯃꯠꯇꯒ ꯃꯔꯤ ꯂꯩꯅꯗꯦ꯫</string>
+    <string name="about_privacy">ꯄ꯭ꯔꯥꯏꯕꯦꯁꯤ ꯄꯣꯂꯤꯁꯤ</string>
+    <string name="about_privacy_desc">ꯅꯍꯥꯛꯀꯤ ꯐꯣꯟꯗꯒꯤ ꯀꯔꯤ ꯃꯄꯥꯟꯗ ꯆꯠꯂꯤꯕꯒꯦ, ꯑꯃꯁꯨꯡ ꯀꯔꯤꯒꯤꯅꯣ꯫</string>
+    <string name="about_source">ꯑꯣꯄꯟ ꯁꯣꯔꯁ</string>
+    <string name="about_source_desc">Apache-2.0 ꯂꯥꯏꯁꯦꯟꯁꯀꯤ ꯃꯈꯥꯗ ꯃꯃꯜ ꯂꯩꯇꯕ꯫ ꯀꯅꯥꯒꯨꯝꯕꯅ GitHub ꯗ ꯃꯁꯤꯒꯤ ꯀꯣꯗ ꯌꯦꯡꯁꯤꯟꯕ ꯌꯥꯏ꯫</string>
+    <string name="about_contact">ꯑꯩꯈꯣꯌꯒꯥ ꯄꯥꯎ ꯐꯥꯎꯅꯕꯤꯌꯨ</string>
+    <string name="about_credits">ꯊꯥꯒꯠꯄ</string>
+    <string name="about_credits_body">ꯑꯁꯣꯛꯄ ꯄꯤꯕ ꯍꯥꯌꯅ ꯈꯉꯂꯕ ꯋꯦꯕꯁꯥꯏꯠ: abuse.ch ꯒꯤ URLhaus꯫ ꯃꯤꯌꯥꯝꯅ ꯁꯤꯖꯤꯟꯅꯕ ꯋꯦꯕꯁꯥꯏꯠ: Tranco ꯂꯤꯁ꯭ꯠ꯫ ꯋꯦꯕꯁꯥꯏꯠꯀꯤ ꯃꯤꯡ: Public Suffix List (MPL-2.0)꯫</string>
+    <string name="report_link_label">ꯂꯤꯡꯛ</string>
+    <string name="report_note_label">ꯀꯔꯤꯒꯤ ꯃꯁꯤ ꯃꯤꯅꯝꯕꯅꯤ ꯍꯥꯌꯅ ꯈꯜꯂꯤꯕꯒꯦ? (ꯄꯥꯝꯂꯕꯗꯤ ꯏꯕꯤꯌꯨ)</string>
+    <string name="report_private_info">ꯅꯍꯥꯛꯀꯤ ꯔꯤꯄꯣꯔꯠ ꯑꯗꯨ ꯒꯨꯞꯇ ꯑꯣꯏꯅ Dwarpal Labs ꯗ ꯆꯠꯂꯤ ꯑꯃꯁꯨꯡ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯐꯣꯡꯗꯣꯛꯂꯣꯏ꯫ ꯇꯣꯉꯥꯟ ꯇꯣꯉꯥꯅꯕ ꯃꯤ ꯀꯌꯥꯅ ꯋꯦꯕꯁꯥꯏꯠ ꯑꯃꯃꯛꯇꯕꯨ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯔꯕꯗꯤ ꯑꯇꯣꯞꯄ LinkGuard ꯁꯤꯖꯤꯟꯅꯔꯤꯕ ꯃꯤꯁꯤꯡꯅ ꯃꯁꯥꯃꯛ ꯆꯦꯀꯁꯤꯟꯍꯟꯕ ꯄꯥꯎ ꯎꯒꯅꯤ꯫ ꯅꯍꯥꯛꯀꯤ ꯔꯤꯄꯣꯔꯠꯇꯒꯤ ꯅꯍꯥꯛ ꯀꯅꯥꯅꯣ ꯍꯥꯌꯕ ꯈꯉꯕ ꯉꯝꯂꯣꯏ꯫ ꯆꯟꯕꯤꯗꯨꯅ ꯐꯣꯟ ꯅꯝꯕꯔ, ꯃꯤꯡ ꯅꯠꯔꯒ ꯑꯇꯣꯞꯄ ꯃꯁꯥꯒꯤ ꯋꯥꯐꯃꯁꯤꯡ ꯍꯥꯄꯆꯤꯟꯕꯤꯒꯅꯨ꯫</string>
+    <string name="report_submit">ꯔꯤꯄꯣꯔꯠ ꯊꯥꯕꯤꯌꯨ</string>
+    <string name="report_sending">ꯊꯥꯔꯤ…</string>
+    <string name="report_sent">ꯊꯥꯒꯠꯆꯔꯤ꯫ ꯅꯍꯥꯛꯀꯤ ꯔꯤꯄꯣꯔꯠ ꯌꯦꯡꯅꯕꯒꯤꯗꯃꯛ ꯊꯥꯈ꯭ꯔꯦ꯫</string>
+    <string name="report_failed">ꯔꯤꯄꯣꯔꯠ ꯊꯥꯕ ꯉꯃꯈꯤꯗꯦ꯫ ꯏꯟꯇꯔꯅꯦꯠ ꯀꯅꯦꯛꯁꯟ ꯌꯦꯡꯗꯨꯅ ꯑꯃꯨꯛ ꯍꯟꯅ ꯍꯣꯠꯅꯕꯤꯌꯨ꯫</string>
+    <string name="back">ꯍꯟꯖꯤꯟꯕ</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">ꯂꯤꯡꯛ ꯑꯁꯤ ꯃꯤꯅꯝꯕ ꯑꯣꯏꯕ ꯌꯥꯏ</string>
+    <string name="interstitial_title_soft">ꯂꯤꯡꯛ ꯑꯁꯤꯗ ꯆꯦꯀꯁꯤꯟꯕꯤꯌꯨ</string>
+    <string name="interstitial_go_back">ꯍꯟꯖꯤꯟꯕꯤꯌꯨ</string>
+    <string name="interstitial_open_anyway">ꯑꯗꯨꯝ ꯑꯣꯏꯅꯃꯛ ꯍꯥꯡꯗꯣꯀꯎ</string>
+    <string name="interstitial_checking">ꯂꯤꯡꯛ ꯌꯦꯡꯁꯤꯜꯂꯤ…</string>
+    <string name="interstitial_upi_heading">UPI ꯗꯒꯤ ꯁꯦꯜ ꯍꯥꯏꯖꯕ</string>
+    <string name="interstitial_upi_payee">ꯄꯤꯒꯗꯕ ꯃꯤ: %1$s</string>
+    <string name="interstitial_upi_amount">ꯁꯦꯜ: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">ꯂꯤꯡꯛ ꯑꯁꯤꯅ Play Store ꯒꯤ ꯃꯄꯥꯟꯗꯒꯤ ꯑꯦꯞ ꯑꯃ ꯗꯥꯎꯅꯂꯣꯗ ꯇꯧꯏ꯫ ꯃꯁꯤꯒꯨꯝꯕ ꯑꯔꯥꯅꯕ ꯑꯦꯞꯁꯤꯡꯅ ꯅꯍꯥꯛꯀꯤ ꯃꯦꯁꯦꯖꯁꯤꯡ ꯄꯥꯗꯨꯅ ꯕꯦꯡꯛꯀꯤ OTP ꯍꯨꯟꯕ ꯌꯥꯏ꯫</string>
+    <string name="warn_brand_lookalike">ꯋꯦꯕꯁꯥꯏꯠ ꯑꯁꯤꯅ ꯃꯁꯥꯕꯨ %1$s ꯅꯤ ꯍꯥꯌꯅ ꯎꯠꯂꯤ꯫ ꯃꯁꯤ %1$s ꯒꯤ ꯑꯁꯦꯡꯕ ꯋꯦꯕꯁꯥꯏꯠ ꯅꯠꯇꯦ꯫</string>
+    <string name="warn_upi_intent">ꯂꯤꯡꯛ ꯑꯁꯤꯅ ꯅꯍꯥꯀꯄꯨ UPI ꯗꯒꯤ ꯁꯦꯜ ꯊꯥꯅꯕ ꯍꯥꯏꯔꯤ꯫ ꯔꯤꯐꯟꯗ, ꯃꯅꯥ ꯅꯠꯔꯒ KYC ꯑꯞꯗꯦꯠ ꯐꯪꯅꯕ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯁꯦꯜ ꯄꯤꯒꯗꯕ ꯃꯊꯧ ꯇꯥꯗꯦ꯫</string>
+    <string name="warn_weird_host">ꯂꯤꯡꯛ ꯑꯁꯤꯅ ꯑꯁꯦꯡꯕ ꯀꯝꯄꯦꯅꯤꯁꯤꯡꯅ ꯌꯥꯝꯅ ꯁꯤꯖꯤꯟꯅꯗꯕ ꯇꯣꯉꯥꯟꯕ ꯑꯦꯗ꯭ꯔꯦꯁ ꯑꯃ ꯁꯤꯖꯤꯟꯅꯩ꯫</string>
+    <string name="warn_weird_host_brand">ꯂꯤꯡꯛ ꯑꯁꯤꯗ %1$s ꯒꯤ ꯃꯤꯡ ꯌꯥꯎꯏ, ꯑꯗꯨꯕꯨ %1$s ꯅ ꯁꯤꯖꯤꯟꯅꯗꯕ ꯇꯣꯉꯥꯟꯕ ꯑꯦꯗ꯭ꯔꯦꯁ ꯑꯃ ꯁꯤꯖꯤꯟꯅꯩ꯫</string>
+    <string name="warn_reputation">ꯋꯦꯕꯁꯥꯏꯠ ꯑꯁꯤ ꯃꯤꯅꯝꯕ ꯅꯠꯔꯒ ꯑꯁꯣꯛꯄ ꯄꯤꯕ ꯍꯥꯌꯅ ꯈꯉꯂꯕ ꯋꯦꯕꯁꯥꯏꯠꯁꯤꯡꯒꯤ ꯂꯤꯁ꯭ꯠꯇ ꯌꯥꯎꯔꯤ꯫</string>
+    <plurals name="warn_community">
+        <item quantity="other">ꯊꯥꯕꯟ ꯑꯁꯤꯗ LinkGuard ꯁꯤꯖꯤꯟꯅꯔꯤꯕ ꯃꯤ %d ꯅ ꯂꯤꯡꯛ ꯑꯁꯤ ꯃꯤꯅꯝꯕꯅꯤ ꯍꯥꯌꯅ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯔꯦ꯫</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="other">ꯋꯦꯕꯁꯥꯏꯠ ꯑꯁꯤ ꯅꯨꯃꯤꯠ %d ꯃꯃꯥꯡꯗ ꯁꯦꯃꯈꯤꯕꯅꯤ꯫ ꯃꯤꯅꯝꯕ ꯋꯦꯕꯁꯥꯏꯠꯁꯤꯡ ꯑꯌꯥꯝꯕ ꯃꯇꯃꯗ ꯍꯧꯖꯤꯛ ꯁꯦꯝꯂꯕ ꯑꯅꯧꯕꯅꯤ꯫</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard ꯅ ꯂꯤꯡꯛ ꯑꯁꯤꯗ ꯇꯣꯉꯥꯟꯕ ꯈꯔ ꯐꯪꯂꯦ꯫</string>
+</resources>

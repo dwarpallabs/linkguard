@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Gujarati (gu). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard લિંક ખૂલે તે પહેલાં તેને તપાસે છે</string>
+    <string name="onboarding_body">તમે WhatsApp, Telegram કે SMS માં કોઈ લિંક પર ટૅપ કરો ત્યારે LinkGuard પહેલાં તેને તપાસે છે. સલામત લિંક સીધી તમારા બ્રાઉઝરમાં ખૂલી જાય છે. જો કોઈ લિંક છેતરપિંડીવાળી લાગે, તો તમને ચેતવણી દેખાશે, અને છતાં તમે તેને ખોલી શકો છો.</string>
+    <string name="onboarding_privacy">તમે ખોલેલી લિંક LinkGuard ક્યારેય સાચવતું નથી કે ક્યાંય મોકલતું નથી. કોઈ એકાઉન્ટની જરૂર નથી.</string>
+    <string name="your_browser">તમારું બ્રાઉઝર</string>
+    <string name="flow_link">તમારી લિંક</string>
+    <string name="flow_check">LinkGuard તેને તપાસે છે</string>
+    <string name="not_a_browser_title">LinkGuard બ્રાઉઝર નથી</string>
+    <string name="not_a_browser_body">LinkGuard ક્યારેય વેબ પેજ બતાવતું નથી. તે દરેક લિંકને પળવારમાં તપાસે છે અને પછી તેને %1$s માં ખોલે છે, એટલે કે તમે પહેલેથી વાપરો છો તે જ બ્રાઉઝર. તમારા બુકમાર્ક, હિસ્ટ્રી, સાચવેલા પાસવર્ડ અને ટૅબ જેમ છે તેમ જ રહે છે.</string>
+    <string name="default_explain">Android, LinkGuard ને તમારું “બ્રાઉઝર ઍપ” કહેશે. એવું ફક્ત એટલા માટે કે LinkGuard લિંકને પહેલાં જોઈ શકે. દરેક લિંક તો પણ %1$s માં જ ખૂલશે.</string>
+
+    <string name="default_heading">પગલું 1: LinkGuard ને તમારું ડિફૉલ્ટ બ્રાઉઝર બનાવો</string>
+    <string name="default_done">LinkGuard તમારું ડિફૉલ્ટ બ્રાઉઝર છે</string>
+    <string name="default_button">ડિફૉલ્ટ બ્રાઉઝર બનાવો</string>
+    <string name="default_hint">જો સેટિંગ્સ ખૂલે, તો “બ્રાઉઝર ઍપ” પર ટૅપ કરો અને LinkGuard પસંદ કરો.</string>
+
+    <string name="browser_heading">પગલું 2: લિંક આમાં ખોલો</string>
+    <string name="browser_none">બીજું કોઈ બ્રાઉઝર મળ્યું નથી. Chrome જેવું કોઈ બ્રાઉઝર ઇન્સ્ટૉલ કરો.</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook અને LinkedIn જેવી ઍપ ઘણી વાર લિંક ઍપની અંદર જ ખોલે છે, જ્યાં LinkGuard તેને તપાસી શકતું નથી. છેતરપિંડીવાળી લિંકથી બચવા માટે તે ઍપના સેટિંગ્સમાં ઇન-ઍપ બ્રાઉઝર બંધ કરો (Telegram માં: Settings → Chat Settings → In-app browser), અથવા ⋮ પર ટૅપ કરીને “બ્રાઉઝરમાં ખોલો” પસંદ કરો.</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard શું તપાસે છે</string>
+    <string name="check_unwrap">ટૂંકી લિંક ખોલીને જુએ</string>
+    <string name="check_unwrap_desc">bit.ly જેવી સેવાઓને પૂછે છે કે ટૂંકી લિંક ખરેખર ક્યાં જાય છે.</string>
+    <string name="check_apk_download">ઍપ ડાઉનલોડ</string>
+    <string name="check_brand_lookalike">નકલી બૅન્ક અને બ્રાન્ડ વેબસાઇટ</string>
+    <string name="check_weird_host">અજાણ્યાં, અસામાન્ય વેબ સરનામાં</string>
+    <string name="check_reputation">જાણીતી છેતરપિંડીવાળી વેબસાઇટ</string>
+    <string name="check_domain_age">એકદમ નવી વેબસાઇટ</string>
+    <string name="check_domain_age_desc">વેબસાઇટ ક્યારે બની તે સત્તાવાર રજિસ્ટ્રીને પૂછે છે. ફક્ત વેબસાઇટનું નામ મોકલાય છે, આખી લિંક ક્યારેય નહીં.</string>
+    <string name="check_upi_intent">UPI થી પૈસા માગવાની વિનંતી</string>
+
+    <string name="settings_report">લિંકની ફરિયાદ કરો</string>
+    <string name="settings_report_desc">LinkGuard પકડી ન શક્યું હોય એવી છેતરપિંડીવાળી લિંક વિશે અમને કહો.</string>
+    <string name="how_title">LinkGuard કેવી રીતે કામ કરે છે</string>
+    <string name="how_desc">તેની જરૂર કેમ છે, અને કઈ લિંક વિશે ચેતવણી આપવી તે કેવી રીતે નક્કી કરે છે.</string>
+    <string name="how_why_title">તેની જરૂર કેમ છે</string>
+    <string name="how_why_body">WhatsApp અને SMS પરના છેતરપિંડીવાળા મેસેજમાં ઘણી વાર સાચી લાગે એવી લિંક હોય છે: નકલી બૅન્ક પેજ, “KYC અપડેટ” ફૉર્મ કે પૈસા ચોરતી ઍપ. નુકસાન થવા માટે એક ટૅપ પૂરતો છે, અને નકલી વેબ સરનામું ઓળખવું અઘરું હોઈ શકે.</string>
+    <string name="how_where_title">LinkGuard ક્યાં હોય છે</string>
+    <string name="how_where_body">તમે ટૅપ કરેલી લિંક અને તમારા બ્રાઉઝરની વચ્ચે LinkGuard હોય છે. તે પળવારમાં લિંક તપાસે છે, પછી તેને %1$s માં ખોલે છે. તે પોતે ક્યારેય વેબ પેજ બતાવતું નથી.</string>
+    <string name="how_safe_title">સલામત લિંક તરત ખૂલે છે</string>
+    <string name="how_safe_body">જાણીતી અને સત્તાવાર વેબસાઇટ, જેમ કે સરકારી (.gov.in) અને બૅન્કની વેબસાઇટ, તરત ખૂલી જાય છે. લિંક બરાબર લાગે, તો તમને કંઈ જ દેખાતું નથી.</string>
+    <string name="how_scam_title">છેતરપિંડીવાળી લિંક ઓળખવી</string>
+    <string name="how_scam_body">છેતરપિંડી કરનારા જે યુક્તિઓ વાપરે છે તે LinkGuard શોધે છે: બૅન્ક કે જાણીતી બ્રાન્ડ હોવાનો ઢોંગ કરતી વેબસાઇટ, Play Store બહારથી ઍપ ડાઉનલોડ, છુપાયેલી પૈસા માગવાની વિનંતીઓ, એકદમ નવી વેબસાઇટ અને અસામાન્ય વેબ સરનામાં. તે આશરે 1,900 જાણીતી નુકસાનકારક વેબસાઇટની યાદીમાં પણ તપાસે છે. આ યાદી એક મોટા આંતરરાષ્ટ્રીય સુરક્ષા ડેટાબેઝમાંથી લેવાય છે અને રોજ અપડેટ થાય છે.</string>
+    <string name="how_community_title">બીજા વપરાશકર્તાઓની ફરિયાદો</string>
+    <string name="how_community_body">જ્યારે ઘણા LinkGuard વપરાશકર્તાઓ એક જ વેબસાઇટની છેતરપિંડી તરીકે ફરિયાદ કરે, ત્યારે બીજાઓને સાવધ રહેવાની ચેતવણી અપાય છે.</string>
+    <string name="how_choice_title">નિર્ણય હંમેશાં તમારો</string>
+    <string name="how_choice_body">LinkGuard ક્યારેય કોઈ લિંક રોકતું નથી. દરેક ચેતવણી સરળ શબ્દોમાં તકલીફ સમજાવે છે અને “તો પણ ખોલો” નો વિકલ્પ આપે છે. તમે ખોલેલી લિંક LinkGuard ક્યારેય સાચવતું નથી.</string>
+    <string name="feedback_title">અનુવાદ ખોટો છે? અમને કહો</string>
+    <string name="feedback_desc">LinkGuard નો અનુવાદ મશીનથી થયો છે. તમારી ભાષાની ભૂલો સુધારવામાં મદદ કરો.</string>
+    <string name="feedback_intro">આ ભાષામાં LinkGuard નું લખાણ મશીનથી અનુવાદ થયેલું છે અને તેમાં ભૂલો હોઈ શકે. કંઈ ખોટું લાગે, તો અમને ખોટા શબ્દો કહો અને તમે તે કેવી રીતે કહો તે પણ કહો. જે સૌથી સહેલું હોય તે વાપરો:</string>
+    <string name="feedback_email">અમને ઈમેલ કરો</string>
+    <string name="feedback_github">GitHub પર જણાવો</string>
+    <string name="feedback_github_desc">આ માટે મફત GitHub એકાઉન્ટ જોઈએ.</string>
+    <string name="feedback_play">Google Play પર રિવ્યૂ લખો</string>
+    <string name="about_title">LinkGuard વિશે</string>
+    <string name="about_desc">વર્ઝન, ગોપનીયતા નીતિ, ઓપન સોર્સ અને સંપર્ક.</string>
+    <string name="about_version">વર્ઝન %1$s</string>
+    <string name="about_by">Dwarpal Labs દ્વારા બનાવેલ. LinkGuard સ્વતંત્ર છે. તેનો કોઈ બૅન્ક, પેમેન્ટ ઍપ, કુરિયર કે સરકારી સંસ્થા સાથે સંબંધ નથી.</string>
+    <string name="about_privacy">ગોપનીયતા નીતિ</string>
+    <string name="about_privacy_desc">તમારા ફોનમાંથી શું બહાર જાય છે, અને શા માટે.</string>
+    <string name="about_source">ઓપન સોર્સ</string>
+    <string name="about_source_desc">Apache-2.0 લાઇસન્સ હેઠળ મફત. GitHub પર કોઈ પણ કોડ તપાસી શકે છે.</string>
+    <string name="about_contact">અમારો સંપર્ક કરો</string>
+    <string name="about_credits">આભાર</string>
+    <string name="about_credits_body">નુકસાનકારક વેબસાઇટ: abuse.ch નું URLhaus. લોકપ્રિય વેબસાઇટ: Tranco યાદી. વેબસાઇટનાં નામ: Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">લિંક</string>
+    <string name="report_note_label">તમને આ છેતરપિંડી કેમ લાગે છે? (મરજિયાત)</string>
+    <string name="report_private_info">તમારી ફરિયાદ ખાનગી રીતે Dwarpal Labs ને જાય છે અને ક્યારેય જાહેર થતી નથી. જ્યારે ઘણા જુદા જુદા લોકો એક જ વેબસાઇટની ફરિયાદ કરે, ત્યારે બીજા LinkGuard વપરાશકર્તાઓને આપમેળે ચેતવણી દેખાય છે. તમારી ફરિયાદ પરથી તમારી ઓળખ થઈ શકતી નથી. મહેરબાની કરીને ફોન નંબર, નામ કે બીજી અંગત માહિતી ન લખશો.</string>
+    <string name="report_submit">ફરિયાદ મોકલો</string>
+    <string name="report_sending">મોકલાઈ રહી છે…</string>
+    <string name="report_sent">આભાર. તમારી ફરિયાદ તપાસ માટે મોકલાઈ ગઈ છે.</string>
+    <string name="report_failed">ફરિયાદ મોકલી ન શકાઈ. તમારું ઇન્ટરનેટ કનેક્શન તપાસો અને ફરી પ્રયાસ કરો.</string>
+    <string name="back">પાછા</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">આ લિંક છેતરપિંડી હોઈ શકે છે</string>
+    <string name="interstitial_title_soft">આ લિંકથી સાવધ રહો</string>
+    <string name="interstitial_go_back">પાછા જાઓ</string>
+    <string name="interstitial_open_anyway">તો પણ ખોલો</string>
+    <string name="interstitial_checking">લિંક તપાસાઈ રહી છે…</string>
+    <string name="interstitial_upi_heading">UPI થી પૈસા માગવાની વિનંતી</string>
+    <string name="interstitial_upi_payee">કોને ચૂકવવા: %1$s</string>
+    <string name="interstitial_upi_amount">રકમ: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">આ લિંક Play Store બહારથી એક ઍપ ડાઉનલોડ કરે છે. આવી નકલી ઍપ તમારા મેસેજ વાંચી શકે છે અને બૅન્કના OTP ચોરી શકે છે.</string>
+    <string name="warn_brand_lookalike">આ વેબસાઇટ %1$s હોવાનો ઢોંગ કરે છે. આ %1$s ની સાચી વેબસાઇટ નથી.</string>
+    <string name="warn_upi_intent">આ લિંક તમને UPI થી પૈસા મોકલવાનું કહે છે. રિફંડ, ઇનામ કે KYC અપડેટ મેળવવા માટે ક્યારેય પૈસા ચૂકવવા પડતા નથી.</string>
+    <string name="warn_weird_host">આ લિંક એવું અસામાન્ય સરનામું વાપરે છે જે સાચી કંપનીઓ ભાગ્યે જ વાપરે છે.</string>
+    <string name="warn_weird_host_brand">આ લિંકમાં %1$s નું નામ છે, પણ તે એવું અસામાન્ય સરનામું વાપરે છે જે %1$s વાપરતું નથી.</string>
+    <string name="warn_reputation">આ વેબસાઇટ જાણીતી છેતરપિંડીવાળી કે નુકસાનકારક વેબસાઇટની યાદીમાં છે.</string>
+    <plurals name="warn_community">
+        <item quantity="one">આ અઠવાડિયે %d LinkGuard વપરાશકર્તાએ આ લિંકની છેતરપિંડી તરીકે ફરિયાદ કરી છે.</item>
+        <item quantity="other">આ અઠવાડિયે %d LinkGuard વપરાશકર્તાઓએ આ લિંકની છેતરપિંડી તરીકે ફરિયાદ કરી છે.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">આ વેબસાઇટ %d દિવસ પહેલાં બની છે. છેતરપિંડીવાળી વેબસાઇટ ઘણી વાર એકદમ નવી હોય છે.</item>
+        <item quantity="other">આ વેબસાઇટ %d દિવસ પહેલાં બની છે. છેતરપિંડીવાળી વેબસાઇટ ઘણી વાર એકદમ નવી હોય છે.</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard ને આ લિંકમાં કંઈક અસામાન્ય મળ્યું.</string>
+</resources>

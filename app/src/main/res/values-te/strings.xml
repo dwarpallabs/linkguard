@@ -1,0 +1,106 @@
+<resources>
+    <!-- Telugu (te). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">లింక్ తెరిచే ముందు LinkGuard దాన్ని చెక్ చేస్తుంది</string>
+    <string name="onboarding_body">మీరు WhatsApp, Telegram లేదా SMSలో ఒక లింక్ నొక్కినప్పుడు, LinkGuard ముందుగా దాన్ని చెక్ చేస్తుంది. మంచి లింక్‌లు వెంటనే మీ బ్రౌజర్‌లో తెరుచుకుంటాయి. ఏదైనా లింక్ మోసంలా కనిపిస్తే, మీకు ఒక హెచ్చరిక కనిపిస్తుంది. అయినా దాన్ని తెరవాలో వద్దో మీరే ఎంచుకోవచ్చు.</string>
+    <string name="onboarding_privacy">మీరు తెరిచే లింక్‌లను LinkGuard ఎప్పుడూ దాచుకోదు, ఎవరికీ పంపదు. ఖాతా అవసరం లేదు.</string>
+    <string name="your_browser">మీ బ్రౌజర్</string>
+    <string name="flow_link">మీ లింక్</string>
+    <string name="flow_check">LinkGuard దాన్ని చెక్ చేస్తుంది</string>
+    <string name="not_a_browser_title">LinkGuard బ్రౌజర్ కాదు</string>
+    <string name="not_a_browser_body">LinkGuard ఎప్పుడూ వెబ్ పేజీలను చూపించదు. ప్రతి లింక్‌ను క్షణంలో చెక్ చేసి, దాన్ని %1$sలో తెరుస్తుంది, అంటే మీరు ఇప్పటికే వాడుతున్న బ్రౌజర్‌లోనే. మీ బుక్‌మార్క్‌లు, హిస్టరీ, సేవ్ చేసిన పాస్‌వర్డ్‌లు, ట్యాబ్‌లు అన్నీ ఉన్నవి ఉన్నట్టే ఉంటాయి.</string>
+    <string name="default_explain">Android, LinkGuardను మీ “బ్రౌజర్ యాప్” అని చూపిస్తుంది. LinkGuard లింక్‌లను ముందుగా చూడటానికి మాత్రమే అలా. ప్రతి లింక్ ఇప్పటికీ %1$sలోనే తెరుచుకుంటుంది.</string>
+
+    <string name="default_heading">దశ 1: LinkGuardను మీ డిఫాల్ట్ బ్రౌజర్‌గా పెట్టండి</string>
+    <string name="default_done">LinkGuard మీ డిఫాల్ట్ బ్రౌజర్</string>
+    <string name="default_button">డిఫాల్ట్ బ్రౌజర్‌గా పెట్టండి</string>
+    <string name="default_hint">సెట్టింగ్‌లు తెరుచుకుంటే, “బ్రౌజర్ యాప్” నొక్కి LinkGuardను ఎంచుకోండి.</string>
+
+    <string name="browser_heading">దశ 2: లింక్‌లను ఇందులో తెరవండి</string>
+    <string name="browser_none">వేరే బ్రౌజర్ ఏదీ కనిపించలేదు. Chrome లాంటి బ్రౌజర్‌ను ఇన్‌స్టాల్ చేయండి.</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook, LinkedIn లాంటి యాప్‌లు చాలాసార్లు లింక్‌లను యాప్ లోపలే తెరుస్తాయి. అక్కడ LinkGuard వాటిని చెక్ చేయలేదు. మోసపు లింక్‌ల నుంచి జాగ్రత్తగా ఉండటానికి, ఆ యాప్ సెట్టింగ్స్‌లో లోపలి బ్రౌజర్‌ను ఆఫ్ చేయండి (Telegramలో: Settings → Chat Settings → In-app browser), లేదా ⋮ నొక్కి “బ్రౌజర్‌లో తెరవండి” ఎంచుకోండి.</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard ఏమేమి చెక్ చేస్తుంది</string>
+    <string name="check_unwrap">చిన్న లింక్‌లు ఎక్కడికి వెళ్తాయో చూడటం</string>
+    <string name="check_unwrap_desc">చిన్న లింక్ నిజంగా ఎక్కడికి వెళ్తుందో bit.ly లాంటి సేవలను అడుగుతుంది.</string>
+    <string name="check_apk_download">యాప్ డౌన్‌లోడ్‌లు</string>
+    <string name="check_brand_lookalike">నకిలీ బ్యాంక్, బ్రాండ్ వెబ్‌సైట్‌లు</string>
+    <string name="check_weird_host">మామూలుగా లేని వెబ్ అడ్రస్‌లు</string>
+    <string name="check_reputation">ఇప్పటికే తెలిసిన మోసం వెబ్‌సైట్‌లు</string>
+    <string name="check_domain_age">ఇప్పుడే కొత్తగా వచ్చిన వెబ్‌సైట్‌లు</string>
+    <string name="check_domain_age_desc">వెబ్‌సైట్ ఎప్పుడు మొదలైందో అధికారిక రిజిస్ట్రీని అడుగుతుంది. వెబ్‌సైట్ పేరు మాత్రమే పంపుతుంది, పూర్తి లింక్ ఎప్పుడూ పంపదు.</string>
+    <string name="check_upi_intent">UPI ద్వారా డబ్బు అడగడం</string>
+
+    <string name="settings_report">లింక్‌ను రిపోర్ట్ చేయండి</string>
+    <string name="settings_report_desc">LinkGuard పట్టుకోలేకపోయిన మోసం లింక్ గురించి మాకు చెప్పండి.</string>
+    <string name="how_title">LinkGuard ఎలా పని చేస్తుంది</string>
+    <string name="how_desc">ఇది మీకు ఎందుకు అవసరం, ఏ లింక్‌ల గురించి హెచ్చరించాలో ఇది ఎలా నిర్ణయిస్తుంది.</string>
+    <string name="how_why_title">ఇది ఎందుకు అవసరం</string>
+    <string name="how_why_body">WhatsApp, SMSలో వచ్చే మోసం మెసేజ్‌లలో తరచుగా నిజమైనవిలా కనిపించే లింక్‌లు ఉంటాయి: నకిలీ బ్యాంక్ పేజీ, “KYC అప్‌డేట్” ఫారం, లేదా డబ్బు దొంగిలించే యాప్. ఒక్కసారి నొక్కితే చాలు, నష్టం జరగొచ్చు. నకిలీ వెబ్ అడ్రస్‌ను గుర్తుపట్టడం కష్టం కావచ్చు.</string>
+    <string name="how_where_title">LinkGuard ఎక్కడ ఉంటుంది</string>
+    <string name="how_where_body">మీరు నొక్కే లింక్‌కి, మీ బ్రౌజర్‌కి మధ్యలో LinkGuard ఉంటుంది. అది లింక్‌ను క్షణంలో చెక్ చేసి, %1$sలో తెరుస్తుంది. అది స్వయంగా ఎప్పుడూ వెబ్ పేజీలను చూపించదు.</string>
+    <string name="how_safe_title">మంచి లింక్‌లు వెంటనే తెరుచుకుంటాయి</string>
+    <string name="how_safe_body">అందరికీ తెలిసిన వెబ్‌సైట్‌లు, ప్రభుత్వ (.gov.in), బ్యాంక్ వెబ్‌సైట్‌ల లాంటి అధికారిక వెబ్‌సైట్‌లు వెంటనే తెరుచుకుంటాయి. లింక్ బాగానే ఉన్నట్టు అనిపిస్తే, మీకు ఏమీ కనిపించదు.</string>
+    <string name="how_scam_title">మోసం లింక్‌లను గుర్తించడం</string>
+    <string name="how_scam_body">మోసగాళ్లు వాడే ఉపాయాల కోసం LinkGuard చూస్తుంది: బ్యాంక్ లేదా పేరున్న బ్రాండ్‌లా నటించే వెబ్‌సైట్‌లు, Play Store బయటి నుంచి యాప్ డౌన్‌లోడ్‌లు, దాచి ఉంచిన డబ్బు అడిగే రిక్వెస్ట్‌లు, కొత్తగా వచ్చిన వెబ్‌సైట్‌లు, మామూలుగా లేని వెబ్ అడ్రస్‌లు. ప్రపంచంలో పేరున్న ఒక భద్రతా డేటాబేస్ నుంచి తీసుకున్న, హాని చేసే దాదాపు 1,900 వెబ్‌సైట్‌ల జాబితాను కూడా ఇది చెక్ చేస్తుంది. ఈ జాబితా ప్రతి రోజు అప్‌డేట్ అవుతుంది.</string>
+    <string name="how_community_title">ఇతర యూజర్ల రిపోర్ట్‌లు</string>
+    <string name="how_community_body">చాలా మంది LinkGuard యూజర్లు ఒకే వెబ్‌సైట్‌ను మోసం అని రిపోర్ట్ చేసినప్పుడు, మిగతావాళ్లకు జాగ్రత్తగా ఉండమని హెచ్చరిక వస్తుంది.</string>
+    <string name="how_choice_title">నిర్ణయం ఎప్పుడూ మీదే</string>
+    <string name="how_choice_body">LinkGuard ఏ లింక్‌నూ ఎప్పుడూ ఆపదు. ప్రతి హెచ్చరిక సమస్యను తేలికైన మాటల్లో చెబుతుంది, “అయినా తెరవండి” అనే ఎంపిక ఇస్తుంది. మీరు తెరిచే లింక్‌లను LinkGuard ఎప్పుడూ దాచుకోదు.</string>
+    <string name="feedback_title">అనువాదం తప్పుగా ఉందా? మాకు చెప్పండి</string>
+    <string name="feedback_desc">LinkGuardను కంప్యూటర్‌తో అనువదించారు. మీ భాషలోని తప్పులు సరిచేయడానికి సాయం చేయండి.</string>
+    <string name="feedback_intro">ఈ భాషలో LinkGuard మాటలను కంప్యూటర్‌తో అనువదించారు, అందులో తప్పులు ఉండొచ్చు. ఏదైనా తప్పుగా అనిపిస్తే, తప్పు మాటలు ఏవో, మీరు వాటిని ఎలా చెబుతారో మాకు చెప్పండి. మీకు ఏది తేలికో అది వాడండి:</string>
+    <string name="feedback_email">మాకు ఈమెయిల్ చేయండి</string>
+    <string name="feedback_github">GitHubలో రిపోర్ట్ చేయండి</string>
+    <string name="feedback_github_desc">ఉచిత GitHub ఖాతా కావాలి.</string>
+    <string name="feedback_play">Google Playలో రివ్యూ రాయండి</string>
+    <string name="about_title">LinkGuard గురించి</string>
+    <string name="about_desc">వెర్షన్, ప్రైవసీ పాలసీ, ఓపెన్ సోర్స్, మమ్మల్ని సంప్రదించడం.</string>
+    <string name="about_version">వెర్షన్ %1$s</string>
+    <string name="about_by">Dwarpal Labs తయారు చేసింది. LinkGuard స్వతంత్రమైనది. ఏ బ్యాంక్, పేమెంట్ యాప్, కొరియర్ లేదా ప్రభుత్వ సంస్థతోనూ దీనికి సంబంధం లేదు.</string>
+    <string name="about_privacy">ప్రైవసీ పాలసీ</string>
+    <string name="about_privacy_desc">మీ ఫోన్ నుంచి ఏమి బయటికి వెళ్తుంది, ఎందుకు.</string>
+    <string name="about_source">ఓపెన్ సోర్స్</string>
+    <string name="about_source_desc">Apache-2.0 లైసెన్స్ కింద ఉచితం. ఎవరైనా GitHubలో దీని కోడ్‌ను చెక్ చేయవచ్చు.</string>
+    <string name="about_contact">మమ్మల్ని సంప్రదించండి</string>
+    <string name="about_credits">కృతజ్ఞతలు</string>
+    <string name="about_credits_body">తెలిసిన హాని చేసే వెబ్‌సైట్‌లు: abuse.ch వారి URLhaus. పేరున్న వెబ్‌సైట్‌లు: Tranco జాబితా. వెబ్‌సైట్ పేర్లు: Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">లింక్</string>
+    <string name="report_note_label">ఇది మోసం అని మీకు ఎందుకు అనిపిస్తోంది? (రాయకపోయినా పర్వాలేదు)</string>
+    <string name="report_private_info">మీ రిపోర్ట్ రహస్యంగా Dwarpal Labsకి వెళ్తుంది, దాన్ని ఎక్కడా బయట పెట్టరు. వేర్వేరు మనుషులు చాలా మంది ఒకే వెబ్‌సైట్‌ను రిపోర్ట్ చేసినప్పుడు, ఇతర LinkGuard యూజర్లకు దానంతట అదే హెచ్చరిక కనిపిస్తుంది. ఈ రిపోర్ట్ మీదేనని ఎవరూ కనిపెట్టలేరు. దయచేసి ఫోన్ నంబర్లు, పేర్లు లేదా ఇతర సొంత వివరాలు రాయకండి.</string>
+    <string name="report_submit">రిపోర్ట్ పంపండి</string>
+    <string name="report_sending">పంపుతోంది…</string>
+    <string name="report_sent">ధన్యవాదాలు. మీ రిపోర్ట్‌ను పరిశీలన కోసం పంపాం.</string>
+    <string name="report_failed">రిపోర్ట్ పంపలేకపోయాం. మీ ఇంటర్నెట్ కనెక్షన్ చూసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="back">వెనక్కి</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">ఈ లింక్ మోసం కావచ్చు</string>
+    <string name="interstitial_title_soft">ఈ లింక్‌తో జాగ్రత్త</string>
+    <string name="interstitial_go_back">వెనక్కి వెళ్లండి</string>
+    <string name="interstitial_open_anyway">అయినా తెరవండి</string>
+    <string name="interstitial_checking">లింక్ చెక్ చేస్తోంది…</string>
+    <string name="interstitial_upi_heading">UPI ద్వారా డబ్బు అడుగుతోంది</string>
+    <string name="interstitial_upi_payee">ఎవరికి: %1$s</string>
+    <string name="interstitial_upi_amount">మొత్తం: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">ఈ లింక్ Play Store బయటి నుంచి ఒక యాప్‌ను డౌన్‌లోడ్ చేస్తుంది. ఇలాంటి నకిలీ యాప్‌లు మీ మెసేజ్‌లను చదివి, బ్యాంక్ OTPలను దొంగిలించగలవు.</string>
+    <string name="warn_brand_lookalike">ఈ వెబ్‌సైట్ %1$sలా నటిస్తోంది. ఇది %1$s అసలు వెబ్‌సైట్ కాదు.</string>
+    <string name="warn_upi_intent">ఈ లింక్ UPI ద్వారా డబ్బు పంపమని అడుగుతోంది. రీఫండ్, బహుమతి లేదా KYC అప్‌డేట్ కోసం మీరు ఎప్పుడూ డబ్బు కట్టాల్సిన అవసరం లేదు.</string>
+    <string name="warn_weird_host">నిజమైన కంపెనీలు అరుదుగా వాడే వింత అడ్రస్‌ను ఈ లింక్ వాడుతోంది.</string>
+    <string name="warn_weird_host_brand">ఈ లింక్‌లో %1$s పేరు ఉంది, కానీ %1$s వాడని వింత అడ్రస్‌ను ఇది వాడుతోంది.</string>
+    <string name="warn_reputation">ఈ వెబ్‌సైట్ తెలిసిన మోసం లేదా హాని చేసే వెబ్‌సైట్‌ల జాబితాలో ఉంది.</string>
+    <plurals name="warn_community">
+        <item quantity="one">ఈ వారం %d LinkGuard యూజర్ ఈ లింక్‌ను మోసం అని రిపోర్ట్ చేశారు.</item>
+        <item quantity="other">ఈ వారం %d మంది LinkGuard యూజర్లు ఈ లింక్‌ను మోసం అని రిపోర్ట్ చేశారు.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">ఈ వెబ్‌సైట్ %d రోజు క్రితం తయారైంది. మోసం వెబ్‌సైట్‌లు తరచుగా కొత్తవే అయి ఉంటాయి.</item>
+        <item quantity="other">ఈ వెబ్‌సైట్ %d రోజుల క్రితం తయారైంది. మోసం వెబ్‌సైట్‌లు తరచుగా కొత్తవే అయి ఉంటాయి.</item>
+    </plurals>
+    <string name="warn_generic">ఈ లింక్‌లో LinkGuard ఏదో వింతగా ఉన్నది గమనించింది.</string>
+</resources>

@@ -83,6 +83,8 @@ fun HomeScreen(
     onToggleCheck: (CheckId, Boolean) -> Unit,
     onOpenHowItWorks: () -> Unit,
     onOpenReport: () -> Unit,
+    onOpenFeedback: () -> Unit,
+    onOpenAbout: () -> Unit,
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -182,6 +184,8 @@ fun HomeScreen(
                     modifier = Modifier.padding(16.dp),
                 )
             }
+            LinkRow(stringResource(R.string.feedback_title), stringResource(R.string.feedback_desc), onOpenFeedback, "open_feedback")
+            LinkRow(stringResource(R.string.about_title), stringResource(R.string.about_desc), onOpenAbout, "open_about")
             Spacer(Modifier.height(8.dp))
         }
     }
@@ -282,9 +286,13 @@ private fun flowNeedsStacking(labels: List<String>): Boolean {
     }
 }
 
+/** True for right-to-left languages (Urdu, Kashmiri, Sindhi). */
+@Composable
+internal fun isRtl(): Boolean = LocalLayoutDirection.current == LayoutDirection.Rtl
+
 /** Turns the forward arrow to point down. It is already mirrored in RTL, so it turns the other way there. */
 @Composable
-private fun downRotation() = if (LocalLayoutDirection.current == LayoutDirection.Rtl) -90f else 90f
+private fun downRotation() = if (isRtl()) -90f else 90f
 
 @Composable
 private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes description: Int?, enabled: Boolean, onToggle: (Boolean) -> Unit) {
@@ -312,7 +320,7 @@ private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes descripti
 }
 
 @Composable
-private fun LinkRow(title: String, subtitle: String, onClick: () -> Unit, tag: String) {
+internal fun LinkRow(title: String, subtitle: String, onClick: () -> Unit, tag: String) {
     Column(
         Modifier
             .fillMaxWidth()
@@ -321,7 +329,7 @@ private fun LinkRow(title: String, subtitle: String, onClick: () -> Unit, tag: S
             .padding(vertical = 8.dp)
             .testTag(tag),
     ) {
-        Text(title + "  ›", style = MaterialTheme.typography.titleMedium)
+        Text(title + if (isRtl()) "  ‹" else "  ›", style = MaterialTheme.typography.titleMedium)
         Text(subtitle, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
@@ -345,7 +353,7 @@ private fun HomePreview() {
             browsers = listOf(BrowserApp("com.android.chrome", "Chrome"), BrowserApp("org.mozilla.firefox", "Firefox")),
             selected = "com.android.chrome",
             disabledChecks = setOf(CheckId.DOMAIN_AGE),
-            onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {},
+            onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
         )
     }
 }

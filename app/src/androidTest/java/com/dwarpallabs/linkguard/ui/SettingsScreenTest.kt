@@ -48,7 +48,7 @@ class SettingsScreenTest {
                     isDefault = true, browsers = emptyList(), selected = null, disabledChecks = disabled,
                     onSetDefault = {}, onSelectBrowser = {},
                     onToggleCheck = { check, enabled -> prefs.setCheckEnabled(check, enabled); disabled = prefs.disabledChecks },
-                    onOpenHowItWorks = {}, onOpenReport = {},
+                    onOpenHowItWorks = {}, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
                 )
             }
         }
@@ -70,7 +70,7 @@ class SettingsScreenTest {
                     isDefault = false,
                     browsers = listOf(com.dwarpallabs.linkguard.browser.BrowserApp("org.mozilla.firefox", "Firefox")),
                     selected = "org.mozilla.firefox", disabledChecks = emptySet(),
-                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {},
+                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
                 )
             }
         }
@@ -88,7 +88,7 @@ class SettingsScreenTest {
             LinkguardTheme {
                 HomeScreen(
                     isDefault = true, browsers = emptyList(), selected = null, disabledChecks = emptySet(),
-                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {},
+                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
                 )
             }
         }
@@ -102,7 +102,7 @@ class SettingsScreenTest {
             LinkguardTheme {
                 HomeScreen(
                     isDefault = true, browsers = emptyList(), selected = null, disabledChecks = emptySet(),
-                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = { opened = true }, onOpenReport = {},
+                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = { opened = true }, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
                 )
             }
         }
@@ -116,5 +116,25 @@ class SettingsScreenTest {
         compose.setContent { LinkguardTheme { HowItWorksScreen(browserName = "Firefox", onBack = {}) } }
         compose.onNodeWithText(res.getString(com.dwarpallabs.linkguard.R.string.how_where_body, "Firefox")).assertExists()
         compose.onNodeWithText(res.getString(com.dwarpallabs.linkguard.R.string.how_community_title)).performScrollTo()
+    }
+
+    @Test
+    fun feedbackScreenHidesPlayWhenUnavailable() {
+        compose.setContent { LinkguardTheme { FeedbackScreen(onEmail = {}, onGitHub = {}, onPlay = null, onBack = {}) } }
+        compose.onNodeWithTag("feedback_email").assertExists()
+        compose.onNodeWithTag("feedback_github").assertExists()
+        compose.onNodeWithTag("feedback_play").assertDoesNotExist()
+    }
+
+    @Test
+    fun aboutShowsVersionAndPrivacyPolicy() {
+        val res = InstrumentationRegistry.getInstrumentation().targetContext.resources
+        var privacyOpened = false
+        compose.setContent {
+            LinkguardTheme { AboutScreen(version = "9.9.9", onPrivacy = { privacyOpened = true }, onSource = {}, onContact = {}, onBack = {}) }
+        }
+        compose.onNodeWithTag("about_version").assertTextContains(res.getString(com.dwarpallabs.linkguard.R.string.about_version, "9.9.9"))
+        compose.onNodeWithTag("about_privacy").performClick()
+        assertTrue(privacyOpened)
     }
 }

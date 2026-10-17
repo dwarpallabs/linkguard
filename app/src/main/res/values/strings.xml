@@ -20,7 +20,7 @@
     <string name="browser_heading">Step 2: Open links in</string>
     <string name="browser_none">No other browser found. Install a browser such as Chrome.</string>
 
-    <string name="telegram_tip">Using Telegram? Turn off its in-app browser (Settings → Chat Settings → In-app browser) so LinkGuard can check links.</string>
+    <string name="telegram_tip">Apps like Telegram, Instagram, Facebook and LinkedIn often open links inside the app, where LinkGuard can’t check them. To stay safe from scam links, turn off the in-app browser in that app’s settings (in Telegram: Settings → Chat Settings → In-app browser), or tap ⋮ and choose “Open in browser”.</string>
 
     <!-- Settings -->
     <string name="settings_checks_heading">What LinkGuard checks</string>
@@ -45,11 +45,29 @@
     <string name="how_safe_title">Safe links open straight away</string>
     <string name="how_safe_body">Well-known websites and official ones, such as government (.gov.in) and bank websites, open immediately. If a link looks fine, you see nothing at all.</string>
     <string name="how_scam_title">Spotting scam links</string>
-    <string name="how_scam_body">LinkGuard looks for the tricks scammers use: websites pretending to be a bank or a well-known brand, app downloads from outside the Play Store, hidden payment requests, brand-new websites and unusual web addresses. It also checks a list of known harmful websites that is updated every day.</string>
+    <string name="how_scam_body">LinkGuard looks for the tricks scammers use: websites pretending to be a bank or a well-known brand, app downloads from outside the Play Store, hidden payment requests, brand-new websites and unusual web addresses. It also checks a list of about 1,900 known harmful websites, collected from a leading international security database and updated every day.</string>
     <string name="how_community_title">Reports from other users</string>
     <string name="how_community_body">When several LinkGuard users report the same website as a scam, others are warned to be careful.</string>
     <string name="how_choice_title">You always decide</string>
     <string name="how_choice_body">LinkGuard never blocks a link. Every warning explains the problem in simple words and offers “Open anyway”. LinkGuard never saves the links you open.</string>
+    <string name="feedback_title">Wrong translation? Tell us</string>
+    <string name="feedback_desc">LinkGuard is translated by machine. Help fix mistakes in your language.</string>
+    <string name="feedback_intro">LinkGuard’s text in this language was translated by machine and may have mistakes. If something reads wrong, tell us the wrong words and how you would say them. Use whichever is easiest:</string>
+    <string name="feedback_email">Email us</string>
+    <string name="feedback_github">Report it on GitHub</string>
+    <string name="feedback_github_desc">Needs a free GitHub account.</string>
+    <string name="feedback_play">Write a review on Google Play</string>
+    <string name="about_title">About LinkGuard</string>
+    <string name="about_desc">Version, privacy policy, open source and contact.</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_by">Made by Dwarpal Labs. LinkGuard is independent and not connected to any bank, payment app, courier or government body.</string>
+    <string name="about_privacy">Privacy policy</string>
+    <string name="about_privacy_desc">What leaves your phone, and why.</string>
+    <string name="about_source">Open source</string>
+    <string name="about_source_desc">Free under the Apache-2.0 licence. Anyone can check the code on GitHub.</string>
+    <string name="about_contact">Contact us</string>
+    <string name="about_credits">Credits</string>
+    <string name="about_credits_body">Known harmful websites: URLhaus by abuse.ch. Popular websites: the Tranco list. Website names: the Public Suffix List (MPL-2.0).</string>
     <string name="report_link_label">Link</string>
     <string name="report_note_label">Why do you think it is a scam? (optional)</string>
     <string name="report_private_info">Your report goes privately to Dwarpal Labs and is never published. When several different people report the same website, other LinkGuard users see a warning automatically. Your report can’t be traced back to you. Please don’t include phone numbers, names or other personal details.</string>

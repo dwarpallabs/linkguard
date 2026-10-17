@@ -40,7 +40,7 @@ import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (Modifier) -> Unit) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(Modifier.padding(padding).padding(horizontal = 24.dp, vertical = 12.dp)) {
-            TextButton(onClick = onBack, modifier = Modifier.testTag("back")) { Text("‹ " + stringResource(R.string.back)) }
+            TextButton(onClick = onBack, modifier = Modifier.testTag("back")) { Text((if (isRtl()) "› " else "‹ ") + stringResource(R.string.back)) }
             Text(title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             content(Modifier.padding(top = 12.dp))
         }
@@ -85,6 +85,60 @@ fun HowItWorksScreen(browserName: String, onBack: () -> Unit) {
         }
     }
 }
+
+/**
+ * Where to send translation corrections. Every language except English is machine-translated, so
+ * the community fixes mistakes. Nothing is sent from here: each row hands off to email, the
+ * browser or the Play Store.
+ */
+@Composable
+fun FeedbackScreen(onEmail: () -> Unit, onGitHub: () -> Unit, onPlay: (() -> Unit)?, onBack: () -> Unit) {
+    SubScreen(stringResource(R.string.feedback_title), onBack) { modifier ->
+        Column(
+            modifier.verticalScroll(rememberScrollState()).testTag("feedback"),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Text(stringResource(R.string.feedback_intro), style = MaterialTheme.typography.bodyLarge)
+            LinkRow(stringResource(R.string.feedback_email), SupportEmail, onEmail, "feedback_email")
+            LinkRow(stringResource(R.string.feedback_github), stringResource(R.string.feedback_github_desc), onGitHub, "feedback_github")
+            if (onPlay != null) {
+                LinkRow(stringResource(R.string.feedback_play), "Google Play", onPlay, "feedback_play")
+            }
+        }
+    }
+}
+
+/** Version, who makes LinkGuard, privacy policy, source code, contact and data credits. */
+@Composable
+fun AboutScreen(version: String, onPrivacy: () -> Unit, onSource: () -> Unit, onContact: () -> Unit, onBack: () -> Unit) {
+    SubScreen(stringResource(R.string.about_title), onBack) { modifier ->
+        Column(
+            modifier.verticalScroll(rememberScrollState()).testTag("about"),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Text(
+                stringResource(R.string.about_version, version),
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.testTag("about_version"),
+            )
+            Text(stringResource(R.string.about_by), style = MaterialTheme.typography.bodyLarge)
+            LinkRow(stringResource(R.string.about_privacy), stringResource(R.string.about_privacy_desc), onPrivacy, "about_privacy")
+            LinkRow(stringResource(R.string.about_source), stringResource(R.string.about_source_desc), onSource, "about_source")
+            LinkRow(stringResource(R.string.about_contact), SupportEmail, onContact, "about_contact")
+            SectionHeading(stringResource(R.string.about_credits))
+            Text(
+                stringResource(R.string.about_credits_body),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+const val SupportEmail = "support@dwarpallabs.com"
+const val PrivacyPolicyUrl = "https://dwarpallabs.com/linkguard/privacy"
+const val SourceCodeUrl = "https://github.com/dwarpallabs/linkguard"
+const val TranslationIssueUrl = "https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml"
 
 /** Progress of a report submission. */
 enum class ReportStatus { IDLE, SENDING, SENT, FAILED }
