@@ -48,7 +48,7 @@ import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
 import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.core.CheckId
-import com.dwarpallabs.linkguard.ui.components.FlowIcons
+import com.dwarpallabs.linkguard.ui.components.LineIcons
 import com.dwarpallabs.linkguard.ui.components.PrimaryButton
 import com.dwarpallabs.linkguard.ui.components.Status
 import com.dwarpallabs.linkguard.ui.components.StatusBadge
@@ -81,7 +81,7 @@ fun HomeScreen(
     onSetDefault: () -> Unit,
     onSelectBrowser: (String) -> Unit,
     onToggleCheck: (CheckId, Boolean) -> Unit,
-    onOpenBrands: () -> Unit,
+    onOpenHowItWorks: () -> Unit,
     onOpenReport: () -> Unit,
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
@@ -172,7 +172,7 @@ fun HomeScreen(
             }
 
             HorizontalDivider()
-            LinkRow(stringResource(R.string.settings_brands), stringResource(R.string.settings_brands_desc), onOpenBrands, "open_brands")
+            LinkRow(stringResource(R.string.how_title), stringResource(R.string.how_desc), onOpenHowItWorks, "open_how")
             LinkRow(stringResource(R.string.settings_report), stringResource(R.string.settings_report_desc), onOpenReport, "open_report")
 
             Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)) {
@@ -202,9 +202,9 @@ private fun NotABrowserCard(browserName: String) {
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             val steps = listOf(
-                FlowIcons.Link to stringResource(R.string.flow_link),
-                FlowIcons.Shield to stringResource(R.string.flow_check),
-                FlowIcons.Globe to browserName,
+                LineIcons.Link to stringResource(R.string.flow_link),
+                LineIcons.Shield to stringResource(R.string.flow_check),
+                LineIcons.Globe to browserName,
             )
             // Side by side only while every word fits its column; long words (Tamil, large text)
             // would otherwise break mid-word, so stack the steps instead.
@@ -262,7 +262,7 @@ private fun RowScope.FlowStep(icon: ImageVector, label: String) {
 @Composable
 private fun FlowArrow(modifier: Modifier = Modifier) {
     Icon(
-        FlowIcons.Arrow,
+        LineIcons.Arrow,
         contentDescription = null,
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = modifier.size(20.dp),
@@ -345,7 +345,7 @@ private fun HomePreview() {
             browsers = listOf(BrowserApp("com.android.chrome", "Chrome"), BrowserApp("org.mozilla.firefox", "Firefox")),
             selected = "com.android.chrome",
             disabledChecks = setOf(CheckId.DOMAIN_AGE),
-            onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenBrands = {}, onOpenReport = {},
+            onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {},
         )
     }
 }

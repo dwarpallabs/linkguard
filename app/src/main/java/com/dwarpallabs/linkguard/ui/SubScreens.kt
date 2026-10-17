@@ -2,16 +2,17 @@ package com.dwarpallabs.linkguard.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -24,13 +25,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
-import com.dwarpallabs.linkguard.core.Brand
+import com.dwarpallabs.linkguard.ui.components.LineIcons
 import com.dwarpallabs.linkguard.ui.components.PrimaryButton
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
@@ -45,27 +47,39 @@ private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (M
     }
 }
 
-/** Read-only list of the bundled brands and their real domains. */
+/** Sections of the "How LinkGuard works" screen: icon, title, body. */
+private val HowSections = listOf(
+    Triple(LineIcons.Warning, R.string.how_why_title, R.string.how_why_body),
+    Triple(LineIcons.Shield, R.string.how_where_title, R.string.how_where_body),
+    Triple(LineIcons.Check, R.string.how_safe_title, R.string.how_safe_body),
+    Triple(LineIcons.Search, R.string.how_scam_title, R.string.how_scam_body),
+    Triple(LineIcons.People, R.string.how_community_title, R.string.how_community_body),
+    Triple(LineIcons.Choice, R.string.how_choice_title, R.string.how_choice_body),
+)
+
+/**
+ * Plain-language overview of what LinkGuard does. Deliberately high level: it doesn't list brands,
+ * sources or thresholds, which would mislead users or help scammers.
+ */
 @Composable
-fun BrandsScreen(brands: List<Brand>, onBack: () -> Unit) {
-    SubScreen(stringResource(R.string.settings_brands), onBack) { modifier ->
-        LazyColumn(modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            item {
-                Text(
-                    stringResource(R.string.brands_intro),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            items(brands, key = { it.name }) { brand ->
-                Column {
-                    Text(brand.name, style = MaterialTheme.typography.titleMedium)
-                    val domains = brand.officialDomains.joinToString(", ") { if (it.startsWith(".")) "*$it" else it }
-                    Text(
-                        domains.ifEmpty { stringResource(R.string.brands_gov_only) },
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+fun HowItWorksScreen(browserName: String, onBack: () -> Unit) {
+    SubScreen(stringResource(R.string.how_title), onBack) { modifier ->
+        Column(
+            modifier.verticalScroll(rememberScrollState()).testTag("how_it_works"),
+            verticalArrangement = Arrangement.spacedBy(20.dp),
+        ) {
+            HowSections.forEach { (icon, title, body) ->
+                Row(Modifier.semantics(mergeDescendants = true) {}) {
+                    Icon(
+                        icon,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(end = 14.dp).size(28.dp),
                     )
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Text(stringResource(title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+                        Text(stringResource(body, browserName), style = MaterialTheme.typography.bodyLarge)
+                    }
                 }
             }
         }
