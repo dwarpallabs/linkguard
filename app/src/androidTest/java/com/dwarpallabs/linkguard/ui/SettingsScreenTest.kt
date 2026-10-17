@@ -119,11 +119,10 @@ class SettingsScreenTest {
     }
 
     @Test
-    fun feedbackScreenHidesPlayWhenUnavailable() {
-        compose.setContent { LinkguardTheme { FeedbackScreen(onEmail = {}, onGitHub = {}, onPlay = null, onBack = {}) } }
+    fun feedbackScreenOffersEmailAndGitHub() {
+        compose.setContent { LinkguardTheme { FeedbackScreen(onEmail = {}, onGitHub = {}, onBack = {}) } }
         compose.onNodeWithTag("feedback_email").assertExists()
         compose.onNodeWithTag("feedback_github").assertExists()
-        compose.onNodeWithTag("feedback_play").assertDoesNotExist()
     }
 
     @Test

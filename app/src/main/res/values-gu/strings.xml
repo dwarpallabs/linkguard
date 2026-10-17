@@ -57,7 +57,6 @@
     <string name="feedback_email">અમને ઈમેલ કરો</string>
     <string name="feedback_github">GitHub પર જણાવો</string>
     <string name="feedback_github_desc">આ માટે મફત GitHub એકાઉન્ટ જોઈએ.</string>
-    <string name="feedback_play">Google Play પર રિવ્યૂ લખો</string>
     <string name="about_title">LinkGuard વિશે</string>
     <string name="about_desc">વર્ઝન, ગોપનીયતા નીતિ, ઓપન સોર્સ અને સંપર્ક.</string>
     <string name="about_version">વર્ઝન %1$s</string>

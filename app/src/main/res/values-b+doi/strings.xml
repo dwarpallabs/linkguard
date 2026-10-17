@@ -56,7 +56,6 @@
     <string name="feedback_email">असेंगी ईमेल करो</string>
     <string name="feedback_github">GitHub पर दस्सो</string>
     <string name="feedback_github_desc">इस आस्तै मुफ्त GitHub अकाउंट चाहिदा।</string>
-    <string name="feedback_play">Google Play पर रिव्यू लिखो</string>
     <string name="about_title">LinkGuard बारै</string>
     <string name="about_desc">वर्ज़न, निजता नीति, ओपन सोर्स ते संपर्क।</string>
     <string name="about_version">वर्ज़न %1$s</string>

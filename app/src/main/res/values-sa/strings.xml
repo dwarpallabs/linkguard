@@ -57,7 +57,6 @@
     <string name="feedback_email">अस्मभ्यम् ईमेल् प्रेषयतु</string>
     <string name="feedback_github">GitHub इत्यत्र सूचयतु</string>
     <string name="feedback_github_desc">निःशुल्कं GitHub खातम् आवश्यकम्।</string>
-    <string name="feedback_play">Google Play इत्यत्र समीक्षां लिखतु</string>
     <string name="about_title">LinkGuard विषये</string>
     <string name="about_desc">संस्करणम्, गोपनीयतानीतिः, मुक्तस्रोतः, सम्पर्कः च।</string>
     <string name="about_version">संस्करणम् %1$s</string>

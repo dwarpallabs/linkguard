@@ -56,7 +56,6 @@
     <string name="feedback_email">Email us</string>
     <string name="feedback_github">Report it on GitHub</string>
     <string name="feedback_github_desc">Needs a free GitHub account.</string>
-    <string name="feedback_play">Write a review on Google Play</string>
     <string name="about_title">About LinkGuard</string>
     <string name="about_desc">Version, privacy policy, open source and contact.</string>
     <string name="about_version">Version %1$s</string>

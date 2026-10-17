@@ -56,7 +56,6 @@
     <string name="feedback_email">మాకు ఈమెయిల్ చేయండి</string>
     <string name="feedback_github">GitHubలో రిపోర్ట్ చేయండి</string>
     <string name="feedback_github_desc">ఉచిత GitHub ఖాతా కావాలి.</string>
-    <string name="feedback_play">Google Playలో రివ్యూ రాయండి</string>
     <string name="about_title">LinkGuard గురించి</string>
     <string name="about_desc">వెర్షన్, ప్రైవసీ పాలసీ, ఓపెన్ సోర్స్, మమ్మల్ని సంప్రదించడం.</string>
     <string name="about_version">వెర్షన్ %1$s</string>

@@ -56,7 +56,6 @@
     <string name="feedback_email">हमरा सभकेँ ईमेल करू</string>
     <string name="feedback_github">GitHub पर कहू</string>
     <string name="feedback_github_desc">एहि लेल मुफ्त GitHub अकाउंट चाही।</string>
-    <string name="feedback_play">Google Play पर रिव्यू लिखू</string>
     <string name="about_title">LinkGuard क बारे मे</string>
     <string name="about_desc">संस्करण, प्राइवेसी पॉलिसी, ओपन सोर्स आ सम्पर्क।</string>
     <string name="about_version">संस्करण %1$s</string>

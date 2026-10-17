@@ -3,7 +3,6 @@ package com.dwarpallabs.linkguard
 import android.app.role.RoleManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.content.pm.PackageManager
 import androidx.core.net.toUri
 import android.os.Build
 import android.os.Bundle
@@ -96,7 +95,6 @@ class MainActivity : ComponentActivity() {
                     Screen.FEEDBACK -> FeedbackScreen(
                         onEmail = { email("LinkGuard translation (${resources.configuration.locales[0].displayName})") },
                         onGitHub = { Browsers.forward(this, TranslationIssueUrl.toUri()) },
-                        onPlay = if (hasPlayStore()) ::openPlayListing else null,
                         onBack = { screen = Screen.HOME },
                     )
                     Screen.HOW -> HowItWorksScreen(
@@ -157,20 +155,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun hasPlayStore(): Boolean = try {
-        packageManager.getPackageInfo(PLAY_STORE, 0); true
-    } catch (_: PackageManager.NameNotFoundException) {
-        false
-    }
-
-    private fun openPlayListing() {
-        try {
-            startActivity(Intent(Intent.ACTION_VIEW, "market://details?id=$packageName".toUri()).setPackage(PLAY_STORE))
-        } catch (_: ActivityNotFoundException) {
-            Browsers.forward(this, "https://play.google.com/store/apps/details?id=$packageName".toUri())
-        }
-    }
-
     private fun appVersion(): String =
         packageManager.getPackageInfo(packageName, 0).versionName ?: "?"
 
@@ -187,9 +171,5 @@ class MainActivity : ComponentActivity() {
         } catch (_: ActivityNotFoundException) {
             startActivity(Intent(Settings.ACTION_SETTINGS))
         }
-    }
-
-    private companion object {
-        const val PLAY_STORE = "com.android.vending"
     }
 }
