@@ -32,6 +32,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
@@ -39,6 +40,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
@@ -204,8 +206,9 @@ private fun NotABrowserCard(browserName: String) {
                 FlowIcons.Shield to stringResource(R.string.flow_check),
                 FlowIcons.Globe to browserName,
             )
-            // Three side-by-side columns are too narrow for large text: words would break mid-word.
-            if (LocalDensity.current.fontScale > 1.3f) {
+            // Side by side only while every word fits its column; long words (Tamil, large text)
+            // would otherwise break mid-word, so stack the steps instead.
+            if (flowNeedsStacking(steps.map { it.second })) {
                 Column(
                     verticalArrangement = Arrangement.spacedBy(4.dp),
                     modifier = Modifier.semantics(mergeDescendants = true) {},
@@ -264,6 +267,19 @@ private fun FlowArrow(modifier: Modifier = Modifier) {
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = modifier.size(20.dp),
     )
+}
+
+@Composable
+private fun flowNeedsStacking(labels: List<String>): Boolean {
+    val measurer = rememberTextMeasurer()
+    val style = MaterialTheme.typography.labelMedium
+    val density = LocalDensity.current
+    // Card padding 16 dp each side, two 20 dp arrows, four 6 dp gaps (all inside the 24 dp gutters).
+    val screenWidth = LocalConfiguration.current.screenWidthDp.dp
+    val column = with(density) { ((screenWidth - 48.dp - 32.dp - 40.dp - 24.dp) / 3).toPx() }
+    return labels.any { label ->
+        label.split(' ').any { word -> measurer.measure(word, style, maxLines = 1).size.width > column }
+    }
 }
 
 /** Turns the forward arrow to point down. It is already mirrored in RTL, so it turns the other way there. */
