@@ -46,7 +46,7 @@
     <string name="how_safe_title">सुरक्षित लिंक लगेच उघडतात</string>
     <string name="how_safe_body">ओळखीच्या आणि अधिकृत वेबसाइट, जसे सरकारी (.gov.in) आणि बँकांच्या वेबसाइट, लगेच उघडतात. लिंक ठीक वाटली तर तुम्हाला काहीच दिसत नाही.</string>
     <string name="how_scam_title">फसवणुकीच्या लिंक ओळखणे</string>
-    <string name="how_scam_body">फसवणूक करणारे वापरतात त्या युक्त्या LinkGuard शोधतो: बँक किंवा प्रसिद्ध ब्रँड असल्याचे भासवणाऱ्या वेबसाइट, Play Store बाहेरून ॲप डाउनलोड, लपवलेल्या पैसे मागण्याच्या विनंत्या, अगदी नवीन वेबसाइट आणि असामान्य वेब पत्ते. सुमारे 1,900 धोकादायक वेबसाइटच्या यादीतही तो तपासतो. ही यादी एका मोठ्या आंतरराष्ट्रीय सुरक्षा डेटाबेसमधून घेतली जाते आणि रोज अपडेट होते.</string>
+    <string name="how_scam_body">फसवणूक करणारे वापरतात त्या युक्त्या LinkGuard शोधतो: बँक किंवा प्रसिद्ध ब्रँड असल्याचे भासवणाऱ्या वेबसाइट, Play Store बाहेरून ॲप डाउनलोड, लपवलेल्या पैसे मागण्याच्या विनंत्या, अगदी नवीन वेबसाइट आणि असामान्य वेब पत्ते. हजारो फसवणुकीच्या आणि धोकादायक वेबसाइटच्या यादीतही तो तपासतो. ही यादी आघाडीच्या आंतरराष्ट्रीय सुरक्षा डेटाबेसमधून घेतली जाते आणि रोज अपडेट होते.</string>
     <string name="how_community_title">इतर वापरकर्त्यांच्या तक्रारी</string>
     <string name="how_community_body">अनेक LinkGuard वापरकर्त्यांनी एकाच वेबसाइटची फसवणूक म्हणून तक्रार केली, तर इतरांना सावध राहण्याचा इशारा दिला जातो.</string>
     <string name="how_choice_title">निर्णय नेहमी तुमचाच</string>
@@ -67,7 +67,7 @@
     <string name="about_source_desc">Apache-2.0 लायसन्सखाली मोफत. GitHub वर कोणीही कोड तपासू शकतो.</string>
     <string name="about_contact">आमच्याशी संपर्क करा</string>
     <string name="about_credits">श्रेय</string>
-    <string name="about_credits_body">धोकादायक वेबसाइट: abuse.ch चे URLhaus. लोकप्रिय वेबसाइट: Tranco यादी. वेबसाइटची नावे: Public Suffix List (MPL-2.0).</string>
+    <string name="about_credits_body">फसवणुकीच्या वेबसाइट: PhishDestroy. धोकादायक वेबसाइट: abuse.ch चे URLhaus. लोकप्रिय वेबसाइट: Tranco यादी. वेबसाइटची नावे: Public Suffix List (MPL-2.0).</string>
     <string name="report_link_label">लिंक</string>
     <string name="report_note_label">ही फसवणूक आहे असे तुम्हाला का वाटते? (ऐच्छिक)</string>
     <string name="report_private_info">तुमची तक्रार खाजगीपणे Dwarpal Labs कडे जाते आणि कधीही प्रसिद्ध केली जात नाही. अनेक वेगवेगळ्या लोकांनी एकाच वेबसाइटची तक्रार केली, तर इतर LinkGuard वापरकर्त्यांना आपोआप इशारा दिसतो. तुमच्या तक्रारीवरून तुमची ओळख पटू शकत नाही. कृपया फोन नंबर, नावे किंवा इतर खाजगी माहिती लिहू नका.</string>

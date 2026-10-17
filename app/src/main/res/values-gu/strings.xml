@@ -46,7 +46,7 @@
     <string name="how_safe_title">સલામત લિંક તરત ખૂલે છે</string>
     <string name="how_safe_body">જાણીતી અને સત્તાવાર વેબસાઇટ, જેમ કે સરકારી (.gov.in) અને બૅન્કની વેબસાઇટ, તરત ખૂલી જાય છે. લિંક બરાબર લાગે, તો તમને કંઈ જ દેખાતું નથી.</string>
     <string name="how_scam_title">છેતરપિંડીવાળી લિંક ઓળખવી</string>
-    <string name="how_scam_body">છેતરપિંડી કરનારા જે યુક્તિઓ વાપરે છે તે LinkGuard શોધે છે: બૅન્ક કે જાણીતી બ્રાન્ડ હોવાનો ઢોંગ કરતી વેબસાઇટ, Play Store બહારથી ઍપ ડાઉનલોડ, છુપાયેલી પૈસા માગવાની વિનંતીઓ, એકદમ નવી વેબસાઇટ અને અસામાન્ય વેબ સરનામાં. તે આશરે 1,900 જાણીતી નુકસાનકારક વેબસાઇટની યાદીમાં પણ તપાસે છે. આ યાદી એક મોટા આંતરરાષ્ટ્રીય સુરક્ષા ડેટાબેઝમાંથી લેવાય છે અને રોજ અપડેટ થાય છે.</string>
+    <string name="how_scam_body">છેતરપિંડી કરનારા જે યુક્તિઓ વાપરે છે તે LinkGuard શોધે છે: બૅન્ક કે જાણીતી બ્રાન્ડ હોવાનો ઢોંગ કરતી વેબસાઇટ, Play Store બહારથી ઍપ ડાઉનલોડ, છુપાયેલી પૈસા માગવાની વિનંતીઓ, એકદમ નવી વેબસાઇટ અને અસામાન્ય વેબ સરનામાં. તે હજારો જાણીતી છેતરપિંડીવાળી અને નુકસાનકારક વેબસાઇટની યાદીમાં પણ તપાસે છે. આ યાદી મોટા આંતરરાષ્ટ્રીય સુરક્ષા ડેટાબેઝમાંથી લેવાય છે અને રોજ અપડેટ થાય છે.</string>
     <string name="how_community_title">બીજા વપરાશકર્તાઓની ફરિયાદો</string>
     <string name="how_community_body">જ્યારે ઘણા LinkGuard વપરાશકર્તાઓ એક જ વેબસાઇટની છેતરપિંડી તરીકે ફરિયાદ કરે, ત્યારે બીજાઓને સાવધ રહેવાની ચેતવણી અપાય છે.</string>
     <string name="how_choice_title">નિર્ણય હંમેશાં તમારો</string>
@@ -67,7 +67,7 @@
     <string name="about_source_desc">Apache-2.0 લાઇસન્સ હેઠળ મફત. GitHub પર કોઈ પણ કોડ તપાસી શકે છે.</string>
     <string name="about_contact">અમારો સંપર્ક કરો</string>
     <string name="about_credits">આભાર</string>
-    <string name="about_credits_body">નુકસાનકારક વેબસાઇટ: abuse.ch નું URLhaus. લોકપ્રિય વેબસાઇટ: Tranco યાદી. વેબસાઇટનાં નામ: Public Suffix List (MPL-2.0).</string>
+    <string name="about_credits_body">છેતરપિંડીવાળી વેબસાઇટ: PhishDestroy. નુકસાનકારક વેબસાઇટ: abuse.ch નું URLhaus. લોકપ્રિય વેબસાઇટ: Tranco યાદી. વેબસાઇટનાં નામ: Public Suffix List (MPL-2.0).</string>
     <string name="report_link_label">લિંક</string>
     <string name="report_note_label">તમને આ છેતરપિંડી કેમ લાગે છે? (મરજિયાત)</string>
     <string name="report_private_info">તમારી ફરિયાદ ખાનગી રીતે Dwarpal Labs ને જાય છે અને ક્યારેય જાહેર થતી નથી. જ્યારે ઘણા જુદા જુદા લોકો એક જ વેબસાઇટની ફરિયાદ કરે, ત્યારે બીજા LinkGuard વપરાશકર્તાઓને આપમેળે ચેતવણી દેખાય છે. તમારી ફરિયાદ પરથી તમારી ઓળખ થઈ શકતી નથી. મહેરબાની કરીને ફોન નંબર, નામ કે બીજી અંગત માહિતી ન લખશો.</string>

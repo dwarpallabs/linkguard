@@ -45,7 +45,7 @@
     <string name="how_safe_title">محفوظ لنک فوراً کھلتے ہیں</string>
     <string name="how_safe_body">جانی پہچانی اور سرکاری ویب سائٹیں، جیسے حکومت (.gov.in) اور بینکوں کی ویب سائٹیں، فوراً کھل جاتی ہیں۔ اگر لنک ٹھیک لگے، تو آپ کو کچھ بھی دکھائی نہیں دیتا۔</string>
     <string name="how_scam_title">دھوکے والے لنک کی پہچان</string>
-    <string name="how_scam_body">LinkGuard دھوکے بازوں کی چالیں ڈھونڈتا ہے: بینک یا کسی مشہور برانڈ ہونے کا دکھاوا کرنے والی ویب سائٹیں، Play Store کے باہر سے ایپ ڈاؤن لوڈ، چھپی ہوئی ادائیگی کی درخواستیں، بالکل نئی ویب سائٹیں اور عجیب ویب پتے۔ یہ تقریباً 1,900 جانی پہچانی نقصان دہ ویب سائٹوں کی ایک فہرست سے بھی ملاتا ہے، جو ایک بڑے بین الاقوامی سیکیورٹی ڈیٹابیس سے لی گئی ہے اور ہر روز اپ ڈیٹ ہوتی ہے۔</string>
+    <string name="how_scam_body">LinkGuard دھوکے بازوں کی چالیں ڈھونڈتا ہے: بینک یا کسی مشہور برانڈ ہونے کا دکھاوا کرنے والی ویب سائٹیں، Play Store کے باہر سے ایپ ڈاؤن لوڈ، چھپی ہوئی ادائیگی کی درخواستیں، بالکل نئی ویب سائٹیں اور عجیب ویب پتے۔ یہ دسیوں ہزار جانی پہچانی دھوکے باز اور نقصان دہ ویب سائٹوں کی ایک فہرست سے بھی ملاتا ہے، جو بڑے بین الاقوامی سیکیورٹی ڈیٹابیسوں سے لی گئی ہے اور ہر روز اپ ڈیٹ ہوتی ہے۔</string>
     <string name="how_community_title">دوسرے صارفین کی شکایتیں</string>
     <string name="how_community_body">جب کئی LinkGuard صارفین ایک ہی ویب سائٹ کی دھوکے کے طور پر شکایت کرتے ہیں، تو دوسروں کو محتاط رہنے کی وارننگ دی جاتی ہے۔</string>
     <string name="how_choice_title">فیصلہ ہمیشہ آپ کا</string>
@@ -66,7 +66,7 @@
     <string name="about_source_desc">Apache-2.0 لائسنس کے تحت مفت۔ کوئی بھی GitHub پر اس کا کوڈ جانچ سکتا ہے۔</string>
     <string name="about_contact">ہم سے رابطہ کریں</string>
     <string name="about_credits">شکریہ</string>
-    <string name="about_credits_body">جانی پہچانی نقصان دہ ویب سائٹیں: abuse.ch کی URLhaus۔ مشہور ویب سائٹیں: Tranco فہرست۔ ویب سائٹوں کے نام: Public Suffix List (MPL-2.0)۔</string>
+    <string name="about_credits_body">دھوکے باز ویب سائٹیں: PhishDestroy۔ جانی پہچانی نقصان دہ ویب سائٹیں: abuse.ch کی URLhaus۔ مشہور ویب سائٹیں: Tranco فہرست۔ ویب سائٹوں کے نام: Public Suffix List (MPL-2.0)۔</string>
     <string name="report_link_label">لنک</string>
     <string name="report_note_label">آپ کو یہ دھوکہ کیوں لگتا ہے؟ (ضروری نہیں)</string>
     <string name="report_private_info">آپ کی شکایت خفیہ طور پر Dwarpal Labs کو جاتی ہے اور کبھی شائع نہیں کی جاتی۔ جب کئی مختلف لوگ ایک ہی ویب سائٹ کی شکایت کرتے ہیں، تو دوسرے LinkGuard صارفین کو خود بخود وارننگ دکھائی دیتی ہے۔ آپ کی شکایت سے آپ کی پہچان نہیں ہو سکتی۔ براہ کرم فون نمبر، نام یا دوسری ذاتی معلومات نہ لکھیں۔</string>

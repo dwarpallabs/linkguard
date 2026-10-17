@@ -45,7 +45,7 @@
     <string name="how_safe_title">सुरक्षित लिंक तुरंत खुजैत अछि</string>
     <string name="how_safe_body">नामी वेबसाइट आ आधिकारिक वेबसाइट, जेना सरकारी (.gov.in) आ बैंकक वेबसाइट, तुरंत खुजि जाइत अछि। जँ लिंक ठीक बुझाइत अछि, तँ अहाँकेँ किछुओ नहि देखाइत अछि।</string>
     <string name="how_scam_title">ठकी बला लिंक चिन्हब</string>
-    <string name="how_scam_body">LinkGuard ठक सभक चालि पकड़ैत अछि: बैंक वा कोनो नामी ब्रांड होएबाक ढोंग करऽ बला वेबसाइट, Play Store सँ बाहरक ऐप डाउनलोड, नुकाएल पाइक माँग, एकदम नव वेबसाइट आ अनचिन्हार वेब पता। ई लगभग 1,900 चिन्हल नोकसान करऽ बला वेबसाइटक एकटा सूची सँ सेहो जाँच करैत अछि। ई सूची दुनियाक एकटा नामी सुरक्षा डेटाबेस सँ लेल गेल अछि आ रोज अपडेट होइत अछि।</string>
+    <string name="how_scam_body">LinkGuard ठक सभक चालि पकड़ैत अछि: बैंक वा कोनो नामी ब्रांड होएबाक ढोंग करऽ बला वेबसाइट, Play Store सँ बाहरक ऐप डाउनलोड, नुकाएल पाइक माँग, एकदम नव वेबसाइट आ अनचिन्हार वेब पता। ई दसो हजार चिन्हल ठगी आ नोकसान करऽ बला वेबसाइटक एकटा सूची सँ सेहो जाँच करैत अछि। ई सूची दुनियाक नामी सुरक्षा डेटाबेस सभ सँ लेल गेल अछि आ रोज अपडेट होइत अछि।</string>
     <string name="how_community_title">दोसर लोकक शिकायत</string>
     <string name="how_community_body">जखन कतेको LinkGuard उपयोगकर्ता एकहि वेबसाइटक ठकीक शिकायत करैत छथि, तँ दोसर लोक केँ सावधान रहबाक चेतावनी देल जाइत अछि।</string>
     <string name="how_choice_title">फैसला सदिखन अहाँक</string>
@@ -66,7 +66,7 @@
     <string name="about_source_desc">Apache-2.0 लाइसेंसक तहत मुफ्त। कियो GitHub पर एकर कोड जाँचि सकैत छथि।</string>
     <string name="about_contact">हमरा सभ सँ सम्पर्क करू</string>
     <string name="about_credits">आभार</string>
-    <string name="about_credits_body">चिन्हल नोकसान करऽ बला वेबसाइट: abuse.ch क URLhaus। लोकप्रिय वेबसाइट: Tranco सूची। वेबसाइटक नाम: Public Suffix List (MPL-2.0)।</string>
+    <string name="about_credits_body">ठगी बला वेबसाइट: PhishDestroy। चिन्हल नोकसान करऽ बला वेबसाइट: abuse.ch क URLhaus। लोकप्रिय वेबसाइट: Tranco सूची। वेबसाइटक नाम: Public Suffix List (MPL-2.0)।</string>
     <string name="report_link_label">लिंक</string>
     <string name="report_note_label">अहाँकेँ ई ठकी किएक बुझाइत अछि? (चाही तँ लिखू)</string>
     <string name="report_private_info">अहाँक शिकायत निजी रूप सँ मात्र Dwarpal Labs लग जाइत अछि आ कहियो सार्वजनिक नहि कएल जाइत अछि। जखन कतेको अलग-अलग लोक एकहि वेबसाइटक शिकायत करैत छथि, तँ दोसर LinkGuard उपयोगकर्ता केँ अपने-आप चेतावनी देखाइत अछि। अहाँक शिकायत सँ अहाँक पहिचान नहि भऽ सकैत अछि। कृपया फोन नंबर, नाम वा आन निजी जानकारी नहि लिखू।</string>

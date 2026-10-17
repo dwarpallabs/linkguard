@@ -45,7 +45,7 @@
     <string name="how_safe_title">محفوظ لنڪون فوراً کلن ٿيون</string>
     <string name="how_safe_body">ڄاتل سڃاتل ۽ سرڪاري ويب سائيٽون، جهڙوڪ حڪومت (.gov.in) ۽ بئنڪن جون ويب سائيٽون، فوراً کلي وڃن ٿيون. جيڪڏهن لنڪ ٺيڪ لڳي، ته توهان کي ڪجهه به نظر نٿو اچي.</string>
     <string name="how_scam_title">ٺڳيءَ وارين لنڪن جي سڃاڻپ</string>
-    <string name="how_scam_body">LinkGuard ٺڳن جون چالون ڳولي ٿو: بئنڪ يا ڪنهن مشهور برانڊ هجڻ جو ڏيکاءُ ڪندڙ ويب سائيٽون، Play Store کان ٻاهران ايپ ڊائونلوڊ، لڪيل ادائگي جون درخواستون، بلڪل نيون ويب سائيٽون ۽ عجيب ويب پتا. اهو لڳ ڀڳ 1,900 ڄاتل سڃاتل نقصانڪار ويب سائيٽن جي هڪ لسٽ سان به ڀيٽ ڪري ٿو، جيڪا هڪ وڏي بين الاقوامي سيڪيورٽي ڊيٽابيس مان ورتل آهي ۽ هر روز اپڊيٽ ٿئي ٿي.</string>
+    <string name="how_scam_body">LinkGuard ٺڳن جون چالون ڳولي ٿو: بئنڪ يا ڪنهن مشهور برانڊ هجڻ جو ڏيکاءُ ڪندڙ ويب سائيٽون، Play Store کان ٻاهران ايپ ڊائونلوڊ، لڪيل ادائگي جون درخواستون، بلڪل نيون ويب سائيٽون ۽ عجيب ويب پتا. اهو ڏهن هزارن ڄاتل سڃاتل ٺڳيءَ وارين ۽ نقصانڪار ويب سائيٽن جي هڪ لسٽ سان به ڀيٽ ڪري ٿو، جيڪا وڏن بين الاقوامي سيڪيورٽي ڊيٽابيسن مان ورتل آهي ۽ هر روز اپڊيٽ ٿئي ٿي.</string>
     <string name="how_community_title">ٻين استعمال ڪندڙن جون شڪايتون</string>
     <string name="how_community_body">جڏهن ڪيترائي LinkGuard استعمال ڪندڙ هڪ ئي ويب سائيٽ جي ٺڳيءَ طور شڪايت ڪن ٿا، ته ٻين کي محتاط رهڻ جي خبرداري ڏني وڃي ٿي.</string>
     <string name="how_choice_title">فيصلو هميشه توهان جو</string>
@@ -66,7 +66,7 @@
     <string name="about_source_desc">Apache-2.0 لائسنس تحت مفت. ڪو به GitHub تي ان جو ڪوڊ چڪاسي سگهي ٿو.</string>
     <string name="about_contact">اسان سان رابطو ڪريو</string>
     <string name="about_credits">مهرباني</string>
-    <string name="about_credits_body">ڄاتل سڃاتل نقصانڪار ويب سائيٽون: abuse.ch جي URLhaus. مشهور ويب سائيٽون: Tranco لسٽ. ويب سائيٽن جا نالا: Public Suffix List (MPL-2.0).</string>
+    <string name="about_credits_body">ٺڳيءَ واريون ويب سائيٽون: PhishDestroy. ڄاتل سڃاتل نقصانڪار ويب سائيٽون: abuse.ch جي URLhaus. مشهور ويب سائيٽون: Tranco لسٽ. ويب سائيٽن جا نالا: Public Suffix List (MPL-2.0).</string>
     <string name="report_link_label">لنڪ</string>
     <string name="report_note_label">توهان کي اها ٺڳي ڇو لڳي ٿي؟ (ضروري ناهي)</string>
     <string name="report_private_info">توهان جي شڪايت ڳجهي طور Dwarpal Labs ڏانهن وڃي ٿي ۽ ڪڏهن به شايع نه ڪئي ويندي آهي. جڏهن ڪيترائي مختلف ماڻهو هڪ ئي ويب سائيٽ جي شڪايت ڪن ٿا، ته ٻين LinkGuard استعمال ڪندڙن کي پاڻمرادو خبرداري نظر اچي ٿي. توهان جي شڪايت مان توهان جي سڃاڻپ نٿي ٿي سگهي. مهرباني ڪري فون نمبر، نالا يا ٻي ذاتي معلومات نه لکو.</string>

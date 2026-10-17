@@ -17,7 +17,7 @@ WHAT LINKGUARD CATCHES
 • Fake bank, wallet and delivery websites that copy well-known names, including look-alike letters, swapped numbers and small spelling changes
 • App downloads (APK files) from outside the Play Store, a common trick in "update your KYC" messages
 • UPI payment requests hidden behind links, showing who you would pay and how much before you approve anything
-• Known harmful websites, from a list of about 1,900 collected from a leading international security database and updated every day
+• Known scam and harmful websites, from a list of tens of thousands collected from leading international security databases and updated every day
 • Unusual web addresses, such as raw number addresses and throwaway domains
 • Brand-new websites, which scammers use for a few days and then abandon
 • Links reported as scams by several LinkGuard users in the same week

@@ -5,8 +5,8 @@ import com.dwarpallabs.linkguard.core.NormalisedUrl
 
 /** What one pipeline run wants the server lists to contain. */
 data class FeedResult(
-    /** Hosts (or IPs) to block, from the scam/malware feeds. */
-    val blockHosts: Set<String>,
+    /** Hosts (or IPs) to block, each with the feed that listed it first. */
+    val blockHosts: Map<String, String>,
     /** Registrable domains to allow, from the top-sites list. */
     val allowDomains: Set<String>,
     val stats: Map<String, Int>,
@@ -22,43 +22,54 @@ class FeedBuilder(
     private val topSites: Int = 10_000,
 ) {
 
-    fun build(malwareUrls: List<String>, rankedDomains: List<String>, existingAllow: Set<String> = emptySet()): FeedResult {
+    /**
+     * @param feeds feed name → its entries (full URLs or bare domains), in priority order.
+     * @param rankedDomains the top-sites ranking. The first [topSites] become the allowlist; every
+     *   ranked site, allowlisted or not, is immune from blocking, so a feed can never put a popular
+     *   real website behind a warning.
+     */
+    fun build(feeds: Map<String, List<String>>, rankedDomains: List<String>, existingAllow: Set<String> = emptySet()): FeedResult {
         val stats = linkedMapOf<String, Int>()
 
         // Safe list: the top sites, minus anything where strangers can publish content.
-        val ranked = rankedDomains.asSequence().map { it.trim().lowercase().trimEnd('.') }.filter { it.isNotEmpty() }.take(topSites).toList()
-        val allow = ranked.filter { domain ->
-            DOMAIN.matches(domain) &&
-                data.psl.registrableDomain(domain) == domain &&
+        val ranked = rankedDomains.asSequence().map { it.trim().lowercase().trimEnd('.') }.filter { DOMAIN.matches(it) }.toList()
+        val allow = ranked.take(topSites).filter { domain ->
+            data.psl.registrableDomain(domain) == domain &&
                 domain !in data.shorteners && domain !in data.fileHosts && domain !in neverAllow
         }.toSet()
         stats["tranco_ranked"] = ranked.size
         stats["allow_after_filters"] = allow.size
 
-        // Blocklist: hosts from malware/scam URLs, except where the host belongs to a site that is
-        // allowed or shared by many users (blocking it would warn on everyone's links there).
-        val immune = allow + existingAllow + data.brands.flatMap { it.officialDomains }.filterNot { it.startsWith(".") }
+        // Blocklist: hosts from the feeds, except where the host belongs to a popular, allowed or
+        // shared site (blocking it would warn on everyone's links there).
+        val immune = ranked.toSet() + allow + existingAllow + data.brands.flatMap { it.officialDomains }.filterNot { it.startsWith(".") }
         val restrictedSuffixes = EngineData.RESTRICTED_SUFFIXES + data.brands.flatMap { it.officialDomains }.filter { it.startsWith(".") }
-        var unparseable = 0
-        var skippedShared = 0
-        val hosts = HashSet<String>()
-        for (raw in malwareUrls) {
-            val url = NormalisedUrl.parse(raw, data.psl)
-            if (url == null || !url.isWeb || ':' in url.host) { unparseable++; continue }
-            val host = url.host
-            val registrable = url.registrableDomain
-            val shared = registrable in immune || host in immune ||
-                restrictedSuffixes.any { host.endsWith(it) } ||
-                host in data.shorteners || registrable in data.shorteners ||
-                host in data.fileHosts || registrable in data.fileHosts ||
-                host in neverAllow || registrable in neverAllow
-            if (shared) { skippedShared++; continue }
-            if (HOST.matches(host)) hosts += host else unparseable++
+        val hosts = LinkedHashMap<String, String>()
+        for ((feed, entries) in feeds) {
+            var unparseable = 0
+            var skippedShared = 0
+            var added = 0
+            for (raw in entries) {
+                val entry = raw.trim()
+                val url = NormalisedUrl.parse(if ("://" in entry) entry else "http://$entry/", data.psl)
+                if (url == null || !url.isWeb || ':' in url.host) { unparseable++; continue }
+                val host = url.host
+                val registrable = url.registrableDomain
+                val shared = registrable in immune || host in immune ||
+                    restrictedSuffixes.any { host.endsWith(it) } ||
+                    host in data.shorteners || registrable in data.shorteners ||
+                    host in data.fileHosts || registrable in data.fileHosts ||
+                    host in neverAllow || registrable in neverAllow
+                if (shared) { skippedShared++; continue }
+                if (!HOST.matches(host)) { unparseable++; continue }
+                if (hosts.putIfAbsent(host, feed) == null) added++
+            }
+            stats["${feed}_entries"] = entries.size
+            stats["${feed}_block_hosts"] = added
+            stats["${feed}_skipped_shared_or_allowed"] = skippedShared
+            stats["${feed}_skipped_unparseable"] = unparseable
         }
-        stats["malware_urls"] = malwareUrls.size
         stats["block_hosts"] = hosts.size
-        stats["skipped_shared_or_allowed"] = skippedShared
-        stats["skipped_unparseable"] = unparseable
         return FeedResult(hosts, allow, stats)
     }
 
@@ -66,5 +77,7 @@ class FeedBuilder(
         /** Lowercase ASCII hostnames (punycode) and IPv4 literals only: safe to embed in SQL. */
         val HOST = Regex("""^(?=.{1,253}$)[a-z0-9-]+(\.[a-z0-9-]+)*$""")
         val DOMAIN = Regex("""^(?=.{1,253}$)([a-z0-9-]{1,63}\.)+[a-z0-9-]{2,63}$""")
+        /** Feed names are stored in the database and used in log keys. */
+        val FEED_NAME = Regex("""^[a-z][a-z0-9]{1,30}$""")
     }
 }
