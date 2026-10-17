@@ -55,7 +55,6 @@ Every language except English is **machine-translated**, so some wording will be
 - the in-app screen: *Settings → Wrong translation? Tell us*
 - [the translation form on GitHub](https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml)
 - email [support@dwarpallabs.com](mailto:support@dwarpallabs.com)
-- a review on Google Play (once LinkGuard is listed there)
 
 Corrections go straight into `app/src/main/res/values-<language>/strings.xml`; pull requests are welcome too. `python3 scripts/check_strings.py` checks that a language file is complete.
 

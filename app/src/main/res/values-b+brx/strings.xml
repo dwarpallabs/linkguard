@@ -56,7 +56,6 @@
     <string name="feedback_email">जोंखौ ईमेल हर</string>
     <string name="feedback_github">GitHub आव फोरमाय</string>
     <string name="feedback_github_desc">बेनि थाखाय बेसेन गैयि GitHub एकाउन्ट नाङो।</string>
-    <string name="feedback_play">Google Play आव रिभिउ लिर</string>
     <string name="about_title">LinkGuard नि सोमोन्दै</string>
     <string name="about_desc">भार्सन, गुप्तता नीति, ओपेन सोर्स आरो जगायनाय।</string>
     <string name="about_version">भार्सन %1$s</string>

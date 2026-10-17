@@ -56,7 +56,6 @@
     <string name="feedback_email">ನಮಗೆ ಇಮೇಲ್ ಮಾಡಿ</string>
     <string name="feedback_github">GitHub ನಲ್ಲಿ ರಿಪೋರ್ಟ್ ಮಾಡಿ</string>
     <string name="feedback_github_desc">ಉಚಿತ GitHub ಖಾತೆ ಬೇಕು.</string>
-    <string name="feedback_play">Google Play ನಲ್ಲಿ ರಿವ್ಯೂ ಬರೆಯಿರಿ</string>
     <string name="about_title">LinkGuard ಬಗ್ಗೆ</string>
     <string name="about_desc">ಆವೃತ್ತಿ, ಪ್ರೈವಸಿ ಪಾಲಿಸಿ, ಓಪನ್ ಸೋರ್ಸ್ ಮತ್ತು ಸಂಪರ್ಕ.</string>
     <string name="about_version">ಆವೃತ್ತಿ %1$s</string>

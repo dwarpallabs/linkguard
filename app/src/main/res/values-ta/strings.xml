@@ -53,7 +53,6 @@
     <string name="feedback_email">எங்களுக்கு மின்னஞ்சல் அனுப்புங்கள்</string>
     <string name="feedback_github">GitHub-இல் தெரிவியுங்கள்</string>
     <string name="feedback_github_desc">இலவச GitHub கணக்கு தேவை.</string>
-    <string name="feedback_play">Google Play-இல் மதிப்பாய்வு எழுதுங்கள்</string>
     <string name="about_title">LinkGuard பற்றி</string>
     <string name="about_desc">பதிப்பு, தனியுரிமைக் கொள்கை, திறந்த மூலம், தொடர்பு.</string>
     <string name="about_version">பதிப்பு %1$s</string>

@@ -88,11 +88,11 @@ fun HowItWorksScreen(browserName: String, onBack: () -> Unit) {
 
 /**
  * Where to send translation corrections. Every language except English is machine-translated, so
- * the community fixes mistakes. Nothing is sent from here: each row hands off to email, the
- * browser or the Play Store.
+ * the community fixes mistakes. Nothing is sent from here: each row hands off to email or the
+ * browser. A Play review option comes once LinkGuard is on the Play Store.
  */
 @Composable
-fun FeedbackScreen(onEmail: () -> Unit, onGitHub: () -> Unit, onPlay: (() -> Unit)?, onBack: () -> Unit) {
+fun FeedbackScreen(onEmail: () -> Unit, onGitHub: () -> Unit, onBack: () -> Unit) {
     SubScreen(stringResource(R.string.feedback_title), onBack) { modifier ->
         Column(
             modifier.verticalScroll(rememberScrollState()).testTag("feedback"),
@@ -101,9 +101,6 @@ fun FeedbackScreen(onEmail: () -> Unit, onGitHub: () -> Unit, onPlay: (() -> Uni
             Text(stringResource(R.string.feedback_intro), style = MaterialTheme.typography.bodyLarge)
             LinkRow(stringResource(R.string.feedback_email), SupportEmail, onEmail, "feedback_email")
             LinkRow(stringResource(R.string.feedback_github), stringResource(R.string.feedback_github_desc), onGitHub, "feedback_github")
-            if (onPlay != null) {
-                LinkRow(stringResource(R.string.feedback_play), "Google Play", onPlay, "feedback_play")
-            }
         }
     }
 }

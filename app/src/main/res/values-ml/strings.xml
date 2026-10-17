@@ -56,7 +56,6 @@
     <string name="feedback_email">ഞങ്ങൾക്ക് ഇമെയിൽ അയയ്ക്കൂ</string>
     <string name="feedback_github">GitHub-ൽ റിപ്പോർട്ട് ചെയ്യൂ</string>
     <string name="feedback_github_desc">സൗജന്യ GitHub അക്കൗണ്ട് വേണം.</string>
-    <string name="feedback_play">Google Play-ൽ ഒരു റിവ്യൂ എഴുതൂ</string>
     <string name="about_title">LinkGuard-നെക്കുറിച്ച്</string>
     <string name="about_desc">പതിപ്പ്, സ്വകാര്യതാ നയം, ഓപ്പൺ സോഴ്സ്, ബന്ധപ്പെടാൻ.</string>
     <string name="about_version">പതിപ്പ് %1$s</string>
