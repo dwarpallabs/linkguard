@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Marathi (mr). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">लिंक उघडण्याआधी LinkGuard ती तपासतो</string>
+    <string name="onboarding_body">तुम्ही WhatsApp, Telegram किंवा SMS मधल्या लिंकवर टॅप केल्यावर LinkGuard आधी ती तपासतो. सुरक्षित लिंक लगेच तुमच्या ब्राउझरमध्ये उघडतात. एखादी लिंक फसवणुकीची वाटली तर तुम्हाला इशारा दिसेल, आणि तरीही तुम्ही ती उघडू शकता.</string>
+    <string name="onboarding_privacy">तुम्ही उघडलेल्या लिंक LinkGuard कधीही जतन करत नाही किंवा कुठे पाठवत नाही. कोणतेही अकाउंट लागत नाही.</string>
+    <string name="your_browser">तुमचा ब्राउझर</string>
+    <string name="flow_link">तुमची लिंक</string>
+    <string name="flow_check">LinkGuard ती तपासतो</string>
+    <string name="not_a_browser_title">LinkGuard ब्राउझर नाही</string>
+    <string name="not_a_browser_body">LinkGuard कधीही वेब पेज दाखवत नाही. तो प्रत्येक लिंक क्षणात तपासतो आणि मग ती %1$s मध्ये उघडतो, म्हणजे तुम्ही आधीपासून वापरता तोच ब्राउझर. तुमचे बुकमार्क, हिस्ट्री, जतन केलेले पासवर्ड आणि टॅब जसेच्या तसे राहतात.</string>
+    <string name="default_explain">Android, LinkGuard ला तुमचे “ब्राउझर ॲप” म्हणेल. हे फक्त यासाठी आहे की LinkGuard ला लिंक आधी दिसाव्यात. प्रत्येक लिंक तरीही %1$s मध्येच उघडेल.</string>
+
+    <string name="default_heading">पायरी 1: LinkGuard ला तुमचा डीफॉल्ट ब्राउझर बनवा</string>
+    <string name="default_done">LinkGuard तुमचा डीफॉल्ट ब्राउझर आहे</string>
+    <string name="default_button">डीफॉल्ट ब्राउझर बनवा</string>
+    <string name="default_hint">सेटिंग्ज उघडल्यास “ब्राउझर ॲप” वर टॅप करा आणि LinkGuard निवडा.</string>
+
+    <string name="browser_heading">पायरी 2: लिंक यात उघडा</string>
+    <string name="browser_none">दुसरा कोणताही ब्राउझर सापडला नाही. Chrome सारखा एखादा ब्राउझर इन्स्टॉल करा.</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook आणि LinkedIn सारखी ॲप्स अनेकदा लिंक ॲपच्या आतच उघडतात, तिथे LinkGuard त्या तपासू शकत नाही. फसव्या लिंकपासून सुरक्षित राहण्यासाठी त्या ॲपच्या सेटिंग्जमध्ये इन-ॲप ब्राउझर बंद करा (Telegram मध्ये: Settings → Chat Settings → In-app browser), किंवा ⋮ वर टॅप करून “ब्राउझरमध्ये उघडा” निवडा.</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard काय तपासतो</string>
+    <string name="check_unwrap">छोट्या लिंक उघडून पाहा</string>
+    <string name="check_unwrap_desc">bit.ly सारख्या सेवांना विचारतो की छोटी लिंक खरोखर कुठे जाते.</string>
+    <string name="check_apk_download">ॲप डाउनलोड</string>
+    <string name="check_brand_lookalike">बनावट बँक आणि ब्रँड वेबसाइट</string>
+    <string name="check_weird_host">वेगळे, असामान्य वेब पत्ते</string>
+    <string name="check_reputation">ओळखीच्या फसवणूक वेबसाइट</string>
+    <string name="check_domain_age">अगदी नवीन वेबसाइट</string>
+    <string name="check_domain_age_desc">वेबसाइट कधी बनली हे अधिकृत नोंदणी कार्यालयाला विचारतो. फक्त वेबसाइटचे नाव पाठवले जाते, पूर्ण लिंक कधीच नाही.</string>
+    <string name="check_upi_intent">UPI पैसे मागण्याच्या विनंत्या</string>
+
+    <string name="settings_report">लिंकची तक्रार करा</string>
+    <string name="settings_report_desc">LinkGuard ला न सापडलेल्या फसवणुकीच्या लिंकबद्दल आम्हाला सांगा.</string>
+    <string name="how_title">LinkGuard कसा काम करतो</string>
+    <string name="how_desc">त्याची गरज का आहे, आणि कोणत्या लिंकबद्दल इशारा द्यायचा हे तो कसे ठरवतो.</string>
+    <string name="how_why_title">याची गरज का आहे</string>
+    <string name="how_why_body">WhatsApp आणि SMS वरच्या फसवणुकीच्या मेसेजमध्ये अनेकदा खऱ्या वाटणाऱ्या लिंक असतात: बनावट बँक पेज, “KYC अपडेट” फॉर्म किंवा पैसे चोरणारे ॲप. नुकसान व्हायला एक टॅप पुरेसा आहे, आणि बनावट वेब पत्ता ओळखणे अवघड असू शकते.</string>
+    <string name="how_where_title">LinkGuard कुठे असतो</string>
+    <string name="how_where_body">तुम्ही टॅप केलेली लिंक आणि तुमचा ब्राउझर यांच्यामध्ये LinkGuard असतो. तो क्षणात लिंक तपासतो, मग ती %1$s मध्ये उघडतो. तो स्वतः कधीही वेब पेज दाखवत नाही.</string>
+    <string name="how_safe_title">सुरक्षित लिंक लगेच उघडतात</string>
+    <string name="how_safe_body">ओळखीच्या आणि अधिकृत वेबसाइट, जसे सरकारी (.gov.in) आणि बँकांच्या वेबसाइट, लगेच उघडतात. लिंक ठीक वाटली तर तुम्हाला काहीच दिसत नाही.</string>
+    <string name="how_scam_title">फसवणुकीच्या लिंक ओळखणे</string>
+    <string name="how_scam_body">फसवणूक करणारे वापरतात त्या युक्त्या LinkGuard शोधतो: बँक किंवा प्रसिद्ध ब्रँड असल्याचे भासवणाऱ्या वेबसाइट, Play Store बाहेरून ॲप डाउनलोड, लपवलेल्या पैसे मागण्याच्या विनंत्या, अगदी नवीन वेबसाइट आणि असामान्य वेब पत्ते. सुमारे 1,900 धोकादायक वेबसाइटच्या यादीतही तो तपासतो. ही यादी एका मोठ्या आंतरराष्ट्रीय सुरक्षा डेटाबेसमधून घेतली जाते आणि रोज अपडेट होते.</string>
+    <string name="how_community_title">इतर वापरकर्त्यांच्या तक्रारी</string>
+    <string name="how_community_body">अनेक LinkGuard वापरकर्त्यांनी एकाच वेबसाइटची फसवणूक म्हणून तक्रार केली, तर इतरांना सावध राहण्याचा इशारा दिला जातो.</string>
+    <string name="how_choice_title">निर्णय नेहमी तुमचाच</string>
+    <string name="how_choice_body">LinkGuard कधीही कोणतीही लिंक अडवत नाही. प्रत्येक इशारा सोप्या शब्दांत अडचण सांगतो आणि “तरीही उघडा” हा पर्याय देतो. तुम्ही उघडलेल्या लिंक LinkGuard कधीही जतन करत नाही.</string>
+    <string name="feedback_title">भाषांतर चुकले? आम्हाला सांगा</string>
+    <string name="feedback_desc">LinkGuard चे भाषांतर मशीनने केले आहे. तुमच्या भाषेतील चुका दुरुस्त करायला मदत करा.</string>
+    <string name="feedback_intro">या भाषेतील LinkGuard चा मजकूर मशीनने भाषांतरित केला आहे आणि त्यात चुका असू शकतात. काही चुकीचे वाटले तर चुकीचे शब्द आणि तुम्ही ते कसे म्हणाल ते आम्हाला सांगा. जे सगळ्यात सोपे वाटेल ते वापरा:</string>
+    <string name="feedback_email">आम्हाला ईमेल करा</string>
+    <string name="feedback_github">GitHub वर कळवा</string>
+    <string name="feedback_github_desc">यासाठी मोफत GitHub अकाउंट लागते.</string>
+    <string name="feedback_play">Google Play वर रिव्ह्यू लिहा</string>
+    <string name="about_title">LinkGuard बद्दल</string>
+    <string name="about_desc">आवृत्ती, गोपनीयता धोरण, ओपन सोर्स आणि संपर्क.</string>
+    <string name="about_version">आवृत्ती %1$s</string>
+    <string name="about_by">Dwarpal Labs ने बनवले. LinkGuard स्वतंत्र आहे. कोणतीही बँक, पेमेंट ॲप, कुरिअर किंवा सरकारी संस्थेशी त्याचा संबंध नाही.</string>
+    <string name="about_privacy">गोपनीयता धोरण</string>
+    <string name="about_privacy_desc">तुमच्या फोनमधून काय बाहेर जाते, आणि का.</string>
+    <string name="about_source">ओपन सोर्स</string>
+    <string name="about_source_desc">Apache-2.0 लायसन्सखाली मोफत. GitHub वर कोणीही कोड तपासू शकतो.</string>
+    <string name="about_contact">आमच्याशी संपर्क करा</string>
+    <string name="about_credits">श्रेय</string>
+    <string name="about_credits_body">धोकादायक वेबसाइट: abuse.ch चे URLhaus. लोकप्रिय वेबसाइट: Tranco यादी. वेबसाइटची नावे: Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">लिंक</string>
+    <string name="report_note_label">ही फसवणूक आहे असे तुम्हाला का वाटते? (ऐच्छिक)</string>
+    <string name="report_private_info">तुमची तक्रार खाजगीपणे Dwarpal Labs कडे जाते आणि कधीही प्रसिद्ध केली जात नाही. अनेक वेगवेगळ्या लोकांनी एकाच वेबसाइटची तक्रार केली, तर इतर LinkGuard वापरकर्त्यांना आपोआप इशारा दिसतो. तुमच्या तक्रारीवरून तुमची ओळख पटू शकत नाही. कृपया फोन नंबर, नावे किंवा इतर खाजगी माहिती लिहू नका.</string>
+    <string name="report_submit">तक्रार पाठवा</string>
+    <string name="report_sending">पाठवत आहे…</string>
+    <string name="report_sent">धन्यवाद. तुमची तक्रार तपासणीसाठी पाठवली आहे.</string>
+    <string name="report_failed">तक्रार पाठवता आली नाही. तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.</string>
+    <string name="back">मागे</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">ही लिंक फसवणुकीची असू शकते</string>
+    <string name="interstitial_title_soft">या लिंकपासून सावध राहा</string>
+    <string name="interstitial_go_back">मागे जा</string>
+    <string name="interstitial_open_anyway">तरीही उघडा</string>
+    <string name="interstitial_checking">लिंक तपासत आहे…</string>
+    <string name="interstitial_upi_heading">UPI पैसे मागण्याची विनंती</string>
+    <string name="interstitial_upi_payee">कोणाला पैसे: %1$s</string>
+    <string name="interstitial_upi_amount">रक्कम: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">ही लिंक Play Store बाहेरून एक ॲप डाउनलोड करते. अशी बनावट ॲप तुमचे मेसेज वाचू शकतात आणि बँकेचे OTP चोरू शकतात.</string>
+    <string name="warn_brand_lookalike">ही वेबसाइट %1$s असल्याचे भासवत आहे. ही %1$s ची खरी वेबसाइट नाही.</string>
+    <string name="warn_upi_intent">ही लिंक तुम्हाला UPI ने पैसे पाठवायला सांगते. रिफंड, बक्षीस किंवा KYC अपडेटसाठी तुम्हाला कधीही पैसे भरावे लागत नाहीत.</string>
+    <string name="warn_weird_host">ही लिंक असा असामान्य पत्ता वापरते जो खऱ्या कंपन्या क्वचितच वापरतात.</string>
+    <string name="warn_weird_host_brand">या लिंकमध्ये %1$s चे नाव आहे, पण ती असा असामान्य पत्ता वापरते जो %1$s वापरत नाही.</string>
+    <string name="warn_reputation">ही वेबसाइट ओळखीच्या फसवणूक किंवा धोकादायक वेबसाइटच्या यादीत आहे.</string>
+    <plurals name="warn_community">
+        <item quantity="one">या आठवड्यात %d LinkGuard वापरकर्त्याने या लिंकची फसवणूक म्हणून तक्रार केली.</item>
+        <item quantity="other">या आठवड्यात %d LinkGuard वापरकर्त्यांनी या लिंकची फसवणूक म्हणून तक्रार केली.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">ही वेबसाइट %d दिवसापूर्वी बनली आहे. फसवणुकीच्या वेबसाइट बहुतेक वेळा अगदी नवीन असतात.</item>
+        <item quantity="other">ही वेबसाइट %d दिवसांपूर्वी बनली आहे. फसवणुकीच्या वेबसाइट बहुतेक वेळा अगदी नवीन असतात.</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard ला या लिंकमध्ये काहीतरी असामान्य आढळले.</string>
+</resources>

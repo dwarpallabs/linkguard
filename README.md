@@ -2,7 +2,7 @@
 
 LinkGuard is an open-source Android app that sits between the links you tap in WhatsApp, Telegram or SMS and your real browser.
 It checks each link on your phone in a fraction of a second. Safe links open straight away and you see nothing.
-If a link looks like a scam, you get one plain-language warning in English, Hindi or Tamil. LinkGuard never blocks: you can always choose "Open anyway".
+If a link looks like a scam, you get one plain-language warning in English or any of India's 22 official languages. LinkGuard never blocks: you can always choose "Open anyway".
 
 **LinkGuard is not a browser.** Android lists it as your "browser app" only so it can see links first; it never shows web pages and opens every link in the browser you already use (Chrome or any other), so your bookmarks, history, saved passwords and tabs stay exactly as they are.
 
@@ -17,13 +17,13 @@ If a link looks like a scam, you get one plain-language warning in English, Hind
 Fake bank and brand websites (SBI, HDFC, PhonePe, Paytm, India Post, IRCTC and more, including look-alike letters and typos), app downloads from outside the Play Store, UPI payment requests hidden behind links, raw-IP and throwaway addresses, brand-new websites, and known scam sites. Short links (bit.ly and others) are followed first so the real destination is checked.
 
 ## Install
-> **v0.2.2 is a pre-release.** Hindi and Tamil text is awaiting native review, the scam blocklist is still small, and community warnings need reports from several people before they appear.
+> **v0.2.2 is a pre-release.** Text in Indian languages is machine-translated (corrections welcome, see [Languages](#languages)), the scam blocklist is still small, and community warnings need reports from several people before they appear.
 
 1. Download `linkguard-0.2.2-foss.apk` from [Releases](https://github.com/dwarpallabs/linkguard/releases).
 2. Open it and allow "Install unknown apps" when Android asks.
 3. Open LinkGuard and tap **Set as default browser**. Pick the browser links should open in (Chrome is preselected).
 
-Android 8 or newer. Using Telegram? Turn off its in-app browser (Settings → Chat Settings → In-app browser) so LinkGuard can see links.
+Android 8 or newer. Apps like Telegram, Instagram, Facebook and LinkedIn often open links in their own in-app browser, where LinkGuard can't check them. Turn that off in the app's settings (Telegram: Settings → Chat Settings → In-app browser), or use the page menu's "Open in browser".
 
 ## Privacy
 LinkGuard never logs, stores or sends the links you open. No accounts, no ads, no analytics, no trackers. Most checks run entirely on your phone. It goes online only to:
@@ -45,6 +45,21 @@ In the app: Settings → **Report a link**. Reports go privately to Dwarpal Labs
 
 ## Where the lists live
 The scam blocklist and the safe-site allowlist are kept in the LinkGuard server database, not in this repository, so scammers cannot read them. Phones check the blocklist by 4-byte hash prefix and receive the allowlist as signed hashes. The detection rules (look-alike brands, app downloads, unusual addresses, UPI requests) are all here in the open.
+
+## Languages
+LinkGuard follows your phone's language. On Android 13 and newer you can also pick a language just for LinkGuard in *Settings → Apps → LinkGuard → Language*.
+
+English, Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili, Malayalam, Manipuri (Meetei Mayek), Marathi, Nepali, Odia, Punjabi, Sanskrit, Santali (Ol Chiki), Sindhi, Tamil, Telugu and Urdu.
+
+Every language except English is **machine-translated**, so some wording will be off. If something reads wrong, tell us the wrong words and how you would say them, whichever way is easiest:
+- the in-app screen: *Settings → Wrong translation? Tell us*
+- [the translation form on GitHub](https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml)
+- email [support@dwarpallabs.com](mailto:support@dwarpallabs.com)
+- a review on Google Play (once LinkGuard is listed there)
+
+Corrections go straight into `app/src/main/res/values-<language>/strings.xml`; pull requests are welcome too. `python3 scripts/check_strings.py` checks that a language file is complete.
+
+On Android 8–12, LinkGuard can only use a language the phone itself can be set to, and some phones don't offer every language (Bodo, Dogri or Santali, for example). Android 13 and newer can set any of these just for LinkGuard. Android has included fonts for every script used here, Ol Chiki and Meetei Mayek included, since Android 8.
 
 ## Contact
 Questions, bugs or privacy concerns: [support@dwarpallabs.com](mailto:support@dwarpallabs.com) or [open an issue](https://github.com/dwarpallabs/linkguard/issues).

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Konkani (kok). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard लिंक उगडचे आदीं ती तपासता</string>
+    <string name="onboarding_body">तुमी WhatsApp, Telegram वा SMS मजगतच्या लिंकाचेर टॅप करतात तेन्ना LinkGuard ती पयलीं तपासता. सुरक्षीत लिंक रोखडेंच तुमच्या ब्राउझरांत उगडटात. एखादी लिंक फटोवणेची दिसल्यार, तुमकां इशारो दिसतलो, आनी तरी लेगीत तुमी ती उगडूंक शकतात.</string>
+    <string name="onboarding_privacy">तुमी उगडिल्ल्यो लिंक LinkGuard केन्नाच सांबाळून दवरीना वा खंयच धाडीना. खंयचेंच अकाउंट नाका.</string>
+    <string name="your_browser">तुमचो ब्राउझर</string>
+    <string name="flow_link">तुमची लिंक</string>
+    <string name="flow_check">LinkGuard ती तपासता</string>
+    <string name="not_a_browser_title">LinkGuard ब्राउझर न्हय</string>
+    <string name="not_a_browser_body">LinkGuard केन्नाच वेब पान दाखयना. तो दर एक लिंक एका खिणांत तपासता आनी मागीर ती %1$s हांतूत उगडटा, म्हळ्यार तुमी आदल्यानूच वापरतात तोच ब्राउझर. तुमचे बुकमार्क, हिस्ट्री, सांबाळिल्ले पासवर्ड आनी टॅब आसात तशेच उरतात.</string>
+    <string name="default_explain">Android, LinkGuard क तुमचें “ब्राउझर ॲप” म्हणटलें. तें फकत LinkGuard क लिंक पयलीं पळोवंक मेळची म्हूण. दर एक लिंक तरी लेगीत %1$s हांतूतूच उगडटली.</string>
+
+    <string name="default_heading">पावल 1: LinkGuard क तुमचो डिफॉल्ट ब्राउझर करात</string>
+    <string name="default_done">LinkGuard तुमचो डिफॉल्ट ब्राउझर आसा</string>
+    <string name="default_button">डिफॉल्ट ब्राउझर करात</string>
+    <string name="default_hint">सेटिंग्ज उगडल्यार, “ब्राउझर ॲप” चेर टॅप करात आनी LinkGuard वेंचात.</string>
+
+    <string name="browser_heading">पावल 2: लिंक हातूंत उगडात</string>
+    <string name="browser_none">दुसरो खंयचोच ब्राउझर मेळ्ळो ना. Chrome सारको एखादो ब्राउझर इन्स्टॉल करात.</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook आनी LinkedIn सारकीं ॲपां चडशीं लिंक ॲपाभितरूच उगडटात, थंय LinkGuard तीं तपासूंक शकना. फटोवपी लिंकांपसून सुरक्षीत उरपाक त्या ॲपाच्या सेटिंगांत इन-ॲप ब्राउझर बंद करात (Telegram त: Settings → Chat Settings → In-app browser), वा ⋮ चेर टॅप करून “ब्राउझरांत उगडात” वेंचात.</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard कितें तपासता</string>
+    <string name="check_unwrap">ल्हान लिंक खंय वतात तें पळोवप</string>
+    <string name="check_unwrap_desc">bit.ly सारक्या सेवांक विचारता की ल्हान लिंक खरेंच खंय वता.</string>
+    <string name="check_apk_download">ॲप डाउनलोड</string>
+    <string name="check_brand_lookalike">फटीं बँक आनी ब्रँड वेबसायटी</string>
+    <string name="check_weird_host">विचित्र, असामान्य वेब पत्ते</string>
+    <string name="check_reputation">वळखीच्यो फटोवणेच्यो वेबसायटी</string>
+    <string name="check_domain_age">एकदम नव्यो वेबसायटी</string>
+    <string name="check_domain_age_desc">वेबसायट केन्ना तयार जाली हें अधिकृत रजिस्ट्रीक विचारता. फकत वेबसायटीचें नांव धाडटात, पुराय लिंक केन्नाच ना.</string>
+    <string name="check_upi_intent">UPI वयल्यान पयशे मागपाच्यो विनंत्यो</string>
+
+    <string name="settings_report">लिंकाची तक्रार करात</string>
+    <string name="settings_report_desc">LinkGuard क मेळूंक नाशिल्ल्या फटोवणेच्या लिंका विशीं आमकां सांगात.</string>
+    <string name="how_title">LinkGuard कशें काम करता</string>
+    <string name="how_desc">ताची गरज कित्याक, आनी खंयच्या लिंका विशीं इशारो दिवचो हें तो कशें थारायता.</string>
+    <string name="how_why_title">ताची गरज कित्याक</string>
+    <string name="how_why_body">WhatsApp आनी SMS वयल्या फटोवणेच्या मेसेजांनी चड करून खऱ्यो दिसपी लिंक आसतात: फटीं बँक पान, “KYC अपडेट” फॉर्म वा पयशे चोरपी ॲप. लुकसाण जावंक एक टॅप पुरो, आनी फटीं वेब पत्तो वळखप कठीण जावंक शकता.</string>
+    <string name="how_where_title">LinkGuard खंय आसता</string>
+    <string name="how_where_body">तुमी टॅप केल्ली लिंक आनी तुमचो ब्राउझर हांचे मदीं LinkGuard आसता. तो एका खिणांत लिंक तपासता, मागीर ती %1$s हांतूत उगडटा. तो स्वता केन्नाच वेब पान दाखयना.</string>
+    <string name="how_safe_title">सुरक्षीत लिंक रोखडेंच उगडटात</string>
+    <string name="how_safe_body">वळखीच्यो आनी अधिकृत वेबसायटी, जशो सरकारी (.gov.in) आनी बँकांच्यो वेबसायटी, रोखडेंच उगडटात. लिंक बरी दिसल्यार, तुमकां कांयच दिसना.</string>
+    <string name="how_scam_title">फटोवणेच्यो लिंक वळखप</string>
+    <string name="how_scam_body">फटोवपी वापरतात त्यो युक्त्यो LinkGuard सोदता: बँक वा वळखीचो ब्रँड आशिल्ल्याचें नाटक करपी वेबसायटी, Play Store भायल्यान ॲप डाउनलोड, लिपयल्ल्यो पयशे मागपाच्यो विनंत्यो, एकदम नव्यो वेबसायटी आनी असामान्य वेब पत्ते. सुमार 1,900 धोक्याच्या वेबसायटींच्या वळेरेंतूय तो तपासता. ही वळेरी एका व्हडा आंतरराष्ट्रीय सुरक्षा डेटाबेसांतल्यान घेतल्या आनी दर दीस अपडेट जाता.</string>
+    <string name="how_community_title">हेर वापरप्यांच्यो तक्रारी</string>
+    <string name="how_community_body">जेन्ना जायते LinkGuard वापरपी एकाच वेबसायटीची फटोवणी म्हूण तक्रार करतात, तेन्ना हेरांक जतनाय घेवपाचो इशारो दितात.</string>
+    <string name="how_choice_title">निर्णय सदांच तुमचो</string>
+    <string name="how_choice_body">LinkGuard केन्नाच खंयचीच लिंक आडायना. दर एक इशारो सोप्या उतरांनी अडचण सांगता आनी “तरी लेगीत उगडात” हो पर्याय दिता. तुमी उगडिल्ल्यो लिंक LinkGuard केन्नाच सांबाळून दवरीना.</string>
+    <string name="feedback_title">भाशांतर चुकलां? आमकां सांगात</string>
+    <string name="feedback_desc">LinkGuard चें भाशांतर मशीनान केलां. तुमच्या भाशेंतल्यो चुकी सुदारपाक मदत करात.</string>
+    <string name="feedback_intro">ह्या भाशेंतलो LinkGuard चो मजकूर मशीनान भाशांतर केला आनी तातूंत चुकी आसूंक शकतात. कितें चुकीचें दिसल्यार, चुकीचीं उतरां आनी तुमी तीं कशीं म्हणटात तें आमकां सांगात. जें सगळ्यांत सोपें तें वापरात:</string>
+    <string name="feedback_email">आमकां ईमेल करात</string>
+    <string name="feedback_github">GitHub चेर कळयात</string>
+    <string name="feedback_github_desc">हाचे खातीर फुकट GitHub अकाउंट जाय.</string>
+    <string name="feedback_play">Google Play चेर रिव्ह्यू बरयात</string>
+    <string name="about_title">LinkGuard विशीं</string>
+    <string name="about_desc">आवृत्ती, गुप्तताय धोरण, ओपन सोर्स आनी संपर्क.</string>
+    <string name="about_version">आवृत्ती %1$s</string>
+    <string name="about_by">Dwarpal Labs न केलां. LinkGuard स्वतंत्र आसा. खंयच्याच बँक, पेमेंट ॲप, कुरियर वा सरकारी संस्थेकडेन ताचो संबंद ना.</string>
+    <string name="about_privacy">गुप्तताय धोरण</string>
+    <string name="about_privacy_desc">तुमच्या फोनांतल्यान कितें भायर वता, आनी कित्याक.</string>
+    <string name="about_source">ओपन सोर्स</string>
+    <string name="about_source_desc">Apache-2.0 लायसन्सा खाला फुकट. GitHub चेर कोणूय कोड तपासूं शकता.</string>
+    <string name="about_contact">आमकां संपर्क करात</string>
+    <string name="about_credits">श्रेय</string>
+    <string name="about_credits_body">धोक्याच्यो वेबसायटी: abuse.ch चें URLhaus. लोकप्रिय वेबसायटी: Tranco वळेरी. वेबसायटींचीं नांवां: Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">लिंक</string>
+    <string name="report_note_label">ही फटोवणी अशें तुमकां कित्याक दिसता? (जाय जाल्यार)</string>
+    <string name="report_private_info">तुमची तक्रार खाजगी रितीन Dwarpal Labs कडेन वता आनी केन्नाच उजवाडाक हाडनात. जेन्ना जायते वेगवेगळे लोक एकाच वेबसायटीची तक्रार करतात, तेन्ना हेर LinkGuard वापरप्यांक आपसूक इशारो दिसता. तुमच्या तक्रारी वयल्यान तुमची वळख पटूंक शकना. उपकार करून फोन नंबर, नांवां वा हेर खाजगी माहिती बरोवंक नाकात.</string>
+    <string name="report_submit">तक्रार धाडात</string>
+    <string name="report_sending">धाडटात…</string>
+    <string name="report_sent">देव बरें करूं. तुमची तक्रार तपासणे खातीर धाडल्या.</string>
+    <string name="report_failed">तक्रार धाडूंक जाली ना. तुमचें इंटरनेट कनेक्शन तपासात आनी परतून यत्न करात.</string>
+    <string name="back">फाटीं</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">ही लिंक फटोवणेची आसूंक शकता</string>
+    <string name="interstitial_title_soft">ह्या लिंका कडेन जतनाय घेयात</string>
+    <string name="interstitial_go_back">फाटीं वचात</string>
+    <string name="interstitial_open_anyway">तरी लेगीत उगडात</string>
+    <string name="interstitial_checking">लिंक तपासतात…</string>
+    <string name="interstitial_upi_heading">UPI वयल्यान पयशे मागपाची विनंती</string>
+    <string name="interstitial_upi_payee">कोणाक पयशे: %1$s</string>
+    <string name="interstitial_upi_amount">रक्कम: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">ही लिंक Play Store भायल्यान एक ॲप डाउनलोड करता. अशीं फटीं ॲपां तुमचे मेसेज वाचूंक आनी बँकेचे OTP चोरूंक शकतात.</string>
+    <string name="warn_brand_lookalike">ही वेबसायट आपूण %1$s आसा अशें नाटक करता. ही %1$s ची खरी वेबसायट न्हय.</string>
+    <string name="warn_upi_intent">ही लिंक तुमकां UPI वयल्यान पयशे धाडूंक सांगता. रिफंड, इनाम वा KYC अपडेट मेळोवंक तुमकां केन्नाच पयशे भरचे पडनात.</string>
+    <string name="warn_weird_host">ही लिंक असो असामान्य पत्तो वापरता जो खऱ्यो कंपन्यो क्वचितच वापरतात.</string>
+    <string name="warn_weird_host_brand">ह्या लिंकांत %1$s चें नांव आसा, पूण ती असो असामान्य पत्तो वापरता जो %1$s वापरिना.</string>
+    <string name="warn_reputation">ही वेबसायट वळखीच्या फटोवणेच्या वा धोक्याच्या वेबसायटींच्या वळेरेंत आसा.</string>
+    <plurals name="warn_community">
+        <item quantity="other">ह्या सप्तकांत %d LinkGuard वापरप्यांनी ह्या लिंकाची फटोवणी म्हूण तक्रार केल्या.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="other">ही वेबसायट %d दिसां आदीं तयार जाल्या. फटोवणेच्यो वेबसायटी चड करून एकदम नव्यो आसतात.</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard क ह्या लिंकांत कितें तरी असामान्य मेळ्ळें.</string>
+</resources>

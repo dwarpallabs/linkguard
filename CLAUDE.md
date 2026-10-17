@@ -29,7 +29,7 @@ Open-source Android app that sits between links tapped in WhatsApp/Telegram/SMS 
 - Kotlin 2.x, Gradle Kotlin DSL, JUnit 5 for `core/`, Compose UI tests for `app/`.
 - Each check is a class implementing `Check { fun run(url: NormalisedUrl): Signal }`. Signals carry a score (0.0–1.0), a reason code and a user-facing message key.
 - Verdict = max of signals, not sum. Thresholds: < 0.3 forward silently, 0.3–0.7 soft warning, > 0.7 strong warning.
-- Strings in `values/`, `values-hi/`, `values-ta/`. Every user-facing message has all three.
+- Strings in `values/` (English) plus a `values-<lang>/` folder for each of India's 22 scheduled languages (three-letter codes as `values-b+brx` etc.). Every user-facing message exists in every folder; `scripts/check_strings.py` (run in CI) enforces it. Non-English text is machine-translated; corrections come from the community (in-app feedback screen, GitHub translation form, email, Play reviews).
 - Conventional commits. One milestone per PR.
 
 ## Workflow for Claude

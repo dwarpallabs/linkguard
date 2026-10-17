@@ -28,6 +28,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -35,6 +36,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
 import com.dwarpallabs.linkguard.browser.BrowserApp
@@ -70,6 +72,8 @@ fun HomeScreen(
     onToggleCheck: (CheckId, Boolean) -> Unit,
     onOpenHowItWorks: () -> Unit,
     onOpenReport: () -> Unit,
+    onOpenFeedback: () -> Unit,
+    onOpenAbout: () -> Unit,
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -168,6 +172,8 @@ fun HomeScreen(
                     modifier = Modifier.padding(16.dp),
                 )
             }
+            LinkRow(stringResource(R.string.feedback_title), stringResource(R.string.feedback_desc), onOpenFeedback, "open_feedback")
+            LinkRow(stringResource(R.string.about_title), stringResource(R.string.about_desc), onOpenAbout, "open_about")
             Spacer(Modifier.height(8.dp))
         }
     }
@@ -189,10 +195,11 @@ private fun NotABrowserCard(browserName: String) {
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 modifier = Modifier.semantics(mergeDescendants = true) {},
             ) {
+                val arrow = if (isRtl()) "←" else "→"
                 FlowStep("🔗", stringResource(R.string.flow_link))
-                Text("→", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(arrow, style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 FlowStep("🛡", stringResource(R.string.flow_check))
-                Text("→", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(arrow, style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 FlowStep("🌐", browserName)
             }
             Text(
@@ -242,8 +249,12 @@ private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes descripti
     }
 }
 
+/** True for right-to-left languages (Urdu, Kashmiri, Sindhi), where arrows and chevrons point the other way. */
 @Composable
-private fun LinkRow(title: String, subtitle: String, onClick: () -> Unit, tag: String) {
+internal fun isRtl(): Boolean = LocalLayoutDirection.current == LayoutDirection.Rtl
+
+@Composable
+internal fun LinkRow(title: String, subtitle: String, onClick: () -> Unit, tag: String) {
     Column(
         Modifier
             .fillMaxWidth()
@@ -251,7 +262,7 @@ private fun LinkRow(title: String, subtitle: String, onClick: () -> Unit, tag: S
             .padding(vertical = 10.dp)
             .testTag(tag),
     ) {
-        Text(title + "  ›", style = MaterialTheme.typography.titleMedium)
+        Text(title + if (isRtl()) "  ‹" else "  ›", style = MaterialTheme.typography.titleMedium)
         Text(subtitle, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
@@ -275,7 +286,7 @@ private fun HomePreview() {
             browsers = listOf(BrowserApp("com.android.chrome", "Chrome"), BrowserApp("org.mozilla.firefox", "Firefox")),
             selected = "com.android.chrome",
             disabledChecks = setOf(CheckId.DOMAIN_AGE),
-            onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {},
+            onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
         )
     }
 }

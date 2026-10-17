@@ -1,0 +1,106 @@
+<resources>
+    <!-- Malayalam (ml). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">ലിങ്ക് തുറക്കുന്നതിന് മുമ്പ് LinkGuard അത് പരിശോധിക്കും</string>
+    <string name="onboarding_body">WhatsApp, Telegram അല്ലെങ്കിൽ SMS-ൽ നിങ്ങൾ ഒരു ലിങ്കിൽ തൊടുമ്പോൾ, LinkGuard ആദ്യം അത് പരിശോധിക്കും. കുഴപ്പമില്ലാത്ത ലിങ്കുകൾ ഉടനെ നിങ്ങളുടെ ബ്രൗസറിൽ തുറക്കും. ഒരു ലിങ്ക് തട്ടിപ്പ് പോലെ തോന്നിയാൽ, നിങ്ങൾക്ക് ഒരു മുന്നറിയിപ്പ് കാണാം. എന്നിട്ടും അത് തുറക്കണോ എന്ന് നിങ്ങൾക്ക് തീരുമാനിക്കാം.</string>
+    <string name="onboarding_privacy">നിങ്ങൾ തുറക്കുന്ന ലിങ്കുകൾ LinkGuard ഒരിക്കലും സൂക്ഷിക്കുകയോ ആർക്കും അയയ്ക്കുകയോ ചെയ്യില്ല. അക്കൗണ്ട് വേണ്ട.</string>
+    <string name="your_browser">നിങ്ങളുടെ ബ്രൗസർ</string>
+    <string name="flow_link">നിങ്ങളുടെ ലിങ്ക്</string>
+    <string name="flow_check">LinkGuard അത് പരിശോധിക്കുന്നു</string>
+    <string name="not_a_browser_title">LinkGuard ഒരു ബ്രൗസർ അല്ല</string>
+    <string name="not_a_browser_body">LinkGuard ഒരിക്കലും വെബ് പേജുകൾ കാണിക്കില്ല. ഓരോ ലിങ്കും ഒരു നിമിഷം കൊണ്ട് പരിശോധിച്ച്, അത് %1$s-ൽ തുറക്കും, അതായത് നിങ്ങൾ ഇപ്പോൾ ഉപയോഗിക്കുന്ന ബ്രൗസറിൽ തന്നെ. നിങ്ങളുടെ ബുക്ക്മാർക്കുകൾ, ഹിസ്റ്ററി, സേവ് ചെയ്ത പാസ്‌വേഡുകൾ, ടാബുകൾ എല്ലാം ഇപ്പോഴുള്ളതുപോലെ തന്നെ ഇരിക്കും.</string>
+    <string name="default_explain">Android, LinkGuard-നെ നിങ്ങളുടെ “ബ്രൗസർ ആപ്പ്” എന്ന് കാണിക്കും. LinkGuard-ന് ലിങ്കുകൾ ആദ്യം കാണാൻ വേണ്ടി മാത്രമാണ് അത്. ഓരോ ലിങ്കും ഇപ്പോഴും %1$s-ൽ തന്നെ തുറക്കും.</string>
+
+    <string name="default_heading">ഘട്ടം 1: LinkGuard-നെ നിങ്ങളുടെ ഡിഫോൾട്ട് ബ്രൗസർ ആക്കുക</string>
+    <string name="default_done">LinkGuard ആണ് നിങ്ങളുടെ ഡിഫോൾട്ട് ബ്രൗസർ</string>
+    <string name="default_button">ഡിഫോൾട്ട് ബ്രൗസർ ആക്കുക</string>
+    <string name="default_hint">സെറ്റിങ്സ് തുറന്നാൽ, “ബ്രൗസർ ആപ്പ്” തൊട്ട് LinkGuard തിരഞ്ഞെടുക്കുക.</string>
+
+    <string name="browser_heading">ഘട്ടം 2: ലിങ്കുകൾ ഇതിൽ തുറക്കുക</string>
+    <string name="browser_none">വേറെ ബ്രൗസർ ഒന്നും കണ്ടില്ല. Chrome പോലുള്ള ഒരു ബ്രൗസർ ഇൻസ്റ്റാൾ ചെയ്യുക.</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook, LinkedIn പോലുള്ള ആപ്പുകൾ പലപ്പോഴും ലിങ്കുകൾ ആപ്പിന്റെ ഉള്ളിൽ തന്നെ തുറക്കും. അവിടെ LinkGuard-ന് അവ പരിശോധിക്കാൻ കഴിയില്ല. തട്ടിപ്പ് ലിങ്കുകളിൽ നിന്ന് രക്ഷപ്പെടാൻ, ആ ആപ്പിന്റെ സെറ്റിംഗ്സിൽ ഉള്ളിലെ ബ്രൗസർ ഓഫ് ചെയ്യുക (Telegram-ൽ: Settings → Chat Settings → In-app browser), അല്ലെങ്കിൽ ⋮ തൊട്ട് “ബ്രൗസറിൽ തുറക്കുക” തിരഞ്ഞെടുക്കുക.</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard എന്തൊക്കെ പരിശോധിക്കുന്നു</string>
+    <string name="check_unwrap">ചെറിയ ലിങ്കുകൾ എവിടേക്ക് പോകുന്നു എന്ന് നോക്കുക</string>
+    <string name="check_unwrap_desc">ചെറിയ ലിങ്ക് ശരിക്കും എവിടേക്കാണ് പോകുന്നത് എന്ന് bit.ly പോലുള്ള സേവനങ്ങളോട് ചോദിക്കുന്നു.</string>
+    <string name="check_apk_download">ആപ്പ് ഡൗൺലോഡുകൾ</string>
+    <string name="check_brand_lookalike">വ്യാജ ബാങ്ക്, ബ്രാൻഡ് വെബ്സൈറ്റുകൾ</string>
+    <string name="check_weird_host">പതിവില്ലാത്ത വെബ് വിലാസങ്ങൾ</string>
+    <string name="check_reputation">അറിയപ്പെടുന്ന തട്ടിപ്പ് വെബ്സൈറ്റുകൾ</string>
+    <string name="check_domain_age">പുതുതായി തുടങ്ങിയ വെബ്സൈറ്റുകൾ</string>
+    <string name="check_domain_age_desc">വെബ്സൈറ്റ് എപ്പോൾ തുടങ്ങി എന്ന് ഔദ്യോഗിക രജിസ്ട്രിയോട് ചോദിക്കുന്നു. വെബ്സൈറ്റിന്റെ പേര് മാത്രമേ അയയ്ക്കൂ, മുഴുവൻ ലിങ്ക് ഒരിക്കലും അയയ്ക്കില്ല.</string>
+    <string name="check_upi_intent">UPI വഴി പണം ചോദിക്കൽ</string>
+
+    <string name="settings_report">ഒരു ലിങ്ക് റിപ്പോർട്ട് ചെയ്യുക</string>
+    <string name="settings_report_desc">LinkGuard പിടിക്കാതെ വിട്ട തട്ടിപ്പ് ലിങ്കിനെക്കുറിച്ച് ഞങ്ങളോട് പറയൂ.</string>
+    <string name="how_title">LinkGuard എങ്ങനെ പ്രവർത്തിക്കുന്നു</string>
+    <string name="how_desc">ഇത് നിങ്ങൾക്ക് എന്തിന് വേണം, ഏതൊക്കെ ലിങ്കുകളെക്കുറിച്ച് മുന്നറിയിപ്പ് നൽകണമെന്ന് ഇത് എങ്ങനെ തീരുമാനിക്കുന്നു.</string>
+    <string name="how_why_title">ഇത് എന്തിന് വേണം</string>
+    <string name="how_why_body">WhatsApp-ലും SMS-ലും വരുന്ന തട്ടിപ്പ് മെസേജുകളിൽ പലപ്പോഴും ശരിയെന്ന് തോന്നുന്ന ലിങ്കുകൾ ഉണ്ടാകും: വ്യാജ ബാങ്ക് പേജ്, “KYC അപ്ഡേറ്റ്” ഫോം, അല്ലെങ്കിൽ പണം മോഷ്ടിക്കുന്ന ആപ്പ്. ഒറ്റ തൊടൽ മതി ദോഷം വരാൻ. വ്യാജ വെബ് വിലാസം തിരിച്ചറിയാൻ പ്രയാസമായിരിക്കും.</string>
+    <string name="how_where_title">LinkGuard എവിടെയാണ് ഇരിക്കുന്നത്</string>
+    <string name="how_where_body">നിങ്ങൾ തൊടുന്ന ലിങ്കിനും നിങ്ങളുടെ ബ്രൗസറിനും ഇടയിലാണ് LinkGuard ഇരിക്കുന്നത്. അത് ലിങ്ക് ഒരു നിമിഷം കൊണ്ട് പരിശോധിച്ച്, %1$s-ൽ തുറക്കുന്നു. അത് സ്വയം ഒരിക്കലും വെബ് പേജുകൾ കാണിക്കില്ല.</string>
+    <string name="how_safe_title">കുഴപ്പമില്ലാത്ത ലിങ്കുകൾ ഉടനെ തുറക്കും</string>
+    <string name="how_safe_body">എല്ലാവർക്കും അറിയാവുന്ന വെബ്സൈറ്റുകളും, സർക്കാർ (.gov.in), ബാങ്ക് വെബ്സൈറ്റുകൾ പോലുള്ള ഔദ്യോഗിക വെബ്സൈറ്റുകളും ഉടനെ തുറക്കും. ലിങ്കിൽ പ്രശ്നമൊന്നും തോന്നിയില്ലെങ്കിൽ, നിങ്ങൾ ഒന്നും കാണില്ല.</string>
+    <string name="how_scam_title">തട്ടിപ്പ് ലിങ്കുകൾ കണ്ടെത്തൽ</string>
+    <string name="how_scam_body">തട്ടിപ്പുകാർ ഉപയോഗിക്കുന്ന സൂത്രങ്ങൾ LinkGuard നോക്കുന്നു: ബാങ്കോ അറിയപ്പെടുന്ന ബ്രാൻഡോ ആണെന്ന് നടിക്കുന്ന വെബ്സൈറ്റുകൾ, Play Store-ന് പുറത്തുനിന്നുള്ള ആപ്പ് ഡൗൺലോഡുകൾ, ഒളിപ്പിച്ചുവെച്ച പണം ചോദിക്കലുകൾ, പുതുതായി തുടങ്ങിയ വെബ്സൈറ്റുകൾ, പതിവില്ലാത്ത വെബ് വിലാസങ്ങൾ. ലോകത്തിലെ ഒരു പ്രമുഖ സുരക്ഷാ ഡാറ്റാബേസിൽ നിന്ന് എടുത്ത, ദോഷം ചെയ്യുന്ന ഏകദേശം 1,900 വെബ്സൈറ്റുകളുടെ ഒരു ലിസ്റ്റും ഇത് പരിശോധിക്കുന്നു. ഈ ലിസ്റ്റ് എല്ലാ ദിവസവും പുതുക്കുന്നു.</string>
+    <string name="how_community_title">മറ്റ് ഉപയോക്താക്കളുടെ റിപ്പോർട്ടുകൾ</string>
+    <string name="how_community_body">പല LinkGuard ഉപയോക്താക്കൾ ഒരേ വെബ്സൈറ്റ് തട്ടിപ്പാണെന്ന് റിപ്പോർട്ട് ചെയ്യുമ്പോൾ, മറ്റുള്ളവർക്ക് ശ്രദ്ധിക്കാൻ മുന്നറിയിപ്പ് കിട്ടും.</string>
+    <string name="how_choice_title">തീരുമാനം എപ്പോഴും നിങ്ങളുടേത്</string>
+    <string name="how_choice_body">LinkGuard ഒരിക്കലും ഒരു ലിങ്കും തടയില്ല. ഓരോ മുന്നറിയിപ്പും പ്രശ്നം ലളിതമായ വാക്കുകളിൽ പറയുകയും “എന്നാലും തുറക്കുക” എന്ന ഓപ്ഷൻ നൽകുകയും ചെയ്യുന്നു. നിങ്ങൾ തുറക്കുന്ന ലിങ്കുകൾ LinkGuard ഒരിക്കലും സൂക്ഷിക്കില്ല.</string>
+    <string name="feedback_title">തർജ്ജമ തെറ്റാണോ? ഞങ്ങളോട് പറയൂ</string>
+    <string name="feedback_desc">LinkGuard കമ്പ്യൂട്ടർ ഉപയോഗിച്ചാണ് തർജ്ജമ ചെയ്തത്. നിങ്ങളുടെ ഭാഷയിലെ തെറ്റുകൾ തിരുത്താൻ സഹായിക്കൂ.</string>
+    <string name="feedback_intro">ഈ ഭാഷയിലുള്ള LinkGuard-ന്റെ വാക്കുകൾ കമ്പ്യൂട്ടർ ഉപയോഗിച്ചാണ് തർജ്ജമ ചെയ്തത്, അതിൽ തെറ്റുകൾ ഉണ്ടാകാം. എന്തെങ്കിലും തെറ്റായി തോന്നിയാൽ, തെറ്റായ വാക്കുകളും നിങ്ങൾ അത് എങ്ങനെ പറയുമെന്നും ഞങ്ങളോട് പറയൂ. നിങ്ങൾക്ക് ഏറ്റവും എളുപ്പമുള്ളത് ഉപയോഗിക്കൂ:</string>
+    <string name="feedback_email">ഞങ്ങൾക്ക് ഇമെയിൽ അയയ്ക്കൂ</string>
+    <string name="feedback_github">GitHub-ൽ റിപ്പോർട്ട് ചെയ്യൂ</string>
+    <string name="feedback_github_desc">സൗജന്യ GitHub അക്കൗണ്ട് വേണം.</string>
+    <string name="feedback_play">Google Play-ൽ ഒരു റിവ്യൂ എഴുതൂ</string>
+    <string name="about_title">LinkGuard-നെക്കുറിച്ച്</string>
+    <string name="about_desc">പതിപ്പ്, സ്വകാര്യതാ നയം, ഓപ്പൺ സോഴ്സ്, ബന്ധപ്പെടാൻ.</string>
+    <string name="about_version">പതിപ്പ് %1$s</string>
+    <string name="about_by">Dwarpal Labs ഉണ്ടാക്കിയത്. LinkGuard സ്വതന്ത്രമാണ്. ഒരു ബാങ്കുമായോ പേയ്‌മെന്റ് ആപ്പുമായോ കൊറിയറുമായോ സർക്കാർ സ്ഥാപനവുമായോ ഇതിന് ബന്ധമില്ല.</string>
+    <string name="about_privacy">സ്വകാര്യതാ നയം</string>
+    <string name="about_privacy_desc">നിങ്ങളുടെ ഫോണിൽ നിന്ന് എന്താണ് പുറത്തുപോകുന്നത്, എന്തിന്.</string>
+    <string name="about_source">ഓപ്പൺ സോഴ്സ്</string>
+    <string name="about_source_desc">Apache-2.0 ലൈസൻസ് പ്രകാരം സൗജന്യം. ആർക്കും GitHub-ൽ ഇതിന്റെ കോഡ് പരിശോധിക്കാം.</string>
+    <string name="about_contact">ഞങ്ങളെ ബന്ധപ്പെടുക</string>
+    <string name="about_credits">നന്ദി</string>
+    <string name="about_credits_body">അറിയപ്പെടുന്ന ദോഷകരമായ വെബ്സൈറ്റുകൾ: abuse.ch-ന്റെ URLhaus. ജനപ്രിയ വെബ്സൈറ്റുകൾ: Tranco ലിസ്റ്റ്. വെബ്സൈറ്റ് പേരുകൾ: Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">ലിങ്ക്</string>
+    <string name="report_note_label">ഇത് തട്ടിപ്പാണെന്ന് നിങ്ങൾക്ക് എന്തുകൊണ്ട് തോന്നുന്നു? (എഴുതണമെന്നില്ല)</string>
+    <string name="report_private_info">നിങ്ങളുടെ റിപ്പോർട്ട് രഹസ്യമായി Dwarpal Labs-ലേക്ക് പോകും, അത് ഒരിക്കലും പുറത്ത് പ്രസിദ്ധീകരിക്കില്ല. പല വ്യത്യസ്ത ആളുകൾ ഒരേ വെബ്സൈറ്റ് റിപ്പോർട്ട് ചെയ്യുമ്പോൾ, മറ്റ് LinkGuard ഉപയോക്താക്കൾക്ക് തനിയെ മുന്നറിയിപ്പ് കാണാം. ഈ റിപ്പോർട്ട് നിങ്ങളുടേതാണെന്ന് ആർക്കും കണ്ടെത്താനാവില്ല. ദയവായി ഫോൺ നമ്പറുകൾ, പേരുകൾ അല്ലെങ്കിൽ മറ്റ് സ്വകാര്യ വിവരങ്ങൾ ചേർക്കരുത്.</string>
+    <string name="report_submit">റിപ്പോർട്ട് അയയ്ക്കുക</string>
+    <string name="report_sending">അയയ്ക്കുന്നു…</string>
+    <string name="report_sent">നന്ദി. നിങ്ങളുടെ റിപ്പോർട്ട് പരിശോധനയ്ക്കായി അയച്ചു.</string>
+    <string name="report_failed">റിപ്പോർട്ട് അയയ്ക്കാൻ കഴിഞ്ഞില്ല. നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ നോക്കി വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="back">തിരികെ</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">ഈ ലിങ്ക് ഒരു തട്ടിപ്പ് ആകാം</string>
+    <string name="interstitial_title_soft">ഈ ലിങ്ക് സൂക്ഷിക്കുക</string>
+    <string name="interstitial_go_back">തിരികെ പോകുക</string>
+    <string name="interstitial_open_anyway">എന്നാലും തുറക്കുക</string>
+    <string name="interstitial_checking">ലിങ്ക് പരിശോധിക്കുന്നു…</string>
+    <string name="interstitial_upi_heading">UPI വഴി പണം ചോദിക്കുന്നു</string>
+    <string name="interstitial_upi_payee">ആർക്ക്: %1$s</string>
+    <string name="interstitial_upi_amount">തുക: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">ഈ ലിങ്ക് Play Store-ന് പുറത്തുനിന്ന് ഒരു ആപ്പ് ഡൗൺലോഡ് ചെയ്യുന്നു. ഇത്തരം വ്യാജ ആപ്പുകൾക്ക് നിങ്ങളുടെ മെസേജുകൾ വായിക്കാനും ബാങ്ക് OTP-കൾ മോഷ്ടിക്കാനും കഴിയും.</string>
+    <string name="warn_brand_lookalike">ഈ വെബ്സൈറ്റ് %1$s ആണെന്ന് നടിക്കുന്നു. ഇത് %1$s-ന്റെ യഥാർത്ഥ വെബ്സൈറ്റ് അല്ല.</string>
+    <string name="warn_upi_intent">ഈ ലിങ്ക് UPI വഴി പണം അയയ്ക്കാൻ ആവശ്യപ്പെടുന്നു. റീഫണ്ടോ സമ്മാനമോ KYC അപ്ഡേറ്റോ കിട്ടാൻ നിങ്ങൾ ഒരിക്കലും പണം അടയ്ക്കേണ്ടതില്ല.</string>
+    <string name="warn_weird_host">യഥാർത്ഥ കമ്പനികൾ അപൂർവമായി മാത്രം ഉപയോഗിക്കുന്ന ഒരു പതിവില്ലാത്ത വിലാസമാണ് ഈ ലിങ്കിന്.</string>
+    <string name="warn_weird_host_brand">ഈ ലിങ്കിൽ %1$s എന്ന പേരുണ്ട്, പക്ഷേ %1$s ഉപയോഗിക്കാത്ത ഒരു പതിവില്ലാത്ത വിലാസമാണ് ഇതിന്.</string>
+    <string name="warn_reputation">അറിയപ്പെടുന്ന തട്ടിപ്പ് അല്ലെങ്കിൽ ദോഷകരമായ വെബ്സൈറ്റുകളുടെ ലിസ്റ്റിൽ ഈ വെബ്സൈറ്റ് ഉണ്ട്.</string>
+    <plurals name="warn_community">
+        <item quantity="one">ഈ ആഴ്ച %d LinkGuard ഉപയോക്താവ് ഈ ലിങ്ക് തട്ടിപ്പാണെന്ന് റിപ്പോർട്ട് ചെയ്തു.</item>
+        <item quantity="other">ഈ ആഴ്ച %d LinkGuard ഉപയോക്താക്കൾ ഈ ലിങ്ക് തട്ടിപ്പാണെന്ന് റിപ്പോർട്ട് ചെയ്തു.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">ഈ വെബ്സൈറ്റ് %d ദിവസം മുമ്പാണ് ഉണ്ടാക്കിയത്. തട്ടിപ്പ് വെബ്സൈറ്റുകൾ പലപ്പോഴും പുതിയതായിരിക്കും.</item>
+        <item quantity="other">ഈ വെബ്സൈറ്റ് %d ദിവസം മുമ്പാണ് ഉണ്ടാക്കിയത്. തട്ടിപ്പ് വെബ്സൈറ്റുകൾ പലപ്പോഴും പുതിയതായിരിക്കും.</item>
+    </plurals>
+    <string name="warn_generic">ഈ ലിങ്കിൽ LinkGuard എന്തോ പതിവില്ലാത്തത് കണ്ടു.</string>
+</resources>

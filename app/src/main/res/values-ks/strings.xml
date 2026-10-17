@@ -1,0 +1,106 @@
+<resources>
+    <!-- Kashmiri (ks). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard چھُ لِنکن یَلہٕ گژھنہٕ برونٛہہ جانچ کران</string>
+    <string name="onboarding_body">ییٚلہِ تُہۍ WhatsApp، Telegram یا SMS منٛز کُنہِ لِنکس پؠٹھ ٹیپ کٔرِو، LinkGuard چھُ گۄڈٕ سُہ جانچ کران۔ محفوظ لِنک چھِ سیٚدٕ تُہٕنٛدِس براوزرس منٛز یَلہٕ گژھان۔ اگر کانٛہہ لِنک دوکھہٕ باسہِ، تُہۍ وُچھِو خبردٲری، تہٕ تُہۍ ہیٚکِو سُہ تیٚلہِ تہِ یَلہٕ کٔرِتھ۔</string>
+    <string name="onboarding_privacy">LinkGuard چھُنہٕ تُہٕنٛدۍ یَلہٕ کرنہٕ آمِتۍ لِنک زانٛہہ تہِ محفوظ تھاوان تہٕ نہٕ کُنہِ سوزان۔ کانٛہہ اکاؤنٹ چھُنہٕ ضروری۔</string>
+    <string name="your_browser">تُہُنٛد براوزر</string>
+    <string name="flow_link">تُہُنٛد لِنک</string>
+    <string name="flow_check">LinkGuard چھُ جانچ کران</string>
+    <string name="not_a_browser_title">LinkGuard چھُنہٕ براوزر</string>
+    <string name="not_a_browser_body">LinkGuard چھُنہٕ زانٛہہ تہِ ویب پیج ہاوان۔ یہِ چھُ پرٛؠتھ لِنک اَکِس لمحس منٛز جانچ کران تہٕ پتہٕ چھُ سُہ %1$s منٛز یَلہٕ کران، سُے براوزر یُس تُہۍ گۄڈٕ پؠٹھے استعمال چھِو کران۔ تُہٕنٛدۍ بُک مارک، ہسٹری، محفوظ پاس ورڈ تہٕ ٹیب چھِ بِلکُل تِتھۍ پٲٹھۍ روزان۔</string>
+    <string name="default_explain">Android ونہِ LinkGuard تُہٕنٛز “براوزر ایپ”۔ یہِ چھُ صِرف امہِ موجوب تاکہ LinkGuard ہیٚکہِ لِنک گۄڈٕ وُچھِتھ۔ پرٛؠتھ لِنک گژھہِ تیٚلہِ تہِ %1$s منٛزے یَلہٕ۔</string>
+
+    <string name="default_heading">قدم 1: LinkGuard بنٲوِو پنُن ڈیفالٹ براوزر</string>
+    <string name="default_done">LinkGuard چھُ تُہُنٛد ڈیفالٹ براوزر</string>
+    <string name="default_button">ڈیفالٹ براوزر بنٲوِو</string>
+    <string name="default_hint">اگر سیٹنگز یَلہٕ گژھن، “براوزر ایپ” پؠٹھ کٔرِو ٹیپ تہٕ ژٲرِو LinkGuard۔</string>
+
+    <string name="browser_heading">قدم 2: لِنک یَلہٕ کٔرِو یتھ منٛز</string>
+    <string name="browser_none">بیٚیہ کانٛہہ براوزر میول نہٕ۔ Chrome ہیوٚو کانٛہہ براوزر کٔرِو انسٹال۔</string>
+
+    <string name="telegram_tip">Telegram، Instagram، Facebook تہٕ LinkedIn ہِوۍ ایپ چھےٚ اکثر لِنک ایپہٕ اندرٕے کھولان، یتہِ LinkGuard تِمن جانچ ہیٚکہِ نہٕ کٔرِتھ۔ دوکھہٕ وٲلؠن لِنکن نِشہِ بچنہٕ خٲطرٕ کٔرِو تَمہِ ایپہٕ کِس سیٹِنگس منٛز اندرٕمیُک براوزر بنٛد (Telegram منٛز: Settings → Chat Settings → In-app browser)، یا ⋮ پؠٹھ کٔرِو ٹیپ تہٕ ژٲرِو “براوزرس منٛز کھولِو”۔</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard کیاہ چھُ جانچان</string>
+    <string name="check_unwrap">لۄکٕٹۍ لِنک یَلہٕ کٔرِتھ وُچھِو</string>
+    <string name="check_unwrap_desc">bit.ly ہِیَن سروسن چھُ پرٛژھان زِ لۄکُٹ لِنک کۆت چھُ اصل منٛز گژھان۔</string>
+    <string name="check_apk_download">ایپ ڈاؤن لوڈ</string>
+    <string name="check_brand_lookalike">نقلی بینک تہٕ برانڈ ویب سایٹ</string>
+    <string name="check_weird_host">عجیب ویب پتہٕ</string>
+    <string name="check_reputation">زانٛنہٕ آمِتۍ دوکھہٕ باز ویب سایٹ</string>
+    <string name="check_domain_age">بِلکُل نٔوۍ ویب سایٹ</string>
+    <string name="check_domain_age_desc">باقاعدٕ رجسٹری چھُ پرٛژھان زِ ویب سایٹ کر بنیوو۔ صِرف ویب سایٹُک ناو چھُ سوزنہٕ یِوان، پوٗرٕ لِنک زانٛہہ تہِ نہٕ۔</string>
+    <string name="check_upi_intent">UPI ادائیگی ہٕنٛدۍ مطالبہٕ</string>
+
+    <string name="settings_report">لِنکٕچ شکایت کٔرِو</string>
+    <string name="settings_report_desc">اسہِ ؤنِو تمہِ دوکھہٕ باز لِنکہٕ بابت یُس LinkGuard رٹِتھ ہیوٚک نہٕ۔</string>
+    <string name="how_title">LinkGuard کِتھہٕ پٲٹھۍ چھُ کٲم کران</string>
+    <string name="how_desc">امیُک ضرورت کیازِ چھُ، تہٕ یہِ کِتھہٕ پٲٹھۍ چھُ فیصلہٕ کران زِ کُس لِنکن پؠٹھ خبردٲری دِنۍ چھےٚ۔</string>
+    <string name="how_why_title">امیُک ضرورت کیازِ</string>
+    <string name="how_why_body">WhatsApp تہٕ SMS پؠٹھ دوکھہٕ بازن ہٕنٛدِ میسجن منٛز چھِ اکثر تِتھۍ لِنک آسان یِم اصلی باسان چھِ: نقلی بینک پیج، “KYC اپڈیٹ” فارم یا پونٛسہٕ چوری کرَن وٲلۍ ایپ۔ نقصانہٕ خٲطرٕ چھُ اکھ ٹیپ کٲفی، تہٕ نقلی ویب پتہٕ پرٛزنَاوُن ہیٚکہِ مُشکل ٲسِتھ۔</string>
+    <string name="how_where_title">LinkGuard کۆت چھُ کٲم کران</string>
+    <string name="how_where_body">LinkGuard چھُ تُہٕنٛدِس ٹیپ کرنہٕ آمتِس لِنکس تہٕ تُہٕنٛدِس براوزرس درمیان روزان۔ یہِ چھُ اَکِس لمحس منٛز لِنک جانچ کران، پتہٕ چھُ سُہ %1$s منٛز یَلہٕ کران۔ یہِ چھُنہٕ پانہٕ زانٛہہ تہِ ویب پیج ہاوان۔</string>
+    <string name="how_safe_title">محفوظ لِنک چھِ فوراً یَلہٕ گژھان</string>
+    <string name="how_safe_body">زانٛنہٕ آمِتۍ تہٕ سرکٲری ویب سایٹ، یِتھہٕ کٔنۍ سرکار (.gov.in) تہٕ بینکن ہٕنٛدۍ ویب سایٹ، چھِ فوراً یَلہٕ گژھان۔ اگر لِنک ٹھیک باسہِ، تُہۍ وُچھِو نہٕ کہِنٛہہ تہِ۔</string>
+    <string name="how_scam_title">دوکھہٕ باز لِنکن ہٕنٛز پرٛزنتھ</string>
+    <string name="how_scam_body">LinkGuard چھُ دوکھہٕ بازن ہٕنٛدۍ چال ژھانڈان: بینک یا کانٛہہ مشہور برانڈ ٲسنُک ڈھونگ کرَن وٲلۍ ویب سایٹ، Play Store نیٚبرٕ ایپ ڈاؤن لوڈ، چھُپیمتۍ ادائیگی ہٕنٛدۍ مطالبہٕ، بِلکُل نٔوۍ ویب سایٹ تہٕ عجیب ویب پتہٕ۔ یہِ چھُ لگ بگ 1,900 زانٛنہٕ آمژٕ نقصان دہ ویب سایٹن ہٕنٛزِ اَکہِ فہرستِ سٟتۍ تہِ مِلان کران، یۄسہٕ اَکہِ بٔڈِ بین الاقوامی سیکیورٹی ڈیٹابیسہٕ پؠٹھ ہیٚنہٕ آمٕژ چھےٚ تہٕ پرٛؠتھ دۄہ اپڈیٹ چھےٚ گژھان۔</string>
+    <string name="how_community_title">بیٚین استعمال کرَن وٲلین ہٕنٛزٕ شکایژ</string>
+    <string name="how_community_body">ییٚلہِ واریاہ LinkGuard استعمال کرَن وٲلۍ اَکے ویب سایٹ دوکھہٕ ؤنِتھ شکایت کران چھِ، بیٚین چھےٚ ہوشیار روزنٕچ خبردٲری دِنہٕ یِوان۔</string>
+    <string name="how_choice_title">فیصلہٕ چھُ ہمیشہ تُہُنٛد</string>
+    <string name="how_choice_body">LinkGuard چھُنہٕ زانٛہہ تہِ کانٛہہ لِنک روکان۔ پرٛؠتھ خبردٲری چھےٚ سادٕ لفظن منٛز مسلہٕ وَنان تہٕ “تیٚلہِ تہِ یَلہٕ کٔرِو” ہُک اختیار دِوان۔ LinkGuard چھُنہٕ تُہٕنٛدۍ یَلہٕ کرنہٕ آمِتۍ لِنک زانٛہہ تہِ محفوظ تھاوان۔</string>
+    <string name="feedback_title">ترجمہٕ غلط؟ اسہِ ؤنِو</string>
+    <string name="feedback_desc">LinkGuard چھُ مشینہِ ترجمہٕ کوٚرمُت۔ پننہِ زبٲنۍ ہٕنٛزٕ غلطیہٕ ٹھیک کرنس منٛز کٔرِو مدد۔</string>
+    <string name="feedback_intro">یمہِ زبٲنۍ منٛز چھُ LinkGuard ہُک متن مشینہِ ترجمہٕ کوٚرمُت تہٕ امہِ منٛز ہیٚکن غلطیہٕ ٲسِتھ۔ اگر کہِنٛہہ غلط باسہِ، اسہِ ؤنِو غلط لفظ تہٕ یہِ تہِ زِ تُہۍ کِتھہٕ پٲٹھۍ ونِہِو۔ یُس سارِوٕے کھوتہٕ آسان آسہِ، سُہ کٔرِو استعمال:</string>
+    <string name="feedback_email">اسہِ کٔرِو ای میل</string>
+    <string name="feedback_github">GitHub پؠٹھ ؤنِو</string>
+    <string name="feedback_github_desc">امہِ خٲطرٕ چھُ مُفت GitHub اکاؤنٹ ضروری۔</string>
+    <string name="feedback_play">Google Play پؠٹھ لیٚکھِو ریویو</string>
+    <string name="about_title">LinkGuard ہٕنٛدِ بارٕ</string>
+    <string name="about_desc">ورژن، رازدٲری پالیسی، اوپن سورس تہٕ رابطہٕ۔</string>
+    <string name="about_version">ورژن %1$s</string>
+    <string name="about_by">Dwarpal Labs ہٕنٛدِ طرفہٕ بنومُت۔ LinkGuard چھُ آزاد تہٕ چھُنہٕ کُنہِ تہِ بینک، ادائیگی ایپ، کوریئر یا سرکٲری ادارس سٟتۍ جُڑِتھ۔</string>
+    <string name="about_privacy">رازدٲری پالیسی</string>
+    <string name="about_privacy_desc">تُہٕنٛدِ فونہٕ پؠٹھ کیاہ چھُ نیٚبر گژھان، تہٕ کیازِ۔</string>
+    <string name="about_source">اوپن سورس</string>
+    <string name="about_source_desc">Apache-2.0 لائسنسٕ تحت مُفت۔ کانٛہہ تہِ ہیٚکہِ GitHub پؠٹھ امیُک کوڈ جانچ کٔرِتھ۔</string>
+    <string name="about_contact">اسہِ سٟتۍ کٔرِو رابطہٕ</string>
+    <string name="about_credits">شُکریہ</string>
+    <string name="about_credits_body">زانٛنہٕ آمژٕ نقصان دہ ویب سایٹ: abuse.ch ہُنٛد URLhaus۔ مشہور ویب سایٹ: Tranco فہرست۔ ویب سایٹن ہٕنٛدۍ ناو: Public Suffix List (MPL-2.0)۔</string>
+    <string name="report_link_label">لِنک</string>
+    <string name="report_note_label">تُہۍ کیازِ چھِو یہِ دوکھہٕ زانان؟ (ضروری چھُنہٕ)</string>
+    <string name="report_private_info">تُہٕنٛز شکایت چھےٚ خُفیہ پٲٹھۍ Dwarpal Labs نِش واتان تہٕ زانٛہہ تہِ چھےٚ نہٕ شایع کرنہٕ یِوان۔ ییٚلہِ واریاہ الگ الگ لُکھ اَکے ویب سایٹٕچ شکایت کران چھِ، بیٚین LinkGuard استعمال کرَن وٲلین چھےٚ پانے خبردٲری نظرِ یِوان۔ تُہٕنٛزِ شکایژ سٟتۍ ہیٚکہِ نہٕ تُہٕنٛز پہچان گٔژھِتھ۔ مہربٲنی کٔرِتھ لیٚکھِو نہٕ فون نمبر، ناو یا بیٚیہ کانٛہہ ذٲتی معلومات۔</string>
+    <string name="report_submit">شکایت سوزِو</string>
+    <string name="report_sending">سوزنہٕ چھےٚ یِوان…</string>
+    <string name="report_sent">شُکریہ۔ تُہٕنٛز شکایت آیہٕ جانچہٕ خٲطرٕ سوزنہٕ۔</string>
+    <string name="report_failed">شکایت ہیٚچ نہٕ سوزنہٕ یِتھ۔ پنُن انٹرنیٹ کنکشن وُچھِو تہٕ دوبارٕ کٔرِو کوشش۔</string>
+    <string name="back">واپس</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">یہِ لِنک ہیٚکہِ دوکھہٕ ٲسِتھ</string>
+    <string name="interstitial_title_soft">یمہِ لِنکہٕ نِش روزِو ہوشیار</string>
+    <string name="interstitial_go_back">واپس گٔژھِو</string>
+    <string name="interstitial_open_anyway">تیٚلہِ تہِ یَلہٕ کٔرِو</string>
+    <string name="interstitial_checking">لِنک چھُ جانچنہٕ یِوان…</string>
+    <string name="interstitial_upi_heading">UPI ادائیگی ہُند مطالبہٕ</string>
+    <string name="interstitial_upi_payee">ادائیگی کٔمِس: %1$s</string>
+    <string name="interstitial_upi_amount">رقم: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">یہِ لِنک چھُ Play Store نیٚبرٕ اکھ ایپ ڈاؤن لوڈ کران۔ تِتھۍ نقلی ایپ ہیٚکن تُہٕنٛدۍ میسج پٔرِتھ تہٕ بینک OTP چوری کٔرِتھ۔</string>
+    <string name="warn_brand_lookalike">یہِ ویب سایٹ چھےٚ %1$s ٲسنُک ڈھونگ کران۔ یہِ چھےٚ نہٕ %1$s سُنٛز اصلی ویب سایٹ۔</string>
+    <string name="warn_upi_intent">یہِ لِنک چھُ تُہۍ UPI ذریعہٕ پونٛسہٕ سوزنہٕ خٲطرٕ وَنان۔ ریفنڈ، انعام یا KYC اپڈیٹ حٲصِل کرنہٕ خٲطرٕ پَزِ نہٕ زانٛہہ تہِ پونٛسہٕ دِنۍ۔</string>
+    <string name="warn_weird_host">یہِ لِنک چھُ اکھ عجیب پتہٕ استعمال کران، یُس اصلی کمپنیہٕ واریاہ کم استعمال کران چھےٚ۔</string>
+    <string name="warn_weird_host_brand">یمہِ لِنکس منٛز چھُ %1$s ہُند ناو، مگر یہِ چھُ اکھ تِتھ عجیب پتہٕ استعمال کران یُس %1$s استعمال چھُنہٕ کران۔</string>
+    <string name="warn_reputation">یہِ ویب سایٹ چھےٚ زانٛنہٕ آمژن دوکھہٕ باز یا نقصان دہ ویب سایٹن ہٕنٛزِ فہرستِ منٛز۔</string>
+    <plurals name="warn_community">
+        <item quantity="one">یمہِ ہفتہٕ کٔر %d LinkGuard استعمال کرَن والہٕ یمہِ لِنکٕچ دوکھہٕ ؤنِتھ شکایت۔</item>
+        <item quantity="other">یمہِ ہفتہٕ کٔر %d LinkGuard استعمال کرَن وٲلیو یمہِ لِنکٕچ دوکھہٕ ؤنِتھ شکایت۔</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">یہِ ویب سایٹ آیہٕ %d دۄہ برونٛہہ بناونہٕ۔ دوکھہٕ باز ویب سایٹ چھِ اکثر بِلکُل نٔوۍ آسان۔</item>
+        <item quantity="other">یہِ ویب سایٹ آیہٕ %d دۄہ برونٛہہ بناونہٕ۔ دوکھہٕ باز ویب سایٹ چھِ اکثر بِلکُل نٔوۍ آسان۔</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard یس میوٗل یمہِ لِنکس منٛز کہِنٛہہ عجیب۔</string>
+</resources>

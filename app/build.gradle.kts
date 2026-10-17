@@ -58,6 +58,11 @@ android {
     buildFeatures {
         compose = true
     }
+    // Lists every values-* language in Android 13+'s per-app language setting
+    // (Settings → Apps → LinkGuard → Language). The default language is in res/resources.properties.
+    androidResources {
+        generateLocaleConfig = true
+    }
 }
 
 dependencies {

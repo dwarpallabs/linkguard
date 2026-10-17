@@ -1,0 +1,106 @@
+<resources>
+    <!-- Dogri (doi). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard लिंक खुल्लने थमां पैह्लें उसदी जांच करदा ऐ</string>
+    <string name="onboarding_body">जिसलै तुस WhatsApp, Telegram जां SMS च कुसै लिंक पर टैप करदे ओ, तां LinkGuard पैह्लें उसदी जांच करदा ऐ। सुरक्षत लिंक सिद्धे तुंदे ब्राउज़र च खुल्ली जंदे न। जेकर कोई लिंक ठग्गी आह्ला लग्गै, तां तुसें गी इक चेतावनी नजर औग, ते फ्ही बी तुस उसी खोल्ली सकदे ओ।</string>
+    <string name="onboarding_privacy">LinkGuard तुंदे खोले दे लिंक कदें बी सेव नेईं करदा ते ना गै कुतै भेजदा ऐ। कोई अकाउंट नेईं चाहिदा।</string>
+    <string name="your_browser">तुंदा ब्राउज़र</string>
+    <string name="flow_link">तुंदा लिंक</string>
+    <string name="flow_check">LinkGuard जांच करदा ऐ</string>
+    <string name="not_a_browser_title">LinkGuard ब्राउज़र नेईं ऐ</string>
+    <string name="not_a_browser_body">LinkGuard कदें बी वेब पेज नेईं दसदा। एह् हर लिंक दी पल भर च जांच करदा ऐ ते फ्ही उसी %1$s च खोलदा ऐ, उऐ ब्राउज़र जेह्ड़ा तुस पैह्लें थमां बरतदे ओ। तुंदे बुकमार्क, हिस्ट्री, सेव कीते दे पासवर्ड ते टैब जियां न, उआं गै रौंह्दे न।</string>
+    <string name="default_explain">Android, LinkGuard गी तुंदा “ब्राउज़र ऐप” आखग। एह् सिर्फ इस आस्तै ऐ तां जे LinkGuard लिंक गी पैह्लें दिक्खी सकै। हर लिंक फ्ही बी %1$s च गै खुलग।</string>
+
+    <string name="default_heading">कदम 1: LinkGuard गी अपना डिफ़ॉल्ट ब्राउज़र बनाओ</string>
+    <string name="default_done">LinkGuard तुंदा डिफ़ॉल्ट ब्राउज़र ऐ</string>
+    <string name="default_button">डिफ़ॉल्ट ब्राउज़र बनाओ</string>
+    <string name="default_hint">जेकर सेटिंग्स खुल्लन, तां “ब्राउज़र ऐप” पर टैप करो ते LinkGuard चुनो।</string>
+
+    <string name="browser_heading">कदम 2: लिंक इस च खोल्लो</string>
+    <string name="browser_none">कोई होर ब्राउज़र नेईं लब्भा। Chrome जनेहा कोई ब्राउज़र इंस्टॉल करो।</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook ते LinkedIn जनेह् ऐप अक्सर लिंक ऐप दे अंदर गै खोलदे न, जित्थै LinkGuard उंदी जांच नेईं करी सकदा। ठग्गी आह्ले लिंकें थमां बचने आस्तै, उस ऐप दी सैटिंग्ज़ च इन-ऐप ब्राउज़र बंद करो (Telegram च: Settings → Chat Settings → In-app browser), जां ⋮ पर टैप करियै “ब्राउज़र च खोलो” चुनो।</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard केह् केह् जांचदा ऐ</string>
+    <string name="check_unwrap">छोटे लिंक कुत्थें जंदे न, दिक्खो</string>
+    <string name="check_unwrap_desc">bit.ly जनेही सेवाएं थमां पुछदा ऐ जे छोटा लिंक असल च कुत्थें जंदा ऐ।</string>
+    <string name="check_apk_download">ऐप डाउनलोड</string>
+    <string name="check_brand_lookalike">नकली बैंक ते ब्रांड दियां वेबसाइटां</string>
+    <string name="check_weird_host">अजीब वेब पते</string>
+    <string name="check_reputation">जानी-पछानी ठग्गी आह्लियां वेबसाइटां</string>
+    <string name="check_domain_age">बिल्कुल नमियां वेबसाइटां</string>
+    <string name="check_domain_age_desc">आधिकारिक रजिस्ट्री थमां पुछदा ऐ जे वेबसाइट कदूं बनी ही। सिर्फ वेबसाइट दा नां भेजेआ जंदा ऐ, पूरा लिंक कदें नेईं।</string>
+    <string name="check_upi_intent">UPI कन्नै पैसे दी मंग</string>
+
+    <string name="settings_report">लिंक दी शकैत करो</string>
+    <string name="settings_report_desc">उस ठग्गी आह्ले लिंक बारै दस्सो जिसी LinkGuard नेईं फड़ी सकेआ।</string>
+    <string name="how_title">LinkGuard किस चाल्ली कम्म करदा ऐ</string>
+    <string name="how_desc">इसदी लोड़ कीऽ ऐ, ते एह् किस चाल्ली फैसला करदा ऐ जे कुन्नें लिंकें पर चेतावनी देनी ऐ।</string>
+    <string name="how_why_title">इसदी लोड़ कीऽ ऐ</string>
+    <string name="how_why_body">WhatsApp ते SMS पर ठग्गी आह्ले मैसेजें च अक्सर नेह् लिंक होंदे न जेह्ड़े असली लगदे न: नकली बैंक पेज, “KYC अपडेट” फार्म जां पैसे चोरी करने आह्ला ऐप। नुकसान आस्तै इक टैप गै काफी ऐ, ते नकली वेब पता पछानना औखा होई सकदा ऐ।</string>
+    <string name="how_where_title">LinkGuard कुत्थें रौंह्दा ऐ</string>
+    <string name="how_where_body">LinkGuard तुंदे टैप कीते दे लिंक ते तुंदे ब्राउज़र दे बिच्च रौंह्दा ऐ। एह् पल भर च लिंक दी जांच करदा ऐ, फ्ही उसी %1$s च खोलदा ऐ। एह् आपूं कदें बी वेब पेज नेईं दसदा।</string>
+    <string name="how_safe_title">सुरक्षत लिंक झट्ट खुल्ली जंदे न</string>
+    <string name="how_safe_body">जानी-पछानी वेबसाइटां ते आधिकारिक वेबसाइटां, जियां सरकारी (.gov.in) ते बैंक दियां वेबसाइटां, झट्ट खुल्ली जंदियां न। जेकर लिंक ठीक लगदा ऐ, तां तुसें गी किश बी नजर नेईं औंदा।</string>
+    <string name="how_scam_title">ठग्गी आह्ले लिंकें दी पछान</string>
+    <string name="how_scam_body">LinkGuard ठग्गें दियां चालां पछानदा ऐ: बैंक जां कुसै मशहूर ब्रांड होने दा ढोंग करने आह्लियां वेबसाइटां, Play Store थमां बाह्र दे ऐप डाउनलोड, लुकी दियां पैसे दियां मंगां, बिल्कुल नमियां वेबसाइटां ते अजीब वेब पते। एह् लगभग 1,900 नुकसान करने आह्लियें जानी-पछानी वेबसाइटें दी इक लिस्ट कन्नै बी जांच करदा ऐ, जेह्ड़ी इक मन्नी-परमन्नी अंतरराष्ट्री सुरक्षा डेटाबेस थमां लैती गेदी ऐ ते हर रोज अपडेट होंदी ऐ।</string>
+    <string name="how_community_title">दूए बरतने आह्लें दियां शकैतां</string>
+    <string name="how_community_body">जिसलै मते सारे LinkGuard बरतने आह्ले इक्कै वेबसाइट दी ठग्गी दे तौर पर शकैत करदे न, तां दूएं गी सावधान रौह्ने दी चेतावनी दित्ती जंदी ऐ।</string>
+    <string name="how_choice_title">फैसला हमेशा तुंदा</string>
+    <string name="how_choice_body">LinkGuard कदें बी कोई लिंक ब्लॉक नेईं करदा। हर चेतावनी सौखे शब्दें च मसला दसदी ऐ ते “फ्ही बी खोल्लो” दा विकल्प दिंदी ऐ। LinkGuard तुंदे खोले दे लिंक कदें बी सेव नेईं करदा।</string>
+    <string name="feedback_title">अनुवाद गलत ऐ? असेंगी दस्सो</string>
+    <string name="feedback_desc">LinkGuard दा अनुवाद मशीन कन्नै कीता गेदा ऐ। अपनी भाशा दियां गल्तियां ठीक करने च मदद करो।</string>
+    <string name="feedback_intro">इस भाशा च LinkGuard दी लिखत मशीन कन्नै अनुवाद कीती गेदी ऐ ते इस च गल्तियां होई सकदियां न। जेकर किश गलत लग्गै, तां असेंगी गलत शब्द दस्सो ते एह् बी जे तुस उसी किस चाल्ली आखदे। जेह्ड़ा सब्भनें शा सौखा होऐ, ओह् बरतो:</string>
+    <string name="feedback_email">असेंगी ईमेल करो</string>
+    <string name="feedback_github">GitHub पर दस्सो</string>
+    <string name="feedback_github_desc">इस आस्तै मुफ्त GitHub अकाउंट चाहिदा।</string>
+    <string name="feedback_play">Google Play पर रिव्यू लिखो</string>
+    <string name="about_title">LinkGuard बारै</string>
+    <string name="about_desc">वर्ज़न, निजता नीति, ओपन सोर्स ते संपर्क।</string>
+    <string name="about_version">वर्ज़न %1$s</string>
+    <string name="about_by">Dwarpal Labs आसेआ बनाए दा। LinkGuard अजाद ऐ ते कुसै बी बैंक, पेमेंट ऐप, कूरियर जां सरकारी महकमे कन्नै नेईं जुड़े दा।</string>
+    <string name="about_privacy">निजता नीति</string>
+    <string name="about_privacy_desc">तुंदे फोन थमां केह् बाह्र जंदा ऐ, ते कीं।</string>
+    <string name="about_source">ओपन सोर्स</string>
+    <string name="about_source_desc">Apache-2.0 लाइसेंस हेठ मुफ्त। कोई बी GitHub पर इसदा कोड जांची सकदा ऐ।</string>
+    <string name="about_contact">साढ़े कन्नै संपर्क करो</string>
+    <string name="about_credits">धन्नवाद</string>
+    <string name="about_credits_body">जानी-पछानी नुकसान करने आह्लियां वेबसाइटां: abuse.ch दी URLhaus। मशहूर वेबसाइटां: Tranco लिस्ट। वेबसाइटें दे नां: Public Suffix List (MPL-2.0)।</string>
+    <string name="report_link_label">लिंक</string>
+    <string name="report_note_label">तुसें गी एह् ठग्गी कीऽ लगदा ऐ? (जेकर चाहो तां लिखो)</string>
+    <string name="report_private_info">तुंदी शकैत निजी तौर पर सिर्फ Dwarpal Labs कोल जंदी ऐ ते कदें बी छापी नेईं जंदी। जिसलै मते सारे बक्ख-बक्ख लोक इक्कै वेबसाइट दी शकैत करदे न, तां दूए LinkGuard बरतने आह्लें गी अपने आप चेतावनी नजर औंदी ऐ। तुंदी शकैत कन्नै तुंदी पछान नेईं होई सकदी। मेहरबानी करियै फोन नंबर, नां जां होर निजी जानकारी नेईं लिखो।</string>
+    <string name="report_submit">शकैत भेजो</string>
+    <string name="report_sending">भेजी जा करदी ऐ…</string>
+    <string name="report_sent">धन्नवाद। तुंदी शकैत जांच आस्तै भेजी दित्ती गेई ऐ।</string>
+    <string name="report_failed">शकैत नेईं भेजी जाई सकी। अपना इंटरनेट कनेक्शन जांचो ते फ्ही कोशश करो।</string>
+    <string name="back">पिच्छें</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">एह् लिंक ठग्गी होई सकदा ऐ</string>
+    <string name="interstitial_title_soft">इस लिंक थमां सावधान रौह्ओ</string>
+    <string name="interstitial_go_back">पिच्छें जाओ</string>
+    <string name="interstitial_open_anyway">फ्ही बी खोल्लो</string>
+    <string name="interstitial_checking">लिंक दी जांच होआ करदी ऐ…</string>
+    <string name="interstitial_upi_heading">UPI कन्नै पैसे दी मंग</string>
+    <string name="interstitial_upi_payee">कुसी देने न: %1$s</string>
+    <string name="interstitial_upi_amount">रकम: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">एह् लिंक Play Store थमां बाह्र दा इक ऐप डाउनलोड करदा ऐ। नेह् नकली ऐप तुंदे मैसेज पढ़ी सकदे न ते बैंक दे OTP चोरी करी सकदे न।</string>
+    <string name="warn_brand_lookalike">एह् वेबसाइट %1$s होने दा ढोंग करा करदी ऐ। एह् %1$s दी असली वेबसाइट नेईं ऐ।</string>
+    <string name="warn_upi_intent">एह् लिंक तुसें गी UPI कन्नै पैसे भेजने गी आखदा ऐ। रिफंड, इनाम जां KYC अपडेट लैने आस्तै कदें बी पैसे नेईं देने पौंदे।</string>
+    <string name="warn_weird_host">एह् लिंक इक अजीब पता बरतदा ऐ, जेह्ड़ा असली कंपनियां बड़ा घट्ट बरतदियां न।</string>
+    <string name="warn_weird_host_brand">इस लिंक च %1$s दा नां ऐ, पर एह् इक नेहा अजीब पता बरतदा ऐ जेह्ड़ा %1$s नेईं बरतदा।</string>
+    <string name="warn_reputation">एह् वेबसाइट जानी-पछानी ठग्गी जां नुकसान करने आह्लियें वेबसाइटें दी लिस्ट च ऐ।</string>
+    <plurals name="warn_community">
+        <item quantity="one">इस हफ्ते %d LinkGuard बरतने आह्ले ने इस लिंक दी ठग्गी दे तौर पर शकैत कीती ऐ।</item>
+        <item quantity="other">इस हफ्ते %d LinkGuard बरतने आह्लें इस लिंक दी ठग्गी दे तौर पर शकैत कीती ऐ।</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">एह् वेबसाइट %d दिन पैह्लें बनी ऐ। ठग्गी आह्लियां वेबसाइटां अक्सर बिल्कुल नमियां होंदियां न।</item>
+        <item quantity="other">एह् वेबसाइट %d दिन पैह्लें बनी ऐ। ठग्गी आह्लियां वेबसाइटां अक्सर बिल्कुल नमियां होंदियां न।</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard गी इस लिंक च किश अजीब लब्भा।</string>
+</resources>

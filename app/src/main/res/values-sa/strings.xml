@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Sanskrit (sa). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard लिङ्कान् उद्घाटनात् पूर्वं परीक्षते</string>
+    <string name="onboarding_body">यदा भवान् WhatsApp, Telegram अथवा SMS मध्ये कञ्चित् लिङ्कं स्पृशति, तदा LinkGuard प्रथमं तं परीक्षते। सुरक्षिताः लिङ्काः सद्यः भवतः ब्राउज़रे उद्घाट्यन्ते। यदि कश्चित् लिङ्कः वञ्चनारूपः दृश्यते, तर्हि भवान् चेतावनीं द्रक्ष्यति, तथापि भवान् तम् उद्घाटयितुं शक्नोति।</string>
+    <string name="onboarding_privacy">भवता उद्घाटितान् लिङ्कान् LinkGuard कदापि न रक्षति, न च कुत्रापि प्रेषयति। खातं (अकाउंट) न आवश्यकम्।</string>
+    <string name="your_browser">भवतः ब्राउज़र्</string>
+    <string name="flow_link">भवतः लिङ्कः</string>
+    <string name="flow_check">LinkGuard तं परीक्षते</string>
+    <string name="not_a_browser_title">LinkGuard ब्राउज़र् न अस्ति</string>
+    <string name="not_a_browser_body">LinkGuard कदापि जालपृष्ठं न दर्शयति। एतत् प्रत्येकं लिङ्कं क्षणमात्रेण परीक्ष्य ततः %1$s इत्यस्मिन् उद्घाटयति, यं ब्राउज़र् भवान् पूर्वमेव उपयुङ्क्ते। भवतः बुकमार्क्, इतिहासः, रक्षिताः पासवर्ड्, टैब् च यथावत् तिष्ठन्ति।</string>
+    <string name="default_explain">Android, LinkGuard भवतः “ब्राउज़र्-ऐप्” इति वदिष्यति। एतत् केवलं LinkGuard प्रथमं लिङ्कान् पश्येत् इति हेतोः। प्रत्येकः लिङ्कः तथापि %1$s इत्यस्मिन् एव उद्घाट्यते।</string>
+
+    <string name="default_heading">सोपानम् 1: LinkGuard भवतः मूलब्राउज़र् (डिफ़ॉल्ट्) करोतु</string>
+    <string name="default_done">LinkGuard भवतः मूलब्राउज़र् अस्ति</string>
+    <string name="default_button">मूलब्राउज़र् इति स्थापयतु</string>
+    <string name="default_hint">यदि सेटिङ्ग्स् उद्घाट्यते, तर्हि “ब्राउज़र्-ऐप्” स्पृशतु, LinkGuard च चिनोतु।</string>
+
+    <string name="browser_heading">सोपानम् 2: लिङ्कान् अत्र उद्घाटयतु</string>
+    <string name="browser_none">अन्यः कोऽपि ब्राउज़र् न लब्धः। Chrome इव कञ्चित् ब्राउज़र् स्थापयतु।</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook, LinkedIn इत्यादीनि ऐप्-तन्त्राणि प्रायः लिङ्कान् ऐप्-मध्ये एव उद्घाटयन्ति, यत्र LinkGuard तान् परीक्षितुं न शक्नोति। वञ्चनालिङ्केभ्यः सुरक्षितः भवितुं तस्य ऐप्-तन्त्रस्य सेटिङ्ग्स्-मध्ये अन्तः-ब्राउज़र् निष्क्रियं करोतु (Telegram-मध्ये: Settings → Chat Settings → In-app browser), अथवा ⋮ स्पृष्ट्वा “ब्राउज़र्-मध्ये उद्घाटयतु” इति चिनोतु।</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard किं परीक्षते</string>
+    <string name="check_unwrap">लघुलिङ्कानाम् अनुसरणम्</string>
+    <string name="check_unwrap_desc">bit.ly इत्यादीन् सेवाः पृच्छति यत् लघुलिङ्कः वस्तुतः कुत्र गच्छति।</string>
+    <string name="check_apk_download">ऐप्-अवतारणम्</string>
+    <string name="check_brand_lookalike">कृत्रिमाः बैंक्-ब्राण्ड्-जालस्थानानि</string>
+    <string name="check_weird_host">असामान्याः जालसङ्केताः</string>
+    <string name="check_reputation">ज्ञातानि वञ्चनाजालस्थानानि</string>
+    <string name="check_domain_age">अतिनूतनानि जालस्थानानि</string>
+    <string name="check_domain_age_desc">जालस्थानं कदा निर्मितम् इति आधिकारिकपञ्जिकां पृच्छति। केवलं जालस्थानस्य नाम प्रेष्यते, सम्पूर्णः लिङ्कः कदापि न।</string>
+    <string name="check_upi_intent">UPI धनयाचनाः</string>
+
+    <string name="settings_report">लिङ्कस्य विषये सूचयतु</string>
+    <string name="settings_report_desc">LinkGuard यं वञ्चनालिङ्कं न अगृह्णात्, तस्य विषये अस्मान् वदतु।</string>
+    <string name="how_title">LinkGuard कथं कार्यं करोति</string>
+    <string name="how_desc">अस्य आवश्यकता किमर्थम्, केषां लिङ्कानां विषये चेतावनी देया इति एतत् कथं निर्णयति।</string>
+    <string name="how_why_title">किमर्थम् आवश्यकम्</string>
+    <string name="how_why_body">WhatsApp, SMS च इत्यत्र वञ्चनासन्देशेषु प्रायः सत्यसदृशाः लिङ्काः भवन्ति: कृत्रिमं बैंक्-पृष्ठम्, “KYC अपडेट्” पत्रम्, धनं चोरयत् ऐप् वा। हानये एकः स्पर्शः पर्याप्तः, कृत्रिमः जालसङ्केतः च दुर्ज्ञेयः भवितुम् अर्हति।</string>
+    <string name="how_where_title">LinkGuard कुत्र तिष्ठति</string>
+    <string name="how_where_body">भवता स्पृष्टस्य लिङ्कस्य भवतः ब्राउज़र् इत्यस्य च मध्ये LinkGuard तिष्ठति। एतत् क्षणमात्रेण लिङ्कं परीक्ष्य ततः %1$s इत्यस्मिन् उद्घाटयति। एतत् स्वयं कदापि जालपृष्ठं न दर्शयति।</string>
+    <string name="how_safe_title">सुरक्षिताः लिङ्काः सद्यः उद्घाट्यन्ते</string>
+    <string name="how_safe_body">प्रसिद्धानि आधिकारिकाणि च जालस्थानानि, यथा सर्वकारस्य (.gov.in) बैंकानां च जालस्थानानि, सद्यः उद्घाट्यन्ते। यदि लिङ्कः समीचीनः दृश्यते, तर्हि भवान् किमपि न पश्यति।</string>
+    <string name="how_scam_title">वञ्चनालिङ्कानां परिचयः</string>
+    <string name="how_scam_body">वञ्चकाः यान् उपायान् उपयुञ्जते तान् LinkGuard अन्विष्यति: बैंक् अथवा प्रसिद्धः ब्राण्ड् इति नाटयन्ति जालस्थानानि, Play Store बहिः ऐप्-अवतारणानि, गूढाः धनयाचनाः, अतिनूतनानि जालस्थानानि, असामान्याः जालसङ्केताः च। प्रायः 1,900 ज्ञातहानिकरजालस्थानानां सूच्याम् अपि एतत् परीक्षते। एषा सूची प्रमुखात् अन्ताराष्ट्रियसुरक्षादत्तकोशात् सङ्गृहीता, प्रतिदिनं नवीक्रियते च।</string>
+    <string name="how_community_title">अन्येषाम् उपयोक्तॄणां सूचनाः</string>
+    <string name="how_community_body">यदा बहवः LinkGuard उपयोक्तारः एकम् एव जालस्थानं वञ्चना इति सूचयन्ति, तदा अन्ये सावधानाः भवन्तु इति चेतावनी दीयते।</string>
+    <string name="how_choice_title">निर्णयः सदा भवतः</string>
+    <string name="how_choice_body">LinkGuard कदापि कञ्चित् लिङ्कं न निरुणद्धि। प्रत्येका चेतावनी सरलैः शब्दैः समस्यां वदति, “तथापि उद्घाटयतु” इति विकल्पं च ददाति। भवता उद्घाटितान् लिङ्कान् LinkGuard कदापि न रक्षति।</string>
+    <string name="feedback_title">अनुवादः अशुद्धः किम्? अस्मान् वदतु</string>
+    <string name="feedback_desc">LinkGuard यन्त्रेण अनूदितम् अस्ति। भवतः भाषायां दोषान् शोधयितुं साहाय्यं करोतु।</string>
+    <string name="feedback_intro">अस्यां भाषायां LinkGuard इत्यस्य पाठः यन्त्रेण अनूदितः, तस्मिन् दोषाः स्युः। यदि किमपि अशुद्धं प्रतीयते, तर्हि अशुद्धान् शब्दान्, भवान् तान् कथं वदेत् इति च अस्मान् वदतु। यत् सरलतमं तत् उपयुङ्क्ताम्:</string>
+    <string name="feedback_email">अस्मभ्यम् ईमेल् प्रेषयतु</string>
+    <string name="feedback_github">GitHub इत्यत्र सूचयतु</string>
+    <string name="feedback_github_desc">निःशुल्कं GitHub खातम् आवश्यकम्।</string>
+    <string name="feedback_play">Google Play इत्यत्र समीक्षां लिखतु</string>
+    <string name="about_title">LinkGuard विषये</string>
+    <string name="about_desc">संस्करणम्, गोपनीयतानीतिः, मुक्तस्रोतः, सम्पर्कः च।</string>
+    <string name="about_version">संस्करणम् %1$s</string>
+    <string name="about_by">Dwarpal Labs द्वारा निर्मितम्। LinkGuard स्वतन्त्रम् अस्ति। कयापि बैंक्-संस्थया, भुगतान-ऐप्-तन्त्रेण, कूरियर्-सेवया, शासकीयसंस्थया वा अस्य सम्बन्धः नास्ति।</string>
+    <string name="about_privacy">गोपनीयतानीतिः</string>
+    <string name="about_privacy_desc">भवतः दूरवाणीतः किं बहिः गच्छति, किमर्थं च।</string>
+    <string name="about_source">मुक्तस्रोतः</string>
+    <string name="about_source_desc">Apache-2.0 अनुज्ञापत्रेण निःशुल्कम्। GitHub इत्यत्र कोऽपि कोड् परीक्षितुं शक्नोति।</string>
+    <string name="about_contact">अस्मान् सम्पर्कयतु</string>
+    <string name="about_credits">कृतज्ञता</string>
+    <string name="about_credits_body">हानिकरजालस्थानानि: abuse.ch इत्यस्य URLhaus। लोकप्रियजालस्थानानि: Tranco सूची। जालस्थाननामानि: Public Suffix List (MPL-2.0)।</string>
+    <string name="report_link_label">लिङ्कः</string>
+    <string name="report_note_label">एतत् वञ्चना इति भवान् किमर्थं मन्यते? (ऐच्छिकम्)</string>
+    <string name="report_private_info">भवतः सूचना गोपनीयरूपेण Dwarpal Labs प्रति गच्छति, कदापि प्रकाशिता न भवति। यदा बहवः भिन्नाः जनाः एकम् एव जालस्थानं सूचयन्ति, तदा अन्ये LinkGuard उपयोक्तारः स्वयमेव चेतावनीं पश्यन्ति। भवतः सूचनया भवतः परिचयः न ज्ञायते। कृपया दूरवाणीसङ्ख्याः, नामानि, अन्यां व्यक्तिगतसूचनां वा मा लिखतु।</string>
+    <string name="report_submit">सूचनां प्रेषयतु</string>
+    <string name="report_sending">प्रेष्यते…</string>
+    <string name="report_sent">धन्यवादः। भवतः सूचना परीक्षणाय प्रेषिता।</string>
+    <string name="report_failed">सूचना प्रेषयितुं न शक्ता। अन्तर्जालसम्पर्कं परीक्ष्य पुनः प्रयतताम्।</string>
+    <string name="back">पृष्ठतः</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">एषः लिङ्कः वञ्चना स्यात्</string>
+    <string name="interstitial_title_soft">अस्मिन् लिङ्के सावधानः भवतु</string>
+    <string name="interstitial_go_back">पृष्ठतः गच्छतु</string>
+    <string name="interstitial_open_anyway">तथापि उद्घाटयतु</string>
+    <string name="interstitial_checking">लिङ्कः परीक्ष्यते…</string>
+    <string name="interstitial_upi_heading">UPI धनयाचना</string>
+    <string name="interstitial_upi_payee">कस्मै देयम्: %1$s</string>
+    <string name="interstitial_upi_amount">राशिः: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">एषः लिङ्कः Play Store बहिः एकम् ऐप् अवतारयति। एतादृशानि कृत्रिमाणि ऐप् भवतः सन्देशान् पठितुं बैंक्-OTP चोरयितुं च शक्नुवन्ति।</string>
+    <string name="warn_brand_lookalike">एतत् जालस्थानं %1$s इति नाटयति। एतत् %1$s इत्यस्य वास्तविकं जालस्थानं न अस्ति।</string>
+    <string name="warn_upi_intent">एषः लिङ्कः UPI द्वारा धनं प्रेषयितुं वदति। प्रतिदानं, पुरस्कारं, KYC अपडेट् वा प्राप्तुं कदापि धनं दातुं न आवश्यकम्।</string>
+    <string name="warn_weird_host">एषः लिङ्कः असामान्यं सङ्केतम् उपयुङ्क्ते, यं वास्तविकाः संस्थाः विरलम् एव उपयुञ्जते।</string>
+    <string name="warn_weird_host_brand">अस्मिन् लिङ्के %1$s इति नाम अस्ति, किन्तु एषः असामान्यं सङ्केतम् उपयुङ्क्ते, यं %1$s न उपयुङ्क्ते।</string>
+    <string name="warn_reputation">एतत् जालस्थानं ज्ञातानां वञ्चना-हानिकर-जालस्थानानां सूच्याम् अस्ति।</string>
+    <plurals name="warn_community">
+        <item quantity="other">अस्मिन् सप्ताहे %d LinkGuard उपयोक्तारः एतं लिङ्कं वञ्चना इति सूचितवन्तः।</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="other">एतत् जालस्थानं %d दिनेभ्यः पूर्वं निर्मितम्। वञ्चनाजालस्थानानि प्रायः अतिनूतनानि भवन्ति।</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard अस्मिन् लिङ्के किञ्चित् असामान्यम् अपश्यत्।</string>
+</resources>

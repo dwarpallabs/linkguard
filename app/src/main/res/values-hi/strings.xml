@@ -18,7 +18,7 @@
     <string name="browser_heading">चरण 2: लिंक इसमें खोलें</string>
     <string name="browser_none">कोई दूसरा ब्राउज़र नहीं मिला। Chrome जैसा कोई ब्राउज़र इंस्टॉल करें।</string>
 
-    <string name="telegram_tip">Telegram इस्तेमाल करते हैं? उसका इन-ऐप ब्राउज़र बंद करें (Settings → Chat Settings → In-app browser), ताकि LinkGuard लिंक की जाँच कर सके।</string>
+    <string name="telegram_tip">Telegram, Instagram, Facebook और LinkedIn जैसे ऐप अक्सर लिंक को ऐप के अंदर ही खोल देते हैं, जहाँ LinkGuard उनकी जाँच नहीं कर पाता। धोखे वाले लिंक से बचने के लिए उस ऐप की सेटिंग में इन-ऐप ब्राउज़र बंद करें (Telegram में: Settings → Chat Settings → In-app browser), या ⋮ पर टैप करके “ब्राउज़र में खोलें” चुनें।</string>
 
     <string name="settings_checks_heading">LinkGuard क्या जाँचता है</string>
     <string name="check_unwrap">छोटे लिंक खोलकर देखें</string>
@@ -42,11 +42,29 @@
     <string name="how_safe_title">सुरक्षित लिंक तुरंत खुलते हैं</string>
     <string name="how_safe_body">जानी-मानी वेबसाइटें और आधिकारिक साइटें, जैसे सरकारी (.gov.in) और बैंक की वेबसाइटें, तुरंत खुल जाती हैं। अगर लिंक ठीक है, तो आपको कुछ भी नहीं दिखता।</string>
     <string name="how_scam_title">धोखाधड़ी वाले लिंक की पहचान</string>
-    <string name="how_scam_body">LinkGuard धोखेबाज़ों की चालें पहचानता है: बैंक या किसी जाने-माने ब्रांड होने का दिखावा करने वाली वेबसाइटें, Play Store के बाहर से ऐप डाउनलोड, छिपे हुए भुगतान अनुरोध, बिल्कुल नई वेबसाइटें और असामान्य वेब पते। यह जानी-मानी नुकसानदेह वेबसाइटों की एक सूची से भी जाँच करता है, जो हर दिन अपडेट होती है।</string>
+    <string name="how_scam_body">LinkGuard धोखेबाज़ों की चालें पहचानता है: बैंक या किसी जाने-माने ब्रांड होने का दिखावा करने वाली वेबसाइटें, Play Store के बाहर से ऐप डाउनलोड, छिपे हुए भुगतान अनुरोध, बिल्कुल नई वेबसाइटें और असामान्य वेब पते। यह लगभग 1,900 जानी-मानी नुकसानदेह वेबसाइटों की एक सूची से भी जाँच करता है, जो एक बड़े अंतरराष्ट्रीय सुरक्षा डेटाबेस से ली गई है और हर दिन अपडेट होती है।</string>
     <string name="how_community_title">दूसरे उपयोगकर्ताओं की शिकायतें</string>
     <string name="how_community_body">जब कई LinkGuard उपयोगकर्ता एक ही वेबसाइट की धोखाधड़ी के रूप में शिकायत करते हैं, तो दूसरों को सावधान रहने की चेतावनी दी जाती है।</string>
     <string name="how_choice_title">फ़ैसला हमेशा आपका</string>
     <string name="how_choice_body">LinkGuard कभी कोई लिंक ब्लॉक नहीं करता। हर चेतावनी आसान शब्दों में समस्या बताती है और “फिर भी खोलें” का विकल्प देती है। LinkGuard आपके खोले गए लिंक कभी सेव नहीं करता।</string>
+    <string name="feedback_title">अनुवाद गलत है? हमें बताएँ</string>
+    <string name="feedback_desc">LinkGuard का अनुवाद मशीन से किया गया है। अपनी भाषा की गलतियाँ ठीक करने में मदद करें।</string>
+    <string name="feedback_intro">इस भाषा में LinkGuard का टेक्स्ट मशीन से अनुवाद किया गया है और इसमें गलतियाँ हो सकती हैं। अगर कुछ ठीक न लगे, तो हमें गलत शब्द बताएँ और यह भी कि आप उसे कैसे कहेंगे। जो सबसे आसान हो, उसका इस्तेमाल करें:</string>
+    <string name="feedback_email">हमें ईमेल करें</string>
+    <string name="feedback_github">GitHub पर बताएँ</string>
+    <string name="feedback_github_desc">इसके लिए मुफ़्त GitHub अकाउंट चाहिए।</string>
+    <string name="feedback_play">Google Play पर रिव्यू लिखें</string>
+    <string name="about_title">LinkGuard के बारे में</string>
+    <string name="about_desc">वर्ज़न, निजता नीति, ओपन सोर्स और संपर्क।</string>
+    <string name="about_version">वर्ज़न %1$s</string>
+    <string name="about_by">Dwarpal Labs द्वारा बनाया गया। LinkGuard स्वतंत्र है और किसी भी बैंक, भुगतान ऐप, कूरियर या सरकारी संस्था से जुड़ा नहीं है।</string>
+    <string name="about_privacy">निजता नीति</string>
+    <string name="about_privacy_desc">आपके फ़ोन से क्या बाहर जाता है, और क्यों।</string>
+    <string name="about_source">ओपन सोर्स</string>
+    <string name="about_source_desc">Apache-2.0 लाइसेंस के तहत मुफ़्त। कोई भी GitHub पर इसका कोड जाँच सकता है।</string>
+    <string name="about_contact">हमसे संपर्क करें</string>
+    <string name="about_credits">आभार</string>
+    <string name="about_credits_body">जानी-मानी नुकसानदेह वेबसाइटें: abuse.ch का URLhaus। लोकप्रिय वेबसाइटें: Tranco सूची। वेबसाइट के नाम: Public Suffix List (MPL-2.0)।</string>
     <string name="report_link_label">लिंक</string>
     <string name="report_note_label">आपको यह धोखाधड़ी क्यों लगता है? (वैकल्पिक)</string>
     <string name="report_private_info">आपकी शिकायत निजी तौर पर Dwarpal Labs को जाती है और कभी प्रकाशित नहीं की जाती। जब कई अलग-अलग लोग एक ही वेबसाइट की शिकायत करते हैं, तो दूसरे LinkGuard उपयोगकर्ताओं को अपने-आप चेतावनी दिखती है। आपकी शिकायत से आपकी पहचान नहीं हो सकती। कृपया फ़ोन नंबर, नाम या दूसरी निजी जानकारी न लिखें।</string>

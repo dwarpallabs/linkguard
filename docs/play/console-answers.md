@@ -15,7 +15,7 @@ conservative (more disclosing) answer.
 | Field | Answer | Why |
 |---|---|---|
 | App name | LinkGuard: Scam Link Checker | `listing-en.md` |
-| Default language | English (India), en-IN | Hindi (hi-IN) and Tamil (ta-IN) added as translations |
+| Default language | English (India), en-IN | Translations: bn-BD, gu, hi-IN, kn-IN, ml-IN, mr-IN, ne-NP, pa, ta-IN, te-IN, ur (`listing-<lang>.md`). Play has no listing languages for Assamese, Bodo, Dogri, Kashmiri, Konkani, Maithili, Manipuri, Odia, Sanskrit, Santali or Sindhi; the app itself supports them |
 | App or game | App | |
 | Free or paid | Free | |
 | Category | Tools | It's a utility that sits before the browser. It isn't a "Communication" or browser app |
@@ -77,5 +77,5 @@ Good tester sources: friends and family on Android, the r/developersIndia post, 
 - **Bundle:** `./gradlew :app:bundlePlayRelease` → `app/build/outputs/bundle/playRelease/app-play-release.aab`.
 - **Play App Signing:** choose **"Use existing app signing key from Java keystore"**. Download Google's `pepk.jar` and encryption key from that screen, then run the command it shows against `~/.android-keys/linkguard-release.jks`, alias `linkguard`, typing the password yourself. Upload the resulting zip.
 - **Upload key:** the same certificate, `3b7a7bc8…95405cee`.
-- **Graphics:** `graphics/icon-512.png`, `graphics/feature-1024x500.png`, and `graphics/screenshots/*_{en,hi,ta}.png` (five per language, in numbered order).
+- **Graphics:** `graphics/icon-512.png`, `graphics/feature-1024x500.png`, and `graphics/screenshots/*_{en,hi,ta}.png` (five per language, in numbered order). Other listing languages reuse the English screenshots.
 - **Release notes:** the "Release notes" section of each `listing-*.md`.

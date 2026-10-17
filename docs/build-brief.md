@@ -47,7 +47,7 @@ v1 is done when a link tapped in WhatsApp on your own phone is forwarded to Chro
 
 1. First launch: one screen explains what the app does, asks the user to set it as default browser, and lets them pick the real browser to forward to (Chrome preselected). No account.
 2. User taps a link anywhere. Android routes it to LinkGuard. Checks run. If verdict < 0.3, LinkGuard launches the chosen browser with the final URL and finishes. Nothing is shown.
-3. If verdict ≥ 0.3, the interstitial appears: the final domain in large text, one sentence saying why (in the device language: English, Hindi or Tamil), and two buttons — **Go back** (primary) and **Open anyway**.
+3. If verdict ≥ 0.3, the interstitial appears: the final domain in large text, one sentence saying why (in the device language: English or any of India's 22 scheduled languages; originally English, Hindi and Tamil), and two buttons — **Go back** (primary) and **Open anyway**.
 4. Settings: change forward-to browser, toggle each check on/off, view the bundled brand list, "Report a link" (v1: opens a prefilled GitHub issue).
 
 **Checks (all in `core/`, each returns a Signal)**

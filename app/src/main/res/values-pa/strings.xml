@@ -1,0 +1,106 @@
+<resources>
+    <!-- Punjabi (pa). Machine-translated; corrections welcome: support@dwarpallabs.com or https://github.com/dwarpallabs/linkguard/issues/new?template=translation.yml -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard ਲਿੰਕ ਖੁੱਲ੍ਹਣ ਤੋਂ ਪਹਿਲਾਂ ਉਨ੍ਹਾਂ ਦੀ ਜਾਂਚ ਕਰਦਾ ਹੈ</string>
+    <string name="onboarding_body">ਜਦੋਂ ਤੁਸੀਂ WhatsApp, Telegram ਜਾਂ SMS ਵਿੱਚ ਕਿਸੇ ਲਿੰਕ ’ਤੇ ਟੈਪ ਕਰਦੇ ਹੋ, ਤਾਂ LinkGuard ਪਹਿਲਾਂ ਉਸਦੀ ਜਾਂਚ ਕਰਦਾ ਹੈ। ਸੁਰੱਖਿਅਤ ਲਿੰਕ ਸਿੱਧੇ ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਖੁੱਲ੍ਹ ਜਾਂਦੇ ਹਨ। ਜੇ ਕੋਈ ਲਿੰਕ ਠੱਗੀ ਵਾਲਾ ਲੱਗੇ, ਤਾਂ ਤੁਹਾਨੂੰ ਚੇਤਾਵਨੀ ਦਿਖੇਗੀ, ਅਤੇ ਤੁਸੀਂ ਫਿਰ ਵੀ ਉਸਨੂੰ ਖੋਲ੍ਹ ਸਕਦੇ ਹੋ।</string>
+    <string name="onboarding_privacy">LinkGuard ਤੁਹਾਡੇ ਖੋਲ੍ਹੇ ਲਿੰਕ ਕਦੇ ਸੇਵ ਨਹੀਂ ਕਰਦਾ ਅਤੇ ਨਾ ਹੀ ਕਿਤੇ ਭੇਜਦਾ ਹੈ। ਕੋਈ ਖਾਤਾ ਨਹੀਂ ਚਾਹੀਦਾ।</string>
+    <string name="your_browser">ਤੁਹਾਡਾ ਬ੍ਰਾਊਜ਼ਰ</string>
+    <string name="flow_link">ਤੁਹਾਡਾ ਲਿੰਕ</string>
+    <string name="flow_check">LinkGuard ਜਾਂਚ ਕਰਦਾ ਹੈ</string>
+    <string name="not_a_browser_title">LinkGuard ਬ੍ਰਾਊਜ਼ਰ ਨਹੀਂ ਹੈ</string>
+    <string name="not_a_browser_body">LinkGuard ਕਦੇ ਵੈੱਬ ਪੇਜ ਨਹੀਂ ਦਿਖਾਉਂਦਾ। ਇਹ ਹਰ ਲਿੰਕ ਦੀ ਪਲ ਭਰ ਵਿੱਚ ਜਾਂਚ ਕਰਦਾ ਹੈ ਅਤੇ ਫਿਰ ਉਸਨੂੰ %1$s ਵਿੱਚ ਖੋਲ੍ਹਦਾ ਹੈ, ਉਹੀ ਬ੍ਰਾਊਜ਼ਰ ਜੋ ਤੁਸੀਂ ਪਹਿਲਾਂ ਤੋਂ ਵਰਤਦੇ ਹੋ। ਤੁਹਾਡੇ ਬੁੱਕਮਾਰਕ, ਹਿਸਟਰੀ, ਸੇਵ ਕੀਤੇ ਪਾਸਵਰਡ ਅਤੇ ਟੈਬ ਬਿਲਕੁਲ ਉਵੇਂ ਹੀ ਰਹਿੰਦੇ ਹਨ।</string>
+    <string name="default_explain">Android, LinkGuard ਨੂੰ ਤੁਹਾਡੀ “ਬ੍ਰਾਊਜ਼ਰ ਐਪ” ਕਹੇਗਾ। ਇਹ ਸਿਰਫ਼ ਇਸ ਲਈ ਹੈ ਤਾਂ ਜੋ LinkGuard ਲਿੰਕ ਨੂੰ ਪਹਿਲਾਂ ਦੇਖ ਸਕੇ। ਹਰ ਲਿੰਕ ਫਿਰ ਵੀ %1$s ਵਿੱਚ ਹੀ ਖੁੱਲ੍ਹੇਗਾ।</string>
+
+    <string name="default_heading">ਕਦਮ 1: LinkGuard ਨੂੰ ਆਪਣਾ ਡਿਫ਼ੌਲਟ ਬ੍ਰਾਊਜ਼ਰ ਬਣਾਓ</string>
+    <string name="default_done">LinkGuard ਤੁਹਾਡਾ ਡਿਫ਼ੌਲਟ ਬ੍ਰਾਊਜ਼ਰ ਹੈ</string>
+    <string name="default_button">ਡਿਫ਼ੌਲਟ ਬ੍ਰਾਊਜ਼ਰ ਬਣਾਓ</string>
+    <string name="default_hint">ਜੇ ਸੈਟਿੰਗਾਂ ਖੁੱਲ੍ਹਣ, ਤਾਂ “ਬ੍ਰਾਊਜ਼ਰ ਐਪ” ’ਤੇ ਟੈਪ ਕਰੋ ਅਤੇ LinkGuard ਚੁਣੋ।</string>
+
+    <string name="browser_heading">ਕਦਮ 2: ਲਿੰਕ ਇਸ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
+    <string name="browser_none">ਕੋਈ ਹੋਰ ਬ੍ਰਾਊਜ਼ਰ ਨਹੀਂ ਮਿਲਿਆ। Chrome ਵਰਗਾ ਕੋਈ ਬ੍ਰਾਊਜ਼ਰ ਇੰਸਟਾਲ ਕਰੋ।</string>
+
+    <string name="telegram_tip">Telegram, Instagram, Facebook ਅਤੇ LinkedIn ਵਰਗੀਆਂ ਐਪਾਂ ਅਕਸਰ ਲਿੰਕ ਐਪ ਦੇ ਅੰਦਰ ਹੀ ਖੋਲ੍ਹਦੀਆਂ ਹਨ, ਜਿੱਥੇ LinkGuard ਉਹਨਾਂ ਦੀ ਜਾਂਚ ਨਹੀਂ ਕਰ ਸਕਦਾ। ਠੱਗੀ ਵਾਲੇ ਲਿੰਕਾਂ ਤੋਂ ਬਚਣ ਲਈ, ਉਸ ਐਪ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਅੰਦਰਲਾ ਬ੍ਰਾਊਜ਼ਰ ਬੰਦ ਕਰੋ (Telegram ਵਿੱਚ: Settings → Chat Settings → In-app browser), ਜਾਂ ⋮ ’ਤੇ ਟੈਪ ਕਰਕੇ “ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਖੋਲ੍ਹੋ” ਚੁਣੋ।</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard ਕੀ ਜਾਂਚਦਾ ਹੈ</string>
+    <string name="check_unwrap">ਛੋਟੇ ਲਿੰਕ ਖੋਲ੍ਹ ਕੇ ਦੇਖੋ</string>
+    <string name="check_unwrap_desc">bit.ly ਵਰਗੀਆਂ ਸੇਵਾਵਾਂ ਤੋਂ ਪੁੱਛਦਾ ਹੈ ਕਿ ਛੋਟਾ ਲਿੰਕ ਅਸਲ ਵਿੱਚ ਕਿੱਥੇ ਜਾਂਦਾ ਹੈ।</string>
+    <string name="check_apk_download">ਐਪ ਡਾਊਨਲੋਡ</string>
+    <string name="check_brand_lookalike">ਨਕਲੀ ਬੈਂਕ ਅਤੇ ਬ੍ਰਾਂਡ ਵੈੱਬਸਾਈਟਾਂ</string>
+    <string name="check_weird_host">ਅਜੀਬ ਵੈੱਬ ਪਤੇ</string>
+    <string name="check_reputation">ਜਾਣੀਆਂ-ਪਛਾਣੀਆਂ ਠੱਗੀ ਵਾਲੀਆਂ ਵੈੱਬਸਾਈਟਾਂ</string>
+    <string name="check_domain_age">ਬਿਲਕੁਲ ਨਵੀਆਂ ਵੈੱਬਸਾਈਟਾਂ</string>
+    <string name="check_domain_age_desc">ਅਧਿਕਾਰਤ ਰਜਿਸਟਰੀ ਤੋਂ ਪੁੱਛਦਾ ਹੈ ਕਿ ਵੈੱਬਸਾਈਟ ਕਦੋਂ ਬਣੀ ਸੀ। ਸਿਰਫ਼ ਵੈੱਬਸਾਈਟ ਦਾ ਨਾਮ ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ, ਪੂਰਾ ਲਿੰਕ ਕਦੇ ਨਹੀਂ।</string>
+    <string name="check_upi_intent">UPI ਭੁਗਤਾਨ ਦੀਆਂ ਮੰਗਾਂ</string>
+
+    <string name="settings_report">ਲਿੰਕ ਦੀ ਸ਼ਿਕਾਇਤ ਕਰੋ</string>
+    <string name="settings_report_desc">ਸਾਨੂੰ ਅਜਿਹੇ ਠੱਗੀ ਵਾਲੇ ਲਿੰਕ ਬਾਰੇ ਦੱਸੋ ਜੋ LinkGuard ਫੜ ਨਹੀਂ ਸਕਿਆ।</string>
+    <string name="how_title">LinkGuard ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ</string>
+    <string name="how_desc">ਇਸਦੀ ਲੋੜ ਕਿਉਂ ਹੈ, ਅਤੇ ਇਹ ਕਿਵੇਂ ਤੈਅ ਕਰਦਾ ਹੈ ਕਿ ਕਿਹੜੇ ਲਿੰਕਾਂ ’ਤੇ ਚੇਤਾਵਨੀ ਦੇਣੀ ਹੈ।</string>
+    <string name="how_why_title">ਇਸਦੀ ਲੋੜ ਕਿਉਂ ਹੈ</string>
+    <string name="how_why_body">WhatsApp ਅਤੇ SMS ’ਤੇ ਠੱਗੀ ਵਾਲੇ ਮੈਸੇਜਾਂ ਵਿੱਚ ਅਕਸਰ ਅਜਿਹੇ ਲਿੰਕ ਹੁੰਦੇ ਹਨ ਜੋ ਅਸਲੀ ਲੱਗਦੇ ਹਨ: ਨਕਲੀ ਬੈਂਕ ਪੇਜ, “KYC ਅੱਪਡੇਟ” ਫ਼ਾਰਮ ਜਾਂ ਪੈਸੇ ਚੋਰੀ ਕਰਨ ਵਾਲੀ ਐਪ। ਨੁਕਸਾਨ ਲਈ ਇੱਕ ਟੈਪ ਹੀ ਕਾਫ਼ੀ ਹੈ, ਅਤੇ ਨਕਲੀ ਵੈੱਬ ਪਤਾ ਪਛਾਣਨਾ ਔਖਾ ਹੋ ਸਕਦਾ ਹੈ।</string>
+    <string name="how_where_title">LinkGuard ਕਿੱਥੇ ਕੰਮ ਕਰਦਾ ਹੈ</string>
+    <string name="how_where_body">LinkGuard ਤੁਹਾਡੇ ਟੈਪ ਕੀਤੇ ਲਿੰਕ ਅਤੇ ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਰ ਦੇ ਵਿਚਕਾਰ ਰਹਿੰਦਾ ਹੈ। ਇਹ ਪਲ ਭਰ ਵਿੱਚ ਲਿੰਕ ਦੀ ਜਾਂਚ ਕਰਦਾ ਹੈ, ਫਿਰ ਉਸਨੂੰ %1$s ਵਿੱਚ ਖੋਲ੍ਹਦਾ ਹੈ। ਇਹ ਆਪ ਕਦੇ ਵੈੱਬ ਪੇਜ ਨਹੀਂ ਦਿਖਾਉਂਦਾ।</string>
+    <string name="how_safe_title">ਸੁਰੱਖਿਅਤ ਲਿੰਕ ਤੁਰੰਤ ਖੁੱਲ੍ਹਦੇ ਹਨ</string>
+    <string name="how_safe_body">ਜਾਣੀਆਂ-ਪਛਾਣੀਆਂ ਅਤੇ ਸਰਕਾਰੀ ਵੈੱਬਸਾਈਟਾਂ, ਜਿਵੇਂ ਸਰਕਾਰ (.gov.in) ਅਤੇ ਬੈਂਕਾਂ ਦੀਆਂ ਵੈੱਬਸਾਈਟਾਂ, ਤੁਰੰਤ ਖੁੱਲ੍ਹ ਜਾਂਦੀਆਂ ਹਨ। ਜੇ ਲਿੰਕ ਠੀਕ ਲੱਗਦਾ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਕੁਝ ਵੀ ਨਹੀਂ ਦਿਖਦਾ।</string>
+    <string name="how_scam_title">ਠੱਗੀ ਵਾਲੇ ਲਿੰਕਾਂ ਦੀ ਪਛਾਣ</string>
+    <string name="how_scam_body">LinkGuard ਠੱਗਾਂ ਦੀਆਂ ਚਾਲਾਂ ਲੱਭਦਾ ਹੈ: ਬੈਂਕ ਜਾਂ ਕਿਸੇ ਮਸ਼ਹੂਰ ਬ੍ਰਾਂਡ ਹੋਣ ਦਾ ਦਿਖਾਵਾ ਕਰਨ ਵਾਲੀਆਂ ਵੈੱਬਸਾਈਟਾਂ, Play Store ਤੋਂ ਬਾਹਰੋਂ ਐਪ ਡਾਊਨਲੋਡ, ਲੁਕੀਆਂ ਹੋਈਆਂ ਭੁਗਤਾਨ ਮੰਗਾਂ, ਬਿਲਕੁਲ ਨਵੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਅਤੇ ਅਜੀਬ ਵੈੱਬ ਪਤੇ। ਇਹ ਲਗਭਗ 1,900 ਜਾਣੀਆਂ-ਪਛਾਣੀਆਂ ਨੁਕਸਾਨਦੇਹ ਵੈੱਬਸਾਈਟਾਂ ਦੀ ਸੂਚੀ ਨਾਲ ਵੀ ਮਿਲਾਨ ਕਰਦਾ ਹੈ, ਜੋ ਇੱਕ ਮੰਨੇ-ਪ੍ਰਮੰਨੇ ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੁਰੱਖਿਆ ਡਾਟਾਬੇਸ ਤੋਂ ਲਈ ਗਈ ਹੈ ਅਤੇ ਹਰ ਰੋਜ਼ ਅੱਪਡੇਟ ਹੁੰਦੀ ਹੈ।</string>
+    <string name="how_community_title">ਦੂਜੇ ਵਰਤੋਂਕਾਰਾਂ ਦੀਆਂ ਸ਼ਿਕਾਇਤਾਂ</string>
+    <string name="how_community_body">ਜਦੋਂ ਕਈ LinkGuard ਵਰਤੋਂਕਾਰ ਇੱਕੋ ਵੈੱਬਸਾਈਟ ਦੀ ਠੱਗੀ ਵਜੋਂ ਸ਼ਿਕਾਇਤ ਕਰਦੇ ਹਨ, ਤਾਂ ਦੂਜਿਆਂ ਨੂੰ ਸਾਵਧਾਨ ਰਹਿਣ ਦੀ ਚੇਤਾਵਨੀ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ।</string>
+    <string name="how_choice_title">ਫ਼ੈਸਲਾ ਹਮੇਸ਼ਾ ਤੁਹਾਡਾ</string>
+    <string name="how_choice_body">LinkGuard ਕਦੇ ਕੋਈ ਲਿੰਕ ਰੋਕਦਾ ਨਹੀਂ। ਹਰ ਚੇਤਾਵਨੀ ਸੌਖੇ ਸ਼ਬਦਾਂ ਵਿੱਚ ਮੁਸ਼ਕਲ ਦੱਸਦੀ ਹੈ ਅਤੇ “ਫਿਰ ਵੀ ਖੋਲ੍ਹੋ” ਦਾ ਵਿਕਲਪ ਦਿੰਦੀ ਹੈ। LinkGuard ਤੁਹਾਡੇ ਖੋਲ੍ਹੇ ਲਿੰਕ ਕਦੇ ਸੇਵ ਨਹੀਂ ਕਰਦਾ।</string>
+    <string name="feedback_title">ਅਨੁਵਾਦ ਗਲਤ ਹੈ? ਸਾਨੂੰ ਦੱਸੋ</string>
+    <string name="feedback_desc">LinkGuard ਦਾ ਅਨੁਵਾਦ ਮਸ਼ੀਨ ਨੇ ਕੀਤਾ ਹੈ। ਆਪਣੀ ਭਾਸ਼ਾ ਦੀਆਂ ਗਲਤੀਆਂ ਠੀਕ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰੋ।</string>
+    <string name="feedback_intro">ਇਸ ਭਾਸ਼ਾ ਵਿੱਚ LinkGuard ਦੀ ਲਿਖਤ ਦਾ ਅਨੁਵਾਦ ਮਸ਼ੀਨ ਨੇ ਕੀਤਾ ਹੈ ਅਤੇ ਇਸ ਵਿੱਚ ਗਲਤੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਜੇ ਕੁਝ ਠੀਕ ਨਾ ਲੱਗੇ, ਤਾਂ ਸਾਨੂੰ ਗਲਤ ਸ਼ਬਦ ਦੱਸੋ ਅਤੇ ਇਹ ਵੀ ਕਿ ਤੁਸੀਂ ਉਸਨੂੰ ਕਿਵੇਂ ਕਹੋਗੇ। ਜੋ ਸਭ ਤੋਂ ਸੌਖਾ ਹੋਵੇ, ਉਹ ਵਰਤੋ:</string>
+    <string name="feedback_email">ਸਾਨੂੰ ਈਮੇਲ ਕਰੋ</string>
+    <string name="feedback_github">GitHub ’ਤੇ ਦੱਸੋ</string>
+    <string name="feedback_github_desc">ਇਸ ਲਈ ਮੁਫ਼ਤ GitHub ਖਾਤਾ ਚਾਹੀਦਾ ਹੈ।</string>
+    <string name="feedback_play">Google Play ’ਤੇ ਰਿਵਿਊ ਲਿਖੋ</string>
+    <string name="about_title">LinkGuard ਬਾਰੇ</string>
+    <string name="about_desc">ਵਰਜ਼ਨ, ਨਿੱਜਤਾ ਨੀਤੀ, ਓਪਨ ਸੋਰਸ ਅਤੇ ਸੰਪਰਕ।</string>
+    <string name="about_version">ਵਰਜ਼ਨ %1$s</string>
+    <string name="about_by">Dwarpal Labs ਵੱਲੋਂ ਬਣਾਇਆ ਗਿਆ। LinkGuard ਆਜ਼ਾਦ ਹੈ ਅਤੇ ਕਿਸੇ ਵੀ ਬੈਂਕ, ਭੁਗਤਾਨ ਐਪ, ਕੋਰੀਅਰ ਜਾਂ ਸਰਕਾਰੀ ਅਦਾਰੇ ਨਾਲ ਜੁੜਿਆ ਨਹੀਂ ਹੈ।</string>
+    <string name="about_privacy">ਨਿੱਜਤਾ ਨੀਤੀ</string>
+    <string name="about_privacy_desc">ਤੁਹਾਡੇ ਫ਼ੋਨ ਤੋਂ ਕੀ ਬਾਹਰ ਜਾਂਦਾ ਹੈ, ਅਤੇ ਕਿਉਂ।</string>
+    <string name="about_source">ਓਪਨ ਸੋਰਸ</string>
+    <string name="about_source_desc">Apache-2.0 ਲਾਇਸੈਂਸ ਹੇਠ ਮੁਫ਼ਤ। ਕੋਈ ਵੀ GitHub ’ਤੇ ਇਸਦਾ ਕੋਡ ਜਾਂਚ ਸਕਦਾ ਹੈ।</string>
+    <string name="about_contact">ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ</string>
+    <string name="about_credits">ਧੰਨਵਾਦ</string>
+    <string name="about_credits_body">ਜਾਣੀਆਂ-ਪਛਾਣੀਆਂ ਨੁਕਸਾਨਦੇਹ ਵੈੱਬਸਾਈਟਾਂ: abuse.ch ਦੀ URLhaus। ਮਸ਼ਹੂਰ ਵੈੱਬਸਾਈਟਾਂ: Tranco ਸੂਚੀ। ਵੈੱਬਸਾਈਟਾਂ ਦੇ ਨਾਮ: Public Suffix List (MPL-2.0)।</string>
+    <string name="report_link_label">ਲਿੰਕ</string>
+    <string name="report_note_label">ਤੁਹਾਨੂੰ ਇਹ ਠੱਗੀ ਕਿਉਂ ਲੱਗਦੀ ਹੈ? (ਜ਼ਰੂਰੀ ਨਹੀਂ)</string>
+    <string name="report_private_info">ਤੁਹਾਡੀ ਸ਼ਿਕਾਇਤ ਨਿੱਜੀ ਤੌਰ ’ਤੇ Dwarpal Labs ਕੋਲ ਜਾਂਦੀ ਹੈ ਅਤੇ ਕਦੇ ਜਨਤਕ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ। ਜਦੋਂ ਕਈ ਵੱਖ-ਵੱਖ ਲੋਕ ਇੱਕੋ ਵੈੱਬਸਾਈਟ ਦੀ ਸ਼ਿਕਾਇਤ ਕਰਦੇ ਹਨ, ਤਾਂ ਦੂਜੇ LinkGuard ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਆਪਣੇ-ਆਪ ਚੇਤਾਵਨੀ ਦਿਖਦੀ ਹੈ। ਤੁਹਾਡੀ ਸ਼ਿਕਾਇਤ ਤੋਂ ਤੁਹਾਡੀ ਪਛਾਣ ਨਹੀਂ ਹੋ ਸਕਦੀ। ਕਿਰਪਾ ਕਰਕੇ ਫ਼ੋਨ ਨੰਬਰ, ਨਾਮ ਜਾਂ ਹੋਰ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨਾ ਲਿਖੋ।</string>
+    <string name="report_submit">ਸ਼ਿਕਾਇਤ ਭੇਜੋ</string>
+    <string name="report_sending">ਭੇਜੀ ਜਾ ਰਹੀ ਹੈ…</string>
+    <string name="report_sent">ਧੰਨਵਾਦ। ਤੁਹਾਡੀ ਸ਼ਿਕਾਇਤ ਜਾਂਚ ਲਈ ਭੇਜ ਦਿੱਤੀ ਗਈ ਹੈ।</string>
+    <string name="report_failed">ਸ਼ਿਕਾਇਤ ਨਹੀਂ ਭੇਜੀ ਜਾ ਸਕੀ। ਆਪਣਾ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੇਖੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="back">ਵਾਪਸ</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">ਇਹ ਲਿੰਕ ਠੱਗੀ ਹੋ ਸਕਦਾ ਹੈ</string>
+    <string name="interstitial_title_soft">ਇਸ ਲਿੰਕ ਤੋਂ ਸਾਵਧਾਨ ਰਹੋ</string>
+    <string name="interstitial_go_back">ਵਾਪਸ ਜਾਓ</string>
+    <string name="interstitial_open_anyway">ਫਿਰ ਵੀ ਖੋਲ੍ਹੋ</string>
+    <string name="interstitial_checking">ਲਿੰਕ ਦੀ ਜਾਂਚ ਹੋ ਰਹੀ ਹੈ…</string>
+    <string name="interstitial_upi_heading">UPI ਭੁਗਤਾਨ ਦੀ ਮੰਗ</string>
+    <string name="interstitial_upi_payee">ਕਿਸਨੂੰ ਭੁਗਤਾਨ: %1$s</string>
+    <string name="interstitial_upi_amount">ਰਕਮ: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">ਇਹ ਲਿੰਕ Play Store ਤੋਂ ਬਾਹਰੋਂ ਇੱਕ ਐਪ ਡਾਊਨਲੋਡ ਕਰਦਾ ਹੈ। ਅਜਿਹੀਆਂ ਨਕਲੀ ਐਪਾਂ ਤੁਹਾਡੇ ਮੈਸੇਜ ਪੜ੍ਹ ਸਕਦੀਆਂ ਹਨ ਅਤੇ ਬੈਂਕ OTP ਚੋਰੀ ਕਰ ਸਕਦੀਆਂ ਹਨ।</string>
+    <string name="warn_brand_lookalike">ਇਹ ਵੈੱਬਸਾਈਟ %1$s ਹੋਣ ਦਾ ਦਿਖਾਵਾ ਕਰ ਰਹੀ ਹੈ। ਇਹ %1$s ਦੀ ਅਸਲੀ ਵੈੱਬਸਾਈਟ ਨਹੀਂ ਹੈ।</string>
+    <string name="warn_upi_intent">ਇਹ ਲਿੰਕ ਤੁਹਾਨੂੰ UPI ਨਾਲ ਪੈਸੇ ਭੇਜਣ ਲਈ ਕਹਿੰਦਾ ਹੈ। ਰਿਫ਼ੰਡ, ਇਨਾਮ ਜਾਂ KYC ਅੱਪਡੇਟ ਲੈਣ ਲਈ ਕਦੇ ਵੀ ਪੈਸੇ ਨਹੀਂ ਦੇਣੇ ਪੈਂਦੇ।</string>
+    <string name="warn_weird_host">ਇਹ ਲਿੰਕ ਇੱਕ ਅਜੀਬ ਪਤਾ ਵਰਤਦਾ ਹੈ, ਜੋ ਅਸਲੀ ਕੰਪਨੀਆਂ ਘੱਟ ਹੀ ਵਰਤਦੀਆਂ ਹਨ।</string>
+    <string name="warn_weird_host_brand">ਇਸ ਲਿੰਕ ਵਿੱਚ %1$s ਦਾ ਨਾਮ ਹੈ, ਪਰ ਇਹ ਇੱਕ ਅਜੀਬ ਪਤਾ ਵਰਤਦਾ ਹੈ ਜੋ %1$s ਨਹੀਂ ਵਰਤਦਾ।</string>
+    <string name="warn_reputation">ਇਹ ਵੈੱਬਸਾਈਟ ਜਾਣੀਆਂ-ਪਛਾਣੀਆਂ ਠੱਗੀ ਵਾਲੀਆਂ ਜਾਂ ਨੁਕਸਾਨਦੇਹ ਵੈੱਬਸਾਈਟਾਂ ਦੀ ਸੂਚੀ ਵਿੱਚ ਹੈ।</string>
+    <plurals name="warn_community">
+        <item quantity="one">ਇਸ ਹਫ਼ਤੇ %d LinkGuard ਵਰਤੋਂਕਾਰ ਨੇ ਇਸ ਲਿੰਕ ਦੀ ਠੱਗੀ ਵਜੋਂ ਸ਼ਿਕਾਇਤ ਕੀਤੀ ਹੈ।</item>
+        <item quantity="other">ਇਸ ਹਫ਼ਤੇ %d LinkGuard ਵਰਤੋਂਕਾਰਾਂ ਨੇ ਇਸ ਲਿੰਕ ਦੀ ਠੱਗੀ ਵਜੋਂ ਸ਼ਿਕਾਇਤ ਕੀਤੀ ਹੈ।</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">ਇਹ ਵੈੱਬਸਾਈਟ %d ਦਿਨ ਪਹਿਲਾਂ ਬਣੀ ਹੈ। ਠੱਗੀ ਵਾਲੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਅਕਸਰ ਬਿਲਕੁਲ ਨਵੀਆਂ ਹੁੰਦੀਆਂ ਹਨ।</item>
+        <item quantity="other">ਇਹ ਵੈੱਬਸਾਈਟ %d ਦਿਨ ਪਹਿਲਾਂ ਬਣੀ ਹੈ। ਠੱਗੀ ਵਾਲੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਅਕਸਰ ਬਿਲਕੁਲ ਨਵੀਆਂ ਹੁੰਦੀਆਂ ਹਨ।</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard ਨੂੰ ਇਸ ਲਿੰਕ ਵਿੱਚ ਕੁਝ ਅਜੀਬ ਮਿਲਿਆ।</string>
+</resources>
