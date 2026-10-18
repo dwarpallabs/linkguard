@@ -1,6 +1,7 @@
 package com.dwarpallabs.linkguard.ui
 
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertTextContains
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
@@ -25,9 +26,17 @@ class InterstitialScreenTest {
 
     private val res = InstrumentationRegistry.getInstrumentation().targetContext.resources
 
-    private fun show(model: InterstitialModel, onGoBack: () -> Unit = {}, onOpenAnyway: () -> Unit = {}) {
-        compose.setContent { LinkguardTheme { InterstitialScreen(model, onGoBack, onOpenAnyway) } }
+    private fun show(
+        model: InterstitialModel,
+        onGoBack: () -> Unit = {},
+        onOpenAnyway: () -> Unit = {},
+        report: ReportStatus = ReportStatus.IDLE,
+        onReport: () -> Unit = {},
+    ) {
+        compose.setContent { LinkguardTheme { InterstitialScreen(model, onGoBack, onOpenAnyway, report, onReport) } }
     }
+
+    private val brand = InterstitialModel(true, "sbi-rewards-redeem.xyz", "sbi-rewards-redeem.xyz", Reason.BrandLookalike("SBI"))
 
     @Test
     fun strongBrandWarningShowsHostReasonAndBothButtons() {
@@ -80,5 +89,37 @@ class InterstitialScreenTest {
         compose.onNodeWithTag("open_anyway").performScrollTo().performClick()
         assertEquals(1, back)
         assertEquals(1, open)
+    }
+
+    @Test
+    fun reportButtonIsShownAndFiresItsCallback() {
+        var reports = 0
+        show(brand, onReport = { reports++ })
+        compose.onNodeWithTag("report").performScrollTo().assertIsDisplayed()
+        compose.onNodeWithText(res.getString(R.string.interstitial_report_hint)).assertIsDisplayed()
+        compose.onNodeWithTag("report").performClick()
+        assertEquals(1, reports)
+    }
+
+    @Test
+    fun sendingDisablesTheReportButton() {
+        show(brand, report = ReportStatus.SENDING)
+        compose.onNodeWithTag("report").performScrollTo().assertIsNotEnabled()
+        compose.onNodeWithText(res.getString(R.string.report_sending)).assertIsDisplayed()
+    }
+
+    @Test
+    fun sentReportReplacesTheButtonWithThanks() {
+        show(brand, report = ReportStatus.SENT)
+        compose.onNodeWithTag("report_result").performScrollTo().assertTextContains(res.getString(R.string.report_sent))
+        compose.onNodeWithTag("report").assertDoesNotExist()
+        compose.onNodeWithTag("open_anyway").assertIsDisplayed()
+    }
+
+    @Test
+    fun failedReportShowsTheErrorAndKeepsTheButton() {
+        show(brand, report = ReportStatus.FAILED)
+        compose.onNodeWithTag("report_result").performScrollTo().assertTextContains(res.getString(R.string.report_failed))
+        compose.onNodeWithTag("report").assertIsDisplayed()
     }
 }

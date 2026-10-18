@@ -82,6 +82,8 @@
     <string name="interstitial_title_soft">ह्या लिंका कडेन जतनाय घेयात</string>
     <string name="interstitial_go_back">फाटीं वचात</string>
     <string name="interstitial_open_anyway">तरी लेगीत उगडात</string>
+    <string name="interstitial_report">ह्या लिंकाची तक्रार करात</string>
+    <string name="interstitial_report_hint">निनांवी. हें हेर LinkGuard वापरप्यांक सावध करपाक मदत करता.</string>
     <string name="interstitial_checking">लिंक तपासतात…</string>
     <string name="interstitial_upi_heading">UPI वयल्यान पयशे मागपाची विनंती</string>
     <string name="interstitial_upi_payee">कोणाक पयशे: %1$s</string>

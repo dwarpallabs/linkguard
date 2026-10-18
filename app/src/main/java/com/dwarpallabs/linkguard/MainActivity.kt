@@ -21,7 +21,6 @@ import androidx.lifecycle.lifecycleScope
 import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.browser.Browsers
 import com.dwarpallabs.linkguard.core.CheckId
-import com.dwarpallabs.linkguard.core.NormalisedUrl
 import com.dwarpallabs.linkguard.ui.AboutScreen
 import com.dwarpallabs.linkguard.ui.FeedbackScreen
 import com.dwarpallabs.linkguard.ui.HomeScreen
@@ -33,9 +32,7 @@ import com.dwarpallabs.linkguard.ui.SourceCodeUrl
 import com.dwarpallabs.linkguard.ui.SupportEmail
 import com.dwarpallabs.linkguard.ui.TranslationIssueUrl
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 /** First-launch setup and Settings: default browser, forward-to browser, check toggles, how it works, reporting, translation feedback, about. */
 class MainActivity : ComponentActivity() {
@@ -128,17 +125,8 @@ class MainActivity : ComponentActivity() {
     /** Sends the report only now, because the user tapped Send report. */
     private fun sendReport(link: String, note: String) {
         reportStatus = ReportStatus.SENDING
-        val app = application as LinkGuardApp
-        val client = ReportClient(app.http)
         lifecycleScope.launch {
-            val ok = withContext(Dispatchers.IO) {
-                // The website's registrable domain and an anonymous per-website token let the server
-                // count distinct reporters without being able to link one phone's reports together.
-                val parsed = NormalisedUrl.parse(link, app.data.psl)
-                val domain = parsed?.registrableDomain ?: parsed?.host?.takeIf { parsed.isWeb && !parsed.isIpLiteral }
-                val token = domain?.let { ReporterToken.of(Prefs(app)).forDomain(it) }
-                client.send(link, note, appVersion(), domain, token)
-            }
+            val ok = Reporter(application as LinkGuardApp).send(link, note)
             reportStatus = if (ok) ReportStatus.SENT else ReportStatus.FAILED
         }
     }

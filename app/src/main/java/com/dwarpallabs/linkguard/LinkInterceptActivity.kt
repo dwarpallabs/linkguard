@@ -65,10 +65,13 @@ class LinkInterceptActivity : ComponentActivity() {
                 State.Checking, is State.Forward -> Unit
                 State.CheckingSlow -> LinkguardTheme { CheckingCard() }
                 is State.Warn -> LinkguardTheme {
+                    val report by viewModel.reportStatus.collectAsState()
                     InterstitialScreen(
                         model = InterstitialModel.from(s.verdict),
                         onGoBack = ::finishWithoutAnimation,
                         onOpenAnyway = { openAnyway(s.verdict) },
+                        report = report,
+                        onReport = { viewModel.report(s.verdict) },
                     )
                 }
             }

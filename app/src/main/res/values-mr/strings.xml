@@ -82,6 +82,8 @@
     <string name="interstitial_title_soft">या लिंकपासून सावध राहा</string>
     <string name="interstitial_go_back">मागे जा</string>
     <string name="interstitial_open_anyway">तरीही उघडा</string>
+    <string name="interstitial_report">या लिंकची तक्रार करा</string>
+    <string name="interstitial_report_hint">निनावी. इतर LinkGuard वापरकर्त्यांना सावध करण्यास मदत होते.</string>
     <string name="interstitial_checking">लिंक तपासत आहे…</string>
     <string name="interstitial_upi_heading">UPI पैसे मागण्याची विनंती</string>
     <string name="interstitial_upi_payee">कोणाला पैसे: %1$s</string>

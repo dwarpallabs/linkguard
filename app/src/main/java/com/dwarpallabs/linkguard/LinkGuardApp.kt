@@ -12,6 +12,9 @@ import com.dwarpallabs.linkguard.core.MemoryCachedReputation
 import com.dwarpallabs.linkguard.core.RdapClient
 import com.dwarpallabs.linkguard.core.UrlConnectionHttp
 import com.dwarpallabs.linkguard.core.checks.MemoryCachedRegistrationDates
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import java.util.concurrent.Callable
 import java.util.concurrent.Executors
 import java.util.concurrent.Future
@@ -29,6 +32,9 @@ class LinkGuardApp : Application() {
     val allowlist = HashedAllowlist()
 
     val http = UrlConnectionHttp()
+
+    /** Outlives any screen, so a report the user sent keeps going after they tap Go back. */
+    val reportScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     override fun onCreate() {
         super.onCreate()

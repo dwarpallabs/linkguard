@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">ꯂꯤꯡꯛ ꯑꯁꯤꯗ ꯆꯦꯀꯁꯤꯟꯕꯤꯌꯨ</string>
     <string name="interstitial_go_back">ꯍꯟꯖꯤꯟꯕꯤꯌꯨ</string>
     <string name="interstitial_open_anyway">ꯑꯗꯨꯝ ꯑꯣꯏꯅꯃꯛ ꯍꯥꯡꯗꯣꯀꯎ</string>
+    <string name="interstitial_report">ꯂꯤꯡꯛ ꯑꯁꯤ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯕꯤꯌꯨ</string>
+    <string name="interstitial_report_hint">ꯃꯤꯡ ꯌꯥꯎꯗꯕ꯫ ꯑꯇꯣꯞꯄ LinkGuard ꯁꯤꯖꯤꯟꯅꯔꯤꯕꯁꯤꯡꯗ ꯆꯦꯛꯁꯤꯟ ꯋꯥ ꯍꯥꯌꯕꯗ ꯃꯇꯦꯡ ꯄꯥꯡꯏ꯫</string>
     <string name="interstitial_checking">ꯂꯤꯡꯛ ꯌꯦꯡꯁꯤꯜꯂꯤ…</string>
     <string name="interstitial_upi_heading">UPI ꯗꯒꯤ ꯁꯦꯜ ꯍꯥꯏꯖꯕ</string>
     <string name="interstitial_upi_payee">ꯄꯤꯒꯗꯕ ꯃꯤ: %1$s</string>

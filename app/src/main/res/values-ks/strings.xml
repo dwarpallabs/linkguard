@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">یمہِ لِنکہٕ نِش روزِو ہوشیار</string>
     <string name="interstitial_go_back">واپس گٔژھِو</string>
     <string name="interstitial_open_anyway">تیٚلہِ تہِ یَلہٕ کٔرِو</string>
+    <string name="interstitial_report">یَتھ لِنکَس شکایت کٔرِو</string>
+    <string name="interstitial_report_hint">گُمنام۔ یہِ چھُ باقی LinkGuard اِستعمال کرن والین خبردار کرنس منٛز مدد کران۔</string>
     <string name="interstitial_checking">لِنک چھُ جانچنہٕ یِوان…</string>
     <string name="interstitial_upi_heading">UPI ادائیگی ہُند مطالبہٕ</string>
     <string name="interstitial_upi_payee">ادائیگی کٔمِس: %1$s</string>

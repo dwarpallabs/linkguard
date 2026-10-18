@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">ಈ ಲಿಂಕ್ ಬಗ್ಗೆ ಹುಷಾರು</string>
     <string name="interstitial_go_back">ಹಿಂದೆ ಹೋಗಿ</string>
     <string name="interstitial_open_anyway">ಆದರೂ ತೆರೆಯಿರಿ</string>
+    <string name="interstitial_report">ಈ ಲಿಂಕ್ ರಿಪೋರ್ಟ್ ಮಾಡಿ</string>
+    <string name="interstitial_report_hint">ಅನಾಮಧೇಯ. ಇತರ LinkGuard ಬಳಕೆದಾರರನ್ನು ಎಚ್ಚರಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.</string>
     <string name="interstitial_checking">ಲಿಂಕ್ ಚೆಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ…</string>
     <string name="interstitial_upi_heading">UPI ಮೂಲಕ ಹಣದ ಬೇಡಿಕೆ</string>
     <string name="interstitial_upi_payee">ಯಾರಿಗೆ: %1$s</string>
