@@ -21,7 +21,7 @@ import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
 
-/** Link-safety states, docs/design-system.md §6.2. */
+/** Link-safety states. */
 enum class Status { SAFE, CAUTION, DANGER }
 
 /**

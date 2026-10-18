@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
-// docs/design-system.md §7.1: full width, 56 dp minimum, 12 dp radius. Labels wrap rather than
+// Full width, 56 dp minimum, 12 dp radius. Labels wrap rather than
 // shrink, so long Tamil or Malayalam labels grow the button instead of being cut off.
 private val ButtonShape = RoundedCornerShape(12.dp)
 private val ButtonPadding = PaddingValues(horizontal = 24.dp, vertical = 14.dp)

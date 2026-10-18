@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Brand tokens for XML resources; Compose colours live in ui/theme/Color.kt (docs/design-system.md §3). -->
+<!-- Brand tokens for XML resources; Compose colours live in ui/theme/Color.kt. -->
 <resources>
     <color name="brand">#FF1E3A8A</color>
     <color name="ink">#FF111827</color>
