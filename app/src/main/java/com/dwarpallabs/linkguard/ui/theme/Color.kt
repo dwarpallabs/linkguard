@@ -2,7 +2,7 @@ package com.dwarpallabs.linkguard.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Tokens from docs/design-system.md §3. One brand colour, one ink, three status colours.
+// Brand tokens. One brand colour, one ink, three status colours.
 // Status colours mean link safety only; never use them for decoration.
 
 val Indigo = Color(0xFF1E3A8A)

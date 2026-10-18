@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-// Scale from docs/design-system.md §4. System font (Noto covers every Indian script), letter
+// Type scale. System font (Noto covers every Indian script), letter
 // spacing 0 so Indic conjuncts never break, line height ≥ 1.45× so vowel signs never clip.
 // Every Material slot is set so nothing falls back to Material's smaller defaults.
 private fun style(size: Int, line: Int, weight: FontWeight) = TextStyle(

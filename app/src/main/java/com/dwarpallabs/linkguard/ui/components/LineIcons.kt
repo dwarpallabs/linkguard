@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 
 /**
- * Line icons drawn in code so they need no icon library (docs/design-system.md §6.1).
+ * Line icons drawn in code so they need no icon library.
  * 24 × 24 grid, 2-unit stroke; tint them with `Icon`.
  */
 object LineIcons {
