@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">ਇਸ ਲਿੰਕ ਤੋਂ ਸਾਵਧਾਨ ਰਹੋ</string>
     <string name="interstitial_go_back">ਵਾਪਸ ਜਾਓ</string>
     <string name="interstitial_open_anyway">ਫਿਰ ਵੀ ਖੋਲ੍ਹੋ</string>
+    <string name="interstitial_report">ਇਸ ਲਿੰਕ ਦੀ ਸ਼ਿਕਾਇਤ ਕਰੋ</string>
+    <string name="interstitial_report_hint">ਗੁਮਨਾਮ। ਇਹ ਦੂਜੇ LinkGuard ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਸੁਚੇਤ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।</string>
     <string name="interstitial_checking">ਲਿੰਕ ਦੀ ਜਾਂਚ ਹੋ ਰਹੀ ਹੈ…</string>
     <string name="interstitial_upi_heading">UPI ਭੁਗਤਾਨ ਦੀ ਮੰਗ</string>
     <string name="interstitial_upi_payee">ਕਿਸਨੂੰ ਭੁਗਤਾਨ: %1$s</string>

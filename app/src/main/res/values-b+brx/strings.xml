@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">बे लिंकनिफ्राय होसियार जा</string>
     <string name="interstitial_go_back">फिनथां</string>
     <string name="interstitial_open_anyway">बेबादिबो खेव</string>
+    <string name="interstitial_report">बे लिंकनि सायाव नालिस खालाम</string>
+    <string name="interstitial_report_hint">मुं गैयि। बेयो गुबुन LinkGuard बाहायग्राफोरखौ सोमोनांथाय होनो हेफाजाब होयो।</string>
     <string name="interstitial_checking">लिंकखौ नायसंगासिनो दं…</string>
     <string name="interstitial_upi_heading">UPI आव रां होनो बिनती</string>
     <string name="interstitial_upi_payee">सोरखौ रां होनाय: %1$s</string>

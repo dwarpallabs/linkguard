@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">Be careful with this link</string>
     <string name="interstitial_go_back">Go back</string>
     <string name="interstitial_open_anyway">Open anyway</string>
+    <string name="interstitial_report">Report this link</string>
+    <string name="interstitial_report_hint">Anonymous. Helps warn other LinkGuard users.</string>
     <string name="interstitial_checking">Checking link…</string>
     <string name="interstitial_upi_heading">UPI payment request</string>
     <string name="interstitial_upi_payee">Pay to: %1$s</string>

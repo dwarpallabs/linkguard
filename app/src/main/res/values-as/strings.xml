@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">এই লিংকটোৰ পৰা সাৱধান</string>
     <string name="interstitial_go_back">উভতি যাওক</string>
     <string name="interstitial_open_anyway">তথাপিও খোলক</string>
+    <string name="interstitial_report">এই লিংক ৰিপ’ৰ্ট কৰক</string>
+    <string name="interstitial_report_hint">বেনামী। আন LinkGuard ব্যৱহাৰকাৰীক সতৰ্ক কৰাত সহায় কৰে।</string>
     <string name="interstitial_checking">লিংক পৰীক্ষা কৰি আছে…</string>
     <string name="interstitial_upi_heading">UPI-ত টকা খোজা অনুৰোধ</string>
     <string name="interstitial_upi_payee">যাক দিব: %1$s</string>

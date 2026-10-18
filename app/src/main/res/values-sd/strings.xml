@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">هن لنڪ کان هوشيار رهو</string>
     <string name="interstitial_go_back">واپس وڃو</string>
     <string name="interstitial_open_anyway">پوءِ به کوليو</string>
+    <string name="interstitial_report">هن لنڪ جي شڪايت ڪريو</string>
+    <string name="interstitial_report_hint">گمنام. ٻين LinkGuard استعمال ڪندڙن کي خبردار ڪرڻ ۾ مدد ڪري ٿو.</string>
     <string name="interstitial_checking">لنڪ جي چڪاس ٿي رهي آهي…</string>
     <string name="interstitial_upi_heading">UPI ادائگي جي درخواست</string>
     <string name="interstitial_upi_payee">ڪنهن کي ادائگي: %1$s</string>

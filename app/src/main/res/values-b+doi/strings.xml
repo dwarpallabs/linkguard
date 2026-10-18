@@ -81,6 +81,8 @@
     <string name="interstitial_title_soft">इस लिंक थमां सावधान रौह्ओ</string>
     <string name="interstitial_go_back">पिच्छें जाओ</string>
     <string name="interstitial_open_anyway">फ्ही बी खोल्लो</string>
+    <string name="interstitial_report">इस लिंक दी शकैत करो</string>
+    <string name="interstitial_report_hint">गुमनाम। एह् दुए LinkGuard बरतूनियें गी चेतावनी देने च मदद करदा ऐ।</string>
     <string name="interstitial_checking">लिंक दी जांच होआ करदी ऐ…</string>
     <string name="interstitial_upi_heading">UPI कन्नै पैसे दी मंग</string>
     <string name="interstitial_upi_payee">कुसी देने न: %1$s</string>

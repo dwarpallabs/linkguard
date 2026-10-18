@@ -48,3 +48,17 @@ fun SecondaryButton(text: String, onClick: () -> Unit, modifier: Modifier = Modi
         Text(text, style = MaterialTheme.typography.labelLarge, textAlign = TextAlign.Center)
     }
 }
+
+/** Tertiary action ("Report this link", "Learn more"): brand-coloured text, no border, 48 dp minimum. */
+@Composable
+fun TextButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier, enabled: Boolean = true) {
+    androidx.compose.material3.TextButton(
+        onClick = onClick,
+        enabled = enabled,
+        shape = ButtonShape,
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 10.dp),
+        modifier = modifier.fillMaxWidth().heightIn(min = 48.dp),
+    ) {
+        Text(text, style = MaterialTheme.typography.labelLarge, textAlign = TextAlign.Center)
+    }
+}

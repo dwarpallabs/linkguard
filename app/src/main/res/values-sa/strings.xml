@@ -82,6 +82,8 @@
     <string name="interstitial_title_soft">अस्मिन् लिङ्के सावधानः भवतु</string>
     <string name="interstitial_go_back">पृष्ठतः गच्छतु</string>
     <string name="interstitial_open_anyway">तथापि उद्घाटयतु</string>
+    <string name="interstitial_report">अस्य लिङ्कस्य विषये सूचयतु</string>
+    <string name="interstitial_report_hint">अनामकम्। एतत् अन्यान् LinkGuard उपयोक्तॄन् सावधानीकर्तुं साहाय्यं करोति।</string>
     <string name="interstitial_checking">लिङ्कः परीक्ष्यते…</string>
     <string name="interstitial_upi_heading">UPI धनयाचना</string>
     <string name="interstitial_upi_payee">कस्मै देयम्: %1$s</string>

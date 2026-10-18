@@ -29,6 +29,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
@@ -39,11 +40,21 @@ import com.dwarpallabs.linkguard.ui.components.PrimaryButton
 import com.dwarpallabs.linkguard.ui.components.SecondaryButton
 import com.dwarpallabs.linkguard.ui.components.Status
 import com.dwarpallabs.linkguard.ui.components.StatusBadge
+import com.dwarpallabs.linkguard.ui.components.TextButton
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
-/** The one warning screen. "Go back" is primary; "Open anyway" is always present (never block). */
+/**
+ * The one warning screen. "Go back" is primary; "Open anyway" is always present (never block).
+ * "Report this link" sends the link to Dwarpal Labs on one tap; [report] shows how that went.
+ */
 @Composable
-fun InterstitialScreen(model: InterstitialModel, onGoBack: () -> Unit, onOpenAnyway: () -> Unit) {
+fun InterstitialScreen(
+    model: InterstitialModel,
+    onGoBack: () -> Unit,
+    onOpenAnyway: () -> Unit,
+    report: ReportStatus = ReportStatus.IDLE,
+    onReport: () -> Unit = {},
+) {
     val status = LinkguardTheme.status
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
@@ -82,6 +93,51 @@ fun InterstitialScreen(model: InterstitialModel, onGoBack: () -> Unit, onOpenAny
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 PrimaryButton(stringResource(R.string.interstitial_go_back), onGoBack, Modifier.testTag("go_back"))
                 SecondaryButton(stringResource(R.string.interstitial_open_anyway), onOpenAnyway, Modifier.testTag("open_anyway"))
+                ReportBlock(report, onReport)
+            }
+        }
+    }
+}
+
+/**
+ * A text button under "Open anyway". One tap sends; the outcome stays inline, never a toast, which
+ * slow readers would miss. After a failure the button comes back so the user can retry. The result
+ * lines are plain ink: safe/caution/danger colours are reserved for what the link itself is.
+ */
+@Composable
+private fun ReportBlock(status: ReportStatus, onReport: () -> Unit) {
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        when (status) {
+            ReportStatus.SENT -> Text(
+                stringResource(R.string.report_sent),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurface,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(top = 8.dp).testTag("report_result"),
+            )
+            else -> {
+                if (status == ReportStatus.FAILED) {
+                    Text(
+                        stringResource(R.string.report_failed),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth().padding(top = 8.dp).testTag("report_result"),
+                    )
+                }
+                TextButton(
+                    stringResource(if (status == ReportStatus.SENDING) R.string.report_sending else R.string.interstitial_report),
+                    onClick = onReport,
+                    enabled = status != ReportStatus.SENDING,
+                    modifier = Modifier.testTag("report"),
+                )
+                Text(
+                    stringResource(R.string.interstitial_report_hint),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth(),
+                )
             }
         }
     }

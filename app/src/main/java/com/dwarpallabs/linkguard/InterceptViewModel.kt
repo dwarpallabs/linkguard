@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.dwarpallabs.linkguard.core.Budget
 import com.dwarpallabs.linkguard.core.CheckId
 import com.dwarpallabs.linkguard.core.Verdict
+import com.dwarpallabs.linkguard.ui.ReportStatus
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -38,6 +39,11 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
     private val _state = MutableStateFlow<State>(State.Checking)
     val state: StateFlow<State> = _state
 
+    private val _reportStatus = MutableStateFlow(ReportStatus.IDLE)
+
+    /** Progress of the one report the user may send from the warning screen. */
+    val reportStatus: StateFlow<ReportStatus> = _reportStatus
+
     private var current: String? = null
     private var job: Job? = null
 
@@ -47,6 +53,7 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         current = raw
         job?.cancel()
         _state.value = State.Checking
+        _reportStatus.value = ReportStatus.IDLE
         val app = getApplication<LinkGuardApp>()
         job = viewModelScope.launch {
             val disabled = Prefs(app).disabledChecks
@@ -67,6 +74,19 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
+    /** Sends the warned link to Dwarpal Labs. Called only because the user tapped Report this link. */
+    fun report(verdict: Verdict) {
+        if (_reportStatus.value == ReportStatus.SENDING || _reportStatus.value == ReportStatus.SENT) return
+        val raw = current ?: return
+        _reportStatus.value = ReportStatus.SENDING
+        val app = getApplication<LinkGuardApp>()
+        // On the app's scope, not viewModelScope: tapping Go back must not cancel a report in flight.
+        app.reportScope.launch {
+            val ok = Reporter(app).send(reportLink(raw, verdict), reportNote(verdict))
+            _reportStatus.value = if (ok) ReportStatus.SENT else ReportStatus.FAILED
+        }
+    }
+
     private fun decide(raw: String, verdict: Verdict): State {
         if (verdict.level != Verdict.Level.SILENT) return State.Warn(verdict)
         return State.Forward(forwardUrl(raw, verdict))
@@ -83,6 +103,18 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         fun forwardUrl(raw: String, verdict: Verdict): String {
             val followed = verdict.signals.any { it.check == CheckId.UNWRAP && it.reason != "unwrap.hops_0" }
             return if (followed) verdict.finalUrl?.toUrlString() ?: raw else raw
+        }
+
+        /** The link to report: the unwrapped destination when it is a web URL, otherwise what the user tapped. */
+        fun reportLink(raw: String, verdict: Verdict): String {
+            val final = verdict.finalUrl
+            return if (final != null && final.isWeb) final.toUrlString() else raw
+        }
+
+        /** Which checks fired, as reason codes, so reviewers see why LinkGuard warned. Never user text. */
+        fun reportNote(verdict: Verdict): String {
+            val reasons = verdict.signals.filter { it.fired }.sortedByDescending { it.score }.map { it.reason }
+            return if (reasons.isEmpty()) "" else "LinkGuard warned: " + reasons.joinToString(", ")
         }
     }
 }

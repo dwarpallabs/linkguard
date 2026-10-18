@@ -4,6 +4,7 @@ import com.dwarpallabs.linkguard.core.EngineData
 import com.dwarpallabs.linkguard.core.HttpResponse
 import com.dwarpallabs.linkguard.core.Http
 import com.dwarpallabs.linkguard.core.LinkEngine
+import com.dwarpallabs.linkguard.core.NormalisedUrl
 import com.dwarpallabs.linkguard.core.ServerVerdicts
 import com.dwarpallabs.linkguard.ui.InterstitialModel
 import com.dwarpallabs.linkguard.ui.InterstitialModel.Reason
@@ -55,6 +56,29 @@ class InterceptLogicTest {
             "http://sbi-kyc-verify.xyz/login",
             InterceptViewModel.forwardUrl("https://bit.ly/scam", engine.evaluate("https://bit.ly/scam")),
         )
+    }
+
+    @Test
+    fun reportLinkIsTheUnwrappedWebUrlOrWhatWasTapped() {
+        val short = "https://bit.ly/scam"
+        assertEquals("http://sbi-kyc-verify.xyz/login", InterceptViewModel.reportLink(short, engine.evaluate(short)))
+        // Resolved to a UPI request: report the web link the user actually tapped.
+        assertEquals("https://is.gd/pay", InterceptViewModel.reportLink("https://is.gd/pay", engine.evaluate("https://is.gd/pay")))
+    }
+
+    @Test
+    fun reportNoteListsFiredReasonCodesOnly() {
+        val note = InterceptViewModel.reportNote(engine.evaluate("http://hdfc-kyc-update.top/verify"))
+        assertTrue(note, note.startsWith("LinkGuard warned: brand_lookalike."))
+        assertTrue(note, !note.contains("unwrap") && !note.contains("allowlist"))
+        assertEquals("", InterceptViewModel.reportNote(engine.evaluate("https://www.irctc.co.in/")))
+    }
+
+    @Test
+    fun reportDomainIsTheRegistrableDomainAndNeverAnIp() {
+        assertEquals("sbi-kyc.top", Reporter.reportDomain(NormalisedUrl.parse("http://login.sbi-kyc.top/x", data.psl)))
+        assertNull(Reporter.reportDomain(NormalisedUrl.parse("http://103.21.58.12/sbi/login", data.psl)))
+        assertNull(Reporter.reportDomain(null))
     }
 
     @Test
