@@ -32,9 +32,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.dwarpallabs.linkguard.R
+import com.dwarpallabs.linkguard.ui.components.Banner
 import com.dwarpallabs.linkguard.ui.components.LineIcons
 import com.dwarpallabs.linkguard.ui.components.PrimaryButton
-import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
 @Composable
 private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (Modifier) -> Unit) {
@@ -185,18 +185,8 @@ fun ReportScreen(status: ReportStatus, onBack: () -> Unit, onSubmit: (link: Stri
                 modifier = Modifier.testTag("report_submit"),
             )
             when (status) {
-                ReportStatus.SENT -> Text(
-                    stringResource(R.string.report_sent),
-                    style = MaterialTheme.typography.bodyLarge,
-                    color = LinkguardTheme.status.onSafeTint,
-                    modifier = Modifier.testTag("report_result"),
-                )
-                ReportStatus.FAILED -> Text(
-                    stringResource(R.string.report_failed),
-                    style = MaterialTheme.typography.bodyLarge,
-                    color = LinkguardTheme.status.onDangerTint,
-                    modifier = Modifier.testTag("report_result"),
-                )
+                ReportStatus.SENT -> Banner(stringResource(R.string.report_sent), Modifier.testTag("report_result"))
+                ReportStatus.FAILED -> Banner(stringResource(R.string.report_failed), Modifier.testTag("report_result"))
                 else -> Unit
             }
         }

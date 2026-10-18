@@ -53,7 +53,7 @@ private val DarkColors = darkColorScheme(
     surface = NightBackground, onSurface = NightInk, surfaceVariant = NightSurface, onSurfaceVariant = NightInkMuted,
     surfaceContainerLowest = NightBackground, surfaceContainerLow = NightSurface, surfaceContainer = NightSurface,
     surfaceContainerHigh = NightSurface, surfaceContainerHighest = NightSurface,
-    outline = Outline, outlineVariant = NightOutlineSoft,
+    outline = NightOutline, outlineVariant = NightOutlineSoft,
     error = NightDanger, onError = NightBackground, errorContainer = NightDangerTint, onErrorContainer = NightDanger,
 )
 

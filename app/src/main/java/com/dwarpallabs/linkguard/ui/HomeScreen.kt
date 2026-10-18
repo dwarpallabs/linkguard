@@ -50,8 +50,7 @@ import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.core.CheckId
 import com.dwarpallabs.linkguard.ui.components.LineIcons
 import com.dwarpallabs.linkguard.ui.components.PrimaryButton
-import com.dwarpallabs.linkguard.ui.components.Status
-import com.dwarpallabs.linkguard.ui.components.StatusBadge
+import com.dwarpallabs.linkguard.ui.components.StatusCard
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
 /** Checks the user can switch off, in display order. The allowlist is always on. */
@@ -111,29 +110,25 @@ fun HomeScreen(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
 
-            SectionHeading(stringResource(R.string.default_heading))
             if (isDefault) {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    StatusBadge(Status.SAFE, size = 40.dp)
+                SectionHeading(stringResource(R.string.default_heading))
+                StatusCard(on = true, title = stringResource(R.string.default_done), modifier = Modifier.testTag("status_card"))
+            } else {
+                // Not protected yet: the step heading becomes the card's title, so the one action sits inside it.
+                StatusCard(on = false, title = stringResource(R.string.default_heading), modifier = Modifier.testTag("status_card")) {
                     Text(
-                        stringResource(R.string.default_done),
+                        stringResource(R.string.default_explain, browserName),
                         style = MaterialTheme.typography.bodyLarge,
-                        color = LinkguardTheme.status.onSafeTint,
-                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.testTag("default_explain"),
+                    )
+                    PrimaryButton(stringResource(R.string.default_button), onSetDefault)
+                    Text(
+                        stringResource(R.string.default_hint),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
-            } else {
-                Text(
-                    stringResource(R.string.default_explain, browserName),
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.testTag("default_explain"),
-                )
-                PrimaryButton(stringResource(R.string.default_button), onSetDefault)
-                Text(
-                    stringResource(R.string.default_hint),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
             }
 
             SectionHeading(stringResource(R.string.browser_heading))
