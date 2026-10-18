@@ -29,6 +29,7 @@ val NightSurface = Color(0xFF141C2F)
 val NightInk = Color(0xFFF3F4F6)
 val NightInkMuted = Color(0xFF9CA3AF)
 val NightIndigo = Color(0xFFA5B4FC)
+val NightOutline = Color(0xFF9CA3AF)
 val NightOutlineSoft = Color(0xFF1F2A40)
 
 // Night tints are the status colour at 16 % over NightSurface, pre-mixed so they stay opaque.

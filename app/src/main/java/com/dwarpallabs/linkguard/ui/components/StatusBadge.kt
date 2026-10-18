@@ -27,15 +27,17 @@ enum class Status { SAFE, CAUTION, DANGER }
 /**
  * Status icon on its tinted square. Each state has its own shape (circle, triangle, octagon) so it
  * still reads in greyscale or to colour-blind users. Decorative: the text next to it carries the meaning.
+ * [container] replaces the tint square, e.g. the page background when the badge sits on a tinted card.
  */
 @Composable
-fun StatusBadge(status: Status, modifier: Modifier = Modifier, size: Dp = 56.dp) {
+fun StatusBadge(status: Status, modifier: Modifier = Modifier, size: Dp = 56.dp, container: Color? = null) {
     val colors = LinkguardTheme.status
-    val (fg, bg) = when (status) {
+    val (fg, tint) = when (status) {
         Status.SAFE -> colors.safe to colors.safeTint
         Status.CAUTION -> colors.caution to colors.cautionTint
         Status.DANGER -> colors.danger to colors.dangerTint
     }
+    val bg = container ?: tint
     Canvas(modifier.size(size).background(bg, RoundedCornerShape(size * 16 / 56))) {
         val s = this.size.minDimension * 32f / 56f
         translate((this.size.width - s) / 2, (this.size.height - s) / 2) {
