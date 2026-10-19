@@ -117,4 +117,23 @@
     <string name="scam_check_yes">आम्, सा वञ्चना आसीत्</string>
     <string name="scam_check_no">न, तत् समीचीनम् आसीत्</string>
     <string name="scam_check_unsure">निश्चयः नास्ति</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard द्वारा परीक्षताम्</string>
+    <string name="share_checking">लिङ्काः परीक्ष्यन्ते…</string>
+    <string name="share_no_links">कोऽपि लिङ्कः न प्राप्तः। LinkGuard केवलं लिङ्कान् परीक्षितुं शक्नोति।</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard %d लिङ्कं परीक्षितवान्</item>
+        <item quantity="other">LinkGuard %d लिङ्कान् परीक्षितवान्</item>
+    </plurals>
+    <string name="share_private">भवतः सन्देशः भवतः दूरवाण्याम् एव तिष्ठति। केवलं तस्मिन् स्थिताः लिङ्काः परीक्षिताः।</string>
+    <string name="share_safe_title">सावधानतायाः किमपि चिह्नं न प्राप्तम्</string>
+    <string name="share_copy">जालस्थानस्य नाम प्रतिलिखतु</string>
+    <string name="share_copied">जालस्थानस्य नाम प्रतिलिखितम्</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard केवलं प्रथमं %d लिङ्कं परीक्षितवान्।</item>
+        <item quantity="other">LinkGuard केवलं प्रथमान् %d लिङ्कान् परीक्षितवान्।</item>
+    </plurals>
+    <string name="home_share_tip">कस्मिंश्चित् सन्देशे संशयः अस्ति वा? तं LinkGuard प्रति प्रेषयतु: Share स्पृशतु, ततः LinkGuard द्वारा परीक्षताम् इति चिनोतु।</string>
 </resources>

@@ -118,4 +118,23 @@
     <string name="scam_check_yes">हां, ओह् ठग्गी ही</string>
     <string name="scam_check_no">नेईं, ओह् ठीक हा</string>
     <string name="scam_check_unsure">पक्का नेईं पता</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard कन्नै जांचो</string>
+    <string name="share_checking">लिंकें दी जांच होआ करदी ऐ…</string>
+    <string name="share_no_links">कोई लिंक नेईं लब्भा। LinkGuard सिर्फ लिंकें दी जांच करी सकदा ऐ।</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard ने %d लिंक जांचेआ</item>
+        <item quantity="other">LinkGuard ने %d लिंक जांचे</item>
+    </plurals>
+    <string name="share_private">तुंदा मैसेज तुंदे फोन उप्पर गै रौंह्दा ऐ। सिर्फ उसदे लिंकें दी जांच कीती गेई।</string>
+    <string name="share_safe_title">चेतावनी दा कोई निशान नेईं लब्भा</string>
+    <string name="share_copy">वेबसाइट दा नां कॉपी करो</string>
+    <string name="share_copied">वेबसाइट दा नां कॉपी होई गेआ</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard ने सिर्फ पैह्ला %d लिंक जांचेआ।</item>
+        <item quantity="other">LinkGuard ने सिर्फ पैह्ले %d लिंक जांचे।</item>
+    </plurals>
+    <string name="home_share_tip">कुसै मैसेज पर शक ऐ? उसी LinkGuard पर शेयर करो: शेयर पर टैप करो, फ्ही LinkGuard कन्नै जांचो चुनो।</string>
 </resources>

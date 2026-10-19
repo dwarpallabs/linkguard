@@ -120,4 +120,23 @@
     <string name="scam_check_yes">ᱦᱮᱸ, ᱩᱱᱤ ᱴᱷᱚᱜ ᱛᱟᱦᱮᱸᱫ</string>
     <string name="scam_check_no">ᱵᱟᱝ, ᱩᱱᱤ ᱴᱷᱤᱠ ᱛᱟᱦᱮᱸᱫ</string>
     <string name="scam_check_unsure">ᱯᱚᱠᱟᱹ ᱵᱟᱝ ᱵᱟᱰᱟᱭᱟ</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard ᱥᱟᱶ ᱡᱟᱸᱪ ᱢᱮ</string>
+    <string name="share_checking">ᱞᱤᱝᱠ ᱠᱚ ᱡᱟᱸᱪᱚᱜ ᱠᱟᱱᱟ…</string>
+    <string name="share_no_links">ᱡᱟᱦᱟᱸ ᱞᱤᱝᱠ ᱵᱟᱝ ᱧᱟᱢ ᱞᱮᱱᱟ ᱾ LinkGuard ᱥᱩᱢᱩᱝ ᱞᱤᱝᱠ ᱜᱮ ᱡᱟᱸᱪ ᱫᱟᱲᱮᱭᱟᱜᱼᱟᱭ ᱾</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard %d ᱞᱤᱝᱠ ᱡᱟᱸᱪ ᱠᱮᱫᱼᱟᱭ</item>
+        <item quantity="other">LinkGuard %d ᱞᱤᱝᱠ ᱡᱟᱸᱪ ᱠᱮᱫᱼᱟᱭ</item>
+    </plurals>
+    <string name="share_private">ᱟᱢᱟᱜ ᱢᱮᱥᱮᱡ ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱨᱮ ᱜᱮ ᱛᱟᱦᱮᱱᱟ ᱾ ᱥᱩᱢᱩᱝ ᱚᱱᱟ ᱨᱮᱭᱟᱜ ᱞᱤᱝᱠ ᱠᱚ ᱡᱟᱸᱪ ᱮᱱᱟ ᱾</string>
+    <string name="share_safe_title">ᱦᱩᱥᱤᱭᱟᱹᱨ ᱨᱮᱭᱟᱜ ᱡᱟᱦᱟᱸ ᱪᱤᱱᱦᱟᱹ ᱵᱟᱝ ᱧᱟᱢ ᱞᱮᱱᱟ</string>
+    <string name="share_copy">ᱣᱮᱵᱥᱟᱭᱤᱴ ᱧᱩᱛᱩᱢ ᱠᱚᱯᱤ ᱢᱮ</string>
+    <string name="share_copied">ᱣᱮᱵᱥᱟᱭᱤᱴ ᱧᱩᱛᱩᱢ ᱠᱚᱯᱤ ᱮᱱᱟ</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard ᱥᱩᱢᱩᱝ ᱯᱟᱹᱦᱤᱞ %d ᱞᱤᱝᱠ ᱡᱟᱸᱪ ᱠᱮᱫᱼᱟᱭ ᱾</item>
+        <item quantity="other">LinkGuard ᱥᱩᱢᱩᱝ ᱯᱟᱹᱦᱤᱞ %d ᱞᱤᱝᱠ ᱡᱟᱸᱪ ᱠᱮᱫᱼᱟᱭ ᱾</item>
+    </plurals>
+    <string name="home_share_tip">ᱢᱤᱫ ᱢᱮᱥᱮᱡ ᱨᱮ ᱥᱚᱱᱫᱮᱦ ᱢᱮᱱᱟᱜᱼᱟ? ᱚᱱᱟ LinkGuard ᱨᱮ ᱥᱮᱭᱟᱨ ᱢᱮ: ᱥᱮᱭᱟᱨ ᱚᱛᱟ ᱢᱮ, ᱛᱟᱭᱚᱢ LinkGuard ᱥᱟᱶ ᱡᱟᱸᱪ ᱢᱮ ᱵᱟᱪᱷᱟᱣ ᱢᱮ ᱾</string>
 </resources>

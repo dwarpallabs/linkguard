@@ -37,7 +37,11 @@ One exception to "never stores": when you tap **Open anyway** on a warning, Link
 
 Full policy: [dwarpallabs.com/linkguard/privacy](https://dwarpallabs.com/linkguard/privacy).
 
+## Check a message before you tap
+Not sure about a message? Share it to LinkGuard: tap **Share** in WhatsApp, SMS or any app, then **Check with LinkGuard**. LinkGuard finds every link in the message (including `wa.me`, `t.me` and UPI payment links) and shows a verdict for each one, checked exactly as if you had tapped it. The message itself never leaves your phone.
+
 ## Report a scam link
+
 On a warning screen, tap **Report this link**, then **Report**; only the website's name is sent. If you tapped **Open anyway**, LinkGuard asks once, next time you open the app, "Was that link a scam?". For a link LinkGuard missed: Settings → **Report a link**.
  Reports go privately to Dwarpal Labs and are never published. When three or more different people report the same website within a week, other LinkGuard users automatically see a soft warning: "reported as a scam by N LinkGuard users this week". Reports alone never cause the strong red warning, and well-known sites can't be reported into a warning.
 

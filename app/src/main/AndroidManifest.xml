@@ -61,6 +61,31 @@
                 <data android:scheme="https" />
             </intent-filter>
         </activity>
+
+        <!--
+            "Check with LinkGuard" in the share sheet. A separate ACTION_SEND target: it does not
+            change the VIEW filter above or the default-browser role. Every share opens in a new,
+            hidden task (documentLaunchMode="always"), so a second share can never be dropped in
+            favour of an older message restored from a task the system killed. Close or Back
+            returns to the app the message was shared from.
+        -->
+        <activity
+            android:name=".ShareCheckActivity"
+            android:autoRemoveFromRecents="true"
+            android:documentLaunchMode="always"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="@string/share_target_label"
+            android:theme="@style/Theme.Linkguard">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
     </application>
+
 
 </manifest>
