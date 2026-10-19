@@ -142,7 +142,7 @@ object PublishMain {
     private val client = HttpClient.newBuilder().followRedirects(HttpClient.Redirect.NORMAL).connectTimeout(Duration.ofSeconds(30)).build()
 
     /** A file from the latest public release, or null before the first one. */
-    private fun latestAsset(name: String): String? {
+    internal fun latestAsset(name: String): String? {
         val request = HttpRequest.newBuilder(URI("https://github.com/$DATA_REPO/releases/latest/download/$name"))
             .header("User-Agent", "LinkGuard feeds (+https://github.com/dwarpallabs/linkguard)")
             .timeout(Duration.ofMinutes(1))
