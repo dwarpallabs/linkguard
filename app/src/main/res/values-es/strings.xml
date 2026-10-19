@@ -205,4 +205,10 @@
     <string name="look_banner">Estás mirando de forma segura. Nada de lo que escribas aquí se envía.</string>
     <string name="look_blocked">LinkGuard impidió que esta página abriera otra cosa.</string>
     <string name="look_failed">No se pudo mostrar la página. Revisa tu conexión a internet e intenta de nuevo.</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">No abriste el enlace</string>
+    <string name="brand_tip_body">El sitio web real de %1$s es %2$s. La próxima vez, escríbelo tú o abre la app de %1$s, en lugar de tocar un enlace en un mensaje.</string>
+    <string name="brand_tip_body_no_site">La próxima vez, abre la app de %1$s o escribe tú su sitio web real, en lugar de tocar un enlace en un mensaje.</string>
+    <string name="brand_tip_done">Listo</string>
 </resources>

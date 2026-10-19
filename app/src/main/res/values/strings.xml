@@ -202,4 +202,11 @@
     <string name="look_banner">Looking safely. Nothing you type here is sent.</string>
     <string name="look_blocked">LinkGuard stopped this page from opening something else.</string>
     <string name="look_failed">Could not show the page. Check your internet connection and try again.</string>
+
+    <!-- Brand tip (roadmap B6): shown once per brand per 30 days, after the user taps "Go back" on a warning about a
+         fake brand website. %1$s = brand name (SBI, HDFC Bank, IRCTC, …), %2$s = its real website (sbi.co.in). -->
+    <string name="brand_tip_title">You did not open the link</string>
+    <string name="brand_tip_body">%1$s’s real website is %2$s. Next time, type it yourself or open the %1$s app, instead of tapping a link in a message.</string>
+    <string name="brand_tip_body_no_site">Next time, open the %1$s app or type its real website yourself, instead of tapping a link in a message.</string>
+    <string name="brand_tip_done">Done</string>
 </resources>

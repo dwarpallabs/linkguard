@@ -200,4 +200,10 @@
     <string name="look_banner">সুৰক্ষিতভাৱে চাই আছে। ইয়াত আপুনি যি লিখে সেয়া পঠিওৱা নহয়।</string>
     <string name="look_blocked">LinkGuard-এ এই পেজখনক আন একো খুলিবলৈ নিদিলে।</string>
     <string name="look_failed">পেজখন দেখুৱাব পৰা নগ’ল। ইণ্টাৰনেট সংযোগ চাই আকৌ চেষ্টা কৰক।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">আপুনি লিংকটো খোলা নাই</string>
+    <string name="brand_tip_body">%1$s-ৰ আচল ৱেবছাইট হৈছে %2$s। পিছৰ বাৰ মেছেজত অহা লিংকত টিপাৰ সলনি নিজেই এইটো লিখক, বা %1$s এপটো খোলক।</string>
+    <string name="brand_tip_body_no_site">পিছৰ বাৰ মেছেজত অহা লিংকত টিপাৰ সলনি %1$s এপটো খোলক, বা ইয়াৰ আচল ৱেবছাইট নিজেই লিখক।</string>
+    <string name="brand_tip_done">হৈ গ’ল</string>
 </resources>

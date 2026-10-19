@@ -200,4 +200,10 @@
     <string name="look_banner">حفاظت سان ڏسي رهيا آهيو. هتي توهان جيڪو به ٽائيپ ڪريو اهو نٿو موڪليو وڃي.</string>
     <string name="look_blocked">LinkGuard هن پيج کي ڪجهه ٻيو کولڻ کان روڪي ڇڏيو.</string>
     <string name="look_failed">پيج ڏيکاري نه سگهياسين. پنهنجو انٽرنيٽ ڪنيڪشن ڏسو ۽ ٻيهر ڪوشش ڪريو.</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">توهان لنڪ نه کولي</string>
+    <string name="brand_tip_body">%1$s جي اصلي ويب سائيٽ %2$s آهي. ايندڙ دفعي، ميسيج ۾ آيل لنڪ تي ٽيپ ڪرڻ بدران، ان کي پاڻ ٽائيپ ڪريو يا %1$s ايپ کوليو.</string>
+    <string name="brand_tip_body_no_site">ايندڙ دفعي، ميسيج ۾ آيل لنڪ تي ٽيپ ڪرڻ بدران، %1$s ايپ کوليو يا ان جي اصلي ويب سائيٽ پاڻ ٽائيپ ڪريو.</string>
+    <string name="brand_tip_done">ٿي ويو</string>
 </resources>

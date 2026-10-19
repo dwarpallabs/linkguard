@@ -198,4 +198,10 @@
     <string name="look_banner">ꯈꯨꯗꯣꯡꯊꯤꯕ ꯂꯩꯇꯅ ꯌꯦꯡꯂꯤ꯫ ꯃꯐꯝ ꯑꯁꯤꯗ ꯅꯍꯥꯛꯅ ꯏꯕ ꯀꯔꯤꯒꯨꯝꯕ ꯑꯃꯠꯇ ꯊꯥꯗꯦ꯫</string>
     <string name="look_blocked">LinkGuard ꯅ ꯄꯦꯖ ꯑꯁꯤꯅ ꯑꯇꯣꯞꯄ ꯀꯔꯤꯒꯨꯝꯕ ꯑꯃ ꯍꯥꯡꯗꯣꯛꯄꯗꯒꯤ ꯊꯤꯡꯈꯤ꯫</string>
     <string name="look_failed">ꯄꯦꯖ ꯑꯗꯨ ꯎꯠꯄ ꯉꯃꯈꯤꯗꯦ꯫ ꯏꯟꯇꯔꯅꯦꯠ ꯀꯅꯦꯛꯁꯟ ꯌꯦꯡꯗꯨꯅ ꯑꯃꯨꯛ ꯍꯟꯅ ꯍꯣꯠꯅꯕꯤꯌꯨ꯫</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">ꯅꯍꯥꯛꯅ ꯂꯤꯡꯛ ꯑꯗꯨ ꯍꯥꯡꯗꯣꯛꯈꯤꯗꯦ</string>
+    <string name="brand_tip_body">%1$s ꯒꯤ ꯑꯁꯦꯡꯕ ꯋꯦꯕꯁꯥꯏꯠꯇꯤ %2$s ꯅꯤ꯫ ꯃꯊꯪꯗ, ꯃꯦꯁꯦꯖꯗ ꯂꯥꯀꯄ ꯂꯤꯡꯛ ꯇꯦꯞ ꯇꯧꯔꯣꯏꯗꯨꯅ, ꯃꯁꯤ ꯃꯁꯥꯃꯛꯅ ꯏꯌꯨ ꯅꯠꯔꯒ %1$s ꯑꯦꯞ ꯍꯥꯡꯗꯣꯀꯎ꯫</string>
+    <string name="brand_tip_body_no_site">ꯃꯊꯪꯗ, ꯃꯦꯁꯦꯖꯗ ꯂꯥꯀꯄ ꯂꯤꯡꯛ ꯇꯦꯞ ꯇꯧꯔꯣꯏꯗꯨꯅ, %1$s ꯑꯦꯞ ꯍꯥꯡꯗꯣꯀꯎ ꯅꯠꯔꯒ ꯃꯁꯤꯒꯤ ꯑꯁꯦꯡꯕ ꯋꯦꯕꯁꯥꯏꯠ ꯃꯁꯥꯃꯛꯅ ꯏꯌꯨ꯫</string>
+    <string name="brand_tip_done">ꯂꯣꯏꯔꯦ</string>
 </resources>

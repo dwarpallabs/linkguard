@@ -199,4 +199,10 @@
     <string name="look_banner">तुमी सुरक्षीतपणान पळयतात. हांगा तुमी टायप केल्लें कांयच धाडलें वचना.</string>
     <string name="look_blocked">LinkGuard न ह्या पानाक आनीक कितें उगडूंक दिलें ना.</string>
     <string name="look_failed">पान दाखोवंक जालें ना. तुमचें इंटरनेट कनेक्शन तपासात आनी परतून यत्न करात.</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">तुमी लिंक उगडूंक ना</string>
+    <string name="brand_tip_body">%1$s ची खरी वेबसायट %2$s आसा. फुडल्या फावटीं, मेसेजांतल्या लिंकाचेर टॅप करचे बदला, ती तुमी स्वता टायप करात वा %1$s ॲप उगडात.</string>
+    <string name="brand_tip_body_no_site">फुडल्या फावटीं, मेसेजांतल्या लिंकाचेर टॅप करचे बदला, %1$s ॲप उगडात वा ताची खरी वेबसायट तुमी स्वता टायप करात.</string>
+    <string name="brand_tip_done">जालें</string>
 </resources>

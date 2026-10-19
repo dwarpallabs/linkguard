@@ -200,4 +200,10 @@
     <string name="look_banner">নিরাপদে দেখছেন। এখানে আপনি যা লেখেন তা পাঠানো হয় না।</string>
     <string name="look_blocked">LinkGuard এই পেজটাকে অন্য কিছু খুলতে দেয়নি।</string>
     <string name="look_failed">পেজ দেখানো গেল না। ইন্টারনেট সংযোগ দেখে আবার চেষ্টা করুন।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">আপনি লিংকটা খোলেননি</string>
+    <string name="brand_tip_body">%1$s-এর আসল ওয়েবসাইট হলো %2$s। পরের বার মেসেজে আসা লিংকে ট্যাপ না করে নিজেই এটা লিখুন, বা %1$s অ্যাপ খুলুন।</string>
+    <string name="brand_tip_body_no_site">পরের বার মেসেজে আসা লিংকে ট্যাপ না করে %1$s অ্যাপ খুলুন, বা এর আসল ওয়েবসাইট নিজেই লিখুন।</string>
+    <string name="brand_tip_done">হয়ে গেছে</string>
 </resources>

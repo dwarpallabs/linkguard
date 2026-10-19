@@ -224,4 +224,10 @@
     <string name="look_banner">أنت تنظر بأمان. لا يُرسَل أي شيء تكتبه هنا.</string>
     <string name="look_blocked">منع LinkGuard هذه الصفحة من فتح شيء آخر.</string>
     <string name="look_failed">تعذّر عرض الصفحة. تأكّد من اتصالك بالإنترنت وحاول مرة أخرى.</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">لم تفتح الرابط</string>
+    <string name="brand_tip_body">موقع %1$s الحقيقي هو %2$s. في المرة القادمة، اكتبه بنفسك أو افتح تطبيق %1$s، بدلًا من الضغط على رابط في رسالة.</string>
+    <string name="brand_tip_body_no_site">في المرة القادمة، افتح تطبيق %1$s أو اكتب موقعه الحقيقي بنفسك، بدلًا من الضغط على رابط في رسالة.</string>
+    <string name="brand_tip_done">تم</string>
 </resources>

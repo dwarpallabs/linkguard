@@ -23,7 +23,12 @@ import com.dwarpallabs.linkguard.browser.sourcePackage
 import com.dwarpallabs.linkguard.core.Verdict
 import com.dwarpallabs.linkguard.ui.CheckingCard
 import com.dwarpallabs.linkguard.ui.InterstitialModel
+import com.dwarpallabs.linkguard.ui.BrandTip
+import com.dwarpallabs.linkguard.ui.BrandTipScreen
 import com.dwarpallabs.linkguard.ui.InterstitialScreen
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+
 import com.dwarpallabs.linkguard.ui.rememberWarningSpeaker
 
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
@@ -79,9 +84,16 @@ class LinkInterceptActivity : ComponentActivity() {
                 State.CheckingSlow -> LinkguardTheme { CheckingCard() }
                 is State.Warn -> LinkguardTheme {
                     val report by viewModel.reportStatus.collectAsState()
+                    val model = InterstitialModel.from(s.verdict)
+                    val tip = brandTip
+                    if (tip != null) {
+                        BrandTipScreen(tip, onDone = ::finishWithoutAnimation)
+                        return@LinkguardTheme
+                    }
                     InterstitialScreen(
-                        model = InterstitialModel.from(s.verdict),
-                        onGoBack = ::finishWithoutAnimation,
+                        model = model,
+                        onGoBack = { goBack(model) },
+
                         onOpenAnyway = { openAnyway(s.verdict) },
                         report = report,
                         onReport = { viewModel.report(s.verdict) },
@@ -113,6 +125,22 @@ class LinkInterceptActivity : ComponentActivity() {
         }
         viewModel.check(uri.toString())
         return true
+    }
+
+    /** Set after Go back on a fake-brand warning, once per brand per 30 days (roadmap B6). */
+    private var brandTip by mutableStateOf<BrandTip?>(null)
+
+    /** Go back: close, or first show the brand tip if this brand's tip is due. */
+    private fun goBack(model: InterstitialModel) {
+        val app = application as LinkGuardApp
+        val tip = BrandTip.of(model.reason, app.data.brands)
+        val now = System.currentTimeMillis() / 1000
+        if (tip != null && app.memory.shouldShowBrandTip(tip.brand, now)) {
+            app.memory.markBrandTipShown(tip.brand, now)
+            brandTip = tip
+        } else {
+            finishWithoutAnimation()
+        }
     }
 
     /** "Look without opening": the page in SafeViewActivity's locked, separate-process view. */

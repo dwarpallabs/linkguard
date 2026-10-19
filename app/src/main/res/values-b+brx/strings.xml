@@ -200,4 +200,10 @@
     <string name="look_banner">सुरक्षितै नायगासिनो दं। बेयाव नोंथाङा लिरनाय माबो हरनाय जाया।</string>
     <string name="look_blocked">LinkGuard आ बे पेजखौ गुबुन माबो खेवनो होआखै।</string>
     <string name="look_failed">पेजखौ दिन्थिनो हायाखै। नोंथांनि इन्टारनेट कानेक्सनखौ नायसं आरो फिन नाजा।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">नोंथाङा लिंकखौ खेवाखै</string>
+    <string name="brand_tip_body">%1$s नि थार वेबसाइटआ %2$s। उनाव समाव मेसेजआव फैनाय लिंकआव टेप खालामनायनि सोलायाव, बेखौ गावनो लिर एबा %1$s एपखौ खेव।</string>
+    <string name="brand_tip_body_no_site">उनाव समाव मेसेजआव फैनाय लिंकआव टेप खालामनायनि सोलायाव, %1$s एपखौ खेव एबा बेनि थार वेबसाइटखौ गावनो लिर।</string>
+    <string name="brand_tip_done">जादों</string>
 </resources>

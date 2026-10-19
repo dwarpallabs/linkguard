@@ -199,4 +199,10 @@
     <string name="look_banner">भवान् सुरक्षितरूपेण पश्यति। अत्र भवता लिखितं किमपि न प्रेष्यते।</string>
     <string name="look_blocked">LinkGuard अनेन जालपृष्ठेन अन्यस्य कस्यचित् उद्घाटनं न्यवारयत्।</string>
     <string name="look_failed">जालपृष्ठं दर्शयितुं न शक्तम्। अन्तर्जालसम्पर्कं परीक्ष्य पुनः प्रयतताम्।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">भवान् लिङ्कं न उद्घाटितवान्</string>
+    <string name="brand_tip_body">%1$s इत्यस्य वास्तविकं जालस्थानं %2$s अस्ति। अग्रिमवारं सन्देशे आगतस्य लिङ्कस्य स्पर्शनस्य स्थाने, तत् स्वयं लिखतु अथवा %1$s ऐप् उद्घाटयतु।</string>
+    <string name="brand_tip_body_no_site">अग्रिमवारं सन्देशे आगतस्य लिङ्कस्य स्पर्शनस्य स्थाने, %1$s ऐप् उद्घाटयतु अथवा तस्य वास्तविकं जालस्थानं स्वयं लिखतु।</string>
+    <string name="brand_tip_done">सम्पन्नम्</string>
 </resources>

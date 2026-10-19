@@ -200,4 +200,10 @@
     <string name="look_banner">ಸುರಕ್ಷಿತವಾಗಿ ನೋಡುತ್ತಿದ್ದೀರಿ. ಇಲ್ಲಿ ನೀವು ಟೈಪ್ ಮಾಡುವ ಏನನ್ನೂ ಕಳುಹಿಸುವುದಿಲ್ಲ.</string>
     <string name="look_blocked">ಈ ಪುಟ ಬೇರೆ ಏನನ್ನೋ ತೆರೆಯದಂತೆ LinkGuard ತಡೆಯಿತು.</string>
     <string name="look_failed">ಪುಟವನ್ನು ತೋರಿಸಲು ಆಗಲಿಲ್ಲ. ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ನೋಡಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">ನೀವು ಲಿಂಕ್ ತೆರೆಯಲಿಲ್ಲ</string>
+    <string name="brand_tip_body">%1$s ನ ನಿಜವಾದ ವೆಬ್‌ಸೈಟ್ %2$s. ಮುಂದಿನ ಬಾರಿ, ಮೆಸೇಜ್‌ನಲ್ಲಿ ಬರುವ ಲಿಂಕ್ ಒತ್ತುವ ಬದಲು, ಅದನ್ನು ನೀವೇ ಟೈಪ್ ಮಾಡಿ ಅಥವಾ %1$s ಆ್ಯಪ್ ತೆರೆಯಿರಿ.</string>
+    <string name="brand_tip_body_no_site">ಮುಂದಿನ ಬಾರಿ, ಮೆಸೇಜ್‌ನಲ್ಲಿ ಬರುವ ಲಿಂಕ್ ಒತ್ತುವ ಬದಲು, %1$s ಆ್ಯಪ್ ತೆರೆಯಿರಿ ಅಥವಾ ಅದರ ನಿಜವಾದ ವೆಬ್‌ಸೈಟ್ ಅನ್ನು ನೀವೇ ಟೈಪ್ ಮಾಡಿ.</string>
+    <string name="brand_tip_done">ಆಯಿತು</string>
 </resources>

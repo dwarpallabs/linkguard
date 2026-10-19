@@ -162,4 +162,19 @@ class ReportFlowsTest(private val languageTag: String) {
         compose.onNodeWithTag("scam_check_close").assertTextContains(res.getString(R.string.action_close)).performClick()
         assertEquals(listOf("close"), answers)
     }
+
+    @Test
+    fun brandTipNamesTheRealWebsiteAndDoneCloses() {
+        var done = 0
+        compose.setContent { Localised { BrandTipScreen(BrandTip("HDFC Bank", "hdfcbank.com")) { done++ } } }
+        compose.onNodeWithTag("brand_tip_body").assertTextContains(res.getString(R.string.brand_tip_body, "HDFC Bank", "hdfcbank.com"))
+        compose.onNodeWithTag("brand_tip_done").performClick()
+        assertEquals(1, done)
+    }
+
+    @Test
+    fun brandTipWithoutAWebsiteUsesTheShortSentence() {
+        compose.setContent { Localised { BrandTipScreen(BrandTip("EPFO", null)) {} } }
+        compose.onNodeWithTag("brand_tip_body").assertTextContains(res.getString(R.string.brand_tip_body_no_site, "EPFO"))
+    }
 }
