@@ -81,5 +81,5 @@ Good tester sources: friends and family on Android and the r/developersIndia pos
   ```
   Upload `linkguard-pepk.zip`. Delete it afterwards; it holds the private key, encrypted for Google.
 - **Upload key:** the same certificate, `3b7a7bc8…95405cee`.
-- **Graphics:** `graphics/icon-512.png`, `graphics/feature-1024x500.png`, and `graphics/screenshots/*_{en,hi,ta}.png` (four per language, in numbered order; re-take with `take_screenshots.sh`. Scene 4, the community "reported by N users" warning, is added once a test site with 3+ reports exists on the server). Other listing languages reuse the English screenshots.
+- **Graphics:** `graphics/icon-512.png`, `graphics/feature-1024x500.png`, and `graphics/screenshots/*_{en,hi,ta}.png` (five per language, in numbered order; re-take with `take_screenshots.sh`. Scene 4 needs a site with 3+ reports on the server: seed three test reports for the fictional `parttime-job-offer.example`, capture, then delete them). Other listing languages reuse the English screenshots.
 - **Release notes:** the "Release notes" section of each `listing-*.md`.
