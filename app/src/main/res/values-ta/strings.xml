@@ -80,7 +80,6 @@
     <string name="interstitial_report">இந்த இணைப்பைப் புகாரளி</string>
     <string name="interstitial_report_hint">அநாமதேயம். மற்ற LinkGuard பயனர்களை எச்சரிக்க உதவும்.</string>
     <string name="interstitial_checking">இணைப்பைச் சரிபார்க்கிறது…</string>
-    <string name="interstitial_upi_heading">UPI கட்டணக் கோரிக்கை</string>
     <string name="interstitial_upi_payee">பெறுபவர்: %1$s</string>
     <string name="interstitial_upi_amount">தொகை: ₹%1$s</string>
 
@@ -155,4 +154,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">இந்த இணைப்பு SMS மூலம் வந்தது. தெரியாதவர்களின் செய்திகளில் வரும் இணைப்புகளில் கவனமாக இருங்கள்.</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">இந்த இணைப்பு உங்களைப் பணம் செலுத்தச் சொல்கிறது</string>
+    <string name="upi_asks_mandate">இந்த இணைப்பு தானியங்கிப் பணம் செலுத்துதலைக் கேட்கிறது</string>
+    <string name="warn_upi_mandate">இந்த இணைப்பு உங்கள் கணக்கிலிருந்து தானாகப் பணம் எடுக்கும் ஏற்பாட்டைச் செய்கிறது. உங்களுக்குத் தெரிந்த பில் அல்லது திட்டத்துக்காக நீங்களே தொடங்கியிருந்தால் மட்டுமே ஒப்புக்கொள்ளுங்கள்.</string>
+    <string name="warn_upi_brand">இந்தக் கட்டணக் கோரிக்கை %1$s என்ற பெயரைப் பயன்படுத்துகிறது, ஆனால் பணம் வேறொரு கணக்குக்குப் போகிறது. ரீஃபண்ட் அல்லது KYC அப்டேட்டுக்கு நீங்கள் ஒருபோதும் பணம் செலுத்த வேண்டியதில்லை.</string>
 </resources>

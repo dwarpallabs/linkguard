@@ -84,7 +84,6 @@
     <string name="interstitial_report">ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱨᱤᱯᱚᱨᱴ ᱢᱮ</string>
     <string name="interstitial_report_hint">ᱧᱩᱛᱩᱢ ᱵᱟᱝ ᱾ ᱮᱴᱟᱜ LinkGuard ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱠᱚ ᱦᱚᱲ ᱥᱟᱹᱛ ᱞᱟᱹᱜᱤᱫ ᱜᱚᱲᱚ ᱮᱢᱚᱜ-ᱟ ᱾</string>
     <string name="interstitial_checking">ᱞᱤᱝᱠ ᱡᱟᱸᱪᱚᱜ ᱠᱟᱱᱟ…</string>
-    <string name="interstitial_upi_heading">UPI ᱛᱮ ᱴᱟᱠᱟ ᱠᱩᱞᱤ</string>
     <string name="interstitial_upi_payee">ᱴᱟᱠᱟ ᱧᱟᱢᱤᱭᱟᱹ: %1$s</string>
     <string name="interstitial_upi_amount">ᱴᱟᱠᱟ: ₹%1$s</string>
 
@@ -162,4 +161,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱫᱚ SMS ᱛᱮ ᱦᱤᱡᱩᱜ ᱠᱟᱱᱟ ᱾ ᱵᱟᱝ ᱪᱤᱱᱦᱟᱹᱣ ᱦᱚᱲ ᱠᱚᱣᱟᱜ ᱢᱮᱥᱮᱡ ᱨᱮ ᱦᱤᱡᱩᱜ ᱞᱤᱝᱠ ᱠᱷᱚᱱ ᱦᱩᱥᱤᱭᱟᱹᱨ ᱛᱟᱦᱮᱸᱱ ᱢᱮ ᱾</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱫᱚ ᱟᱢ ᱴᱟᱠᱟ ᱮᱢ ᱞᱟᱹᱜᱤᱫ ᱢᱮᱱᱟᱭ ᱠᱟᱱᱟ</string>
+    <string name="upi_asks_mandate">ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱫᱚ ᱟᱡ ᱛᱮ ᱴᱟᱠᱟ ᱠᱟᱴᱟᱣ ᱞᱟᱹᱜᱤᱫ ᱟᱹᱭᱫᱟᱹᱨᱤ ᱠᱟᱱᱟ</string>
+    <string name="warn_upi_mandate">ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱫᱚ ᱟᱢᱟᱜ ᱮᱠᱟᱣᱩᱱᱴ ᱠᱷᱚᱱ ᱟᱡ ᱛᱮ ᱴᱟᱠᱟ ᱠᱟᱴᱟᱣ ᱨᱮᱭᱟᱜ ᱵᱮᱣᱥᱛᱟ ᱮ ᱵᱮᱱᱟᱣᱟ ᱾ ᱪᱤᱱᱦᱟᱹᱣ ᱵᱤᱞ ᱟᱨᱵᱟᱝ ᱯᱞᱟᱱ ᱞᱟᱹᱜᱤᱫ ᱟᱢ ᱟᱡᱮ ᱮᱦᱚᱵ ᱞᱮᱠᱷᱟᱱ ᱜᱮ ᱦᱮᱸ ᱢᱮ ᱾</string>
+    <string name="warn_upi_brand">ᱱᱚᱶᱟ ᱯᱮᱢᱮᱱᱴ ᱚᱨᱡᱤ ᱫᱚ %1$s ᱨᱮᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱵᱮᱵᱷᱟᱨᱟ, ᱢᱮᱱᱠᱷᱟᱱ ᱴᱟᱠᱟ ᱫᱚ ᱮᱴᱟᱜ ᱮᱠᱟᱣᱩᱱᱴ ᱛᱮ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ ᱾ ᱨᱤᱯᱷᱟᱱᱰ ᱟᱨᱵᱟᱝ KYC ᱟᱯᱰᱮᱴ ᱞᱟᱹᱜᱤᱫ ᱡᱟᱦᱟᱸ ᱚᱠᱛᱚ ᱦᱚᱸ ᱴᱟᱠᱟ ᱮᱢ ᱵᱟᱝ ᱞᱟᱹᱠᱛᱤᱭᱟ ᱾</string>
 </resources>

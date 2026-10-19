@@ -48,7 +48,7 @@ class InterceptLogicTest {
     fun upiRedirectModelHasPayeeAndAmountButNoHost() {
         val model = InterstitialModel.from(engine.evaluate("https://is.gd/pay"))
         assertNull(model.host)
-        assertEquals(Reason.Upi("Electricity Board", "collect.now@ybl", "4999"), model.reason)
+        assertEquals(Reason.Upi("Electricity Board", "collect.now@ybl", "4,999"), model.reason)
     }
 
     @Test
@@ -151,6 +151,29 @@ class InterceptLogicTest {
         val hexSecret = secret.joinToString("") { "%02x".format(it) }
         val b64Secret = java.util.Base64.getEncoder().encodeToString(secret)
         assertTrue(!body.contains(hexSecret) && !body.contains(b64Secret))
+    }
+
+    @Test
+    fun amountsAreGroupedTheIndianWay() {
+        assertEquals("1", com.dwarpallabs.linkguard.ui.indianAmount("1"))
+        assertEquals("999", com.dwarpallabs.linkguard.ui.indianAmount("999"))
+        assertEquals("4,999", com.dwarpallabs.linkguard.ui.indianAmount("4999"))
+        assertEquals("25,000", com.dwarpallabs.linkguard.ui.indianAmount("25000"))
+        assertEquals("1,23,456.50", com.dwarpallabs.linkguard.ui.indianAmount("123456.50"))
+        assertEquals("1,00,00,000", com.dwarpallabs.linkguard.ui.indianAmount("010000000"))
+        assertEquals("ten rupees", com.dwarpallabs.linkguard.ui.indianAmount("ten rupees"))
+    }
+
+    @Test
+    fun upiReasonsCarryMandateBrandAndGroupedAmount() {
+        val pay = InterstitialModel.from(engine.evaluate("https://is.gd/pay")).reason as Reason.Upi
+        assertEquals("4,999", pay.amount)
+        assertTrue(!pay.mandate && pay.brand == null)
+        val mandate = InterstitialModel.from(engine.evaluate("upi://mandate?pa=autopay@ybl&pn=Loan&am=1999")).reason as Reason.Upi
+        assertTrue(mandate.mandate)
+        val fake = InterstitialModel.from(engine.evaluate("tez://upi/pay?pa=refund.desk@axl&pn=SBI%20Refund&am=1"))
+        assertEquals("SBI", (fake.reason as Reason.Upi).brand)
+        assertTrue(fake.strong)
     }
 
     @Test

@@ -33,6 +33,9 @@ class NormalisedUrl private constructor(
 ) {
     val isWeb: Boolean get() = scheme == "http" || scheme == "https"
 
+    /** A UPI payment or mandate request: `upi://` or an app's own scheme for one (`tez://upi/pay`, …). */
+    val isUpi: Boolean get() = scheme in UPI_SCHEMES
+
     /** Host labels in front of the registrable domain: `a.b.example.com` → 2. */
     val subdomainDepth: Int
         get() = registrableDomain?.let { host.removeSuffix(it).count { c -> c == '.' } } ?: 0
@@ -82,7 +85,9 @@ class NormalisedUrl private constructor(
     companion object {
         private val URI_PATTERN = Regex("""^([a-zA-Z][a-zA-Z0-9+.\-]*):(?://([^/?#]*))?([^?#]*)(?:\?([^#]*))?(?:#(.*))?$""")
         private val DOTTED_NUMERIC = Regex("""^(0x[0-9a-f]+|[0-9]+)(\.(0x[0-9a-f]+|[0-9]+)){0,3}$""")
-        private val SUPPORTED = setOf("http", "https", "upi")
+        /** UPI requests: the standard scheme plus Google Pay's, PhonePe's and Paytm's own. */
+        val UPI_SCHEMES = setOf("upi", "tez", "phonepe", "paytmmp")
+        private val SUPPORTED = setOf("http", "https") + UPI_SCHEMES
 
         /** Parses [raw], or returns null if it is not an http, https or upi URL with a usable host. */
         fun parse(raw: String, psl: PublicSuffixList): NormalisedUrl? {
@@ -99,7 +104,8 @@ class NormalisedUrl private constructor(
             val query = match.groups[4]?.value
             val fragment = match.groups[5]?.value
 
-            if (scheme == "upi") {
+            if (scheme in UPI_SCHEMES) {
+
                 val host = rawHost.lowercase()
                 return NormalisedUrl(scheme, host, host, -1, null, path, query, fragment, false, null, null)
             }

@@ -84,7 +84,6 @@
     <string name="interstitial_report">Signaler ce lien</string>
     <string name="interstitial_report_hint">Anonyme. Aide à avertir les autres utilisateurs de LinkGuard.</string>
     <string name="interstitial_checking">Vérification du lien…</string>
-    <string name="interstitial_upi_heading">Demande de paiement UPI</string>
     <string name="interstitial_upi_payee">Payer à : %1$s</string>
     <string name="interstitial_upi_amount">Montant : ₹%1$s</string>
 
@@ -166,4 +165,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">Ce lien est arrivé par SMS. Méfiez-vous des liens dans les messages de personnes que vous ne connaissez pas.</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">Ce lien vous demande de payer</string>
+    <string name="upi_asks_mandate">Ce lien demande des paiements automatiques</string>
+    <string name="warn_upi_mandate">Ce lien met en place des paiements automatiques depuis votre compte. Acceptez seulement si vous l’avez demandé vous-même, pour une facture ou un abonnement que vous connaissez.</string>
+    <string name="warn_upi_brand">Cette demande de paiement utilise le nom %1$s, mais l’argent part vers un autre compte. Vous n’avez jamais besoin de payer pour un remboursement ou une mise à jour KYC.</string>
 </resources>

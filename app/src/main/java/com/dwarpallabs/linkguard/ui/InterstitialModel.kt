@@ -15,7 +15,17 @@ data class InterstitialModel(
         data object ApkDownload : Reason
         /** [mine]: one of the brands the user opens often, so the sentence says so. */
         data class BrandLookalike(val brand: String, val mine: Boolean = false) : Reason
-        data class Upi(val payeeName: String?, val payeeAddress: String?, val amount: String?) : Reason
+        /**
+         * A UPI request. [amount] is already grouped the Indian way (₹1,23,456). [mandate]: automatic,
+         * repeated payments. [brand]: the payee's name uses this brand but the UPI ID isn't the brand's.
+         */
+        data class Upi(
+            val payeeName: String?,
+            val payeeAddress: String?,
+            val amount: String?,
+            val mandate: Boolean = false,
+            val brand: String? = null,
+        ) : Reason
         data class WeirdHost(val brand: String?) : Reason
         data object Reputation : Reason
         /** Reported as a scam by [count] distinct LinkGuard users this week. Always a soft warning. */
@@ -36,7 +46,14 @@ data class InterstitialModel(
                 "warn_brand_lookalike" -> details["brand"]?.let { Reason.BrandLookalike(it) } ?: Reason.Generic
                 "warn_brand_lookalike_mine" -> details["brand"]?.let { Reason.BrandLookalike(it, mine = true) } ?: Reason.Generic
 
-                "warn_upi_intent" -> Reason.Upi(details["payee_name"], details["payee_address"], details["amount"])
+                "warn_upi_intent", "warn_upi_mandate", "warn_upi_brand" -> Reason.Upi(
+                    payeeName = details["payee_name"],
+                    payeeAddress = details["payee_address"],
+                    amount = details["amount"]?.let(::indianAmount),
+                    mandate = details["kind"] == "mandate",
+                    brand = details["brand"],
+                )
+
                 "warn_weird_host" -> Reason.WeirdHost(details["brand"])
                 "warn_reputation" -> Reason.Reputation
                 "warn_community" -> details["count"]?.toIntOrNull()?.let { Reason.Community(it) } ?: Reason.Generic
@@ -55,4 +72,21 @@ data class InterstitialModel(
             )
         }
     }
+}
+
+/**
+ * Groups a rupee amount the Indian way with Western digits: "123456.5" → "1,23,456.5". Anything that
+ * isn't a plain number is returned unchanged, so a strange amount is still shown as it was sent.
+ */
+fun indianAmount(raw: String): String {
+    val m = Regex("""^(\d+)(\.\d{1,2})?$""").matchEntire(raw.trim()) ?: return raw
+    val whole = m.groupValues[1].trimStart('0').ifEmpty { "0" }
+    val grouped = if (whole.length <= 3) {
+        whole
+    } else {
+        val last3 = whole.takeLast(3)
+        val rest = whole.dropLast(3).reversed().chunked(2).joinToString(",").reversed()
+        "$rest,$last3"
+    }
+    return grouped + m.groupValues[2]
 }

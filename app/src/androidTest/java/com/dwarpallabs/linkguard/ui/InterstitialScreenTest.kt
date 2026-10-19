@@ -56,6 +56,21 @@ class InterstitialScreenTest {
     }
 
     @Test
+    fun upiCardSaysWhatTheLinkAsksForAndShowsTheUpiId() {
+        show(InterstitialModel(false, null, null, Reason.Upi("Electricity Board", "collect.now@ybl", "4,999")))
+        compose.onNodeWithTag("upi_heading").performScrollTo().assertTextContains(res.getString(R.string.upi_asks_to_pay))
+        compose.onNodeWithTag("upi_id").assertTextContains("collect.now@ybl")
+        compose.onNodeWithTag("reason").assertTextContains(res.getString(R.string.warn_upi_intent))
+    }
+
+    @Test
+    fun upiMandateAndFakeBrandHaveTheirOwnWords() {
+        show(InterstitialModel(true, null, null, Reason.Upi("SBI Refund", "refund@axl", "1", mandate = true, brand = "SBI")))
+        compose.onNodeWithTag("upi_heading").performScrollTo().assertTextContains(res.getString(R.string.upi_asks_mandate))
+        compose.onNodeWithTag("reason").assertTextContains(res.getString(R.string.warn_upi_brand, "SBI"))
+    }
+
+    @Test
     fun smsLineOnlyWhenTheLinkCameBySms() {
         compose.setContent { LinkguardTheme { InterstitialScreen(brand, {}, {}, fromSms = true) } }
         compose.onNodeWithTag("context_sms").assertTextContains(res.getString(R.string.warn_context_sms))
@@ -89,10 +104,12 @@ class InterstitialScreenTest {
 
     @Test
     fun upiShowsPayeeAndAmount() {
-        show(InterstitialModel(true, null, null, Reason.Upi("KBC Lottery", "lucky.winner@paytm", "25000")))
+        show(InterstitialModel(true, null, null, Reason.Upi("KBC Lottery", "lucky.winner@paytm", "25,000")))
         compose.onNodeWithTag("upi_details").assertIsDisplayed()
-        compose.onNodeWithText(res.getString(R.string.interstitial_upi_payee, "KBC Lottery (lucky.winner@paytm)")).assertIsDisplayed()
-        compose.onNodeWithText(res.getString(R.string.interstitial_upi_amount, "25000")).assertIsDisplayed()
+        compose.onNodeWithText(res.getString(R.string.interstitial_upi_payee, "KBC Lottery")).assertIsDisplayed()
+        compose.onNodeWithTag("upi_id").assertTextContains("lucky.winner@paytm")
+        compose.onNodeWithText(res.getString(R.string.interstitial_upi_amount, "25,000")).assertIsDisplayed()
+
     }
 
     @Test

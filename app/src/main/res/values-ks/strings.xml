@@ -84,7 +84,6 @@
     <string name="interstitial_report">یَتھ لِنکَس شکایت کٔرِو</string>
     <string name="interstitial_report_hint">گُمنام۔ یہِ چھُ باقی LinkGuard اِستعمال کرن والین خبردار کرنس منٛز مدد کران۔</string>
     <string name="interstitial_checking">لِنک چھُ جانچنہٕ یِوان…</string>
-    <string name="interstitial_upi_heading">UPI ادائیگی ہُند مطالبہٕ</string>
     <string name="interstitial_upi_payee">ادائیگی کٔمِس: %1$s</string>
     <string name="interstitial_upi_amount">رقم: ₹%1$s</string>
 
@@ -160,4 +159,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">یہِ لِنک آو SMS ذٔریعہٕ۔ ناواقف لُکن ہٕنٛدۍ میسجن منٛز آمتۍ لِنکن نِشہِ روٗزِو ہوشیار۔</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">یہِ لِنک چھُ تۄہہِ پونسہٕ دِنہٕ خٲطرٕ ونان</string>
+    <string name="upi_asks_mandate">یہِ لِنک چھُ پانہٕ پانٕے پونسہٕ کٹنُک اِجازت مَنگان</string>
+    <string name="warn_upi_mandate">یہِ لِنک چھُ تُہٕنٛدِ اکاونٹہٕ پؠٹھہٕ پانہٕ پانٕے پونسہٕ کٹنُک اِنتظام کران۔ تیٚلی کٔرِو ہاں ییٚلہِ توٚہۍ پانہٕ کُنہِ زانٛہہ وٲلِس بِلس یا پلانس خٲطرٕ یہِ شروع کوٚرمُت آسہِ۔</string>
+    <string name="warn_upi_brand">یہِ پیمنٹ درخواست چھےٚ %1$s ہُنٛد ناو استعمال کران، مگر پونسہٕ چھِ بیٚیِس اکاونٹس منٛز گژھان۔ رِفنڈ یا KYC اپڈیٹ خٲطرٕ چھُ نہٕ زانٛہہ تہِ پونسہٕ دِنُن پیوان۔</string>
 </resources>

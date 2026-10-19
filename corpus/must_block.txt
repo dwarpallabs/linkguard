@@ -32,3 +32,6 @@ https://cdn.lg-test-scam.org/pay	reputation	subdomain of a blocklisted domain (t
 http://lg-campaign-one.example/kyc-update	reputation	member of a confirmed scam campaign (test fixture)
 https://login.lg-campaign-two.example/	reputation	subdomain of a campaign member (test fixture)
 http://lg-campaign-three.example/pay?amt=499	reputation	campaign member with a payment path (test fixture)
+https://is.gd/lgtestmandate	upi_intent	shortener to a UPI autopay mandate (test fixture)
+https://bit.ly/lgtestgpay	upi_intent	shortener to a Google Pay request posing as an SBI refund (test fixture)
+https://is.gd/lgtestphonepe	upi_intent	shortener to a PhonePe request posing as HDFC Bank KYC (test fixture)

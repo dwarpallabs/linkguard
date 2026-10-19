@@ -240,7 +240,11 @@ internal fun reasonText(reason: Reason): String = when (reason) {
     Reason.ApkDownload -> stringResource(R.string.warn_apk_download)
     is Reason.BrandLookalike -> stringResource(if (reason.mine) R.string.warn_brand_lookalike_mine else R.string.warn_brand_lookalike, reason.brand)
 
-    is Reason.Upi -> stringResource(R.string.warn_upi_intent)
+    is Reason.Upi -> when {
+        reason.brand != null -> stringResource(R.string.warn_upi_brand, reason.brand)
+        reason.mandate -> stringResource(R.string.warn_upi_mandate)
+        else -> stringResource(R.string.warn_upi_intent)
+    }
     is Reason.WeirdHost -> reason.brand?.let { stringResource(R.string.warn_weird_host_brand, it) }
         ?: stringResource(R.string.warn_weird_host)
     Reason.Reputation -> stringResource(R.string.warn_reputation)
@@ -261,10 +265,24 @@ internal fun UpiDetails(upi: Reason.Upi) {
         modifier = Modifier.fillMaxWidth().testTag("upi_details"),
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-            Text(stringResource(R.string.interstitial_upi_heading), style = MaterialTheme.typography.titleMedium)
-            val payee = listOfNotNull(upi.payeeName, upi.payeeAddress?.let { "($it)" }).joinToString(" ")
-            if (payee.isNotEmpty()) {
-                Text(stringResource(R.string.interstitial_upi_payee, payee), style = MaterialTheme.typography.bodyLarge)
+            Text(
+                stringResource(if (upi.mandate) R.string.upi_asks_mandate else R.string.upi_asks_to_pay),
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.testTag("upi_heading"),
+            )
+            upi.payeeName?.let {
+                Text(stringResource(R.string.interstitial_upi_payee, it), style = MaterialTheme.typography.bodyLarge)
+            }
+            upi.payeeAddress?.let {
+                // The UPI ID in monospace, always left to right, so look-alike characters stand out.
+                Text(
+                    it,
+                    style = MaterialTheme.typography.bodyLarge.copy(
+                        fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                        textDirection = TextDirection.Ltr,
+                    ),
+                    modifier = Modifier.testTag("upi_id"),
+                )
             }
             upi.amount?.let {
                 Text(
