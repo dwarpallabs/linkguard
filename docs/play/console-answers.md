@@ -42,10 +42,10 @@ conservative (more disclosing) answer.
 | Data type | Collected / shared | Required? | Processed ephemerally? | Purpose | Why |
 |---|---|---|---|---|---|
 | **Web browsing history** | **Shared** (with third parties) | **Optional** | **Yes** | Fraud prevention, security and compliance | (1) For short links (bit.ly…), the link is sent to that shortener to see where it leads. (2) For unfamiliar sites, the site's **domain name** is sent to its official domain registry (RDAP) to check its age. Both have a switch in Settings ("Follow short links", "Brand-new websites"). Nothing is stored |
-| **App activity → Other user-generated content** | **Collected** (by Dwarpal Labs) | **Optional** (only when the user taps Send report) | No (kept up to 30 days) | Fraud prevention, security and compliance | The reported link and the optional note |
+| **App activity → Other user-generated content** | **Collected** (by Dwarpal Labs) | **Optional** (only when the user taps Report / Send report) | No (kept up to 30 days) | Fraud prevention, security and compliance | From the warning screen or the "Was that link a scam?" card: the website's name (`example.com`) and the warning's reason codes. From Settings → Report a link: the link the user typed and the optional note |
 | **Device or other IDs** | **Not collected** | | | | The report token is an HMAC of a phone-only secret **per website**. It can't identify the phone or link two reports together, so it isn't a device ID. Mentioned here for transparency |
 
-**Not declared as user data:** the 4-byte hash-prefix lookups to `api.dwarpallabs.com`. They carry only 32 bits of a website-name hash, which many websites share, so they can't identify the site or the user. They're described in the privacy policy.
+**Not declared as user data:** the on-phone note kept after *Open anyway* (`after_open.xml`: one website's name, time and reason codes, never backed up, deleted on answer or after 7 days) stays on the device and is never collected, so it is not a data-safety item; it is described in the privacy policy. Likewise the 4-byte hash-prefix lookups to `api.dwarpallabs.com`. They carry only 32 bits of a website-name hash, which many websites share, so they can't identify the site or the user. They're described in the privacy policy.
 
 **None of:** location, personal info (name, email, phone…), financial info, health, messages, photos, audio, files, calendar, contacts, app info and performance, crash logs, advertising ID.
 
@@ -71,11 +71,15 @@ conservative (more disclosing) answer.
 3. **Share the opt-in link.** Each tester opts in and installs LinkGuard **from Play**, then keeps it installed and opted in for **14 days in a row**.
 4. **On day 15 or later, apply for production access** in the Dashboard. Google asks how testing went: describe the feedback and the fixes made (for example, the Hindi and Tamil review).
 
-Good tester sources: friends and family on Android, the r/developersIndia post, and the Hindi and Tamil reviewers.
+Good tester sources: friends and family on Android and the r/developersIndia post. The message to send them is in `testers.md`.
 
 ## Uploading
-- **Bundle:** `./gradlew :app:bundlePlayRelease` → `app/build/outputs/bundle/playRelease/app-play-release.aab`.
-- **Play App Signing:** choose **"Use existing app signing key from Java keystore"**. Download Google's `pepk.jar` and encryption key from that screen, then run the command it shows against `~/.android-keys/linkguard-release.jks`, alias `linkguard`, typing the password yourself. Upload the resulting zip.
+- **Bundle:** `./gradlew :app:bundlePlayRelease` → `app/build/outputs/bundle/playRelease/app-play-release.aab`. Check it with `jarsigner -verify -verbose -certs <aab> | grep CN=` (expect `CN=Dwarpal Labs`). The first Play upload is 0.3.2 (versionCode 7).
+- **Play App Signing:** choose **"Use existing app signing key from Java keystore"**. Download Google's `pepk.jar` and `encryption_public_key.pem` from that screen into one folder, then run (Android Studio's JDK; it prompts for the keystore and key passwords, which are never written anywhere):
+  ```
+  "/Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java" -jar pepk.jar --keystore="$HOME/.android-keys/linkguard-release.jks" --alias=linkguard --output=linkguard-pepk.zip --include-cert --rsa-aes-encryption --encryption-key-path=encryption_public_key.pem
+  ```
+  Upload `linkguard-pepk.zip`. Delete it afterwards; it holds the private key, encrypted for Google.
 - **Upload key:** the same certificate, `3b7a7bc8…95405cee`.
 - **Graphics:** `graphics/icon-512.png`, `graphics/feature-1024x500.png`, and `graphics/screenshots/*_{en,hi,ta}.png` (four per language, in numbered order; re-take with `take_screenshots.sh`. Scene 4, the community "reported by N users" warning, is added once a test site with 3+ reports exists on the server). Other listing languages reuse the English screenshots.
 - **Release notes:** the "Release notes" section of each `listing-*.md`.
