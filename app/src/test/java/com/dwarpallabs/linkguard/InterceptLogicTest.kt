@@ -1,11 +1,14 @@
 package com.dwarpallabs.linkguard
 
 import com.dwarpallabs.linkguard.core.EngineData
+import com.dwarpallabs.linkguard.core.HashedAllowlist
+import com.dwarpallabs.linkguard.core.Verdict
 import com.dwarpallabs.linkguard.core.HttpResponse
 import com.dwarpallabs.linkguard.core.Http
 import com.dwarpallabs.linkguard.core.LinkEngine
 import com.dwarpallabs.linkguard.core.NormalisedUrl
 import com.dwarpallabs.linkguard.core.ServerVerdicts
+import com.dwarpallabs.linkguard.core.sha256Hex
 import com.dwarpallabs.linkguard.ui.InterstitialModel
 import com.dwarpallabs.linkguard.ui.InterstitialModel.Reason
 import org.junit.Assert.assertEquals
@@ -82,6 +85,27 @@ class InterceptLogicTest {
     }
 
     @Test
+    fun firstAllowlistClearsAFalseWarningButNeverAddsOne() {
+        // A legitimate but oddly named site: warned by the local checks on a fresh install.
+        val url = "http://lg-airtel-offers.xyz/"
+        val warned = engine.evaluate(url)
+        assertEquals(Verdict.Level.STRONG, warned.level)
+
+        // The allowlist download lands and covers it: the re-check is silent and replaces the warning.
+        val downloaded = HashedAllowlist().apply { replace("v1", setOf(sha256Hex("lg-airtel-offers.xyz"))) }
+        val withAllowlist = LinkEngine(EngineData.loadBundled(downloadedAllowlist = downloaded), null, null)
+        val cleared = InterceptViewModel.reconsider(warned, withAllowlist.evaluate(url))
+        assertEquals(Verdict.Level.SILENT, cleared.level)
+
+        // Not covered: the original verdict, with its signals, is kept.
+        val stillWarned = InterceptViewModel.reconsider(warned, engine.evaluate(url))
+        assertEquals(warned, stillWarned)
+        // A re-check can never make a safe link worse.
+        val safe = engine.evaluate("https://www.irctc.co.in/")
+        assertEquals(safe, InterceptViewModel.reconsider(safe, warned))
+    }
+
+    @Test
     fun reportJsonEscapesUserText() {
         val json = ReportClient.json("http://sbi-kyc.xyz/a?b=\"c\"", "got it on\nWhatsApp \\ \u0001", "0.2.0")
         assertEquals(
@@ -130,7 +154,7 @@ class InterceptLogicTest {
 
     @Test
     fun communityVerdictBecomesSoftCommunityReason() {
-        val h = com.dwarpallabs.linkguard.core.sha256Hex("lg-reported-three.example")
+        val h = sha256Hex("lg-reported-three.example")
         val engine = LinkEngine(data, null, null, reputation = { _, _ -> ServerVerdicts(reported = mapOf(h to 3)) })
         val model = InterstitialModel.from(engine.evaluate("https://lg-reported-three.example/"))
         assertEquals(Reason.Community(3), model.reason)

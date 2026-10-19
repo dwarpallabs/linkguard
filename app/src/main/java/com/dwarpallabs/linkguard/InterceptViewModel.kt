@@ -16,6 +16,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runInterruptible
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
+import java.util.concurrent.TimeUnit
+import java.util.concurrent.TimeoutException
 
 /**
  * Decides what happens to one intercepted link. Survives rotation so checks run once.
@@ -69,8 +71,27 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
             val full = withTimeoutOrNull(hardStop) {
                 withContext(Dispatchers.IO) { runInterruptible { app.engine.evaluate(raw, budget, disabled) } }
             }
+            var verdict = full ?: local
+            // First run only: no allowlist in memory yet. A warning may be a false positive on a
+            // popular site, so give the start-up download a moment and look again. Safe links
+            // never wait; they were forwarded above the moment the verdict was silent.
+            if (verdict.level != Verdict.Level.SILENT && !app.hasAllowlist()) {
+                withContext(Dispatchers.IO) {
+                    runInterruptible {
+                        try {
+                            app.allowlistWarmUp.get(FIRST_RUN_ALLOWLIST_WAIT_MS, TimeUnit.MILLISECONDS)
+                        } catch (_: TimeoutException) {
+                            // Still downloading or offline: warn on what we know.
+                        }
+                    }
+                }
+                if (app.hasAllowlist()) {
+                    val recheck = withContext(Dispatchers.IO) { app.localEngine.evaluate(raw, disabled = disabled) }
+                    verdict = reconsider(verdict, recheck)
+                }
+            }
             slowCard.cancel()
-            _state.value = decide(raw, full ?: local)
+            _state.value = decide(raw, verdict)
         }
     }
 
@@ -95,6 +116,16 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
     companion object {
         /** Grace on top of the engine's own budget before we give up and use the local verdict. */
         private const val HARD_STOP_MARGIN_MS = 150L
+
+        /** How long a warned link waits for the very first allowlist download (once per install). */
+        const val FIRST_RUN_ALLOWLIST_WAIT_MS = 3_000L
+
+        /**
+         * After the allowlist arrived: the re-check can only clear a warning (the site is allowlisted),
+         * never add one, so the original verdict with its network signals is kept otherwise.
+         */
+        fun reconsider(original: Verdict, recheck: Verdict): Verdict =
+            if (recheck.level == Verdict.Level.SILENT) recheck else original
 
         /**
          * The URL to open: the unwrapped destination if redirects were followed (skipping the
