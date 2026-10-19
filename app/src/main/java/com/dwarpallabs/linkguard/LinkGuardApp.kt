@@ -16,6 +16,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import java.util.concurrent.Callable
+import java.util.concurrent.CompletableFuture
 import java.util.concurrent.Executors
 import java.util.concurrent.Future
 
@@ -32,6 +33,16 @@ class LinkGuardApp : Application() {
     val allowlist = HashedAllowlist()
 
     val http = UrlConnectionHttp()
+
+    /**
+     * Completes once the start-up allowlist refresh has finished, whether or not it got a bundle.
+     * On a fresh install a warned link waits briefly for this, so a popular site is not warned
+     * about just because the allowlist has not arrived yet.
+     */
+    val allowlistWarmUp = CompletableFuture<Unit>()
+
+    /** True once a signature-checked allowlist (cached or downloaded) is in memory. */
+    fun hasAllowlist(): Boolean = allowlist.version != null
 
     /** Outlives any screen, so a report the user sent keeps going after they tap Go back. */
     val reportScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -55,8 +66,12 @@ class LinkGuardApp : Application() {
         // link's lookup can reuse it (a lookup for a fixed prefix, carrying nothing about the user
         // or any link), then refresh the allowlist if it is a day old.
         Thread({
-            http.get("${ServerApi.BASE_URL}/v1/lookup?p=00000000", "text/plain", WARM_UP_TIMEOUT_MS)
-            AllowlistUpdater(this, http, allowlist).refreshIfStale()
+            try {
+                http.get("${ServerApi.BASE_URL}/v1/lookup?p=00000000", "text/plain", WARM_UP_TIMEOUT_MS)
+                AllowlistUpdater(this, http, allowlist).refreshIfStale()
+            } finally {
+                allowlistWarmUp.complete(Unit)
+            }
         }, "server-warm-up").start()
     }
 
