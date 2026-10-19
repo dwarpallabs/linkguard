@@ -8,6 +8,9 @@ All notable changes to LinkGuard. Versions follow the GitHub releases.
 - **Check with LinkGuard** in the share sheet: share any message to LinkGuard to see a verdict for every link in it, including `wa.me`, `t.me` and UPI payment links, links glued to Hindi or Tamil words, and links broken up with invisible characters. Each result can be copied (website name only) or reported. The message itself never leaves the phone.
 - A tip on the home screen explains how to check a message.
 
+### Data
+- Scam websites confirmed by LinkGuard are now published daily at [dwarpallabs/linkguard-data](https://github.com/dwarpallabs/linkguard-data) (ODbL 1.0), 48 hours after confirmation, with weekly report counts per brand. Unconfirmed reports and the links people open are never published.
+
 ## 0.3.2 — 2026-10-19
 
 ### Added
