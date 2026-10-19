@@ -2,7 +2,7 @@
 
 All notable changes to LinkGuard. Versions follow the GitHub releases.
 
-## Unreleased
+## 0.3.2 — 2026-10-19
 
 ### Added
 - **Report this link** on a warning screen now asks once in a sheet that says what is sent, before anything leaves the phone.
@@ -12,5 +12,10 @@ All notable changes to LinkGuard. Versions follow the GitHub releases.
 - Reports from a warning screen send only the website's name, never the full link, its path, query or fragment. Reports typed into Settings → *Report a link* are unchanged.
 - The thank-you after a report now says what the report does: "Thank you. Your report helps warn other people."
 
+### Fixed
+- A brand-new install no longer shows a false warning on a popular website in the moment before the safe-site list has downloaded: the first check waits up to 3 seconds for it.
+- Visual fixes across the app to match the design system: text sizes, spacing and touch targets.
+
 ### Privacy
 - After *Open anyway*, the website's name (not the link), the time and the reasons for the warning are kept on the phone until the question is answered or for 7 days at most. This file is never backed up or copied to a new phone. Websites already asked about are kept only as a scrambled fingerprint.
+- The per-phone reporter secret is no longer included in Google backups or phone-to-phone transfers. Existing installs move it out on first use.
