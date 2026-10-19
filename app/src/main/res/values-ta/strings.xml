@@ -152,4 +152,7 @@
         <item quantity="one">இந்த இணையதளம் மோசடி இணையதளங்களின் ஒரு குழுவைச் சேர்ந்ததாகத் தெரிகிறது. இந்த வாரம் %d LinkGuard பயனர் இவற்றைப் புகாரளித்தார்.</item>
         <item quantity="other">இந்த இணையதளம் மோசடி இணையதளங்களின் ஒரு குழுவைச் சேர்ந்ததாகத் தெரிகிறது. இந்த வாரம் %d LinkGuard பயனர்கள் இவற்றைப் புகாரளித்தனர்.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">இந்த இணைப்பு SMS மூலம் வந்தது. தெரியாதவர்களின் செய்திகளில் வரும் இணைப்புகளில் கவனமாக இருங்கள்.</string>
 </resources>

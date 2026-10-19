@@ -56,6 +56,18 @@ class InterstitialScreenTest {
     }
 
     @Test
+    fun smsLineOnlyWhenTheLinkCameBySms() {
+        compose.setContent { LinkguardTheme { InterstitialScreen(brand, {}, {}, fromSms = true) } }
+        compose.onNodeWithTag("context_sms").assertTextContains(res.getString(R.string.warn_context_sms))
+    }
+
+    @Test
+    fun noSmsLineByDefault() {
+        show(brand)
+        compose.onNodeWithTag("context_sms").assertDoesNotExist()
+    }
+
+    @Test
     fun campaignShowsCountWithStrongTitle() {
         show(InterstitialModel(true, "lg-campaign-one.example", "lg-campaign-one.example", Reason.Campaign(7)))
         compose.onNodeWithTag("title").assertTextContains(res.getString(R.string.interstitial_title_strong))

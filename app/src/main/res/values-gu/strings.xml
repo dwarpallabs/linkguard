@@ -158,4 +158,7 @@
         <item quantity="one">આ વેબસાઇટ છેતરપિંડીવાળી વેબસાઇટના એક જૂથનો ભાગ લાગે છે. આ અઠવાડિયે %d LinkGuard વપરાશકર્તાએ તેમની ફરિયાદ કરી.</item>
         <item quantity="other">આ વેબસાઇટ છેતરપિંડીવાળી વેબસાઇટના એક જૂથનો ભાગ લાગે છે. આ અઠવાડિયે %d LinkGuard વપરાશકર્તાઓએ તેમની ફરિયાદ કરી.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">આ લિંક SMS દ્વારા આવી છે. અજાણ્યા લોકોના મેસેજમાં આવેલી લિંકથી સાવધાન રહો.</string>
 </resources>

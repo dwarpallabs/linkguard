@@ -157,4 +157,7 @@
         <item quantity="one">ଏହି ୱେବସାଇଟ ଠକେଇ ୱେବସାଇଟଗୁଡ଼ିକର ଏକ ଗୋଷ୍ଠୀର ଅଂଶ ଭଳି ଲାଗୁଛି। ଏହି ସପ୍ତାହରେ %d ଜଣ LinkGuard ବ୍ୟବହାରକାରୀ ଏଗୁଡ଼ିକୁ ରିପୋର୍ଟ କରିଛନ୍ତି।</item>
         <item quantity="other">ଏହି ୱେବସାଇଟ ଠକେଇ ୱେବସାଇଟଗୁଡ଼ିକର ଏକ ଗୋଷ୍ଠୀର ଅଂଶ ଭଳି ଲାଗୁଛି। ଏହି ସପ୍ତାହରେ %d ଜଣ LinkGuard ବ୍ୟବହାରକାରୀ ଏଗୁଡ଼ିକୁ ରିପୋର୍ଟ କରିଛନ୍ତି।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">ଏହି ଲିଙ୍କଟି SMS ଜରିଆରେ ଆସିଛି। ଅଜଣା ଲୋକଙ୍କ ମେସେଜରେ ଆସୁଥିବା ଲିଙ୍କରୁ ସାବଧାନ ରୁହନ୍ତୁ।</string>
 </resources>

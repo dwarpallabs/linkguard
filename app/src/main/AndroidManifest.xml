@@ -15,7 +15,13 @@
             <category android:name="android.intent.category.BROWSABLE" />
             <data android:scheme="https" />
         </intent>
+        <!-- Lets LinkGuard ask which app is the SMS app (roadmap B1); it never reads messages. -->
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="smsto" />
+        </intent>
         <!-- Which installed browsers support Custom Tabs, to forward a Custom Tab as one. -->
+
         <intent>
             <action android:name="android.support.customtabs.action.CustomTabsService" />
         </intent>

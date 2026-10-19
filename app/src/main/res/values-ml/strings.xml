@@ -157,4 +157,7 @@
         <item quantity="one">ഈ വെബ്സൈറ്റ് തട്ടിപ്പ് വെബ്സൈറ്റുകളുടെ ഒരു കൂട്ടത്തിന്റെ ഭാഗമാണെന്ന് തോന്നുന്നു. ഈ ആഴ്ച %d LinkGuard ഉപയോക്താവ് ഇവ റിപ്പോർട്ട് ചെയ്തു.</item>
         <item quantity="other">ഈ വെബ്സൈറ്റ് തട്ടിപ്പ് വെബ്സൈറ്റുകളുടെ ഒരു കൂട്ടത്തിന്റെ ഭാഗമാണെന്ന് തോന്നുന്നു. ഈ ആഴ്ച %d LinkGuard ഉപയോക്താക്കൾ ഇവ റിപ്പോർട്ട് ചെയ്തു.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">ഈ ലിങ്ക് SMS വഴിയാണ് വന്നത്. അറിയാത്തവരുടെ മെസേജുകളിൽ വരുന്ന ലിങ്കുകളിൽ ശ്രദ്ധിക്കുക.</string>
 </resources>

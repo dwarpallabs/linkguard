@@ -157,4 +157,7 @@
         <item quantity="one">This website looks like part of a group of scam websites. %d LinkGuard user reported them this week.</item>
         <item quantity="other">This website looks like part of a group of scam websites. %d LinkGuard users reported them this week.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">This link came by SMS. Be careful with links in messages from people you don’t know.</string>
 </resources>

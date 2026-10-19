@@ -157,4 +157,7 @@
         <item quantity="one">एह् वेबसाइट ठग्गी आह्लियें वेबसाइटें दे इक गुट दा हिस्सा लगदी ऐ। इस हफ्ते %d LinkGuard बरतने आह्ले ने इंदी शकैत कीती।</item>
         <item quantity="other">एह् वेबसाइट ठग्गी आह्लियें वेबसाइटें दे इक गुट दा हिस्सा लगदी ऐ। इस हफ्ते %d LinkGuard बरतने आह्लें इंदी शकैत कीती।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">एह् लिंक SMS राहें आया ऐ। अनजान लोकें दे मैसेज च आए दे लिंकें थमां सावधान रौह्ओ।</string>
 </resources>

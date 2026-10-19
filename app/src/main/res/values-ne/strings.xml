@@ -157,4 +157,7 @@
         <item quantity="one">यो वेबसाइट ठगी वेबसाइटहरूको एउटा समूहको भाग जस्तो देखिन्छ। यस हप्ता %d LinkGuard प्रयोगकर्ताले यिनको उजुरी गरे।</item>
         <item quantity="other">यो वेबसाइट ठगी वेबसाइटहरूको एउटा समूहको भाग जस्तो देखिन्छ। यस हप्ता %d LinkGuard प्रयोगकर्ताले यिनको उजुरी गरे।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">यो लिंक SMS बाट आएको हो। नचिनेका मानिसहरूका म्यासेजमा आएका लिंकबाट सावधान रहनुहोस्।</string>
 </resources>

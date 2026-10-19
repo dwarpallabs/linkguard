@@ -157,4 +157,7 @@
         <item quantity="one">هي ويب سائيٽ ٺڳيءَ واري ويب سائيٽن جي هڪ گروپ جو حصو لڳي ٿي. هن هفتي %d LinkGuard استعمال ڪندڙن انهن جي شڪايت ڪئي.</item>
         <item quantity="other">هي ويب سائيٽ ٺڳيءَ واري ويب سائيٽن جي هڪ گروپ جو حصو لڳي ٿي. هن هفتي %d LinkGuard استعمال ڪندڙن انهن جي شڪايت ڪئي.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">هي لنڪ SMS ذريعي آئي آهي. اڻڄاتل ماڻهن جي ميسيج ۾ آيل لنڪن کان خبردار رهو.</string>
 </resources>

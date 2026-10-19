@@ -157,4 +157,7 @@
         <item quantity="one">ఈ వెబ్‌సైట్ మోసపు వెబ్‌సైట్‌ల ఒక గుంపులో భాగంలా ఉంది. ఈ వారం %d మంది LinkGuard వినియోగదారులు వీటిని రిపోర్ట్ చేశారు.</item>
         <item quantity="other">ఈ వెబ్‌సైట్ మోసపు వెబ్‌సైట్‌ల ఒక గుంపులో భాగంలా ఉంది. ఈ వారం %d మంది LinkGuard వినియోగదారులు వీటిని రిపోర్ట్ చేశారు.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">ఈ లింక్ SMS ద్వారా వచ్చింది. తెలియని వాళ్ల మెసేజ్‌లలో వచ్చే లింక్‌లతో జాగ్రత్తగా ఉండండి.</string>
 </resources>

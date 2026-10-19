@@ -163,4 +163,7 @@
         <item quantity="many">Este site parece fazer parte de um grupo de sites de golpe. %d usuários do LinkGuard denunciaram esses sites esta semana.</item>
         <item quantity="other">Este site parece fazer parte de um grupo de sites de golpe. %d usuários do LinkGuard denunciaram esses sites esta semana.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">Este link chegou por SMS. Cuidado com links em mensagens de pessoas que você não conhece.</string>
 </resources>

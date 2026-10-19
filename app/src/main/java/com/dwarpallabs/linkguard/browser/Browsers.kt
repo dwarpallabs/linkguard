@@ -18,7 +18,20 @@ import com.dwarpallabs.linkguard.Prefs
 
 data class BrowserApp(val packageName: String, val label: String)
 
+/**
+ * The app that sent the link, if Android or the app says: the sender's own application-id extra
+ * (Google Messages sets it), else the referrer. Used only to word a warning; never stored or sent.
+ */
+fun sourcePackage(intent: Intent?, referrer: Uri?): String? =
+    intent?.getStringExtra(android.provider.Browser.EXTRA_APPLICATION_ID)?.takeIf { it.isNotBlank() }
+        ?: referrer?.takeIf { it.scheme == "android-app" }?.host
+
+/** True if [sourcePackage] is the phone's SMS app (no SMS permission needed to ask which one it is). */
+fun cameBySms(context: Context, sourcePackage: String?): Boolean =
+    sourcePackage != null && sourcePackage == android.provider.Telephony.Sms.getDefaultSmsPackage(context)
+
 /** True if the launch [intent] came from an app opening a Custom Tab (it always carries a session extra). */
+
 fun isCustomTabLaunch(intent: Intent?): Boolean = intent?.hasExtra(CustomTabsIntent.EXTRA_SESSION) == true
 
 /**

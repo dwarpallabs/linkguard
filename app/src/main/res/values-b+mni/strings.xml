@@ -155,4 +155,7 @@
         <item quantity="one">ꯋꯦꯕꯁꯥꯏꯠ ꯑꯁꯤ ꯃꯤꯅꯝꯕ ꯋꯦꯕꯁꯥꯏꯠꯁꯤꯡꯒꯤ ꯀꯥꯡꯕꯨ ꯑꯃꯒꯤ ꯁꯔꯨꯛ ꯑꯃꯥ ꯑꯣꯏꯅ ꯎꯏ꯫ ꯍꯞꯇꯥ ꯑꯁꯤꯗ LinkGuard ꯁꯤꯖꯤꯟꯅꯔꯤꯕ %d ꯅ ꯃꯈꯣꯌꯒꯤ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯈ꯭ꯔꯦ꯫</item>
         <item quantity="other">ꯋꯦꯕꯁꯥꯏꯠ ꯑꯁꯤ ꯃꯤꯅꯝꯕ ꯋꯦꯕꯁꯥꯏꯠꯁꯤꯡꯒꯤ ꯀꯥꯡꯕꯨ ꯑꯃꯒꯤ ꯁꯔꯨꯛ ꯑꯃꯥ ꯑꯣꯏꯅ ꯎꯏ꯫ ꯍꯞꯇꯥ ꯑꯁꯤꯗ LinkGuard ꯁꯤꯖꯤꯟꯅꯔꯤꯕ %d ꯅ ꯃꯈꯣꯌꯒꯤ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯈ꯭ꯔꯦ꯫</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">ꯂꯤꯡꯛ ꯑꯁꯤ SMS ꯗꯒꯤ ꯂꯥꯛꯈꯤ꯫ ꯈꯉꯗꯕ ꯃꯤꯁꯤꯡꯒꯤ ꯃꯦꯁꯦꯖꯗ ꯂꯥꯀꯄ ꯂꯤꯡꯛꯁꯤꯡꯗ ꯆꯦꯛꯁꯤꯟꯅ ꯂꯩꯌꯨ꯫</string>
 </resources>

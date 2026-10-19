@@ -157,4 +157,7 @@
         <item quantity="one">बे वेबसाइटआ थगनाय वेबसाइटफोरनि मोनसे दलनि बाहागो बादि नुयो। बे हप्ताआव %d LinkGuard बाहायग्राया बेफोरनि सायाव नालिस खालामदों।</item>
         <item quantity="other">बे वेबसाइटआ थगनाय वेबसाइटफोरनि मोनसे दलनि बाहागो बादि नुयो। बे हप्ताआव %d LinkGuard बाहायग्राया बेफोरनि सायाव नालिस खालामदों।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">बे लिंकआ SMS जों फैदों। सिनायि गैयि सुबुंनि मेसेजआव फैनाय लिंकफोरनिफ्राय होशियार जा।</string>
 </resources>
