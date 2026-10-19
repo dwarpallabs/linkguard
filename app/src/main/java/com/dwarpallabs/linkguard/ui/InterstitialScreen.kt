@@ -115,7 +115,7 @@ fun InterstitialScreen(
  * colours are reserved for what the link itself is.
  */
 @Composable
-private fun ReportBlock(status: ReportStatus, onReport: () -> Unit) {
+internal fun ReportBlock(status: ReportStatus, onReport: () -> Unit) {
     var confirming by rememberSaveable { mutableStateOf(false) }
     if (confirming) {
         ReportConfirmSheet(
@@ -167,7 +167,7 @@ private fun ReportBlock(status: ReportStatus, onReport: () -> Unit) {
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun ReportConfirmSheet(onReport: () -> Unit, onClose: () -> Unit) {
+internal fun ReportConfirmSheet(onReport: () -> Unit, onClose: () -> Unit) {
     ModalBottomSheet(
         onDismissRequest = onClose,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
@@ -216,7 +216,7 @@ fun CheckingCard() {
 }
 
 /** Registrable domain in bold; anything to its left (`www.`, `login.`) muted, since that is where scammers hide. */
-private fun hostText(host: String, domain: String?, muted: Color) = buildAnnotatedString {
+internal fun hostText(host: String, domain: String?, muted: Color) = buildAnnotatedString {
     // No registrable domain (e.g. a raw IP address): the whole host is what the site really is.
     val start = if (domain != null && host.endsWith(domain)) host.length - domain.length else 0
     withStyle(SpanStyle(fontWeight = FontWeight.Normal, color = muted)) { append(host.substring(0, start)) }
@@ -224,7 +224,7 @@ private fun hostText(host: String, domain: String?, muted: Color) = buildAnnotat
 }
 
 @Composable
-private fun reasonText(reason: Reason): String = when (reason) {
+internal fun reasonText(reason: Reason): String = when (reason) {
     Reason.ApkDownload -> stringResource(R.string.warn_apk_download)
     is Reason.BrandLookalike -> stringResource(R.string.warn_brand_lookalike, reason.brand)
     is Reason.Upi -> stringResource(R.string.warn_upi_intent)
@@ -237,7 +237,7 @@ private fun reasonText(reason: Reason): String = when (reason) {
 }
 
 @Composable
-private fun UpiDetails(upi: Reason.Upi) {
+internal fun UpiDetails(upi: Reason.Upi) {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceVariant,

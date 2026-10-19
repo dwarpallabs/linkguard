@@ -50,7 +50,10 @@ class PublicSuffixList(lines: Sequence<String>) {
     }
 
     /** The public suffix of an ASCII, lowercase [host], e.g. `co.in`. Unknown TLDs count as suffixes. */
-    fun publicSuffix(host: String): String {
+    fun publicSuffix(host: String): String = listedSuffix(host) ?: host.substringAfterLast('.')
+
+    /** The public suffix of [host] if the list has a rule for it; null for an unknown TLD such as `pdf`. */
+    fun listedSuffix(host: String): String? {
         val labels = host.split('.')
         for (i in labels.indices) {
             val candidate = labels.subList(i, labels.size).joinToString(".")
@@ -58,8 +61,9 @@ class PublicSuffixList(lines: Sequence<String>) {
             val parent = labels.subList(i + 1, labels.size).joinToString(".")
             if (candidate in rules || (i + 1 < labels.size && parent in wildcards)) return candidate
         }
-        return labels.last()
+        return null
     }
+
 
     /** The registrable domain of [host], or null if [host] is itself a public suffix. */
     fun registrableDomain(host: String): String? {

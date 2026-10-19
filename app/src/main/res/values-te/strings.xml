@@ -118,4 +118,23 @@
     <string name="scam_check_yes">అవును, అది మోసం</string>
     <string name="scam_check_no">కాదు, అది బాగానే ఉంది</string>
     <string name="scam_check_unsure">ఖచ్చితంగా తెలియదు</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard తో చెక్ చేయండి</string>
+    <string name="share_checking">లింక్‌లు చెక్ చేస్తోంది…</string>
+    <string name="share_no_links">లింక్ ఏదీ కనిపించలేదు. LinkGuard లింక్‌లను మాత్రమే చెక్ చేయగలదు.</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard %d లింక్‌ను చెక్ చేసింది</item>
+        <item quantity="other">LinkGuard %d లింక్‌లను చెక్ చేసింది</item>
+    </plurals>
+    <string name="share_private">మీ మెసేజ్ మీ ఫోన్‌లోనే ఉంటుంది. అందులోని లింక్‌లను మాత్రమే చెక్ చేశాం.</string>
+    <string name="share_safe_title">హెచ్చరిక సూచనలు ఏవీ కనిపించలేదు</string>
+    <string name="share_copy">వెబ్‌సైట్ పేరు కాపీ చేయండి</string>
+    <string name="share_copied">వెబ్‌సైట్ పేరు కాపీ అయింది</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard మొదటి %d లింక్‌ను మాత్రమే చెక్ చేసింది.</item>
+        <item quantity="other">LinkGuard మొదటి %d లింక్‌లను మాత్రమే చెక్ చేసింది.</item>
+    </plurals>
+    <string name="home_share_tip">ఏదైనా మెసేజ్ మీద అనుమానంగా ఉందా? దాన్ని LinkGuard కి షేర్ చేయండి: షేర్ నొక్కి, LinkGuard తో చెక్ చేయండి ఎంచుకోండి.</string>
 </resources>

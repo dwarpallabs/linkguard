@@ -118,4 +118,23 @@
     <string name="scam_check_yes">नंगौ, बेयो थगनाय जादोंमोन</string>
     <string name="scam_check_no">नङा, बेयो मोजां जादोंमोन</string>
     <string name="scam_check_unsure">थारैनो मिथिया</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard जों नायसं</string>
+    <string name="share_checking">लिंकफोरखौ नायसंगासिनो दं…</string>
+    <string name="share_no_links">जेबो लिंक मोनाखै। LinkGuard आ खालि लिंकखौल\' नायसंनो हायो।</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard आ %d लिंक नायसंबाय</item>
+        <item quantity="other">LinkGuard आ %d लिंक नायसंबाय</item>
+    </plurals>
+    <string name="share_private">नोंथांनि मेसेजआ नोंथांनि फोननिआव थायो। खालि बेनि लिंकफोरखौल\' नायसंनाय जाबाय।</string>
+    <string name="share_safe_title">सावगारिनि जेबो सिन मोनाखै</string>
+    <string name="share_copy">वेबसाइटनि मुंखौ कपि खालाम</string>
+    <string name="share_copied">वेबसाइटनि मुंखौ कपि खालामनाय जाबाय</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard आ खालि गिबि %d लिंकखौल\' नायसंबाय।</item>
+        <item quantity="other">LinkGuard आ खालि गिबि %d लिंकखौल\' नायसंबाय।</item>
+    </plurals>
+    <string name="home_share_tip">मेसेजआव सन्देह जायोमा? बेखौ LinkGuard आव शेयार खालाम: शेयारआव टेप खालाम, उनाव LinkGuard जों नायसं सायख।</string>
 </resources>

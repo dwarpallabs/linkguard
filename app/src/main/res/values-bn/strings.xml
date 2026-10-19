@@ -118,4 +118,23 @@
     <string name="scam_check_yes">হ্যাঁ, প্রতারণা ছিল</string>
     <string name="scam_check_no">না, ঠিক ছিল</string>
     <string name="scam_check_unsure">নিশ্চিত নই</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard দিয়ে যাচাই করুন</string>
+    <string name="share_checking">লিংক যাচাই হচ্ছে…</string>
+    <string name="share_no_links">কোনো লিংক পাওয়া যায়নি। LinkGuard শুধু লিংক যাচাই করতে পারে।</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard %dটি লিংক যাচাই করেছে</item>
+        <item quantity="other">LinkGuard %dটি লিংক যাচাই করেছে</item>
+    </plurals>
+    <string name="share_private">আপনার মেসেজ আপনার ফোনেই থাকে। শুধু এর লিংকগুলো যাচাই করা হয়েছে।</string>
+    <string name="share_safe_title">সতর্কতার কোনো চিহ্ন পাওয়া যায়নি</string>
+    <string name="share_copy">ওয়েবসাইটের নাম কপি করুন</string>
+    <string name="share_copied">ওয়েবসাইটের নাম কপি হয়েছে</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard শুধু প্রথম %dটি লিংক যাচাই করেছে।</item>
+        <item quantity="other">LinkGuard শুধু প্রথম %dটি লিংক যাচাই করেছে।</item>
+    </plurals>
+    <string name="home_share_tip">কোনো মেসেজ নিয়ে সন্দেহ? সেটা LinkGuard-এ শেয়ার করুন: শেয়ার-এ ট্যাপ করুন, তারপর LinkGuard দিয়ে যাচাই করুন বেছে নিন।</string>
 </resources>

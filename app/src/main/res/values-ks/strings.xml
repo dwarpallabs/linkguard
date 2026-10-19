@@ -118,4 +118,23 @@
     <string name="scam_check_yes">آ، سُہ اوس دوکھہٕ</string>
     <string name="scam_check_no">نہ، سُہ اوس ٹھیک</string>
     <string name="scam_check_unsure">پَکٕ پاٹھۍ چھُم نہٕ پتہٕ</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard سٟتۍ جانچِو</string>
+    <string name="share_checking">لِنک چھِ جانچنہٕ یِوان…</string>
+    <string name="share_no_links">کانٛہہ لِنک لوٚب نہٕ۔ LinkGuard ہیٚکہِ صِرف لِنک جانچِتھ۔</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard کوٚر %d لِنک جانچ</item>
+        <item quantity="other">LinkGuard کٔر %d لِنک جانچ</item>
+    </plurals>
+    <string name="share_private">تُہٕنٛز میسج چھےٚ تُہٕنٛدِس فونس پؠٹھے روزان۔ صِرف اَتھ منٛز موجود لِنک آیہِ جانچنہٕ۔</string>
+    <string name="share_safe_title">خبرداری ہُنٛد کانٛہہ نِشان لوٚب نہٕ</string>
+    <string name="share_copy">ویب سایٹُک ناو کاپی کٔرِو</string>
+    <string name="share_copied">ویب سایٹُک ناو گوو کاپی</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard کوٚر صِرف گۄڈنیُک %d لِنک جانچ۔</item>
+        <item quantity="other">LinkGuard کٔر صِرف گۄڈنِکۍ %d لِنک جانچ۔</item>
+    </plurals>
+    <string name="home_share_tip">کُنہِ میسجس پؠٹھ شک؟ سُہ کٔرِو LinkGuard پؠٹھ شیئر: شیئر پؠٹھ کٔرِو ٹیپ، پَتہٕ ژٲرِو LinkGuard سٟتۍ جانچِو۔</string>
 </resources>

@@ -178,6 +178,15 @@ fun HomeScreen(
 
             Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)) {
                 Text(
+                    stringResource(R.string.home_share_tip),
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.padding(16.dp).testTag("share_tip"),
+                )
+            }
+
+
+            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)) {
+                Text(
                     stringResource(R.string.telegram_tip),
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(16.dp),

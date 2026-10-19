@@ -118,4 +118,23 @@
     <string name="scam_check_yes">হয়, প্ৰতাৰণা আছিল</string>
     <string name="scam_check_no">নহয়, ঠিকেই আছিল</string>
     <string name="scam_check_unsure">নিশ্চিত নহয়</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard-এৰে পৰীক্ষা কৰক</string>
+    <string name="share_checking">লিংক পৰীক্ষা কৰি আছে…</string>
+    <string name="share_no_links">কোনো লিংক পোৱা নগ’ল। LinkGuard-এ কেৱল লিংকহে পৰীক্ষা কৰিব পাৰে।</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard-এ %dটা লিংক পৰীক্ষা কৰিলে</item>
+        <item quantity="other">LinkGuard-এ %dটা লিংক পৰীক্ষা কৰিলে</item>
+    </plurals>
+    <string name="share_private">আপোনাৰ মেছেজ আপোনাৰ ফোনতে থাকে। কেৱল ইয়াৰ লিংকবোৰহে পৰীক্ষা কৰা হ’ল।</string>
+    <string name="share_safe_title">সতৰ্কবাণীৰ কোনো চিন পোৱা নগ’ল</string>
+    <string name="share_copy">ৱেবছাইটৰ নাম কপি কৰক</string>
+    <string name="share_copied">ৱেবছাইটৰ নাম কপি কৰা হ’ল</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard-এ কেৱল প্ৰথম %dটা লিংক পৰীক্ষা কৰিলে।</item>
+        <item quantity="other">LinkGuard-এ কেৱল প্ৰথম %dটা লিংক পৰীক্ষা কৰিলে।</item>
+    </plurals>
+    <string name="home_share_tip">কোনো মেছেজত সন্দেহ হৈছে নেকি? সেয়া LinkGuard-লৈ শ্বেয়াৰ কৰক: শ্বেয়াৰত টিপক, তাৰ পিছত LinkGuard-এৰে পৰীক্ষা কৰক বাছক।</string>
 </resources>

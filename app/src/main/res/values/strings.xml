@@ -118,4 +118,23 @@
     <string name="scam_check_yes">Yes, it was a scam</string>
     <string name="scam_check_no">No, it was fine</string>
     <string name="scam_check_unsure">Not sure</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">Check with LinkGuard</string>
+    <string name="share_checking">Checking links…</string>
+    <string name="share_no_links">No links found. LinkGuard can only check links.</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard checked %d link</item>
+        <item quantity="other">LinkGuard checked %d links</item>
+    </plurals>
+    <string name="share_private">Your message stays on your phone. Only the links in it were checked.</string>
+    <string name="share_safe_title">No warning signs found</string>
+    <string name="share_copy">Copy website name</string>
+    <string name="share_copied">Website name copied</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard checked only the first %d link.</item>
+        <item quantity="other">LinkGuard checked only the first %d links.</item>
+    </plurals>
+    <string name="home_share_tip">Not sure about a message? Share it to LinkGuard: tap Share, then Check with LinkGuard.</string>
 </resources>

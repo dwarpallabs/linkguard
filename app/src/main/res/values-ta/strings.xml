@@ -113,4 +113,23 @@
     <string name="scam_check_yes">ஆம், அது மோசடி</string>
     <string name="scam_check_no">இல்லை, அது சரியாக இருந்தது</string>
     <string name="scam_check_unsure">உறுதியாகத் தெரியவில்லை</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard மூலம் சரிபார்</string>
+    <string name="share_checking">இணைப்புகள் சரிபார்க்கப்படுகின்றன…</string>
+    <string name="share_no_links">இணைப்பு எதுவும் இல்லை. LinkGuard இணைப்புகளை மட்டுமே சரிபார்க்கும்.</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard %d இணைப்பைச் சரிபார்த்தது</item>
+        <item quantity="other">LinkGuard %d இணைப்புகளைச் சரிபார்த்தது</item>
+    </plurals>
+    <string name="share_private">உங்கள் செய்தி உங்கள் ஃபோனிலேயே இருக்கும். அதிலுள்ள இணைப்புகள் மட்டுமே சரிபார்க்கப்பட்டன.</string>
+    <string name="share_safe_title">எச்சரிக்கை அறிகுறி எதுவும் இல்லை</string>
+    <string name="share_copy">இணையதளப் பெயரை நகலெடு</string>
+    <string name="share_copied">இணையதளப் பெயர் நகலெடுக்கப்பட்டது</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard முதல் %d இணைப்பை மட்டுமே சரிபார்த்தது.</item>
+        <item quantity="other">LinkGuard முதல் %d இணைப்புகளை மட்டுமே சரிபார்த்தது.</item>
+    </plurals>
+    <string name="home_share_tip">ஒரு செய்தியில் சந்தேகமா? அதை LinkGuard-க்குப் பகிருங்கள்: பகிர் என்பதைத் தட்டி, LinkGuard மூலம் சரிபார் என்பதைத் தேர்ந்தெடுங்கள்.</string>
 </resources>

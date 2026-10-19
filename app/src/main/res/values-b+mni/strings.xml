@@ -116,4 +116,23 @@
     <string name="scam_check_yes">ꯍꯣꯌ, ꯃꯤꯅꯝꯕ ꯑꯣꯏꯔꯝꯃꯤ</string>
     <string name="scam_check_no">ꯅꯠꯇꯦ, ꯐꯔꯝꯃꯤ</string>
     <string name="scam_check_unsure">ꯁꯣꯏꯗꯅ ꯈꯉꯗꯦ</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">LinkGuard ꯅ ꯌꯦꯡꯁꯤꯟꯕꯤꯌꯨ</string>
+    <string name="share_checking">ꯂꯤꯡꯛꯁꯤꯡ ꯌꯦꯡꯁꯤꯜꯂꯤ…</string>
+    <string name="share_no_links">ꯂꯤꯡꯛ ꯑꯃꯠꯇ ꯐꯪꯗꯦ꯫ LinkGuard ꯅ ꯂꯤꯡꯛ ꯈꯛꯇꯃꯛ ꯌꯦꯡꯁꯤꯟꯕ ꯉꯝꯃꯤ꯫</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard ꯅ ꯂꯤꯡꯛ %d ꯌꯦꯡꯁꯤꯟꯈ꯭ꯔꯦ</item>
+        <item quantity="other">LinkGuard ꯅ ꯂꯤꯡꯛ %d ꯌꯦꯡꯁꯤꯟꯈ꯭ꯔꯦ</item>
+    </plurals>
+    <string name="share_private">ꯅꯍꯥꯛꯀꯤ ꯃꯦꯁꯦꯖ ꯑꯗꯨ ꯅꯍꯥꯛꯀꯤ ꯐꯣꯟꯗꯃꯛ ꯂꯩꯔꯤ꯫ ꯃꯗꯨꯗ ꯌꯥꯎꯔꯤꯕ ꯂꯤꯡꯛꯁꯤꯡ ꯈꯛꯇꯃꯛ ꯌꯦꯡꯁꯤꯟꯈꯤ꯫</string>
+    <string name="share_safe_title">ꯆꯦꯛꯁꯤꯟ ꯋꯥꯒꯤ ꯈꯨꯗꯝ ꯑꯃꯠꯇ ꯐꯪꯗꯦ</string>
+    <string name="share_copy">ꯋꯦꯕꯁꯥꯏꯠꯀꯤ ꯃꯤꯡ ꯀꯣꯄꯤ ꯇꯧꯕꯤꯌꯨ</string>
+    <string name="share_copied">ꯋꯦꯕꯁꯥꯏꯠꯀꯤ ꯃꯤꯡ ꯀꯣꯄꯤ ꯇꯧꯔꯦ</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard ꯅ ꯑꯍꯥꯅꯕ ꯂꯤꯡꯛ %d ꯈꯛꯇꯃꯛ ꯌꯦꯡꯁꯤꯟꯈꯤ꯫</item>
+        <item quantity="other">LinkGuard ꯅ ꯑꯍꯥꯅꯕ ꯂꯤꯡꯛ %d ꯈꯛꯇꯃꯛ ꯌꯦꯡꯁꯤꯟꯈꯤ꯫</item>
+    </plurals>
+    <string name="home_share_tip">ꯃꯦꯁꯦꯖ ꯑꯃꯗ ꯊꯥꯖꯕ ꯂꯩꯇꯕꯔꯥ? ꯃꯗꯨ LinkGuard ꯗ ꯁꯦꯌꯔ ꯇꯧꯕꯤꯌꯨ: ꯁꯦꯌꯔ ꯇꯦꯞ ꯇꯧꯗꯨꯅ LinkGuard ꯅ ꯌꯦꯡꯁꯤꯟꯕꯤꯌꯨ ꯈꯅꯕꯤꯌꯨ꯫</string>
 </resources>
