@@ -9,7 +9,7 @@
     <string name="flow_link">ଆପଣଙ୍କ ଲିଙ୍କ</string>
     <string name="flow_check">LinkGuard ଯାଞ୍ଚ କରେ</string>
     <string name="not_a_browser_title">LinkGuard ବ୍ରାଉଜର ନୁହେଁ</string>
-    <string name="not_a_browser_body">LinkGuard କେବେ ବି ୱେବ୍ ପେଜ୍ ଦେଖାଏ ନାହିଁ। ଏହା ପ୍ରତ୍ୟେକ ଲିଙ୍କକୁ ଆଖିପିଛୁଳାକେ ଯାଞ୍ଚ କରେ, ତା’ପରେ %1$sରେ ଖୋଲେ, ଯେଉଁ ବ୍ରାଉଜର ଆପଣ ଆଗରୁ ବ୍ୟବହାର କରୁଛନ୍ତି। ଆପଣଙ୍କ ବୁକମାର୍କ, ହିଷ୍ଟ୍ରି, ସେଭ୍ କରିଥିବା ପାସୱାର୍ଡ ଓ ଟାବ୍ ଠିକ୍ ଆଗଭଳି ରହିବ।</string>
+    <string name="not_a_browser_body">LinkGuard ବ୍ରାଉଜିଂ ପାଇଁ ନୁହେଁ। ଏହା ପ୍ରତ୍ୟେକ ଲିଙ୍କକୁ ଆଖିପିଛୁଳାକେ ଯାଞ୍ଚ କରେ, ତା’ପରେ %1$sରେ ଖୋଲେ, ଯେଉଁ ବ୍ରାଉଜର ଆପଣ ଆଗରୁ ବ୍ୟବହାର କରୁଛନ୍ତି। ଆପଣଙ୍କ ବୁକମାର୍କ, ହିଷ୍ଟ୍ରି, ସେଭ୍ କରିଥିବା ପାସୱାର୍ଡ ଓ ଟାବ୍ ଠିକ୍ ଆଗଭଳି ରହିବ।</string>
     <string name="default_explain">Android LinkGuardକୁ ଆପଣଙ୍କ “ବ୍ରାଉଜର ଆପ୍” ବୋଲି କହିବ। ଏହା କେବଳ ଏଇଥିପାଇଁ, ଯାହାଦ୍ୱାରା LinkGuard ଲିଙ୍କଗୁଡ଼ିକୁ ଆଗରୁ ଦେଖିପାରିବ। ପ୍ରତ୍ୟେକ ଲିଙ୍କ ତଥାପି %1$sରେ ହିଁ ଖୋଲିବ।</string>
 
     <string name="default_heading">ପଦକ୍ଷେପ ୧: LinkGuardକୁ ଆପଣଙ୍କ ଡିଫଲ୍ଟ ବ୍ରାଉଜର କରନ୍ତୁ</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">କାହିଁକି ଦରକାର</string>
     <string name="how_why_body">WhatsApp ଓ SMSର ଠକେଇ ମେସେଜରେ ଅନେକ ସମୟରେ ଅସଲି ଭଳି ଦେଖାଯାଉଥିବା ଲିଙ୍କ ଥାଏ: ନକଲି ବ୍ୟାଙ୍କ ପେଜ୍, “KYC ଅପଡେଟ୍” ଫର୍ମ, କିମ୍ବା ଟଙ୍କା ଚୋରି କରୁଥିବା ଆପ୍। ଥରେ ଟାପ୍ କଲେ ହିଁ କ୍ଷତି ହୋଇପାରେ, ଆଉ ନକଲି ୱେବ୍ ଠିକଣା ଚିହ୍ନିବା କଷ୍ଟକର ହୋଇପାରେ।</string>
     <string name="how_where_title">LinkGuard କେଉଁଠି ରହେ</string>
-    <string name="how_where_body">ଆପଣ ଟାପ୍ କରୁଥିବା ଲିଙ୍କ ଓ ଆପଣଙ୍କ ବ୍ରାଉଜର ମଝିରେ LinkGuard ରହେ। ଏହା ଆଖିପିଛୁଳାକେ ଲିଙ୍କ ଯାଞ୍ଚ କରେ, ତା’ପରେ %1$sରେ ଖୋଲେ। ଏହା ନିଜେ କେବେ ବି ୱେବ୍ ପେଜ୍ ଦେଖାଏ ନାହିଁ।</string>
+    <string name="how_where_body">ଆପଣ ଟାପ୍ କରୁଥିବା ଲିଙ୍କ ଓ ଆପଣଙ୍କ ବ୍ରାଉଜର ମଝିରେ LinkGuard ରହେ। ଏହା ଆଖିପିଛୁଳାକେ ଲିଙ୍କ ଯାଞ୍ଚ କରେ, ତା’ପରେ %1$sରେ ଖୋଲେ। ଏହା ବ୍ରାଉଜିଂ ପାଇଁ ନୁହେଁ।</string>
     <string name="how_safe_title">ସୁରକ୍ଷିତ ଲିଙ୍କ ସିଧା ଖୋଲିଯାଏ</string>
     <string name="how_safe_body">ଜଣାଶୁଣା ୱେବସାଇଟ୍ ଓ ସରକାରୀ (.gov.in) ଏବଂ ବ୍ୟାଙ୍କ ଭଳି ଅଫିସିଆଲ୍ ୱେବସାଇଟ୍ ସଙ୍ଗେ ସଙ୍ଗେ ଖୋଲିଯାଏ। ଲିଙ୍କ ଠିକ୍ ଲାଗିଲେ ଆପଣ କିଛି ବି ଦେଖିବେ ନାହିଁ।</string>
     <string name="how_scam_title">ଠକେଇ ଲିଙ୍କ ଚିହ୍ନିବା</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">ଶୁଣନ୍ତୁ</string>
     <string name="listen_stop">ବନ୍ଦ କରନ୍ତୁ</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">ନ ଖୋଲି ଦେଖନ୍ତୁ</string>
+    <string name="look_hint">କେବଳ ଏହି ଗୋଟିଏ ପେଜକୁ ଲକ୍ ହୋଇଥିବା ସ୍କ୍ରିନରେ ଦେଖାଏ। ଆପଣ ଯାହା ବି ଟାଇପ୍ କରିବେ ତାହା ପଠାଯାଇପାରିବ ନାହିଁ, ଆଉ ଏକ ମିନିଟ୍ ପରେ ଏହା ବନ୍ଦ ହୋଇଯାଏ।</string>
+    <string name="look_banner">ସୁରକ୍ଷିତ ଭାବେ ଦେଖୁଛନ୍ତି। ଏଠାରେ ଆପଣ ଯାହା ବି ଟାଇପ୍ କରନ୍ତି ତାହା ପଠାଯାଏ ନାହିଁ।</string>
+    <string name="look_blocked">LinkGuard ଏହି ପେଜକୁ ଅନ୍ୟ କିଛି ଖୋଲିବାରୁ ରୋକିଦେଲା।</string>
+    <string name="look_failed">ପେଜ୍ ଦେଖାଯାଇପାରିଲା ନାହିଁ। ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଦେଖି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
 </resources>

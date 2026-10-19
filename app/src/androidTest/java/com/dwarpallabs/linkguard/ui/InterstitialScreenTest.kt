@@ -103,6 +103,29 @@ class InterstitialScreenTest {
     }
 
     @Test
+    fun lookOnlyOnSoftWebWarnings() {
+        var looks = 0
+        val soft = InterstitialModel(false, "lg-fresh-store.com", "lg-fresh-store.com", Reason.DomainAge(3))
+        compose.setContent { LinkguardTheme { InterstitialScreen(soft, {}, {}, onLook = { looks++ }) } }
+        compose.onNodeWithTag("look").performScrollTo().assertTextContains(res.getString(R.string.look_button)).performClick()
+        compose.onNodeWithText(res.getString(R.string.look_hint)).assertIsDisplayed()
+        assertEquals(1, looks)
+    }
+
+    @Test
+    fun noLookOnStrongWarnings() {
+        compose.setContent { LinkguardTheme { InterstitialScreen(brand, {}, {}, onLook = {}) } }
+        compose.onNodeWithTag("look").assertDoesNotExist()
+    }
+
+    @Test
+    fun noLookOnUpiRequests() {
+        val upi = InterstitialModel(false, null, null, Reason.Upi("Shop", "shop@ybl", "10"))
+        compose.setContent { LinkguardTheme { InterstitialScreen(upi, {}, {}, onLook = {}) } }
+        compose.onNodeWithTag("look").assertDoesNotExist()
+    }
+
+    @Test
     fun smsLineOnlyWhenTheLinkCameBySms() {
         compose.setContent { LinkguardTheme { InterstitialScreen(brand, {}, {}, fromSms = true) } }
         compose.onNodeWithTag("context_sms").assertTextContains(res.getString(R.string.warn_context_sms))

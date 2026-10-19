@@ -90,6 +90,7 @@ class LinkInterceptActivity : ComponentActivity() {
                         onCheckApk = { viewModel.checkApk(s.verdict) },
                         onStopApk = viewModel::stopApkCheck,
                         speaker = rememberWarningSpeaker(),
+                        onLook = { look(s.verdict) },
 
                     )
                 }
@@ -114,7 +115,14 @@ class LinkInterceptActivity : ComponentActivity() {
         return true
     }
 
+    /** "Look without opening": the page in SafeViewActivity's locked, separate-process view. */
+    private fun look(verdict: Verdict) {
+        val raw = intent?.data?.toString() ?: return
+        startActivity(SafeViewActivity.intent(this, InterceptViewModel.forwardUrl(raw, verdict), raw))
+    }
+
     private fun openAnyway(verdict: Verdict) {
+
         // The website's name only, so the next app open can ask whether it was a scam.
         viewModel.rememberOpenedAnyway(verdict)
         val url = verdict.finalUrl

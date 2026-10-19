@@ -9,7 +9,7 @@
     <string name="flow_link">तपाईंको लिंक</string>
     <string name="flow_check">LinkGuard ले जाँच गर्छ</string>
     <string name="not_a_browser_title">LinkGuard ब्राउजर होइन</string>
-    <string name="not_a_browser_body">LinkGuard ले कहिल्यै वेब पेज देखाउँदैन। यसले हरेक लिंक एकै छिनमा जाँच्छ र त्यसपछि %1$s मा खोल्छ, जुन ब्राउजर तपाईं पहिलेदेखि नै चलाउनुहुन्छ। तपाईंका बुकमार्क, हिस्ट्री, सेभ गरिएका पासवर्ड र ट्याबहरू जस्ताको तस्तै रहन्छन्।</string>
+    <string name="not_a_browser_body">LinkGuard ब्राउजरजस्तो चलाउनका लागि होइन। यसले हरेक लिंक एकै छिनमा जाँच्छ र त्यसपछि %1$s मा खोल्छ, जुन ब्राउजर तपाईं पहिलेदेखि नै चलाउनुहुन्छ। तपाईंका बुकमार्क, हिस्ट्री, सेभ गरिएका पासवर्ड र ट्याबहरू जस्ताको तस्तै रहन्छन्।</string>
     <string name="default_explain">Android ले LinkGuard लाई तपाईंको “ब्राउजर एप” भन्नेछ। यो LinkGuard ले लिंक पहिले देख्न सकोस् भनेर मात्र हो। हरेक लिंक अझै पनि %1$s मै खुल्छ।</string>
 
     <string name="default_heading">चरण 1: LinkGuard लाई आफ्नो डिफल्ट ब्राउजर बनाउनुहोस्</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">यो किन चाहिन्छ</string>
     <string name="how_why_body">WhatsApp र SMS मा आउने ठगी सन्देशमा प्रायः साँचोजस्तै देखिने लिंक हुन्छन्: नक्कली बैंक पेज, “KYC अपडेट” फारम वा पैसा चोर्ने एप। हानि हुन एक पटक थिच्नु नै काफी छ, र नक्कली वेब ठेगाना चिन्न गाह्रो हुन सक्छ।</string>
     <string name="how_where_title">LinkGuard कहाँ बस्छ</string>
-    <string name="how_where_body">LinkGuard तपाईंले थिचेको लिंक र तपाईंको ब्राउजरको बीचमा बस्छ। यसले एकै छिनमा लिंक जाँच्छ, अनि %1$s मा खोल्छ। यसले आफैं कहिल्यै वेब पेज देखाउँदैन।</string>
+    <string name="how_where_body">LinkGuard तपाईंले थिचेको लिंक र तपाईंको ब्राउजरको बीचमा बस्छ। यसले एकै छिनमा लिंक जाँच्छ, अनि %1$s मा खोल्छ। यो ब्राउजरजस्तो चलाउनका लागि होइन।</string>
     <string name="how_safe_title">सुरक्षित लिंक तुरुन्तै खुल्छन्</string>
     <string name="how_safe_body">धेरैले चिनेका र आधिकारिक वेबसाइट, जस्तै सरकारी (.gov.in) र बैंकका वेबसाइट, तुरुन्तै खुल्छन्। लिंक ठीक देखियो भने तपाईंले केही पनि देख्नुहुन्न।</string>
     <string name="how_scam_title">ठगी लिंक चिन्ने</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">सुन्नुहोस्</string>
     <string name="listen_stop">रोक्नुहोस्</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">नखोली हेर्नुहोस्</string>
+    <string name="look_hint">यसले यो एउटा पेज मात्र लक गरिएको रूपमा देखाउँछ। तपाईंले टाइप गरेको केही पनि पठाउन सकिँदैन, र यो एक मिनेटपछि बन्द हुन्छ।</string>
+    <string name="look_banner">तपाईं सुरक्षित रूपमा हेर्दै हुनुहुन्छ। तपाईंले यहाँ टाइप गरेको केही पनि पठाइँदैन।</string>
+    <string name="look_blocked">LinkGuard ले यो पेजलाई अरू केही खोल्नबाट रोक्यो।</string>
+    <string name="look_failed">पेज देखाउन सकिएन। इन्टरनेट जडान जाँच्नुहोस् र फेरि प्रयास गर्नुहोस्।</string>
 </resources>

@@ -8,7 +8,7 @@
     <string name="flow_link">Tu enlace</string>
     <string name="flow_check">LinkGuard lo revisa</string>
     <string name="not_a_browser_title">LinkGuard no es un navegador</string>
-    <string name="not_a_browser_body">LinkGuard nunca muestra páginas web. Revisa cada enlace en un instante y luego lo abre en %1$s, el navegador que ya usas. Tus marcadores, tu historial, tus contraseñas guardadas y tus pestañas se quedan tal como están.</string>
+    <string name="not_a_browser_body">LinkGuard no es para navegar. Revisa cada enlace en un instante y luego lo abre en %1$s, el navegador que ya usas. Tus marcadores, tu historial, tus contraseñas guardadas y tus pestañas se quedan tal como están.</string>
     <string name="default_explain">Android dirá que LinkGuard es tu “app de navegador”. Es solo para que LinkGuard vea los enlaces primero. Todos los enlaces se siguen abriendo en %1$s.</string>
 
     <string name="default_heading">Paso 1: Haz que LinkGuard sea tu navegador predeterminado</string>
@@ -40,7 +40,7 @@
     <string name="how_why_title">Por qué hace falta</string>
     <string name="how_why_body">Los mensajes de estafa en WhatsApp y SMS suelen traer enlaces que parecen reales: una página falsa de un banco, un formulario de “actualización de KYC” o una app que roba dinero. Basta un toque para causar daño, y una dirección web falsa puede ser difícil de notar.</string>
     <string name="how_where_title">Dónde está LinkGuard</string>
-    <string name="how_where_body">LinkGuard está entre el enlace que tocas y tu navegador. Revisa el enlace en un instante y luego lo abre en %1$s. Nunca muestra páginas web por sí mismo.</string>
+    <string name="how_where_body">LinkGuard está entre el enlace que tocas y tu navegador. Revisa el enlace en un instante y luego lo abre en %1$s. No es para navegar.</string>
     <string name="how_safe_title">Los enlaces seguros se abren enseguida</string>
     <string name="how_safe_body">Los sitios web conocidos y los oficiales, como los del gobierno (.gov.in) y los de bancos, se abren de inmediato. Si un enlace se ve bien, no verás nada.</string>
     <string name="how_scam_title">Cómo detecta enlaces de estafa</string>
@@ -198,4 +198,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">Escuchar</string>
     <string name="listen_stop">Detener</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">Ver sin abrir</string>
+    <string name="look_hint">Muestra solo esta página en una vista bloqueada. Nada de lo que escribas se puede enviar, y se cierra después de un minuto.</string>
+    <string name="look_banner">Estás mirando de forma segura. Nada de lo que escribas aquí se envía.</string>
+    <string name="look_blocked">LinkGuard impidió que esta página abriera otra cosa.</string>
+    <string name="look_failed">No se pudo mostrar la página. Revisa tu conexión a internet e intenta de nuevo.</string>
 </resources>

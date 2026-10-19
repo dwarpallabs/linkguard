@@ -9,7 +9,7 @@
     <string name="flow_link">अहाँक लिंक</string>
     <string name="flow_check">LinkGuard जाँच करैत अछि</string>
     <string name="not_a_browser_title">LinkGuard ब्राउजर नहि अछि</string>
-    <string name="not_a_browser_body">LinkGuard कहियो वेब पेज नहि देखबैत अछि। ई सभ लिंकक जाँच पल भरि मे करैत अछि आ तखन ओकरा %1$s मे खोलैत अछि, वएह ब्राउजर जे अहाँ पहिनेसँ चलबैत छी। अहाँक बुकमार्क, हिस्ट्री, सेव कएल पासवर्ड आ टैब सभ जहिना अछि तहिना रहत।</string>
+    <string name="not_a_browser_body">LinkGuard ब्राउजर जकाँ चलेबाक लेल नहि अछि। ई सभ लिंकक जाँच पल भरि मे करैत अछि आ तखन ओकरा %1$s मे खोलैत अछि, वएह ब्राउजर जे अहाँ पहिनेसँ चलबैत छी। अहाँक बुकमार्क, हिस्ट्री, सेव कएल पासवर्ड आ टैब सभ जहिना अछि तहिना रहत।</string>
     <string name="default_explain">Android, LinkGuard केँ अहाँक “ब्राउजर ऐप” कहत। ई मात्र एहि लेल जे LinkGuard लिंक केँ पहिने देखि सकय। सभ लिंक तैयो %1$s मे खुजत।</string>
 
     <string name="default_heading">चरण 1: LinkGuard केँ अपन डिफॉल्ट ब्राउजर बनाउ</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">एकर जरूरति किएक</string>
     <string name="how_why_body">WhatsApp आ SMS पर ठकी बला मैसेज मे प्रायः एहन लिंक रहैत अछि जे असली बुझाइत अछि: नकली बैंक पेज, “KYC अपडेट” फॉर्म वा पाइ चोराबऽ बला ऐप। नोकसान लेल एकटा टैप बहुत अछि, आ नकली वेब पता चिन्हब कठिन भऽ सकैत अछि।</string>
     <string name="how_where_title">LinkGuard कतऽ रहैत अछि</string>
-    <string name="how_where_body">LinkGuard अहाँक टैप कएल लिंक आ अहाँक ब्राउजरक बीच मे रहैत अछि। ई पल भरि मे लिंकक जाँच करैत अछि, तखन ओकरा %1$s मे खोलैत अछि। ई अपने कहियो वेब पेज नहि देखबैत अछि।</string>
+    <string name="how_where_body">LinkGuard अहाँक टैप कएल लिंक आ अहाँक ब्राउजरक बीच मे रहैत अछि। ई पल भरि मे लिंकक जाँच करैत अछि, तखन ओकरा %1$s मे खोलैत अछि। ई ब्राउजर जकाँ चलेबाक लेल नहि अछि।</string>
     <string name="how_safe_title">सुरक्षित लिंक तुरंत खुजैत अछि</string>
     <string name="how_safe_body">नामी वेबसाइट आ आधिकारिक वेबसाइट, जेना सरकारी (.gov.in) आ बैंकक वेबसाइट, तुरंत खुजि जाइत अछि। जँ लिंक ठीक बुझाइत अछि, तँ अहाँकेँ किछुओ नहि देखाइत अछि।</string>
     <string name="how_scam_title">ठकी बला लिंक चिन्हब</string>
@@ -191,4 +191,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">सुनू</string>
     <string name="listen_stop">रोकू</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">बिना खोलने देखू</string>
+    <string name="look_hint">ई मात्र एहि एकटा पेज केँ लॉक कएल रूप मे देखबैत अछि। अहाँ जे किछु टाइप करब से पठाओल नहि जा सकैत अछि, आ ई एक मिनट बाद बंद भऽ जाइत अछि।</string>
+    <string name="look_banner">अहाँ सुरक्षित रूपसँ देखि रहल छी। अहाँ एतय जे किछु टाइप करब से नहि पठाओल जाइत अछि।</string>
+    <string name="look_blocked">LinkGuard एहि पेज केँ आन किछु खोलबासँ रोकि देलक।</string>
+    <string name="look_failed">पेज नहि देखाओल जा सकल। अपन इंटरनेट कनेक्शन जाँचू आ फेर कोशिश करू।</string>
 </resources>

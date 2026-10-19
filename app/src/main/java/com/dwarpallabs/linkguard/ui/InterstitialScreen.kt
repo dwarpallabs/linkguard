@@ -73,6 +73,8 @@ fun InterstitialScreen(
     onStopApk: () -> Unit = {},
     /** "Listen" (roadmap B4): null hides it (TalkBack on, or no on-device voice for the language). */
     speaker: WarningSpeaker? = null,
+    /** "Look without opening" (roadmap B5); offered on soft warnings about a web page only. */
+    onLook: (() -> Unit)? = null,
 ) {
     val status = LinkguardTheme.status
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -135,7 +137,20 @@ fun InterstitialScreen(
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 PrimaryButton(stringResource(R.string.interstitial_go_back), onGoBack, Modifier.testTag("go_back"))
                 SecondaryButton(stringResource(R.string.interstitial_open_anyway), onOpenAnyway, Modifier.testTag("open_anyway"))
+                if (onLook != null && !model.strong && model.host != null && model.reason !is Reason.Upi && model.reason != Reason.ApkDownload) {
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        TextButton(stringResource(R.string.look_button), onLook, Modifier.testTag("look"))
+                        Text(
+                            stringResource(R.string.look_hint),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
+                }
                 ReportBlock(report, onReport)
+
             }
         }
     }

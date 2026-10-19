@@ -9,7 +9,7 @@
     <string name="flow_link">Seu link</string>
     <string name="flow_check">O LinkGuard verifica</string>
     <string name="not_a_browser_title">O LinkGuard não é um navegador</string>
-    <string name="not_a_browser_body">O LinkGuard nunca mostra páginas da internet. Ele verifica cada link num instante e depois abre o link no %1$s, o navegador que você já usa. Seus favoritos, histórico, senhas salvas e abas continuam do jeito que estão.</string>
+    <string name="not_a_browser_body">O LinkGuard não é para navegar na internet. Ele verifica cada link num instante e depois abre o link no %1$s, o navegador que você já usa. Seus favoritos, histórico, senhas salvas e abas continuam do jeito que estão.</string>
     <string name="default_explain">O Android vai chamar o LinkGuard de “app de navegador”. Isso é só para o LinkGuard ver os links primeiro. Todo link continua abrindo no %1$s.</string>
 
     <string name="default_heading">Passo 1: Deixe o LinkGuard como navegador padrão</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">Por que ele é importante</string>
     <string name="how_why_body">Mensagens de golpe no WhatsApp e no SMS muitas vezes trazem links que parecem de verdade: uma página falsa de banco, um formulário de “atualização do KYC” ou um app que rouba dinheiro. Um toque já basta para causar estrago. E um endereço de site falso pode ser difícil de perceber.</string>
     <string name="how_where_title">Onde o LinkGuard fica</string>
-    <string name="how_where_body">O LinkGuard fica entre o link que você toca e o seu navegador. Ele verifica o link num instante e depois abre no %1$s. Ele mesmo nunca mostra páginas da internet.</string>
+    <string name="how_where_body">O LinkGuard fica entre o link que você toca e o seu navegador. Ele verifica o link num instante e depois abre no %1$s. Ele não é para navegar na internet.</string>
     <string name="how_safe_title">Links seguros abrem na hora</string>
     <string name="how_safe_body">Sites muito conhecidos e sites oficiais, como os do governo (.gov.in) e de bancos, abrem na hora. Se um link parece normal, você não vê nada.</string>
     <string name="how_scam_title">Como achar links de golpe</string>
@@ -199,4 +199,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">Ouvir</string>
     <string name="listen_stop">Parar</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">Ver sem abrir</string>
+    <string name="look_hint">Mostra só esta página numa visualização trancada. Nada do que você digitar pode ser enviado, e ela fecha depois de um minuto.</string>
+    <string name="look_banner">Você está olhando com segurança. Nada do que você digitar aqui é enviado.</string>
+    <string name="look_blocked">O LinkGuard impediu que esta página abrisse outra coisa.</string>
+    <string name="look_failed">Não foi possível mostrar a página. Veja se a sua internet está funcionando e tente de novo.</string>
 </resources>

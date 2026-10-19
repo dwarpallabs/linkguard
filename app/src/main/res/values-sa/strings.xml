@@ -10,7 +10,7 @@
     <string name="flow_link">भवतः लिङ्कः</string>
     <string name="flow_check">LinkGuard तं परीक्षते</string>
     <string name="not_a_browser_title">LinkGuard ब्राउज़र् न अस्ति</string>
-    <string name="not_a_browser_body">LinkGuard कदापि जालपृष्ठं न दर्शयति। एतत् प्रत्येकं लिङ्कं क्षणमात्रेण परीक्ष्य ततः %1$s इत्यस्मिन् उद्घाटयति, यं ब्राउज़र् भवान् पूर्वमेव उपयुङ्क्ते। भवतः बुकमार्क्, इतिहासः, रक्षिताः पासवर्ड्, टैब् च यथावत् तिष्ठन्ति।</string>
+    <string name="not_a_browser_body">LinkGuard ब्राउज़र्-वत् उपयोगाय नास्ति। एतत् प्रत्येकं लिङ्कं क्षणमात्रेण परीक्ष्य ततः %1$s इत्यस्मिन् उद्घाटयति, यं ब्राउज़र् भवान् पूर्वमेव उपयुङ्क्ते। भवतः बुकमार्क्, इतिहासः, रक्षिताः पासवर्ड्, टैब् च यथावत् तिष्ठन्ति।</string>
     <string name="default_explain">Android, LinkGuard भवतः “ब्राउज़र्-ऐप्” इति वदिष्यति। एतत् केवलं LinkGuard प्रथमं लिङ्कान् पश्येत् इति हेतोः। प्रत्येकः लिङ्कः तथापि %1$s इत्यस्मिन् एव उद्घाट्यते।</string>
 
     <string name="default_heading">सोपानम् 1: LinkGuard भवतः मूलब्राउज़र् (डिफ़ॉल्ट्) करोतु</string>
@@ -42,7 +42,7 @@
     <string name="how_why_title">किमर्थम् आवश्यकम्</string>
     <string name="how_why_body">WhatsApp, SMS च इत्यत्र वञ्चनासन्देशेषु प्रायः सत्यसदृशाः लिङ्काः भवन्ति: कृत्रिमं बैंक्-पृष्ठम्, “KYC अपडेट्” पत्रम्, धनं चोरयत् ऐप् वा। हानये एकः स्पर्शः पर्याप्तः, कृत्रिमः जालसङ्केतः च दुर्ज्ञेयः भवितुम् अर्हति।</string>
     <string name="how_where_title">LinkGuard कुत्र तिष्ठति</string>
-    <string name="how_where_body">भवता स्पृष्टस्य लिङ्कस्य भवतः ब्राउज़र् इत्यस्य च मध्ये LinkGuard तिष्ठति। एतत् क्षणमात्रेण लिङ्कं परीक्ष्य ततः %1$s इत्यस्मिन् उद्घाटयति। एतत् स्वयं कदापि जालपृष्ठं न दर्शयति।</string>
+    <string name="how_where_body">भवता स्पृष्टस्य लिङ्कस्य भवतः ब्राउज़र् इत्यस्य च मध्ये LinkGuard तिष्ठति। एतत् क्षणमात्रेण लिङ्कं परीक्ष्य ततः %1$s इत्यस्मिन् उद्घाटयति। एतत् ब्राउज़र्-वत् उपयोगाय नास्ति।</string>
     <string name="how_safe_title">सुरक्षिताः लिङ्काः सद्यः उद्घाट्यन्ते</string>
     <string name="how_safe_body">प्रसिद्धानि आधिकारिकाणि च जालस्थानानि, यथा सर्वकारस्य (.gov.in) बैंकानां च जालस्थानानि, सद्यः उद्घाट्यन्ते। यदि लिङ्कः समीचीनः दृश्यते, तर्हि भवान् किमपि न पश्यति।</string>
     <string name="how_scam_title">वञ्चनालिङ्कानां परिचयः</string>
@@ -192,4 +192,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">शृणोतु</string>
     <string name="listen_stop">विरमतु</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">अनुद्घाट्य पश्यतु</string>
+    <string name="look_hint">एतत् इदम् एकमेव जालपृष्ठं पिहितरूपेण दर्शयति। भवता लिखितं किमपि प्रेषयितुं न शक्यते, एकनिमेषानन्तरं च एतत् पिधीयते।</string>
+    <string name="look_banner">भवान् सुरक्षितरूपेण पश्यति। अत्र भवता लिखितं किमपि न प्रेष्यते।</string>
+    <string name="look_blocked">LinkGuard अनेन जालपृष्ठेन अन्यस्य कस्यचित् उद्घाटनं न्यवारयत्।</string>
+    <string name="look_failed">जालपृष्ठं दर्शयितुं न शक्तम्। अन्तर्जालसम्पर्कं परीक्ष्य पुनः प्रयतताम्।</string>
 </resources>

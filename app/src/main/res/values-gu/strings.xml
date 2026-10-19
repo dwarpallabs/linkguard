@@ -10,7 +10,7 @@
     <string name="flow_link">તમારી લિંક</string>
     <string name="flow_check">LinkGuard તેને તપાસે છે</string>
     <string name="not_a_browser_title">LinkGuard બ્રાઉઝર નથી</string>
-    <string name="not_a_browser_body">LinkGuard ક્યારેય વેબ પેજ બતાવતું નથી. તે દરેક લિંકને પળવારમાં તપાસે છે અને પછી તેને %1$s માં ખોલે છે, એટલે કે તમે પહેલેથી વાપરો છો તે જ બ્રાઉઝર. તમારા બુકમાર્ક, હિસ્ટ્રી, સાચવેલા પાસવર્ડ અને ટૅબ જેમ છે તેમ જ રહે છે.</string>
+    <string name="not_a_browser_body">LinkGuard બ્રાઉઝિંગ માટે નથી. તે દરેક લિંકને પળવારમાં તપાસે છે અને પછી તેને %1$s માં ખોલે છે, એટલે કે તમે પહેલેથી વાપરો છો તે જ બ્રાઉઝર. તમારા બુકમાર્ક, હિસ્ટ્રી, સાચવેલા પાસવર્ડ અને ટૅબ જેમ છે તેમ જ રહે છે.</string>
     <string name="default_explain">Android, LinkGuard ને તમારું “બ્રાઉઝર ઍપ” કહેશે. એવું ફક્ત એટલા માટે કે LinkGuard લિંકને પહેલાં જોઈ શકે. દરેક લિંક તો પણ %1$s માં જ ખૂલશે.</string>
 
     <string name="default_heading">પગલું 1: LinkGuard ને તમારું ડિફૉલ્ટ બ્રાઉઝર બનાવો</string>
@@ -42,7 +42,7 @@
     <string name="how_why_title">તેની જરૂર કેમ છે</string>
     <string name="how_why_body">WhatsApp અને SMS પરના છેતરપિંડીવાળા મેસેજમાં ઘણી વાર સાચી લાગે એવી લિંક હોય છે: નકલી બૅન્ક પેજ, “KYC અપડેટ” ફૉર્મ કે પૈસા ચોરતી ઍપ. નુકસાન થવા માટે એક ટૅપ પૂરતો છે, અને નકલી વેબ સરનામું ઓળખવું અઘરું હોઈ શકે.</string>
     <string name="how_where_title">LinkGuard ક્યાં હોય છે</string>
-    <string name="how_where_body">તમે ટૅપ કરેલી લિંક અને તમારા બ્રાઉઝરની વચ્ચે LinkGuard હોય છે. તે પળવારમાં લિંક તપાસે છે, પછી તેને %1$s માં ખોલે છે. તે પોતે ક્યારેય વેબ પેજ બતાવતું નથી.</string>
+    <string name="how_where_body">તમે ટૅપ કરેલી લિંક અને તમારા બ્રાઉઝરની વચ્ચે LinkGuard હોય છે. તે પળવારમાં લિંક તપાસે છે, પછી તેને %1$s માં ખોલે છે. તે બ્રાઉઝિંગ માટે નથી.</string>
     <string name="how_safe_title">સલામત લિંક તરત ખૂલે છે</string>
     <string name="how_safe_body">જાણીતી અને સત્તાવાર વેબસાઇટ, જેમ કે સરકારી (.gov.in) અને બૅન્કની વેબસાઇટ, તરત ખૂલી જાય છે. લિંક બરાબર લાગે, તો તમને કંઈ જ દેખાતું નથી.</string>
     <string name="how_scam_title">છેતરપિંડીવાળી લિંક ઓળખવી</string>
@@ -194,4 +194,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">સાંભળો</string>
     <string name="listen_stop">રોકો</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">ખોલ્યા વગર જુઓ</string>
+    <string name="look_hint">ફક્ત આ એક પેજને લૉક કરેલી સ્ક્રીનમાં બતાવે છે. તમે જે કંઈ ટાઇપ કરો તે મોકલી શકાતું નથી, અને એક મિનિટ પછી તે બંધ થઈ જાય છે.</string>
+    <string name="look_banner">સલામત રીતે જોઈ રહ્યા છો. અહીં તમે જે કંઈ ટાઇપ કરો તે મોકલાતું નથી.</string>
+    <string name="look_blocked">LinkGuard એ આ પેજને બીજું કંઈ ખોલતા રોક્યું.</string>
+    <string name="look_failed">પેજ બતાવી ન શકાયું. તમારું ઇન્ટરનેટ કનેક્શન તપાસો અને ફરી પ્રયાસ કરો.</string>
 </resources>

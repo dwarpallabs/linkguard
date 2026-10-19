@@ -9,7 +9,7 @@
     <string name="flow_link">توهان جي لنڪ</string>
     <string name="flow_check">LinkGuard چڪاس ڪري ٿو</string>
     <string name="not_a_browser_title">LinkGuard براؤزر ناهي</string>
-    <string name="not_a_browser_body">LinkGuard ڪڏهن به ويب پيج نٿو ڏيکاري. اهو هر لنڪ جي پل ۾ چڪاس ڪري ٿو ۽ پوءِ ان کي %1$s ۾ کولي ٿو، اهو ئي براؤزر جيڪو توهان اڳ ۾ ئي استعمال ڪريو ٿا. توهان جا بڪمارڪ، هسٽري، محفوظ ڪيل پاسورڊ ۽ ٽيب بلڪل ائين ئي رهن ٿا.</string>
+    <string name="not_a_browser_body">LinkGuard براؤزنگ لاءِ ناهي. اهو هر لنڪ جي پل ۾ چڪاس ڪري ٿو ۽ پوءِ ان کي %1$s ۾ کولي ٿو، اهو ئي براؤزر جيڪو توهان اڳ ۾ ئي استعمال ڪريو ٿا. توهان جا بڪمارڪ، هسٽري، محفوظ ڪيل پاسورڊ ۽ ٽيب بلڪل ائين ئي رهن ٿا.</string>
     <string name="default_explain">Android، LinkGuard کي توهان جي “براؤزر ايپ” چوندو. اهو رڳو ان ڪري آهي ته جيئن LinkGuard لنڪ کي پهريان ڏسي سگهي. هر لنڪ پوءِ به %1$s ۾ ئي کلندي.</string>
 
     <string name="default_heading">قدم 1: LinkGuard کي پنهنجو ڊيفالٽ براؤزر بڻايو</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">ان جي ضرورت ڇو آهي</string>
     <string name="how_why_body">WhatsApp ۽ SMS تي ٺڳيءَ وارن پيغامن ۾ اڪثر اهڙيون لنڪون هونديون آهن جيڪي اصلي لڳنديون آهن: جعلي بئنڪ پيج، “KYC اپڊيٽ” فارم يا پئسا چورائيندڙ ايپ. نقصان لاءِ هڪ ٽيپ ئي ڪافي آهي، ۽ جعلي ويب پتو سڃاڻڻ ڏکيو ٿي سگهي ٿو.</string>
     <string name="how_where_title">LinkGuard ڪٿي ڪم ڪري ٿو</string>
-    <string name="how_where_body">LinkGuard توهان جي ٽيپ ڪيل لنڪ ۽ توهان جي براؤزر جي وچ ۾ رهي ٿو. اهو پل ۾ لنڪ جي چڪاس ڪري ٿو، پوءِ ان کي %1$s ۾ کولي ٿو. اهو پاڻ ڪڏهن به ويب پيج نٿو ڏيکاري.</string>
+    <string name="how_where_body">LinkGuard توهان جي ٽيپ ڪيل لنڪ ۽ توهان جي براؤزر جي وچ ۾ رهي ٿو. اهو پل ۾ لنڪ جي چڪاس ڪري ٿو، پوءِ ان کي %1$s ۾ کولي ٿو. اهو براؤزنگ لاءِ ناهي.</string>
     <string name="how_safe_title">محفوظ لنڪون فوراً کلن ٿيون</string>
     <string name="how_safe_body">ڄاتل سڃاتل ۽ سرڪاري ويب سائيٽون، جهڙوڪ حڪومت (.gov.in) ۽ بئنڪن جون ويب سائيٽون، فوراً کلي وڃن ٿيون. جيڪڏهن لنڪ ٺيڪ لڳي، ته توهان کي ڪجهه به نظر نٿو اچي.</string>
     <string name="how_scam_title">ٺڳيءَ وارين لنڪن جي سڃاڻپ</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">ٻڌو</string>
     <string name="listen_stop">روڪيو</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">کولڻ کان سواءِ ڏسو</string>
+    <string name="look_hint">هي رڳو هي هڪ پيج تالو لڳل نظاري ۾ ڏيکاري ٿو. توهان جيڪو به ٽائيپ ڪريو اهو موڪلي نٿو سگهجي، ۽ هڪ منٽ کانپوءِ اهو بند ٿي وڃي ٿو.</string>
+    <string name="look_banner">حفاظت سان ڏسي رهيا آهيو. هتي توهان جيڪو به ٽائيپ ڪريو اهو نٿو موڪليو وڃي.</string>
+    <string name="look_blocked">LinkGuard هن پيج کي ڪجهه ٻيو کولڻ کان روڪي ڇڏيو.</string>
+    <string name="look_failed">پيج ڏيکاري نه سگهياسين. پنهنجو انٽرنيٽ ڪنيڪشن ڏسو ۽ ٻيهر ڪوشش ڪريو.</string>
 </resources>
