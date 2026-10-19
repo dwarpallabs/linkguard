@@ -152,4 +152,7 @@
         <item quantity="one">यह वेबसाइट धोखाधड़ी वाली वेबसाइटों के एक समूह का हिस्सा लगती है। इस हफ़्ते %d LinkGuard उपयोगकर्ता ने इनकी शिकायत की।</item>
         <item quantity="other">यह वेबसाइट धोखाधड़ी वाली वेबसाइटों के एक समूह का हिस्सा लगती है। इस हफ़्ते %d LinkGuard उपयोगकर्ताओं ने इनकी शिकायत की।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">यह लिंक SMS से आया है। अनजान लोगों के मैसेज में आए लिंक से सावधान रहें।</string>
 </resources>

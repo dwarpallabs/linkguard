@@ -163,4 +163,7 @@
         <item quantity="many">Ce site semble faire partie d’un groupe de sites d’arnaque. %d utilisateurs de LinkGuard les ont signalés cette semaine.</item>
         <item quantity="other">Ce site semble faire partie d’un groupe de sites d’arnaque. %d utilisateurs de LinkGuard les ont signalés cette semaine.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">Ce lien est arrivé par SMS. Méfiez-vous des liens dans les messages de personnes que vous ne connaissez pas.</string>
 </resources>

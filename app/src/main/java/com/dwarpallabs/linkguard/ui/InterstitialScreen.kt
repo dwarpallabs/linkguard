@@ -63,6 +63,8 @@ fun InterstitialScreen(
     onOpenAnyway: () -> Unit,
     report: ReportStatus = ReportStatus.IDLE,
     onReport: () -> Unit = {},
+    /** The link came from the phone's SMS app: one more line under the reason (roadmap B1). */
+    fromSms: Boolean = false,
 ) {
     val status = LinkguardTheme.status
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -96,9 +98,19 @@ fun InterstitialScreen(
                 modifier = Modifier.testTag("reason"),
             )
 
+            if (fromSms) {
+                Text(
+                    stringResource(R.string.warn_context_sms),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.testTag("context_sms"),
+                )
+            }
+
             if (model.reason is Reason.Upi) UpiDetails(model.reason)
 
             Spacer(Modifier.height(8.dp))
+
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 PrimaryButton(stringResource(R.string.interstitial_go_back), onGoBack, Modifier.testTag("go_back"))
                 SecondaryButton(stringResource(R.string.interstitial_open_anyway), onOpenAnyway, Modifier.testTag("open_anyway"))

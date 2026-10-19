@@ -156,4 +156,7 @@
         <item quantity="one">एतत् जालस्थानं वञ्चनाजालस्थानानां कस्यचित् समूहस्य भागः इव प्रतीयते। अस्मिन् सप्ताहे %d LinkGuard-उपयोक्ता एतेषां विषये सूचितवान्।</item>
         <item quantity="other">एतत् जालस्थानं वञ्चनाजालस्थानानां कस्यचित् समूहस्य भागः इव प्रतीयते। अस्मिन् सप्ताहे %d LinkGuard-उपयोक्तारः एतेषां विषये सूचितवन्तः।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">एषः लिङ्कः SMS द्वारा आगतः। अपरिचितजनानां सन्देशेषु आगतेभ्यः लिङ्केभ्यः सावधानः भवतु।</string>
 </resources>

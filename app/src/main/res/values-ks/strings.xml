@@ -157,4 +157,7 @@
         <item quantity="one">یہِ ویب سایٹ چھےٚ دوکھہٕ وٲلؠن ویب سایٹن ہٕنٛدِس اکِس گروپس ہُنٛد حِصہٕ باسان۔ یَتھ ہفتس کٔر %d LinkGuard استعمال کرن وٲلؠن یِہنٛز شکایت۔</item>
         <item quantity="other">یہِ ویب سایٹ چھےٚ دوکھہٕ وٲلؠن ویب سایٹن ہٕنٛدِس اکِس گروپس ہُنٛد حِصہٕ باسان۔ یَتھ ہفتس کٔر %d LinkGuard استعمال کرن وٲلؠن یِہنٛز شکایت۔</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">یہِ لِنک آو SMS ذٔریعہٕ۔ ناواقف لُکن ہٕنٛدۍ میسجن منٛز آمتۍ لِنکن نِشہِ روٗزِو ہوشیار۔</string>
 </resources>

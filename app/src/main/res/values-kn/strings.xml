@@ -157,4 +157,7 @@
         <item quantity="one">ಈ ವೆಬ್‌ಸೈಟ್ ಮೋಸದ ವೆಬ್‌ಸೈಟ್‌ಗಳ ಒಂದು ಗುಂಪಿನ ಭಾಗದಂತೆ ಕಾಣುತ್ತದೆ. ಈ ವಾರ %d LinkGuard ಬಳಕೆದಾರರು ಇವುಗಳನ್ನು ರಿಪೋರ್ಟ್ ಮಾಡಿದ್ದಾರೆ.</item>
         <item quantity="other">ಈ ವೆಬ್‌ಸೈಟ್ ಮೋಸದ ವೆಬ್‌ಸೈಟ್‌ಗಳ ಒಂದು ಗುಂಪಿನ ಭಾಗದಂತೆ ಕಾಣುತ್ತದೆ. ಈ ವಾರ %d LinkGuard ಬಳಕೆದಾರರು ಇವುಗಳನ್ನು ರಿಪೋರ್ಟ್ ಮಾಡಿದ್ದಾರೆ.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">ಈ ಲಿಂಕ್ SMS ಮೂಲಕ ಬಂದಿದೆ. ಪರಿಚಯವಿಲ್ಲದವರ ಮೆಸೇಜ್‌ಗಳಲ್ಲಿ ಬರುವ ಲಿಂಕ್‌ಗಳ ಬಗ್ಗೆ ಎಚ್ಚರವಾಗಿರಿ.</string>
 </resources>

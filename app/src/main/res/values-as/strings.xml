@@ -157,4 +157,7 @@
         <item quantity="one">এই ৱেবছাইটটো প্ৰতাৰণাৰ ৱেবছাইটৰ এটা দলৰ অংশ যেন লাগিছে। এই সপ্তাহত %d জন LinkGuard ব্যৱহাৰকাৰীয়ে এইবোৰৰ ৰিপ’ৰ্ট কৰিছে।</item>
         <item quantity="other">এই ৱেবছাইটটো প্ৰতাৰণাৰ ৱেবছাইটৰ এটা দলৰ অংশ যেন লাগিছে। এই সপ্তাহত %d জন LinkGuard ব্যৱহাৰকাৰীয়ে এইবোৰৰ ৰিপ’ৰ্ট কৰিছে।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">এই লিংকটো SMS-ৰ জৰিয়তে আহিছে। অচিনাকি লোকৰ মেছেজত অহা লিংকৰ পৰা সাৱধান হওক।</string>
 </resources>

@@ -157,4 +157,7 @@
         <item quantity="one">ਇਹ ਵੈੱਬਸਾਈਟ ਠੱਗੀ ਵਾਲੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਦੇ ਇੱਕ ਸਮੂਹ ਦਾ ਹਿੱਸਾ ਲੱਗਦੀ ਹੈ। ਇਸ ਹਫ਼ਤੇ %d LinkGuard ਵਰਤੋਂਕਾਰ ਨੇ ਇਹਨਾਂ ਦੀ ਸ਼ਿਕਾਇਤ ਕੀਤੀ।</item>
         <item quantity="other">ਇਹ ਵੈੱਬਸਾਈਟ ਠੱਗੀ ਵਾਲੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਦੇ ਇੱਕ ਸਮੂਹ ਦਾ ਹਿੱਸਾ ਲੱਗਦੀ ਹੈ। ਇਸ ਹਫ਼ਤੇ %d LinkGuard ਵਰਤੋਂਕਾਰਾਂ ਨੇ ਇਹਨਾਂ ਦੀ ਸ਼ਿਕਾਇਤ ਕੀਤੀ।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">ਇਹ ਲਿੰਕ SMS ਰਾਹੀਂ ਆਇਆ ਹੈ। ਅਣਜਾਣ ਲੋਕਾਂ ਦੇ ਮੈਸੇਜ ਵਿੱਚ ਆਏ ਲਿੰਕਾਂ ਤੋਂ ਸਾਵਧਾਨ ਰਹੋ।</string>
 </resources>

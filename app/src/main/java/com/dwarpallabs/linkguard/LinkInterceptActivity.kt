@@ -15,7 +15,10 @@ import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import com.dwarpallabs.linkguard.InterceptViewModel.State
 import com.dwarpallabs.linkguard.browser.Browsers
+import com.dwarpallabs.linkguard.browser.cameBySms
 import com.dwarpallabs.linkguard.browser.isCustomTabLaunch
+import com.dwarpallabs.linkguard.browser.sourcePackage
+
 
 import com.dwarpallabs.linkguard.core.Verdict
 import com.dwarpallabs.linkguard.ui.CheckingCard
@@ -48,6 +51,7 @@ class LinkInterceptActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         if (!start(intent)) return
 
+
         lifecycleScope.launch {
             viewModel.state.collect { state ->
                 when (state) {
@@ -79,6 +83,7 @@ class LinkInterceptActivity : ComponentActivity() {
                         onOpenAnyway = { openAnyway(s.verdict) },
                         report = report,
                         onReport = { viewModel.report(s.verdict) },
+                        fromSms = cameBySms(this, sourcePackage(intent, referrer)),
                     )
                 }
             }

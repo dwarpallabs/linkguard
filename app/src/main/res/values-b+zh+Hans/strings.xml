@@ -151,4 +151,7 @@
     <plurals name="warn_campaign">
         <item quantity="other">这个网站看起来属于一组诈骗网站。本周有 %d 位 LinkGuard 用户举报了它们。</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">这个链接来自短信。请小心陌生人短信里的链接。</string>
 </resources>

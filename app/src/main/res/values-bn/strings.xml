@@ -157,4 +157,7 @@
         <item quantity="one">এই ওয়েবসাইটটা প্রতারণার ওয়েবসাইটগুলোর একটা দলের অংশ বলে মনে হচ্ছে। এই সপ্তাহে %d জন LinkGuard ব্যবহারকারী এগুলোর রিপোর্ট করেছেন।</item>
         <item quantity="other">এই ওয়েবসাইটটা প্রতারণার ওয়েবসাইটগুলোর একটা দলের অংশ বলে মনে হচ্ছে। এই সপ্তাহে %d জন LinkGuard ব্যবহারকারী এগুলোর রিপোর্ট করেছেন।</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">এই লিংকটা SMS-এ এসেছে। অচেনা লোকের মেসেজে আসা লিংক নিয়ে সাবধান থাকুন।</string>
 </resources>

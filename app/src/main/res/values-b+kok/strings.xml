@@ -156,4 +156,7 @@
         <item quantity="one">ही वेबसायट फटोवपी वेबसायटींच्या एका गटाचो भाग दिसता. ह्या सप्तकांत %d LinkGuard वापरप्यान हांची तक्रार केल्या.</item>
         <item quantity="other">ही वेबसायट फटोवपी वेबसायटींच्या एका गटाचो भाग दिसता. ह्या सप्तकांत %d LinkGuard वापरप्यांनी हांची तक्रार केल्या.</item>
     </plurals>
+
+    <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
+    <string name="warn_context_sms">ही लिंक SMS वरवीं आयल्या. वळखी नाशिल्ल्या लोकांच्या मेसेजांतल्या लिंकांपासून जतनाय घेयात.</string>
 </resources>
