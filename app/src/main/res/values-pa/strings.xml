@@ -104,4 +104,18 @@
         <item quantity="other">ਇਹ ਵੈੱਬਸਾਈਟ %d ਦਿਨ ਪਹਿਲਾਂ ਬਣੀ ਹੈ। ਠੱਗੀ ਵਾਲੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਅਕਸਰ ਬਿਲਕੁਲ ਨਵੀਆਂ ਹੁੰਦੀਆਂ ਹਨ।</item>
     </plurals>
     <string name="warn_generic">LinkGuard ਨੂੰ ਇਸ ਲਿੰਕ ਵਿੱਚ ਕੁਝ ਅਜੀਬ ਮਿਲਿਆ।</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">ਕੀ ਇਸ ਦੀ ਠੱਗੀ ਵਜੋਂ ਸ਼ਿਕਾਇਤ ਕਰਨੀ ਹੈ?</string>
+    <string name="report_confirm_body">ਸਿਰਫ਼ ਵੈੱਬਸਾਈਟ ਦਾ ਨਾਮ ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ, ਪੂਰਾ ਲਿੰਕ ਜਾਂ ਤੁਹਾਡੇ ਮੈਸੇਜ ਕਦੇ ਨਹੀਂ।</string>
+    <string name="report_confirm_send">ਸ਼ਿਕਾਇਤ ਕਰੋ</string>
+    <string name="action_close">ਬੰਦ ਕਰੋ</string>
+    <string name="report_thanks">ਧੰਨਵਾਦ। ਤੁਹਾਡੀ ਸ਼ਿਕਾਇਤ ਹੋਰ ਲੋਕਾਂ ਨੂੰ ਚੇਤਾਵਨੀ ਦੇਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ।</string>
+    <string name="scam_check_title">ਕੀ ਉਹ ਲਿੰਕ ਠੱਗੀ ਸੀ?</string>
+    <string name="scam_check_body">LinkGuard ਦੀ ਚੇਤਾਵਨੀ ਤੋਂ ਬਾਅਦ ਵੀ ਤੁਸੀਂ %2$s ਨੂੰ %1$s ਖੋਲ੍ਹੀ ਸੀ।</string>
+    <string name="scam_check_yes">ਹਾਂ, ਉਹ ਠੱਗੀ ਸੀ</string>
+    <string name="scam_check_no">ਨਹੀਂ, ਉਹ ਠੀਕ ਸੀ</string>
+    <string name="scam_check_unsure">ਪੱਕਾ ਨਹੀਂ ਪਤਾ</string>
 </resources>

@@ -104,4 +104,18 @@
         <item quantity="other">एह् वेबसाइट %d दिन पैह्लें बनी ऐ। ठग्गी आह्लियां वेबसाइटां अक्सर बिल्कुल नमियां होंदियां न।</item>
     </plurals>
     <string name="warn_generic">LinkGuard गी इस लिंक च किश अजीब लब्भा।</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">इसदी ठग्गी दी शकैत करनी ऐ?</string>
+    <string name="report_confirm_body">सिर्फ वेबसाइट दा नां भेजेआ जंदा ऐ, पूरा लिंक जां तुंदे मैसेज कदें नेईं।</string>
+    <string name="report_confirm_send">शकैत करो</string>
+    <string name="action_close">बंद करो</string>
+    <string name="report_thanks">धन्नवाद। तुंदी शकैत कन्नै दूए लोकें गी चेतावनी मिलदी ऐ।</string>
+    <string name="scam_check_title">क्या ओह् लिंक ठग्गी हा?</string>
+    <string name="scam_check_body">LinkGuard दी चेतावनी दे बाद बी तुसें %2$s गी %1$s खोल्ली ही।</string>
+    <string name="scam_check_yes">हां, ओह् ठग्गी ही</string>
+    <string name="scam_check_no">नेईं, ओह् ठीक हा</string>
+    <string name="scam_check_unsure">पक्का नेईं पता</string>
 </resources>

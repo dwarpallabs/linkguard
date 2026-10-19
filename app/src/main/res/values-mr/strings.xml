@@ -105,4 +105,18 @@
         <item quantity="other">ही वेबसाइट %d दिवसांपूर्वी बनली आहे. फसवणुकीच्या वेबसाइट बहुतेक वेळा अगदी नवीन असतात.</item>
     </plurals>
     <string name="warn_generic">LinkGuard ला या लिंकमध्ये काहीतरी असामान्य आढळले.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">याची फसवणूक म्हणून तक्रार करायची?</string>
+    <string name="report_confirm_body">फक्त वेबसाइटचे नाव पाठवले जाते, पूर्ण लिंक किंवा तुमचे मेसेज कधीच नाही.</string>
+    <string name="report_confirm_send">तक्रार करा</string>
+    <string name="action_close">बंद करा</string>
+    <string name="report_thanks">धन्यवाद. तुमच्या तक्रारीमुळे इतर लोकांना सावध करायला मदत होते.</string>
+    <string name="scam_check_title">ती लिंक फसवणुकीची होती का?</string>
+    <string name="scam_check_body">LinkGuard ने सावध केल्यानंतरही तुम्ही %2$s रोजी %1$s उघडली.</string>
+    <string name="scam_check_yes">हो, ती फसवणूक होती</string>
+    <string name="scam_check_no">नाही, ती ठीक होती</string>
+    <string name="scam_check_unsure">खात्री नाही</string>
 </resources>

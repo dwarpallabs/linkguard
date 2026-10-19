@@ -84,6 +84,8 @@ fun HomeScreen(
     onOpenReport: () -> Unit,
     onOpenFeedback: () -> Unit,
     onOpenAbout: () -> Unit,
+    /** Shown first, above everything else: the "Was that link a scam?" card, when there is a question. */
+    topCard: @Composable () -> Unit = {},
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -93,8 +95,10 @@ fun HomeScreen(
                 .padding(horizontal = 24.dp, vertical = 24.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
+            topCard()
             Text(
                 stringResource(R.string.onboarding_title),
+
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
             )

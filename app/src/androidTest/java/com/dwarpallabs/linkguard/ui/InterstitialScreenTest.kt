@@ -92,12 +92,14 @@ class InterstitialScreenTest {
     }
 
     @Test
-    fun reportButtonIsShownAndFiresItsCallback() {
+    fun reportButtonAsksFirstThenFiresItsCallback() {
         var reports = 0
         show(brand, onReport = { reports++ })
         compose.onNodeWithTag("report").performScrollTo().assertIsDisplayed()
         compose.onNodeWithText(res.getString(R.string.interstitial_report_hint)).assertIsDisplayed()
         compose.onNodeWithTag("report").performClick()
+        assertEquals(0, reports)
+        compose.onNodeWithTag("report_confirm").performClick()
         assertEquals(1, reports)
     }
 
@@ -111,7 +113,8 @@ class InterstitialScreenTest {
     @Test
     fun sentReportReplacesTheButtonWithThanks() {
         show(brand, report = ReportStatus.SENT)
-        compose.onNodeWithTag("report_result").performScrollTo().assertTextContains(res.getString(R.string.report_sent))
+        compose.onNodeWithTag("report_result").performScrollTo().assertTextContains(res.getString(R.string.report_thanks))
+
         compose.onNodeWithTag("report").assertDoesNotExist()
         compose.onNodeWithTag("open_anyway").assertIsDisplayed()
     }

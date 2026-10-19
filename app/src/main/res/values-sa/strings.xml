@@ -103,4 +103,18 @@
         <item quantity="other">एतत् जालस्थानं %d दिनेभ्यः पूर्वं निर्मितम्। वञ्चनाजालस्थानानि प्रायः अतिनूतनानि भवन्ति।</item>
     </plurals>
     <string name="warn_generic">LinkGuard अस्मिन् लिङ्के किञ्चित् असामान्यम् अपश्यत्।</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">एतत् वञ्चना इति सूचयतु वा?</string>
+    <string name="report_confirm_body">केवलं जालस्थानस्य नाम प्रेष्यते, सम्पूर्णः लिङ्कः भवतः सन्देशाः वा कदापि न।</string>
+    <string name="report_confirm_send">सूचयतु</string>
+    <string name="action_close">पिदधातु</string>
+    <string name="report_thanks">धन्यवादः। भवतः सूचना अन्यान् जनान् सावधानान् कर्तुं साहाय्यं करोति।</string>
+    <string name="scam_check_title">किं सः लिङ्कः वञ्चना आसीत्?</string>
+    <string name="scam_check_body">LinkGuard इत्यनेन सावधानीकृते अपि भवान् %2$s दिनाङ्के %1$s उद्घाटितवान्।</string>
+    <string name="scam_check_yes">आम्, सा वञ्चना आसीत्</string>
+    <string name="scam_check_no">न, तत् समीचीनम् आसीत्</string>
+    <string name="scam_check_unsure">निश्चयः नास्ति</string>
 </resources>

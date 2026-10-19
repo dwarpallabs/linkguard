@@ -59,12 +59,13 @@ class InterceptLogicTest {
     }
 
     @Test
-    fun reportLinkIsTheUnwrappedWebUrlOrWhatWasTapped() {
+    fun reportWebsiteIsTheUnwrappedDestinationOrWhatWasTapped() {
         val short = "https://bit.ly/scam"
-        assertEquals("http://sbi-kyc-verify.xyz/login", InterceptViewModel.reportLink(short, engine.evaluate(short)))
-        // Resolved to a UPI request: report the web link the user actually tapped.
-        assertEquals("https://is.gd/pay", InterceptViewModel.reportLink("https://is.gd/pay", engine.evaluate("https://is.gd/pay")))
+        assertEquals("https://sbi-kyc-verify.xyz/", InterceptViewModel.reportWebsite(short, engine.evaluate(short), data.psl))
+        // Resolved to a UPI request: report the website the user actually tapped.
+        assertEquals("https://is.gd/", InterceptViewModel.reportWebsite("https://is.gd/pay", engine.evaluate("https://is.gd/pay"), data.psl))
     }
+
 
     @Test
     fun reportNoteListsFiredReasonCodesOnly() {

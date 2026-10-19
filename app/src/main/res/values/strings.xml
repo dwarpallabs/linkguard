@@ -104,4 +104,18 @@
         <item quantity="other">This website was created %d days ago. Scam websites are often brand new.</item>
     </plurals>
     <string name="warn_generic">LinkGuard found something unusual about this link.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">Report this as a scam?</string>
+    <string name="report_confirm_body">Only the website name is sent, never the full link or your messages.</string>
+    <string name="report_confirm_send">Report</string>
+    <string name="action_close">Close</string>
+    <string name="report_thanks">Thank you. Your report helps warn other people.</string>
+    <string name="scam_check_title">Was that link a scam?</string>
+    <string name="scam_check_body">You opened %1$s on %2$s after LinkGuard warned you.</string>
+    <string name="scam_check_yes">Yes, it was a scam</string>
+    <string name="scam_check_no">No, it was fine</string>
+    <string name="scam_check_unsure">Not sure</string>
 </resources>

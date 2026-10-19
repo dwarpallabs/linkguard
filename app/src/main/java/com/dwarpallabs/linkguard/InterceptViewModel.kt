@@ -5,6 +5,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.dwarpallabs.linkguard.core.Budget
 import com.dwarpallabs.linkguard.core.CheckId
+import com.dwarpallabs.linkguard.core.NormalisedUrl
+import com.dwarpallabs.linkguard.core.PublicSuffixList
+
 import com.dwarpallabs.linkguard.core.Verdict
 import com.dwarpallabs.linkguard.ui.ReportStatus
 import kotlinx.coroutines.Dispatchers
@@ -74,7 +77,10 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
-    /** Sends the warned link to Dwarpal Labs. Called only because the user tapped Report this link. */
+    /**
+     * Sends the warned website to Dwarpal Labs. Called only because the user tapped Report this link
+     * and then Report. Only the website is sent, never the path, query or fragment of the link.
+     */
     fun report(verdict: Verdict) {
         if (_reportStatus.value == ReportStatus.SENDING || _reportStatus.value == ReportStatus.SENT) return
         val raw = current ?: return
@@ -82,10 +88,27 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         val app = getApplication<LinkGuardApp>()
         // On the app's scope, not viewModelScope: tapping Go back must not cancel a report in flight.
         app.reportScope.launch {
-            val ok = Reporter(app).send(reportLink(raw, verdict), reportNote(verdict))
+            val website = reportWebsite(raw, verdict, app.data.psl)
+            val ok = website != null && Reporter(app).send(website, reportNote(verdict))
             _reportStatus.value = if (ok) ReportStatus.SENT else ReportStatus.FAILED
         }
     }
+
+    /**
+     * The user tapped Open anyway: remember the website's name (never the link) so the next app
+     * open can ask "Was that link a scam?". Replaces any earlier question.
+     *
+     * Synchronous on purpose: the screen finishes right after, and the process may go with it. It
+     * is cheap, because the bundled data is already loaded (the verdict needed it) and the write is
+     * one small SharedPreferences apply, which Android flushes when the activity stops.
+     */
+    fun rememberOpenedAnyway(verdict: Verdict) {
+        val raw = current ?: return
+        val app = getApplication<LinkGuardApp>()
+        val domain = reportDomain(raw, verdict, app.data.psl) ?: return
+        AfterOpenStore.of(app).remember(domain, firedReasons(verdict))
+    }
+
 
     private fun decide(raw: String, verdict: Verdict): State {
         if (verdict.level != Verdict.Level.SILENT) return State.Warn(verdict)
@@ -105,16 +128,46 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
             return if (followed) verdict.finalUrl?.toUrlString() ?: raw else raw
         }
 
-        /** The link to report: the unwrapped destination when it is a web URL, otherwise what the user tapped. */
-        fun reportLink(raw: String, verdict: Verdict): String {
-            val final = verdict.finalUrl
-            return if (final != null && final.isWeb) final.toUrlString() else raw
+        /**
+         * The website a warning is about: the unwrapped destination when it is a web URL, otherwise
+         * what the user tapped. Its registrable domain, else its host; never an IP address.
+         */
+        fun reportDomain(raw: String, verdict: Verdict, psl: PublicSuffixList): String? =
+            Reporter.reportDomain(warnedUrl(raw, verdict, psl))
+
+        /**
+         * The link a report sends: the website only, never the path, query, fragment, port or user
+         * info. An IP address is sent as itself; the server keeps such reports but never counts them.
+         */
+        fun reportWebsite(raw: String, verdict: Verdict, psl: PublicSuffixList): String? {
+            val url = warnedUrl(raw, verdict, psl)
+            val website = Reporter.reportDomain(url)
+                ?: url?.host?.takeIf { url.isWeb && it.isNotEmpty() }?.let { if (':' in it && !it.startsWith("[")) "[$it]" else it }
+            return website?.let(Reporter::websiteLink)
         }
 
-        /** Which checks fired, as reason codes, so reviewers see why LinkGuard warned. Never user text. */
-        fun reportNote(verdict: Verdict): String {
-            val reasons = verdict.signals.filter { it.fired }.sortedByDescending { it.score }.map { it.reason }
-            return if (reasons.isEmpty()) "" else "LinkGuard warned: " + reasons.joinToString(", ")
+        private fun warnedUrl(raw: String, verdict: Verdict, psl: PublicSuffixList): NormalisedUrl? {
+            val final = verdict.finalUrl
+            return if (final != null && final.isWeb) final else NormalisedUrl.parse(raw, psl)
         }
+
+        /**
+         * Reason codes of the checks that fired, strongest first. Never user text: codes are fixed
+         * tokens, and any code that is not a plain token (one carries a UPI link's host) is dropped.
+         */
+        fun firedReasons(verdict: Verdict): List<String> =
+            verdict.signals.filter { it.fired }.sortedByDescending { it.score }.map { it.reason }
+                .filter(PendingQuestion::isValidReason)
+
+
+        /** Which checks fired, as reason codes, so reviewers see why LinkGuard warned. Never user text. */
+        fun reportNote(verdict: Verdict): String = reportNote(firedReasons(verdict))
+
+        fun reportNote(reasons: List<String>): String {
+            val safe = reasons.filter(PendingQuestion::isValidReason)
+            return if (safe.isEmpty()) "" else "LinkGuard warned: " + safe.joinToString(", ")
+        }
+
+
     }
 }

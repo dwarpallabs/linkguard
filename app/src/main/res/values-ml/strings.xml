@@ -104,4 +104,18 @@
         <item quantity="other">ഈ വെബ്സൈറ്റ് %d ദിവസം മുമ്പാണ് ഉണ്ടാക്കിയത്. തട്ടിപ്പ് വെബ്സൈറ്റുകൾ പലപ്പോഴും പുതിയതായിരിക്കും.</item>
     </plurals>
     <string name="warn_generic">ഈ ലിങ്കിൽ LinkGuard എന്തോ പതിവില്ലാത്തത് കണ്ടു.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">ഇത് തട്ടിപ്പ് ആണെന്ന് റിപ്പോർട്ട് ചെയ്യണോ?</string>
+    <string name="report_confirm_body">വെബ്സൈറ്റിന്റെ പേര് മാത്രമേ അയയ്ക്കൂ, മുഴുവൻ ലിങ്കോ നിങ്ങളുടെ മെസേജുകളോ ഒരിക്കലും അയയ്ക്കില്ല.</string>
+    <string name="report_confirm_send">റിപ്പോർട്ട് ചെയ്യുക</string>
+    <string name="action_close">അടയ്ക്കുക</string>
+    <string name="report_thanks">നന്ദി. നിങ്ങളുടെ റിപ്പോർട്ട് മറ്റുള്ളവർക്ക് മുന്നറിയിപ്പ് നൽകാൻ സഹായിക്കും.</string>
+    <string name="scam_check_title">ആ ലിങ്ക് ഒരു തട്ടിപ്പ് ആയിരുന്നോ?</string>
+    <string name="scam_check_body">LinkGuard മുന്നറിയിപ്പ് നൽകിയിട്ടും നിങ്ങൾ %2$s-ന് %1$s തുറന്നു.</string>
+    <string name="scam_check_yes">അതെ, അത് തട്ടിപ്പ് ആയിരുന്നു</string>
+    <string name="scam_check_no">ഇല്ല, അത് കുഴപ്പമില്ലായിരുന്നു</string>
+    <string name="scam_check_unsure">ഉറപ്പില്ല</string>
 </resources>

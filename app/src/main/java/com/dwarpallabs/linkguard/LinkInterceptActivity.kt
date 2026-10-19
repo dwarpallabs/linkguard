@@ -96,7 +96,10 @@ class LinkInterceptActivity : ComponentActivity() {
     }
 
     private fun openAnyway(verdict: Verdict) {
+        // The website's name only, so the next app open can ask whether it was a scam.
+        viewModel.rememberOpenedAnyway(verdict)
         val url = verdict.finalUrl
+
         if (url != null && url.scheme == "upi") {
             // A web link that redirected to a UPI request: hand it to the user's UPI app.
             try {

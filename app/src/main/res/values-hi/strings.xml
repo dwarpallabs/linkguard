@@ -99,4 +99,18 @@
         <item quantity="other">यह वेबसाइट %d दिन पहले बनी है। धोखाधड़ी वाली वेबसाइटें अक्सर बिल्कुल नई होती हैं।</item>
     </plurals>
     <string name="warn_generic">LinkGuard को इस लिंक में कुछ असामान्य मिला।</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">इसकी धोखाधड़ी की शिकायत करें?</string>
+    <string name="report_confirm_body">सिर्फ़ वेबसाइट का नाम भेजा जाता है, पूरा लिंक या आपके मैसेज कभी नहीं।</string>
+    <string name="report_confirm_send">शिकायत करें</string>
+    <string name="action_close">बंद करें</string>
+    <string name="report_thanks">धन्यवाद। आपकी शिकायत से दूसरे लोगों को चेतावनी मिलती है।</string>
+    <string name="scam_check_title">क्या वह लिंक धोखाधड़ी था?</string>
+    <string name="scam_check_body">LinkGuard की चेतावनी के बाद भी आपने %2$s को %1$s खोली।</string>
+    <string name="scam_check_yes">हाँ, वह धोखाधड़ी थी</string>
+    <string name="scam_check_no">नहीं, वह ठीक था</string>
+    <string name="scam_check_unsure">पक्का नहीं पता</string>
 </resources>

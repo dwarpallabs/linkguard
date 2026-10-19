@@ -28,13 +28,19 @@ import com.dwarpallabs.linkguard.ui.HowItWorksScreen
 import com.dwarpallabs.linkguard.ui.ReportScreen
 import com.dwarpallabs.linkguard.ui.PrivacyPolicyUrl
 import com.dwarpallabs.linkguard.ui.ReportStatus
+import com.dwarpallabs.linkguard.ui.ScamCheckCard
+
 import com.dwarpallabs.linkguard.ui.SourceCodeUrl
 import com.dwarpallabs.linkguard.ui.SupportEmail
 import com.dwarpallabs.linkguard.ui.TranslationIssueUrl
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 import kotlinx.coroutines.launch
 
-/** First-launch setup and Settings: default browser, forward-to browser, check toggles, how it works, reporting, translation feedback, about. */
+/**
+ * First-launch setup and Settings: the "Was that link a scam?" card, default browser, forward-to
+ * browser, check toggles, how it works, reporting, translation feedback, about.
+ */
+
 class MainActivity : ComponentActivity() {
 
     private enum class Screen { HOME, HOW, REPORT, FEEDBACK, ABOUT }
@@ -44,6 +50,10 @@ class MainActivity : ComponentActivity() {
     private var selected by mutableStateOf<String?>(null)
     private var disabledChecks by mutableStateOf(emptySet<CheckId>())
     private var reportStatus by mutableStateOf(ReportStatus.IDLE)
+
+    /** The "Was that link a scam?" question to ask, if the user tapped Open anyway on a warning. */
+    private var question by mutableStateOf<PendingQuestion?>(null)
+    private var questionStatus by mutableStateOf(ReportStatus.IDLE)
 
     // After one refusal Android may silently suppress the role dialog, so switch to Settings.
     private var roleDeclined = false
@@ -81,6 +91,19 @@ class MainActivity : ComponentActivity() {
                         onOpenReport = { screen = Screen.REPORT },
                         onOpenFeedback = { screen = Screen.FEEDBACK },
                         onOpenAbout = { screen = Screen.ABOUT },
+                        topCard = {
+                            question?.let { q ->
+                                ScamCheckCard(
+                                    domain = q.domain,
+                                    openedAt = q.openedAt,
+                                    status = questionStatus,
+                                    onScam = { reportQuestion(q) },
+                                    onFine = { answerQuestion(q) },
+                                    onNotSure = { answerQuestion(q) },
+                                    onClose = { question = null; questionStatus = ReportStatus.IDLE },
+                                )
+                            }
+                        },
                     )
                     Screen.ABOUT -> AboutScreen(
                         version = appVersion(),
@@ -120,7 +143,34 @@ class MainActivity : ComponentActivity() {
         browsers = Browsers.installed(this)
         selected = Browsers.target(this)
         disabledChecks = prefs.disabledChecks
+        // Keep a card that is sending or showing its thank-you; otherwise ask what is pending now.
+        if (questionStatus == ReportStatus.IDLE || questionStatus == ReportStatus.FAILED) {
+            question = AfterOpenStore.of(this).pending()
+            if (question == null) questionStatus = ReportStatus.IDLE
+        }
     }
+
+    /** "Yes, it was a scam": sends the website and the checks that fired, never a link. */
+    private fun reportQuestion(q: PendingQuestion) {
+        if (questionStatus == ReportStatus.SENDING) return
+        questionStatus = ReportStatus.SENDING
+        lifecycleScope.launch {
+            val ok = Reporter(application as LinkGuardApp).send(
+                Reporter.websiteLink(q.domain),
+                InterceptViewModel.reportNote(q.reasons),
+            )
+            if (ok) AfterOpenStore.of(this@MainActivity).answer(q)
+            questionStatus = if (ok) ReportStatus.SENT else ReportStatus.FAILED
+        }
+    }
+
+    /** "No, it was fine" or "Not sure": never ask about this website again. Nothing is sent. */
+    private fun answerQuestion(q: PendingQuestion) {
+        AfterOpenStore.of(this).answer(q)
+        question = null
+        questionStatus = ReportStatus.IDLE
+    }
+
 
     /** Sends the report only now, because the user tapped Send report. */
     private fun sendReport(link: String, note: String) {

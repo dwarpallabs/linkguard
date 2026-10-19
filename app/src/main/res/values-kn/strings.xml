@@ -104,4 +104,18 @@
         <item quantity="other">ಈ ವೆಬ್‌ಸೈಟ್ %d ದಿನಗಳ ಹಿಂದೆ ಶುರುವಾಗಿದೆ. ಮೋಸದ ವೆಬ್‌ಸೈಟ್‌ಗಳು ಹೆಚ್ಚಾಗಿ ಹೊಸದಾಗಿರುತ್ತವೆ.</item>
     </plurals>
     <string name="warn_generic">ಈ ಲಿಂಕ್‌ನಲ್ಲಿ LinkGuard ಏನೋ ವಿಚಿತ್ರವಾದದ್ದನ್ನು ಗಮನಿಸಿದೆ.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">ಇದನ್ನು ಮೋಸ ಎಂದು ರಿಪೋರ್ಟ್ ಮಾಡಬೇಕೇ?</string>
+    <string name="report_confirm_body">ವೆಬ್‌ಸೈಟ್ ಹೆಸರು ಮಾತ್ರ ಕಳುಹಿಸಲಾಗುತ್ತದೆ, ಪೂರ್ತಿ ಲಿಂಕ್ ಅಥವಾ ನಿಮ್ಮ ಮೆಸೇಜ್‌ಗಳನ್ನು ಎಂದಿಗೂ ಕಳುಹಿಸುವುದಿಲ್ಲ.</string>
+    <string name="report_confirm_send">ರಿಪೋರ್ಟ್ ಮಾಡಿ</string>
+    <string name="action_close">ಮುಚ್ಚಿ</string>
+    <string name="report_thanks">ಧನ್ಯವಾದಗಳು. ನಿಮ್ಮ ರಿಪೋರ್ಟ್ ಬೇರೆಯವರನ್ನು ಎಚ್ಚರಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.</string>
+    <string name="scam_check_title">ಆ ಲಿಂಕ್ ಮೋಸ ಆಗಿತ್ತೇ?</string>
+    <string name="scam_check_body">LinkGuard ಎಚ್ಚರಿಸಿದ ನಂತರವೂ ನೀವು %2$s ರಂದು %1$s ತೆರೆದಿರಿ.</string>
+    <string name="scam_check_yes">ಹೌದು, ಅದು ಮೋಸ ಆಗಿತ್ತು</string>
+    <string name="scam_check_no">ಇಲ್ಲ, ಅದು ಸರಿಯಾಗಿತ್ತು</string>
+    <string name="scam_check_unsure">ಖಚಿತವಿಲ್ಲ</string>
 </resources>
