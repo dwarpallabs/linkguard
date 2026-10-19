@@ -137,4 +137,18 @@
         <item quantity="other">LinkGuard-এ কেৱল প্ৰথম %dটা লিংক পৰীক্ষা কৰিলে।</item>
     </plurals>
     <string name="home_share_tip">কোনো মেছেজত সন্দেহ হৈছে নেকি? সেয়া LinkGuard-লৈ শ্বেয়াৰ কৰক: শ্বেয়াৰত টিপক, তাৰ পিছত LinkGuard-এৰে পৰীক্ষা কৰক বাছক।</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">আপুনি %1$s ব্যৱহাৰ কৰে। এই ৱেবছাইটটোৱে নিজকে %1$s বুলি দেখুৱাইছে। এইটো %1$s-ৰ আচল ৱেবছাইট নহয়।</string>
+    <string name="memory_heading">এই ফোনত শিকা</string>
+    <string name="memory_private">LinkGuard-এ এইখিনি কেৱল আপোনাৰ ফোনতে ৰাখে, কেতিয়াও নপঠিয়ায়।</string>
+    <string name="memory_brands">আপোনাৰ বেংক আৰু এপ: %1$s</string>
+    <string name="memory_brands_desc">আপুনি এইবোৰৰ আচল ৱেবছাইট খুলিলে LinkGuard-এ এইবোৰ শিকি লয়, আৰু এইবোৰৰ নকলৰ বিষয়ে অধিক কঠোৰভাৱে সতৰ্ক কৰে।</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">আপুনি কৈছিল যে %dটা ৱেবছাইট ঠিকেই আছিল। এতিয়া সঁচাকৈয়ে বিপজ্জনক যেন লাগিলেহে LinkGuard-এ ইয়াৰ বিষয়ে সতৰ্ক কৰিব।</item>
+        <item quantity="other">আপুনি কৈছিল যে %dটা ৱেবছাইট ঠিকেই আছিল। এতিয়া সঁচাকৈয়ে বিপজ্জনক যেন লাগিলেহে LinkGuard-এ সেইবোৰৰ বিষয়ে সতৰ্ক কৰিব।</item>
+    </plurals>
+    <string name="memory_forget_brands">ব্ৰেণ্ড পাহৰক</string>
+    <string name="memory_forget_trusted">ৱেবছাইট পাহৰক</string>
 </resources>

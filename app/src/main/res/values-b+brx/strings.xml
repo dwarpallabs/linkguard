@@ -137,4 +137,18 @@
         <item quantity="other">LinkGuard आ खालि गिबि %d लिंकखौल\' नायसंबाय।</item>
     </plurals>
     <string name="home_share_tip">मेसेजआव सन्देह जायोमा? बेखौ LinkGuard आव शेयार खालाम: शेयारआव टेप खालाम, उनाव LinkGuard जों नायसं सायख।</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">नोंथाङा %1$s बाहायो। बे वेबसाइटआ %1$s बादि महर लादों। बेयो %1$s नि थार वेबसाइट नङा।</string>
+    <string name="memory_heading">बे फोनआव सोलोंनाय</string>
+    <string name="memory_private">LinkGuard आ बेखौ खालि नोंथांनि फोनआवल\' दोनो, जेब्लाबो हरा।</string>
+    <string name="memory_brands">नोंथांनि बेंक आरो एपफोर: %1$s</string>
+    <string name="memory_brands_desc">नोंथाङा बेफोरनि थार वेबसाइट खेवब्लाब LinkGuard आ बेफोरखौ सोलोंनो, आरो बेफोरनि लोगो वेबसाइटनि सायाव गोबां गोसारै सावगारि होयो।</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">नोंथाङा बुङोदों %d वेबसाइटआ मोजां जादोंमोन। दानो LinkGuard आ बेनि सायाव थारैनो गोरोनथि नुयोब्लानोसो सावगारि होगोन।</item>
+        <item quantity="other">नोंथाङा बुङोदों %d वेबसाइटफोरा मोजां जादोंमोन। दानो LinkGuard आ बेफोरनि सायाव थारैनो गोरोनथि नुयोब्लानोसो सावगारि होगोन।</item>
+    </plurals>
+    <string name="memory_forget_brands">ब्रान्डफोरखौ बावगार</string>
+    <string name="memory_forget_trusted">वेबसाइटफोरखौ बावगार</string>
 </resources>

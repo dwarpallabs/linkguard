@@ -137,4 +137,18 @@
         <item quantity="other">LinkGuard کٔر صِرف گۄڈنِکۍ %d لِنک جانچ۔</item>
     </plurals>
     <string name="home_share_tip">کُنہِ میسجس پؠٹھ شک؟ سُہ کٔرِو LinkGuard پؠٹھ شیئر: شیئر پؠٹھ کٔرِو ٹیپ، پَتہٕ ژٲرِو LinkGuard سٟتۍ جانچِو۔</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">توٚہۍ چھِو %1$s استعمال کران۔ یہِ ویب سایٹ چھےٚ %1$s ٲسنُک ڈھونگ کران۔ یہِ چھےٚ نہٕ %1$s سُنٛز اصلی ویب سایٹ۔</string>
+    <string name="memory_heading">یَتھ فونس پؠٹھ ہیچھمُت</string>
+    <string name="memory_private">LinkGuard چھُ یہِ صِرف تُہٕنٛدِس فونس پؠٹھ تھاوان تہٕ چھُ نہٕ زانٛہہ سوزان۔</string>
+    <string name="memory_brands">تُہٕنٛدۍ بینک تہٕ ایپ: %1$s</string>
+    <string name="memory_brands_desc">ییٚلہِ توٚہۍ یِمن ہٕنٛز اصلی ویب سایٹ کھولِو، LinkGuard چھُ یِم ہیچھان، تہٕ یِمن ہٕنٛدِ نقلی ویب سایٹن ہٕنٛدِ بابت چھُ زیادٕ سختی سان خبردار کران۔</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">توٚہۍ ووٚنُو زِ %d ویب سایٹ اوس ٹھیک۔ وۄنۍ دِیہِ LinkGuard تمہِ ہٕنٛدِ بابت تیٚلی خبردار ییٚلہِ سُہ حقیقتس منٛز خطرناک باسہِ۔</item>
+        <item quantity="other">توٚہۍ ووٚنُو زِ %d ویب سایٹ ٲسۍ ٹھیک۔ وۄنۍ دِیہِ LinkGuard تِمن ہٕنٛدِ بابت تیٚلی خبردار ییٚلہِ تِم حقیقتس منٛز خطرناک باسن۔</item>
+    </plurals>
+    <string name="memory_forget_brands">برانڈ مَشرٲوِو</string>
+    <string name="memory_forget_trusted">ویب سایٹ مَشرٲوِو</string>
 </resources>

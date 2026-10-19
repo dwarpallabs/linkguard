@@ -28,7 +28,11 @@ import com.dwarpallabs.linkguard.ui.HowItWorksScreen
 import com.dwarpallabs.linkguard.ui.ReportScreen
 import com.dwarpallabs.linkguard.ui.PrivacyPolicyUrl
 import com.dwarpallabs.linkguard.ui.ReportStatus
+import com.dwarpallabs.linkguard.ui.MemoryUi
 import com.dwarpallabs.linkguard.ui.ScamCheckCard
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+
 
 import com.dwarpallabs.linkguard.ui.SourceCodeUrl
 import com.dwarpallabs.linkguard.ui.SupportEmail
@@ -54,6 +58,11 @@ class MainActivity : ComponentActivity() {
     /** The "Was that link a scam?" question to ask, if the user tapped Open anyway on a warning. */
     private var question by mutableStateOf<PendingQuestion?>(null)
     private var questionStatus by mutableStateOf(ReportStatus.IDLE)
+
+    /** What LinkGuard learned on this phone, for Settings. */
+    private var memory by mutableStateOf(MemoryUi())
+
+    private val app get() = application as LinkGuardApp
 
     // After one refusal Android may silently suppress the role dialog, so switch to Settings.
     private var roleDeclined = false
@@ -98,11 +107,21 @@ class MainActivity : ComponentActivity() {
                                     openedAt = q.openedAt,
                                     status = questionStatus,
                                     onScam = { reportQuestion(q) },
-                                    onFine = { answerQuestion(q) },
-                                    onNotSure = { answerQuestion(q) },
+                                    onFine = { answerQuestion(q, fine = true) },
+                                    onNotSure = { answerQuestion(q, fine = false) },
                                     onClose = { question = null; questionStatus = ReportStatus.IDLE },
                                 )
                             }
+                        },
+                        memory = memory,
+                        onForgetBrands = {
+                            app.memory.clearBrands()
+                            app.forgetMyBrandsCache()
+                            refreshMemory()
+                        },
+                        onForgetTrusted = {
+                            app.memory.clearTrusted()
+                            refreshMemory()
                         },
                     )
                     Screen.ABOUT -> AboutScreen(
@@ -143,6 +162,7 @@ class MainActivity : ComponentActivity() {
         browsers = Browsers.installed(this)
         selected = Browsers.target(this)
         disabledChecks = prefs.disabledChecks
+        refreshMemory()
         // Keep a card that is sending or showing its thank-you; otherwise ask what is pending now.
         if (questionStatus == ReportStatus.IDLE || questionStatus == ReportStatus.FAILED) {
             question = AfterOpenStore.of(this).pending()
@@ -159,18 +179,35 @@ class MainActivity : ComponentActivity() {
                 Reporter.websiteLink(q.domain),
                 InterceptViewModel.reportNote(q.reasons),
             )
-            if (ok) AfterOpenStore.of(this@MainActivity).answer(q)
+            if (ok) {
+                AfterOpenStore.of(this@MainActivity).answer(q)
+                app.memory.untrust(q.domain)
+                refreshMemory()
+            }
             questionStatus = if (ok) ReportStatus.SENT else ReportStatus.FAILED
         }
     }
 
-    /** "No, it was fine" or "Not sure": never ask about this website again. Nothing is sent. */
-    private fun answerQuestion(q: PendingQuestion) {
+    /**
+     * "No, it was fine" (the website becomes "trusted by me": no more soft warnings for it) or
+     * "Not sure": never ask about this website again. Nothing is sent.
+     */
+    private fun answerQuestion(q: PendingQuestion, fine: Boolean) {
         AfterOpenStore.of(this).answer(q)
+        if (fine) app.memory.trust(q.domain)
         question = null
         questionStatus = ReportStatus.IDLE
+        refreshMemory()
     }
 
+    /** Reads what LinkGuard learned on this phone, off the main thread (it needs the brand list). */
+    private fun refreshMemory() {
+        lifecycleScope.launch {
+            memory = withContext(Dispatchers.IO) {
+                MemoryUi(app.memory.trustedCount(), app.myBrands().sorted())
+            }
+        }
+    }
 
     /** Sends the report only now, because the user tapped Send report. */
     private fun sendReport(link: String, note: String) {

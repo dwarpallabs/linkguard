@@ -137,4 +137,18 @@
         <item quantity="other">LinkGuard checked only the first %d links.</item>
     </plurals>
     <string name="home_share_tip">Not sure about a message? Share it to LinkGuard: tap Share, then Check with LinkGuard.</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">You use %1$s. This website is pretending to be %1$s. It is not %1$s’s real website.</string>
+    <string name="memory_heading">Learned on this phone</string>
+    <string name="memory_private">LinkGuard keeps this only on your phone and never sends it.</string>
+    <string name="memory_brands">Your banks and apps: %1$s</string>
+    <string name="memory_brands_desc">LinkGuard learns these when you open their real websites, and warns more strongly about fakes of them.</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">You said %d website was fine. LinkGuard now warns about it only if it looks really dangerous.</item>
+        <item quantity="other">You said %d websites were fine. LinkGuard now warns about them only if they look really dangerous.</item>
+    </plurals>
+    <string name="memory_forget_brands">Forget brands</string>
+    <string name="memory_forget_trusted">Forget websites</string>
 </resources>

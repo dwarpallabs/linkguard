@@ -136,4 +136,18 @@
         <item quantity="other">LinkGuard केवलं प्रथमान् %d लिङ्कान् परीक्षितवान्।</item>
     </plurals>
     <string name="home_share_tip">कस्मिंश्चित् सन्देशे संशयः अस्ति वा? तं LinkGuard प्रति प्रेषयतु: Share स्पृशतु, ततः LinkGuard द्वारा परीक्षताम् इति चिनोतु।</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">भवान् %1$s उपयुङ्क्ते। एतत् जालस्थानं %1$s इति नाटयति। एतत् %1$s इत्यस्य वास्तविकं जालस्थानं न अस्ति।</string>
+    <string name="memory_heading">अस्यां दूरवाण्यां शिक्षितम्</string>
+    <string name="memory_private">LinkGuard एतत् केवलं भवतः दूरवाण्याम् एव रक्षति, कदापि न प्रेषयति।</string>
+    <string name="memory_brands">भवतः वित्तकोषाः ऐप्-तन्त्राणि च: %1$s</string>
+    <string name="memory_brands_desc">यदा भवान् एतेषां वास्तविकजालस्थानानि उद्घाटयति, तदा LinkGuard एतानि शिक्षते, एतेषां कृत्रिमजालस्थानविषये च अधिकं दृढं सावधानं करोति।</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">भवान् उक्तवान् यत् %d जालस्थानं समीचीनम् आसीत्। इदानीं तत् वस्तुतः सङ्कटपूर्णं प्रतीयते चेत् एव LinkGuard सावधानं करिष्यति।</item>
+        <item quantity="other">भवान् उक्तवान् यत् %d जालस्थानानि समीचीनानि आसन्। इदानीं तानि वस्तुतः सङ्कटपूर्णानि प्रतीयन्ते चेत् एव LinkGuard सावधानं करिष्यति।</item>
+    </plurals>
+    <string name="memory_forget_brands">ब्राण्ड्-नामानि विस्मरतु</string>
+    <string name="memory_forget_trusted">जालस्थानानि विस्मरतु</string>
 </resources>

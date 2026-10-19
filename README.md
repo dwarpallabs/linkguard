@@ -33,7 +33,7 @@ LinkGuard never logs, stores or sends the links you open. No accounts, no ads, n
 - download the list of known-safe websites (as fingerprints, signed by Dwarpal Labs);
 - send a report, only when you tap **Send report**, **Report** or **Yes, it was a scam**. Reports from a warning screen send only the website's name (`example.com`), never the full link. Reports are tied to an anonymous, per-website token, so your reports can't be linked together or traced back to you.
 
-One exception to "never stores": when you tap **Open anyway** on a warning, LinkGuard keeps that one website's name (not the link) on your phone so it can ask you later whether it was a scam. It is never backed up, it is deleted as soon as you answer or after 7 days, and websites you have already answered about are kept only as a scrambled fingerprint.
+One exception to "never stores": when you tap **Open anyway** on a warning, LinkGuard keeps that one website's name (not the link) on your phone so it can ask you later whether it was a scam. It is never backed up, it is deleted as soon as you answer or after 7 days, and websites you have already answered about are kept only as a scrambled fingerprint. LinkGuard also learns two things on your phone, so it can help you more: websites you said were fine stop getting the mild "Be careful" warning, and after you open your bank's or app's real website a few times, LinkGuard warns more strongly about fakes of it. Both are kept only as scrambled fingerprints, never backed up, never sent, and you can clear them in Settings.
 
 Full policy: [dwarpallabs.com/linkguard/privacy](https://dwarpallabs.com/linkguard/privacy).
 

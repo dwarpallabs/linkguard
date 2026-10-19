@@ -13,7 +13,8 @@ data class InterstitialModel(
 ) {
     sealed interface Reason {
         data object ApkDownload : Reason
-        data class BrandLookalike(val brand: String) : Reason
+        /** [mine]: one of the brands the user opens often, so the sentence says so. */
+        data class BrandLookalike(val brand: String, val mine: Boolean = false) : Reason
         data class Upi(val payeeName: String?, val payeeAddress: String?, val amount: String?) : Reason
         data class WeirdHost(val brand: String?) : Reason
         data object Reputation : Reason
@@ -31,6 +32,8 @@ data class InterstitialModel(
             val reason = when (top?.messageKey) {
                 "warn_apk_download" -> Reason.ApkDownload
                 "warn_brand_lookalike" -> details["brand"]?.let { Reason.BrandLookalike(it) } ?: Reason.Generic
+                "warn_brand_lookalike_mine" -> details["brand"]?.let { Reason.BrandLookalike(it, mine = true) } ?: Reason.Generic
+
                 "warn_upi_intent" -> Reason.Upi(details["payee_name"], details["payee_address"], details["amount"])
                 "warn_weird_host" -> Reason.WeirdHost(details["brand"])
                 "warn_reputation" -> Reason.Reputation

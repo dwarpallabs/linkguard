@@ -2,12 +2,14 @@
 <!--
     Auto Backup rules for Android 8–11 (Android 12+ uses data_extraction_rules.xml).
     Only user settings are backed up. Never the reporter secret (it must not leave the phone),
-    never the "Was that link a scam?" question (it names a website the user opened), and never
+    never the "Was that link a scam?" question (it names a website the user opened), never what
+    LinkGuard learned on the phone (trusted websites, the user's brands), and never
     the allowlist cache (it is downloaded again).
 -->
 <full-backup-content>
     <exclude domain="sharedpref" path="reporter.xml" />
     <exclude domain="sharedpref" path="after_open.xml" />
+    <exclude domain="sharedpref" path="local_memory.xml" />
     <exclude domain="file" path="allowlist.txt" />
     <exclude domain="file" path="allowlist.sig" />
 </full-backup-content>

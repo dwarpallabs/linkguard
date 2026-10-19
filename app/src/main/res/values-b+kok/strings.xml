@@ -136,4 +136,18 @@
         <item quantity="other">LinkGuard न फकत पयल्यो %d लिंक तपासल्यो.</item>
     </plurals>
     <string name="home_share_tip">एखाद्या मेसेजाचो दुबाव आसा? तो LinkGuard चेर शेयर करात: शेयरचेर टॅप करात, मागीर LinkGuard वरवीं तपासात वेंचात.</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">तुमी %1$s वापरतात. ही वेबसायट आपूण %1$s आसा अशें नाटक करता. ही %1$s ची खरी वेबसायट न्हय.</string>
+    <string name="memory_heading">ह्या फोनाचेर शिकलें</string>
+    <string name="memory_private">LinkGuard हें फकत तुमच्या फोनाचेर दवरता आनी केन्नाच धाडना.</string>
+    <string name="memory_brands">तुमच्यो बँका आनी ॲपां: %1$s</string>
+    <string name="memory_brands_desc">तुमी हांची खरी वेबसायट उगडटात तेन्ना LinkGuard हीं शिकता, आनी हांच्या फटीं वेबसायटीं विशीं चड कडकपणान शिटकावणी दिता.</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">तुमी सांगलें की %d वेबसायट बरी आशिल्ली. आतां ती खरेंच धोक्याची दिसल्यारूच LinkGuard शिटकावणी दितलो.</item>
+        <item quantity="other">तुमी सांगलें की %d वेबसायटी बऱ्यो आशिल्ल्यो. आतां त्यो खरेंच धोक्याच्यो दिसल्यारूच LinkGuard शिटकावणी दितलो.</item>
+    </plurals>
+    <string name="memory_forget_brands">ब्रँड विसरात</string>
+    <string name="memory_forget_trusted">वेबसायटी विसरात</string>
 </resources>

@@ -137,4 +137,18 @@
         <item quantity="other">LinkGuard ਨੇ ਸਿਰਫ਼ ਪਹਿਲੇ %d ਲਿੰਕਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ।</item>
     </plurals>
     <string name="home_share_tip">ਕਿਸੇ ਮੈਸੇਜ ’ਤੇ ਸ਼ੱਕ ਹੈ? ਉਸਨੂੰ LinkGuard ’ਤੇ ਸ਼ੇਅਰ ਕਰੋ: ਸ਼ੇਅਰ ’ਤੇ ਟੈਪ ਕਰੋ, ਫਿਰ LinkGuard ਨਾਲ ਜਾਂਚੋ ਚੁਣੋ।</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">ਤੁਸੀਂ %1$s ਵਰਤਦੇ ਹੋ। ਇਹ ਵੈੱਬਸਾਈਟ %1$s ਹੋਣ ਦਾ ਦਿਖਾਵਾ ਕਰ ਰਹੀ ਹੈ। ਇਹ %1$s ਦੀ ਅਸਲੀ ਵੈੱਬਸਾਈਟ ਨਹੀਂ ਹੈ।</string>
+    <string name="memory_heading">ਇਸ ਫ਼ੋਨ ’ਤੇ ਸਿੱਖਿਆ</string>
+    <string name="memory_private">LinkGuard ਇਸਨੂੰ ਸਿਰਫ਼ ਤੁਹਾਡੇ ਫ਼ੋਨ ’ਤੇ ਰੱਖਦਾ ਹੈ ਅਤੇ ਕਦੇ ਨਹੀਂ ਭੇਜਦਾ।</string>
+    <string name="memory_brands">ਤੁਹਾਡੇ ਬੈਂਕ ਅਤੇ ਐਪਾਂ: %1$s</string>
+    <string name="memory_brands_desc">ਜਦੋਂ ਤੁਸੀਂ ਇਹਨਾਂ ਦੀਆਂ ਅਸਲੀ ਵੈੱਬਸਾਈਟਾਂ ਖੋਲ੍ਹਦੇ ਹੋ, LinkGuard ਇਹਨਾਂ ਨੂੰ ਸਿੱਖ ਲੈਂਦਾ ਹੈ ਅਤੇ ਇਹਨਾਂ ਦੀਆਂ ਨਕਲੀ ਵੈੱਬਸਾਈਟਾਂ ਬਾਰੇ ਹੋਰ ਸਖ਼ਤੀ ਨਾਲ ਚੇਤਾਵਨੀ ਦਿੰਦਾ ਹੈ।</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">ਤੁਸੀਂ ਕਿਹਾ ਕਿ %d ਵੈੱਬਸਾਈਟ ਠੀਕ ਸੀ। ਹੁਣ LinkGuard ਉਸ ਬਾਰੇ ਤਾਂ ਹੀ ਚੇਤਾਵਨੀ ਦੇਵੇਗਾ ਜੇ ਉਹ ਸੱਚਮੁੱਚ ਖ਼ਤਰਨਾਕ ਲੱਗੇ।</item>
+        <item quantity="other">ਤੁਸੀਂ ਕਿਹਾ ਕਿ %d ਵੈੱਬਸਾਈਟਾਂ ਠੀਕ ਸਨ। ਹੁਣ LinkGuard ਉਹਨਾਂ ਬਾਰੇ ਤਾਂ ਹੀ ਚੇਤਾਵਨੀ ਦੇਵੇਗਾ ਜੇ ਉਹ ਸੱਚਮੁੱਚ ਖ਼ਤਰਨਾਕ ਲੱਗਣ।</item>
+    </plurals>
+    <string name="memory_forget_brands">ਬ੍ਰਾਂਡ ਭੁੱਲ ਜਾਓ</string>
+    <string name="memory_forget_trusted">ਵੈੱਬਸਾਈਟਾਂ ਭੁੱਲ ਜਾਓ</string>
 </resources>
