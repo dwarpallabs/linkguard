@@ -146,4 +146,9 @@
     </plurals>
     <string name="memory_forget_brands">忘记这些品牌</string>
     <string name="memory_forget_trusted">忘记这些网站</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="other">这个网站看起来属于一组诈骗网站。本周有 %d 位 LinkGuard 用户举报了它们。</item>
+    </plurals>
 </resources>

@@ -120,6 +120,8 @@ class WeirdHostCheck(private val data: EngineData, private val matcher: BrandMat
  * What the LinkGuard server knows about the domain, asked by 4-byte hash prefix so the server never
  * learns which domain was opened:
  *  - on the blocklist (feeds or confirmed) → strong warning;
+ *  - part of a confirmed scam campaign (shares infrastructure with a blocklisted website, and the group
+ *    was reported by 3+ users) → strong warning at [CAMPAIGN_SCORE], saying how many reported it;
  *  - otherwise reported by 3+ distinct LinkGuard users this week → a *soft* warning that says how many.
  *    Community reports alone can never produce a strong warning (capped at [COMMUNITY_MAX]).
  * Local list sources (tests, future offline bundle) are consulted first.
@@ -138,6 +140,12 @@ class ReputationCheck(
         val prefixes = hashes.map { it.take(HttpReputationLookup.PREFIX_LENGTH) }.distinct()
         val verdicts = remote.lookup(prefixes, timeoutMs) ?: return Signal.none(CheckId.REPUTATION)
         if (hashes.any { it in verdicts.blocked }) return blocked()
+        hashes.mapNotNull { verdicts.campaign[it] }.maxOrNull()?.let { reporters ->
+            return Signal(
+                CheckId.REPUTATION, CAMPAIGN_SCORE, "reputation.campaign", "warn_campaign",
+                mapOf("count" to reporters.toString()),
+            )
+        }
         val reporters = hashes.maxOfOrNull { verdicts.reported[it] ?: 0 } ?: 0
         val score = communityScore(reporters)
         if (score == 0.0) return Signal.none(CheckId.REPUTATION)
@@ -151,7 +159,11 @@ class ReputationCheck(
 
     companion object {
         const val SCORE = 0.9
+
+        /** A campaign member: strong, but below a direct confirmation, which leaves room for one. */
+        const val CAMPAIGN_SCORE = 0.8
         const val COMMUNITY_MIN_REPORTERS = 3
+
         const val COMMUNITY_MAX = 0.6
 
         /** 3–9 reporters → 0.4, 10–24 → 0.5, 25+ → 0.6. Always below the strong threshold. */

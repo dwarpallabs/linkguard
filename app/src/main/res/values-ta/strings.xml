@@ -146,4 +146,10 @@
     </plurals>
     <string name="memory_forget_brands">பிராண்டுகளை மற</string>
     <string name="memory_forget_trusted">இணையதளங்களை மற</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">இந்த இணையதளம் மோசடி இணையதளங்களின் ஒரு குழுவைச் சேர்ந்ததாகத் தெரிகிறது. இந்த வாரம் %d LinkGuard பயனர் இவற்றைப் புகாரளித்தார்.</item>
+        <item quantity="other">இந்த இணையதளம் மோசடி இணையதளங்களின் ஒரு குழுவைச் சேர்ந்ததாகத் தெரிகிறது. இந்த வாரம் %d LinkGuard பயனர்கள் இவற்றைப் புகாரளித்தனர்.</item>
+    </plurals>
 </resources>

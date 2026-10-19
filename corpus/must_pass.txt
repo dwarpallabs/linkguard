@@ -34,3 +34,6 @@ https://www.lg-old-shop.in/	domain_age	old domain (test fixture date)
 https://lg-reported-twice.example/offer	reputation	only 2 community reports: below the 3-reporter threshold
 https://www.flipkart.com/big-sale	reputation	50 community reports but allowlisted: immune
 https://lg-reported-dismissed.example/	reputation	server omits dismissed domains (no community signal)
+https://www.flipkart.com/offers	allowlist	allowlisted even if the server lists it in a campaign (test fixture)
+https://www.youtube.com/watch?v=lg	allowlist	allowlisted even if the server lists it in a campaign (test fixture)
+https://rbi.org.in/Scripts/banklinks.aspx	allowlist	allowlisted even if the server lists it in a campaign (test fixture)

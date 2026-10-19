@@ -151,4 +151,10 @@
     </plurals>
     <string name="memory_forget_brands">برانڈ مَشرٲوِو</string>
     <string name="memory_forget_trusted">ویب سایٹ مَشرٲوِو</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">یہِ ویب سایٹ چھےٚ دوکھہٕ وٲلؠن ویب سایٹن ہٕنٛدِس اکِس گروپس ہُنٛد حِصہٕ باسان۔ یَتھ ہفتس کٔر %d LinkGuard استعمال کرن وٲلؠن یِہنٛز شکایت۔</item>
+        <item quantity="other">یہِ ویب سایٹ چھےٚ دوکھہٕ وٲلؠن ویب سایٹن ہٕنٛدِس اکِس گروپس ہُنٛد حِصہٕ باسان۔ یَتھ ہفتس کٔر %d LinkGuard استعمال کرن وٲلؠن یِہنٛز شکایت۔</item>
+    </plurals>
 </resources>

@@ -29,3 +29,6 @@ https://secure.login.verify.account.lg-update.top/?bank=icici	weird_host	deep su
 https://login.lg-test-phish.com/	reputation	blocklisted domain (test fixture)
 http://lg-test-malware.net/drop	reputation	blocklisted domain (test fixture)
 https://cdn.lg-test-scam.org/pay	reputation	subdomain of a blocklisted domain (test fixture)
+http://lg-campaign-one.example/kyc-update	reputation	member of a confirmed scam campaign (test fixture)
+https://login.lg-campaign-two.example/	reputation	subdomain of a campaign member (test fixture)
+http://lg-campaign-three.example/pay?amt=499	reputation	campaign member with a payment path (test fixture)

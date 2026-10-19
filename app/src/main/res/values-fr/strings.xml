@@ -156,4 +156,11 @@
     </plurals>
     <string name="memory_forget_brands">Oublier les marques</string>
     <string name="memory_forget_trusted">Oublier les sites</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">Ce site semble faire partie d’un groupe de sites d’arnaque. %d utilisateur de LinkGuard les a signalés cette semaine.</item>
+        <item quantity="many">Ce site semble faire partie d’un groupe de sites d’arnaque. %d utilisateurs de LinkGuard les ont signalés cette semaine.</item>
+        <item quantity="other">Ce site semble faire partie d’un groupe de sites d’arnaque. %d utilisateurs de LinkGuard les ont signalés cette semaine.</item>
+    </plurals>
 </resources>

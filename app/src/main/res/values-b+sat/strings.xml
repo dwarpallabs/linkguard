@@ -153,4 +153,10 @@
     </plurals>
     <string name="memory_forget_brands">ᱵᱨᱮᱱᱰ ᱦᱤᱲᱤᱧ ᱢᱮ</string>
     <string name="memory_forget_trusted">ᱣᱮᱵᱥᱟᱭᱤᱴ ᱦᱤᱲᱤᱧ ᱢᱮ</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">ᱱᱚᱶᱟ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱫᱚ ᱴᱷᱚᱜ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱠᱚᱣᱟᱜ ᱢᱤᱫ ᱜᱚᱴ ᱨᱮᱭᱟᱜ ᱦᱟᱹᱴᱤᱧ ᱞᱮᱠᱟ ᱧᱮᱞᱚᱜ ᱠᱟᱱᱟ ᱾ ᱱᱚᱶᱟ ᱦᱟᱯᱛᱟ %d LinkGuard ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱱᱚᱶᱟ ᱠᱚ ᱨᱤᱯᱚᱨᱴ ᱞᱮᱫᱼᱟ ᱾</item>
+        <item quantity="other">ᱱᱚᱶᱟ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱫᱚ ᱴᱷᱚᱜ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱠᱚᱣᱟᱜ ᱢᱤᱫ ᱜᱚᱴ ᱨᱮᱭᱟᱜ ᱦᱟᱹᱴᱤᱧ ᱞᱮᱠᱟ ᱧᱮᱞᱚᱜ ᱠᱟᱱᱟ ᱾ ᱱᱚᱶᱟ ᱦᱟᱯᱛᱟ %d LinkGuard ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱱᱚᱶᱟ ᱠᱚ ᱨᱤᱯᱚᱨᱴ ᱞᱮᱫᱼᱟ ᱾</item>
+    </plurals>
 </resources>

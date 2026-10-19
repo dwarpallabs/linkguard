@@ -149,4 +149,36 @@ class RemoteListsTest {
         engine.evaluate("https://unknown-shop.example/")
         assertTrue(server.prefixesSeen.isNotEmpty())
     }
+
+    @Test
+    fun parsesCampaignLinesAndIgnoresUnknownTypes() {
+        val a = sha256("lg-campaign-one.example")
+        val b = sha256("lg-other.example")
+        val v = ServerVerdicts.parse("$a\tcampaign\t7\n$b\tsomething-new\t3\n$b\tcampaign\t0\n$b\tcampaign\tx")
+        assertEquals(mapOf(a to 7), v.campaign)
+        assertTrue(v.blocked.isEmpty() && v.reported.isEmpty())
+    }
+
+    @Test
+    fun campaignIsStrongAndRanksBetweenBlocklistAndCommunity() {
+        val h = sha256("lg-campaign-one.example")
+        fun verdict(sv: ServerVerdicts) = LinkEngine(TestSupport.data, null, null, reputation = { _, _ -> sv })
+            .evaluate("http://lg-campaign-one.example/kyc").signals.first { it.check == CheckId.REPUTATION }
+        val campaign = verdict(ServerVerdicts(campaign = mapOf(h to 7), reported = mapOf(h to 30)))
+        assertEquals(com.dwarpallabs.linkguard.core.checks.ReputationCheck.CAMPAIGN_SCORE, campaign.score)
+        assertEquals("warn_campaign", campaign.messageKey)
+        assertEquals("7", campaign.details["count"])
+        assertTrue(campaign.score > Verdict.STRONG_THRESHOLD)
+        assertEquals("warn_reputation", verdict(ServerVerdicts(blocked = setOf(h), campaign = mapOf(h to 7))).messageKey)
+    }
+
+    @Test
+    fun cacheKeepsCampaignVerdicts() {
+        val h = sha256("lg-campaign-one.example")
+        var calls = 0
+        val cache = MemoryCachedReputation({ _, _ -> calls++; ServerVerdicts(campaign = mapOf(h to 7)) })
+        assertEquals(7, cache.lookup(listOf(h.take(8)), 100)?.campaign?.get(h))
+        assertEquals(7, cache.lookup(listOf(h.take(8)), 100)?.campaign?.get(h))
+        assertEquals(1, calls)
+    }
 }

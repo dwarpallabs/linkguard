@@ -150,4 +150,10 @@
     </plurals>
     <string name="memory_forget_brands">ब्राण्ड्-नामानि विस्मरतु</string>
     <string name="memory_forget_trusted">जालस्थानानि विस्मरतु</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">एतत् जालस्थानं वञ्चनाजालस्थानानां कस्यचित् समूहस्य भागः इव प्रतीयते। अस्मिन् सप्ताहे %d LinkGuard-उपयोक्ता एतेषां विषये सूचितवान्।</item>
+        <item quantity="other">एतत् जालस्थानं वञ्चनाजालस्थानानां कस्यचित् समूहस्य भागः इव प्रतीयते। अस्मिन् सप्ताहे %d LinkGuard-उपयोक्तारः एतेषां विषये सूचितवन्तः।</item>
+    </plurals>
 </resources>

@@ -12,22 +12,31 @@ data class ServerVerdicts(
     val blocked: Set<String> = emptySet(),
     /** Distinct LinkGuard users who reported the domain in the last 7 days (only sent when 3 or more). */
     val reported: Map<String, Int> = emptyMap(),
+    /**
+     * Member of a confirmed scam campaign (websites sharing infrastructure with a blocklisted one and
+     * reported by several users): distinct reporters across the whole campaign this week.
+     */
+    val campaign: Map<String, Int> = emptyMap(),
 ) {
     fun forPrefix(prefix: String) = ServerVerdicts(
         blocked.filter { it.startsWith(prefix) }.toSet(),
         reported.filterKeys { it.startsWith(prefix) },
+        campaign.filterKeys { it.startsWith(prefix) },
     )
 
-    operator fun plus(other: ServerVerdicts) = ServerVerdicts(blocked + other.blocked, reported + other.reported)
+    operator fun plus(other: ServerVerdicts) =
+        ServerVerdicts(blocked + other.blocked, reported + other.reported, campaign + other.campaign)
 
     companion object {
         /**
-         * Parses `/v1/lookup` lines: `<hash>\tblock`, `<hash>\treported\t<N>`, or a bare `<hash>`
-         * (treated as blocked).
+         * Parses `/v1/lookup` lines: `<hash>\tblock`, `<hash>\treported\t<N>`, `<hash>\tcampaign\t<N>`,
+         * or a bare `<hash>` (treated as blocked). Unknown line types are ignored, so the server can
+         * add new ones without breaking older apps.
          */
         fun parse(body: String): ServerVerdicts {
             val blocked = HashSet<String>()
             val reported = HashMap<String, Int>()
+            val campaign = HashMap<String, Int>()
             for (line in body.lineSequence()) {
                 val fields = line.trim().split('\t')
                 val hash = fields[0]
@@ -35,9 +44,11 @@ data class ServerVerdicts(
                 when (fields.getOrNull(1)) {
                     null, "block" -> blocked += hash
                     "reported" -> fields.getOrNull(2)?.toIntOrNull()?.takeIf { it > 0 }?.let { reported[hash] = it }
+                    "campaign" -> fields.getOrNull(2)?.toIntOrNull()?.takeIf { it > 0 }?.let { campaign[hash] = it }
                 }
             }
-            return ServerVerdicts(blocked, reported)
+            return ServerVerdicts(blocked, reported, campaign)
+
         }
     }
 }

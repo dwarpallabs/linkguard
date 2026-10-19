@@ -48,7 +48,7 @@ Scam websites confirmed by LinkGuard are published every day, 48 hours after the
 
 On a warning screen, tap **Report this link**, then **Report**; only the website's name is sent. If you tapped **Open anyway**, LinkGuard asks once, next time you open the app, "Was that link a scam?". For a link LinkGuard missed: Settings → **Report a link**.
  Reports go privately to Dwarpal Labs and are never published. A reported website becomes public only if Dwarpal Labs confirms it is a scam (see [Using the data](#using-the-data)); weekly report counts per brand are published without any websites.
- When three or more different people report the same website within a week, other LinkGuard users automatically see a soft warning: "reported as a scam by N LinkGuard users this week". Reports alone never cause the strong red warning, and well-known sites can't be reported into a warning.
+ When three or more different people report the same website within a week, other LinkGuard users automatically see a soft warning: "reported as a scam by N LinkGuard users this week". Reports alone never cause the strong red warning, and well-known sites can't be reported into a warning. The one way reports lead to a strong warning: when reported websites share their hosting, page or other public details with a website already confirmed as a scam, LinkGuard treats them as one scam campaign and warns strongly about all of them.
 
 ## Data sources
 - Phishing and scam websites: [PhishDestroy destroylist](https://github.com/phishdestroy/destroylist) (MIT), its live root-domain list.

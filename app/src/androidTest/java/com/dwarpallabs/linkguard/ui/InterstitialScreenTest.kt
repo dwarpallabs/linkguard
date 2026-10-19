@@ -56,6 +56,13 @@ class InterstitialScreenTest {
     }
 
     @Test
+    fun campaignShowsCountWithStrongTitle() {
+        show(InterstitialModel(true, "lg-campaign-one.example", "lg-campaign-one.example", Reason.Campaign(7)))
+        compose.onNodeWithTag("title").assertTextContains(res.getString(R.string.interstitial_title_strong))
+        compose.onNodeWithTag("reason").assertTextContains(res.getQuantityString(R.plurals.warn_campaign, 7, 7))
+    }
+
+    @Test
     fun communityReportShowsCountWithSoftTitle() {
         show(InterstitialModel(false, "lg-reported-three.example", "lg-reported-three.example", Reason.Community(12)))
         compose.onNodeWithTag("title").assertTextContains(res.getString(R.string.interstitial_title_soft))
