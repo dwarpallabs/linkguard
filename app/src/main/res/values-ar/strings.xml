@@ -1,0 +1,174 @@
+<resources>
+    <!-- TODO: native review. Machine-drafted Arabic (simple Modern Standard Arabic); must be checked by a native speaker before release. -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard يفحص الروابط قبل أن تُفتح</string>
+    <string name="onboarding_body">عندما تضغط على رابط في WhatsApp أو Telegram أو SMS، يفحصه LinkGuard أولًا. الروابط الآمنة تُفتح فورًا في متصفحك. إذا بدا أن الرابط احتيال، سترى تحذيرًا، ويمكنك أن تفتحه رغم ذلك.</string>
+    <string name="onboarding_privacy">LinkGuard لا يحفظ الروابط التي تفتحها ولا يرسلها أبدًا. لا تحتاج إلى حساب.</string>
+    <string name="your_browser">متصفحك</string>
+    <string name="flow_link">رابطك</string>
+    <string name="flow_check">LinkGuard يفحصه</string>
+    <string name="not_a_browser_title">LinkGuard ليس متصفحًا</string>
+    <string name="not_a_browser_body">LinkGuard لا يعرض صفحات الإنترنت أبدًا. يفحص كل رابط في لحظة، ثم يفتحه في %1$s، المتصفح الذي تستخدمه الآن. مواقعك المحفوظة وسجل التصفح وكلمات المرور المحفوظة وعلامات التبويب تبقى كما هي تمامًا.</string>
+    <string name="default_explain">سيسمّي Android تطبيق LinkGuard «تطبيق المتصفح» لديك. هذا فقط لكي يرى LinkGuard الروابط أولًا. كل رابط سيُفتح كالعادة في %1$s.</string>
+
+    <string name="default_heading">الخطوة 1: اجعل LinkGuard متصفحك الافتراضي</string>
+    <string name="default_done">LinkGuard هو متصفحك الافتراضي</string>
+    <string name="default_button">اجعله المتصفح الافتراضي</string>
+    <string name="default_hint">إذا فُتحت الإعدادات، اضغط على «تطبيق المتصفح» واختر LinkGuard.</string>
+
+    <string name="browser_heading">الخطوة 2: افتح الروابط في</string>
+    <string name="browser_none">لم نجد متصفحًا آخر. ثبّت متصفحًا مثل Chrome.</string>
+
+    <string name="telegram_tip">تطبيقات مثل Telegram و Instagram و Facebook و LinkedIn تفتح الروابط غالبًا داخل التطبيق نفسه، حيث لا يستطيع LinkGuard فحصها. لتبقى في أمان من روابط الاحتيال، أوقف المتصفح الداخلي من إعدادات ذلك التطبيق (في Telegram: Settings → Chat Settings → In-app browser)، أو اضغط على ⋮ واختر «فتح في المتصفح».</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">ما يفحصه LinkGuard</string>
+    <string name="check_unwrap">تتبّع الروابط المختصرة</string>
+    <string name="check_unwrap_desc">يسأل خدمات مثل bit.ly إلى أين يذهب الرابط المختصر فعلًا.</string>
+    <string name="check_apk_download">تنزيل التطبيقات</string>
+    <string name="check_brand_lookalike">مواقع مزيّفة لبنوك وشركات معروفة</string>
+    <string name="check_weird_host">عناوين مواقع غير مألوفة</string>
+    <string name="check_reputation">مواقع احتيال معروفة</string>
+    <string name="check_domain_age">مواقع جديدة جدًا</string>
+    <string name="check_domain_age_desc">يسأل السجل الرسمي متى أُنشئ الموقع. يُرسَل اسم الموقع فقط، ولا يُرسَل الرابط كاملًا أبدًا.</string>
+    <string name="check_upi_intent">طلبات دفع UPI</string>
+
+    <string name="settings_report">أبلِغ عن رابط</string>
+    <string name="settings_report_desc">أخبرنا عن رابط احتيال لم يكتشفه LinkGuard.</string>
+    <string name="how_title">كيف يعمل LinkGuard</string>
+    <string name="how_desc">لماذا تحتاج إليه، وكيف يقرر أي الروابط يحذّرك منها.</string>
+    <string name="how_why_title">لماذا تحتاج إليه</string>
+    <string name="how_why_body">رسائل الاحتيال على WhatsApp و SMS تحمل غالبًا روابط تبدو حقيقية: صفحة بنك مزيّفة، أو نموذج «تحديث KYC»، أو تطبيق يسرق المال. ضغطة واحدة تكفي ليحدث الضرر، وقد يصعب كشف عنوان الموقع المزيّف.</string>
+    <string name="how_where_title">أين يعمل LinkGuard</string>
+    <string name="how_where_body">يقف LinkGuard بين الرابط الذي تضغط عليه ومتصفحك. يفحص الرابط في لحظة، ثم يفتحه في %1$s. لا يعرض صفحات الإنترنت بنفسه أبدًا.</string>
+    <string name="how_safe_title">الروابط الآمنة تُفتح فورًا</string>
+    <string name="how_safe_body">المواقع المعروفة والمواقع الرسمية، مثل مواقع الحكومة (.gov.in) ومواقع البنوك، تُفتح مباشرة. إذا بدا الرابط سليمًا، فلن ترى أي شيء.</string>
+    <string name="how_scam_title">كشف روابط الاحتيال</string>
+    <string name="how_scam_body">يبحث LinkGuard عن الحيل التي يستخدمها المحتالون: مواقع تتظاهر بأنها بنك أو شركة معروفة، وتنزيل تطبيقات من خارج Play Store، وطلبات دفع مخفية، ومواقع جديدة جدًا، وعناوين مواقع غير مألوفة. ويفحص أيضًا قائمة فيها عشرات الآلاف من مواقع الاحتيال والمواقع الضارة المعروفة، جُمعت من أكبر مصادر الأمان في العالم وتُحدَّث كل يوم.</string>
+    <string name="how_community_title">بلاغات من مستخدمين آخرين</string>
+    <string name="how_community_body">عندما يبلّغ عدد من مستخدمي LinkGuard عن الموقع نفسه بأنه احتيال، يظهر للآخرين تحذير ليكونوا حذرين.</string>
+    <string name="how_choice_title">القرار لك دائمًا</string>
+    <string name="how_choice_body">LinkGuard لا يمنع أي رابط أبدًا. كل تحذير يشرح المشكلة بكلمات بسيطة ويعطيك خيار «افتحه رغم ذلك». LinkGuard لا يحفظ الروابط التي تفتحها أبدًا.</string>
+    <string name="feedback_title">ترجمة خاطئة؟ أخبرنا</string>
+    <string name="feedback_desc">تُرجم LinkGuard آليًا. ساعدنا في تصحيح الأخطاء بلغتك.</string>
+    <string name="feedback_intro">تُرجمت نصوص LinkGuard بهذه اللغة آليًا، وقد تكون فيها أخطاء. إذا بدا لك شيء غير صحيح، أخبرنا بالكلمات الخاطئة وكيف تقولها أنت. استخدم الطريقة الأسهل لك:</string>
+    <string name="feedback_email">راسلنا بالبريد</string>
+    <string name="feedback_github">أبلِغ عنه على GitHub</string>
+    <string name="feedback_github_desc">تحتاج إلى حساب GitHub مجاني.</string>
+    <string name="about_title">عن LinkGuard</string>
+    <string name="about_desc">الإصدار، وسياسة الخصوصية، والمصدر المفتوح، والتواصل.</string>
+    <string name="about_version">الإصدار %1$s</string>
+    <string name="about_by">من صنع Dwarpal Labs. LinkGuard مستقل، وليس له علاقة بأي بنك أو تطبيق دفع أو شركة توصيل أو جهة حكومية.</string>
+    <string name="about_privacy">سياسة الخصوصية</string>
+    <string name="about_privacy_desc">ما الذي يخرج من هاتفك، ولماذا.</string>
+    <string name="about_source">مصدر مفتوح</string>
+    <string name="about_source_desc">مجاني بموجب ترخيص Apache-2.0. يمكن لأي شخص فحص الكود على GitHub.</string>
+    <string name="about_contact">تواصل معنا</string>
+    <string name="about_credits">شكر وتقدير</string>
+    <string name="about_credits_body">مواقع الاحتيال: PhishDestroy. المواقع الضارة: URLhaus من abuse.ch. المواقع الشائعة: قائمة Tranco. أسماء المواقع: Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">الرابط</string>
+    <string name="report_note_label">لماذا تظن أنه احتيال؟ (اختياري)</string>
+    <string name="report_private_info">يصل بلاغك إلى Dwarpal Labs بشكل خاص ولا يُنشر أبدًا. عندما يبلّغ عدة أشخاص مختلفين عن الموقع نفسه، يرى مستخدمو LinkGuard الآخرون تحذيرًا تلقائيًا. لا يمكن لأحد أن يعرف أن البلاغ منك. من فضلك لا تكتب أرقام هواتف أو أسماء أو أي معلومات شخصية أخرى.</string>
+    <string name="report_submit">أرسل البلاغ</string>
+    <string name="report_sending">جارٍ الإرسال…</string>
+    <string name="report_sent">شكرًا لك. أُرسل بلاغك للمراجعة.</string>
+    <string name="report_failed">تعذّر إرسال البلاغ. تأكّد من اتصالك بالإنترنت وحاول مرة أخرى.</string>
+    <string name="back">رجوع</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">قد يكون هذا الرابط احتيالًا</string>
+    <string name="interstitial_title_soft">انتبه لهذا الرابط</string>
+    <string name="interstitial_go_back">ارجع</string>
+    <string name="interstitial_open_anyway">افتحه رغم ذلك</string>
+    <string name="interstitial_report">أبلِغ عن هذا الرابط</string>
+    <string name="interstitial_report_hint">دون ذكر اسمك. يساعد في تحذير مستخدمي LinkGuard الآخرين.</string>
+    <string name="interstitial_checking">جارٍ فحص الرابط…</string>
+    <string name="interstitial_upi_heading">طلب دفع UPI</string>
+    <string name="interstitial_upi_payee">الدفع إلى: %1$s</string>
+    <string name="interstitial_upi_amount">المبلغ: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">هذا الرابط ينزّل تطبيقًا من خارج Play Store. التطبيقات المزيّفة مثل هذا قد تقرأ رسائلك وتسرق رموز OTP الخاصة ببنكك.</string>
+    <string name="warn_brand_lookalike">هذا الموقع يتظاهر بأنه %1$s. إنه ليس موقع %1$s الحقيقي.</string>
+    <string name="warn_upi_intent">هذا الرابط يطلب منك إرسال مال عبر UPI. لا تحتاج أبدًا أن تدفع لكي تسترد مالًا، أو تحصل على جائزة، أو تحدّث KYC.</string>
+    <string name="warn_weird_host">هذا الرابط يستخدم عنوانًا غير مألوف نادرًا ما تستخدمه الشركات الحقيقية.</string>
+    <string name="warn_weird_host_brand">هذا الرابط يذكر %1$s، لكنه يستخدم عنوانًا غير مألوف لا يستخدمه %1$s.</string>
+    <string name="warn_reputation">هذا الموقع موجود في قائمة لمواقع احتيال أو مواقع ضارة معروفة.</string>
+    <plurals name="warn_community">
+        <item quantity="zero">هذا الأسبوع، أبلغ %d من مستخدمي LinkGuard عن هذا الرابط بأنه احتيال.</item>
+        <item quantity="one">هذا الأسبوع، أبلغ %d مستخدم في LinkGuard عن هذا الرابط بأنه احتيال.</item>
+        <item quantity="two">هذا الأسبوع، أبلغ %d من مستخدمي LinkGuard عن هذا الرابط بأنه احتيال.</item>
+        <item quantity="few">هذا الأسبوع، أبلغ %d من مستخدمي LinkGuard عن هذا الرابط بأنه احتيال.</item>
+        <item quantity="many">هذا الأسبوع، أبلغ %d من مستخدمي LinkGuard عن هذا الرابط بأنه احتيال.</item>
+        <item quantity="other">هذا الأسبوع، أبلغ %d من مستخدمي LinkGuard عن هذا الرابط بأنه احتيال.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="zero">أُنشئ هذا الموقع منذ %d يوم. مواقع الاحتيال تكون غالبًا جديدة جدًا.</item>
+        <item quantity="one">أُنشئ هذا الموقع منذ %d يوم. مواقع الاحتيال تكون غالبًا جديدة جدًا.</item>
+        <item quantity="two">أُنشئ هذا الموقع منذ %d يومين. مواقع الاحتيال تكون غالبًا جديدة جدًا.</item>
+        <item quantity="few">أُنشئ هذا الموقع منذ %d أيام. مواقع الاحتيال تكون غالبًا جديدة جدًا.</item>
+        <item quantity="many">أُنشئ هذا الموقع منذ %d يومًا. مواقع الاحتيال تكون غالبًا جديدة جدًا.</item>
+        <item quantity="other">أُنشئ هذا الموقع منذ %d يوم. مواقع الاحتيال تكون غالبًا جديدة جدًا.</item>
+    </plurals>
+    <string name="warn_generic">وجد LinkGuard شيئًا غير عادي في هذا الرابط.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">هل تريد الإبلاغ عن هذا بأنه احتيال؟</string>
+    <string name="report_confirm_body">يُرسَل اسم الموقع فقط، ولا يُرسَل أبدًا الرابط كاملًا أو رسائلك.</string>
+    <string name="report_confirm_send">أبلِغ</string>
+    <string name="action_close">أغلِق</string>
+    <string name="report_thanks">شكرًا لك. بلاغك يساعد في تحذير الآخرين.</string>
+    <string name="scam_check_title">هل كان ذلك الرابط احتيالًا؟</string>
+    <string name="scam_check_body">فتحت %1$s في %2$s بعد أن حذّرك LinkGuard.</string>
+    <string name="scam_check_yes">نعم، كان احتيالًا</string>
+    <string name="scam_check_no">لا، كان سليمًا</string>
+    <string name="scam_check_unsure">لست متأكدًا</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">افحص بواسطة LinkGuard</string>
+    <string name="share_checking">جارٍ فحص الروابط…</string>
+    <string name="share_no_links">لم نجد أي روابط. LinkGuard يفحص الروابط فقط.</string>
+    <plurals name="share_title">
+        <item quantity="zero">فحص LinkGuard %d روابط</item>
+        <item quantity="one">فحص LinkGuard %d رابط</item>
+        <item quantity="two">فحص LinkGuard %d رابطين</item>
+        <item quantity="few">فحص LinkGuard %d روابط</item>
+        <item quantity="many">فحص LinkGuard %d رابطًا</item>
+        <item quantity="other">فحص LinkGuard %d رابط</item>
+    </plurals>
+    <string name="share_private">رسالتك تبقى على هاتفك. فُحصت الروابط التي فيها فقط.</string>
+    <string name="share_safe_title">لم نجد أي علامات خطر</string>
+    <string name="share_copy">انسخ اسم الموقع</string>
+    <string name="share_copied">نُسخ اسم الموقع</string>
+    <plurals name="share_more">
+        <item quantity="zero">فحص LinkGuard أول %d روابط فقط.</item>
+        <item quantity="one">فحص LinkGuard أول %d رابط فقط.</item>
+        <item quantity="two">فحص LinkGuard أول %d رابطين فقط.</item>
+        <item quantity="few">فحص LinkGuard أول %d روابط فقط.</item>
+        <item quantity="many">فحص LinkGuard أول %d رابطًا فقط.</item>
+        <item quantity="other">فحص LinkGuard أول %d رابط فقط.</item>
+    </plurals>
+    <string name="home_share_tip">لست متأكدًا من رسالة؟ شاركها مع LinkGuard: اضغط على مشاركة، ثم اختر افحص بواسطة LinkGuard.</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">أنت تستخدم %1$s. هذا الموقع يتظاهر بأنه %1$s. إنه ليس موقع %1$s الحقيقي.</string>
+    <string name="memory_heading">ما تعلّمه على هذا الهاتف</string>
+    <string name="memory_private">يحتفظ LinkGuard بهذا على هاتفك فقط، ولا يرسله أبدًا.</string>
+    <string name="memory_brands">بنوكك وتطبيقاتك: %1$s</string>
+    <string name="memory_brands_desc">يتعلّمها LinkGuard عندما تفتح مواقعها الحقيقية، ويحذّرك بقوة أكبر من المواقع المزيّفة التي تقلّدها.</string>
+    <plurals name="memory_trusted">
+        <item quantity="zero">قلت إن %d مواقع كانت سليمة. الآن يحذّرك LinkGuard منها فقط إذا بدت خطيرة حقًا.</item>
+        <item quantity="one">قلت إن %d موقع كان سليمًا. الآن يحذّرك LinkGuard منه فقط إذا بدا خطيرًا حقًا.</item>
+        <item quantity="two">قلت إن %d موقعين كانا سليمين. الآن يحذّرك LinkGuard منهما فقط إذا بدا أي منهما خطيرًا حقًا.</item>
+        <item quantity="few">قلت إن %d مواقع كانت سليمة. الآن يحذّرك LinkGuard منها فقط إذا بدت خطيرة حقًا.</item>
+        <item quantity="many">قلت إن %d موقعًا كانت سليمة. الآن يحذّرك LinkGuard منها فقط إذا بدت خطيرة حقًا.</item>
+        <item quantity="other">قلت إن %d موقع كانت سليمة. الآن يحذّرك LinkGuard منها فقط إذا بدت خطيرة حقًا.</item>
+    </plurals>
+    <string name="memory_forget_brands">انسَ البنوك والتطبيقات</string>
+    <string name="memory_forget_trusted">انسَ المواقع</string>
+</resources>

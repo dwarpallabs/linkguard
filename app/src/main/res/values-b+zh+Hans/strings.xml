@@ -1,0 +1,149 @@
+<resources>
+    <!-- TODO: native review. Machine-drafted Simplified Chinese; must be checked by a native speaker before release. -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard 会在链接打开前先检查</string>
+    <string name="onboarding_body">您在 WhatsApp、Telegram 或短信里点链接时，LinkGuard 会先检查一下。安全的链接会直接在您的浏览器里打开。如果链接看起来像诈骗，您会看到一条提醒，但仍然可以选择打开它。</string>
+    <string name="onboarding_privacy">LinkGuard 从不保存或发送您打开的链接。不需要注册账号。</string>
+    <string name="your_browser">您的浏览器</string>
+    <string name="flow_link">您的链接</string>
+    <string name="flow_check">LinkGuard 检查链接</string>
+    <string name="not_a_browser_title">LinkGuard 不是浏览器</string>
+    <string name="not_a_browser_body">LinkGuard 从不显示网页。它会在一眨眼间检查每个链接，然后用 %1$s 打开，也就是您平时用的浏览器。您的书签、历史记录、保存的密码和标签页都保持原样。</string>
+    <string name="default_explain">Android 会把 LinkGuard 叫作您的“浏览器应用”。这只是为了让 LinkGuard 先看到链接。每个链接仍然会用 %1$s 打开。</string>
+
+    <string name="default_heading">第 1 步：把 LinkGuard 设为默认浏览器</string>
+    <string name="default_done">LinkGuard 已是您的默认浏览器</string>
+    <string name="default_button">设为默认浏览器</string>
+    <string name="default_hint">如果打开了设置，请点“浏览器应用”，然后选择 LinkGuard。</string>
+
+    <string name="browser_heading">第 2 步：选择用哪个浏览器打开链接</string>
+    <string name="browser_none">没有找到其他浏览器。请安装一个浏览器，比如 Chrome。</string>
+
+    <string name="telegram_tip">Telegram、Instagram、Facebook 和 LinkedIn 这类应用常常在应用里面直接打开链接，这时 LinkGuard 没法检查。为了避开诈骗链接，请在这个应用的设置里关掉内置浏览器（Telegram 里是：Settings → Chat Settings → In-app browser），或者点 ⋮ 再选“在浏览器中打开”。</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">LinkGuard 检查什么</string>
+    <string name="check_unwrap">查看短链接去哪里</string>
+    <string name="check_unwrap_desc">向 bit.ly 这类服务询问短链接真正通向哪里。</string>
+    <string name="check_apk_download">应用下载</string>
+    <string name="check_brand_lookalike">假银行和假品牌网站</string>
+    <string name="check_weird_host">不寻常的网址</string>
+    <string name="check_reputation">已知的诈骗网站</string>
+    <string name="check_domain_age">刚建好的网站</string>
+    <string name="check_domain_age_desc">向官方登记机构询问这个网站是什么时候建的。只发送网站名称，从不发送完整链接。</string>
+    <string name="check_upi_intent">UPI 付款请求</string>
+
+    <string name="settings_report">举报链接</string>
+    <string name="settings_report_desc">告诉我们 LinkGuard 漏掉的诈骗链接。</string>
+    <string name="how_title">LinkGuard 是怎么工作的</string>
+    <string name="how_desc">为什么需要它，以及它怎样决定对哪些链接发出提醒。</string>
+    <string name="how_why_title">为什么需要它</string>
+    <string name="how_why_body">WhatsApp 和短信里的诈骗消息，常常带着看起来很真的链接：假银行网页、“KYC 更新”表格，或者会偷钱的应用。点一下就可能受害，而假网址可能很难看出来。</string>
+    <string name="how_where_title">LinkGuard 在哪里起作用</string>
+    <string name="how_where_body">LinkGuard 在您点的链接和您的浏览器之间。它在一眨眼间检查链接，然后用 %1$s 打开。它自己从不显示网页。</string>
+    <string name="how_safe_title">安全的链接马上打开</string>
+    <string name="how_safe_body">知名网站和官方网站，比如政府（.gov.in）和银行的网站，会马上打开。如果链接看起来没问题，您什么都不会看到。</string>
+    <string name="how_scam_title">认出诈骗链接</string>
+    <string name="how_scam_body">LinkGuard 会留意骗子常用的手段：冒充银行或知名品牌的网站、从 Play Store 以外下载的应用、藏起来的付款请求、刚建好的网站和不寻常的网址。它还会对照一份名单来检查。名单上有几万个已知的诈骗网站和有害网站，来自国际上主要的安全数据库，每天更新。</string>
+    <string name="how_community_title">其他用户的举报</string>
+    <string name="how_community_body">当好几位 LinkGuard 用户举报同一个网站是诈骗时，其他人会收到提醒，要多加小心。</string>
+    <string name="how_choice_title">总是由您决定</string>
+    <string name="how_choice_body">LinkGuard 从不拦住任何链接。每条提醒都会用简单的话说明问题，并提供“仍然打开”。LinkGuard 从不保存您打开的链接。</string>
+    <string name="feedback_title">翻译有错？告诉我们</string>
+    <string name="feedback_desc">LinkGuard 是机器翻译的。请帮忙改正您所用语言里的错误。</string>
+    <string name="feedback_intro">LinkGuard 在这种语言里的文字是机器翻译的，可能有错误。如果哪里读起来不对，请告诉我们哪些字词错了，以及您会怎么说。用哪种方式最方便都可以：</string>
+    <string name="feedback_email">给我们发邮件</string>
+    <string name="feedback_github">在 GitHub 上告诉我们</string>
+    <string name="feedback_github_desc">需要一个免费的 GitHub 账号。</string>
+    <string name="about_title">关于 LinkGuard</string>
+    <string name="about_desc">版本、隐私政策、开源和联系方式。</string>
+    <string name="about_version">版本 %1$s</string>
+    <string name="about_by">由 Dwarpal Labs 制作。LinkGuard 是独立的，和任何银行、支付应用、快递公司或政府机构都没有关系。</string>
+    <string name="about_privacy">隐私政策</string>
+    <string name="about_privacy_desc">哪些信息会离开您的手机，以及为什么。</string>
+    <string name="about_source">开源</string>
+    <string name="about_source_desc">按 Apache-2.0 许可证免费使用。任何人都可以在 GitHub 上检查代码。</string>
+    <string name="about_contact">联系我们</string>
+    <string name="about_credits">致谢</string>
+    <string name="about_credits_body">诈骗网站：PhishDestroy。有害网站：abuse.ch 的 URLhaus。热门网站：Tranco 名单。网站名称：Public Suffix List（MPL-2.0）。</string>
+    <string name="report_link_label">链接</string>
+    <string name="report_note_label">您为什么觉得它是诈骗？（可以不填）</string>
+    <string name="report_private_info">您的举报会私下发给 Dwarpal Labs，绝不会公开。当好几个不同的人举报同一个网站时，其他 LinkGuard 用户会自动看到提醒。没人能通过举报找到您。请不要写电话号码、姓名或其他个人信息。</string>
+    <string name="report_submit">发送举报</string>
+    <string name="report_sending">正在发送…</string>
+    <string name="report_sent">谢谢您。您的举报已发送，等待审核。</string>
+    <string name="report_failed">举报没有发送成功。请检查网络连接，然后再试一次。</string>
+    <string name="back">返回</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">这个链接可能是诈骗</string>
+    <string name="interstitial_title_soft">请小心这个链接</string>
+    <string name="interstitial_go_back">返回</string>
+    <string name="interstitial_open_anyway">仍然打开</string>
+    <string name="interstitial_report">举报这个链接</string>
+    <string name="interstitial_report_hint">匿名举报。能帮忙提醒其他 LinkGuard 用户。</string>
+    <string name="interstitial_checking">正在检查链接…</string>
+    <string name="interstitial_upi_heading">UPI 付款请求</string>
+    <string name="interstitial_upi_payee">收款人：%1$s</string>
+    <string name="interstitial_upi_amount">金额：₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">这个链接会从 Play Store 以外下载应用。这种假应用能读取您的短信，偷走银行 OTP。</string>
+    <string name="warn_brand_lookalike">这个网站在冒充 %1$s。它不是 %1$s 真正的网站。</string>
+    <string name="warn_upi_intent">这个链接要您用 UPI 付钱。拿退款、领奖品或做 KYC 更新，都不需要付钱。</string>
+    <string name="warn_weird_host">这个链接用的网址很不寻常，正规公司很少这样用。</string>
+    <string name="warn_weird_host_brand">这个链接提到了 %1$s，但用的是 %1$s 不会用的不寻常网址。</string>
+    <string name="warn_reputation">这个网站在已知诈骗网站或有害网站的名单上。</string>
+    <plurals name="warn_community">
+        <item quantity="other">这周有 %d 位 LinkGuard 用户举报这个链接是诈骗。</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="other">这个网站 %d 天前才建好。诈骗网站往往是刚建好的。</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard 发现这个链接有些不寻常。</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">要举报这是诈骗吗？</string>
+    <string name="report_confirm_body">只发送网站名称，绝不会发送完整链接或您的消息。</string>
+    <string name="report_confirm_send">举报</string>
+    <string name="action_close">关闭</string>
+    <string name="report_thanks">谢谢您。您的举报能帮忙提醒其他人。</string>
+    <string name="scam_check_title">那个链接是诈骗吗？</string>
+    <string name="scam_check_body">LinkGuard 提醒您之后，您在 %2$s 仍然打开了 %1$s。</string>
+    <string name="scam_check_yes">是的，是诈骗</string>
+    <string name="scam_check_no">不是，没问题</string>
+    <string name="scam_check_unsure">不确定</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">用 LinkGuard 检查</string>
+    <string name="share_checking">正在检查这些链接…</string>
+    <string name="share_no_links">没有找到链接。LinkGuard 只能检查链接。</string>
+    <plurals name="share_title">
+        <item quantity="other">LinkGuard 检查了 %d 个链接</item>
+    </plurals>
+    <string name="share_private">您的消息只留在您的手机上。只检查了消息里的链接。</string>
+    <string name="share_safe_title">没有发现可疑的地方</string>
+    <string name="share_copy">复制网站名称</string>
+    <string name="share_copied">网站名称已复制</string>
+    <plurals name="share_more">
+        <item quantity="other">LinkGuard 只检查了前 %d 个链接。</item>
+    </plurals>
+    <string name="home_share_tip">对某条消息不放心？把它分享给 LinkGuard：先点分享，再选用 LinkGuard 检查。</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">您在用 %1$s。这个网站在冒充 %1$s。它不是 %1$s 真正的网站。</string>
+    <string name="memory_heading">在这部手机上学到的</string>
+    <string name="memory_private">LinkGuard 只把这些保存在您的手机上，从不发送出去。</string>
+    <string name="memory_brands">您的银行和应用：%1$s</string>
+    <string name="memory_brands_desc">您打开它们真正的网站时，LinkGuard 会记住它们，并对冒充它们的假网站发出更强的提醒。</string>
+    <plurals name="memory_trusted">
+        <item quantity="other">您说过 %d 个网站没问题。现在只有当它们看起来真的很危险时，LinkGuard 才会提醒您。</item>
+    </plurals>
+    <string name="memory_forget_brands">忘记这些品牌</string>
+    <string name="memory_forget_trusted">忘记这些网站</string>
+</resources>

@@ -64,7 +64,10 @@ The scam blocklist and the safe-site allowlist are kept in the LinkGuard server 
 ## Languages
 LinkGuard follows your phone's language. On Android 13 and newer you can also pick a language just for LinkGuard in *Settings → Apps → LinkGuard → Language*.
 
-English, Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili, Malayalam, Manipuri (Meetei Mayek), Marathi, Nepali, Odia, Punjabi, Sanskrit, Santali (Ol Chiki), Sindhi, Tamil, Telugu and Urdu.
+English, Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili, Malayalam, Manipuri (Meetei Mayek), Marathi, Nepali, Odia, Punjabi, Sanskrit, Santali (Ol Chiki), Sindhi, Tamil, Telugu and Urdu: every scheduled language of India.
+
+Also Chinese (Simplified), Spanish, Arabic, French and Portuguese (Brazil): the five most-spoken languages in the world after English, outside India. The warnings about Indian banks, apps and UPI stay the same in every language.
+
 
 Every language except English is **machine-translated**, so some wording will be off. If something reads wrong, tell us the wrong words and how you would say them, whichever way is easiest:
 - the in-app screen: *Settings → Wrong translation? Tell us*
