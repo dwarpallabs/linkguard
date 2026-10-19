@@ -77,5 +77,5 @@ Good tester sources: friends and family on Android, the r/developersIndia post, 
 - **Bundle:** `./gradlew :app:bundlePlayRelease` → `app/build/outputs/bundle/playRelease/app-play-release.aab`.
 - **Play App Signing:** choose **"Use existing app signing key from Java keystore"**. Download Google's `pepk.jar` and encryption key from that screen, then run the command it shows against `~/.android-keys/linkguard-release.jks`, alias `linkguard`, typing the password yourself. Upload the resulting zip.
 - **Upload key:** the same certificate, `3b7a7bc8…95405cee`.
-- **Graphics:** `graphics/icon-512.png`, `graphics/feature-1024x500.png`, and `graphics/screenshots/*_{en,hi,ta}.png` (five per language, in numbered order). Other listing languages reuse the English screenshots.
+- **Graphics:** `graphics/icon-512.png`, `graphics/feature-1024x500.png`, and `graphics/screenshots/*_{en,hi,ta}.png` (four per language, in numbered order; re-take with `take_screenshots.sh`. Scene 4, the community "reported by N users" warning, is added once a test site with 3+ reports exists on the server). Other listing languages reuse the English screenshots.
 - **Release notes:** the "Release notes" section of each `listing-*.md`.
