@@ -1,0 +1,7 @@
+phish_id,url,phish_detail_url,submission_time,verified,verification_time,online,target
+9000001,http://lg-pt-bank-verify.example/login.php,https://www.phishtank.com/phish_detail.php?phish_id=9000001,2026-10-19T01:00:00+00:00,yes,2026-10-19T02:00:00+00:00,yes,Other
+9000002,"https://lg-pt-quoted.example/a,b",https://www.phishtank.com/phish_detail.php?phish_id=9000002,2026-10-19T01:00:00+00:00,yes,2026-10-19T02:00:00+00:00,yes,Other
+9000003,http://lg-pt-unverified.example/,https://www.phishtank.com/phish_detail.php?phish_id=9000003,2026-10-19T01:00:00+00:00,no,,yes,Other
+9000004,http://lg-pt-offline.example/,https://www.phishtank.com/phish_detail.php?phish_id=9000004,2026-10-19T01:00:00+00:00,yes,2026-10-19T02:00:00+00:00,no,Other
+9000005,https://sites.google.com/view/lg-pt-shared-host,https://www.phishtank.com/phish_detail.php?phish_id=9000005,2026-10-19T01:00:00+00:00,yes,2026-10-19T02:00:00+00:00,yes,Other
+broken line without enough fields

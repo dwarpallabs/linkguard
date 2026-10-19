@@ -1,7 +1,7 @@
 name: Feeds
 
-# Daily refresh of the LinkGuard server lists from public feeds (URLhaus malware hosts, PhishDestroy
-# phishing and scam domains, Tranco top sites). Results go straight to the private server database;
+# Daily refresh of the LinkGuard server lists from public feeds (URLhaus malware hosts, PhishDestroy and PhishTank
+# phishing and scam domains, Tranco top sites; terms in feeds/SOURCES.md). Results go straight to the private server database;
 # nothing is committed. The log prints counts only, because logs of this public repository are public.
 on:
   schedule:

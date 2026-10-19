@@ -203,4 +203,32 @@ class FeedsTest {
         ListWriter(db).apply(FeedResult(many, emptySet(), emptyMap()), emptyMap(), emptyMap())
         assertEquals(3, db.statements.count { it.startsWith("INSERT OR IGNORE INTO blocklist") })
     }
+
+    @Test
+    fun parsesPhishTankVerifiedOnlineRowsOnly() {
+        val urls = Sources.parsePhishTankCsv(javaClass.getResource("/phishtank_sample.csv")!!.readText())
+        assertEquals(
+            listOf(
+                "http://lg-pt-bank-verify.example/login.php",
+                "https://lg-pt-quoted.example/a,b",
+                "https://sites.google.com/view/lg-pt-shared-host",
+            ),
+            urls,
+        )
+    }
+
+    @Test
+    fun phishTankHostsAreBlockedButNeverASharedPlatform() {
+        val urls = Sources.parsePhishTankCsv(javaClass.getResource("/phishtank_sample.csv")!!.readText())
+        val result = FeedBuilder(data, neverAllow).build(mapOf("phishtank" to urls), ranked)
+        assertEquals(mapOf("lg-pt-bank-verify.example" to "phishtank", "lg-pt-quoted.example" to "phishtank"), result.blockHosts)
+        assertEquals(1, result.stats["phishtank_skipped_shared_or_allowed"])
+    }
+
+    @Test
+    fun phishTankIsNeverPublished() {
+        assertFalse("phishtank" in Publication.PUBLISHABLE_FEEDS)
+        val row = Publication.Row("lg-pt-bank-verify.example", "feed", "phishtank", 0, 0)
+        assertTrue(Publication.select(listOf(row), emptySet(), 3 * 86_400L).isEmpty())
+    }
 }
