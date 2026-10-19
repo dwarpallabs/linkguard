@@ -37,3 +37,6 @@ https://lg-reported-dismissed.example/	reputation	server omits dismissed domains
 https://www.flipkart.com/offers	allowlist	allowlisted even if the server lists it in a campaign (test fixture)
 https://www.youtube.com/watch?v=lg	allowlist	allowlisted even if the server lists it in a campaign (test fixture)
 https://rbi.org.in/Scripts/banklinks.aspx	allowlist	allowlisted even if the server lists it in a campaign (test fixture)
+https://www.rbi.org.in/upi/mandate-autopay-faq	upi_intent	page about UPI mandates on an allowlisted site, not a payment request
+https://www.google.com/search?q=tez+upi+pay	upi_intent	search about Google Pay, not a payment request
+https://www.npci.org.in/what-we-do/autopay/product-overview	upi_intent	page about UPI AutoPay, not a payment request

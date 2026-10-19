@@ -128,7 +128,7 @@ object LinkExtractor {
     private val ALWAYS_INVISIBLE = setOf('​', '⁠', '﻿', '­', '᠎')
     private val FULL_STOPS = setOf('。', '．', '｡')
     private val SEPARATOR = Regex("""[\s  -   　]+""")
-    private val SCHEME = Regex("""(?i)(https?|upi)://""")
+    private val SCHEME = Regex("""(?i)(https?|upi|tez|phonepe|paytmmp)://""")
     private val STOP = setOf('।', '॥', '"', '\'', '<', '>', '‘', '’', '“', '”', '|', '`', '、', '،')
     private val TRAILING = ".,;:!?*…]}".toSet() + setOf('۔', '؟')
 

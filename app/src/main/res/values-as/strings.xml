@@ -84,7 +84,6 @@
     <string name="interstitial_report">এই লিংক ৰিপ’ৰ্ট কৰক</string>
     <string name="interstitial_report_hint">বেনামী। আন LinkGuard ব্যৱহাৰকাৰীক সতৰ্ক কৰাত সহায় কৰে।</string>
     <string name="interstitial_checking">লিংক পৰীক্ষা কৰি আছে…</string>
-    <string name="interstitial_upi_heading">UPI-ত টকা খোজা অনুৰোধ</string>
     <string name="interstitial_upi_payee">যাক দিব: %1$s</string>
     <string name="interstitial_upi_amount">টকাৰ পৰিমাণ: ₹%1$s</string>
 
@@ -160,4 +159,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">এই লিংকটো SMS-ৰ জৰিয়তে আহিছে। অচিনাকি লোকৰ মেছেজত অহা লিংকৰ পৰা সাৱধান হওক।</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">এই লিংকে আপোনাক পইচা দিবলৈ কৈছে</string>
+    <string name="upi_asks_mandate">এই লিংকে নিজে নিজে পইচা কটাৰ অনুমতি বিচাৰিছে</string>
+    <string name="warn_upi_mandate">এই লিংকে আপোনাৰ একাউণ্টৰ পৰা নিজে নিজে পইচা কটাৰ ব্যৱস্থা কৰে। চিনাকি বিল বা প্লেনৰ বাবে আপুনি নিজে আৰম্ভ কৰিলেহে মান্তি হওক।</string>
+    <string name="warn_upi_brand">এই পেমেণ্ট অনুৰোধত %1$s-ৰ নাম ব্যৱহাৰ কৰা হৈছে, কিন্তু পইচা আন একাউণ্টলৈ যায়। ৰিফাণ্ড বা KYC আপডেটৰ বাবে আপুনি কেতিয়াও পইচা দিব নালাগে।</string>
 </resources>

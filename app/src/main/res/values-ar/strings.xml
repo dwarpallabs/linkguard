@@ -84,7 +84,6 @@
     <string name="interstitial_report">أبلِغ عن هذا الرابط</string>
     <string name="interstitial_report_hint">دون ذكر اسمك. يساعد في تحذير مستخدمي LinkGuard الآخرين.</string>
     <string name="interstitial_checking">جارٍ فحص الرابط…</string>
-    <string name="interstitial_upi_heading">طلب دفع UPI</string>
     <string name="interstitial_upi_payee">الدفع إلى: %1$s</string>
     <string name="interstitial_upi_amount">المبلغ: ₹%1$s</string>
 
@@ -184,4 +183,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">وصل هذا الرابط برسالة SMS. احذر من الروابط في رسائل أشخاص لا تعرفهم.</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">يطلب منك هذا الرابط أن تدفع</string>
+    <string name="upi_asks_mandate">يطلب هذا الرابط دفعات تلقائية</string>
+    <string name="warn_upi_mandate">يُفعّل هذا الرابط دفعات تلقائية من حسابك. لا توافق إلا إذا بدأت ذلك بنفسك لفاتورة أو خطة تعرفها.</string>
+    <string name="warn_upi_brand">يستخدم طلب الدفع هذا اسم %1$s، لكن المال يذهب إلى حساب آخر. لا تحتاج أبدًا إلى الدفع لتحصل على استرداد أو لتحديث KYC.</string>
 </resources>

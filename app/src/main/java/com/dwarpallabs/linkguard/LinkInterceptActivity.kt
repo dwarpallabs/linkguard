@@ -112,7 +112,7 @@ class LinkInterceptActivity : ComponentActivity() {
         viewModel.rememberOpenedAnyway(verdict)
         val url = verdict.finalUrl
 
-        if (url != null && url.scheme == "upi") {
+        if (url != null && url.isUpi) {
             // A web link that redirected to a UPI request: hand it to the user's UPI app.
             try {
                 startActivity(Intent(Intent.ACTION_VIEW, url.toUrlString().toUri()))

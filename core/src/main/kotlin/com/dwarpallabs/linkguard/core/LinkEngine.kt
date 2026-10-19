@@ -54,7 +54,8 @@ class LinkEngine(
     private val unwrapper = http?.let { Unwrapper(it, data, clock = clock) }
     private val matcher = BrandMatcher(data.brands)
 
-    private val upi = UpiIntentCheck()
+    private val upi = UpiIntentCheck(matcher)
+
     private val apk = ApkDownloadCheck(data)
     private val allowlist = AllowlistCheck(data)
     private val localChecks: List<Pair<CheckId, Check>> = listOf(
@@ -78,13 +79,13 @@ class LinkEngine(
     ): Verdict {
         val start = clock()
         val parsed = NormalisedUrl.parse(raw, data.psl) ?: return Verdict.of(emptyList(), null)
-        if (parsed.scheme == "upi") return Verdict.of(listOfNotNull(upiSignal(parsed, disabled)), parsed)
+        if (parsed.isUpi) return Verdict.of(listOfNotNull(upiSignal(parsed, disabled)), parsed)
 
         val deadline = start + if (isListedShortener(parsed)) budget.shortenerMs else budget.normalMs
         val unwrapped = if (CheckId.UNWRAP in disabled) null else unwrapper?.unwrap(parsed, deadline - clock())
         val url = unwrapped?.url ?: parsed
         val unwrapSignal = Signal(CheckId.UNWRAP, 0.0, "unwrap.hops_${unwrapped?.hops ?: 0}", null)
-        if (url.scheme == "upi") return Verdict.of(listOfNotNull(unwrapSignal, upiSignal(url, disabled)), url)
+        if (url.isUpi) return Verdict.of(listOfNotNull(unwrapSignal, upiSignal(url, disabled)), url)
 
         val signals = mutableListOf(unwrapSignal)
         if (CheckId.APK_DOWNLOAD !in disabled) signals += apk.run(url)

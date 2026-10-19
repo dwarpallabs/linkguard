@@ -91,7 +91,7 @@ class ShareCheckActivity : ComponentActivity() {
                 status = status,
                 model = model,
                 copyName = model.domain ?: model.host,
-                canReport = InterceptViewModel.reportWebsite(link, verdict, psl) != null && verdict.finalUrl?.scheme != "upi",
+                canReport = InterceptViewModel.reportWebsite(link, verdict, psl) != null && verdict.finalUrl?.isUpi != true,
             )
         }
     }

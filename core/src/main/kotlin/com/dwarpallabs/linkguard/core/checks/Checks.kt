@@ -64,24 +64,56 @@ class BrandLookalikeCheck(private val matcher: BrandMatcher) : Check {
     }
 }
 
-/** A UPI payment or mandate link: money leaves the account if the user approves it. */
-class UpiIntentCheck : Check {
+/**
+ * A UPI payment or mandate request (`upi://`, or Google Pay's, PhonePe's or Paytm's own scheme):
+ * money leaves the account if the user approves it. Always at least a soft warning (0.7):
+ *  - a **mandate** (automatic, repeated payments) → 0.8;
+ *  - the payee's name uses a brand (SBI, an electricity board on the brand list, …) while the UPI ID
+ *    has nothing to do with that brand → 0.9: the classic fake-refund trick.
+ */
+class UpiIntentCheck(private val matcher: BrandMatcher? = null) : Check {
 
     override fun run(url: NormalisedUrl): Signal {
-        if (url.scheme != "upi") return Signal.none(CheckId.UPI_INTENT)
+        if (!url.isUpi) return Signal.none(CheckId.UPI_INTENT)
         val params = url.queryParams
+        val mandate = url.host == "mandate" || url.path.trimEnd('/').endsWith("/mandate")
+        val brand = params["pn"]?.let { name -> matcher?.let { brandMismatch(name, params["pa"].orEmpty(), it) } }
         val details = buildMap {
             params["pa"]?.let { put("payee_address", it.take(MAX_DETAIL)) }
             params["pn"]?.let { put("payee_name", it.take(MAX_DETAIL)) }
             params["am"]?.let { put("amount", it.take(MAX_DETAIL)) }
             params["tn"]?.let { put("note", it.take(MAX_DETAIL)) }
+            if (mandate) put("kind", "mandate")
+            brand?.let { put("brand", it) }
         }
-        return Signal(CheckId.UPI_INTENT, SCORE, "upi_intent.${url.host.ifEmpty { "pay" }}", "warn_upi_intent", details)
+        return when {
+            brand != null -> Signal(CheckId.UPI_INTENT, BRAND_SCORE, "upi_intent.brand_mismatch", "warn_upi_brand", details)
+            mandate -> Signal(CheckId.UPI_INTENT, MANDATE_SCORE, "upi_intent.mandate", "warn_upi_mandate", details)
+            else -> Signal(CheckId.UPI_INTENT, SCORE, "upi_intent.${url.host.ifEmpty { "pay" }}", "warn_upi_intent", details)
+        }
     }
 
     companion object {
         const val SCORE = 0.7
+        const val MANDATE_SCORE = 0.8
+        const val BRAND_SCORE = 0.9
         private const val MAX_DETAIL = 64
+
+        /**
+         * The brand named in [payeeName] whose keywords appear nowhere in the UPI ID [payeeAddress], or null.
+         * Words only (so "Sbiroti Foods" is not SBI); keywords shorter than 3 letters are ignored.
+         */
+        fun brandMismatch(payeeName: String, payeeAddress: String, matcher: BrandMatcher): String? {
+            val words = payeeName.lowercase().split(Regex("[^a-z0-9]+")).filter { it.isNotEmpty() }.toSet()
+            val joined = words.joinToString("")
+            val address = payeeAddress.lowercase().replace(Regex("[^a-z0-9]"), "")
+            for (brand in matcher.brands) {
+                val keywords = brand.keywords.map { it.lowercase() }.filter { it.length >= 3 }
+                val named = keywords.any { it in words || (it.length >= 6 && it in joined) }
+                if (named && keywords.none { it in address }) return brand.name
+            }
+            return null
+        }
     }
 }
 

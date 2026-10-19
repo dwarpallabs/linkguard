@@ -84,7 +84,6 @@
     <string name="interstitial_report">बे लिंकनि सायाव नालिस खालाम</string>
     <string name="interstitial_report_hint">मुं गैयि। बेयो गुबुन LinkGuard बाहायग्राफोरखौ सोमोनांथाय होनो हेफाजाब होयो।</string>
     <string name="interstitial_checking">लिंकखौ नायसंगासिनो दं…</string>
-    <string name="interstitial_upi_heading">UPI आव रां होनो बिनती</string>
     <string name="interstitial_upi_payee">सोरखौ रां होनाय: %1$s</string>
     <string name="interstitial_upi_amount">रांनि बिबां: ₹%1$s</string>
 
@@ -160,4 +159,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">बे लिंकआ SMS जों फैदों। सिनायि गैयि सुबुंनि मेसेजआव फैनाय लिंकफोरनिफ्राय होशियार जा।</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">बे लिंकआ नोंथांखौ रां होनो बुङो</string>
+    <string name="upi_asks_mandate">बे लिंकआ गावनो गाव रां होनायनि गनायथि नागिरो</string>
+    <string name="warn_upi_mandate">बे लिंकआ नोंथांनि एकाउन्टनिफ्राय गावनो गाव रां लाखिनायनि बिफानखौ खालामो। सिनायनाय बिल एबा प्लाननि थाखाय नोंथाङा गावनो जागायनानोसो राजि जा।</string>
+    <string name="warn_upi_brand">बे पेमेन्ट बिनायाव %1$s नि मुं बाहायनाय जादों, नाथाय रांआ गुबुन एकाउन्टआव थांगासिनो। रिफान्ड एबा KYC आपडेटनि थाखाय नोंथाङा जेब्लाबो रां होनो नाङा।</string>
 </resources>

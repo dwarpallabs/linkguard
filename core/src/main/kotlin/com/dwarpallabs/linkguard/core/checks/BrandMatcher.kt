@@ -11,7 +11,7 @@ import java.text.Normalizer
  * never match. Longer keywords also match inside a hyphen-less label (`income-tax-refund` →
  * `incometax`) or one edit away from a token (`phonpe` → `phonepe`).
  */
-class BrandMatcher(private val brands: List<Brand>) {
+class BrandMatcher(val brands: List<Brand>) {
 
     enum class Kind(val reason: String) {
         EXACT("keyword"), TYPO("typo"), HOMOGRAPH("homograph"), DIGIT_SWAP("digit_swap")

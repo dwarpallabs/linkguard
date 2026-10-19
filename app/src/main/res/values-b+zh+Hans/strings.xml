@@ -84,7 +84,6 @@
     <string name="interstitial_report">举报这个链接</string>
     <string name="interstitial_report_hint">匿名举报。能帮忙提醒其他 LinkGuard 用户。</string>
     <string name="interstitial_checking">正在检查链接…</string>
-    <string name="interstitial_upi_heading">UPI 付款请求</string>
     <string name="interstitial_upi_payee">收款人：%1$s</string>
     <string name="interstitial_upi_amount">金额：₹%1$s</string>
 
@@ -154,4 +153,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">这个链接来自短信。请小心陌生人短信里的链接。</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">这个链接要您付款</string>
+    <string name="upi_asks_mandate">这个链接要求开通自动扣款</string>
+    <string name="warn_upi_mandate">这个链接会从您的账户自动扣款。只有在您自己为熟悉的账单或套餐开通时才同意。</string>
+    <string name="warn_upi_brand">这个付款请求用了 %1$s 的名字，但钱会转到别人的账户。退款或更新 KYC 从来不需要您付钱。</string>
 </resources>

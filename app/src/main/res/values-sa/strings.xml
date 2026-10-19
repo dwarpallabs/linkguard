@@ -85,7 +85,6 @@
     <string name="interstitial_report">अस्य लिङ्कस्य विषये सूचयतु</string>
     <string name="interstitial_report_hint">अनामकम्। एतत् अन्यान् LinkGuard उपयोक्तॄन् सावधानीकर्तुं साहाय्यं करोति।</string>
     <string name="interstitial_checking">लिङ्कः परीक्ष्यते…</string>
-    <string name="interstitial_upi_heading">UPI धनयाचना</string>
     <string name="interstitial_upi_payee">कस्मै देयम्: %1$s</string>
     <string name="interstitial_upi_amount">राशिः: ₹%1$s</string>
 
@@ -159,4 +158,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">एषः लिङ्कः SMS द्वारा आगतः। अपरिचितजनानां सन्देशेषु आगतेभ्यः लिङ्केभ्यः सावधानः भवतु।</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">एषः लिङ्कः भवन्तं धनं दातुं वदति</string>
+    <string name="upi_asks_mandate">एषः लिङ्कः स्वयञ्चालितानि देयानि याचते</string>
+    <string name="warn_upi_mandate">एषः लिङ्कः भवतः खातात् स्वयमेव धनकर्तनस्य व्यवस्थां करोति। परिचितस्य देयकस्य योजनायाः वा कृते भवान् स्वयम् आरब्धवान् चेत् एव अनुमन्यताम्।</string>
+    <string name="warn_upi_brand">एषः देयानुरोधः %1$s इति नाम उपयुङ्क्ते, किन्तु धनम् अन्यत् खातं गच्छति। धनप्रत्यर्पणाय KYC-नवीकरणाय वा भवता कदापि धनं न देयम्।</string>
 </resources>

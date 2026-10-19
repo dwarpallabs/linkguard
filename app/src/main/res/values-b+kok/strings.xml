@@ -85,7 +85,6 @@
     <string name="interstitial_report">ह्या लिंकाची तक्रार करात</string>
     <string name="interstitial_report_hint">निनांवी. हें हेर LinkGuard वापरप्यांक सावध करपाक मदत करता.</string>
     <string name="interstitial_checking">लिंक तपासतात…</string>
-    <string name="interstitial_upi_heading">UPI वयल्यान पयशे मागपाची विनंती</string>
     <string name="interstitial_upi_payee">कोणाक पयशे: %1$s</string>
     <string name="interstitial_upi_amount">रक्कम: ₹%1$s</string>
 
@@ -159,4 +158,10 @@
 
     <!-- Extra line on a warning when the link came from the phone's SMS app (roadmap B1). Never shown for safe links. -->
     <string name="warn_context_sms">ही लिंक SMS वरवीं आयल्या. वळखी नाशिल्ल्या लोकांच्या मेसेजांतल्या लिंकांपासून जतनाय घेयात.</string>
+
+    <!-- UPI warnings (roadmap B2): heading of the payment card, and reasons for mandates and fake brand payees. -->
+    <string name="upi_asks_to_pay">ही लिंक तुमकां पयशे भरपाक सांगता</string>
+    <string name="upi_asks_mandate">ही लिंक आपसूक पयशे कापपाची परवानगी मागता</string>
+    <string name="warn_upi_mandate">ही लिंक तुमच्या खात्यांतल्यान आपसूक पयशे कापपाची वेवस्था करता. वळखीच्या बिलाखातीर वा प्लानाखातीर तुमी स्वता हें सुरू केलां जाल्यारूच मान्य करात.</string>
+    <string name="warn_upi_brand">ही पेमेंट विनंती %1$s हें नांव वापरता, पूण पयशे दुसऱ्या खात्यांत वतात. रिफंड वा KYC अपडेटा खातीर तुमकां केन्नाच पयशे भरचे पडनात.</string>
 </resources>
