@@ -167,4 +167,28 @@
     <string name="upi_asks_mandate">ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱫᱚ ᱟᱡ ᱛᱮ ᱴᱟᱠᱟ ᱠᱟᱴᱟᱣ ᱞᱟᱹᱜᱤᱫ ᱟᱹᱭᱫᱟᱹᱨᱤ ᱠᱟᱱᱟ</string>
     <string name="warn_upi_mandate">ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱫᱚ ᱟᱢᱟᱜ ᱮᱠᱟᱣᱩᱱᱴ ᱠᱷᱚᱱ ᱟᱡ ᱛᱮ ᱴᱟᱠᱟ ᱠᱟᱴᱟᱣ ᱨᱮᱭᱟᱜ ᱵᱮᱣᱥᱛᱟ ᱮ ᱵᱮᱱᱟᱣᱟ ᱾ ᱪᱤᱱᱦᱟᱹᱣ ᱵᱤᱞ ᱟᱨᱵᱟᱝ ᱯᱞᱟᱱ ᱞᱟᱹᱜᱤᱫ ᱟᱢ ᱟᱡᱮ ᱮᱦᱚᱵ ᱞᱮᱠᱷᱟᱱ ᱜᱮ ᱦᱮᱸ ᱢᱮ ᱾</string>
     <string name="warn_upi_brand">ᱱᱚᱶᱟ ᱯᱮᱢᱮᱱᱴ ᱚᱨᱡᱤ ᱫᱚ %1$s ᱨᱮᱭᱟᱜ ᱧᱩᱛᱩᱢ ᱵᱮᱵᱷᱟᱨᱟ, ᱢᱮᱱᱠᱷᱟᱱ ᱴᱟᱠᱟ ᱫᱚ ᱮᱴᱟᱜ ᱮᱠᱟᱣᱩᱱᱴ ᱛᱮ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ ᱾ ᱨᱤᱯᱷᱟᱱᱰ ᱟᱨᱵᱟᱝ KYC ᱟᱯᱰᱮᱴ ᱞᱟᱹᱜᱤᱫ ᱡᱟᱦᱟᱸ ᱚᱠᱛᱚ ᱦᱚᱸ ᱴᱟᱠᱟ ᱮᱢ ᱵᱟᱝ ᱞᱟᱹᱠᱛᱤᱭᱟ ᱾</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">ᱱᱚᱶᱟ ᱮᱯ ᱪᱮᱫ ᱪᱮᱫ ᱠᱟᱹᱢᱤ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ ᱡᱟᱸᱪ ᱢᱮ</string>
+    <string name="apk_check_hint">LinkGuard ᱫᱚ ᱮᱯ ᱵᱷᱤᱛᱨᱤ ᱧᱮᱞ ᱞᱟᱹᱜᱤᱫ ᱚᱱᱟ ᱰᱟᱣᱱᱞᱚᱰ ᱮᱫᱟᱭ ᱾ ᱮᱯ ᱫᱚ ᱡᱟᱦᱟᱸ ᱚᱠᱛᱚ ᱦᱚᱸ ᱤᱱᱥᱴᱚᱞ ᱵᱟᱝ ᱮᱫᱟᱭ ᱾</string>
+    <string name="apk_check_progress">ᱮᱯ ᱡᱟᱸᱪᱚᱜ ᱠᱟᱱᱟ… %2$s ᱨᱮᱭᱟᱜ %1$s</string>
+    <string name="apk_check_progress_unknown">ᱮᱯ ᱡᱟᱸᱪᱚᱜ ᱠᱟᱱᱟ… %1$s</string>
+    <string name="apk_check_stop">ᱵᱚᱸᱫᱚᱭ ᱢᱮ</string>
+    <string name="apk_check_too_big">ᱱᱚᱶᱟ ᱮᱯ ᱫᱚ ᱟᱹᱰᱤ ᱢᱟᱨᱟᱝ, ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱨᱮ ᱵᱟᱝ ᱡᱟᱸᱪ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ ᱾</string>
+    <string name="apk_check_failed">ᱮᱯ ᱵᱟᱝ ᱡᱟᱸᱪ ᱫᱟᱲᱮᱭᱮᱱᱟ ᱾ ᱟᱢᱟᱜ ᱤᱱᱴᱚᱨᱱᱮᱴ ᱡᱟᱸᱪ ᱠᱟᱛᱮ ᱫᱚᱦᱲᱟ ᱪᱮᱥᱴᱟᱭ ᱢᱮ ᱾</string>
+    <string name="apk_check_not_an_app">ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱠᱷᱚᱱ ᱮᱯ ᱯᱷᱟᱭᱤᱞ ᱵᱟᱝ ᱧᱟᱢ ᱮᱱᱟ, ᱚᱱᱟᱛᱮ ᱡᱟᱸᱪ ᱞᱟᱹᱜᱤᱫ ᱪᱮᱫ ᱦᱚᱸ ᱵᱟᱹᱱᱩᱜ ᱛᱟᱦᱮᱸᱫ ᱾</string>
+    <string name="apk_check_result_title">ᱱᱚᱶᱟ ᱮᱯ ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱨᱮ ᱪᱮᱫ ᱪᱮᱫ ᱠᱟᱹᱢᱤ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ</string>
+    <string name="apk_check_nothing">ᱱᱚᱶᱟ ᱮᱯ ᱫᱚ ᱪᱮᱫ ᱦᱚᱸ ᱟᱡᱟᱹᱵ ᱡᱤᱱᱤᱥ ᱵᱟᱝ ᱠᱷᱚᱡ ᱮᱫᱟᱭ ᱾ ᱮᱱᱦᱚᱸ ᱦᱚᱸ, ᱥᱩᱢᱩᱝ Play Store ᱠᱷᱚᱱ ᱮᱯ ᱤᱱᱥᱴᱚᱞ ᱫᱚ ᱡᱚᱛᱚ ᱠᱷᱚᱱ ᱵᱮᱥ ᱟᱨ ᱨᱩᱠᱷᱤᱭᱟᱹ ᱾</string>
+    <string name="apk_check_brand">ᱱᱚᱶᱟ ᱮᱯ ᱫᱚ %1$s ᱧᱩᱛᱩᱢ ᱵᱮᱵᱷᱟᱨ ᱮᱫᱟᱭ ᱟᱨ ᱟᱢᱟᱜ SMS ᱯᱟᱲᱦᱟᱣ ᱥᱮ ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱪᱟᱞᱟᱣ ᱥᱟᱱᱟᱭᱮᱫᱟᱭ ᱾ ᱥᱟᱹᱨᱤ ᱵᱮᱝᱠ ᱮᱯ ᱫᱚ ᱥᱩᱢᱩᱝ Play Store ᱠᱷᱚᱱ ᱜᱮ ᱦᱤᱡᱩᱜᱼᱟ ᱾</string>
+    <string name="apk_check_deleted">ᱰᱟᱣᱱᱞᱚᱰ ᱟᱠᱟᱱ ᱯᱷᱟᱭᱤᱞ ᱫᱚ ᱢᱮᱴᱟᱣ ᱮᱱᱟ ᱾</string>
+    <string name="cap_read_sms">OTP ᱥᱟᱶᱛᱮ ᱟᱢᱟᱜ SMS ᱢᱮᱥᱮᱡ ᱠᱚ ᱯᱟᱲᱦᱟᱣ</string>
+    <string name="cap_send_sms">ᱟᱢᱟᱜ ᱱᱚᱢᱵᱚᱨ ᱠᱷᱚᱱ SMS ᱢᱮᱥᱮᱡ ᱠᱚ ᱠᱩᱞ</string>
+    <string name="cap_sms_app">ᱟᱢᱟᱜ SMS ᱮᱯ ᱦᱩᱭ</string>
+    <string name="cap_accessibility">ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱪᱟᱞᱟᱣ ᱟᱨ ᱥᱠᱨᱤᱱ ᱨᱮᱭᱟᱜ ᱡᱚᱛᱚ ᱡᱤᱱᱤᱥ ᱧᱮᱞ</string>
+    <string name="cap_notifications">OTP ᱥᱟᱶᱛᱮ ᱟᱢᱟᱜ ᱡᱚᱛᱚ ᱱᱚᱴᱤᱯᱷᱤᱠᱮᱥᱚᱱ ᱯᱟᱲᱦᱟᱣ</string>
+    <string name="cap_overlay">ᱮᱴᱟᱜ ᱮᱯ ᱠᱚ ᱪᱮᱛᱟᱱ ᱨᱮ ᱡᱤᱱᱤᱥ ᱩᱫᱩᱜ, ᱡᱮᱞᱮᱠᱟ ᱟᱢᱟᱜ ᱵᱮᱝᱠ ᱮᱯ ᱪᱮᱛᱟᱱ ᱨᱮ</string>
+    <string name="cap_install">ᱮᱴᱟᱜ ᱮᱯ ᱠᱚ ᱤᱱᱥᱴᱚᱞ</string>
+    <string name="cap_device_admin">ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱞᱚᱠ, ᱥᱮ ᱮᱯ ᱚᱪᱚᱜ ᱠᱷᱚᱱ ᱟᱢ ᱟᱴᱠᱟᱣ</string>
+    <string name="cap_contacts">ᱟᱢᱟᱜ ᱠᱚᱱᱴᱮᱠᱴ ᱠᱚ ᱯᱟᱲᱦᱟᱣ</string>
+    <string name="cap_calls">ᱟᱢᱟᱜ ᱠᱚᱞ ᱞᱤᱥᱴᱤ ᱯᱟᱲᱦᱟᱣ ᱥᱮ ᱯᱷᱚᱱ ᱠᱚᱞ ᱠᱚ ᱠᱩᱞ</string>
 </resources>

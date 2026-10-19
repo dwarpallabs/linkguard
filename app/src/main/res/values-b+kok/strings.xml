@@ -164,4 +164,28 @@
     <string name="upi_asks_mandate">ही लिंक आपसूक पयशे कापपाची परवानगी मागता</string>
     <string name="warn_upi_mandate">ही लिंक तुमच्या खात्यांतल्यान आपसूक पयशे कापपाची वेवस्था करता. वळखीच्या बिलाखातीर वा प्लानाखातीर तुमी स्वता हें सुरू केलां जाल्यारूच मान्य करात.</string>
     <string name="warn_upi_brand">ही पेमेंट विनंती %1$s हें नांव वापरता, पूण पयशे दुसऱ्या खात्यांत वतात. रिफंड वा KYC अपडेटा खातीर तुमकां केन्नाच पयशे भरचे पडनात.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">हें ॲप कितें करूंक शकता तें तपासात</string>
+    <string name="apk_check_hint">LinkGuard ॲप डाउनलोड करून ताच्या भितर पळयता. तो तें केन्नाच इन्स्टॉल करिना.</string>
+    <string name="apk_check_progress">ॲप तपासतात… %2$s पयकी %1$s</string>
+    <string name="apk_check_progress_unknown">ॲप तपासतात… %1$s</string>
+    <string name="apk_check_stop">थांबयात</string>
+    <string name="apk_check_too_big">हें ॲप तुमच्या फोनाचेर तपासपाक खूब व्हड आसा.</string>
+    <string name="apk_check_failed">ॲप तपासूंक जालें ना. तुमचें इंटरनेट कनेक्शन तपासात आनी परतून यत्न करात.</string>
+    <string name="apk_check_not_an_app">ह्या लिंकांतल्यान ॲप फायल मेळ्ळी ना, देखून तपासपाक कांयच नाशिल्लें.</string>
+    <string name="apk_check_result_title">हें ॲप तुमच्या फोनाचेर कितें करूंक शकता</string>
+    <string name="apk_check_nothing">हें ॲप कांयच वेगळें मागना. तरीय ॲपां फकत Play Store वयल्यानूच इन्स्टॉल करप सगळ्यांत सुरक्षीत.</string>
+    <string name="apk_check_brand">हें ॲप %1$s हें नांव वापरता आनी ताका तुमचे SMS वाचपाचे वा तुमचो फोन चलोवपाचो आसा. खरीं बँक ॲपां फकत Play Store वयल्यानूच येतात.</string>
+    <string name="apk_check_deleted">डाउनलोड केल्ली फायल काडून उडयल्या.</string>
+    <string name="cap_read_sms">तुमचे SMS मेसेज वाचप, OTP लेगीत</string>
+    <string name="cap_send_sms">तुमच्या नंबरावयल्यान SMS मेसेज धाडप</string>
+    <string name="cap_sms_app">तुमचें SMS ॲप जावप</string>
+    <string name="cap_accessibility">तुमचो फोन चलोवप आनी स्क्रीनाचेर सगळें पळोवप</string>
+    <string name="cap_notifications">तुमचीं सगळीं नोटिफिकेशनां वाचप, OTP लेगीत</string>
+    <string name="cap_overlay">हेर ॲपांचेर दिसप, देखीक तुमच्या बँक ॲपाचेर</string>
+    <string name="cap_install">हेर ॲपां इन्स्टॉल करप</string>
+    <string name="cap_device_admin">तुमचो फोन लॉक करप वा ॲप काडपाक तुमकां आडावप</string>
+    <string name="cap_contacts">तुमचे कॉन्टॅक्ट वाचप</string>
+    <string name="cap_calls">तुमची कॉल हिस्ट्री वाचप वा कॉल करप</string>
 </resources>

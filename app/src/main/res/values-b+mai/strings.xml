@@ -163,4 +163,28 @@
     <string name="upi_asks_mandate">ई लिंक अपने-आप होमय बला भुगतान माँगैत अछि</string>
     <string name="warn_upi_mandate">ई लिंक अहाँक खाता सँ अपने-आप पाइ काटबाक व्यवस्था करैत अछि। तखने हँ कहू जखन अहाँ स्वयं कोनो जानल-पहिचानल बिल वा प्लानक लेल ई शुरू केने होइ।</string>
     <string name="warn_upi_brand">ई भुगतान अनुरोध %1$s क नाम उपयोग करैत अछि, मुदा पाइ दोसर खाता मे जाइत अछि। रिफंड वा KYC अपडेटक लेल अहाँकेँ कहियो भुगतान नहि करय पड़ैत अछि।</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">जाँचू जे ई ऐप की कऽ सकैत अछि</string>
+    <string name="apk_check_hint">LinkGuard ऐपक भीतर देखबाक लेल ओकरा डाउनलोड करैत अछि। ई ओकरा कहियो इंस्टॉल नहि करैत अछि।</string>
+    <string name="apk_check_progress">ऐपक जाँच भऽ रहल अछि… %2$s मे सँ %1$s</string>
+    <string name="apk_check_progress_unknown">ऐपक जाँच भऽ रहल अछि… %1$s</string>
+    <string name="apk_check_stop">रोकू</string>
+    <string name="apk_check_too_big">ई ऐप एतेक पैघ अछि जे अहाँक फोन पर एकर जाँच नहि भऽ सकैत अछि।</string>
+    <string name="apk_check_failed">ऐपक जाँच नहि भऽ सकल। अपन इंटरनेट कनेक्शन जाँचू आ फेर कोशिश करू।</string>
+    <string name="apk_check_not_an_app">एहि लिंक सँ कोनो ऐप फाइल नहि भेटल, तेँ जाँचबाक लेल किछु नहि छल।</string>
+    <string name="apk_check_result_title">ई ऐप अहाँक फोन पर की कऽ सकैत अछि</string>
+    <string name="apk_check_nothing">ई ऐप किछु असामान्य नहि माँगैत अछि। तैयो ऐप मात्र Play Store सँ इंस्टॉल करब सभसँ सुरक्षित अछि।</string>
+    <string name="apk_check_brand">ई ऐप %1$s नाम लगबैत अछि आ अहाँक SMS पढ़ऽ वा अहाँक फोन चलाबऽ चाहैत अछि। असली बैंक ऐप मात्र Play Store सँ अबैत अछि।</string>
+    <string name="apk_check_deleted">डाउनलोड कएल फाइल हटा देल गेल अछि।</string>
+    <string name="cap_read_sms">अहाँक SMS मैसेज पढ़ब, OTP सेहो</string>
+    <string name="cap_send_sms">अहाँक नंबर सँ SMS मैसेज पठाएब</string>
+    <string name="cap_sms_app">अहाँक SMS ऐप बनि जाएब</string>
+    <string name="cap_accessibility">अहाँक फोन चलाएब आ स्क्रीन पर सभ किछु देखब</string>
+    <string name="cap_notifications">अहाँक सभटा नोटिफिकेशन पढ़ब, OTP सेहो</string>
+    <string name="cap_overlay">दोसर ऐपक ऊपर देखाएब, जेना अहाँक बैंक ऐपक ऊपर</string>
+    <string name="cap_install">दोसर ऐप इंस्टॉल करब</string>
+    <string name="cap_device_admin">अहाँक फोन लॉक करब वा अहाँकेँ ऐप हटाबऽ सँ रोकब</string>
+    <string name="cap_contacts">अहाँक कॉन्टैक्ट पढ़ब</string>
+    <string name="cap_calls">अहाँक कॉल हिस्ट्री पढ़ब वा कॉल करब</string>
 </resources>

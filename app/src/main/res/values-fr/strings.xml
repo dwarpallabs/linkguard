@@ -171,4 +171,28 @@
     <string name="upi_asks_mandate">Ce lien demande des paiements automatiques</string>
     <string name="warn_upi_mandate">Ce lien met en place des paiements automatiques depuis votre compte. Acceptez seulement si vous l’avez demandé vous-même, pour une facture ou un abonnement que vous connaissez.</string>
     <string name="warn_upi_brand">Cette demande de paiement utilise le nom %1$s, mais l’argent part vers un autre compte. Vous n’avez jamais besoin de payer pour un remboursement ou une mise à jour KYC.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">Vérifier ce que cette application peut faire</string>
+    <string name="apk_check_hint">LinkGuard télécharge l’application pour regarder à l’intérieur. Il ne l’installe jamais.</string>
+    <string name="apk_check_progress">Vérification de l’application… %1$s sur %2$s</string>
+    <string name="apk_check_progress_unknown">Vérification de l’application… %1$s</string>
+    <string name="apk_check_stop">Arrêter</string>
+    <string name="apk_check_too_big">Cette application est trop grande pour être vérifiée sur votre téléphone.</string>
+    <string name="apk_check_failed">L’application n’a pas pu être vérifiée. Vérifiez votre connexion internet et réessayez.</string>
+    <string name="apk_check_not_an_app">Ce lien n’a pas donné de fichier d’application. Il n’y avait donc rien à vérifier.</string>
+    <string name="apk_check_result_title">Ce que cette application pourrait faire sur votre téléphone</string>
+    <string name="apk_check_nothing">Cette application ne demande rien d’inhabituel. Le plus sûr reste d’installer les applications uniquement depuis le Play Store.</string>
+    <string name="apk_check_brand">Cette application utilise le nom %1$s et veut lire vos SMS ou contrôler votre téléphone. Les vraies applications de banque viennent uniquement du Play Store.</string>
+    <string name="apk_check_deleted">Le fichier téléchargé a été supprimé.</string>
+    <string name="cap_read_sms">Lire vos SMS, y compris les OTP</string>
+    <string name="cap_send_sms">Envoyer des SMS depuis votre numéro</string>
+    <string name="cap_sms_app">Devenir votre application de SMS</string>
+    <string name="cap_accessibility">Contrôler votre téléphone et voir tout ce qui est à l’écran</string>
+    <string name="cap_notifications">Lire toutes vos notifications, y compris les OTP</string>
+    <string name="cap_overlay">S’afficher par-dessus les autres applications, par exemple votre application de banque</string>
+    <string name="cap_install">Installer d’autres applications</string>
+    <string name="cap_device_admin">Verrouiller votre téléphone ou vous empêcher de supprimer l’application</string>
+    <string name="cap_contacts">Lire vos contacts</string>
+    <string name="cap_calls">Lire votre historique d’appels ou passer des appels</string>
 </resources>

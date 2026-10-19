@@ -159,4 +159,28 @@
     <string name="upi_asks_mandate">这个链接要求开通自动扣款</string>
     <string name="warn_upi_mandate">这个链接会从您的账户自动扣款。只有在您自己为熟悉的账单或套餐开通时才同意。</string>
     <string name="warn_upi_brand">这个付款请求用了 %1$s 的名字，但钱会转到别人的账户。退款或更新 KYC 从来不需要您付钱。</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">检查这个应用能做什么</string>
+    <string name="apk_check_hint">LinkGuard 会下载这个应用，看看里面有什么。它从不安装这个应用。</string>
+    <string name="apk_check_progress">正在检查应用… %1$s，共 %2$s</string>
+    <string name="apk_check_progress_unknown">正在检查应用… %1$s</string>
+    <string name="apk_check_stop">停止</string>
+    <string name="apk_check_too_big">这个应用太大，没法在您的手机上检查。</string>
+    <string name="apk_check_failed">没能检查这个应用。请检查网络连接，然后再试一次。</string>
+    <string name="apk_check_not_an_app">这个链接给的不是应用文件，所以没有什么可检查的。</string>
+    <string name="apk_check_result_title">这个应用在您的手机上能做什么</string>
+    <string name="apk_check_nothing">这个应用没有提出不寻常的要求。不过，最安全的做法还是只从 Play Store 安装应用。</string>
+    <string name="apk_check_brand">这个应用用了 %1$s 的名字，还想读取您的 SMS 短信或控制您的手机。真正的银行应用只来自 Play Store。</string>
+    <string name="apk_check_deleted">下载的文件已经删除。</string>
+    <string name="cap_read_sms">读取您的 SMS 短信，包括 OTP</string>
+    <string name="cap_send_sms">用您的号码发送 SMS 短信</string>
+    <string name="cap_sms_app">变成您的 SMS 短信应用</string>
+    <string name="cap_accessibility">控制您的手机，看到屏幕上的所有内容</string>
+    <string name="cap_notifications">读取您的所有通知，包括 OTP</string>
+    <string name="cap_overlay">显示在其他应用上面，比如盖在您的银行应用上面</string>
+    <string name="cap_install">安装其他应用</string>
+    <string name="cap_device_admin">锁住您的手机，或不让您删除这个应用</string>
+    <string name="cap_contacts">读取您的联系人</string>
+    <string name="cap_calls">读取您的通话记录或拨打电话</string>
 </resources>

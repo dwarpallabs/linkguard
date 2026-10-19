@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">ഈ ലിങ്ക് തനിയെ നടക്കുന്ന പേയ്‌മെന്റുകൾ ആവശ്യപ്പെടുന്നു</string>
     <string name="warn_upi_mandate">ഈ ലിങ്ക് നിങ്ങളുടെ അക്കൗണ്ടിൽ നിന്ന് തനിയെ പണം പോകുന്ന ഏർപ്പാട് ചെയ്യുന്നു. അറിയാവുന്ന ഒരു ബില്ലിനോ പ്ലാനിനോ വേണ്ടി നിങ്ങൾ തന്നെ തുടങ്ങിയതാണെങ്കിൽ മാത്രം സമ്മതിക്കുക.</string>
     <string name="warn_upi_brand">ഈ പേയ്‌മെന്റ് അഭ്യർത്ഥന %1$s എന്ന പേര് ഉപയോഗിക്കുന്നു, പക്ഷേ പണം മറ്റൊരു അക്കൗണ്ടിലേക്കാണ് പോകുന്നത്. റീഫണ്ടിനോ KYC അപ്‌ഡേറ്റിനോ നിങ്ങൾ ഒരിക്കലും പണം അടയ്ക്കേണ്ടതില്ല.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">ഈ ആപ്പിന് എന്തൊക്കെ ചെയ്യാനാകും എന്ന് പരിശോധിക്കുക</string>
+    <string name="apk_check_hint">ആപ്പിനുള്ളിൽ നോക്കാൻ LinkGuard അത് ഡൗൺലോഡ് ചെയ്യുന്നു. അത് ഒരിക്കലും ഇൻസ്റ്റാൾ ചെയ്യില്ല.</string>
+    <string name="apk_check_progress">ആപ്പ് പരിശോധിക്കുന്നു… %2$s-ൽ %1$s</string>
+    <string name="apk_check_progress_unknown">ആപ്പ് പരിശോധിക്കുന്നു… %1$s</string>
+    <string name="apk_check_stop">നിർത്തുക</string>
+    <string name="apk_check_too_big">ഈ ആപ്പ് വളരെ വലുതാണ്, നിങ്ങളുടെ ഫോണിൽ ഇത് പരിശോധിക്കാൻ കഴിയില്ല.</string>
+    <string name="apk_check_failed">ആപ്പ് പരിശോധിക്കാൻ കഴിഞ്ഞില്ല. നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ നോക്കി വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="apk_check_not_an_app">ഈ ലിങ്കിൽ നിന്ന് ആപ്പ് ഫയൽ കിട്ടിയില്ല, അതിനാൽ പരിശോധിക്കാൻ ഒന്നും ഉണ്ടായിരുന്നില്ല.</string>
+    <string name="apk_check_result_title">ഈ ആപ്പിന് നിങ്ങളുടെ ഫോണിൽ എന്തൊക്കെ ചെയ്യാനാകും</string>
+    <string name="apk_check_nothing">ഈ ആപ്പ് പതിവില്ലാത്തതൊന്നും ചോദിക്കുന്നില്ല. എന്നാലും, Play Store-ൽ നിന്ന് മാത്രം ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യുന്നതാണ് ഏറ്റവും സുരക്ഷിതം.</string>
+    <string name="apk_check_brand">ഈ ആപ്പ് %1$s എന്ന പേര് ഉപയോഗിക്കുന്നു, നിങ്ങളുടെ SMS വായിക്കാനോ ഫോൺ നിയന്ത്രിക്കാനോ ചോദിക്കുന്നു. യഥാർത്ഥ ബാങ്ക് ആപ്പുകൾ Play Store-ൽ നിന്ന് മാത്രമേ വരൂ.</string>
+    <string name="apk_check_deleted">ഡൗൺലോഡ് ചെയ്ത ഫയൽ ഡിലീറ്റ് ചെയ്തു.</string>
+    <string name="cap_read_sms">OTP-കൾ ഉൾപ്പെടെ നിങ്ങളുടെ SMS മെസേജുകൾ വായിക്കാം</string>
+    <string name="cap_send_sms">നിങ്ങളുടെ നമ്പറിൽ നിന്ന് SMS മെസേജുകൾ അയയ്ക്കാം</string>
+    <string name="cap_sms_app">നിങ്ങളുടെ SMS ആപ്പായി മാറാം</string>
+    <string name="cap_accessibility">നിങ്ങളുടെ ഫോൺ നിയന്ത്രിക്കാം, സ്ക്രീനിലുള്ളതെല്ലാം കാണാം</string>
+    <string name="cap_notifications">OTP-കൾ ഉൾപ്പെടെ നിങ്ങളുടെ എല്ലാ നോട്ടിഫിക്കേഷനുകളും വായിക്കാം</string>
+    <string name="cap_overlay">മറ്റ് ആപ്പുകൾക്ക് മുകളിൽ കാണിക്കാം, ഉദാഹരണത്തിന് നിങ്ങളുടെ ബാങ്ക് ആപ്പിന് മുകളിൽ</string>
+    <string name="cap_install">മറ്റ് ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാം</string>
+    <string name="cap_device_admin">നിങ്ങളുടെ ഫോൺ ലോക്ക് ചെയ്യാം, അല്ലെങ്കിൽ ആപ്പ് നീക്കം ചെയ്യുന്നതിൽ നിന്ന് നിങ്ങളെ തടയാം</string>
+    <string name="cap_contacts">നിങ്ങളുടെ കോൺടാക്റ്റുകൾ വായിക്കാം</string>
+    <string name="cap_calls">നിങ്ങളുടെ കോൾ ഹിസ്റ്ററി വായിക്കാം, അല്ലെങ്കിൽ കോളുകൾ ചെയ്യാം</string>
 </resources>

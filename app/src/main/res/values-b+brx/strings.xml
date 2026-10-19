@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">बे लिंकआ गावनो गाव रां होनायनि गनायथि नागिरो</string>
     <string name="warn_upi_mandate">बे लिंकआ नोंथांनि एकाउन्टनिफ्राय गावनो गाव रां लाखिनायनि बिफानखौ खालामो। सिनायनाय बिल एबा प्लाननि थाखाय नोंथाङा गावनो जागायनानोसो राजि जा।</string>
     <string name="warn_upi_brand">बे पेमेन्ट बिनायाव %1$s नि मुं बाहायनाय जादों, नाथाय रांआ गुबुन एकाउन्टआव थांगासिनो। रिफान्ड एबा KYC आपडेटनि थाखाय नोंथाङा जेब्लाबो रां होनो नाङा।</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">बे एपआ मा मा खालामनो हायो नायसं</string>
+    <string name="apk_check_hint">LinkGuard आ एपनि सिङाव नायनो थाखाय बेखौ डाउनलोड खालामो। बेयो एपखौ जेब्लाबो इनस्टल खालामा।</string>
+    <string name="apk_check_progress">एपखौ नायसंगासिनो दं… %2$s निफ्राय %1$s</string>
+    <string name="apk_check_progress_unknown">एपखौ नायसंगासिनो दं… %1$s</string>
+    <string name="apk_check_stop">बन्द खालाम</string>
+    <string name="apk_check_too_big">बे एपआ जोबोद गेदेर, बेखौ नोंथांनि फोनआव नायसंनो हाया।</string>
+    <string name="apk_check_failed">एपखौ नायसंनो हायाखै। नोंथांनि इन्टारनेट कानेक्सनखौ नायसं आरो फिन नाजा।</string>
+    <string name="apk_check_not_an_app">बे लिंकआ जेबो एप फाइल होआखै, बेनिखायनो नायसंनो जेबो गैयामोन।</string>
+    <string name="apk_check_result_title">बे एपआ नोंथांनि फोनआव मा मा खालामनो हायो</string>
+    <string name="apk_check_nothing">बे एपआ गुबुन बादिनि जेबो बिया। नाथाय, खालि Play Store निफ्राय एप इनस्टल खालामनायानो जोबोद सुरक्षित।</string>
+    <string name="apk_check_brand">बे एपआ %1$s नि मुं बाहायो आरो नोंथांनि SMS फरायनो एबा नोंथांनि फोनखौ सासन खालामनो लुबैयो। थार बेंक एपफोरा खालि Play Store निफ्रायल\' फैयो।</string>
+    <string name="apk_check_deleted">डाउनलोड खालामनाय फाइलखौ डिलिट खालामनाय जाबाय।</string>
+    <string name="cap_read_sms">OTP फोरबो लाना, नोंथांनि SMS मेसेजफोरखौ फरायनाय</string>
+    <string name="cap_send_sms">नोंथांनि नम्बरनिफ्राय SMS मेसेज हरनाय</string>
+    <string name="cap_sms_app">नोंथांनि SMS एप जानाय</string>
+    <string name="cap_accessibility">नोंथांनि फोनखौ सासन खालामनाय आरो स्क्रिनआव थानाय गासैखौबो नुनाय</string>
+    <string name="cap_notifications">OTP फोरबो लाना, नोंथांनि गासै नटिफिकेसनफोरखौ फरायनाय</string>
+    <string name="cap_overlay">गुबुन एपफोरनि सायाव दिन्थिनाय, जेरै नोंथांनि बेंक एपनि सायाव</string>
+    <string name="cap_install">गुबुन एपफोर इनस्टल खालामनाय</string>
+    <string name="cap_device_admin">नोंथांनि फोनखौ लक खालामनाय एबा एपखौ डिलिट खालामनायाव हेंथा होनाय</string>
+    <string name="cap_contacts">नोंथांनि कन्टेक्टफोरखौ फरायनाय</string>
+    <string name="cap_calls">नोंथांनि कल हिस्ट्रिखौ फरायनाय एबा कल खालामनाय</string>
 </resources>

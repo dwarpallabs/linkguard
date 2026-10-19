@@ -164,4 +164,28 @@
     <string name="upi_asks_mandate">एषः लिङ्कः स्वयञ्चालितानि देयानि याचते</string>
     <string name="warn_upi_mandate">एषः लिङ्कः भवतः खातात् स्वयमेव धनकर्तनस्य व्यवस्थां करोति। परिचितस्य देयकस्य योजनायाः वा कृते भवान् स्वयम् आरब्धवान् चेत् एव अनुमन्यताम्।</string>
     <string name="warn_upi_brand">एषः देयानुरोधः %1$s इति नाम उपयुङ्क्ते, किन्तु धनम् अन्यत् खातं गच्छति। धनप्रत्यर्पणाय KYC-नवीकरणाय वा भवता कदापि धनं न देयम्।</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">एतत् ऐप् किं कर्तुं शक्नोति इति परीक्षताम्</string>
+    <string name="apk_check_hint">LinkGuard ऐप्-अन्तः द्रष्टुम् एतत् अवतारयति। कदापि न स्थापयति।</string>
+    <string name="apk_check_progress">ऐप् परीक्ष्यते… %2$s मध्ये %1$s</string>
+    <string name="apk_check_progress_unknown">ऐप् परीक्ष्यते… %1$s</string>
+    <string name="apk_check_stop">स्थगयतु</string>
+    <string name="apk_check_too_big">एतत् ऐप् भवतः दूरवाण्यां परीक्षितुम् अतीव बृहत् अस्ति।</string>
+    <string name="apk_check_failed">ऐप् परीक्षितुं न शक्तम्। अन्तर्जालसम्पर्कं परीक्ष्य पुनः प्रयतताम्।</string>
+    <string name="apk_check_not_an_app">अनेन लिङ्केन ऐप्-सञ्चिका न लब्धा, अतः परीक्षणीयं किमपि नासीत्।</string>
+    <string name="apk_check_result_title">एतत् ऐप् भवतः दूरवाण्यां किं कर्तुं शक्नोति</string>
+    <string name="apk_check_nothing">एतत् ऐप् किमपि असामान्यं न याचते। तथापि केवलं Play Store तः ऐप् स्थापनं सर्वाधिकं सुरक्षितम्।</string>
+    <string name="apk_check_brand">एतत् ऐप् %1$s इति नाम उपयुङ्क्ते, भवतः SMS पठितुं दूरवाणीं नियन्त्रयितुं वा इच्छति। सत्यानि बैंक्-ऐप् केवलं Play Store तः एव आगच्छन्ति।</string>
+    <string name="apk_check_deleted">अवतारिता सञ्चिका अपाकृता।</string>
+    <string name="cap_read_sms">भवतः SMS सन्देशान् पठितुम्, OTP अपि</string>
+    <string name="cap_send_sms">भवतः सङ्ख्यातः SMS सन्देशान् प्रेषयितुम्</string>
+    <string name="cap_sms_app">भवतः SMS ऐप् भवितुम्</string>
+    <string name="cap_accessibility">भवतः दूरवाणीं नियन्त्रयितुं, पटले सर्वं द्रष्टुं च</string>
+    <string name="cap_notifications">भवतः सर्वाः अधिसूचनाः पठितुम्, OTP अपि</string>
+    <string name="cap_overlay">अन्येषाम् ऐप्-तन्त्राणाम् उपरि दर्शयितुम्, यथा भवतः बैंक्-ऐप् उपरि</string>
+    <string name="cap_install">अन्यानि ऐप् स्थापयितुम्</string>
+    <string name="cap_device_admin">भवतः दूरवाणीं कीलयितुम्, ऐप् अपनेतुं भवन्तं निवारयितुं वा</string>
+    <string name="cap_contacts">भवतः सम्पर्कान् पठितुम्</string>
+    <string name="cap_calls">भवतः कॉल्-इतिहासं पठितुं, कॉल् कर्तुं वा</string>
 </resources>

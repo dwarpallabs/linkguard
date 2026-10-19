@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">ఈ లింక్ ఆటోమేటిక్ చెల్లింపులను అడుగుతోంది</string>
     <string name="warn_upi_mandate">ఈ లింక్ మీ ఖాతా నుంచి ఆటోమేటిక్‌గా డబ్బు కట్ అయ్యే ఏర్పాటు చేస్తుంది. మీకు తెలిసిన బిల్లు లేదా ప్లాన్ కోసం మీరే దీన్ని మొదలుపెట్టి ఉంటేనే ఒప్పుకోండి.</string>
     <string name="warn_upi_brand">ఈ చెల్లింపు అభ్యర్థన %1$s పేరు వాడుతోంది, కానీ డబ్బు వేరే ఖాతాకు వెళ్తుంది. రీఫండ్ లేదా KYC అప్‌డేట్ కోసం మీరు ఎప్పుడూ డబ్బు చెల్లించాల్సిన అవసరం లేదు.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">ఈ యాప్ ఏం చేయగలదో చెక్ చేయండి</string>
+    <string name="apk_check_hint">యాప్ లోపల చూడటానికి LinkGuard దాన్ని డౌన్‌లోడ్ చేస్తుంది. దాన్ని ఎప్పుడూ ఇన్‌స్టాల్ చేయదు.</string>
+    <string name="apk_check_progress">యాప్‌ను చెక్ చేస్తోంది… %2$sలో %1$s</string>
+    <string name="apk_check_progress_unknown">యాప్‌ను చెక్ చేస్తోంది… %1$s</string>
+    <string name="apk_check_stop">ఆపండి</string>
+    <string name="apk_check_too_big">ఈ యాప్ చాలా పెద్దది, మీ ఫోన్‌లో దీన్ని చెక్ చేయలేం.</string>
+    <string name="apk_check_failed">యాప్‌ను చెక్ చేయలేకపోయాం. మీ ఇంటర్నెట్ కనెక్షన్ చూసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="apk_check_not_an_app">ఈ లింక్ నుంచి యాప్ ఫైల్ రాలేదు, కాబట్టి చెక్ చేయడానికి ఏమీ లేదు.</string>
+    <string name="apk_check_result_title">ఈ యాప్ మీ ఫోన్‌లో ఏం చేయగలదు</string>
+    <string name="apk_check_nothing">ఈ యాప్ మామూలుగా లేనిది ఏదీ అడగడం లేదు. అయినా, యాప్‌లను Play Store నుంచి మాత్రమే ఇన్‌స్టాల్ చేయడం అన్నిటికంటే సురక్షితం.</string>
+    <string name="apk_check_brand">ఈ యాప్ %1$s పేరు వాడుతోంది, మీ SMS చదవాలని లేదా మీ ఫోన్‌ను కంట్రోల్ చేయాలని అడుగుతోంది. నిజమైన బ్యాంక్ యాప్‌లు Play Store నుంచి మాత్రమే వస్తాయి.</string>
+    <string name="apk_check_deleted">డౌన్‌లోడ్ చేసిన ఫైల్‌ను డిలీట్ చేశాం.</string>
+    <string name="cap_read_sms">OTPలతో సహా మీ SMS మెసేజ్‌లను చదవగలదు</string>
+    <string name="cap_send_sms">మీ నంబర్ నుంచి SMS మెసేజ్‌లు పంపగలదు</string>
+    <string name="cap_sms_app">మీ SMS యాప్‌గా మారగలదు</string>
+    <string name="cap_accessibility">మీ ఫోన్‌ను కంట్రోల్ చేసి, స్క్రీన్ మీద ఉన్నదంతా చూడగలదు</string>
+    <string name="cap_notifications">OTPలతో సహా మీ నోటిఫికేషన్‌లన్నీ చదవగలదు</string>
+    <string name="cap_overlay">వేరే యాప్‌ల మీద కనిపించగలదు, ఉదాహరణకు మీ బ్యాంక్ యాప్ మీద</string>
+    <string name="cap_install">వేరే యాప్‌లను ఇన్‌స్టాల్ చేయగలదు</string>
+    <string name="cap_device_admin">మీ ఫోన్‌ను లాక్ చేయగలదు, లేదా మీరు యాప్‌ను తీసేయకుండా ఆపగలదు</string>
+    <string name="cap_contacts">మీ కాంటాక్ట్‌లను చదవగలదు</string>
+    <string name="cap_calls">మీ కాల్ హిస్టరీ చదవగలదు, లేదా కాల్స్ చేయగలదు</string>
 </resources>

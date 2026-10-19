@@ -9,7 +9,10 @@ import com.dwarpallabs.linkguard.core.NormalisedUrl
 import com.dwarpallabs.linkguard.core.PublicSuffixList
 
 import com.dwarpallabs.linkguard.core.Verdict
+import com.dwarpallabs.linkguard.ui.ApkCheckUi
 import com.dwarpallabs.linkguard.ui.ReportStatus
+import kotlinx.coroutines.isActive
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -52,6 +55,12 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
     private var current: String? = null
     private var job: Job? = null
 
+    private val _apkCheck = MutableStateFlow<ApkCheckUi>(ApkCheckUi.Idle)
+
+    /** "Check what this app can do" on an app-download warning (roadmap B3). */
+    val apkCheck: StateFlow<ApkCheckUi> = _apkCheck
+    private var apkJob: Job? = null
+
     /** Starts checking [raw], unless it is already being checked. */
     fun check(raw: String) {
         if (raw == current) return
@@ -59,6 +68,9 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         job?.cancel()
         _state.value = State.Checking
         _reportStatus.value = ReportStatus.IDLE
+        apkJob?.cancel()
+        _apkCheck.value = ApkCheckUi.Idle
+
         val app = getApplication<LinkGuardApp>()
         job = viewModelScope.launch {
             val disabled = Prefs(app).disabledChecks
@@ -123,6 +135,44 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     /**
+     * The user tapped "Check what this app can do": download the app file from the link (the only
+     * time LinkGuard contacts a link's destination, and only on this tap), look inside, delete it.
+     * Leaving the screen or tapping Stop cancels it.
+     */
+    fun checkApk(verdict: Verdict) {
+        if (_apkCheck.value is ApkCheckUi.Running) return
+        val raw = current ?: return
+        val url = forwardUrl(raw, verdict)
+        val app = getApplication<LinkGuardApp>()
+        _apkCheck.value = ApkCheckUi.Running(0, null)
+        apkJob = viewModelScope.launch(Dispatchers.IO) {
+            var shown = 0L
+            val result = ApkInspector.check(
+                url, app.cacheDir, app.packageManager, app.data.brands,
+                onProgress = { done, total ->
+                    if (done - shown >= PROGRESS_STEP || done == total) {
+                        shown = done
+                        _apkCheck.value = ApkCheckUi.Running(done, total)
+                    }
+                },
+                isCancelled = { !isActive },
+            )
+            if (!isActive) return@launch
+            _apkCheck.value = when (result) {
+                is ApkInspector.Result.Ok -> ApkCheckUi.Done(result.report)
+                ApkInspector.Result.TooBig -> ApkCheckUi.TooBig
+                ApkInspector.Result.NotAnApp -> ApkCheckUi.NotAnApp
+                ApkInspector.Result.Failed -> ApkCheckUi.Failed
+            }
+        }
+    }
+
+    fun stopApkCheck() {
+        apkJob?.cancel()
+        _apkCheck.value = ApkCheckUi.Idle
+    }
+
+    /**
      * The user tapped Open anyway: remember the website's name (never the link) so the next app
      * open can ask "Was that link a scam?". Replaces any earlier question.
      *
@@ -158,6 +208,9 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     companion object {
+        /** Progress updates at most every 256 KB, so a big download doesn't redraw the screen constantly. */
+        private const val PROGRESS_STEP = 256 * 1024L
+
         /** Warnings a "trusted by me" website still always gets. */
         private val NEVER_TRUSTED = setOf(CheckId.APK_DOWNLOAD, CheckId.UPI_INTENT)
 

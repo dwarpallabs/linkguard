@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">هي لنڪ پاڻمرادو ادائگيون گهري ٿي</string>
     <string name="warn_upi_mandate">هي لنڪ توهان جي کاتي مان پاڻمرادو پئسا ڪٽجڻ جو بندوبست ڪري ٿي. تڏهن ئي ها ڪريو جڏهن توهان پاڻ ڪنهن سڃاتل بل يا پلان لاءِ اهو شروع ڪيو هجي.</string>
     <string name="warn_upi_brand">هيءَ ادائگي جي درخواست %1$s جو نالو استعمال ڪري ٿي، پر پئسا ٻئي کاتي ۾ وڃن ٿا. ريفنڊ يا KYC اپڊيٽ لاءِ توهان کي ڪڏهن به ادائگي ڪرڻي ناهي پوندي.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">چڪاسيو ته هي ايپ ڇا ڪري سگهي ٿي</string>
+    <string name="apk_check_hint">LinkGuard ايپ کي ڊائونلوڊ ڪري ان جي اندر ڏسي ٿو. اهو ان کي ڪڏهن به انسٽال نٿو ڪري.</string>
+    <string name="apk_check_progress">ايپ جي چڪاس ٿي رهي آهي… %2$s مان %1$s</string>
+    <string name="apk_check_progress_unknown">ايپ جي چڪاس ٿي رهي آهي… %1$s</string>
+    <string name="apk_check_stop">روڪيو</string>
+    <string name="apk_check_too_big">هي ايپ توهان جي فون تي چڪاس لاءِ تمام وڏي آهي.</string>
+    <string name="apk_check_failed">ايپ جي چڪاس نه ڪري سگهياسين. پنهنجو انٽرنيٽ ڪنيڪشن ڏسو ۽ ٻيهر ڪوشش ڪريو.</string>
+    <string name="apk_check_not_an_app">هن لنڪ مان ڪا ايپ فائل نه ملي، تنهنڪري چڪاس لاءِ ڪجهه به نه هو.</string>
+    <string name="apk_check_result_title">هي ايپ توهان جي فون تي ڇا ڪري سگهي ٿي</string>
+    <string name="apk_check_nothing">هي ايپ ڪا به عجيب شيءِ نٿي گهري. تڏهن به سڀ کان محفوظ اهو آهي ته ايپون رڳو Play Store تان انسٽال ڪريو.</string>
+    <string name="apk_check_brand">هي ايپ %1$s جو نالو استعمال ڪري ٿي ۽ توهان جا SMS پڙهڻ يا توهان جو فون قابو ڪرڻ چاهي ٿي. اصلي بئنڪ ايپون رڳو Play Store تان اينديون آهن.</string>
+    <string name="apk_check_deleted">ڊائونلوڊ ٿيل فائل ختم ڪئي وئي آهي.</string>
+    <string name="cap_read_sms">توهان جا SMS پيغام پڙهڻ، OTP سميت</string>
+    <string name="cap_send_sms">توهان جي نمبر تان SMS پيغام موڪلڻ</string>
+    <string name="cap_sms_app">توهان جي SMS ايپ بڻجي وڃڻ</string>
+    <string name="cap_accessibility">توهان جو فون قابو ڪرڻ ۽ اسڪرين تي سڀ ڪجهه ڏسڻ</string>
+    <string name="cap_notifications">توهان جا سڀ نوٽيفڪيشن پڙهڻ، OTP سميت</string>
+    <string name="cap_overlay">ٻين ايپن مٿان ڪجهه ڏيکارڻ، جيئن توهان جي بئنڪ ايپ مٿان</string>
+    <string name="cap_install">ٻيون ايپون انسٽال ڪرڻ</string>
+    <string name="cap_device_admin">توهان جو فون لاڪ ڪرڻ يا توهان کي هي ايپ هٽائڻ کان روڪڻ</string>
+    <string name="cap_contacts">توهان جا ڪانٽيڪٽ پڙهڻ</string>
+    <string name="cap_calls">توهان جي ڪال هسٽري پڙهڻ يا ڪال ڪرڻ</string>
 </resources>

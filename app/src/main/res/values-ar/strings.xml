@@ -189,4 +189,28 @@
     <string name="upi_asks_mandate">يطلب هذا الرابط دفعات تلقائية</string>
     <string name="warn_upi_mandate">يُفعّل هذا الرابط دفعات تلقائية من حسابك. لا توافق إلا إذا بدأت ذلك بنفسك لفاتورة أو خطة تعرفها.</string>
     <string name="warn_upi_brand">يستخدم طلب الدفع هذا اسم %1$s، لكن المال يذهب إلى حساب آخر. لا تحتاج أبدًا إلى الدفع لتحصل على استرداد أو لتحديث KYC.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">افحص ما يمكن أن يفعله هذا التطبيق</string>
+    <string name="apk_check_hint">ينزّل LinkGuard التطبيق لينظر داخله. لا يثبّته أبدًا.</string>
+    <string name="apk_check_progress">جارٍ فحص التطبيق… %1$s من %2$s</string>
+    <string name="apk_check_progress_unknown">جارٍ فحص التطبيق… %1$s</string>
+    <string name="apk_check_stop">أوقِف</string>
+    <string name="apk_check_too_big">هذا التطبيق كبير جدًا ولا يمكن فحصه على هاتفك.</string>
+    <string name="apk_check_failed">تعذّر فحص التطبيق. تأكّد من اتصالك بالإنترنت وحاول مرة أخرى.</string>
+    <string name="apk_check_not_an_app">لم يعطِ هذا الرابط ملف تطبيق، فلم يكن هناك شيء لفحصه.</string>
+    <string name="apk_check_result_title">ما يمكن أن يفعله هذا التطبيق على هاتفك</string>
+    <string name="apk_check_nothing">لا يطلب هذا التطبيق شيئًا غير عادي. ومع ذلك، الأكثر أمانًا أن تثبّت التطبيقات من Play Store فقط.</string>
+    <string name="apk_check_brand">يستخدم هذا التطبيق اسم %1$s ويريد قراءة رسائل SMS أو التحكم في هاتفك. تطبيقات البنوك الحقيقية تأتي من Play Store فقط.</string>
+    <string name="apk_check_deleted">حُذف الملف الذي تم تنزيله.</string>
+    <string name="cap_read_sms">قراءة رسائل SMS، ومنها رموز OTP</string>
+    <string name="cap_send_sms">إرسال رسائل SMS من رقمك</string>
+    <string name="cap_sms_app">أن يصبح تطبيق رسائل SMS لديك</string>
+    <string name="cap_accessibility">التحكم في هاتفك ورؤية كل ما على الشاشة</string>
+    <string name="cap_notifications">قراءة كل إشعاراتك، ومنها رموز OTP</string>
+    <string name="cap_overlay">الظهور فوق التطبيقات الأخرى، مثل تطبيق بنكك</string>
+    <string name="cap_install">تثبيت تطبيقات أخرى</string>
+    <string name="cap_device_admin">قفل هاتفك أو منعك من حذف التطبيق</string>
+    <string name="cap_contacts">قراءة جهات الاتصال لديك</string>
+    <string name="cap_calls">قراءة سجل مكالماتك أو إجراء مكالمات</string>
 </resources>

@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">یہِ لِنک چھُ پانہٕ پانٕے پونسہٕ کٹنُک اِجازت مَنگان</string>
     <string name="warn_upi_mandate">یہِ لِنک چھُ تُہٕنٛدِ اکاونٹہٕ پؠٹھہٕ پانہٕ پانٕے پونسہٕ کٹنُک اِنتظام کران۔ تیٚلی کٔرِو ہاں ییٚلہِ توٚہۍ پانہٕ کُنہِ زانٛہہ وٲلِس بِلس یا پلانس خٲطرٕ یہِ شروع کوٚرمُت آسہِ۔</string>
     <string name="warn_upi_brand">یہِ پیمنٹ درخواست چھےٚ %1$s ہُنٛد ناو استعمال کران، مگر پونسہٕ چھِ بیٚیِس اکاونٹس منٛز گژھان۔ رِفنڈ یا KYC اپڈیٹ خٲطرٕ چھُ نہٕ زانٛہہ تہِ پونسہٕ دِنُن پیوان۔</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">جانچِو یہِ ایپ کیا ہیٚکہِ کٔرِتھ</string>
+    <string name="apk_check_hint">LinkGuard چھُ ایپ ڈاؤن لوڈ کران تاکہ اَتھ اندر وُچھہِ۔ یہِ چھُ نہٕ اَتھ زانٛہہ انسٹال کران۔</string>
+    <string name="apk_check_progress">ایپ چھُ جانچنہٕ یِوان… %2$s منٛزٕ %1$s</string>
+    <string name="apk_check_progress_unknown">ایپ چھُ جانچنہٕ یِوان… %1$s</string>
+    <string name="apk_check_stop">رۄکِو</string>
+    <string name="apk_check_too_big">یہِ ایپ چھُ تُہٕنٛدِس فونس پؠٹھ جانچنہٕ خٲطرٕ واریاہ بوٚڑ۔</string>
+    <string name="apk_check_failed">ایپ ہیٚچ نہٕ جانچنہٕ یِتھ۔ پنُن انٹرنیٹ کنکشن وُچھِو تہٕ دوبارٕ کٔرِو کوشش۔</string>
+    <string name="apk_check_not_an_app">یمہِ لِنکہٕ سٟتۍ میوٗل نہٕ کانٛہہ ایپ فائل، تَوے اوس نہٕ جانچنہٕ خٲطرٕ کہِنٛہہ۔</string>
+    <string name="apk_check_result_title">یہِ ایپ کیا ہیٚکہِ تُہٕنٛدِس فونس پؠٹھ کٔرِتھ</string>
+    <string name="apk_check_nothing">یہِ ایپ چھُ نہٕ کانٛہہ عجیب چیز مَنگان۔ پھِر تہِ چھُ سارِوے کھوتہٕ محفوظ زِ ایپ کٔرِو صِرف Play Store پؠٹھہٕ انسٹال۔</string>
+    <string name="apk_check_brand">یہِ ایپ چھُ %1$s ناو استعمال کران تہٕ یژھان تُہٕنٛدۍ SMS پرٕنۍ یا تُہٕنٛد فون قابوس منٛز اَنُن۔ اصلی بینک ایپ چھِ صِرف Play Store پؠٹھہٕ یِوان۔</string>
+    <string name="apk_check_deleted">ڈاؤن لوڈ کرنہٕ آمٕژ فائل آیہِ مِٹاونہٕ۔</string>
+    <string name="cap_read_sms">تُہٕنٛدۍ SMS میسج پرٕنۍ، OTP تہِ</string>
+    <string name="cap_send_sms">تُہٕنٛدِس نمبرس پؠٹھہٕ SMS میسج سوزٕنۍ</string>
+    <string name="cap_sms_app">تُہٕنٛز SMS ایپ بنُن</string>
+    <string name="cap_accessibility">تُہٕنٛد فون قابوس منٛز اَنُن تہٕ سکرینس پؠٹھ سورُے وُچھُن</string>
+    <string name="cap_notifications">تُہٕنٛدۍ سٲری نوٹیفکیشن پرٕنۍ، OTP تہِ</string>
+    <string name="cap_overlay">بیٚیَن ایپن پؠٹھ کہِنٛہہ ہاوُن، مثلن تُہٕنٛدِس بینک ایپس پؠٹھ</string>
+    <string name="cap_install">بیٚیہٕ ایپ انسٹال کرٕنۍ</string>
+    <string name="cap_device_admin">تُہٕنٛد فون لاک کرُن یا تۄہہِ یہِ ایپ ہٹاونہٕ نِشہِ رۄکُن</string>
+    <string name="cap_contacts">تُہٕنٛدۍ کانٹیکٹ پرٕنۍ</string>
+    <string name="cap_calls">تُہٕنٛز کال ہسٹری پرٕنۍ یا کال کرٕنۍ</string>
 </resources>

@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">یہ لنک خودکار ادائیگیاں مانگتا ہے</string>
     <string name="warn_upi_mandate">یہ لنک آپ کے اکاؤنٹ سے خودبخود پیسے کٹنے کا انتظام کرتا ہے۔ تبھی ہاں کہیں جب آپ نے خود کسی جانے پہچانے بل یا پلان کے لیے یہ شروع کیا ہو۔</string>
     <string name="warn_upi_brand">یہ ادائیگی کی درخواست %1$s کا نام استعمال کرتی ہے، لیکن پیسے کسی اور اکاؤنٹ میں جاتے ہیں۔ ریفنڈ یا KYC اپڈیٹ کے لیے آپ کو کبھی ادائیگی نہیں کرنی پڑتی۔</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">جانچیں کہ یہ ایپ کیا کر سکتی ہے</string>
+    <string name="apk_check_hint">LinkGuard ایپ کو ڈاؤن لوڈ کر کے اس کے اندر دیکھتا ہے۔ یہ اسے کبھی انسٹال نہیں کرتا۔</string>
+    <string name="apk_check_progress">ایپ کی جانچ ہو رہی ہے… %2$s میں سے %1$s</string>
+    <string name="apk_check_progress_unknown">ایپ کی جانچ ہو رہی ہے… %1$s</string>
+    <string name="apk_check_stop">روکیں</string>
+    <string name="apk_check_too_big">یہ ایپ آپ کے فون پر جانچنے کے لیے بہت بڑی ہے۔</string>
+    <string name="apk_check_failed">ایپ کی جانچ نہیں ہو سکی۔ اپنا انٹرنیٹ کنکشن دیکھیں اور دوبارہ کوشش کریں۔</string>
+    <string name="apk_check_not_an_app">اس لنک سے کوئی ایپ فائل نہیں ملی، اس لیے جانچنے کو کچھ نہیں تھا۔</string>
+    <string name="apk_check_result_title">یہ ایپ آپ کے فون پر کیا کر سکتی ہے</string>
+    <string name="apk_check_nothing">یہ ایپ کوئی عجیب چیز نہیں مانگتی۔ پھر بھی سب سے محفوظ یہی ہے کہ ایپس صرف Play Store سے انسٹال کریں۔</string>
+    <string name="apk_check_brand">یہ ایپ %1$s کا نام استعمال کرتی ہے اور آپ کے SMS پڑھنا یا آپ کا فون قابو کرنا چاہتی ہے۔ اصلی بینک ایپس صرف Play Store سے آتی ہیں۔</string>
+    <string name="apk_check_deleted">ڈاؤن لوڈ کی گئی فائل مٹا دی گئی ہے۔</string>
+    <string name="cap_read_sms">آپ کے SMS میسج پڑھنا، OTP سمیت</string>
+    <string name="cap_send_sms">آپ کے نمبر سے SMS میسج بھیجنا</string>
+    <string name="cap_sms_app">آپ کی SMS ایپ بن جانا</string>
+    <string name="cap_accessibility">آپ کا فون قابو کرنا اور اسکرین پر سب کچھ دیکھنا</string>
+    <string name="cap_notifications">آپ کی تمام نوٹیفکیشنز پڑھنا، OTP سمیت</string>
+    <string name="cap_overlay">دوسری ایپس کے اوپر کچھ دکھانا، جیسے آپ کی بینک ایپ کے اوپر</string>
+    <string name="cap_install">دوسری ایپس انسٹال کرنا</string>
+    <string name="cap_device_admin">آپ کا فون لاک کرنا یا آپ کو یہ ایپ ہٹانے سے روکنا</string>
+    <string name="cap_contacts">آپ کے کانٹیکٹس پڑھنا</string>
+    <string name="cap_calls">آپ کی کال ہسٹری پڑھنا یا کال کرنا</string>
 </resources>

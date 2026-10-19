@@ -170,4 +170,28 @@
     <string name="upi_asks_mandate">Este enlace pide pagos automáticos</string>
     <string name="warn_upi_mandate">Este enlace activa pagos automáticos desde tu cuenta. Acepta solo si tú lo empezaste, para una factura o un plan que conoces.</string>
     <string name="warn_upi_brand">Esta solicitud de pago usa el nombre %1$s, pero el dinero va a otra cuenta. Nunca necesitas pagar para recibir un reembolso o actualizar tu KYC.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">Revisar qué puede hacer esta app</string>
+    <string name="apk_check_hint">LinkGuard descarga la app para ver qué tiene por dentro. Nunca la instala.</string>
+    <string name="apk_check_progress">Revisando la app… %1$s de %2$s</string>
+    <string name="apk_check_progress_unknown">Revisando la app… %1$s</string>
+    <string name="apk_check_stop">Detener</string>
+    <string name="apk_check_too_big">Esta app es demasiado grande para revisarla en tu teléfono.</string>
+    <string name="apk_check_failed">No se pudo revisar la app. Revisa tu conexión a internet e intenta de nuevo.</string>
+    <string name="apk_check_not_an_app">Este enlace no dio un archivo de app, así que no había nada que revisar.</string>
+    <string name="apk_check_result_title">Lo que esta app podría hacer en tu teléfono</string>
+    <string name="apk_check_nothing">Esta app no pide nada fuera de lo común. Aun así, lo más seguro es instalar apps solo desde Play Store.</string>
+    <string name="apk_check_brand">Esta app usa el nombre %1$s y quiere leer tus SMS o controlar tu teléfono. Las apps reales de los bancos solo vienen de Play Store.</string>
+    <string name="apk_check_deleted">El archivo descargado ya se borró.</string>
+    <string name="cap_read_sms">Leer tus mensajes SMS, incluso los OTP</string>
+    <string name="cap_send_sms">Enviar mensajes SMS desde tu número</string>
+    <string name="cap_sms_app">Convertirse en tu app de SMS</string>
+    <string name="cap_accessibility">Controlar tu teléfono y ver todo lo que hay en la pantalla</string>
+    <string name="cap_notifications">Leer todas tus notificaciones, incluso los OTP</string>
+    <string name="cap_overlay">Mostrarse encima de otras apps, por ejemplo encima de la app de tu banco</string>
+    <string name="cap_install">Instalar otras apps</string>
+    <string name="cap_device_admin">Bloquear tu teléfono o impedir que borres la app</string>
+    <string name="cap_contacts">Leer tus contactos</string>
+    <string name="cap_calls">Leer tu historial de llamadas o hacer llamadas</string>
 </resources>
