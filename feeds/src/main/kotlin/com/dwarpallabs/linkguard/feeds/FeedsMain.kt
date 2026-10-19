@@ -44,6 +44,8 @@ fun main(args: Array<String>) {
     val urlhausKey = env["URLHAUS_AUTH_KEY"].orEmpty()
     if (urlhausKey.isNotBlank()) fetch("urlhaus") { Sources.urlhausOnline(urlhausKey) } else println("urlhaus: skipped (URLHAUS_AUTH_KEY not set)")
     fetch("phishdestroy") { Sources.phishDestroyOnline() }
+    fetch("phishtank") { Sources.phishTankOnline() }
+
     val ranked = Sources.trancoTop(IMMUNE_TOP_SITES)
 
     val writer = if (apply) {

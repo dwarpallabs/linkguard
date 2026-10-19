@@ -8,7 +8,7 @@ import java.net.http.HttpResponse
 import java.time.Duration
 import java.util.zip.ZipInputStream
 
-/** Feed downloads. Each source's terms: see README "Data sources". */
+/** Feed downloads. Each source's terms: see feeds/SOURCES.md. */
 object Sources {
 
     private val client: HttpClient = HttpClient.newBuilder()
@@ -44,7 +44,36 @@ object Sources {
         return parseDomainList(response.body())
     }
 
+    /**
+     * PhishTank (Cisco Talos): verified phishing URLs that are currently online. Free, including
+     * commercial use (FAQ). Its key registration is closed, and without a key it allows a few
+     * downloads a day, so this runs once a day. Entries are kept private, never republished: the
+     * terms don't clearly allow redistribution (see feeds/SOURCES.md).
+     */
+    fun phishTankOnline(): List<String> {
+        val request = HttpRequest.newBuilder(URI("https://data.phishtank.com/data/online-valid.csv.gz"))
+            .header("User-Agent", USER_AGENT)
+            .timeout(Duration.ofMinutes(3))
+            .build()
+        val response = client.send(request, HttpResponse.BodyHandlers.ofByteArray())
+        check(response.statusCode() == 200) { "PhishTank download failed: HTTP ${response.statusCode()}" }
+        val text = java.util.zip.GZIPInputStream(ByteArrayInputStream(response.body())).bufferedReader().readText()
+        return parsePhishTankCsv(text)
+    }
+
+    /**
+     * PhishTank CSV: phish_id,url,phish_detail_url,submission_time,verified,verification_time,online,target.
+     * Only rows that are verified and online; the header and anything malformed are skipped.
+     */
+    fun parsePhishTankCsv(csv: String): List<String> = csv.lineSequence()
+        .filter { it.isNotBlank() }
+        .map { csvFields(it) }
+        .filter { it.size >= 7 && it[0] != "phish_id" && it[4] == "yes" && it[6] == "yes" }
+        .mapNotNull { it[1].trim().takeIf { url -> url.isNotEmpty() } }
+        .toList()
+
     /** One domain per line; blank lines and `#` comments ignored. */
+
     fun parseDomainList(text: String): List<String> = text.lineSequence()
         .map { it.substringBefore('#').trim().lowercase() }
         .filter { it.isNotEmpty() }

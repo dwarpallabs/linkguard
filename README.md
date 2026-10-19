@@ -53,13 +53,15 @@ On a warning screen, tap **Report this link**, then **Report**; only the website
 ## Data sources
 - Phishing and scam websites: [PhishDestroy destroylist](https://github.com/phishdestroy/destroylist) (MIT), its live root-domain list.
 - Malware hosts: [URLhaus](https://urlhaus.abuse.ch) by abuse.ch, used under its terms for not-for-profit projects.
+- Phishing hosts: [PhishTank](https://phishtank.com) by Cisco Talos, its verified, online list.
 - Popular sites for the safe list: the [Tranco](https://tranco-list.eu) research ranking (Le Pochat et al., NDSS 2019). The top 10,000 open without a server check, and no site in the top 100,000 is ever blocked by a feed.
 
-URLhaus and PhishDestroy are free for not-for-profit use. A paid LinkGuard service would need commercial threat feeds instead.
 - Community reports from LinkGuard users.
 
+Each source's terms, and the Indian sources we checked but can't use yet, are in [feeds/SOURCES.md](feeds/SOURCES.md). URLhaus is free for not-for-profit use only; a paid LinkGuard service would need commercial threat feeds instead.
+
 ## Where the lists live
-The scam blocklist and the safe-site allowlist are kept in the LinkGuard server database, not in this repository, so scammers cannot read them. Phones check the blocklist by 4-byte hash prefix and receive the allowlist as signed hashes. The detection rules (look-alike brands, app downloads, unusual addresses, UPI requests) are all here in the open.
+The scam blocklist and the safe-site allowlist are kept in the LinkGuard server database, not in this repository. Only the confirmed part of the blocklist is published, 48 hours late (see [Using the data](#using-the-data)). Phones check the blocklist by 4-byte hash prefix and receive the allowlist as signed hashes. The detection rules (look-alike brands, app downloads, unusual addresses, UPI requests) are all here in the open.
 
 ## Languages
 LinkGuard follows your phone's language. On Android 13 and newer you can also pick a language just for LinkGuard in *Settings → Apps → LinkGuard → Language*.
