@@ -201,4 +201,10 @@
     <string name="look_banner">સલામત રીતે જોઈ રહ્યા છો. અહીં તમે જે કંઈ ટાઇપ કરો તે મોકલાતું નથી.</string>
     <string name="look_blocked">LinkGuard એ આ પેજને બીજું કંઈ ખોલતા રોક્યું.</string>
     <string name="look_failed">પેજ બતાવી ન શકાયું. તમારું ઇન્ટરનેટ કનેક્શન તપાસો અને ફરી પ્રયાસ કરો.</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">તમે લિંક ખોલી નહીં</string>
+    <string name="brand_tip_body">%1$s ની સાચી વેબસાઇટ %2$s છે. હવે પછી, મેસેજમાં આવેલી લિંક પર ટૅપ કરવાને બદલે, તે જાતે ટાઇપ કરો અથવા %1$s ઍપ ખોલો.</string>
+    <string name="brand_tip_body_no_site">હવે પછી, મેસેજમાં આવેલી લિંક પર ટૅપ કરવાને બદલે, %1$s ઍપ ખોલો અથવા તેની સાચી વેબસાઇટ જાતે ટાઇપ કરો.</string>
+    <string name="brand_tip_done">થઈ ગયું</string>
 </resources>

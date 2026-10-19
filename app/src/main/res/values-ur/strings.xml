@@ -200,4 +200,10 @@
     <string name="look_banner">محفوظ طریقے سے دیکھ رہے ہیں۔ یہاں آپ جو بھی ٹائپ کریں وہ بھیجا نہیں جاتا۔</string>
     <string name="look_blocked">LinkGuard نے اس صفحے کو کچھ اور کھولنے سے روک دیا۔</string>
     <string name="look_failed">صفحہ نہیں دکھایا جا سکا۔ اپنا انٹرنیٹ کنکشن دیکھیں اور دوبارہ کوشش کریں۔</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">آپ نے لنک نہیں کھولا</string>
+    <string name="brand_tip_body">%1$s کی اصلی ویب سائٹ %2$s ہے۔ اگلی بار، میسج میں آئے لنک پر ٹیپ کرنے کے بجائے، اسے خود ٹائپ کریں یا %1$s ایپ کھولیں۔</string>
+    <string name="brand_tip_body_no_site">اگلی بار، میسج میں آئے لنک پر ٹیپ کرنے کے بجائے، %1$s ایپ کھولیں یا اس کی اصلی ویب سائٹ خود ٹائپ کریں۔</string>
+    <string name="brand_tip_done">ہو گیا</string>
 </resources>

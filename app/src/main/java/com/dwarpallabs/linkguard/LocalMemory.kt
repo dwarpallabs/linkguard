@@ -52,6 +52,28 @@ class LocalMemory(private val kv: KeyValue, private val token: ReporterToken) {
 
     fun clearBrands() = kv.put(KEY_BRANDS, null)
 
+    /** The brand tip after Go back (roadmap B6) is shown at most once per brand per [TIP_INTERVAL_S]. */
+    fun shouldShowBrandTip(brand: String, nowSeconds: Long): Boolean {
+        val last = tips()[tipKey(brand)] ?: return true
+        return nowSeconds - last >= TIP_INTERVAL_S || nowSeconds < last
+    }
+
+    fun markBrandTipShown(brand: String, nowSeconds: Long) {
+        val tips = tips()
+        tips.remove(tipKey(brand))
+        tips[tipKey(brand)] = nowSeconds
+        kv.put(KEY_TIPS, tips.entries.toList().takeLast(MAX_TIPS).joinToString("\n") { "${it.key}=${it.value}" })
+    }
+
+    private fun tipKey(brand: String) = token.forDomain("tip:$brand")
+
+    private fun tips(): MutableMap<String, Long> = kv.get(KEY_TIPS)?.split('\n').orEmpty()
+        .mapNotNull { line ->
+            val (k, v) = line.split('=').takeIf { it.size == 2 } ?: return@mapNotNull null
+            if (!HASH.matches(k)) return@mapNotNull null
+            v.toLongOrNull()?.let { k to it }
+        }.toMap(LinkedHashMap())
+
     private fun brandKey(brand: String) = token.forDomain("brand:$brand")
 
     private fun trusted(): List<String> = kv.get(KEY_TRUSTED)?.split('\n')?.filter { HASH.matches(it) }.orEmpty()
@@ -69,6 +91,10 @@ class LocalMemory(private val kv: KeyValue, private val token: ReporterToken) {
         const val FILE = "local_memory"
         const val KEY_TRUSTED = "trusted"
         const val KEY_BRANDS = "brands"
+        const val KEY_TIPS = "tips"
+        const val TIP_INTERVAL_S = 30 * 24 * 60 * 60L
+        const val MAX_TIPS = 100
+
         const val MY_BRAND_OPENS = 3
         const val MAX_TRUSTED = 500
         private val HASH = Regex("^[0-9a-f]{64}$")

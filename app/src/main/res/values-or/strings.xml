@@ -200,4 +200,10 @@
     <string name="look_banner">ସୁରକ୍ଷିତ ଭାବେ ଦେଖୁଛନ୍ତି। ଏଠାରେ ଆପଣ ଯାହା ବି ଟାଇପ୍ କରନ୍ତି ତାହା ପଠାଯାଏ ନାହିଁ।</string>
     <string name="look_blocked">LinkGuard ଏହି ପେଜକୁ ଅନ୍ୟ କିଛି ଖୋଲିବାରୁ ରୋକିଦେଲା।</string>
     <string name="look_failed">ପେଜ୍ ଦେଖାଯାଇପାରିଲା ନାହିଁ। ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଦେଖି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">ଆପଣ ଲିଙ୍କଟି ଖୋଲିଲେ ନାହିଁ</string>
+    <string name="brand_tip_body">%1$sର ଅସଲି ୱେବସାଇଟ୍ ହେଉଛି %2$s। ଆସନ୍ତା ଥର, ମେସେଜରେ ଆସିଥିବା ଲିଙ୍କ ଟାପ୍ କରିବା ବଦଳରେ, ଏହାକୁ ନିଜେ ଟାଇପ୍ କରନ୍ତୁ କିମ୍ବା %1$s ଆପ୍ ଖୋଲନ୍ତୁ।</string>
+    <string name="brand_tip_body_no_site">ଆସନ୍ତା ଥର, ମେସେଜରେ ଆସିଥିବା ଲିଙ୍କ ଟାପ୍ କରିବା ବଦଳରେ, %1$s ଆପ୍ ଖୋଲନ୍ତୁ କିମ୍ବା ଏହାର ଅସଲି ୱେବସାଇଟ୍ ନିଜେ ଟାଇପ୍ କରନ୍ତୁ।</string>
+    <string name="brand_tip_done">ହୋଇଗଲା</string>
 </resources>

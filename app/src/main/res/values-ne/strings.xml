@@ -200,4 +200,10 @@
     <string name="look_banner">तपाईं सुरक्षित रूपमा हेर्दै हुनुहुन्छ। तपाईंले यहाँ टाइप गरेको केही पनि पठाइँदैन।</string>
     <string name="look_blocked">LinkGuard ले यो पेजलाई अरू केही खोल्नबाट रोक्यो।</string>
     <string name="look_failed">पेज देखाउन सकिएन। इन्टरनेट जडान जाँच्नुहोस् र फेरि प्रयास गर्नुहोस्।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">तपाईंले लिंक खोल्नुभएन</string>
+    <string name="brand_tip_body">%1$s को साँचो वेबसाइट %2$s हो। अर्को पटक, म्यासेजमा आएको लिंक थिच्नुको सट्टा, यसलाई आफैं टाइप गर्नुहोस् वा %1$s एप खोल्नुहोस्।</string>
+    <string name="brand_tip_body_no_site">अर्को पटक, म्यासेजमा आएको लिंक थिच्नुको सट्टा, %1$s एप खोल्नुहोस् वा यसको साँचो वेबसाइट आफैं टाइप गर्नुहोस्।</string>
+    <string name="brand_tip_done">भयो</string>
 </resources>

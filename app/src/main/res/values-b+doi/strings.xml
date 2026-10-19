@@ -200,4 +200,10 @@
     <string name="look_banner">तुस सुरक्षत तरीके कन्नै दिक्खा करदे ओ। तुस इत्थें जे किश बी टाइप करो, ओह् नेईं भेजेआ जंदा।</string>
     <string name="look_blocked">LinkGuard ने इस पेज गी किश होर खोलने थमां रोकी दित्ता।</string>
     <string name="look_failed">पेज नेईं दस्सेआ जाई सकेआ। अपना इंटरनेट कनेक्शन जांचो ते फ्ही कोशश करो।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">तुसें लिंक नेईं खोल्लेआ</string>
+    <string name="brand_tip_body">%1$s दी असली वेबसाइट %2$s ऐ। अगली बारी, मैसेज च आए दे लिंक पर टैप करने दी बजाए, इसी आपूं टाइप करो जां %1$s ऐप खोल्लो।</string>
+    <string name="brand_tip_body_no_site">अगली बारी, मैसेज च आए दे लिंक पर टैप करने दी बजाए, %1$s ऐप खोल्लो जां उसदी असली वेबसाइट आपूं टाइप करो।</string>
+    <string name="brand_tip_done">होई गेआ</string>
 </resources>

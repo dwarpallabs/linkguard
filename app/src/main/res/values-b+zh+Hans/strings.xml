@@ -194,4 +194,10 @@
     <string name="look_banner">正在安全查看。您在这里输入的内容不会被发送。</string>
     <string name="look_blocked">LinkGuard 阻止了这个网页打开其他内容。</string>
     <string name="look_failed">无法显示网页。请检查网络连接，然后再试一次。</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">您没有打开这个链接</string>
+    <string name="brand_tip_body">%1$s 真正的网站是 %2$s。下次请自己输入这个网站，或打开 %1$s 应用，不要点消息里的链接。</string>
+    <string name="brand_tip_body_no_site">下次请打开 %1$s 应用，或自己输入它真正的网站，不要点消息里的链接。</string>
+    <string name="brand_tip_done">完成</string>
 </resources>

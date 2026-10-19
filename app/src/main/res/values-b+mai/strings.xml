@@ -198,4 +198,10 @@
     <string name="look_banner">अहाँ सुरक्षित रूपसँ देखि रहल छी। अहाँ एतय जे किछु टाइप करब से नहि पठाओल जाइत अछि।</string>
     <string name="look_blocked">LinkGuard एहि पेज केँ आन किछु खोलबासँ रोकि देलक।</string>
     <string name="look_failed">पेज नहि देखाओल जा सकल। अपन इंटरनेट कनेक्शन जाँचू आ फेर कोशिश करू।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">अहाँ लिंक नहि खोललहुँ</string>
+    <string name="brand_tip_body">%1$s क असली वेबसाइट %2$s अछि। अगिला बेर, मैसेज मे आएल लिंक दबेबाक बदला, एकरा स्वयं टाइप करू वा %1$s ऐप खोलू।</string>
+    <string name="brand_tip_body_no_site">अगिला बेर, मैसेज मे आएल लिंक दबेबाक बदला, %1$s ऐप खोलू वा ओकर असली वेबसाइट स्वयं टाइप करू।</string>
+    <string name="brand_tip_done">भऽ गेल</string>
 </resources>

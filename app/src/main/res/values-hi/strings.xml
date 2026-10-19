@@ -195,4 +195,10 @@
     <string name="look_banner">आप सुरक्षित तरीके से देख रहे हैं। आप यहाँ जो भी टाइप करें, वह भेजा नहीं जाता।</string>
     <string name="look_blocked">LinkGuard ने इस पेज को कुछ और खोलने से रोक दिया।</string>
     <string name="look_failed">पेज नहीं दिखाया जा सका। अपना इंटरनेट कनेक्शन जाँचें और फिर से कोशिश करें।</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">आपने लिंक नहीं खोला</string>
+    <string name="brand_tip_body">%1$s की असली वेबसाइट %2$s है। अगली बार, मैसेज में आए लिंक पर टैप करने के बजाय, इसे खुद टाइप करें या %1$s ऐप खोलें।</string>
+    <string name="brand_tip_body_no_site">अगली बार, मैसेज में आए लिंक पर टैप करने के बजाय, %1$s ऐप खोलें या उसकी असली वेबसाइट खुद टाइप करें।</string>
+    <string name="brand_tip_done">हो गया</string>
 </resources>

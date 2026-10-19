@@ -200,4 +200,10 @@
     <string name="look_banner">సురక్షితంగా చూస్తున్నారు. ఇక్కడ మీరు టైప్ చేసేది ఏదీ ఎక్కడికీ వెళ్లదు.</string>
     <string name="look_blocked">ఈ పేజీ వేరే దేన్నో తెరవకుండా LinkGuard ఆపింది.</string>
     <string name="look_failed">పేజీని చూపించలేకపోయాం. మీ ఇంటర్నెట్ కనెక్షన్ చూసి మళ్లీ ప్రయత్నించండి.</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">మీరు లింక్ తెరవలేదు</string>
+    <string name="brand_tip_body">%1$s అసలు వెబ్‌సైట్ %2$s. తర్వాతిసారి, మెసేజ్‌లో వచ్చే లింక్ నొక్కే బదులు, దాన్ని మీరే టైప్ చేయండి లేదా %1$s యాప్ తెరవండి.</string>
+    <string name="brand_tip_body_no_site">తర్వాతిసారి, మెసేజ్‌లో వచ్చే లింక్ నొక్కే బదులు, %1$s యాప్ తెరవండి లేదా దాని అసలు వెబ్‌సైట్‌ను మీరే టైప్ చేయండి.</string>
+    <string name="brand_tip_done">అయింది</string>
 </resources>

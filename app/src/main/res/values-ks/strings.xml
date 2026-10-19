@@ -200,4 +200,10 @@
     <string name="look_banner">حفاظتس سان وُچھان۔ یتھ جاے یِہ کینٛہہ تُہۍ ٹائپ کٔرِو، سُہ چھُنہٕ سوزنہٕ یِوان۔</string>
     <string name="look_blocked">LinkGuard روٗک یہِ پیج بیٚیہ کینٛہہ یَلہٕ کرنہٕ نِشہِ۔</string>
     <string name="look_failed">پیج ہیٚچ نہٕ ہاونہٕ یِتھ۔ پنُن انٹرنیٹ کنکشن وُچھِو تہٕ دوبارٕ کٔرِو کوشش۔</string>
+
+    <!-- Brand tip after Go back (roadmap B6). -->
+    <string name="brand_tip_title">تُہۍ کوٚر نہٕ یہِ لِنک یَلہٕ</string>
+    <string name="brand_tip_body">%1$s سُنٛز اصلی ویب سایٹ چھےٚ %2$s۔ بیٚیہِ لٹہِ، میسجس منٛز آمتِس لِنکس پؠٹھ ٹیپ کرنہٕ بجاے، کٔرِو یہِ پانہٕ ٹائپ یا کٔرِو %1$s ایپ یَلہٕ۔</string>
+    <string name="brand_tip_body_no_site">بیٚیہِ لٹہِ، میسجس منٛز آمتِس لِنکس پؠٹھ ٹیپ کرنہٕ بجاے، کٔرِو %1$s ایپ یَلہٕ یا کٔرِو اَمہِ سُنٛز اصلی ویب سایٹ پانہٕ ٹائپ۔</string>
+    <string name="brand_tip_done">مُکمل</string>
 </resources>
