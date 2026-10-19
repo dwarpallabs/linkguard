@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">एह् लिंक अपने-आप होने आह्ले भुगतान मंगदा ऐ</string>
     <string name="warn_upi_mandate">एह् लिंक तुंदे खाते शा अपने-आप पैसे कट्टने दा इंतजाम करदा ऐ। तां गै हां आखो जेकर तुसें आपूं कुसै जाने-पछानें बिल जां प्लान आस्तै एह् शुरू कीता होऐ।</string>
     <string name="warn_upi_brand">एह् भुगतान अनुरोध %1$s दा नां बरतदा ऐ, पर पैसे कुसै दूए खाते च जंदे न। रिफंड जां KYC अपडेट आस्तै तुसेंगी कदें बी पैसे नेईं देने पौंदे।</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">जांचो जे एह् ऐप केह् करी सकदा ऐ</string>
+    <string name="apk_check_hint">LinkGuard ऐप दे अंदर दिक्खने आस्तै उसी डाउनलोड करदा ऐ। एह् उसी कदें इंस्टॉल नेईं करदा।</string>
+    <string name="apk_check_progress">ऐप दी जांच होआ करदी ऐ… %2$s बिच्चा %1$s</string>
+    <string name="apk_check_progress_unknown">ऐप दी जांच होआ करदी ऐ… %1$s</string>
+    <string name="apk_check_stop">रोको</string>
+    <string name="apk_check_too_big">एह् ऐप इन्ना बड्डा ऐ जे तुंदे फोन पर इसदी जांच नेईं होई सकदी।</string>
+    <string name="apk_check_failed">ऐप दी जांच नेईं होई सकी। अपना इंटरनेट कनेक्शन जांचो ते फ्ही कोशश करो।</string>
+    <string name="apk_check_not_an_app">इस लिंक थमां कोई ऐप फाइल नेईं मिली, इस आस्तै जांचने लेई किश नेईं हा।</string>
+    <string name="apk_check_result_title">एह् ऐप तुंदे फोन पर केह् करी सकदा ऐ</string>
+    <string name="apk_check_nothing">एह् ऐप कोई अजीब चीज नेईं मंगदा। फ्ही बी ऐप सिर्फ Play Store थमां गै इंस्टॉल करना सारें शा सुरक्षत ऐ।</string>
+    <string name="apk_check_brand">एह् ऐप %1$s नां बरतदा ऐ ते तुंदे SMS पढ़ना जां तुंदा फोन चलाना चांह्दा ऐ। असली बैंक ऐप सिर्फ Play Store थमां गै औंदे न।</string>
+    <string name="apk_check_deleted">डाउनलोड कीती दी फाइल हटाई दित्ती गेई ऐ।</string>
+    <string name="cap_read_sms">तुंदे SMS मैसेज पढ़ना, OTP बी</string>
+    <string name="cap_send_sms">तुंदे नंबर थमां SMS मैसेज भेजना</string>
+    <string name="cap_sms_app">तुंदा SMS ऐप बनी जाना</string>
+    <string name="cap_accessibility">तुंदा फोन चलाना ते स्क्रीन पर सब किश दिक्खना</string>
+    <string name="cap_notifications">तुंदे सारे नोटिफिकेशन पढ़ना, OTP बी</string>
+    <string name="cap_overlay">दूए ऐपें उप्पर दिस्सना, जियां तुंदे बैंक ऐप उप्पर</string>
+    <string name="cap_install">दूए ऐप इंस्टॉल करना</string>
+    <string name="cap_device_admin">तुंदा फोन लॉक करना जां तुसेंगी ऐप हटाने थमां रोकना</string>
+    <string name="cap_contacts">तुंदे कॉन्टैक्ट पढ़ना</string>
+    <string name="cap_calls">तुंदी कॉल हिस्ट्री पढ़ना जां कॉल करना</string>
 </resources>

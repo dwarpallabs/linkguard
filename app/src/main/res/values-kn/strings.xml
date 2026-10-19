@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">ಈ ಲಿಂಕ್ ತಾನಾಗಿ ಆಗುವ ಪಾವತಿಗಳನ್ನು ಕೇಳುತ್ತದೆ</string>
     <string name="warn_upi_mandate">ಈ ಲಿಂಕ್ ನಿಮ್ಮ ಖಾತೆಯಿಂದ ತಾನಾಗಿ ಹಣ ಕಡಿತವಾಗುವ ವ್ಯವಸ್ಥೆ ಮಾಡುತ್ತದೆ. ಪರಿಚಿತ ಬಿಲ್ ಅಥವಾ ಪ್ಲಾನ್‌ಗಾಗಿ ನೀವೇ ಇದನ್ನು ಶುರು ಮಾಡಿದ್ದರೆ ಮಾತ್ರ ಒಪ್ಪಿ.</string>
     <string name="warn_upi_brand">ಈ ಪಾವತಿ ವಿನಂತಿ %1$s ಹೆಸರನ್ನು ಬಳಸುತ್ತದೆ, ಆದರೆ ಹಣ ಬೇರೆ ಖಾತೆಗೆ ಹೋಗುತ್ತದೆ. ರೀಫಂಡ್ ಅಥವಾ KYC ಅಪ್‌ಡೇಟ್‌ಗಾಗಿ ನೀವು ಎಂದಿಗೂ ಹಣ ಪಾವತಿಸಬೇಕಾಗಿಲ್ಲ.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">ಈ ಆ್ಯಪ್ ಏನು ಮಾಡಬಹುದು ಎಂದು ಚೆಕ್ ಮಾಡಿ</string>
+    <string name="apk_check_hint">ಆ್ಯಪ್‌ನ ಒಳಗೆ ನೋಡಲು LinkGuard ಅದನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡುತ್ತದೆ. ಅದನ್ನು ಎಂದಿಗೂ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದಿಲ್ಲ.</string>
+    <string name="apk_check_progress">ಆ್ಯಪ್ ಚೆಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ… %2$s ನಲ್ಲಿ %1$s</string>
+    <string name="apk_check_progress_unknown">ಆ್ಯಪ್ ಚೆಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ… %1$s</string>
+    <string name="apk_check_stop">ನಿಲ್ಲಿಸಿ</string>
+    <string name="apk_check_too_big">ಈ ಆ್ಯಪ್ ತುಂಬಾ ದೊಡ್ಡದು, ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ಇದನ್ನು ಚೆಕ್ ಮಾಡಲು ಆಗುವುದಿಲ್ಲ.</string>
+    <string name="apk_check_failed">ಆ್ಯಪ್ ಚೆಕ್ ಮಾಡಲು ಆಗಲಿಲ್ಲ. ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ನೋಡಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="apk_check_not_an_app">ಈ ಲಿಂಕ್‌ನಿಂದ ಆ್ಯಪ್ ಫೈಲ್ ಸಿಗಲಿಲ್ಲ, ಹಾಗಾಗಿ ಚೆಕ್ ಮಾಡಲು ಏನೂ ಇರಲಿಲ್ಲ.</string>
+    <string name="apk_check_result_title">ಈ ಆ್ಯಪ್ ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ಏನು ಮಾಡಬಹುದು</string>
+    <string name="apk_check_nothing">ಈ ಆ್ಯಪ್ ವಿಚಿತ್ರವಾದ ಏನನ್ನೂ ಕೇಳುತ್ತಿಲ್ಲ. ಆದರೂ, ಆ್ಯಪ್‌ಗಳನ್ನು Play Store ನಿಂದ ಮಾತ್ರ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದೇ ಹೆಚ್ಚು ಸುರಕ್ಷಿತ.</string>
+    <string name="apk_check_brand">ಈ ಆ್ಯಪ್ %1$s ಎಂಬ ಹೆಸರನ್ನು ಬಳಸುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ SMS ಓದಲು ಅಥವಾ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಕಂಟ್ರೋಲ್ ಮಾಡಲು ಕೇಳುತ್ತದೆ. ನಿಜವಾದ ಬ್ಯಾಂಕ್ ಆ್ಯಪ್‌ಗಳು Play Store ನಿಂದ ಮಾತ್ರ ಬರುತ್ತವೆ.</string>
+    <string name="apk_check_deleted">ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್ ಅನ್ನು ಡಿಲೀಟ್ ಮಾಡಲಾಗಿದೆ.</string>
+    <string name="cap_read_sms">OTP ಗಳೂ ಸೇರಿದಂತೆ ನಿಮ್ಮ SMS ಮೆಸೇಜ್‌ಗಳನ್ನು ಓದಬಹುದು</string>
+    <string name="cap_send_sms">ನಿಮ್ಮ ನಂಬರ್‌ನಿಂದ SMS ಮೆಸೇಜ್‌ಗಳನ್ನು ಕಳುಹಿಸಬಹುದು</string>
+    <string name="cap_sms_app">ನಿಮ್ಮ SMS ಆ್ಯಪ್ ಆಗಿಬಿಡಬಹುದು</string>
+    <string name="cap_accessibility">ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಕಂಟ್ರೋಲ್ ಮಾಡಿ, ಸ್ಕ್ರೀನ್ ಮೇಲಿರುವ ಎಲ್ಲವನ್ನೂ ನೋಡಬಹುದು</string>
+    <string name="cap_notifications">OTP ಗಳೂ ಸೇರಿದಂತೆ ನಿಮ್ಮ ಎಲ್ಲಾ ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ಓದಬಹುದು</string>
+    <string name="cap_overlay">ಬೇರೆ ಆ್ಯಪ್‌ಗಳ ಮೇಲೆ ಕಾಣಿಸಿಕೊಳ್ಳಬಹುದು, ಉದಾಹರಣೆಗೆ ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಆ್ಯಪ್ ಮೇಲೆ</string>
+    <string name="cap_install">ಬೇರೆ ಆ್ಯಪ್‌ಗಳನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಬಹುದು</string>
+    <string name="cap_device_admin">ನಿಮ್ಮ ಫೋನ್ ಲಾಕ್ ಮಾಡಬಹುದು ಅಥವಾ ನೀವು ಆ್ಯಪ್ ತೆಗೆಯದಂತೆ ತಡೆಯಬಹುದು</string>
+    <string name="cap_contacts">ನಿಮ್ಮ ಕಾಂಟ್ಯಾಕ್ಟ್‌ಗಳನ್ನು ಓದಬಹುದು</string>
+    <string name="cap_calls">ನಿಮ್ಮ ಕಾಲ್ ಹಿಸ್ಟರಿ ಓದಬಹುದು ಅಥವಾ ಕಾಲ್ ಮಾಡಬಹುದು</string>
 </resources>

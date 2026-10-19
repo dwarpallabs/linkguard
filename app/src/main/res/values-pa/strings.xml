@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">ਇਹ ਲਿੰਕ ਆਪਣੇ-ਆਪ ਹੋਣ ਵਾਲੇ ਭੁਗਤਾਨ ਮੰਗਦਾ ਹੈ</string>
     <string name="warn_upi_mandate">ਇਹ ਲਿੰਕ ਤੁਹਾਡੇ ਖਾਤੇ ਵਿੱਚੋਂ ਆਪਣੇ-ਆਪ ਪੈਸੇ ਕੱਟਣ ਦਾ ਪ੍ਰਬੰਧ ਕਰਦਾ ਹੈ। ਤਾਂ ਹੀ ਹਾਂ ਕਹੋ ਜੇ ਤੁਸੀਂ ਖੁਦ ਕਿਸੇ ਜਾਣੇ-ਪਛਾਣੇ ਬਿੱਲ ਜਾਂ ਪਲਾਨ ਲਈ ਇਹ ਸ਼ੁਰੂ ਕੀਤਾ ਹੋਵੇ।</string>
     <string name="warn_upi_brand">ਇਹ ਭੁਗਤਾਨ ਬੇਨਤੀ %1$s ਦਾ ਨਾਮ ਵਰਤਦੀ ਹੈ, ਪਰ ਪੈਸੇ ਕਿਸੇ ਹੋਰ ਖਾਤੇ ਵਿੱਚ ਜਾਂਦੇ ਹਨ। ਰਿਫੰਡ ਜਾਂ KYC ਅੱਪਡੇਟ ਲਈ ਤੁਹਾਨੂੰ ਕਦੇ ਭੁਗਤਾਨ ਨਹੀਂ ਕਰਨਾ ਪੈਂਦਾ।</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">ਜਾਂਚੋ ਕਿ ਇਹ ਐਪ ਕੀ ਕਰ ਸਕਦੀ ਹੈ</string>
+    <string name="apk_check_hint">ਐਪ ਦੇ ਅੰਦਰ ਦੇਖਣ ਲਈ LinkGuard ਉਸਨੂੰ ਡਾਊਨਲੋਡ ਕਰਦਾ ਹੈ। ਇਹ ਉਸਨੂੰ ਕਦੇ ਇੰਸਟਾਲ ਨਹੀਂ ਕਰਦਾ।</string>
+    <string name="apk_check_progress">ਐਪ ਦੀ ਜਾਂਚ ਹੋ ਰਹੀ ਹੈ… %2$s ਵਿੱਚੋਂ %1$s</string>
+    <string name="apk_check_progress_unknown">ਐਪ ਦੀ ਜਾਂਚ ਹੋ ਰਹੀ ਹੈ… %1$s</string>
+    <string name="apk_check_stop">ਰੋਕੋ</string>
+    <string name="apk_check_too_big">ਇਹ ਐਪ ਬਹੁਤ ਵੱਡੀ ਹੈ, ਇਸ ਲਈ ਤੁਹਾਡੇ ਫ਼ੋਨ ’ਤੇ ਇਸਦੀ ਜਾਂਚ ਨਹੀਂ ਹੋ ਸਕਦੀ।</string>
+    <string name="apk_check_failed">ਐਪ ਦੀ ਜਾਂਚ ਨਹੀਂ ਹੋ ਸਕੀ। ਆਪਣਾ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੇਖੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="apk_check_not_an_app">ਇਸ ਲਿੰਕ ਤੋਂ ਕੋਈ ਐਪ ਫ਼ਾਈਲ ਨਹੀਂ ਮਿਲੀ, ਇਸ ਲਈ ਜਾਂਚਣ ਲਈ ਕੁਝ ਨਹੀਂ ਸੀ।</string>
+    <string name="apk_check_result_title">ਇਹ ਐਪ ਤੁਹਾਡੇ ਫ਼ੋਨ ’ਤੇ ਕੀ ਕਰ ਸਕਦੀ ਹੈ</string>
+    <string name="apk_check_nothing">ਇਹ ਐਪ ਕੁਝ ਵੀ ਅਜੀਬ ਨਹੀਂ ਮੰਗਦੀ। ਫਿਰ ਵੀ, ਐਪਾਂ ਸਿਰਫ਼ Play Store ਤੋਂ ਹੀ ਇੰਸਟਾਲ ਕਰਨਾ ਸਭ ਤੋਂ ਸੁਰੱਖਿਅਤ ਹੈ।</string>
+    <string name="apk_check_brand">ਇਹ ਐਪ %1$s ਨਾਮ ਵਰਤਦੀ ਹੈ ਅਤੇ ਤੁਹਾਡੇ SMS ਪੜ੍ਹਨਾ ਜਾਂ ਤੁਹਾਡਾ ਫ਼ੋਨ ਕੰਟਰੋਲ ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ। ਅਸਲੀ ਬੈਂਕ ਐਪਾਂ ਸਿਰਫ਼ Play Store ਤੋਂ ਹੀ ਆਉਂਦੀਆਂ ਹਨ।</string>
+    <string name="apk_check_deleted">ਡਾਊਨਲੋਡ ਕੀਤੀ ਫ਼ਾਈਲ ਮਿਟਾ ਦਿੱਤੀ ਗਈ ਹੈ।</string>
+    <string name="cap_read_sms">OTP ਸਮੇਤ ਤੁਹਾਡੇ SMS ਮੈਸੇਜ ਪੜ੍ਹ ਸਕਦੀ ਹੈ</string>
+    <string name="cap_send_sms">ਤੁਹਾਡੇ ਨੰਬਰ ਤੋਂ SMS ਮੈਸੇਜ ਭੇਜ ਸਕਦੀ ਹੈ</string>
+    <string name="cap_sms_app">ਤੁਹਾਡੀ SMS ਐਪ ਬਣ ਸਕਦੀ ਹੈ</string>
+    <string name="cap_accessibility">ਤੁਹਾਡਾ ਫ਼ੋਨ ਕੰਟਰੋਲ ਕਰ ਸਕਦੀ ਹੈ ਅਤੇ ਸਕਰੀਨ ’ਤੇ ਸਭ ਕੁਝ ਦੇਖ ਸਕਦੀ ਹੈ</string>
+    <string name="cap_notifications">OTP ਸਮੇਤ ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ ਨੋਟੀਫ਼ਿਕੇਸ਼ਨਾਂ ਪੜ੍ਹ ਸਕਦੀ ਹੈ</string>
+    <string name="cap_overlay">ਦੂਜੀਆਂ ਐਪਾਂ ਦੇ ਉੱਪਰ ਦਿਖ ਸਕਦੀ ਹੈ, ਜਿਵੇਂ ਤੁਹਾਡੀ ਬੈਂਕ ਐਪ ਦੇ ਉੱਪਰ</string>
+    <string name="cap_install">ਦੂਜੀਆਂ ਐਪਾਂ ਇੰਸਟਾਲ ਕਰ ਸਕਦੀ ਹੈ</string>
+    <string name="cap_device_admin">ਤੁਹਾਡਾ ਫ਼ੋਨ ਲੌਕ ਕਰ ਸਕਦੀ ਹੈ ਜਾਂ ਤੁਹਾਨੂੰ ਐਪ ਹਟਾਉਣ ਤੋਂ ਰੋਕ ਸਕਦੀ ਹੈ</string>
+    <string name="cap_contacts">ਤੁਹਾਡੇ ਸੰਪਰਕ ਪੜ੍ਹ ਸਕਦੀ ਹੈ</string>
+    <string name="cap_calls">ਤੁਹਾਡੀ ਕਾਲ ਹਿਸਟਰੀ ਪੜ੍ਹ ਸਕਦੀ ਹੈ ਜਾਂ ਕਾਲ ਕਰ ਸਕਦੀ ਹੈ</string>
 </resources>

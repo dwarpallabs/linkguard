@@ -65,6 +65,10 @@ fun InterstitialScreen(
     onReport: () -> Unit = {},
     /** The link came from the phone's SMS app: one more line under the reason (roadmap B1). */
     fromSms: Boolean = false,
+    /** "Check what this app can do" (roadmap B3), only offered on an app-download warning. */
+    apkCheck: ApkCheckUi = ApkCheckUi.Idle,
+    onCheckApk: () -> Unit = {},
+    onStopApk: () -> Unit = {},
 ) {
     val status = LinkguardTheme.status
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -109,7 +113,10 @@ fun InterstitialScreen(
 
             if (model.reason is Reason.Upi) UpiDetails(model.reason)
 
+            if (model.reason == Reason.ApkDownload) ApkCheckSection(apkCheck, onCheckApk, onStopApk)
+
             Spacer(Modifier.height(8.dp))
+
 
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 PrimaryButton(stringResource(R.string.interstitial_go_back), onGoBack, Modifier.testTag("go_back"))
@@ -317,4 +324,85 @@ private fun UpiPreview() {
             onOpenAnyway = {},
         )
     }
+}
+
+/**
+ * "Check what this app can do": a text button and what it does; then progress with Stop; then, in
+ * plain words, what the app could do on the phone. Never a verdict on its own: the warning above
+ * stays, and Go back stays the main action.
+ */
+@Composable
+internal fun ApkCheckSection(state: ApkCheckUi, onCheck: () -> Unit, onStop: () -> Unit) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    fun size(bytes: Long) = android.text.format.Formatter.formatShortFileSize(context, bytes)
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.testTag("apk_check")) {
+        when (state) {
+            ApkCheckUi.Idle, ApkCheckUi.Failed, ApkCheckUi.TooBig, ApkCheckUi.NotAnApp -> {
+                val problem = when (state) {
+                    ApkCheckUi.Failed -> R.string.apk_check_failed
+                    ApkCheckUi.TooBig -> R.string.apk_check_too_big
+                    ApkCheckUi.NotAnApp -> R.string.apk_check_not_an_app
+                    else -> null
+                }
+                problem?.let {
+                    Text(stringResource(it), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.testTag("apk_check_problem"))
+                }
+                if (state != ApkCheckUi.TooBig && state != ApkCheckUi.NotAnApp) {
+                    TextButton(stringResource(R.string.apk_check_button), onCheck, Modifier.testTag("apk_check_button"))
+                    Text(
+                        stringResource(R.string.apk_check_hint),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
+            }
+            is ApkCheckUi.Running -> {
+                if (state.total != null && state.total > 0) {
+                    androidx.compose.material3.LinearProgressIndicator(
+                        progress = { (state.done.toFloat() / state.total).coerceIn(0f, 1f) },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    Text(stringResource(R.string.apk_check_progress, size(state.done), size(state.total)), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.testTag("apk_check_progress"))
+                } else {
+                    androidx.compose.material3.LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                    Text(stringResource(R.string.apk_check_progress_unknown, size(state.done)), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.testTag("apk_check_progress"))
+                }
+                TextButton(stringResource(R.string.apk_check_stop), onStop, Modifier.testTag("apk_check_stop"))
+            }
+            is ApkCheckUi.Done -> Card(
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant, contentColor = MaterialTheme.colorScheme.onSurface),
+                modifier = Modifier.fillMaxWidth().testTag("apk_check_result"),
+            ) {
+                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    state.report.brand?.let {
+                        Text(stringResource(R.string.apk_check_brand, it), style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.Bold, modifier = Modifier.testTag("apk_check_brand"))
+                    }
+                    if (state.report.capabilities.isEmpty()) {
+                        Text(stringResource(R.string.apk_check_nothing), style = MaterialTheme.typography.bodyLarge)
+                    } else {
+                        Text(stringResource(R.string.apk_check_result_title), style = MaterialTheme.typography.titleMedium)
+                        state.report.capabilities.forEach { cap ->
+                            Text("• " + stringResource(capabilityText(cap)), style = MaterialTheme.typography.bodyLarge)
+                        }
+                    }
+                    Text(stringResource(R.string.apk_check_deleted), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
+        }
+    }
+}
+
+internal fun capabilityText(cap: com.dwarpallabs.linkguard.ApkInspector.Capability): Int = when (cap) {
+    com.dwarpallabs.linkguard.ApkInspector.Capability.READ_SMS -> R.string.cap_read_sms
+    com.dwarpallabs.linkguard.ApkInspector.Capability.SEND_SMS -> R.string.cap_send_sms
+    com.dwarpallabs.linkguard.ApkInspector.Capability.SMS_APP -> R.string.cap_sms_app
+    com.dwarpallabs.linkguard.ApkInspector.Capability.ACCESSIBILITY -> R.string.cap_accessibility
+    com.dwarpallabs.linkguard.ApkInspector.Capability.NOTIFICATIONS -> R.string.cap_notifications
+    com.dwarpallabs.linkguard.ApkInspector.Capability.OVERLAY -> R.string.cap_overlay
+    com.dwarpallabs.linkguard.ApkInspector.Capability.INSTALL -> R.string.cap_install
+    com.dwarpallabs.linkguard.ApkInspector.Capability.DEVICE_ADMIN -> R.string.cap_device_admin
+    com.dwarpallabs.linkguard.ApkInspector.Capability.CONTACTS -> R.string.cap_contacts
+    com.dwarpallabs.linkguard.ApkInspector.Capability.CALLS -> R.string.cap_calls
 }

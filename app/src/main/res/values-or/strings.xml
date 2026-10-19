@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">ଏହି ଲିଙ୍କ ନିଜେ ନିଜେ ଟଙ୍କା କଟିବାର ଅନୁମତି ମାଗୁଛି</string>
     <string name="warn_upi_mandate">ଏହି ଲିଙ୍କ ଆପଣଙ୍କ ଆକାଉଣ୍ଟରୁ ନିଜେ ନିଜେ ଟଙ୍କା କଟିବାର ବ୍ୟବସ୍ଥା କରେ। ଚିହ୍ନା ବିଲ୍ କିମ୍ବା ପ୍ଲାନ୍ ପାଇଁ ଆପଣ ନିଜେ ଆରମ୍ଭ କରିଥିଲେ ହିଁ ରାଜି ହୁଅନ୍ତୁ।</string>
     <string name="warn_upi_brand">ଏହି ପେମେଣ୍ଟ ଅନୁରୋଧ %1$sର ନାମ ବ୍ୟବହାର କରେ, କିନ୍ତୁ ଟଙ୍କା ଅନ୍ୟ ଆକାଉଣ୍ଟକୁ ଯାଏ। ରିଫଣ୍ଡ କିମ୍ବା KYC ଅପଡେଟ୍ ପାଇଁ ଆପଣଙ୍କୁ କେବେ ବି ଟଙ୍କା ଦେବାକୁ ପଡ଼େ ନାହିଁ।</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">ଏହି ଆପ୍ କ’ଣ କରିପାରେ ଯାଞ୍ଚ କରନ୍ତୁ</string>
+    <string name="apk_check_hint">ଆପ୍ ଭିତରେ ଦେଖିବା ପାଇଁ LinkGuard ତାହାକୁ ଡାଉନଲୋଡ୍ କରେ। ଏହା କେବେ ବି ତାହାକୁ ଇନଷ୍ଟଲ୍ କରେ ନାହିଁ।</string>
+    <string name="apk_check_progress">ଆପ୍ ଯାଞ୍ଚ ହେଉଛି… %2$s ମଧ୍ୟରୁ %1$s</string>
+    <string name="apk_check_progress_unknown">ଆପ୍ ଯାଞ୍ଚ ହେଉଛି… %1$s</string>
+    <string name="apk_check_stop">ରୋକନ୍ତୁ</string>
+    <string name="apk_check_too_big">ଏହି ଆପ୍ ବହୁତ ବଡ଼, ତେଣୁ ଆପଣଙ୍କ ଫୋନରେ ଏହାକୁ ଯାଞ୍ଚ କରିହେବ ନାହିଁ।</string>
+    <string name="apk_check_failed">ଆପ୍ ଯାଞ୍ଚ କରାଯାଇପାରିଲା ନାହିଁ। ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଦେଖି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
+    <string name="apk_check_not_an_app">ଏହି ଲିଙ୍କରୁ କୌଣସି ଆପ୍ ଫାଇଲ୍ ମିଳିଲା ନାହିଁ, ତେଣୁ ଯାଞ୍ଚ କରିବାକୁ କିଛି ନଥିଲା।</string>
+    <string name="apk_check_result_title">ଏହି ଆପ୍ ଆପଣଙ୍କ ଫୋନରେ କ’ଣ କରିପାରେ</string>
+    <string name="apk_check_nothing">ଏହି ଆପ୍ ଅଜବ କିଛି ମାଗୁନାହିଁ। ତଥାପି, କେବଳ Play Storeରୁ ଆପ୍ ଇନଷ୍ଟଲ୍ କରିବା ସବୁଠାରୁ ସୁରକ୍ଷିତ।</string>
+    <string name="apk_check_brand">ଏହି ଆପ୍ %1$s ନାମ ବ୍ୟବହାର କରୁଛି ଏବଂ ଆପଣଙ୍କ SMS ପଢ଼ିବାକୁ କିମ୍ବା ଆପଣଙ୍କ ଫୋନକୁ ନିୟନ୍ତ୍ରଣ କରିବାକୁ ମାଗୁଛି। ପ୍ରକୃତ ବ୍ୟାଙ୍କ ଆପ୍ କେବଳ Play Storeରୁ ଆସେ।</string>
+    <string name="apk_check_deleted">ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଫାଇଲଟି ଡିଲିଟ୍ କରିଦିଆଯାଇଛି।</string>
+    <string name="cap_read_sms">OTP ସମେତ ଆପଣଙ୍କ SMS ମେସେଜ୍ ପଢ଼ିପାରେ</string>
+    <string name="cap_send_sms">ଆପଣଙ୍କ ନମ୍ବରରୁ SMS ମେସେଜ୍ ପଠାଇପାରେ</string>
+    <string name="cap_sms_app">ଆପଣଙ୍କ SMS ଆପ୍ ହୋଇଯାଇପାରେ</string>
+    <string name="cap_accessibility">ଆପଣଙ୍କ ଫୋନକୁ ନିୟନ୍ତ୍ରଣ କରି ସ୍କ୍ରିନରେ ଥିବା ସବୁକିଛି ଦେଖିପାରେ</string>
+    <string name="cap_notifications">OTP ସମେତ ଆପଣଙ୍କ ସବୁ ନୋଟିଫିକେସନ୍ ପଢ଼ିପାରେ</string>
+    <string name="cap_overlay">ଅନ୍ୟ ଆପ୍ ଉପରେ ଦେଖାଯାଇପାରେ, ଯେମିତି ଆପଣଙ୍କ ବ୍ୟାଙ୍କ ଆପ୍ ଉପରେ</string>
+    <string name="cap_install">ଅନ୍ୟ ଆପ୍ ଇନଷ୍ଟଲ୍ କରିପାରେ</string>
+    <string name="cap_device_admin">ଆପଣଙ୍କ ଫୋନ ଲକ୍ କରିପାରେ କିମ୍ବା ଆପଣଙ୍କୁ ଆପ୍ ହଟାଇବାରୁ ରୋକିପାରେ</string>
+    <string name="cap_contacts">ଆପଣଙ୍କ କଣ୍ଟାକ୍ଟ ପଢ଼ିପାରେ</string>
+    <string name="cap_calls">ଆପଣଙ୍କ କଲ୍ ହିଷ୍ଟ୍ରି ପଢ଼ିପାରେ କିମ୍ବା କଲ୍ କରିପାରେ</string>
 </resources>

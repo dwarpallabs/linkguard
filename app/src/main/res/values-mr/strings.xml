@@ -166,4 +166,28 @@
     <string name="upi_asks_mandate">ही लिंक आपोआप होणारी पेमेंट्स मागते</string>
     <string name="warn_upi_mandate">ही लिंक तुमच्या खात्यातून आपोआप पैसे कापले जाण्याची व्यवस्था करते. ओळखीच्या बिलासाठी किंवा प्लानसाठी तुम्ही स्वतः हे सुरू केले असेल तरच होकार द्या.</string>
     <string name="warn_upi_brand">ही पेमेंट विनंती %1$s हे नाव वापरते, पण पैसे दुसऱ्या खात्यात जातात. रिफंड किंवा KYC अपडेटसाठी तुम्हाला कधीच पैसे भरावे लागत नाहीत.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">हे ॲप काय करू शकते ते तपासा</string>
+    <string name="apk_check_hint">LinkGuard ॲप डाउनलोड करून त्याच्या आत पाहतो. तो ते कधीच इन्स्टॉल करत नाही.</string>
+    <string name="apk_check_progress">ॲप तपासत आहे… %2$s पैकी %1$s</string>
+    <string name="apk_check_progress_unknown">ॲप तपासत आहे… %1$s</string>
+    <string name="apk_check_stop">थांबवा</string>
+    <string name="apk_check_too_big">हे ॲप तुमच्या फोनवर तपासण्यासाठी खूप मोठे आहे.</string>
+    <string name="apk_check_failed">ॲप तपासता आले नाही. तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.</string>
+    <string name="apk_check_not_an_app">या लिंकमधून ॲप फाइल मिळाली नाही, त्यामुळे तपासण्यासारखे काही नव्हते.</string>
+    <string name="apk_check_result_title">हे ॲप तुमच्या फोनवर काय करू शकते</string>
+    <string name="apk_check_nothing">हे ॲप काहीही वेगळे मागत नाही. तरीही ॲप फक्त Play Store वरूनच इन्स्टॉल करणे सर्वात सुरक्षित आहे.</string>
+    <string name="apk_check_brand">हे ॲप %1$s हे नाव वापरते आणि त्याला तुमचे SMS वाचायचे आहेत किंवा तुमचा फोन चालवायचा आहे. खरी बँक ॲप फक्त Play Store वरूनच येतात.</string>
+    <string name="apk_check_deleted">डाउनलोड केलेली फाइल हटवली आहे.</string>
+    <string name="cap_read_sms">तुमचे SMS मेसेज वाचणे, OTP सुद्धा</string>
+    <string name="cap_send_sms">तुमच्या नंबरवरून SMS मेसेज पाठवणे</string>
+    <string name="cap_sms_app">तुमचे SMS ॲप बनणे</string>
+    <string name="cap_accessibility">तुमचा फोन चालवणे आणि स्क्रीनवरचे सगळे पाहणे</string>
+    <string name="cap_notifications">तुमची सगळी नोटिफिकेशन वाचणे, OTP सुद्धा</string>
+    <string name="cap_overlay">इतर ॲपच्या वर दिसणे, उदाहरणार्थ तुमच्या बँक ॲपच्या वर</string>
+    <string name="cap_install">इतर ॲप इन्स्टॉल करणे</string>
+    <string name="cap_device_admin">तुमचा फोन लॉक करणे किंवा तुम्हाला ॲप काढू न देणे</string>
+    <string name="cap_contacts">तुमचे कॉन्टॅक्ट वाचणे</string>
+    <string name="cap_calls">तुमची कॉल हिस्ट्री वाचणे किंवा कॉल करणे</string>
 </resources>

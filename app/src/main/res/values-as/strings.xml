@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">এই লিংকে নিজে নিজে পইচা কটাৰ অনুমতি বিচাৰিছে</string>
     <string name="warn_upi_mandate">এই লিংকে আপোনাৰ একাউণ্টৰ পৰা নিজে নিজে পইচা কটাৰ ব্যৱস্থা কৰে। চিনাকি বিল বা প্লেনৰ বাবে আপুনি নিজে আৰম্ভ কৰিলেহে মান্তি হওক।</string>
     <string name="warn_upi_brand">এই পেমেণ্ট অনুৰোধত %1$s-ৰ নাম ব্যৱহাৰ কৰা হৈছে, কিন্তু পইচা আন একাউণ্টলৈ যায়। ৰিফাণ্ড বা KYC আপডেটৰ বাবে আপুনি কেতিয়াও পইচা দিব নালাগে।</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">এই এপটোৱে কি কি কৰিব পাৰে পৰীক্ষা কৰক</string>
+    <string name="apk_check_hint">ভিতৰত কি আছে চাবলৈ LinkGuard-এ এপটো ডাউনলোড কৰে। ই কেতিয়াও এপটো ইনষ্টল নকৰে।</string>
+    <string name="apk_check_progress">এপটো পৰীক্ষা কৰি আছে… %2$s-ৰ ভিতৰত %1$s</string>
+    <string name="apk_check_progress_unknown">এপটো পৰীক্ষা কৰি আছে… %1$s</string>
+    <string name="apk_check_stop">বন্ধ কৰক</string>
+    <string name="apk_check_too_big">এই এপটো ইমান ডাঙৰ যে আপোনাৰ ফোনত পৰীক্ষা কৰিব নোৱাৰি।</string>
+    <string name="apk_check_failed">এপটো পৰীক্ষা কৰিব পৰা নগ’ল। ইণ্টাৰনেট সংযোগ চাই আকৌ চেষ্টা কৰক।</string>
+    <string name="apk_check_not_an_app">এই লিংকৰ পৰা কোনো এপ ফাইল নাহিল, সেয়েহে পৰীক্ষা কৰিবলৈ একো নাছিল।</string>
+    <string name="apk_check_result_title">এই এপটোৱে আপোনাৰ ফোনত কি কি কৰিব পাৰে</string>
+    <string name="apk_check_nothing">এই এপটোৱে অস্বাভাৱিক একো নিবিচাৰে। তথাপি কেৱল Play Store-ৰ পৰা এপ ইনষ্টল কৰাটোৱেই আটাইতকৈ সুৰক্ষিত।</string>
+    <string name="apk_check_brand">এই এপটোৱে %1$s নামটো ব্যৱহাৰ কৰে, আৰু আপোনাৰ SMS পঢ়িব বা আপোনাৰ ফোন নিয়ন্ত্ৰণ কৰিব বিচাৰে। আচল বেংকৰ এপ কেৱল Play Store-ৰ পৰাহে আহে।</string>
+    <string name="apk_check_deleted">ডাউনলোড কৰা ফাইলটো মচি পেলোৱা হৈছে।</string>
+    <string name="cap_read_sms">OTP-কে ধৰি আপোনাৰ SMS মেছেজ পঢ়া</string>
+    <string name="cap_send_sms">আপোনাৰ নম্বৰৰ পৰা SMS পঠিওৱা</string>
+    <string name="cap_sms_app">আপোনাৰ SMS এপ হৈ পৰা</string>
+    <string name="cap_accessibility">আপোনাৰ ফোন নিয়ন্ত্ৰণ কৰা আৰু স্ক্ৰীনত থকা সকলোবোৰ চোৱা</string>
+    <string name="cap_notifications">OTP-কে ধৰি আপোনাৰ সকলো নটিফিকেশ্বন পঢ়া</string>
+    <string name="cap_overlay">আন এপৰ ওপৰত কিবা দেখুওৱা, যেনে আপোনাৰ বেংকৰ এপৰ ওপৰত</string>
+    <string name="cap_install">আন এপ ইনষ্টল কৰা</string>
+    <string name="cap_device_admin">আপোনাৰ ফোন লক কৰি দিয়া, বা আপোনাক এপটো আঁতৰাবলৈ নিদিয়া</string>
+    <string name="cap_contacts">আপোনাৰ কণ্টেক্ট পঢ়া</string>
+    <string name="cap_calls">আপোনাৰ কলৰ তালিকা চোৱা বা ফোন কৰা</string>
 </resources>

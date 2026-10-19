@@ -165,4 +165,28 @@
     <string name="upi_asks_mandate">यो लिंकले आफैं हुने भुक्तानी माग्छ</string>
     <string name="warn_upi_mandate">यो लिंकले तपाईंको खाताबाट आफैं पैसा काटिने व्यवस्था गर्छ। चिनेको बिल वा प्लानका लागि तपाईं आफैंले सुरु गर्नुभएको हो भने मात्र सहमत हुनुहोस्।</string>
     <string name="warn_upi_brand">यो भुक्तानी अनुरोधले %1$s को नाम प्रयोग गर्छ, तर पैसा अर्कै खातामा जान्छ। रिफन्ड वा KYC अपडेटका लागि तपाईंले कहिल्यै भुक्तानी गर्नुपर्दैन।</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">यो एपले के गर्न सक्छ जाँच्नुहोस्</string>
+    <string name="apk_check_hint">LinkGuard ले एपभित्र हेर्न यसलाई डाउनलोड गर्छ। यसले त्यो कहिल्यै इन्स्टल गर्दैन।</string>
+    <string name="apk_check_progress">एप जाँच्दै… %2$s मध्ये %1$s</string>
+    <string name="apk_check_progress_unknown">एप जाँच्दै… %1$s</string>
+    <string name="apk_check_stop">रोक्नुहोस्</string>
+    <string name="apk_check_too_big">यो एप तपाईंको फोनमा जाँच्न धेरै ठूलो छ।</string>
+    <string name="apk_check_failed">एप जाँच्न सकिएन। इन्टरनेट जडान जाँच्नुहोस् र फेरि प्रयास गर्नुहोस्।</string>
+    <string name="apk_check_not_an_app">यो लिंकले एप फाइल दिएन, त्यसैले जाँच्ने केही थिएन।</string>
+    <string name="apk_check_result_title">यो एपले तपाईंको फोनमा के गर्न सक्छ</string>
+    <string name="apk_check_nothing">यो एपले केही अनौठो माग्दैन। तैपनि एप Play Store बाट मात्र इन्स्टल गर्नु सबैभन्दा सुरक्षित हुन्छ।</string>
+    <string name="apk_check_brand">यो एपले %1$s नाम प्रयोग गर्छ र तपाईंका SMS पढ्न वा तपाईंको फोन चलाउन चाहन्छ। साँचो बैंक एप Play Store बाट मात्र आउँछन्।</string>
+    <string name="apk_check_deleted">डाउनलोड गरिएको फाइल मेटाइएको छ।</string>
+    <string name="cap_read_sms">तपाईंका SMS म्यासेज पढ्ने, OTP समेत</string>
+    <string name="cap_send_sms">तपाईंको नम्बरबाट SMS म्यासेज पठाउने</string>
+    <string name="cap_sms_app">तपाईंको SMS एप बन्ने</string>
+    <string name="cap_accessibility">तपाईंको फोन चलाउने र स्क्रिनमा भएका सबै कुरा हेर्ने</string>
+    <string name="cap_notifications">तपाईंका सबै नोटिफिकेसन पढ्ने, OTP समेत</string>
+    <string name="cap_overlay">अरू एपमाथि देखिने, जस्तै तपाईंको बैंक एपमाथि</string>
+    <string name="cap_install">अरू एप इन्स्टल गर्ने</string>
+    <string name="cap_device_admin">तपाईंको फोन लक गर्ने वा तपाईंलाई एप हटाउन नदिने</string>
+    <string name="cap_contacts">तपाईंका कन्ट्याक्ट पढ्ने</string>
+    <string name="cap_calls">तपाईंको कल हिस्ट्री पढ्ने वा कल गर्ने</string>
 </resources>

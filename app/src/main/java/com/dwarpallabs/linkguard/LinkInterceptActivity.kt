@@ -84,6 +84,10 @@ class LinkInterceptActivity : ComponentActivity() {
                         report = report,
                         onReport = { viewModel.report(s.verdict) },
                         fromSms = cameBySms(this, sourcePackage(intent, referrer)),
+                        apkCheck = viewModel.apkCheck.collectAsState().value,
+                        onCheckApk = { viewModel.checkApk(s.verdict) },
+                        onStopApk = viewModel::stopApkCheck,
+
                     )
                 }
             }

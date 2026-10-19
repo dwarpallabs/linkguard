@@ -166,4 +166,28 @@
     <string name="upi_asks_mandate">આ લિંક આપમેળે થતી ચુકવણી માગે છે</string>
     <string name="warn_upi_mandate">આ લિંક તમારા ખાતામાંથી આપમેળે પૈસા કપાય તેવી વ્યવસ્થા કરે છે. તમે જાતે કોઈ જાણીતા બિલ કે પ્લાન માટે શરૂ કર્યું હોય તો જ હા કહો.</string>
     <string name="warn_upi_brand">આ ચુકવણીની વિનંતી %1$s નું નામ વાપરે છે, પણ પૈસા બીજા ખાતામાં જાય છે. રિફંડ કે KYC અપડેટ માટે તમારે ક્યારેય ચુકવણી કરવી પડતી નથી.</string>
+
+    <!-- App download check (roadmap B3). -->
+    <string name="apk_check_button">આ ઍપ શું કરી શકે છે તે તપાસો</string>
+    <string name="apk_check_hint">ઍપની અંદર જોવા માટે LinkGuard તેને ડાઉનલોડ કરે છે. તે તેને ક્યારેય ઇન્સ્ટૉલ કરતું નથી.</string>
+    <string name="apk_check_progress">ઍપ તપાસાઈ રહી છે… %2$s માંથી %1$s</string>
+    <string name="apk_check_progress_unknown">ઍપ તપાસાઈ રહી છે… %1$s</string>
+    <string name="apk_check_stop">રોકો</string>
+    <string name="apk_check_too_big">આ ઍપ ખૂબ મોટી છે, એટલે તમારા ફોન પર તેને તપાસી શકાય તેમ નથી.</string>
+    <string name="apk_check_failed">ઍપ તપાસી ન શકાઈ. તમારું ઇન્ટરનેટ કનેક્શન તપાસો અને ફરી પ્રયાસ કરો.</string>
+    <string name="apk_check_not_an_app">આ લિંકમાંથી કોઈ ઍપ ફાઇલ ન મળી, એટલે તપાસવા માટે કંઈ નહોતું.</string>
+    <string name="apk_check_result_title">આ ઍપ તમારા ફોન પર શું કરી શકે છે</string>
+    <string name="apk_check_nothing">આ ઍપ કંઈ અસામાન્ય માગતી નથી. છતાં, ઍપ ફક્ત Play Store માંથી જ ઇન્સ્ટૉલ કરવી સૌથી સલામત છે.</string>
+    <string name="apk_check_brand">આ ઍપ %1$s નામ વાપરે છે અને તમારા SMS વાંચવા કે તમારો ફોન કંટ્રોલ કરવા માગે છે. સાચી બૅન્ક ઍપ ફક્ત Play Store માંથી જ આવે છે.</string>
+    <string name="apk_check_deleted">ડાઉનલોડ કરેલી ફાઇલ ડિલીટ કરી દેવામાં આવી છે.</string>
+    <string name="cap_read_sms">OTP સહિત તમારા SMS મેસેજ વાંચી શકે છે</string>
+    <string name="cap_send_sms">તમારા નંબર પરથી SMS મેસેજ મોકલી શકે છે</string>
+    <string name="cap_sms_app">તમારી SMS ઍપ બની શકે છે</string>
+    <string name="cap_accessibility">તમારો ફોન કંટ્રોલ કરી શકે છે અને સ્ક્રીન પરનું બધું જોઈ શકે છે</string>
+    <string name="cap_notifications">OTP સહિત તમારા બધા નોટિફિકેશન વાંચી શકે છે</string>
+    <string name="cap_overlay">બીજી ઍપ પર દેખાઈ શકે છે, જેમ કે તમારી બૅન્ક ઍપ પર</string>
+    <string name="cap_install">બીજી ઍપ ઇન્સ્ટૉલ કરી શકે છે</string>
+    <string name="cap_device_admin">તમારો ફોન લૉક કરી શકે છે અથવા તમને ઍપ કાઢી નાખતા રોકી શકે છે</string>
+    <string name="cap_contacts">તમારા કૉન્ટેક્ટ વાંચી શકે છે</string>
+    <string name="cap_calls">તમારી કૉલ હિસ્ટ્રી વાંચી શકે છે અથવા કૉલ કરી શકે છે</string>
 </resources>
