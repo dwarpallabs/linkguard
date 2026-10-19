@@ -17,9 +17,9 @@ If a link looks like a scam, you get one plain-language warning in English or an
 Fake bank and brand websites (SBI, HDFC, PhonePe, Paytm, India Post, IRCTC and more, including look-alike letters and typos), app downloads from outside the Play Store, UPI payment requests hidden behind links, raw-IP and throwaway addresses, brand-new websites, and known scam sites. Short links (bit.ly and others) are followed first so the real destination is checked.
 
 ## Install
-> **v0.3.1 is a pre-release.** Text in Indian languages is machine-translated (corrections welcome, see [Languages](#languages)), the scam blocklist is still small, and community warnings need reports from several people before they appear.
+> **v0.3.2 is a pre-release.** Text in Indian languages is machine-translated (corrections welcome, see [Languages](#languages)), the scam blocklist is still small, and community warnings need reports from several people before they appear.
 
-1. Download `linkguard-0.3.1-foss.apk` from [Releases](https://github.com/dwarpallabs/linkguard/releases).
+1. Download `linkguard-0.3.2-foss.apk` from [Releases](https://github.com/dwarpallabs/linkguard/releases).
 2. Open it and allow "Install unknown apps" when Android asks.
 3. Open LinkGuard and tap **Set as default browser**. Pick the browser links should open in (Chrome is preselected).
 
@@ -82,7 +82,7 @@ Release APKs are signed by Dwarpal Labs. Signing certificate SHA-256:
 ```
 3b7a7bc8b029e60667a269c9298067f64922f79ec6e8e1ebbf69569795405cee
 ```
-Check with `apksigner verify --print-certs linkguard-0.3.1-foss.apk`.
+Check with `apksigner verify --print-certs linkguard-0.3.2-foss.apk`.
 
 ## License
 [Apache-2.0](LICENSE). Bundles the [Public Suffix List](https://publicsuffix.org) (MPL-2.0) and IANA's RDAP bootstrap data.
