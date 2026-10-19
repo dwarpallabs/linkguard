@@ -13,6 +13,8 @@ All notable changes to LinkGuard. Versions follow the GitHub releases.
 
 - **Five global languages**: Chinese (Simplified), Spanish, Arabic, French and Portuguese (Brazil), machine-translated like the Indian languages. Arabic is shown right to left. Corrections are welcome through the same feedback form.
 
+- **Links opened by Google Messages, Gmail and other apps that use Custom Tabs are now checked.** These apps used to open links straight in Chrome, so LinkGuard never saw them. LinkGuard now tells them it supports Custom Tabs, checks the link, then opens it in your browser.
+
 ### Data
 - A **weekly scam report** is published every Monday at [linkguard-data/reports](https://github.com/dwarpallabs/linkguard-data/tree/main/reports): reports per impersonated brand, newly confirmed scam websites by ending, and active campaigns, as counts.
 - PhishTank's verified phishing list now feeds the server blocklist (about 24,000 more scam websites). Every source's terms, and the Indian sources checked but not usable yet, are in `feeds/SOURCES.md`.
