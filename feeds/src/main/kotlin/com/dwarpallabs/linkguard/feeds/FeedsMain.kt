@@ -9,6 +9,7 @@ import kotlin.system.exitProcess
  *   ./gradlew :feeds:run                     dry run: fetch, filter, print counts; writes nothing
  *   ./gradlew :feeds:run --args="--apply"    also write to the server database
  *   ./gradlew :feeds:run --args="publish d"  build the public dataset into folder d (see [PublishMain])
+ *   ./gradlew :feeds:run --args="weekly d"   write last week's public scam report into d (see [WeeklyMain])
  *
  * Environment: URLHAUS_AUTH_KEY (abuse.ch Auth-Key; without it URLhaus is skipped); for --apply
  * also CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID and LINKGUARD_D1_ID. FEEDS_MAX_NEW optionally
@@ -23,6 +24,7 @@ import kotlin.system.exitProcess
  */
 fun main(args: Array<String>) {
     if (args.firstOrNull() == "publish") return PublishMain.run(args.drop(1))
+    if (args.firstOrNull() == "weekly") return WeeklyMain.run(args.drop(1))
     val apply = "--apply" in args
 
     val env = System.getenv()

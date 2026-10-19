@@ -13,6 +13,7 @@ All notable changes to LinkGuard. Versions follow the GitHub releases.
 - **Five global languages**: Chinese (Simplified), Spanish, Arabic, French and Portuguese (Brazil), machine-translated like the Indian languages. Arabic is shown right to left. Corrections are welcome through the same feedback form.
 
 ### Data
+- A **weekly scam report** is published every Monday at [linkguard-data/reports](https://github.com/dwarpallabs/linkguard-data/tree/main/reports): reports per impersonated brand, newly confirmed scam websites by ending, and active campaigns, as counts.
 - PhishTank's verified phishing list now feeds the server blocklist (about 24,000 more scam websites). Every source's terms, and the Indian sources checked but not usable yet, are in `feeds/SOURCES.md`.
 - Scam websites confirmed by LinkGuard are now published daily at [dwarpallabs/linkguard-data](https://github.com/dwarpallabs/linkguard-data) (ODbL 1.0), 48 hours after confirmation, with weekly report counts per brand. Unconfirmed reports and the links people open are never published.
 

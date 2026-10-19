@@ -41,7 +41,7 @@ Full policy: [dwarpallabs.com/linkguard/privacy](https://dwarpallabs.com/linkgua
 Not sure about a message? Share it to LinkGuard: tap **Share** in WhatsApp, SMS or any app, then **Check with LinkGuard**. LinkGuard finds every link in the message (including `wa.me`, `t.me` and UPI payment links) and shows a verdict for each one, checked exactly as if you had tapped it. The message itself never leaves your phone.
 
 ## Using the data
-Scam websites confirmed by LinkGuard are published every day, 48 hours after they are confirmed, at [dwarpallabs/linkguard-data](https://github.com/dwarpallabs/linkguard-data) under the ODbL 1.0. The newest list is always at `https://github.com/dwarpallabs/linkguard-data/releases/latest/download/confirmed.txt`. Please credit it as: *Scam website data: LinkGuard by Dwarpal Labs (ODbL 1.0), including PhishDestroy (MIT).* Reports that nobody confirmed are never published, and neither are the links people open.
+Scam websites confirmed by LinkGuard are published every day, 48 hours after they are confirmed, at [dwarpallabs/linkguard-data](https://github.com/dwarpallabs/linkguard-data) under the ODbL 1.0. The newest list is always at `https://github.com/dwarpallabs/linkguard-data/releases/latest/download/confirmed.txt`. Please credit it as: *Scam website data: LinkGuard by Dwarpal Labs (ODbL 1.0), including PhishDestroy (MIT).* Reports that nobody confirmed are never published, and neither are the links people open. Every Monday a short [weekly scam report](https://github.com/dwarpallabs/linkguard-data/tree/main/reports) sums up the week: reports per brand, newly confirmed websites and active scam campaigns.
 
 ## Report a scam link
 

@@ -1,0 +1,67 @@
+name: Weekly scam report
+
+# Every Monday 09:00 IST (roadmap A8): last week's public scam report, built from the published
+# dataset plus campaign counts, committed to dwarpallabs/linkguard-data under reports/. It names only
+# websites that are already in the public confirmed.txt. The log prints counts only.
+on:
+  schedule:
+    - cron: "30 3 * * 1" # Monday 09:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+
+      - name: Write the report
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          LINKGUARD_D1_ID: ${{ vars.LINKGUARD_D1_ID }}
+        run: ./gradlew :feeds:run --args="weekly $RUNNER_TEMP/out" --console=plain -q
+
+      # DATA_REPO_TOKEN: the same fine-grained token as Publish data (linkguard-data, Contents: read and write).
+      - name: Commit it to linkguard-data
+        env:
+          GH_TOKEN: ${{ secrets.DATA_REPO_TOKEN }}
+          OUT: ${{ runner.temp }}/out
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::notice::DATA_REPO_TOKEN is not set, so the report was not published."
+            exit 0
+          fi
+          git clone -q --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/dwarpallabs/linkguard-data.git" data
+          mkdir -p data/reports
+          cp "$OUT"/reports/*.md data/reports/
+          {
+            echo "# Weekly scam reports"
+            echo
+            echo "What LinkGuard users reported each week, and what was confirmed. Newest first."
+            echo
+            ls data/reports | grep -E '^[0-9]{4}-W[0-9]{2}\.md$' | sort -r | sed -E 's/^(.*)\.md$/- [\1](\1.md)/'
+          } > data/reports/README.md
+          cd data
+          git config user.name "linkguard-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports
+          if git diff --cached --quiet; then
+            echo "Report unchanged."
+            exit 0
+          fi
+          git commit -q -m "docs: weekly scam report $(ls reports | grep -E '^[0-9]{4}-W' | sort -r | head -1 | sed 's/\.md$//')"
+          git push -q
+          echo "Published."
