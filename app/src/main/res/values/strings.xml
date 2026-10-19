@@ -9,7 +9,7 @@
     <string name="flow_link">Your link</string>
     <string name="flow_check">LinkGuard checks it</string>
     <string name="not_a_browser_title">LinkGuard is not a browser</string>
-    <string name="not_a_browser_body">LinkGuard never shows web pages. It checks each link in a split second and then opens it in %1$s, the browser you already use. Your bookmarks, history, saved passwords and tabs stay exactly as they are.</string>
+    <string name="not_a_browser_body">LinkGuard is not for browsing. It checks each link in a split second and then opens it in %1$s, the browser you already use. Your bookmarks, history, saved passwords and tabs stay exactly as they are.</string>
     <string name="default_explain">Android will call LinkGuard your “browser app”. That is only so LinkGuard can see links first. Every link still opens in %1$s.</string>
 
     <string name="default_heading">Step 1: Make LinkGuard your default browser</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">Why it’s needed</string>
     <string name="how_why_body">Scam messages on WhatsApp and SMS often carry links that look real: a fake bank page, a “KYC update” form or an app that steals money. One tap is enough to cause harm, and a fake web address can be hard to spot.</string>
     <string name="how_where_title">Where LinkGuard sits</string>
-    <string name="how_where_body">LinkGuard sits between the link you tap and your browser. It checks the link in a split second, then opens it in %1$s. It never shows web pages itself.</string>
+    <string name="how_where_body">LinkGuard sits between the link you tap and your browser. It checks the link in a split second, then opens it in %1$s. It is not for browsing.</string>
     <string name="how_safe_title">Safe links open straight away</string>
     <string name="how_safe_body">Well-known websites and official ones, such as government (.gov.in) and bank websites, open immediately. If a link looks fine, you see nothing at all.</string>
     <string name="how_scam_title">Spotting scam links</string>
@@ -194,4 +194,12 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">Listen</string>
     <string name="listen_stop">Stop</string>
+
+    <!-- "Look without opening" (roadmap B5): only on a soft "Be careful" warning. Shows that one page in a locked
+         view (no JavaScript, no forms sent, no downloads, no cookies) for at most a minute. -->
+    <string name="look_button">Look without opening</string>
+    <string name="look_hint">Shows this one page in a locked view. Nothing you type can be sent, and it closes after a minute.</string>
+    <string name="look_banner">Looking safely. Nothing you type here is sent.</string>
+    <string name="look_blocked">LinkGuard stopped this page from opening something else.</string>
+    <string name="look_failed">Could not show the page. Check your internet connection and try again.</string>
 </resources>

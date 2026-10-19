@@ -74,7 +74,24 @@
         </activity>
 
         <!--
-            RISK (default-browser flow): advertises Custom Tabs support, so apps that open links in a
+            "Look without opening" (roadmap B5): the only place LinkGuard shows a page, on tap, for one
+            minute, in its own process with its own WebView data folder. Not exported.
+        -->
+        <activity
+            android:name=".SafeViewActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":safeview"
+            android:theme="@style/Theme.Linkguard" />
+
+        <!-- WebView Safe Browsing would send page URLs to Google: off (the foss build has no Google parts either). -->
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="false" />
+
+        <!--
+            RISK (default-browser flow): advertises Custom Tabs support
+, so apps that open links in a
             Custom Tab of the default browser (Google Messages, Gmail, ...) send them to LinkGuard
             instead of going straight to Chrome. The launch still arrives at LinkInterceptActivity's
             VIEW filter above; the service itself does nothing (see LinkGuardCustomTabsService).

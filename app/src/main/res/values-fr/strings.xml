@@ -9,7 +9,7 @@
     <string name="flow_link">Votre lien</string>
     <string name="flow_check">LinkGuard le vérifie</string>
     <string name="not_a_browser_title">LinkGuard n’est pas un navigateur</string>
-    <string name="not_a_browser_body">LinkGuard n’affiche jamais de pages web. Il vérifie chaque lien en une fraction de seconde, puis l’ouvre dans %1$s, le navigateur que vous utilisez déjà. Vos favoris, votre historique, vos mots de passe enregistrés et vos onglets restent comme avant.</string>
+    <string name="not_a_browser_body">LinkGuard ne sert pas à naviguer sur internet. Il vérifie chaque lien en une fraction de seconde, puis l’ouvre dans %1$s, le navigateur que vous utilisez déjà. Vos favoris, votre historique, vos mots de passe enregistrés et vos onglets restent comme avant.</string>
     <string name="default_explain">Android appellera LinkGuard votre « application de navigateur ». C’est seulement pour que LinkGuard voie les liens en premier. Chaque lien s’ouvre toujours dans %1$s.</string>
 
     <string name="default_heading">Étape 1 : faites de LinkGuard votre navigateur par défaut</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">Pourquoi c’est utile</string>
     <string name="how_why_body">Les messages d’arnaque sur WhatsApp et par SMS contiennent souvent des liens qui ont l’air vrais : une fausse page de banque, un formulaire de « mise à jour KYC » ou une application qui vole de l’argent. Il suffit de toucher une seule fois pour avoir des ennuis. Et une fausse adresse web est parfois difficile à repérer.</string>
     <string name="how_where_title">Où se place LinkGuard</string>
-    <string name="how_where_body">LinkGuard se place entre le lien que vous touchez et votre navigateur. Il vérifie le lien en une fraction de seconde, puis l’ouvre dans %1$s. Il n’affiche jamais lui-même de pages web.</string>
+    <string name="how_where_body">LinkGuard se place entre le lien que vous touchez et votre navigateur. Il vérifie le lien en une fraction de seconde, puis l’ouvre dans %1$s. Il ne sert pas à naviguer sur internet.</string>
     <string name="how_safe_title">Les liens sûrs s’ouvrent tout de suite</string>
     <string name="how_safe_body">Les sites connus et les sites officiels, comme ceux du gouvernement (.gov.in) et des banques, s’ouvrent tout de suite. Si un lien a l’air normal, vous ne voyez rien du tout.</string>
     <string name="how_scam_title">Repérer les liens d’arnaque</string>
@@ -199,4 +199,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">Écouter</string>
     <string name="listen_stop">Arrêter</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">Regarder sans ouvrir</string>
+    <string name="look_hint">Affiche seulement cette page dans une vue verrouillée. Rien de ce que vous tapez ne peut être envoyé, et elle se ferme au bout d’une minute.</string>
+    <string name="look_banner">Vous regardez en sécurité. Rien de ce que vous tapez ici n’est envoyé.</string>
+    <string name="look_blocked">LinkGuard a empêché cette page d’ouvrir autre chose.</string>
+    <string name="look_failed">La page n’a pas pu être affichée. Vérifiez votre connexion internet et réessayez.</string>
 </resources>

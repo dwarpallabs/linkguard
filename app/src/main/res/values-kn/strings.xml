@@ -9,7 +9,7 @@
     <string name="flow_link">ನಿಮ್ಮ ಲಿಂಕ್</string>
     <string name="flow_check">LinkGuard ಅದನ್ನು ಚೆಕ್ ಮಾಡುತ್ತದೆ</string>
     <string name="not_a_browser_title">LinkGuard ಬ್ರೌಸರ್ ಅಲ್ಲ</string>
-    <string name="not_a_browser_body">LinkGuard ಎಂದಿಗೂ ವೆಬ್ ಪುಟಗಳನ್ನು ತೋರಿಸುವುದಿಲ್ಲ. ಅದು ಪ್ರತಿ ಲಿಂಕ್ ಅನ್ನು ಕ್ಷಣದಲ್ಲಿ ಚೆಕ್ ಮಾಡಿ, %1$s ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ, ಅಂದರೆ ನೀವು ಈಗಾಗಲೇ ಬಳಸುವ ಬ್ರೌಸರ್‌ನಲ್ಲೇ. ನಿಮ್ಮ ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳು, ಹಿಸ್ಟರಿ, ಉಳಿಸಿದ ಪಾಸ್‌ವರ್ಡ್‌ಗಳು ಮತ್ತು ಟ್ಯಾಬ್‌ಗಳು ಎಲ್ಲವೂ ಇದ್ದ ಹಾಗೆಯೇ ಇರುತ್ತವೆ.</string>
+    <string name="not_a_browser_body">LinkGuard ಬ್ರೌಸಿಂಗ್‌ಗಾಗಿ ಅಲ್ಲ. ಅದು ಪ್ರತಿ ಲಿಂಕ್ ಅನ್ನು ಕ್ಷಣದಲ್ಲಿ ಚೆಕ್ ಮಾಡಿ, %1$s ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ, ಅಂದರೆ ನೀವು ಈಗಾಗಲೇ ಬಳಸುವ ಬ್ರೌಸರ್‌ನಲ್ಲೇ. ನಿಮ್ಮ ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳು, ಹಿಸ್ಟರಿ, ಉಳಿಸಿದ ಪಾಸ್‌ವರ್ಡ್‌ಗಳು ಮತ್ತು ಟ್ಯಾಬ್‌ಗಳು ಎಲ್ಲವೂ ಇದ್ದ ಹಾಗೆಯೇ ಇರುತ್ತವೆ.</string>
     <string name="default_explain">Android, LinkGuard ಅನ್ನು ನಿಮ್ಮ “ಬ್ರೌಸರ್ ಆ್ಯಪ್” ಎಂದು ತೋರಿಸುತ್ತದೆ. LinkGuard ಲಿಂಕ್‌ಗಳನ್ನು ಮೊದಲು ನೋಡಲು ಮಾತ್ರ ಹಾಗೆ. ಪ್ರತಿ ಲಿಂಕ್ ಈಗಲೂ %1$s ನಲ್ಲೇ ತೆರೆಯುತ್ತದೆ.</string>
 
     <string name="default_heading">ಹಂತ 1: LinkGuard ಅನ್ನು ನಿಮ್ಮ ಡೀಫಾಲ್ಟ್ ಬ್ರೌಸರ್ ಮಾಡಿ</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">ಇದು ಯಾಕೆ ಬೇಕು</string>
     <string name="how_why_body">WhatsApp ಮತ್ತು SMS ನಲ್ಲಿ ಬರುವ ಮೋಸದ ಮೆಸೇಜ್‌ಗಳಲ್ಲಿ ಹಲವು ಬಾರಿ ನಿಜವೆಂದು ಕಾಣುವ ಲಿಂಕ್‌ಗಳಿರುತ್ತವೆ: ನಕಲಿ ಬ್ಯಾಂಕ್ ಪುಟ, “KYC ಅಪ್‌ಡೇಟ್” ಫಾರ್ಮ್, ಅಥವಾ ಹಣ ಕದಿಯುವ ಆ್ಯಪ್. ಒಂದೇ ಸಲ ಒತ್ತಿದರೂ ನಷ್ಟ ಆಗಬಹುದು. ನಕಲಿ ವೆಬ್ ವಿಳಾಸವನ್ನು ಗುರುತಿಸುವುದು ಕಷ್ಟವಾಗಬಹುದು.</string>
     <string name="how_where_title">LinkGuard ಎಲ್ಲಿರುತ್ತದೆ</string>
-    <string name="how_where_body">ನೀವು ಒತ್ತುವ ಲಿಂಕ್ ಮತ್ತು ನಿಮ್ಮ ಬ್ರೌಸರ್ ನಡುವೆ LinkGuard ಇರುತ್ತದೆ. ಅದು ಲಿಂಕ್ ಅನ್ನು ಕ್ಷಣದಲ್ಲಿ ಚೆಕ್ ಮಾಡಿ, %1$s ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ. ಅದು ತಾನೇ ಎಂದಿಗೂ ವೆಬ್ ಪುಟಗಳನ್ನು ತೋರಿಸುವುದಿಲ್ಲ.</string>
+    <string name="how_where_body">ನೀವು ಒತ್ತುವ ಲಿಂಕ್ ಮತ್ತು ನಿಮ್ಮ ಬ್ರೌಸರ್ ನಡುವೆ LinkGuard ಇರುತ್ತದೆ. ಅದು ಲಿಂಕ್ ಅನ್ನು ಕ್ಷಣದಲ್ಲಿ ಚೆಕ್ ಮಾಡಿ, %1$s ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ. ಅದು ಬ್ರೌಸಿಂಗ್‌ಗಾಗಿ ಅಲ್ಲ.</string>
     <string name="how_safe_title">ಸರಿಯಾದ ಲಿಂಕ್‌ಗಳು ತಕ್ಷಣ ತೆರೆಯುತ್ತವೆ</string>
     <string name="how_safe_body">ಎಲ್ಲರಿಗೂ ಗೊತ್ತಿರುವ ವೆಬ್‌ಸೈಟ್‌ಗಳು ಮತ್ತು ಸರ್ಕಾರಿ (.gov.in), ಬ್ಯಾಂಕ್ ವೆಬ್‌ಸೈಟ್‌ಗಳಂತಹ ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್‌ಗಳು ತಕ್ಷಣ ತೆರೆಯುತ್ತವೆ. ಲಿಂಕ್ ಸರಿಯಾಗಿ ಕಂಡರೆ, ನಿಮಗೆ ಏನೂ ಕಾಣುವುದಿಲ್ಲ.</string>
     <string name="how_scam_title">ಮೋಸದ ಲಿಂಕ್‌ಗಳನ್ನು ಗುರುತಿಸುವುದು</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">ಆಲಿಸಿ</string>
     <string name="listen_stop">ನಿಲ್ಲಿಸಿ</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">ತೆರೆಯದೆ ನೋಡಿ</string>
+    <string name="look_hint">ಈ ಒಂದು ಪುಟವನ್ನು ಮಾತ್ರ ಲಾಕ್ ಮಾಡಿದ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ತೋರಿಸುತ್ತದೆ. ನೀವು ಟೈಪ್ ಮಾಡುವ ಏನನ್ನೂ ಕಳುಹಿಸಲು ಆಗುವುದಿಲ್ಲ, ಮತ್ತು ಒಂದು ನಿಮಿಷದ ನಂತರ ಅದು ಮುಚ್ಚಿಕೊಳ್ಳುತ್ತದೆ.</string>
+    <string name="look_banner">ಸುರಕ್ಷಿತವಾಗಿ ನೋಡುತ್ತಿದ್ದೀರಿ. ಇಲ್ಲಿ ನೀವು ಟೈಪ್ ಮಾಡುವ ಏನನ್ನೂ ಕಳುಹಿಸುವುದಿಲ್ಲ.</string>
+    <string name="look_blocked">ಈ ಪುಟ ಬೇರೆ ಏನನ್ನೋ ತೆರೆಯದಂತೆ LinkGuard ತಡೆಯಿತು.</string>
+    <string name="look_failed">ಪುಟವನ್ನು ತೋರಿಸಲು ಆಗಲಿಲ್ಲ. ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ನೋಡಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
 </resources>

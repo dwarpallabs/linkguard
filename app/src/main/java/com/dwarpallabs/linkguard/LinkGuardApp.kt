@@ -65,6 +65,9 @@ class LinkGuardApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        // The ":safeview" process (SafeViewActivity) needs none of this: no lists, no network.
+        if (!isMainProcess()) return
+
         val worker = Executors.newSingleThreadExecutor { Thread(it, "engine-data") }
         dataFuture = worker.submit(Callable {
             val start = SystemClock.elapsedRealtime()
@@ -111,4 +114,14 @@ class LinkGuardApp : Application() {
         const val TAG = "LinkGuard"
         const val WARM_UP_TIMEOUT_MS = 5_000
     }
+}
+
+/** True in LinkGuard's main process, false in ":safeview". */
+private fun Application.isMainProcess(): Boolean {
+    val name = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+        Application.getProcessName()
+    } else {
+        runCatching { java.io.File("/proc/self/cmdline").readText().trimEnd('\u0000') }.getOrNull()
+    }
+    return name == null || name == packageName
 }

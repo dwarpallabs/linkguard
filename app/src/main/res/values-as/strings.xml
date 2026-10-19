@@ -9,7 +9,7 @@
     <string name="flow_link">আপোনাৰ লিংক</string>
     <string name="flow_check">LinkGuard-এ পৰীক্ষা কৰে</string>
     <string name="not_a_browser_title">LinkGuard ব্ৰাউজাৰ নহয়</string>
-    <string name="not_a_browser_body">LinkGuard-এ কেতিয়াও ৱেব পেজ নেদেখুৱায়। ই প্ৰতিটো লিংক চকুৰ পলকতে পৰীক্ষা কৰে, তাৰ পিছত %1$s-ত খোলে, যিটো ব্ৰাউজাৰ আপুনি আগৰে পৰা ব্যৱহাৰ কৰি আছে। আপোনাৰ বুকমাৰ্ক, হিষ্ট্ৰি, ছেভ কৰা পাছৱৰ্ড আৰু টেব আগৰ দৰেই থাকিব।</string>
+    <string name="not_a_browser_body">LinkGuard ৱেবছাইট ঘূৰি চোৱাৰ বাবে নহয়। ই প্ৰতিটো লিংক চকুৰ পলকতে পৰীক্ষা কৰে, তাৰ পিছত %1$s-ত খোলে, যিটো ব্ৰাউজাৰ আপুনি আগৰে পৰা ব্যৱহাৰ কৰি আছে। আপোনাৰ বুকমাৰ্ক, হিষ্ট্ৰি, ছেভ কৰা পাছৱৰ্ড আৰু টেব আগৰ দৰেই থাকিব।</string>
     <string name="default_explain">Android-এ LinkGuard-ক আপোনাৰ “ব্ৰাউজাৰ এপ” বুলি ক’ব। এইটো কেৱল এই কাৰণে, যাতে LinkGuard-এ লিংকবোৰ আগতে দেখিব পাৰে। প্ৰতিটো লিংক তথাপিও %1$s-তহে খোল খাব।</string>
 
     <string name="default_heading">স্তৰ ১: LinkGuard-ক আপোনাৰ ডিফল্ট ব্ৰাউজাৰ কৰক</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">কিয় প্ৰয়োজন</string>
     <string name="how_why_body">WhatsApp আৰু SMS-ৰ প্ৰতাৰণাৰ মেছেজত প্ৰায়ে আচল যেন লগা লিংক থাকে: নকল বেংকৰ পেজ, “KYC আপডেট”-ৰ ফৰ্ম, বা টকা চুৰি কৰা এপ। এবাৰ টেপ কৰিলেই ক্ষতি হ’ব পাৰে, আৰু নকল ৱেব ঠিকনা চিনি পোৱা কঠিন হ’ব পাৰে।</string>
     <string name="how_where_title">LinkGuard ক’ত থাকে</string>
-    <string name="how_where_body">আপুনি টেপ কৰা লিংক আৰু আপোনাৰ ব্ৰাউজাৰৰ মাজত LinkGuard থাকে। ই চকুৰ পলকতে লিংক পৰীক্ষা কৰে, তাৰ পিছত %1$s-ত খোলে। ই নিজে কেতিয়াও ৱেব পেজ নেদেখুৱায়।</string>
+    <string name="how_where_body">আপুনি টেপ কৰা লিংক আৰু আপোনাৰ ব্ৰাউজাৰৰ মাজত LinkGuard থাকে। ই চকুৰ পলকতে লিংক পৰীক্ষা কৰে, তাৰ পিছত %1$s-ত খোলে। ই ৱেবছাইট ঘূৰি চোৱাৰ বাবে নহয়।</string>
     <string name="how_safe_title">সুৰক্ষিত লিংক লগে লগে খোল খায়</string>
     <string name="how_safe_body">জনাজাত ৱেবছাইট আৰু চৰকাৰী (.gov.in) আৰু বেংকৰ দৰে অফিচিয়েল ৱেবছাইট লগে লগে খোল খায়। লিংক ঠিকেই লাগিলে আপুনি একোৱেই নেদেখে।</string>
     <string name="how_scam_title">প্ৰতাৰণাৰ লিংক চিনি পোৱা</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">শুনক</string>
     <string name="listen_stop">ৰখাওক</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">নোখোলাকৈ চাওক</string>
+    <string name="look_hint">কেৱল এই এখন পেজ এখন তলা লগোৱা খিড়িকীত দেখুৱায়। আপুনি যি লিখে সেয়া পঠিয়াব নোৱাৰি, আৰু এক মিনিটৰ পিছত ই নিজে বন্ধ হৈ যায়।</string>
+    <string name="look_banner">সুৰক্ষিতভাৱে চাই আছে। ইয়াত আপুনি যি লিখে সেয়া পঠিওৱা নহয়।</string>
+    <string name="look_blocked">LinkGuard-এ এই পেজখনক আন একো খুলিবলৈ নিদিলে।</string>
+    <string name="look_failed">পেজখন দেখুৱাব পৰা নগ’ল। ইণ্টাৰনেট সংযোগ চাই আকৌ চেষ্টা কৰক।</string>
 </resources>

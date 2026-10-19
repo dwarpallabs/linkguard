@@ -9,7 +9,7 @@
     <string name="flow_link">تُہُنٛد لِنک</string>
     <string name="flow_check">LinkGuard چھُ جانچ کران</string>
     <string name="not_a_browser_title">LinkGuard چھُنہٕ براوزر</string>
-    <string name="not_a_browser_body">LinkGuard چھُنہٕ زانٛہہ تہِ ویب پیج ہاوان۔ یہِ چھُ پرٛؠتھ لِنک اَکِس لمحس منٛز جانچ کران تہٕ پتہٕ چھُ سُہ %1$s منٛز یَلہٕ کران، سُے براوزر یُس تُہۍ گۄڈٕ پؠٹھے استعمال چھِو کران۔ تُہٕنٛدۍ بُک مارک، ہسٹری، محفوظ پاس ورڈ تہٕ ٹیب چھِ بِلکُل تِتھۍ پٲٹھۍ روزان۔</string>
+    <string name="not_a_browser_body">LinkGuard چھُنہٕ براوزنگ خٲطرٕ۔ یہِ چھُ پرٛؠتھ لِنک اَکِس لمحس منٛز جانچ کران تہٕ پتہٕ چھُ سُہ %1$s منٛز یَلہٕ کران، سُے براوزر یُس تُہۍ گۄڈٕ پؠٹھے استعمال چھِو کران۔ تُہٕنٛدۍ بُک مارک، ہسٹری، محفوظ پاس ورڈ تہٕ ٹیب چھِ بِلکُل تِتھۍ پٲٹھۍ روزان۔</string>
     <string name="default_explain">Android ونہِ LinkGuard تُہٕنٛز “براوزر ایپ”۔ یہِ چھُ صِرف امہِ موجوب تاکہ LinkGuard ہیٚکہِ لِنک گۄڈٕ وُچھِتھ۔ پرٛؠتھ لِنک گژھہِ تیٚلہِ تہِ %1$s منٛزے یَلہٕ۔</string>
 
     <string name="default_heading">قدم 1: LinkGuard بنٲوِو پنُن ڈیفالٹ براوزر</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">امیُک ضرورت کیازِ</string>
     <string name="how_why_body">WhatsApp تہٕ SMS پؠٹھ دوکھہٕ بازن ہٕنٛدِ میسجن منٛز چھِ اکثر تِتھۍ لِنک آسان یِم اصلی باسان چھِ: نقلی بینک پیج، “KYC اپڈیٹ” فارم یا پونٛسہٕ چوری کرَن وٲلۍ ایپ۔ نقصانہٕ خٲطرٕ چھُ اکھ ٹیپ کٲفی، تہٕ نقلی ویب پتہٕ پرٛزنَاوُن ہیٚکہِ مُشکل ٲسِتھ۔</string>
     <string name="how_where_title">LinkGuard کۆت چھُ کٲم کران</string>
-    <string name="how_where_body">LinkGuard چھُ تُہٕنٛدِس ٹیپ کرنہٕ آمتِس لِنکس تہٕ تُہٕنٛدِس براوزرس درمیان روزان۔ یہِ چھُ اَکِس لمحس منٛز لِنک جانچ کران، پتہٕ چھُ سُہ %1$s منٛز یَلہٕ کران۔ یہِ چھُنہٕ پانہٕ زانٛہہ تہِ ویب پیج ہاوان۔</string>
+    <string name="how_where_body">LinkGuard چھُ تُہٕنٛدِس ٹیپ کرنہٕ آمتِس لِنکس تہٕ تُہٕنٛدِس براوزرس درمیان روزان۔ یہِ چھُ اَکِس لمحس منٛز لِنک جانچ کران، پتہٕ چھُ سُہ %1$s منٛز یَلہٕ کران۔ یہِ چھُنہٕ براوزنگ خٲطرٕ۔</string>
     <string name="how_safe_title">محفوظ لِنک چھِ فوراً یَلہٕ گژھان</string>
     <string name="how_safe_body">زانٛنہٕ آمِتۍ تہٕ سرکٲری ویب سایٹ، یِتھہٕ کٔنۍ سرکار (.gov.in) تہٕ بینکن ہٕنٛدۍ ویب سایٹ، چھِ فوراً یَلہٕ گژھان۔ اگر لِنک ٹھیک باسہِ، تُہۍ وُچھِو نہٕ کہِنٛہہ تہِ۔</string>
     <string name="how_scam_title">دوکھہٕ باز لِنکن ہٕنٛز پرٛزنتھ</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">بوزِو</string>
     <string name="listen_stop">رۄکِو</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">یَلہٕ کرنہٕ ورٲے وُچھِو</string>
+    <string name="look_hint">یہِ چھُ صِرف یہِ اکھ پیج اَکِس تالہٕ لاگنہٕ آمتِس نظارس منٛز ہاوان۔ یِہ کینٛہہ تُہۍ ٹائپ کٔرِو، سُہ ہیٚکہِ نہٕ سوزنہٕ یِتھ، تہٕ یہِ چھُ اَکِس مِنٹس پتہٕ بنٛد گژھان۔</string>
+    <string name="look_banner">حفاظتس سان وُچھان۔ یتھ جاے یِہ کینٛہہ تُہۍ ٹائپ کٔرِو، سُہ چھُنہٕ سوزنہٕ یِوان۔</string>
+    <string name="look_blocked">LinkGuard روٗک یہِ پیج بیٚیہ کینٛہہ یَلہٕ کرنہٕ نِشہِ۔</string>
+    <string name="look_failed">پیج ہیٚچ نہٕ ہاونہٕ یِتھ۔ پنُن انٹرنیٹ کنکشن وُچھِو تہٕ دوبارٕ کٔرِو کوشش۔</string>
 </resources>

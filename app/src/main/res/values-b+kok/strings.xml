@@ -10,7 +10,7 @@
     <string name="flow_link">तुमची लिंक</string>
     <string name="flow_check">LinkGuard ती तपासता</string>
     <string name="not_a_browser_title">LinkGuard ब्राउझर न्हय</string>
-    <string name="not_a_browser_body">LinkGuard केन्नाच वेब पान दाखयना. तो दर एक लिंक एका खिणांत तपासता आनी मागीर ती %1$s हांतूत उगडटा, म्हळ्यार तुमी आदल्यानूच वापरतात तोच ब्राउझर. तुमचे बुकमार्क, हिस्ट्री, सांबाळिल्ले पासवर्ड आनी टॅब आसात तशेच उरतात.</string>
+    <string name="not_a_browser_body">LinkGuard ब्राउझरा भशेन वापरपाखातीर न्हय. तो दर एक लिंक एका खिणांत तपासता आनी मागीर ती %1$s हांतूत उगडटा, म्हळ्यार तुमी आदल्यानूच वापरतात तोच ब्राउझर. तुमचे बुकमार्क, हिस्ट्री, सांबाळिल्ले पासवर्ड आनी टॅब आसात तशेच उरतात.</string>
     <string name="default_explain">Android, LinkGuard क तुमचें “ब्राउझर ॲप” म्हणटलें. तें फकत LinkGuard क लिंक पयलीं पळोवंक मेळची म्हूण. दर एक लिंक तरी लेगीत %1$s हांतूतूच उगडटली.</string>
 
     <string name="default_heading">पावल 1: LinkGuard क तुमचो डिफॉल्ट ब्राउझर करात</string>
@@ -42,7 +42,7 @@
     <string name="how_why_title">ताची गरज कित्याक</string>
     <string name="how_why_body">WhatsApp आनी SMS वयल्या फटोवणेच्या मेसेजांनी चड करून खऱ्यो दिसपी लिंक आसतात: फटीं बँक पान, “KYC अपडेट” फॉर्म वा पयशे चोरपी ॲप. लुकसाण जावंक एक टॅप पुरो, आनी फटीं वेब पत्तो वळखप कठीण जावंक शकता.</string>
     <string name="how_where_title">LinkGuard खंय आसता</string>
-    <string name="how_where_body">तुमी टॅप केल्ली लिंक आनी तुमचो ब्राउझर हांचे मदीं LinkGuard आसता. तो एका खिणांत लिंक तपासता, मागीर ती %1$s हांतूत उगडटा. तो स्वता केन्नाच वेब पान दाखयना.</string>
+    <string name="how_where_body">तुमी टॅप केल्ली लिंक आनी तुमचो ब्राउझर हांचे मदीं LinkGuard आसता. तो एका खिणांत लिंक तपासता, मागीर ती %1$s हांतूत उगडटा. तो ब्राउझरा भशेन वापरपाखातीर न्हय.</string>
     <string name="how_safe_title">सुरक्षीत लिंक रोखडेंच उगडटात</string>
     <string name="how_safe_body">वळखीच्यो आनी अधिकृत वेबसायटी, जशो सरकारी (.gov.in) आनी बँकांच्यो वेबसायटी, रोखडेंच उगडटात. लिंक बरी दिसल्यार, तुमकां कांयच दिसना.</string>
     <string name="how_scam_title">फटोवणेच्यो लिंक वळखप</string>
@@ -192,4 +192,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">आयकात</string>
     <string name="listen_stop">रावयात</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">उगडिनासतना पळयात</string>
+    <string name="look_hint">हें फकत हेंच एक पान कुलूप घाल्ल्या रुपांत दाखयता. तुमी टायप केल्लें कांयच धाडूंक जायना, आनी एका मिनटा उपरांत तें बंद जाता.</string>
+    <string name="look_banner">तुमी सुरक्षीतपणान पळयतात. हांगा तुमी टायप केल्लें कांयच धाडलें वचना.</string>
+    <string name="look_blocked">LinkGuard न ह्या पानाक आनीक कितें उगडूंक दिलें ना.</string>
+    <string name="look_failed">पान दाखोवंक जालें ना. तुमचें इंटरनेट कनेक्शन तपासात आनी परतून यत्न करात.</string>
 </resources>

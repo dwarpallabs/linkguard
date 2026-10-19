@@ -9,7 +9,7 @@
     <string name="flow_link">آپ کا لنک</string>
     <string name="flow_check">LinkGuard جانچ کرتا ہے</string>
     <string name="not_a_browser_title">LinkGuard براؤزر نہیں ہے</string>
-    <string name="not_a_browser_body">LinkGuard کبھی ویب صفحے نہیں دکھاتا۔ یہ ہر لنک کی پل بھر میں جانچ کرتا ہے اور پھر اسے %1$s میں کھولتا ہے، وہی براؤزر جو آپ پہلے سے استعمال کرتے ہیں۔ آپ کے بک مارک، ہسٹری، محفوظ پاس ورڈ اور ٹیب بالکل ویسے ہی رہتے ہیں۔</string>
+    <string name="not_a_browser_body">LinkGuard براؤزنگ کے لیے نہیں ہے۔ یہ ہر لنک کی پل بھر میں جانچ کرتا ہے اور پھر اسے %1$s میں کھولتا ہے، وہی براؤزر جو آپ پہلے سے استعمال کرتے ہیں۔ آپ کے بک مارک، ہسٹری، محفوظ پاس ورڈ اور ٹیب بالکل ویسے ہی رہتے ہیں۔</string>
     <string name="default_explain">Android، LinkGuard کو آپ کی “براؤزر ایپ” کہے گا۔ ایسا صرف اس لیے ہے تاکہ LinkGuard لنک کو پہلے دیکھ سکے۔ ہر لنک پھر بھی %1$s میں ہی کھلے گا۔</string>
 
     <string name="default_heading">قدم 1: LinkGuard کو اپنا ڈیفالٹ براؤزر بنائیں</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">اس کی ضرورت کیوں ہے</string>
     <string name="how_why_body">WhatsApp اور SMS پر دھوکے والے میسجز میں اکثر ایسے لنک ہوتے ہیں جو اصلی لگتے ہیں: نقلی بینک صفحہ، “KYC اپ ڈیٹ” فارم یا پیسے چرانے والی ایپ۔ نقصان کے لیے ایک ٹیپ ہی کافی ہے، اور نقلی ویب پتہ پہچاننا مشکل ہو سکتا ہے۔</string>
     <string name="how_where_title">LinkGuard کہاں کام کرتا ہے</string>
-    <string name="how_where_body">LinkGuard آپ کے ٹیپ کیے ہوئے لنک اور آپ کے براؤزر کے بیچ میں رہتا ہے۔ یہ پل بھر میں لنک کی جانچ کرتا ہے، پھر اسے %1$s میں کھولتا ہے۔ یہ خود کبھی ویب صفحے نہیں دکھاتا۔</string>
+    <string name="how_where_body">LinkGuard آپ کے ٹیپ کیے ہوئے لنک اور آپ کے براؤزر کے بیچ میں رہتا ہے۔ یہ پل بھر میں لنک کی جانچ کرتا ہے، پھر اسے %1$s میں کھولتا ہے۔ یہ براؤزنگ کے لیے نہیں ہے۔</string>
     <string name="how_safe_title">محفوظ لنک فوراً کھلتے ہیں</string>
     <string name="how_safe_body">جانی پہچانی اور سرکاری ویب سائٹیں، جیسے حکومت (.gov.in) اور بینکوں کی ویب سائٹیں، فوراً کھل جاتی ہیں۔ اگر لنک ٹھیک لگے، تو آپ کو کچھ بھی دکھائی نہیں دیتا۔</string>
     <string name="how_scam_title">دھوکے والے لنک کی پہچان</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">سنیں</string>
     <string name="listen_stop">روکیں</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">کھولے بغیر دیکھیں</string>
+    <string name="look_hint">یہ صرف اس ایک صفحے کو تالا لگے نظارے میں دکھاتا ہے۔ آپ جو بھی ٹائپ کریں وہ بھیجا نہیں جا سکتا، اور یہ ایک منٹ بعد بند ہو جاتا ہے۔</string>
+    <string name="look_banner">محفوظ طریقے سے دیکھ رہے ہیں۔ یہاں آپ جو بھی ٹائپ کریں وہ بھیجا نہیں جاتا۔</string>
+    <string name="look_blocked">LinkGuard نے اس صفحے کو کچھ اور کھولنے سے روک دیا۔</string>
+    <string name="look_failed">صفحہ نہیں دکھایا جا سکا۔ اپنا انٹرنیٹ کنکشن دیکھیں اور دوبارہ کوشش کریں۔</string>
 </resources>

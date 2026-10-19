@@ -9,7 +9,7 @@
     <string name="flow_link">ਤੁਹਾਡਾ ਲਿੰਕ</string>
     <string name="flow_check">LinkGuard ਜਾਂਚ ਕਰਦਾ ਹੈ</string>
     <string name="not_a_browser_title">LinkGuard ਬ੍ਰਾਊਜ਼ਰ ਨਹੀਂ ਹੈ</string>
-    <string name="not_a_browser_body">LinkGuard ਕਦੇ ਵੈੱਬ ਪੇਜ ਨਹੀਂ ਦਿਖਾਉਂਦਾ। ਇਹ ਹਰ ਲਿੰਕ ਦੀ ਪਲ ਭਰ ਵਿੱਚ ਜਾਂਚ ਕਰਦਾ ਹੈ ਅਤੇ ਫਿਰ ਉਸਨੂੰ %1$s ਵਿੱਚ ਖੋਲ੍ਹਦਾ ਹੈ, ਉਹੀ ਬ੍ਰਾਊਜ਼ਰ ਜੋ ਤੁਸੀਂ ਪਹਿਲਾਂ ਤੋਂ ਵਰਤਦੇ ਹੋ। ਤੁਹਾਡੇ ਬੁੱਕਮਾਰਕ, ਹਿਸਟਰੀ, ਸੇਵ ਕੀਤੇ ਪਾਸਵਰਡ ਅਤੇ ਟੈਬ ਬਿਲਕੁਲ ਉਵੇਂ ਹੀ ਰਹਿੰਦੇ ਹਨ।</string>
+    <string name="not_a_browser_body">LinkGuard ਬ੍ਰਾਊਜ਼ਿੰਗ ਲਈ ਨਹੀਂ ਹੈ। ਇਹ ਹਰ ਲਿੰਕ ਦੀ ਪਲ ਭਰ ਵਿੱਚ ਜਾਂਚ ਕਰਦਾ ਹੈ ਅਤੇ ਫਿਰ ਉਸਨੂੰ %1$s ਵਿੱਚ ਖੋਲ੍ਹਦਾ ਹੈ, ਉਹੀ ਬ੍ਰਾਊਜ਼ਰ ਜੋ ਤੁਸੀਂ ਪਹਿਲਾਂ ਤੋਂ ਵਰਤਦੇ ਹੋ। ਤੁਹਾਡੇ ਬੁੱਕਮਾਰਕ, ਹਿਸਟਰੀ, ਸੇਵ ਕੀਤੇ ਪਾਸਵਰਡ ਅਤੇ ਟੈਬ ਬਿਲਕੁਲ ਉਵੇਂ ਹੀ ਰਹਿੰਦੇ ਹਨ।</string>
     <string name="default_explain">Android, LinkGuard ਨੂੰ ਤੁਹਾਡੀ “ਬ੍ਰਾਊਜ਼ਰ ਐਪ” ਕਹੇਗਾ। ਇਹ ਸਿਰਫ਼ ਇਸ ਲਈ ਹੈ ਤਾਂ ਜੋ LinkGuard ਲਿੰਕ ਨੂੰ ਪਹਿਲਾਂ ਦੇਖ ਸਕੇ। ਹਰ ਲਿੰਕ ਫਿਰ ਵੀ %1$s ਵਿੱਚ ਹੀ ਖੁੱਲ੍ਹੇਗਾ।</string>
 
     <string name="default_heading">ਕਦਮ 1: LinkGuard ਨੂੰ ਆਪਣਾ ਡਿਫ਼ੌਲਟ ਬ੍ਰਾਊਜ਼ਰ ਬਣਾਓ</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">ਇਸਦੀ ਲੋੜ ਕਿਉਂ ਹੈ</string>
     <string name="how_why_body">WhatsApp ਅਤੇ SMS ’ਤੇ ਠੱਗੀ ਵਾਲੇ ਮੈਸੇਜਾਂ ਵਿੱਚ ਅਕਸਰ ਅਜਿਹੇ ਲਿੰਕ ਹੁੰਦੇ ਹਨ ਜੋ ਅਸਲੀ ਲੱਗਦੇ ਹਨ: ਨਕਲੀ ਬੈਂਕ ਪੇਜ, “KYC ਅੱਪਡੇਟ” ਫ਼ਾਰਮ ਜਾਂ ਪੈਸੇ ਚੋਰੀ ਕਰਨ ਵਾਲੀ ਐਪ। ਨੁਕਸਾਨ ਲਈ ਇੱਕ ਟੈਪ ਹੀ ਕਾਫ਼ੀ ਹੈ, ਅਤੇ ਨਕਲੀ ਵੈੱਬ ਪਤਾ ਪਛਾਣਨਾ ਔਖਾ ਹੋ ਸਕਦਾ ਹੈ।</string>
     <string name="how_where_title">LinkGuard ਕਿੱਥੇ ਕੰਮ ਕਰਦਾ ਹੈ</string>
-    <string name="how_where_body">LinkGuard ਤੁਹਾਡੇ ਟੈਪ ਕੀਤੇ ਲਿੰਕ ਅਤੇ ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਰ ਦੇ ਵਿਚਕਾਰ ਰਹਿੰਦਾ ਹੈ। ਇਹ ਪਲ ਭਰ ਵਿੱਚ ਲਿੰਕ ਦੀ ਜਾਂਚ ਕਰਦਾ ਹੈ, ਫਿਰ ਉਸਨੂੰ %1$s ਵਿੱਚ ਖੋਲ੍ਹਦਾ ਹੈ। ਇਹ ਆਪ ਕਦੇ ਵੈੱਬ ਪੇਜ ਨਹੀਂ ਦਿਖਾਉਂਦਾ।</string>
+    <string name="how_where_body">LinkGuard ਤੁਹਾਡੇ ਟੈਪ ਕੀਤੇ ਲਿੰਕ ਅਤੇ ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਰ ਦੇ ਵਿਚਕਾਰ ਰਹਿੰਦਾ ਹੈ। ਇਹ ਪਲ ਭਰ ਵਿੱਚ ਲਿੰਕ ਦੀ ਜਾਂਚ ਕਰਦਾ ਹੈ, ਫਿਰ ਉਸਨੂੰ %1$s ਵਿੱਚ ਖੋਲ੍ਹਦਾ ਹੈ। ਇਹ ਬ੍ਰਾਊਜ਼ਿੰਗ ਲਈ ਨਹੀਂ ਹੈ।</string>
     <string name="how_safe_title">ਸੁਰੱਖਿਅਤ ਲਿੰਕ ਤੁਰੰਤ ਖੁੱਲ੍ਹਦੇ ਹਨ</string>
     <string name="how_safe_body">ਜਾਣੀਆਂ-ਪਛਾਣੀਆਂ ਅਤੇ ਸਰਕਾਰੀ ਵੈੱਬਸਾਈਟਾਂ, ਜਿਵੇਂ ਸਰਕਾਰ (.gov.in) ਅਤੇ ਬੈਂਕਾਂ ਦੀਆਂ ਵੈੱਬਸਾਈਟਾਂ, ਤੁਰੰਤ ਖੁੱਲ੍ਹ ਜਾਂਦੀਆਂ ਹਨ। ਜੇ ਲਿੰਕ ਠੀਕ ਲੱਗਦਾ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਕੁਝ ਵੀ ਨਹੀਂ ਦਿਖਦਾ।</string>
     <string name="how_scam_title">ਠੱਗੀ ਵਾਲੇ ਲਿੰਕਾਂ ਦੀ ਪਛਾਣ</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">ਸੁਣੋ</string>
     <string name="listen_stop">ਰੋਕੋ</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਦੇਖੋ</string>
+    <string name="look_hint">ਸਿਰਫ਼ ਇਸ ਇੱਕ ਪੇਜ ਨੂੰ ਲੌਕ ਕੀਤੀ ਸਕ੍ਰੀਨ ਵਿੱਚ ਦਿਖਾਉਂਦਾ ਹੈ। ਤੁਸੀਂ ਜੋ ਵੀ ਟਾਈਪ ਕਰੋ, ਉਹ ਭੇਜਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ, ਅਤੇ ਇੱਕ ਮਿੰਟ ਬਾਅਦ ਇਹ ਬੰਦ ਹੋ ਜਾਂਦਾ ਹੈ।</string>
+    <string name="look_banner">ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ ਦੇਖ ਰਹੇ ਹੋ। ਇੱਥੇ ਤੁਸੀਂ ਜੋ ਵੀ ਟਾਈਪ ਕਰੋ, ਉਹ ਭੇਜਿਆ ਨਹੀਂ ਜਾਂਦਾ।</string>
+    <string name="look_blocked">LinkGuard ਨੇ ਇਸ ਪੇਜ ਨੂੰ ਕੁਝ ਹੋਰ ਖੋਲ੍ਹਣ ਤੋਂ ਰੋਕ ਦਿੱਤਾ।</string>
+    <string name="look_failed">ਪੇਜ ਨਹੀਂ ਦਿਖਾਇਆ ਜਾ ਸਕਿਆ। ਆਪਣਾ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੇਖੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
 </resources>

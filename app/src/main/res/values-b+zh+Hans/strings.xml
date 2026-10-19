@@ -9,7 +9,7 @@
     <string name="flow_link">您的链接</string>
     <string name="flow_check">LinkGuard 检查链接</string>
     <string name="not_a_browser_title">LinkGuard 不是浏览器</string>
-    <string name="not_a_browser_body">LinkGuard 从不显示网页。它会在一眨眼间检查每个链接，然后用 %1$s 打开，也就是您平时用的浏览器。您的书签、历史记录、保存的密码和标签页都保持原样。</string>
+    <string name="not_a_browser_body">LinkGuard 不是用来浏览网页的。它会在一眨眼间检查每个链接，然后用 %1$s 打开，也就是您平时用的浏览器。您的书签、历史记录、保存的密码和标签页都保持原样。</string>
     <string name="default_explain">Android 会把 LinkGuard 叫作您的“浏览器应用”。这只是为了让 LinkGuard 先看到链接。每个链接仍然会用 %1$s 打开。</string>
 
     <string name="default_heading">第 1 步：把 LinkGuard 设为默认浏览器</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">为什么需要它</string>
     <string name="how_why_body">WhatsApp 和短信里的诈骗消息，常常带着看起来很真的链接：假银行网页、“KYC 更新”表格，或者会偷钱的应用。点一下就可能受害，而假网址可能很难看出来。</string>
     <string name="how_where_title">LinkGuard 在哪里起作用</string>
-    <string name="how_where_body">LinkGuard 在您点的链接和您的浏览器之间。它在一眨眼间检查链接，然后用 %1$s 打开。它自己从不显示网页。</string>
+    <string name="how_where_body">LinkGuard 在您点的链接和您的浏览器之间。它在一眨眼间检查链接，然后用 %1$s 打开。它不是用来浏览网页的。</string>
     <string name="how_safe_title">安全的链接马上打开</string>
     <string name="how_safe_body">知名网站和官方网站，比如政府（.gov.in）和银行的网站，会马上打开。如果链接看起来没问题，您什么都不会看到。</string>
     <string name="how_scam_title">认出诈骗链接</string>
@@ -187,4 +187,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">朗读</string>
     <string name="listen_stop">停止</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">不打开，先看一眼</string>
+    <string name="look_hint">在锁定的视图中只显示这一个网页。您输入的任何内容都无法发送，一分钟后会自动关闭。</string>
+    <string name="look_banner">正在安全查看。您在这里输入的内容不会被发送。</string>
+    <string name="look_blocked">LinkGuard 阻止了这个网页打开其他内容。</string>
+    <string name="look_failed">无法显示网页。请检查网络连接，然后再试一次。</string>
 </resources>

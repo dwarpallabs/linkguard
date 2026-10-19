@@ -9,7 +9,7 @@
     <string name="flow_link">ᱟᱢᱟᱜ ᱞᱤᱝᱠ</string>
     <string name="flow_check">LinkGuard ᱚᱱᱟ ᱡᱟᱸᱪᱟᱭ</string>
     <string name="not_a_browser_title">LinkGuard ᱫᱚ ᱵᱨᱟᱣᱡᱟᱨ ᱵᱟᱝ ᱠᱟᱱᱟ</string>
-    <string name="not_a_browser_body">LinkGuard ᱡᱟᱦᱟᱸ ᱚᱠᱛᱚ ᱦᱚᱸ ᱣᱮᱵ ᱥᱟᱦᱴᱟ ᱵᱟᱝ ᱩᱫᱩᱜᱟ ᱾ ᱡᱚᱛᱚ ᱞᱤᱝᱠ ᱛᱩᱨᱩᱛ ᱡᱟᱸᱪ ᱠᱟᱛᱮ %1$s ᱨᱮ ᱡᱷᱤᱡᱤᱭᱟᱭ, ᱡᱟᱦᱟᱸ ᱵᱨᱟᱣᱡᱟᱨ ᱟᱢ ᱱᱤᱛ ᱦᱚᱸ ᱵᱮᱵᱷᱟᱨ ᱮᱫᱟᱢ ᱾ ᱟᱢᱟᱜ ᱵᱩᱠᱢᱟᱨᱠ, ᱦᱤᱥᱴᱨᱤ, ᱫᱚᱦᱚ ᱟᱠᱟᱱ ᱯᱟᱥᱣᱟᱨᱰ ᱟᱨ ᱴᱮᱵ ᱡᱚᱛᱚ ᱡᱮᱞᱮᱠᱟ ᱢᱮᱱᱟᱜᱼᱟ ᱚᱱᱟ ᱞᱮᱠᱟ ᱜᱮ ᱛᱟᱦᱮᱸᱱᱟ ᱾</string>
+    <string name="not_a_browser_body">LinkGuard ᱫᱚ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱠᱚ ᱧᱮᱞ ᱵᱩᱞᱩᱝ ᱞᱟᱹᱜᱤᱫ ᱵᱟᱝ ᱠᱟᱱᱟ ᱾ ᱡᱚᱛᱚ ᱞᱤᱝᱠ ᱛᱩᱨᱩᱛ ᱡᱟᱸᱪ ᱠᱟᱛᱮ %1$s ᱨᱮ ᱡᱷᱤᱡᱤᱭᱟᱭ, ᱡᱟᱦᱟᱸ ᱵᱨᱟᱣᱡᱟᱨ ᱟᱢ ᱱᱤᱛ ᱦᱚᱸ ᱵᱮᱵᱷᱟᱨ ᱮᱫᱟᱢ ᱾ ᱟᱢᱟᱜ ᱵᱩᱠᱢᱟᱨᱠ, ᱦᱤᱥᱴᱨᱤ, ᱫᱚᱦᱚ ᱟᱠᱟᱱ ᱯᱟᱥᱣᱟᱨᱰ ᱟᱨ ᱴᱮᱵ ᱡᱚᱛᱚ ᱡᱮᱞᱮᱠᱟ ᱢᱮᱱᱟᱜᱼᱟ ᱚᱱᱟ ᱞᱮᱠᱟ ᱜᱮ ᱛᱟᱦᱮᱸᱱᱟ ᱾</string>
     <string name="default_explain">Android ᱫᱚ LinkGuard ᱟᱢᱟᱜ “ᱵᱨᱟᱣᱡᱟᱨ ᱮᱯ” ᱞᱮᱠᱟ ᱩᱫᱩᱜᱟᱭ ᱾ ᱚᱱᱟ ᱫᱚ ᱥᱩᱢᱩᱝ LinkGuard ᱯᱩᱭᱞᱩ ᱞᱤᱝᱠ ᱠᱚ ᱧᱮᱞ ᱞᱟᱹᱜᱤᱫ ᱾ ᱡᱚᱛᱚ ᱞᱤᱝᱠ ᱮᱱᱦᱚᱸ %1$s ᱨᱮ ᱜᱮ ᱡᱷᱤᱡᱤᱜᱼᱟ ᱾</string>
 
     <string name="default_heading">ᱫᱷᱟᱯ ᱑: LinkGuard ᱟᱢᱟᱜ ᱰᱤᱯᱷᱚᱞᱴ ᱵᱨᱟᱣᱡᱟᱨ ᱵᱮᱱᱟᱣ ᱢᱮ</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">ᱪᱮᱫᱟᱜ ᱞᱟᱹᱠᱛᱤᱭᱟ</string>
     <string name="how_why_body">WhatsApp ᱟᱨ SMS ᱨᱮ ᱴᱷᱚᱜ ᱢᱮᱥᱮᱡᱽ ᱨᱮ ᱟᱭᱢᱟ ᱡᱮᱠᱷᱟ ᱥᱟᱹᱨᱤ ᱞᱮᱠᱟ ᱧᱮᱞᱚᱜ ᱞᱤᱝᱠ ᱠᱚ ᱛᱟᱦᱮᱸᱱᱟ: ᱱᱚᱠᱚᱞ ᱵᱮᱝᱠ ᱥᱟᱦᱴᱟ, “KYC ᱟᱯᱰᱮᱴ” ᱯᱷᱚᱨᱢ, ᱥᱮ ᱴᱟᱠᱟ ᱪᱩᱨᱩᱤ ᱩᱫᱩᱜ ᱮᱯ ᱾ ᱢᱤᱫ ᱫᱷᱟᱣ ᱚᱛᱟ ᱛᱮ ᱜᱮ ᱱᱩᱠᱥᱟᱱ ᱦᱩᱭ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ ᱾ ᱱᱚᱠᱚᱞ ᱣᱮᱵ ᱴᱷᱤᱠᱟᱹᱱᱟᱹ ᱪᱤᱱᱦᱟᱹᱣ ᱫᱚ ᱮᱴᱠᱮᱴᱚᱬᱮ ᱦᱩᱭ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ ᱾</string>
     <string name="how_where_title">LinkGuard ᱚᱠᱟᱨᱮ ᱛᱟᱦᱮᱸᱱᱟ</string>
-    <string name="how_where_body">ᱟᱢ ᱡᱟᱦᱟᱸ ᱞᱤᱝᱠ ᱚᱛᱟᱭᱮᱢ ᱟᱨ ᱟᱢᱟᱜ ᱵᱨᱟᱣᱡᱟᱨ, ᱱᱚᱶᱟ ᱵᱟᱨᱭᱟ ᱛᱟᱞᱟ ᱨᱮ LinkGuard ᱛᱟᱦᱮᱸᱱᱟ ᱾ ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱛᱩᱨᱩᱛ ᱡᱟᱸᱪ ᱠᱟᱛᱮ %1$s ᱨᱮ ᱡᱷᱤᱡᱤᱭᱟᱭ ᱾ ᱱᱚᱶᱟ ᱟᱡ ᱛᱮ ᱡᱟᱦᱟᱸ ᱚᱠᱛᱚ ᱦᱚᱸ ᱣᱮᱵ ᱥᱟᱦᱴᱟ ᱵᱟᱝ ᱩᱫᱩᱜᱟ ᱾</string>
+    <string name="how_where_body">ᱟᱢ ᱡᱟᱦᱟᱸ ᱞᱤᱝᱠ ᱚᱛᱟᱭᱮᱢ ᱟᱨ ᱟᱢᱟᱜ ᱵᱨᱟᱣᱡᱟᱨ, ᱱᱚᱶᱟ ᱵᱟᱨᱭᱟ ᱛᱟᱞᱟ ᱨᱮ LinkGuard ᱛᱟᱦᱮᱸᱱᱟ ᱾ ᱱᱚᱶᱟ ᱞᱤᱝᱠ ᱛᱩᱨᱩᱛ ᱡᱟᱸᱪ ᱠᱟᱛᱮ %1$s ᱨᱮ ᱡᱷᱤᱡᱤᱭᱟᱭ ᱾ ᱱᱚᱶᱟ ᱫᱚ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱠᱚ ᱧᱮᱞ ᱵᱩᱞᱩᱝ ᱞᱟᱹᱜᱤᱫ ᱵᱟᱝ ᱠᱟᱱᱟ ᱾</string>
     <string name="how_safe_title">ᱴᱷᱤᱠ ᱞᱤᱝᱠ ᱠᱚ ᱛᱩᱨᱩᱛ ᱡᱷᱤᱡᱤᱜᱼᱟ</string>
     <string name="how_safe_body">ᱥᱟᱱᱟᱢ ᱦᱚᱲ ᱵᱟᱰᱟᱭ ᱟᱠᱟᱱ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱟᱨ ᱚᱯᱷᱤᱥᱤᱭᱟᱞ ᱣᱮᱵᱥᱟᱭᱤᱴ, ᱡᱮᱞᱮᱠᱟ ᱥᱚᱨᱠᱟᱨ (.gov.in) ᱟᱨ ᱵᱮᱝᱠ ᱣᱮᱵᱥᱟᱭᱤᱴ, ᱛᱩᱨᱩᱛ ᱡᱷᱤᱡᱤᱜᱼᱟ ᱾ ᱡᱩᱫᱤ ᱞᱤᱝᱠ ᱴᱷᱤᱠ ᱧᱮᱞᱚᱜ ᱠᱷᱟᱱ, ᱟᱢ ᱪᱮᱫ ᱦᱚᱸ ᱵᱟᱝ ᱧᱮᱞᱟᱢ ᱾</string>
     <string name="how_scam_title">ᱴᱷᱚᱜ ᱞᱤᱝᱠ ᱪᱤᱱᱦᱟᱹᱣ</string>
@@ -195,4 +195,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">ᱟᱧᱡᱚᱢ ᱢᱮ</string>
     <string name="listen_stop">ᱛᱤᱝᱜᱩ ᱢᱮ</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">ᱵᱟᱝ ᱡᱷᱤᱡᱤ ᱠᱟᱛᱮ ᱧᱮᱞ ᱢᱮ</string>
+    <string name="look_hint">ᱱᱚᱶᱟ ᱢᱤᱫ ᱥᱟᱦᱴᱟ ᱜᱮ ᱠᱩᱞᱩᱯ ᱟᱠᱟᱱ ᱡᱟᱭᱜᱟ ᱨᱮ ᱩᱫᱩᱜᱟ ᱾ ᱟᱢ ᱡᱟᱦᱟᱸ ᱚᱞᱟᱢ ᱚᱱᱟ ᱵᱟᱝ ᱠᱩᱞ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ, ᱟᱨ ᱢᱤᱫ ᱢᱤᱱᱤᱴ ᱛᱟᱭᱚᱢ ᱱᱚᱶᱟ ᱟᱡ ᱛᱮ ᱵᱚᱸᱫᱚᱜᱼᱟ ᱾</string>
+    <string name="look_banner">ᱵᱟᱧᱪᱟᱣ ᱛᱮ ᱧᱮᱞ ᱮᱫᱟᱢ ᱾ ᱱᱚᱸᱰᱮ ᱟᱢ ᱡᱟᱦᱟᱸ ᱚᱞᱟᱢ ᱚᱱᱟ ᱵᱟᱝ ᱠᱩᱞᱚᱜᱼᱟ ᱾</string>
+    <string name="look_blocked">LinkGuard ᱫᱚ ᱱᱚᱶᱟ ᱥᱟᱦᱴᱟ ᱮᱴᱟᱜ ᱡᱤᱱᱤᱥ ᱡᱷᱤᱡᱤ ᱠᱷᱚᱱ ᱛᱷᱟᱢᱟᱣ ᱠᱮᱫᱼᱟᱭ ᱾</string>
+    <string name="look_failed">ᱥᱟᱦᱴᱟ ᱵᱟᱝ ᱩᱫᱩᱜ ᱫᱟᱲᱮᱭᱮᱱᱟ ᱾ ᱟᱢᱟᱜ ᱤᱱᱴᱚᱨᱱᱮᱴ ᱡᱟᱸᱪ ᱠᱟᱛᱮ ᱫᱚᱦᱲᱟ ᱪᱮᱥᱴᱟᱭ ᱢᱮ ᱾</string>
 </resources>

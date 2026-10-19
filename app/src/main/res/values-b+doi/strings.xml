@@ -9,7 +9,7 @@
     <string name="flow_link">तुंदा लिंक</string>
     <string name="flow_check">LinkGuard जांच करदा ऐ</string>
     <string name="not_a_browser_title">LinkGuard ब्राउज़र नेईं ऐ</string>
-    <string name="not_a_browser_body">LinkGuard कदें बी वेब पेज नेईं दसदा। एह् हर लिंक दी पल भर च जांच करदा ऐ ते फ्ही उसी %1$s च खोलदा ऐ, उऐ ब्राउज़र जेह्ड़ा तुस पैह्लें थमां बरतदे ओ। तुंदे बुकमार्क, हिस्ट्री, सेव कीते दे पासवर्ड ते टैब जियां न, उआं गै रौंह्दे न।</string>
+    <string name="not_a_browser_body">LinkGuard ब्राउज़र आंगर बरतने आस्तै नेईं ऐ। एह् हर लिंक दी पल भर च जांच करदा ऐ ते फ्ही उसी %1$s च खोलदा ऐ, उऐ ब्राउज़र जेह्ड़ा तुस पैह्लें थमां बरतदे ओ। तुंदे बुकमार्क, हिस्ट्री, सेव कीते दे पासवर्ड ते टैब जियां न, उआं गै रौंह्दे न।</string>
     <string name="default_explain">Android, LinkGuard गी तुंदा “ब्राउज़र ऐप” आखग। एह् सिर्फ इस आस्तै ऐ तां जे LinkGuard लिंक गी पैह्लें दिक्खी सकै। हर लिंक फ्ही बी %1$s च गै खुलग।</string>
 
     <string name="default_heading">कदम 1: LinkGuard गी अपना डिफ़ॉल्ट ब्राउज़र बनाओ</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">इसदी लोड़ कीऽ ऐ</string>
     <string name="how_why_body">WhatsApp ते SMS पर ठग्गी आह्ले मैसेजें च अक्सर नेह् लिंक होंदे न जेह्ड़े असली लगदे न: नकली बैंक पेज, “KYC अपडेट” फार्म जां पैसे चोरी करने आह्ला ऐप। नुकसान आस्तै इक टैप गै काफी ऐ, ते नकली वेब पता पछानना औखा होई सकदा ऐ।</string>
     <string name="how_where_title">LinkGuard कुत्थें रौंह्दा ऐ</string>
-    <string name="how_where_body">LinkGuard तुंदे टैप कीते दे लिंक ते तुंदे ब्राउज़र दे बिच्च रौंह्दा ऐ। एह् पल भर च लिंक दी जांच करदा ऐ, फ्ही उसी %1$s च खोलदा ऐ। एह् आपूं कदें बी वेब पेज नेईं दसदा।</string>
+    <string name="how_where_body">LinkGuard तुंदे टैप कीते दे लिंक ते तुंदे ब्राउज़र दे बिच्च रौंह्दा ऐ। एह् पल भर च लिंक दी जांच करदा ऐ, फ्ही उसी %1$s च खोलदा ऐ। एह् ब्राउज़र आंगर बरतने आस्तै नेईं ऐ।</string>
     <string name="how_safe_title">सुरक्षत लिंक झट्ट खुल्ली जंदे न</string>
     <string name="how_safe_body">जानी-पछानी वेबसाइटां ते आधिकारिक वेबसाइटां, जियां सरकारी (.gov.in) ते बैंक दियां वेबसाइटां, झट्ट खुल्ली जंदियां न। जेकर लिंक ठीक लगदा ऐ, तां तुसें गी किश बी नजर नेईं औंदा।</string>
     <string name="how_scam_title">ठग्गी आह्ले लिंकें दी पछान</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">सुनो</string>
     <string name="listen_stop">रोको</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">बिना खोले दिक्खो</string>
+    <string name="look_hint">एह् सिर्फ इस इक पेज गी लॉक कीते दे रूप च दसदा ऐ। तुस जे किश बी टाइप करो, ओह् भेजेआ नेईं जाई सकदा, ते एह् इक मिंट बाद बंद होई जंदा ऐ।</string>
+    <string name="look_banner">तुस सुरक्षत तरीके कन्नै दिक्खा करदे ओ। तुस इत्थें जे किश बी टाइप करो, ओह् नेईं भेजेआ जंदा।</string>
+    <string name="look_blocked">LinkGuard ने इस पेज गी किश होर खोलने थमां रोकी दित्ता।</string>
+    <string name="look_failed">पेज नेईं दस्सेआ जाई सकेआ। अपना इंटरनेट कनेक्शन जांचो ते फ्ही कोशश करो।</string>
 </resources>

@@ -9,7 +9,7 @@
     <string name="flow_link">नोंथांनि लिंक</string>
     <string name="flow_check">LinkGuard आ नायसंयो</string>
     <string name="not_a_browser_title">LinkGuard आ ब्राउजार नङा</string>
-    <string name="not_a_browser_body">LinkGuard आ जेब्लाबो वेब पेज दिन्थिया। बेयो लिंक मोनफ्रोमखौ गोख्रोङै नायसंयो आरो बेनि उनाव बेखौ %1$s आव खेवो, जाय ब्राउजारखौ नोंथाङा सिगांनिफ्रायनो बाहायो। नोंथांनि बुकमार्क, हिस्ट्री, सेभ खालामनाय पासवार्ड आरो टेबफोरा जेरै दं, बेयैनो थागोन।</string>
+    <string name="not_a_browser_body">LinkGuard आ वेबसाइटफोर नायबाय थांनायनि थाखाय नङा। बेयो लिंक मोनफ्रोमखौ गोख्रोङै नायसंयो आरो बेनि उनाव बेखौ %1$s आव खेवो, जाय ब्राउजारखौ नोंथाङा सिगांनिफ्रायनो बाहायो। नोंथांनि बुकमार्क, हिस्ट्री, सेभ खालामनाय पासवार्ड आरो टेबफोरा जेरै दं, बेयैनो थागोन।</string>
     <string name="default_explain">Android आ LinkGuard खौ नोंथांनि “ब्राउजार एप” होन्नानै बुङोन। बेयो खालि LinkGuard आ लिंकखौ सिगाङाव नुनो हानो थाखायनो। लिंक मोनफ्रोमा बेबादिबो %1$s आवनो खेवजागोन।</string>
 
     <string name="default_heading">आगान 1: LinkGuard खौ नोंथांनि डिफल्ट ब्राउजार बानाय</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">बेनि गोनां मानो</string>
     <string name="how_why_body">WhatsApp आरो SMS आव थगनाय मेसेजफोराव बांसिन समाव थार बादि नुजानाय लिंक थायो: नकल बेंक पेज, “KYC आपडेट” फर्म एबा रां चुरि खालामग्रा एप। मोनसे टेपनिफ्रायनो खहा जानो हायो, आरो नकल वेब थिखानाखौ सिनायनो गोब्राब जानो हायो।</string>
     <string name="how_where_title">LinkGuard आ बबेआव थायो</string>
-    <string name="how_where_body">LinkGuard आ नोंथाङा टेप खालामनाय लिंक आरो नोंथांनि ब्राउजारनि गेजेराव थायो। बेयो लिंकखौ गोख्रोङै नायसंयो, बेनि उनाव बेखौ %1$s आव खेवो। बेयो गावनो जेब्लाबो वेब पेज दिन्थिया।</string>
+    <string name="how_where_body">LinkGuard आ नोंथाङा टेप खालामनाय लिंक आरो नोंथांनि ब्राउजारनि गेजेराव थायो। बेयो लिंकखौ गोख्रोङै नायसंयो, बेनि उनाव बेखौ %1$s आव खेवो। बेयो वेबसाइटफोर नायबाय थांनायनि थाखाय नङा।</string>
     <string name="how_safe_title">सुरक्षित लिंकफोरा गोख्रोङै खेवजायो</string>
     <string name="how_safe_body">मुंदांखा आरो आफिसियाल वेबसाइटफोरा, जेरै सोरकारि (.gov.in) आरो बेंकनि वेबसाइटफोरा, गोख्रोङै खेवजायो। लिंकआ मोजां नुजायोब्ला, नोंथाङा माबो नुया।</string>
     <string name="how_scam_title">थगनाय लिंकखौ सिनायनाय</string>
@@ -193,4 +193,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">खोनासं</string>
     <string name="listen_stop">थाद</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">खेवनो नाङा, खालि नाय</string>
+    <string name="look_hint">बे मोनसे पेजखौ खालि लक खालामनाय मोनसे जायगायाव दिन्थियो। नोंथाङा लिरनाय माबो हरनो हाया, आरो मिनिट मोनसेनि उनाव बेयो गावनो बन्द जायो।</string>
+    <string name="look_banner">सुरक्षितै नायगासिनो दं। बेयाव नोंथाङा लिरनाय माबो हरनाय जाया।</string>
+    <string name="look_blocked">LinkGuard आ बे पेजखौ गुबुन माबो खेवनो होआखै।</string>
+    <string name="look_failed">पेजखौ दिन्थिनो हायाखै। नोंथांनि इन्टारनेट कानेक्सनखौ नायसं आरो फिन नाजा।</string>
 </resources>

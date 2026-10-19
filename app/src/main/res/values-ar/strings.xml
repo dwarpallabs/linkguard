@@ -9,7 +9,7 @@
     <string name="flow_link">رابطك</string>
     <string name="flow_check">LinkGuard يفحصه</string>
     <string name="not_a_browser_title">LinkGuard ليس متصفحًا</string>
-    <string name="not_a_browser_body">LinkGuard لا يعرض صفحات الإنترنت أبدًا. يفحص كل رابط في لحظة، ثم يفتحه في %1$s، المتصفح الذي تستخدمه الآن. مواقعك المحفوظة وسجل التصفح وكلمات المرور المحفوظة وعلامات التبويب تبقى كما هي تمامًا.</string>
+    <string name="not_a_browser_body">LinkGuard ليس للتصفح. يفحص كل رابط في لحظة، ثم يفتحه في %1$s، المتصفح الذي تستخدمه الآن. مواقعك المحفوظة وسجل التصفح وكلمات المرور المحفوظة وعلامات التبويب تبقى كما هي تمامًا.</string>
     <string name="default_explain">سيسمّي Android تطبيق LinkGuard «تطبيق المتصفح» لديك. هذا فقط لكي يرى LinkGuard الروابط أولًا. كل رابط سيُفتح كالعادة في %1$s.</string>
 
     <string name="default_heading">الخطوة 1: اجعل LinkGuard متصفحك الافتراضي</string>
@@ -41,7 +41,7 @@
     <string name="how_why_title">لماذا تحتاج إليه</string>
     <string name="how_why_body">رسائل الاحتيال على WhatsApp و SMS تحمل غالبًا روابط تبدو حقيقية: صفحة بنك مزيّفة، أو نموذج «تحديث KYC»، أو تطبيق يسرق المال. ضغطة واحدة تكفي ليحدث الضرر، وقد يصعب كشف عنوان الموقع المزيّف.</string>
     <string name="how_where_title">أين يعمل LinkGuard</string>
-    <string name="how_where_body">يقف LinkGuard بين الرابط الذي تضغط عليه ومتصفحك. يفحص الرابط في لحظة، ثم يفتحه في %1$s. لا يعرض صفحات الإنترنت بنفسه أبدًا.</string>
+    <string name="how_where_body">يقف LinkGuard بين الرابط الذي تضغط عليه ومتصفحك. يفحص الرابط في لحظة، ثم يفتحه في %1$s. وهو ليس للتصفح.</string>
     <string name="how_safe_title">الروابط الآمنة تُفتح فورًا</string>
     <string name="how_safe_body">المواقع المعروفة والمواقع الرسمية، مثل مواقع الحكومة (.gov.in) ومواقع البنوك، تُفتح مباشرة. إذا بدا الرابط سليمًا، فلن ترى أي شيء.</string>
     <string name="how_scam_title">كشف روابط الاحتيال</string>
@@ -217,4 +217,11 @@
     <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
     <string name="listen">استمع</string>
     <string name="listen_stop">إيقاف</string>
+
+    <!-- "Look without opening" (roadmap B5). -->
+    <string name="look_button">ألقِ نظرة دون فتح</string>
+    <string name="look_hint">يعرض هذه الصفحة وحدها في عرض مقفل. لا يمكن إرسال أي شيء تكتبه، ويُغلق بعد دقيقة.</string>
+    <string name="look_banner">أنت تنظر بأمان. لا يُرسَل أي شيء تكتبه هنا.</string>
+    <string name="look_blocked">منع LinkGuard هذه الصفحة من فتح شيء آخر.</string>
+    <string name="look_failed">تعذّر عرض الصفحة. تأكّد من اتصالك بالإنترنت وحاول مرة أخرى.</string>
 </resources>
