@@ -191,4 +191,8 @@
     <string name="cap_device_admin">ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱞᱚᱠ, ᱥᱮ ᱮᱯ ᱚᱪᱚᱜ ᱠᱷᱚᱱ ᱟᱢ ᱟᱴᱠᱟᱣ</string>
     <string name="cap_contacts">ᱟᱢᱟᱜ ᱠᱚᱱᱴᱮᱠᱴ ᱠᱚ ᱯᱟᱲᱦᱟᱣ</string>
     <string name="cap_calls">ᱟᱢᱟᱜ ᱠᱚᱞ ᱞᱤᱥᱴᱤ ᱯᱟᱲᱦᱟᱣ ᱥᱮ ᱯᱷᱚᱱ ᱠᱚᱞ ᱠᱚ ᱠᱩᱞ</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">ᱟᱧᱡᱚᱢ ᱢᱮ</string>
+    <string name="listen_stop">ᱛᱤᱝᱜᱩ ᱢᱮ</string>
 </resources>

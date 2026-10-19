@@ -189,4 +189,8 @@
     <string name="cap_device_admin">আপোনাৰ ফোন লক কৰি দিয়া, বা আপোনাক এপটো আঁতৰাবলৈ নিদিয়া</string>
     <string name="cap_contacts">আপোনাৰ কণ্টেক্ট পঢ়া</string>
     <string name="cap_calls">আপোনাৰ কলৰ তালিকা চোৱা বা ফোন কৰা</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">শুনক</string>
+    <string name="listen_stop">ৰখাওক</string>
 </resources>

@@ -24,6 +24,8 @@ import com.dwarpallabs.linkguard.core.Verdict
 import com.dwarpallabs.linkguard.ui.CheckingCard
 import com.dwarpallabs.linkguard.ui.InterstitialModel
 import com.dwarpallabs.linkguard.ui.InterstitialScreen
+import com.dwarpallabs.linkguard.ui.rememberWarningSpeaker
+
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 import kotlinx.coroutines.launch
 
@@ -87,6 +89,7 @@ class LinkInterceptActivity : ComponentActivity() {
                         apkCheck = viewModel.apkCheck.collectAsState().value,
                         onCheckApk = { viewModel.checkApk(s.verdict) },
                         onStopApk = viewModel::stopApkCheck,
+                        speaker = rememberWarningSpeaker(),
 
                     )
                 }

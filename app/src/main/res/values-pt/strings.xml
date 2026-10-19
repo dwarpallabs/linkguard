@@ -195,4 +195,8 @@
     <string name="cap_device_admin">Bloquear seu celular ou impedir que você remova o app</string>
     <string name="cap_contacts">Ler seus contatos</string>
     <string name="cap_calls">Ler seu histórico de chamadas ou fazer chamadas</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">Ouvir</string>
+    <string name="listen_stop">Parar</string>
 </resources>

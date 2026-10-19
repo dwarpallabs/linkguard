@@ -195,4 +195,8 @@
     <string name="cap_device_admin">Verrouiller votre téléphone ou vous empêcher de supprimer l’application</string>
     <string name="cap_contacts">Lire vos contacts</string>
     <string name="cap_calls">Lire votre historique d’appels ou passer des appels</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">Écouter</string>
+    <string name="listen_stop">Arrêter</string>
 </resources>

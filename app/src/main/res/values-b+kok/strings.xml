@@ -188,4 +188,8 @@
     <string name="cap_device_admin">तुमचो फोन लॉक करप वा ॲप काडपाक तुमकां आडावप</string>
     <string name="cap_contacts">तुमचे कॉन्टॅक्ट वाचप</string>
     <string name="cap_calls">तुमची कॉल हिस्ट्री वाचप वा कॉल करप</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">आयकात</string>
+    <string name="listen_stop">रावयात</string>
 </resources>

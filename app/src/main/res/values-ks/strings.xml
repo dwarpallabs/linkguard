@@ -189,4 +189,8 @@
     <string name="cap_device_admin">تُہٕنٛد فون لاک کرُن یا تۄہہِ یہِ ایپ ہٹاونہٕ نِشہِ رۄکُن</string>
     <string name="cap_contacts">تُہٕنٛدۍ کانٹیکٹ پرٕنۍ</string>
     <string name="cap_calls">تُہٕنٛز کال ہسٹری پرٕنۍ یا کال کرٕنۍ</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">بوزِو</string>
+    <string name="listen_stop">رۄکِو</string>
 </resources>

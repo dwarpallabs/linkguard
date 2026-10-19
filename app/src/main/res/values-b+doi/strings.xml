@@ -189,4 +189,8 @@
     <string name="cap_device_admin">तुंदा फोन लॉक करना जां तुसेंगी ऐप हटाने थमां रोकना</string>
     <string name="cap_contacts">तुंदे कॉन्टैक्ट पढ़ना</string>
     <string name="cap_calls">तुंदी कॉल हिस्ट्री पढ़ना जां कॉल करना</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">सुनो</string>
+    <string name="listen_stop">रोको</string>
 </resources>

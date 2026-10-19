@@ -183,4 +183,8 @@
     <string name="cap_device_admin">锁住您的手机，或不让您删除这个应用</string>
     <string name="cap_contacts">读取您的联系人</string>
     <string name="cap_calls">读取您的通话记录或拨打电话</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">朗读</string>
+    <string name="listen_stop">停止</string>
 </resources>

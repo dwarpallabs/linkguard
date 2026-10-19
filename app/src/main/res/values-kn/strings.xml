@@ -189,4 +189,8 @@
     <string name="cap_device_admin">ನಿಮ್ಮ ಫೋನ್ ಲಾಕ್ ಮಾಡಬಹುದು ಅಥವಾ ನೀವು ಆ್ಯಪ್ ತೆಗೆಯದಂತೆ ತಡೆಯಬಹುದು</string>
     <string name="cap_contacts">ನಿಮ್ಮ ಕಾಂಟ್ಯಾಕ್ಟ್‌ಗಳನ್ನು ಓದಬಹುದು</string>
     <string name="cap_calls">ನಿಮ್ಮ ಕಾಲ್ ಹಿಸ್ಟರಿ ಓದಬಹುದು ಅಥವಾ ಕಾಲ್ ಮಾಡಬಹುದು</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">ಆಲಿಸಿ</string>
+    <string name="listen_stop">ನಿಲ್ಲಿಸಿ</string>
 </resources>

@@ -187,4 +187,8 @@
     <string name="cap_device_admin">अहाँक फोन लॉक करब वा अहाँकेँ ऐप हटाबऽ सँ रोकब</string>
     <string name="cap_contacts">अहाँक कॉन्टैक्ट पढ़ब</string>
     <string name="cap_calls">अहाँक कॉल हिस्ट्री पढ़ब वा कॉल करब</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">सुनू</string>
+    <string name="listen_stop">रोकू</string>
 </resources>

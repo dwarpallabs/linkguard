@@ -213,4 +213,8 @@
     <string name="cap_device_admin">قفل هاتفك أو منعك من حذف التطبيق</string>
     <string name="cap_contacts">قراءة جهات الاتصال لديك</string>
     <string name="cap_calls">قراءة سجل مكالماتك أو إجراء مكالمات</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">استمع</string>
+    <string name="listen_stop">إيقاف</string>
 </resources>
