@@ -104,4 +104,18 @@
         <item quantity="other">یہِ ویب سایٹ آیہٕ %d دۄہ برونٛہہ بناونہٕ۔ دوکھہٕ باز ویب سایٹ چھِ اکثر بِلکُل نٔوۍ آسان۔</item>
     </plurals>
     <string name="warn_generic">LinkGuard یس میوٗل یمہِ لِنکس منٛز کہِنٛہہ عجیب۔</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">کیا یَتھ دوکھہٕ سٕندِ طور شکایت کرَو؟</string>
+    <string name="report_confirm_body">صِرف ویب سایٹُک ناو چھُ سوزنہٕ یِوان، پوٗرٕ لِنک یا تُہٕنٛدۍ میسج زانٛہہ تہِ نہٕ۔</string>
+    <string name="report_confirm_send">شکایت کٔرِو</string>
+    <string name="action_close">بنٛد کٔرِو</string>
+    <string name="report_thanks">شُکریہ۔ تُہٕنٛز شکایت چھےٚ بیٚیَن لُکَن خبردار کرنَس مَدد کران۔</string>
+    <string name="scam_check_title">کیا سُہ لِنک اوس دوکھہٕ؟</string>
+    <string name="scam_check_body">LinkGuard ہِنٛدِ خبردار کرنہٕ پَتہٕ تہِ کوٚر تۄہہِ %2$s پیٚٹھ %1$s کھولُن۔</string>
+    <string name="scam_check_yes">آ، سُہ اوس دوکھہٕ</string>
+    <string name="scam_check_no">نہ، سُہ اوس ٹھیک</string>
+    <string name="scam_check_unsure">پَکٕ پاٹھۍ چھُم نہٕ پتہٕ</string>
 </resources>

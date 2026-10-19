@@ -20,6 +20,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -45,7 +53,8 @@ import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
 /**
  * The one warning screen. "Go back" is primary; "Open anyway" is always present (never block).
- * "Report this link" sends the link to Dwarpal Labs on one tap; [report] shows how that went.
+ * "Report this link" asks once in a sheet, then sends the website's name to Dwarpal Labs;
+ * [report] shows how that went.
  */
 @Composable
 fun InterstitialScreen(
@@ -100,16 +109,24 @@ fun InterstitialScreen(
 }
 
 /**
- * A text button under "Open anyway". One tap sends; the outcome stays inline, never a toast, which
- * slow readers would miss. After a failure the button comes back so the user can retry. The result
- * lines are plain ink: safe/caution/danger colours are reserved for what the link itself is.
+ * A text button under "Open anyway". It opens a sheet that says what is sent; only Report there
+ * sends. The outcome stays inline, never a toast, which slow readers would miss. After a failure
+ * the button comes back so the user can retry. The result lines are plain ink: safe/caution/danger
+ * colours are reserved for what the link itself is.
  */
 @Composable
 private fun ReportBlock(status: ReportStatus, onReport: () -> Unit) {
+    var confirming by rememberSaveable { mutableStateOf(false) }
+    if (confirming) {
+        ReportConfirmSheet(
+            onReport = { confirming = false; onReport() },
+            onClose = { confirming = false },
+        )
+    }
     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
         when (status) {
             ReportStatus.SENT -> Text(
-                stringResource(R.string.report_sent),
+                stringResource(R.string.report_thanks),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurface,
                 textAlign = TextAlign.Center,
@@ -127,7 +144,8 @@ private fun ReportBlock(status: ReportStatus, onReport: () -> Unit) {
                 }
                 TextButton(
                     stringResource(if (status == ReportStatus.SENDING) R.string.report_sending else R.string.interstitial_report),
-                    onClick = onReport,
+                    onClick = { confirming = true },
+
                     enabled = status != ReportStatus.SENDING,
                     modifier = Modifier.testTag("report"),
                 )
@@ -138,6 +156,43 @@ private fun ReportBlock(status: ReportStatus, onReport: () -> Unit) {
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth(),
                 )
+            }
+        }
+    }
+}
+
+/**
+ * Asks once before a report is sent and says exactly what leaves the phone. Report sends; Close or
+ * the back gesture closes the sheet and sends nothing. Bottom-sheet radius from the design system.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ReportConfirmSheet(onReport: () -> Unit, onClose: () -> Unit) {
+    ModalBottomSheet(
+        onDismissRequest = onClose,
+        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp),
+        containerColor = MaterialTheme.colorScheme.background,
+        modifier = Modifier.testTag("report_sheet"),
+    ) {
+        Column(
+            modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 32.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            Text(
+                stringResource(R.string.report_confirm_title),
+                style = MaterialTheme.typography.titleLarge,
+                color = MaterialTheme.colorScheme.onSurface,
+                modifier = Modifier.testTag("report_sheet_title"),
+            )
+            Text(
+                stringResource(R.string.report_confirm_body),
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                PrimaryButton(stringResource(R.string.report_confirm_send), onReport, Modifier.testTag("report_confirm"))
+                TextButton(stringResource(R.string.action_close), onClose, Modifier.testTag("report_close"))
             }
         }
     }

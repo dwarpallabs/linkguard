@@ -102,4 +102,18 @@
         <item quantity="other">ꯋꯦꯕꯁꯥꯏꯠ ꯑꯁꯤ ꯅꯨꯃꯤꯠ %d ꯃꯃꯥꯡꯗ ꯁꯦꯃꯈꯤꯕꯅꯤ꯫ ꯃꯤꯅꯝꯕ ꯋꯦꯕꯁꯥꯏꯠꯁꯤꯡ ꯑꯌꯥꯝꯕ ꯃꯇꯃꯗ ꯍꯧꯖꯤꯛ ꯁꯦꯝꯂꯕ ꯑꯅꯧꯕꯅꯤ꯫</item>
     </plurals>
     <string name="warn_generic">LinkGuard ꯅ ꯂꯤꯡꯛ ꯑꯁꯤꯗ ꯇꯣꯉꯥꯟꯕ ꯈꯔ ꯐꯪꯂꯦ꯫</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">ꯃꯁꯤ ꯃꯤꯅꯝꯕ ꯑꯣꯏꯅ ꯔꯤꯄꯣꯔꯠ ꯇꯧꯒꯗ꯭ꯔꯥ?</string>
+    <string name="report_confirm_body">ꯋꯦꯕꯁꯥꯏꯠꯀꯤ ꯃꯤꯡ ꯈꯛꯇꯃꯛ ꯊꯥꯏ, ꯃꯄꯨꯡ ꯐꯥꯕ ꯂꯤꯡꯛ ꯅꯠꯔꯒ ꯅꯍꯥꯛꯀꯤ ꯃꯦꯁꯦꯖ ꯀꯩꯗꯧꯉꯩꯗꯁꯨ ꯊꯥꯗꯦ꯫</string>
+    <string name="report_confirm_send">ꯔꯤꯄꯣꯔꯠ ꯇꯧꯕꯤꯌꯨ</string>
+    <string name="action_close">ꯊꯤꯡꯖꯤꯜꯂꯨ</string>
+    <string name="report_thanks">ꯊꯥꯒꯠꯆꯔꯤ꯫ ꯅꯍꯥꯛꯀꯤ ꯔꯤꯄꯣꯔꯠꯅ ꯑꯇꯣꯞꯄ ꯃꯤꯁꯤꯡꯗ ꯆꯦꯛꯁꯤꯟ ꯋꯥ ꯍꯥꯌꯕꯗ ꯃꯇꯦꯡ ꯄꯥꯡꯏ꯫</string>
+    <string name="scam_check_title">ꯂꯤꯡꯛ ꯑꯗꯨ ꯃꯤꯅꯝꯕ ꯑꯣꯏꯔꯝꯕꯔꯥ?</string>
+    <string name="scam_check_body">LinkGuard ꯅ ꯆꯦꯛꯁꯤꯟ ꯋꯥ ꯍꯥꯌꯔꯕ ꯃꯇꯨꯡꯗ ꯅꯍꯥꯛꯅ %2$s ꯗ %1$s ꯍꯥꯡꯗꯣꯛꯈꯤ꯫</string>
+    <string name="scam_check_yes">ꯍꯣꯌ, ꯃꯤꯅꯝꯕ ꯑꯣꯏꯔꯝꯃꯤ</string>
+    <string name="scam_check_no">ꯅꯠꯇꯦ, ꯐꯔꯝꯃꯤ</string>
+    <string name="scam_check_unsure">ꯁꯣꯏꯗꯅ ꯈꯉꯗꯦ</string>
 </resources>

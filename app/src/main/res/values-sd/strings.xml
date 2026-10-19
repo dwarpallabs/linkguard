@@ -104,4 +104,18 @@
         <item quantity="other">هي ويب سائيٽ %d ڏينهن اڳ ٺهي آهي. ٺڳيءَ واريون ويب سائيٽون اڪثر بلڪل نيون هونديون آهن.</item>
     </plurals>
     <string name="warn_generic">LinkGuard کي هن لنڪ ۾ ڪجهه عجيب مليو.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">ڇا هن جي ٺڳي طور شڪايت ڪجي؟</string>
+    <string name="report_confirm_body">رڳو ويب سائيٽ جو نالو موڪليو وڃي ٿو، پوري لنڪ يا توهان جا ميسيج ڪڏهن به نه.</string>
+    <string name="report_confirm_send">شڪايت ڪريو</string>
+    <string name="action_close">بند ڪريو</string>
+    <string name="report_thanks">مهرباني. توهان جي شڪايت ٻين ماڻهن کي خبردار ڪرڻ ۾ مدد ڪري ٿي.</string>
+    <string name="scam_check_title">ڇا اها لنڪ ٺڳي هئي؟</string>
+    <string name="scam_check_body">LinkGuard جي خبرداري کانپوءِ به توهان %2$s تي %1$s کولي.</string>
+    <string name="scam_check_yes">ها، اها ٺڳي هئي</string>
+    <string name="scam_check_no">نه، اها ٺيڪ هئي</string>
+    <string name="scam_check_unsure">پڪ ناهي</string>
 </resources>

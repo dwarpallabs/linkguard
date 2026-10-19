@@ -104,4 +104,18 @@
         <item quantity="other">یہ ویب سائٹ %d دن پہلے بنی ہے۔ دھوکے والی ویب سائٹیں اکثر بالکل نئی ہوتی ہیں۔</item>
     </plurals>
     <string name="warn_generic">LinkGuard کو اس لنک میں کچھ عجیب ملا۔</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">کیا اس کی دھوکے کے طور پر شکایت کریں؟</string>
+    <string name="report_confirm_body">صرف ویب سائٹ کا نام بھیجا جاتا ہے، پورا لنک یا آپ کے میسج کبھی نہیں۔</string>
+    <string name="report_confirm_send">شکایت کریں</string>
+    <string name="action_close">بند کریں</string>
+    <string name="report_thanks">شکریہ۔ آپ کی شکایت سے دوسرے لوگوں کو خبردار کرنے میں مدد ملتی ہے۔</string>
+    <string name="scam_check_title">کیا وہ لنک دھوکہ تھا؟</string>
+    <string name="scam_check_body">LinkGuard کی وارننگ کے بعد بھی آپ نے %2$s کو %1$s کھولی۔</string>
+    <string name="scam_check_yes">ہاں، وہ دھوکہ تھا</string>
+    <string name="scam_check_no">نہیں، وہ ٹھیک تھا</string>
+    <string name="scam_check_unsure">پکا نہیں پتا</string>
 </resources>

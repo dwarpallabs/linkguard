@@ -103,4 +103,18 @@
         <item quantity="other">ही वेबसायट %d दिसां आदीं तयार जाल्या. फटोवणेच्यो वेबसायटी चड करून एकदम नव्यो आसतात.</item>
     </plurals>
     <string name="warn_generic">LinkGuard क ह्या लिंकांत कितें तरी असामान्य मेळ्ळें.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">हाची फटोवणे म्हूण तक्रार करूंक जाय?</string>
+    <string name="report_confirm_body">फकत वेबसायटीचें नांव धाडटात, पुराय लिंक वा तुमचे मेसेज केन्नाच ना.</string>
+    <string name="report_confirm_send">तक्रार करात</string>
+    <string name="action_close">बंद करात</string>
+    <string name="report_thanks">देव बरें करूं. तुमची तक्रार हेरांक शिटकावणी दिवपाक मदत करता.</string>
+    <string name="scam_check_title">ती लिंक फटोवणेची आशिल्लीगी?</string>
+    <string name="scam_check_body">LinkGuard न शिटकावणी दिल्या उपरांतूय तुमी %2$s दिसा %1$s उगडली.</string>
+    <string name="scam_check_yes">हय, ती फटोवणेची आशिल्ली</string>
+    <string name="scam_check_no">ना, ती बरी आशिल्ली</string>
+    <string name="scam_check_unsure">खात्री ना</string>
 </resources>

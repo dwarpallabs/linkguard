@@ -104,4 +104,18 @@
         <item quantity="other">এই ৱেবছাইটটো %d দিন আগতে বনোৱা হৈছে। প্ৰতাৰণাৰ ৱেবছাইট প্ৰায়ে একেবাৰে নতুন হয়।</item>
     </plurals>
     <string name="warn_generic">LinkGuard-এ এই লিংকটোত কিবা অস্বাভাৱিক কথা পাইছে।</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">ইয়াক প্ৰতাৰণা বুলি ৰিপ’ৰ্ট কৰিবনে?</string>
+    <string name="report_confirm_body">কেৱল ৱেবছাইটৰ নামটোহে পঠিওৱা হয়, গোটেই লিংক বা আপোনাৰ মেছেজ কেতিয়াও নহয়।</string>
+    <string name="report_confirm_send">ৰিপ’ৰ্ট কৰক</string>
+    <string name="action_close">বন্ধ কৰক</string>
+    <string name="report_thanks">ধন্যবাদ। আপোনাৰ ৰিপ’ৰ্টে আনক সতৰ্ক কৰাত সহায় কৰে।</string>
+    <string name="scam_check_title">সেই লিংকটো প্ৰতাৰণা আছিল নেকি?</string>
+    <string name="scam_check_body">LinkGuard-এ সতৰ্ক কৰাৰ পিছতো আপুনি %2$s তাৰিখে %1$s খুলিছিল।</string>
+    <string name="scam_check_yes">হয়, প্ৰতাৰণা আছিল</string>
+    <string name="scam_check_no">নহয়, ঠিকেই আছিল</string>
+    <string name="scam_check_unsure">নিশ্চিত নহয়</string>
 </resources>

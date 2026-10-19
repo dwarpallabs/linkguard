@@ -104,4 +104,18 @@
         <item quantity="other">बे वेबसाइटखौ %d सान सिगाङाव बानायनाय जादों। थगग्रा वेबसाइटफोरा बांसिन समाव जोबोद गोदान जायो।</item>
     </plurals>
     <string name="warn_generic">LinkGuard आ बे लिंकआव माबा गुबुन बादिनि मोनबाय।</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">बेखौ थगनाय महरै नालिस खालामनो नामा?</string>
+    <string name="report_confirm_body">खालि वेबसाइटनि मुंखौ हरनाय जायो, गासै लिंक एबा नोंथांनि मेसेजखौ जेब्लाबो हरनाय जाया।</string>
+    <string name="report_confirm_send">नालिस खालाम</string>
+    <string name="action_close">बन्द खालाम</string>
+    <string name="report_thanks">साबायखर। नोंथांनि नालिसआ गुबुन सुबुंखौ सावगारि होनो मदद होयो।</string>
+    <string name="scam_check_title">बै लिंकआ थगनाय जादोंमा?</string>
+    <string name="scam_check_body">LinkGuard आ सावगारि होनायनि उनावबो नोंथाङा %2$s आव %1$s खेवखांदों।</string>
+    <string name="scam_check_yes">नंगौ, बेयो थगनाय जादोंमोन</string>
+    <string name="scam_check_no">नङा, बेयो मोजां जादोंमोन</string>
+    <string name="scam_check_unsure">थारैनो मिथिया</string>
 </resources>

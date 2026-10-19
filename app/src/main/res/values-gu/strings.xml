@@ -105,4 +105,18 @@
         <item quantity="other">આ વેબસાઇટ %d દિવસ પહેલાં બની છે. છેતરપિંડીવાળી વેબસાઇટ ઘણી વાર એકદમ નવી હોય છે.</item>
     </plurals>
     <string name="warn_generic">LinkGuard ને આ લિંકમાં કંઈક અસામાન્ય મળ્યું.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">આને છેતરપિંડી તરીકે ફરિયાદ કરવી છે?</string>
+    <string name="report_confirm_body">ફક્ત વેબસાઇટનું નામ મોકલાય છે, આખી લિંક કે તમારા મેસેજ ક્યારેય નહીં.</string>
+    <string name="report_confirm_send">ફરિયાદ કરો</string>
+    <string name="action_close">બંધ કરો</string>
+    <string name="report_thanks">આભાર. તમારી ફરિયાદ બીજા લોકોને ચેતવવામાં મદદ કરે છે.</string>
+    <string name="scam_check_title">શું તે લિંક છેતરપિંડી હતી?</string>
+    <string name="scam_check_body">LinkGuardએ ચેતવણી આપી પછી પણ તમે %2$s ના રોજ %1$s ખોલી હતી.</string>
+    <string name="scam_check_yes">હા, તે છેતરપિંડી હતી</string>
+    <string name="scam_check_no">ના, તે બરાબર હતી</string>
+    <string name="scam_check_unsure">ખાતરી નથી</string>
 </resources>

@@ -99,4 +99,18 @@
         <item quantity="other">இந்த இணையதளம் %d நாட்களுக்கு முன்பு உருவாக்கப்பட்டது. மோசடி இணையதளங்கள் பெரும்பாலும் புத்தம் புதியவை.</item>
     </plurals>
     <string name="warn_generic">இந்த இணைப்பில் LinkGuard வழக்கத்துக்கு மாறான ஒன்றைக் கண்டறிந்தது.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">இதை மோசடி என்று புகாரளிக்கவா?</string>
+    <string name="report_confirm_body">இணையதளத்தின் பெயர் மட்டுமே அனுப்பப்படும், முழு இணைப்போ உங்கள் செய்திகளோ ஒருபோதும் அனுப்பப்படாது.</string>
+    <string name="report_confirm_send">புகாரளி</string>
+    <string name="action_close">மூடு</string>
+    <string name="report_thanks">நன்றி. உங்கள் புகார் மற்றவர்களை எச்சரிக்க உதவும்.</string>
+    <string name="scam_check_title">அந்த இணைப்பு மோசடியா?</string>
+    <string name="scam_check_body">LinkGuard எச்சரித்த பிறகும் %2$s அன்று %1$s ஐத் திறந்தீர்கள்.</string>
+    <string name="scam_check_yes">ஆம், அது மோசடி</string>
+    <string name="scam_check_no">இல்லை, அது சரியாக இருந்தது</string>
+    <string name="scam_check_unsure">உறுதியாகத் தெரியவில்லை</string>
 </resources>
