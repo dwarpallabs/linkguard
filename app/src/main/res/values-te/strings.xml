@@ -189,4 +189,8 @@
     <string name="cap_device_admin">మీ ఫోన్‌ను లాక్ చేయగలదు, లేదా మీరు యాప్‌ను తీసేయకుండా ఆపగలదు</string>
     <string name="cap_contacts">మీ కాంటాక్ట్‌లను చదవగలదు</string>
     <string name="cap_calls">మీ కాల్ హిస్టరీ చదవగలదు, లేదా కాల్స్ చేయగలదు</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">వినండి</string>
+    <string name="listen_stop">ఆపండి</string>
 </resources>

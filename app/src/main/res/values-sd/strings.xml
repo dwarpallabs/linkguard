@@ -189,4 +189,8 @@
     <string name="cap_device_admin">توهان جو فون لاڪ ڪرڻ يا توهان کي هي ايپ هٽائڻ کان روڪڻ</string>
     <string name="cap_contacts">توهان جا ڪانٽيڪٽ پڙهڻ</string>
     <string name="cap_calls">توهان جي ڪال هسٽري پڙهڻ يا ڪال ڪرڻ</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">ٻڌو</string>
+    <string name="listen_stop">روڪيو</string>
 </resources>

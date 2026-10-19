@@ -190,4 +190,8 @@
     <string name="cap_device_admin">Lock your phone or stop you from removing the app</string>
     <string name="cap_contacts">Read your contacts</string>
     <string name="cap_calls">Read your call history or make calls</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">Listen</string>
+    <string name="listen_stop">Stop</string>
 </resources>

@@ -188,4 +188,8 @@
     <string name="cap_device_admin">भवतः दूरवाणीं कीलयितुम्, ऐप् अपनेतुं भवन्तं निवारयितुं वा</string>
     <string name="cap_contacts">भवतः सम्पर्कान् पठितुम्</string>
     <string name="cap_calls">भवतः कॉल्-इतिहासं पठितुं, कॉल् कर्तुं वा</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">शृणोतु</string>
+    <string name="listen_stop">विरमतु</string>
 </resources>

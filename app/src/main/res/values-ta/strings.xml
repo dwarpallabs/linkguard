@@ -184,4 +184,8 @@
     <string name="cap_device_admin">உங்கள் ஃபோனைப் பூட்டலாம் அல்லது ஆப்பை நீக்க விடாமல் தடுக்கலாம்</string>
     <string name="cap_contacts">உங்கள் தொடர்புகளைப் படிக்கலாம்</string>
     <string name="cap_calls">உங்கள் அழைப்பு வரலாற்றைப் படிக்கலாம் அல்லது அழைப்புகள் செய்யலாம்</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">கேளுங்கள்</string>
+    <string name="listen_stop">நிறுத்து</string>
 </resources>

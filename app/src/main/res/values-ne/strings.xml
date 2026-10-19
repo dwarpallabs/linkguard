@@ -189,4 +189,8 @@
     <string name="cap_device_admin">तपाईंको फोन लक गर्ने वा तपाईंलाई एप हटाउन नदिने</string>
     <string name="cap_contacts">तपाईंका कन्ट्याक्ट पढ्ने</string>
     <string name="cap_calls">तपाईंको कल हिस्ट्री पढ्ने वा कल गर्ने</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">सुन्नुहोस्</string>
+    <string name="listen_stop">रोक्नुहोस्</string>
 </resources>

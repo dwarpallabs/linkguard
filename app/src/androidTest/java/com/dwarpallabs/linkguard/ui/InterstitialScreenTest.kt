@@ -14,6 +14,7 @@ import com.dwarpallabs.linkguard.R
 import com.dwarpallabs.linkguard.ui.InterstitialModel.Reason
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -68,6 +69,37 @@ class InterstitialScreenTest {
         show(InterstitialModel(true, null, null, Reason.Upi("SBI Refund", "refund@axl", "1", mandate = true, brand = "SBI")))
         compose.onNodeWithTag("upi_heading").performScrollTo().assertTextContains(res.getString(R.string.upi_asks_mandate))
         compose.onNodeWithTag("reason").assertTextContains(res.getString(R.string.warn_upi_brand, "SBI"))
+    }
+
+    private class FakeSpeaker(override var speaking: Boolean = false) : WarningSpeaker {
+        val said = mutableListOf<String>()
+        var stops = 0
+        override fun speak(text: String) { said += text }
+        override fun stop() { stops++ }
+    }
+
+    @Test
+    fun listenReadsTheTitleAndReason() {
+        val speaker = FakeSpeaker()
+        compose.setContent { LinkguardTheme { InterstitialScreen(brand, {}, {}, speaker = speaker) } }
+        compose.onNodeWithTag("listen").assertTextContains(res.getString(R.string.listen)).performClick()
+        assertEquals(1, speaker.said.size)
+        assertTrue(speaker.said[0].startsWith(res.getString(R.string.interstitial_title_strong)))
+        assertTrue(speaker.said[0].contains(res.getString(R.string.warn_brand_lookalike, "SBI")))
+    }
+
+    @Test
+    fun whileSpeakingTheButtonStops() {
+        val speaker = FakeSpeaker(speaking = true)
+        compose.setContent { LinkguardTheme { InterstitialScreen(brand, {}, {}, speaker = speaker) } }
+        compose.onNodeWithTag("listen").assertTextContains(res.getString(R.string.listen_stop)).performClick()
+        assertEquals(1, speaker.stops)
+    }
+
+    @Test
+    fun noVoiceNoButton() {
+        show(brand)
+        compose.onNodeWithTag("listen").assertDoesNotExist()
     }
 
     @Test

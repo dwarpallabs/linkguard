@@ -189,4 +189,8 @@
     <string name="cap_device_admin">नोंथांनि फोनखौ लक खालामनाय एबा एपखौ डिलिट खालामनायाव हेंथा होनाय</string>
     <string name="cap_contacts">नोंथांनि कन्टेक्टफोरखौ फरायनाय</string>
     <string name="cap_calls">नोंथांनि कल हिस्ट्रिखौ फरायनाय एबा कल खालामनाय</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">खोनासं</string>
+    <string name="listen_stop">थाद</string>
 </resources>

@@ -189,4 +189,8 @@
     <string name="cap_device_admin">ਤੁਹਾਡਾ ਫ਼ੋਨ ਲੌਕ ਕਰ ਸਕਦੀ ਹੈ ਜਾਂ ਤੁਹਾਨੂੰ ਐਪ ਹਟਾਉਣ ਤੋਂ ਰੋਕ ਸਕਦੀ ਹੈ</string>
     <string name="cap_contacts">ਤੁਹਾਡੇ ਸੰਪਰਕ ਪੜ੍ਹ ਸਕਦੀ ਹੈ</string>
     <string name="cap_calls">ਤੁਹਾਡੀ ਕਾਲ ਹਿਸਟਰੀ ਪੜ੍ਹ ਸਕਦੀ ਹੈ ਜਾਂ ਕਾਲ ਕਰ ਸਕਦੀ ਹੈ</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">ਸੁਣੋ</string>
+    <string name="listen_stop">ਰੋਕੋ</string>
 </resources>

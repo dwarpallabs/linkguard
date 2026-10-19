@@ -93,7 +93,18 @@ object LineIcons {
     }
 
     /** Forward arrow; mirrors in right-to-left languages. */
+    /** A speaker with sound waves: "Listen" on the warning screen. */
+    val Speaker: ImageVector = icon("Speaker") {
+        stroked {
+            moveTo(4f, 9.5f); horizontalLineTo(7.5f); lineTo(12f, 5.5f); verticalLineTo(18.5f)
+            lineTo(7.5f, 14.5f); horizontalLineTo(4f); close()
+            moveTo(15.5f, 9f); curveTo(16.5f, 10f, 16.5f, 14f, 15.5f, 15f)
+            moveTo(18.5f, 6.5f); curveTo(21f, 9f, 21f, 15f, 18.5f, 17.5f)
+        }
+    }
+
     val Arrow: ImageVector = icon("Arrow", autoMirror = true) {
+
         stroked {
             moveTo(5f, 12f); horizontalLineTo(19f)
             moveTo(13f, 6f); lineTo(19f, 12f); lineTo(13f, 18f)

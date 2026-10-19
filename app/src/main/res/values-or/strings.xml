@@ -189,4 +189,8 @@
     <string name="cap_device_admin">ଆପଣଙ୍କ ଫୋନ ଲକ୍ କରିପାରେ କିମ୍ବା ଆପଣଙ୍କୁ ଆପ୍ ହଟାଇବାରୁ ରୋକିପାରେ</string>
     <string name="cap_contacts">ଆପଣଙ୍କ କଣ୍ଟାକ୍ଟ ପଢ଼ିପାରେ</string>
     <string name="cap_calls">ଆପଣଙ୍କ କଲ୍ ହିଷ୍ଟ୍ରି ପଢ଼ିପାରେ କିମ୍ବା କଲ୍ କରିପାରେ</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">ଶୁଣନ୍ତୁ</string>
+    <string name="listen_stop">ବନ୍ଦ କରନ୍ତୁ</string>
 </resources>

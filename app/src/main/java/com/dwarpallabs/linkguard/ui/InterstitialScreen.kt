@@ -8,9 +8,11 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
@@ -69,6 +71,8 @@ fun InterstitialScreen(
     apkCheck: ApkCheckUi = ApkCheckUi.Idle,
     onCheckApk: () -> Unit = {},
     onStopApk: () -> Unit = {},
+    /** "Listen" (roadmap B4): null hides it (TalkBack on, or no on-device voice for the language). */
+    speaker: WarningSpeaker? = null,
 ) {
     val status = LinkguardTheme.status
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -110,6 +114,16 @@ fun InterstitialScreen(
                     modifier = Modifier.testTag("context_sms"),
                 )
             }
+
+            speaker?.let { s ->
+                val spoken = listOfNotNull(
+                    stringResource(if (model.strong) R.string.interstitial_title_strong else R.string.interstitial_title_soft),
+                    reasonText(model.reason),
+                    if (fromSms) stringResource(R.string.warn_context_sms) else null,
+                ).joinToString(" ")
+                ListenButton(s.speaking) { if (s.speaking) s.stop() else s.speak(spoken) }
+            }
+
 
             if (model.reason is Reason.Upi) UpiDetails(model.reason)
 
@@ -405,4 +419,17 @@ internal fun capabilityText(cap: com.dwarpallabs.linkguard.ApkInspector.Capabili
     com.dwarpallabs.linkguard.ApkInspector.Capability.DEVICE_ADMIN -> R.string.cap_device_admin
     com.dwarpallabs.linkguard.ApkInspector.Capability.CONTACTS -> R.string.cap_contacts
     com.dwarpallabs.linkguard.ApkInspector.Capability.CALLS -> R.string.cap_calls
+}
+
+/** "Listen" with a speaker icon (never an icon alone); "Stop" while it is speaking. */
+@Composable
+internal fun ListenButton(speaking: Boolean, onClick: () -> Unit) {
+    androidx.compose.material3.TextButton(
+        onClick = onClick,
+        modifier = Modifier.heightIn(min = 48.dp).testTag("listen"),
+    ) {
+        androidx.compose.material3.Icon(com.dwarpallabs.linkguard.ui.components.LineIcons.Speaker, contentDescription = null, modifier = Modifier.size(24.dp))
+        Spacer(Modifier.width(8.dp))
+        Text(stringResource(if (speaking) R.string.listen_stop else R.string.listen), style = MaterialTheme.typography.labelLarge)
+    }
 }

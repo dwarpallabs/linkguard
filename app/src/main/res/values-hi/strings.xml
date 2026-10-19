@@ -184,4 +184,8 @@
     <string name="cap_device_admin">आपका फ़ोन लॉक करना या आपको ऐप हटाने से रोकना</string>
     <string name="cap_contacts">आपके कॉन्टैक्ट पढ़ना</string>
     <string name="cap_calls">आपकी कॉल हिस्ट्री पढ़ना या कॉल करना</string>
+
+    <!-- "Listen" on the warning screen reads the warning aloud (roadmap B4); "Stop" while speaking. -->
+    <string name="listen">सुनें</string>
+    <string name="listen_stop">रोकें</string>
 </resources>
