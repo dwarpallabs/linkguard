@@ -20,6 +20,9 @@ SCRIPTS = {
     "b+mai": "DEVANAGARI", "ml": "MALAYALAM", "b+mni": "MEETEI MAYEK", "mr": "DEVANAGARI",
     "ne": "DEVANAGARI", "or": "ORIYA", "pa": "GURMUKHI", "sa": "DEVANAGARI", "b+sat": "OL CHIKI",
     "sd": "ARABIC", "te": "TELUGU", "ur": "ARABIC",
+    # Global languages (roadmap G1). Latin-script ones are recognised by their accented letters.
+    "b+zh+Hans": "CJK", "es": "LATIN", "ar": "ARABIC", "fr": "LATIN", "pt": "LATIN",
+
 }
 PLACEHOLDER = re.compile(r"%(?:\d\$)?[sd]")
 

@@ -1,0 +1,159 @@
+<resources>
+    <!-- TODO: native review. Machine-drafted Brazilian Portuguese; must be checked by a native speaker before release. -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">O LinkGuard verifica os links antes de abrir</string>
+    <string name="onboarding_body">Quando você toca em um link no WhatsApp, no Telegram ou no SMS, o LinkGuard verifica o link primeiro. Links seguros abrem na hora no seu navegador. Se um link parecer golpe, você vai ver um aviso. Mesmo assim, você ainda pode escolher abrir.</string>
+    <string name="onboarding_privacy">O LinkGuard nunca guarda nem envia os links que você abre. Não precisa criar conta.</string>
+    <string name="your_browser">seu navegador</string>
+    <string name="flow_link">Seu link</string>
+    <string name="flow_check">O LinkGuard verifica</string>
+    <string name="not_a_browser_title">O LinkGuard não é um navegador</string>
+    <string name="not_a_browser_body">O LinkGuard nunca mostra páginas da internet. Ele verifica cada link num instante e depois abre o link no %1$s, o navegador que você já usa. Seus favoritos, histórico, senhas salvas e abas continuam do jeito que estão.</string>
+    <string name="default_explain">O Android vai chamar o LinkGuard de “app de navegador”. Isso é só para o LinkGuard ver os links primeiro. Todo link continua abrindo no %1$s.</string>
+
+    <string name="default_heading">Passo 1: Deixe o LinkGuard como navegador padrão</string>
+    <string name="default_done">O LinkGuard é o seu navegador padrão</string>
+    <string name="default_button">Definir como padrão</string>
+    <string name="default_hint">Se as configurações abrirem, toque em “App de navegador” e escolha o LinkGuard.</string>
+
+    <string name="browser_heading">Passo 2: Abrir os links no</string>
+    <string name="browser_none">Nenhum outro navegador foi encontrado. Instale um navegador, como o Chrome.</string>
+
+    <string name="telegram_tip">Apps como Telegram, Instagram, Facebook e LinkedIn muitas vezes abrem os links dentro do próprio app. Lá, o LinkGuard não consegue verificar. Para se proteger de links de golpe, desligue o navegador interno nas configurações desse app (no Telegram: Settings → Chat Settings → In-app browser). Ou toque em ⋮ e escolha “Abrir no navegador”.</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">O que o LinkGuard verifica</string>
+    <string name="check_unwrap">Seguir links curtos</string>
+    <string name="check_unwrap_desc">Pergunta a serviços como o bit.ly para onde um link curto leva de verdade.</string>
+    <string name="check_apk_download">Downloads de apps</string>
+    <string name="check_brand_lookalike">Sites falsos de bancos e marcas</string>
+    <string name="check_weird_host">Endereços de site estranhos</string>
+    <string name="check_reputation">Sites de golpe conhecidos</string>
+    <string name="check_domain_age">Sites criados há pouco tempo</string>
+    <string name="check_domain_age_desc">Pergunta ao registro oficial quando o site foi criado. Só o nome do site é enviado, nunca o link completo.</string>
+    <string name="check_upi_intent">Pedidos de pagamento UPI</string>
+
+    <string name="settings_report">Denunciar um link</string>
+    <string name="settings_report_desc">Conte para a gente sobre um link de golpe que o LinkGuard não pegou.</string>
+    <string name="how_title">Como o LinkGuard funciona</string>
+    <string name="how_desc">Por que você precisa dele e como ele decide sobre quais links avisar.</string>
+    <string name="how_why_title">Por que ele é importante</string>
+    <string name="how_why_body">Mensagens de golpe no WhatsApp e no SMS muitas vezes trazem links que parecem de verdade: uma página falsa de banco, um formulário de “atualização do KYC” ou um app que rouba dinheiro. Um toque já basta para causar estrago. E um endereço de site falso pode ser difícil de perceber.</string>
+    <string name="how_where_title">Onde o LinkGuard fica</string>
+    <string name="how_where_body">O LinkGuard fica entre o link que você toca e o seu navegador. Ele verifica o link num instante e depois abre no %1$s. Ele mesmo nunca mostra páginas da internet.</string>
+    <string name="how_safe_title">Links seguros abrem na hora</string>
+    <string name="how_safe_body">Sites muito conhecidos e sites oficiais, como os do governo (.gov.in) e de bancos, abrem na hora. Se um link parece normal, você não vê nada.</string>
+    <string name="how_scam_title">Como achar links de golpe</string>
+    <string name="how_scam_body">O LinkGuard procura os truques que os golpistas usam: sites que fingem ser um banco ou uma marca conhecida, downloads de apps fora da Play Store, pedidos de pagamento escondidos, sites criados há pouco tempo e endereços de site estranhos. Ele também confere uma lista de dezenas de milhares de sites de golpe e sites perigosos já conhecidos. Essa lista vem de grandes bancos de dados de segurança do mundo e é atualizada todo dia.</string>
+    <string name="how_community_title">Denúncias de outros usuários</string>
+    <string name="how_community_body">Quando vários usuários do LinkGuard denunciam o mesmo site como golpe, as outras pessoas recebem um aviso para ter cuidado.</string>
+    <string name="how_choice_title">Quem decide é sempre você</string>
+    <string name="how_choice_body">O LinkGuard nunca bloqueia um link. Todo aviso explica o problema com palavras simples e oferece “Abrir mesmo assim”. O LinkGuard nunca guarda os links que você abre.</string>
+    <string name="feedback_title">Tradução errada? Conte para a gente</string>
+    <string name="feedback_desc">O LinkGuard foi traduzido por máquina. Ajude a corrigir erros no seu idioma.</string>
+    <string name="feedback_intro">Os textos do LinkGuard neste idioma foram traduzidos por máquina e podem ter erros. Se algo parecer errado, conte para a gente quais palavras estão erradas e como você diria. Use o jeito mais fácil para você:</string>
+    <string name="feedback_email">Mandar um e-mail</string>
+    <string name="feedback_github">Avisar no GitHub</string>
+    <string name="feedback_github_desc">Precisa de uma conta grátis no GitHub.</string>
+    <string name="about_title">Sobre o LinkGuard</string>
+    <string name="about_desc">Versão, política de privacidade, código aberto e contato.</string>
+    <string name="about_version">Versão %1$s</string>
+    <string name="about_by">Feito pela Dwarpal Labs. O LinkGuard é independente e não tem ligação com nenhum banco, app de pagamento, transportadora ou órgão do governo.</string>
+    <string name="about_privacy">Política de privacidade</string>
+    <string name="about_privacy_desc">O que sai do seu celular, e por quê.</string>
+    <string name="about_source">Código aberto</string>
+    <string name="about_source_desc">Grátis, com a licença Apache-2.0. Qualquer pessoa pode verificar o código no GitHub.</string>
+    <string name="about_contact">Fale com a gente</string>
+    <string name="about_credits">Créditos</string>
+    <string name="about_credits_body">Sites de golpe: PhishDestroy. Sites perigosos: URLhaus, da abuse.ch. Sites populares: a lista Tranco. Nomes de sites: a Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">O link</string>
+    <string name="report_note_label">Por que você acha que é golpe? (opcional)</string>
+    <string name="report_private_info">Sua denúncia vai só para a Dwarpal Labs e nunca é publicada. Quando várias pessoas diferentes denunciam o mesmo site, os outros usuários do LinkGuard veem um aviso automaticamente. Ninguém consegue saber que a denúncia veio de você. Por favor, não coloque números de telefone, nomes ou outros dados pessoais.</string>
+    <string name="report_submit">Enviar denúncia</string>
+    <string name="report_sending">Enviando…</string>
+    <string name="report_sent">Obrigado. Sua denúncia foi enviada para análise.</string>
+    <string name="report_failed">Não foi possível enviar a denúncia. Veja se a sua internet está funcionando e tente de novo.</string>
+    <string name="back">Voltar</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">Este link pode ser um golpe</string>
+    <string name="interstitial_title_soft">Cuidado com este link</string>
+    <string name="interstitial_go_back">Voltar</string>
+    <string name="interstitial_open_anyway">Abrir mesmo assim</string>
+    <string name="interstitial_report">Denunciar este link</string>
+    <string name="interstitial_report_hint">Sem o seu nome. Ajuda a avisar outros usuários do LinkGuard.</string>
+    <string name="interstitial_checking">Verificando o link…</string>
+    <string name="interstitial_upi_heading">Pedido de pagamento UPI</string>
+    <string name="interstitial_upi_payee">Pagar para: %1$s</string>
+    <string name="interstitial_upi_amount">Valor: ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">Este link baixa um app de fora da Play Store. Apps falsos como esse podem ler suas mensagens e roubar os códigos OTP do banco.</string>
+    <string name="warn_brand_lookalike">Este site está fingindo ser %1$s. Este não é o site de verdade de %1$s.</string>
+    <string name="warn_upi_intent">Este link pede que você mande dinheiro por UPI. Você nunca precisa pagar para receber um reembolso, um prêmio ou uma atualização do KYC.</string>
+    <string name="warn_weird_host">Este link usa um endereço estranho, que empresas de verdade quase nunca usam.</string>
+    <string name="warn_weird_host_brand">Este link fala de %1$s, mas usa um endereço estranho que %1$s não usa.</string>
+    <string name="warn_reputation">Este site está numa lista de sites de golpe ou perigosos já conhecidos.</string>
+    <plurals name="warn_community">
+        <item quantity="one">Este link foi denunciado como golpe por %d usuário do LinkGuard esta semana.</item>
+        <item quantity="many">Este link foi denunciado como golpe por %d usuários do LinkGuard esta semana.</item>
+        <item quantity="other">Este link foi denunciado como golpe por %d usuários do LinkGuard esta semana.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">Este site foi criado há %d dia. Sites de golpe muitas vezes são bem novos.</item>
+        <item quantity="many">Este site foi criado há %d dias. Sites de golpe muitas vezes são bem novos.</item>
+        <item quantity="other">Este site foi criado há %d dias. Sites de golpe muitas vezes são bem novos.</item>
+    </plurals>
+    <string name="warn_generic">O LinkGuard achou algo estranho neste link.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 October".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">Denunciar isto como golpe?</string>
+    <string name="report_confirm_body">Só o nome do site é enviado, nunca o link completo nem as suas mensagens.</string>
+    <string name="report_confirm_send">Denunciar</string>
+    <string name="action_close">Fechar</string>
+    <string name="report_thanks">Obrigado. Sua denúncia ajuda a avisar outras pessoas.</string>
+    <string name="scam_check_title">Aquele link era golpe?</string>
+    <string name="scam_check_body">Você abriu %1$s em %2$s depois do aviso do LinkGuard.</string>
+    <string name="scam_check_yes">Sim, era golpe</string>
+    <string name="scam_check_no">Não, estava tudo bem</string>
+    <string name="scam_check_unsure">Não tenho certeza</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">Verificar no LinkGuard</string>
+    <string name="share_checking">Verificando os links…</string>
+    <string name="share_no_links">Nenhum link encontrado. O LinkGuard só consegue verificar links.</string>
+    <plurals name="share_title">
+        <item quantity="one">O LinkGuard verificou %d link</item>
+        <item quantity="many">O LinkGuard verificou %d links</item>
+        <item quantity="other">O LinkGuard verificou %d links</item>
+    </plurals>
+    <string name="share_private">Sua mensagem fica no seu celular. Só os links dela foram verificados.</string>
+    <string name="share_safe_title">Nenhum sinal de perigo encontrado</string>
+    <string name="share_copy">Copiar nome do site</string>
+    <string name="share_copied">Nome do site copiado</string>
+    <plurals name="share_more">
+        <item quantity="one">O LinkGuard verificou só o primeiro %d link.</item>
+        <item quantity="many">O LinkGuard verificou só os primeiros %d links.</item>
+        <item quantity="other">O LinkGuard verificou só os primeiros %d links.</item>
+    </plurals>
+    <string name="home_share_tip">Está em dúvida sobre uma mensagem? Compartilhe com o LinkGuard: toque em Compartilhar e depois em Verificar no LinkGuard.</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">Você usa %1$s. Este site está fingindo ser %1$s. Este não é o site de verdade de %1$s.</string>
+    <string name="memory_heading">Aprendido neste celular</string>
+    <string name="memory_private">O LinkGuard guarda isto só no seu celular e nunca envia.</string>
+    <string name="memory_brands">Seus bancos e apps: %1$s</string>
+    <string name="memory_brands_desc">O LinkGuard aprende isso quando você abre os sites de verdade deles. Assim, ele avisa com mais força sobre os falsos.</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">Você disse que %d site não tinha problema. Agora o LinkGuard só avisa sobre ele se parecer muito perigoso.</item>
+        <item quantity="many">Você disse que %d sites não tinham problema. Agora o LinkGuard só avisa sobre eles se parecerem muito perigosos.</item>
+        <item quantity="other">Você disse que %d sites não tinham problema. Agora o LinkGuard só avisa sobre eles se parecerem muito perigosos.</item>
+    </plurals>
+    <string name="memory_forget_brands">Esquecer marcas</string>
+    <string name="memory_forget_trusted">Esquecer sites</string>
+</resources>

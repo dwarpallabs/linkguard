@@ -1,0 +1,159 @@
+<resources>
+    <!-- TODO: native review. Machine-drafted French (international, "vous"); must be checked by a native speaker before release. -->
+
+    <!-- Home / first launch -->
+    <string name="onboarding_title">LinkGuard vérifie les liens avant qu’ils s’ouvrent</string>
+    <string name="onboarding_body">Quand vous touchez un lien dans WhatsApp, Telegram ou un SMS, LinkGuard le vérifie d’abord. Les liens sûrs s’ouvrent tout de suite dans votre navigateur. Si un lien ressemble à une arnaque, vous verrez un avertissement. Vous pourrez quand même choisir de l’ouvrir.</string>
+    <string name="onboarding_privacy">LinkGuard ne garde jamais et n’envoie jamais les liens que vous ouvrez. Pas besoin de compte.</string>
+    <string name="your_browser">votre navigateur</string>
+    <string name="flow_link">Votre lien</string>
+    <string name="flow_check">LinkGuard le vérifie</string>
+    <string name="not_a_browser_title">LinkGuard n’est pas un navigateur</string>
+    <string name="not_a_browser_body">LinkGuard n’affiche jamais de pages web. Il vérifie chaque lien en une fraction de seconde, puis l’ouvre dans %1$s, le navigateur que vous utilisez déjà. Vos favoris, votre historique, vos mots de passe enregistrés et vos onglets restent comme avant.</string>
+    <string name="default_explain">Android appellera LinkGuard votre « application de navigateur ». C’est seulement pour que LinkGuard voie les liens en premier. Chaque lien s’ouvre toujours dans %1$s.</string>
+
+    <string name="default_heading">Étape 1 : faites de LinkGuard votre navigateur par défaut</string>
+    <string name="default_done">LinkGuard est votre navigateur par défaut</string>
+    <string name="default_button">Mettre par défaut</string>
+    <string name="default_hint">Si les Paramètres s’ouvrent, touchez « Application de navigateur » et choisissez LinkGuard.</string>
+
+    <string name="browser_heading">Étape 2 : ouvrir les liens dans</string>
+    <string name="browser_none">Aucun autre navigateur trouvé. Installez un navigateur, par exemple Chrome.</string>
+
+    <string name="telegram_tip">Des applications comme Telegram, Instagram, Facebook et LinkedIn ouvrent souvent les liens à l’intérieur de l’application. Là, LinkGuard ne peut pas les vérifier. Pour vous protéger des liens d’arnaque, désactivez le navigateur intégré dans les réglages de cette application (dans Telegram : Settings → Chat Settings → In-app browser). Vous pouvez aussi toucher ⋮ et choisir « Ouvrir dans le navigateur ».</string>
+
+    <!-- Settings -->
+    <string name="settings_checks_heading">Ce que LinkGuard vérifie</string>
+    <string name="check_unwrap">Suivre les liens courts</string>
+    <string name="check_unwrap_desc">Demande à des services comme bit.ly où mène vraiment un lien court.</string>
+    <string name="check_apk_download">Téléchargements d’applications</string>
+    <string name="check_brand_lookalike">Faux sites de banques et de marques</string>
+    <string name="check_weird_host">Adresses web inhabituelles</string>
+    <string name="check_reputation">Sites d’arnaque connus</string>
+    <string name="check_domain_age">Sites tout nouveaux</string>
+    <string name="check_domain_age_desc">Demande au registre officiel quand le site a été créé. Seul le nom du site est envoyé, jamais le lien complet.</string>
+    <string name="check_upi_intent">Demandes de paiement UPI</string>
+
+    <string name="settings_report">Signaler un lien</string>
+    <string name="settings_report_desc">Parlez-nous d’un lien d’arnaque que LinkGuard n’a pas repéré.</string>
+    <string name="how_title">Comment marche LinkGuard</string>
+    <string name="how_desc">Pourquoi il vous est utile, et comment il décide quand vous avertir.</string>
+    <string name="how_why_title">Pourquoi c’est utile</string>
+    <string name="how_why_body">Les messages d’arnaque sur WhatsApp et par SMS contiennent souvent des liens qui ont l’air vrais : une fausse page de banque, un formulaire de « mise à jour KYC » ou une application qui vole de l’argent. Il suffit de toucher une seule fois pour avoir des ennuis. Et une fausse adresse web est parfois difficile à repérer.</string>
+    <string name="how_where_title">Où se place LinkGuard</string>
+    <string name="how_where_body">LinkGuard se place entre le lien que vous touchez et votre navigateur. Il vérifie le lien en une fraction de seconde, puis l’ouvre dans %1$s. Il n’affiche jamais lui-même de pages web.</string>
+    <string name="how_safe_title">Les liens sûrs s’ouvrent tout de suite</string>
+    <string name="how_safe_body">Les sites connus et les sites officiels, comme ceux du gouvernement (.gov.in) et des banques, s’ouvrent tout de suite. Si un lien a l’air normal, vous ne voyez rien du tout.</string>
+    <string name="how_scam_title">Repérer les liens d’arnaque</string>
+    <string name="how_scam_body">LinkGuard cherche les ruses des arnaqueurs : des sites qui se font passer pour une banque ou une marque connue, des applications à télécharger en dehors du Play Store, des demandes de paiement cachées, des sites tout nouveaux et des adresses web inhabituelles. Il vérifie aussi une liste de dizaines de milliers de sites d’arnaque et de sites dangereux connus. Cette liste vient de grandes bases de données de sécurité internationales. Elle est mise à jour chaque jour.</string>
+    <string name="how_community_title">Les signalements des autres utilisateurs</string>
+    <string name="how_community_body">Quand plusieurs utilisateurs de LinkGuard signalent le même site comme une arnaque, les autres sont avertis d’être prudents.</string>
+    <string name="how_choice_title">C’est toujours vous qui décidez</string>
+    <string name="how_choice_body">LinkGuard ne bloque jamais un lien. Chaque avertissement explique le problème avec des mots simples et propose « Ouvrir quand même ». LinkGuard ne garde jamais les liens que vous ouvrez.</string>
+    <string name="feedback_title">Erreur de traduction ? Dites-le-nous</string>
+    <string name="feedback_desc">LinkGuard est traduit par une machine. Aidez-nous à corriger les erreurs dans votre langue.</string>
+    <string name="feedback_intro">Les textes de LinkGuard dans cette langue ont été traduits par une machine et peuvent contenir des erreurs. Si quelque chose semble faux, dites-nous les mots qui ne vont pas et comment vous les diriez. Choisissez le moyen le plus simple pour vous :</string>
+    <string name="feedback_email">Nous écrire par e-mail</string>
+    <string name="feedback_github">Le signaler sur GitHub</string>
+    <string name="feedback_github_desc">Demande un compte GitHub gratuit.</string>
+    <string name="about_title">À propos de LinkGuard</string>
+    <string name="about_desc">Version, politique de confidentialité, code ouvert et contact.</string>
+    <string name="about_version">Version : %1$s</string>
+    <string name="about_by">Créé par Dwarpal Labs. LinkGuard est indépendant. Il ne dépend d’aucune banque, application de paiement, société de livraison ou administration.</string>
+    <string name="about_privacy">Politique de confidentialité</string>
+    <string name="about_privacy_desc">Ce qui quitte votre téléphone, et pourquoi.</string>
+    <string name="about_source">Code ouvert</string>
+    <string name="about_source_desc">Gratuit, sous licence Apache-2.0. Tout le monde peut vérifier le code sur GitHub.</string>
+    <string name="about_contact">Nous contacter</string>
+    <string name="about_credits">Remerciements</string>
+    <string name="about_credits_body">Sites d’arnaque : PhishDestroy. Sites dangereux : URLhaus par abuse.ch. Sites populaires : la liste Tranco. Noms des sites : la Public Suffix List (MPL-2.0).</string>
+    <string name="report_link_label">Lien</string>
+    <string name="report_note_label">Pourquoi pensez-vous que c’est une arnaque ? (facultatif)</string>
+    <string name="report_private_info">Votre signalement est envoyé en privé à Dwarpal Labs. Il n’est jamais publié. Quand plusieurs personnes différentes signalent le même site, les autres utilisateurs de LinkGuard voient un avertissement automatiquement. Personne ne peut savoir que le signalement vient de vous. Merci de ne pas mettre de numéros de téléphone, de noms ou d’autres informations personnelles.</string>
+    <string name="report_submit">Envoyer le signalement</string>
+    <string name="report_sending">Envoi…</string>
+    <string name="report_sent">Merci. Votre signalement a été envoyé pour être examiné.</string>
+    <string name="report_failed">Le signalement n’a pas pu être envoyé. Vérifiez votre connexion internet et réessayez.</string>
+    <string name="back">Retour</string>
+
+    <!-- Interstitial -->
+    <string name="interstitial_title_strong">Ce lien est peut-être une arnaque</string>
+    <string name="interstitial_title_soft">Faites attention à ce lien</string>
+    <string name="interstitial_go_back">Revenir en arrière</string>
+    <string name="interstitial_open_anyway">Ouvrir quand même</string>
+    <string name="interstitial_report">Signaler ce lien</string>
+    <string name="interstitial_report_hint">Anonyme. Aide à avertir les autres utilisateurs de LinkGuard.</string>
+    <string name="interstitial_checking">Vérification du lien…</string>
+    <string name="interstitial_upi_heading">Demande de paiement UPI</string>
+    <string name="interstitial_upi_payee">Payer à : %1$s</string>
+    <string name="interstitial_upi_amount">Montant : ₹%1$s</string>
+
+    <!-- Reasons: one sentence each, shown under the link's address -->
+    <string name="warn_apk_download">Ce lien télécharge une application en dehors du Play Store. Les fausses applications comme celle-ci peuvent lire vos messages et voler les OTP de votre banque.</string>
+    <string name="warn_brand_lookalike">Ce site se fait passer pour %1$s. Ce n’est pas le vrai site de %1$s.</string>
+    <string name="warn_upi_intent">Ce lien vous demande d’envoyer de l’argent par UPI. Vous n’avez jamais besoin de payer pour recevoir un remboursement, un prix ou une mise à jour KYC.</string>
+    <string name="warn_weird_host">Ce lien utilise une adresse inhabituelle, que les vraies entreprises utilisent rarement.</string>
+    <string name="warn_weird_host_brand">Ce lien parle de %1$s, mais il utilise une adresse inhabituelle que %1$s n’utilise pas.</string>
+    <string name="warn_reputation">Ce site est sur une liste de sites d’arnaque ou de sites dangereux connus.</string>
+    <plurals name="warn_community">
+        <item quantity="one">Ce lien a été signalé comme une arnaque par %d utilisateur de LinkGuard cette semaine.</item>
+        <item quantity="many">Ce lien a été signalé comme une arnaque par %d utilisateurs de LinkGuard cette semaine.</item>
+        <item quantity="other">Ce lien a été signalé comme une arnaque par %d utilisateurs de LinkGuard cette semaine.</item>
+    </plurals>
+    <plurals name="warn_domain_age">
+        <item quantity="one">Ce site a été créé il y a %d jour. Les sites d’arnaque sont souvent tout nouveaux.</item>
+        <item quantity="many">Ce site a été créé il y a %d jours. Les sites d’arnaque sont souvent tout nouveaux.</item>
+        <item quantity="other">Ce site a été créé il y a %d jours. Les sites d’arnaque sont souvent tout nouveaux.</item>
+    </plurals>
+    <string name="warn_generic">LinkGuard a remarqué quelque chose d’inhabituel dans ce lien.</string>
+
+    <!-- "Report this link" confirmation sheet and the "Was that link a scam?" card on Home.
+         scam_check_body: %1$s = website name (bold), %2$s = written-out date, e.g. "19 octobre".
+         Answers are full phrases, not bare Yes/No; keep each under about 30 characters. -->
+    <string name="report_confirm_title">Signaler ceci comme une arnaque ?</string>
+    <string name="report_confirm_body">Seul le nom du site est envoyé, jamais le lien complet ni vos messages.</string>
+    <string name="report_confirm_send">Signaler</string>
+    <string name="action_close">Fermer</string>
+    <string name="report_thanks">Merci. Votre signalement aide à avertir d’autres personnes.</string>
+    <string name="scam_check_title">Ce lien était-il une arnaque ?</string>
+    <string name="scam_check_body">Vous avez ouvert %1$s le %2$s après l’avertissement de LinkGuard.</string>
+    <string name="scam_check_yes">Oui, c’était une arnaque</string>
+    <string name="scam_check_no">Non, tout allait bien</string>
+    <string name="scam_check_unsure">Je ne sais pas</string>
+
+    <!-- "Check with LinkGuard" share target (share sheet label, max ~25 characters) and its results screen.
+         share_title/share_more: %d = number of links. home_share_tip: names the share sheet entry in quotes-free form. -->
+    <string name="share_target_label">Vérifier avec LinkGuard</string>
+    <string name="share_checking">Vérification des liens…</string>
+    <string name="share_no_links">Aucun lien trouvé. LinkGuard peut seulement vérifier des liens.</string>
+    <plurals name="share_title">
+        <item quantity="one">LinkGuard a vérifié %d lien</item>
+        <item quantity="many">LinkGuard a vérifié %d liens</item>
+        <item quantity="other">LinkGuard a vérifié %d liens</item>
+    </plurals>
+    <string name="share_private">Votre message reste sur votre téléphone. Seuls les liens qu’il contient ont été vérifiés.</string>
+    <string name="share_safe_title">Aucun signe inquiétant trouvé</string>
+    <string name="share_copy">Copier le nom du site</string>
+    <string name="share_copied">Nom du site copié</string>
+    <plurals name="share_more">
+        <item quantity="one">LinkGuard a vérifié seulement %d lien, le premier.</item>
+        <item quantity="many">LinkGuard a vérifié seulement les %d premiers liens.</item>
+        <item quantity="other">LinkGuard a vérifié seulement les %d premiers liens.</item>
+    </plurals>
+    <string name="home_share_tip">Vous avez un doute sur un message ? Partagez-le avec LinkGuard : touchez Partager, puis Vérifier avec LinkGuard.</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">Vous utilisez %1$s. Ce site se fait passer pour %1$s. Ce n’est pas le vrai site de %1$s.</string>
+    <string name="memory_heading">Appris sur ce téléphone</string>
+    <string name="memory_private">LinkGuard garde ces informations seulement sur votre téléphone et ne les envoie jamais.</string>
+    <string name="memory_brands">Vos banques et applications : %1$s</string>
+    <string name="memory_brands_desc">LinkGuard les apprend quand vous ouvrez leurs vrais sites. Il vous avertit alors plus fermement si un faux site se fait passer pour elles.</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">Vous avez dit que %d site était normal. LinkGuard vous avertit maintenant sur ce site seulement s’il a l’air vraiment dangereux.</item>
+        <item quantity="many">Vous avez dit que %d sites étaient normaux. LinkGuard vous avertit maintenant sur ces sites seulement s’ils ont l’air vraiment dangereux.</item>
+        <item quantity="other">Vous avez dit que %d sites étaient normaux. LinkGuard vous avertit maintenant sur ces sites seulement s’ils ont l’air vraiment dangereux.</item>
+    </plurals>
+    <string name="memory_forget_brands">Oublier les marques</string>
+    <string name="memory_forget_trusted">Oublier les sites</string>
+</resources>
