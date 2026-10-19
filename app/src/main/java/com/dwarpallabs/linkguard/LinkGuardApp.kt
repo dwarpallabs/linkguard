@@ -47,6 +47,22 @@ class LinkGuardApp : Application() {
     /** Outlives any screen, so a report the user sent keeps going after they tap Go back. */
     val reportScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
+    /** What LinkGuard learned on this phone: trusted websites and the user's brands. Never sent. */
+    val memory: LocalMemory by lazy { LocalMemory.of(this) }
+
+    @Volatile
+    private var myBrandsCache: Set<String>? = null
+
+    /** The user's brands, cached in memory so a link check never recomputes them. Off the main thread. */
+    fun myBrands(): Set<String> =
+        myBrandsCache ?: memory.myBrands(data.brands.map { it.name }).also { myBrandsCache = it }
+
+    /** Call after the user's brands changed (one more learned, or cleared in Settings). */
+    fun forgetMyBrandsCache() {
+        myBrandsCache = null
+    }
+
+
     override fun onCreate() {
         super.onCreate()
         val worker = Executors.newSingleThreadExecutor { Thread(it, "engine-data") }

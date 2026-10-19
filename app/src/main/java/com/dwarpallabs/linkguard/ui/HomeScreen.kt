@@ -36,6 +36,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.semantics
@@ -51,6 +52,7 @@ import com.dwarpallabs.linkguard.core.CheckId
 import com.dwarpallabs.linkguard.ui.components.LineIcons
 import com.dwarpallabs.linkguard.ui.components.PrimaryButton
 import com.dwarpallabs.linkguard.ui.components.StatusCard
+import com.dwarpallabs.linkguard.ui.components.TextButton
 import com.dwarpallabs.linkguard.ui.theme.LinkguardTheme
 
 /** Checks the user can switch off, in display order. The allowlist is always on. */
@@ -86,6 +88,10 @@ fun HomeScreen(
     onOpenAbout: () -> Unit,
     /** Shown first, above everything else: the "Was that link a scam?" card, when there is a question. */
     topCard: @Composable () -> Unit = {},
+    /** What LinkGuard learned on this phone; the section is hidden while it is empty. */
+    memory: MemoryUi = MemoryUi(),
+    onForgetBrands: () -> Unit = {},
+    onForgetTrusted: () -> Unit = {},
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -172,8 +178,13 @@ fun HomeScreen(
                 }
             }
 
+            if (memory.myBrands.isNotEmpty() || memory.trustedCount > 0) {
+                MemorySection(memory, onForgetBrands, onForgetTrusted)
+            }
+
             HorizontalDivider()
             LinkRow(stringResource(R.string.how_title), stringResource(R.string.how_desc), onOpenHowItWorks, "open_how")
+
             LinkRow(stringResource(R.string.settings_report), stringResource(R.string.settings_report_desc), onOpenReport, "open_report")
 
             Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)) {
@@ -363,5 +374,42 @@ private fun HomePreview() {
             disabledChecks = setOf(CheckId.DOMAIN_AGE),
             onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
         )
+    }
+}
+
+/** What LinkGuard learned on this phone (roadmap A6), for Settings. */
+data class MemoryUi(val trustedCount: Int = 0, val myBrands: List<String> = emptyList())
+
+/** "Learned on this phone": the user's brands and trusted websites, each with its own Forget button. */
+@Composable
+private fun MemorySection(memory: MemoryUi, onForgetBrands: () -> Unit, onForgetTrusted: () -> Unit) {
+    SectionHeading(stringResource(R.string.memory_heading))
+    Text(
+        stringResource(R.string.memory_private),
+        style = MaterialTheme.typography.bodyMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+    )
+    if (memory.myBrands.isNotEmpty()) {
+        Column(verticalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.testTag("memory_brands")) {
+            Text(
+                stringResource(R.string.memory_brands, memory.myBrands.joinToString(", ")),
+                style = MaterialTheme.typography.bodyLarge,
+            )
+            Text(
+                stringResource(R.string.memory_brands_desc),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            TextButton(stringResource(R.string.memory_forget_brands), onForgetBrands, Modifier.testTag("forget_brands"))
+        }
+    }
+    if (memory.trustedCount > 0) {
+        Column(verticalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.testTag("memory_trusted")) {
+            Text(
+                pluralStringResource(R.plurals.memory_trusted, memory.trustedCount, memory.trustedCount),
+                style = MaterialTheme.typography.bodyLarge,
+            )
+            TextButton(stringResource(R.string.memory_forget_trusted), onForgetTrusted, Modifier.testTag("forget_trusted"))
+        }
     }
 }

@@ -159,4 +159,34 @@ class LinkEngineTest {
             .toList()
         assertEquals(emptyList<String>(), offenders)
     }
+
+    @Test
+    fun lookalikeOfMyBrandIsWarnedHarderWithItsOwnSentence() {
+        val e = engine(http = null)
+        val plain = e.evaluate("http://sbi-kyc-update.top/verify").top!!
+        val mine = e.evaluate("http://sbi-kyc-update.top/verify", myBrands = setOf("SBI")).top!!
+        assertEquals(CheckId.BRAND_LOOKALIKE, mine.check)
+        assertEquals(minOf(1.0, plain.score + LinkEngine.MY_BRAND_BOOST), mine.score, 1e-9)
+        assertEquals(LinkEngine.MY_BRAND_MESSAGE, mine.messageKey)
+        assertEquals("SBI", mine.details["brand"])
+        // Someone else's brand: unchanged.
+        assertEquals(plain, e.evaluate("http://sbi-kyc-update.top/verify", myBrands = setOf("HDFC Bank")).top)
+    }
+
+    @Test
+    fun myBrandsNeverTouchTheRealWebsiteOrOtherChecks() {
+        val e = engine(http = null)
+        assertEquals(Verdict.Level.SILENT, e.evaluate("https://www.onlinesbi.sbi/", myBrands = setOf("SBI")).level)
+        val apk = e.evaluate("http://lg-files.example/sbi-yono.apk", myBrands = setOf("SBI"))
+        assertTrue(apk.signals.none { it.messageKey == LinkEngine.MY_BRAND_MESSAGE })
+    }
+
+    @Test
+    fun ownerBrandIsTheBrandWhoseOfficialWebsiteItIs() {
+        val e = engine(http = null)
+        assertEquals("SBI", e.ownerBrand(TestSupport.url("https://retail.onlinesbi.sbi/login"))?.name)
+        assertEquals("SBI", e.ownerBrand(TestSupport.url("https://sbi.co.in/"))?.name)
+        assertNull(e.ownerBrand(TestSupport.url("http://sbi-kyc-update.top/")))
+        assertNull(e.ownerBrand(TestSupport.url("http://192.168.1.1/sbi")))
+    }
 }

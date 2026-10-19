@@ -135,4 +135,18 @@
         <item quantity="other">LinkGuard ꯅ ꯑꯍꯥꯅꯕ ꯂꯤꯡꯛ %d ꯈꯛꯇꯃꯛ ꯌꯦꯡꯁꯤꯟꯈꯤ꯫</item>
     </plurals>
     <string name="home_share_tip">ꯃꯦꯁꯦꯖ ꯑꯃꯗ ꯊꯥꯖꯕ ꯂꯩꯇꯕꯔꯥ? ꯃꯗꯨ LinkGuard ꯗ ꯁꯦꯌꯔ ꯇꯧꯕꯤꯌꯨ: ꯁꯦꯌꯔ ꯇꯦꯞ ꯇꯧꯗꯨꯅ LinkGuard ꯅ ꯌꯦꯡꯁꯤꯟꯕꯤꯌꯨ ꯈꯅꯕꯤꯌꯨ꯫</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">ꯅꯍꯥꯛꯅ %1$s ꯁꯤꯖꯤꯟꯅꯩ꯫ ꯋꯦꯕꯁꯥꯏꯠ ꯑꯁꯤꯅ ꯃꯁꯥꯕꯨ %1$s ꯅꯤ ꯍꯥꯌꯅ ꯎꯠꯂꯤ꯫ ꯃꯁꯤ %1$s ꯒꯤ ꯑꯁꯦꯡꯕ ꯋꯦꯕꯁꯥꯏꯠ ꯅꯠꯇꯦ꯫</string>
+    <string name="memory_heading">ꯐꯣꯟ ꯑꯁꯤꯗ ꯇꯝꯂꯕ</string>
+    <string name="memory_private">LinkGuard ꯅ ꯃꯁꯤ ꯅꯍꯥꯛꯀꯤ ꯐꯣꯟꯗꯃꯛ ꯊꯝꯃꯤ, ꯀꯩꯗꯧꯉꯩꯗ ꯊꯥꯗꯦ꯫</string>
+    <string name="memory_brands">ꯅꯍꯥꯛꯀꯤ ꯕꯦꯉ꯭ꯛ ꯑꯃꯁꯨꯡ ꯑꯦꯞꯁꯤꯡ: %1$s</string>
+    <string name="memory_brands_desc">ꯅꯍꯥꯛꯅ ꯃꯈꯣꯌꯒꯤ ꯑꯁꯦꯡꯕ ꯋꯦꯕꯁꯥꯏꯠ ꯍꯥꯡꯗꯣꯛꯄ ꯃꯇꯝꯗ LinkGuard ꯅ ꯃꯈꯣꯌꯕꯨ ꯇꯝꯃꯤ, ꯑꯃꯁꯨꯡ ꯃꯈꯣꯌꯒꯤ ꯑꯔꯥꯅꯕꯁꯤꯡꯒꯤ ꯃꯔꯃꯗ ꯍꯦꯟꯅ ꯆꯦꯠꯅ ꯆꯦꯛꯁꯤꯟ ꯋꯥ ꯍꯥꯏ꯫</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">ꯅꯍꯥꯛꯅ ꯋꯦꯕꯁꯥꯏꯠ %d ꯐꯔꯝꯃꯤ ꯍꯥꯌꯈꯤ꯫ ꯍꯧꯖꯤꯛ LinkGuard ꯅ ꯃꯁꯤ ꯇꯁꯦꯡꯅ ꯈꯨꯗꯣꯡꯊꯤꯕ ꯑꯣꯏꯅ ꯎꯔꯕ ꯃꯇꯝꯗꯈꯛ ꯆꯦꯛꯁꯤꯟ ꯋꯥ ꯍꯥꯌꯒꯅꯤ꯫</item>
+        <item quantity="other">ꯅꯍꯥꯛꯅ ꯋꯦꯕꯁꯥꯏꯠ %d ꯐꯔꯝꯃꯤ ꯍꯥꯌꯈꯤ꯫ ꯍꯧꯖꯤꯛ LinkGuard ꯅ ꯃꯈꯣꯌꯁꯤ ꯇꯁꯦꯡꯅ ꯈꯨꯗꯣꯡꯊꯤꯕ ꯑꯣꯏꯅ ꯎꯔꯕ ꯃꯇꯝꯗꯈꯛ ꯆꯦꯛꯁꯤꯟ ꯋꯥ ꯍꯥꯌꯒꯅꯤ꯫</item>
+    </plurals>
+    <string name="memory_forget_brands">ꯕ꯭ꯔꯥꯟꯗꯁꯤꯡ ꯀꯥꯎꯊꯣꯀꯎ</string>
+    <string name="memory_forget_trusted">ꯋꯦꯕꯁꯥꯏꯠꯁꯤꯡ ꯀꯥꯎꯊꯣꯀꯎ</string>
 </resources>

@@ -63,8 +63,9 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         job = viewModelScope.launch {
             val disabled = Prefs(app).disabledChecks
             val budget = Budget.INTERACTIVE
-            val (local, isShortener) = withContext(Dispatchers.IO) {
-                app.localEngine.evaluate(raw, disabled = disabled) to app.engine.isShortener(raw)
+            val (myBrands, local, isShortener) = withContext(Dispatchers.IO) {
+                val mine = app.myBrands()
+                Triple(mine, app.localEngine.evaluate(raw, disabled = disabled, myBrands = mine), app.engine.isShortener(raw))
             }
             val slowCard = launch {
                 delay(budget.normalMs)
@@ -72,7 +73,7 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
             }
             val hardStop = maxOf(if (isShortener) budget.shortenerMs else budget.normalMs, budget.lookupMs) + HARD_STOP_MARGIN_MS
             val full = withTimeoutOrNull(hardStop) {
-                withContext(Dispatchers.IO) { runInterruptible { app.engine.evaluate(raw, budget, disabled) } }
+                withContext(Dispatchers.IO) { runInterruptible { app.engine.evaluate(raw, budget, disabled, myBrands) } }
             }
             var verdict = full ?: local
             // First run only: no allowlist in memory yet. A warning may be a false positive on a
@@ -89,12 +90,18 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
                     }
                 }
                 if (app.hasAllowlist()) {
-                    val recheck = withContext(Dispatchers.IO) { app.localEngine.evaluate(raw, disabled = disabled) }
+                    val recheck = withContext(Dispatchers.IO) { app.localEngine.evaluate(raw, disabled = disabled, myBrands = myBrands) }
                     verdict = reconsider(verdict, recheck)
                 }
             }
             slowCard.cancel()
-            _state.value = decide(raw, verdict)
+            // A website the user said was fine skips the soft warning (never the strong one, never APK or UPI).
+            val trusted = trustSilences(verdict) &&
+                withContext(Dispatchers.IO) { reportDomain(raw, verdict, app.data.psl)?.let(app.memory::isTrusted) == true }
+            val decision = decide(raw, verdict, trusted)
+            _state.value = decision
+            if (decision is State.Forward) learnBrand(app, verdict)
+
         }
     }
 
@@ -131,13 +138,35 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
 
-    private fun decide(raw: String, verdict: Verdict): State {
-        if (verdict.level != Verdict.Level.SILENT) return State.Warn(verdict)
+    private fun decide(raw: String, verdict: Verdict, trusted: Boolean): State {
+        if (verdict.level != Verdict.Level.SILENT && !trusted) return State.Warn(verdict)
         return State.Forward(forwardUrl(raw, verdict))
     }
 
+    /**
+     * After a link was forwarded: if it was a brand's real website, count one open (only the brand,
+     * as an HMAC; never the link). Runs on the app's scope after the forward, so it never delays a
+     * safe link and still finishes when this screen is gone.
+     */
+
+    private fun learnBrand(app: LinkGuardApp, verdict: Verdict) {
+        val url = verdict.finalUrl ?: return
+        app.reportScope.launch {
+            val brand = app.engine.ownerBrand(url) ?: return@launch
+            if (app.memory.countOpen(brand.name)) app.forgetMyBrandsCache()
+        }
+    }
+
     companion object {
+        /** Warnings a "trusted by me" website still always gets. */
+        private val NEVER_TRUSTED = setOf(CheckId.APK_DOWNLOAD, CheckId.UPI_INTENT)
+
+        /** True if trusting the website may silence this warning: soft only, and no APK or UPI signal. */
+        fun trustSilences(verdict: Verdict): Boolean =
+            verdict.level == Verdict.Level.SOFT && verdict.signals.none { it.fired && it.check in NEVER_TRUSTED }
+
         /** Grace on top of the engine's own budget before we give up and use the local verdict. */
+
         private const val HARD_STOP_MARGIN_MS = 150L
 
         /** How long a warned link waits for the very first allowlist download (once per install). */

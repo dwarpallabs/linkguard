@@ -66,10 +66,15 @@ class LinkEngine(
     fun isShortener(raw: String): Boolean =
         NormalisedUrl.parse(raw, data.psl)?.let(::isListedShortener) ?: false
 
+    /**
+     * Runs every check on [raw]. [myBrands] are the names of brands the user opens often (learned
+     * on the phone, never sent): a lookalike of one of them is warned about more strongly.
+     */
     fun evaluate(
         raw: String,
         budget: Budget = Budget.UNLIMITED,
         disabled: Set<CheckId> = emptySet(),
+        myBrands: Set<String> = emptySet(),
     ): Verdict {
         val start = clock()
         val parsed = NormalisedUrl.parse(raw, data.psl) ?: return Verdict.of(emptyList(), null)
@@ -87,7 +92,7 @@ class LinkEngine(
             signals += allowlist.run(url)
             return Verdict.of(signals, url)
         }
-        localChecks.filter { (id, _) -> id !in disabled }.mapTo(signals) { (_, check) -> check.run(url) }
+        localChecks.filter { (id, _) -> id !in disabled }.mapTo(signals) { (_, check) -> withMyBrands(check.run(url), myBrands) }
 
         val alreadyStrong = signals.any { it.score > Verdict.STRONG_THRESHOLD }
         if (CheckId.REPUTATION !in disabled && !alreadyStrong) {
@@ -104,9 +109,27 @@ class LinkEngine(
         return Verdict.of(signals, url)
     }
 
+    /** The brand whose official website [url] is, if any; used on the phone to learn the user's brands. */
+    fun ownerBrand(url: NormalisedUrl): Brand? =
+        if (!url.isWeb || url.isIpLiteral) null else data.brands.firstOrNull { it.owns(url.host, url.registrableDomain) }
+
+    private fun withMyBrands(signal: Signal, myBrands: Set<String>): Signal {
+        if (signal.check != CheckId.BRAND_LOOKALIKE || !signal.fired || signal.details["brand"] !in myBrands) return signal
+        return signal.copy(score = minOf(1.0, signal.score + MY_BRAND_BOOST), messageKey = MY_BRAND_MESSAGE)
+    }
+
     private fun upiSignal(url: NormalisedUrl, disabled: Set<CheckId>) =
+
         if (CheckId.UPI_INTENT in disabled) null else upi.run(url)
 
     private fun isListedShortener(url: NormalisedUrl) =
         url.host in data.shorteners || url.registrableDomain in data.shorteners
+
+    companion object {
+        /** Added to a lookalike of one of the user's own brands (capped at 1.0). */
+        const val MY_BRAND_BOOST = 0.2
+
+        /** "This website is pretending to be SBI, which you use…" */
+        const val MY_BRAND_MESSAGE = "warn_brand_lookalike_mine"
+    }
 }

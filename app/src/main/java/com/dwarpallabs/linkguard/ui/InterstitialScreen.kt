@@ -226,7 +226,8 @@ internal fun hostText(host: String, domain: String?, muted: Color) = buildAnnota
 @Composable
 internal fun reasonText(reason: Reason): String = when (reason) {
     Reason.ApkDownload -> stringResource(R.string.warn_apk_download)
-    is Reason.BrandLookalike -> stringResource(R.string.warn_brand_lookalike, reason.brand)
+    is Reason.BrandLookalike -> stringResource(if (reason.mine) R.string.warn_brand_lookalike_mine else R.string.warn_brand_lookalike, reason.brand)
+
     is Reason.Upi -> stringResource(R.string.warn_upi_intent)
     is Reason.WeirdHost -> reason.brand?.let { stringResource(R.string.warn_weird_host_brand, it) }
         ?: stringResource(R.string.warn_weird_host)

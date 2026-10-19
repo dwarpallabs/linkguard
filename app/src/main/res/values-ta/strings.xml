@@ -132,4 +132,18 @@
         <item quantity="other">LinkGuard முதல் %d இணைப்புகளை மட்டுமே சரிபார்த்தது.</item>
     </plurals>
     <string name="home_share_tip">ஒரு செய்தியில் சந்தேகமா? அதை LinkGuard-க்குப் பகிருங்கள்: பகிர் என்பதைத் தட்டி, LinkGuard மூலம் சரிபார் என்பதைத் தேர்ந்தெடுங்கள்.</string>
+
+    <!-- What LinkGuard learned on the phone (Settings), and the stronger warning for a fake of the user's own brand.
+         memory_brands: %1$s = comma-separated brand names. memory_trusted: %d = number of websites. -->
+    <string name="warn_brand_lookalike_mine">நீங்கள் %1$s பயன்படுத்துகிறீர்கள். இந்த இணையதளம் %1$s போல நடிக்கிறது. இது %1$s-இன் உண்மையான இணையதளம் அல்ல.</string>
+    <string name="memory_heading">இந்த ஃபோனில் கற்றவை</string>
+    <string name="memory_private">LinkGuard இதை உங்கள் ஃபோனில் மட்டுமே வைத்திருக்கும், ஒருபோதும் அனுப்பாது.</string>
+    <string name="memory_brands">உங்கள் வங்கிகளும் ஆப்களும்: %1$s</string>
+    <string name="memory_brands_desc">இவற்றின் உண்மையான இணையதளங்களை நீங்கள் திறக்கும்போது LinkGuard இவற்றைக் கற்றுக்கொள்கிறது, இவற்றின் போலிகளைப் பற்றி இன்னும் கடுமையாக எச்சரிக்கிறது.</string>
+    <plurals name="memory_trusted">
+        <item quantity="one">%d இணையதளம் சரியானது என்று சொன்னீர்கள். அது உண்மையில் ஆபத்தாகத் தெரிந்தால் மட்டுமே LinkGuard இனி எச்சரிக்கும்.</item>
+        <item quantity="other">%d இணையதளங்கள் சரியானவை என்று சொன்னீர்கள். அவை உண்மையில் ஆபத்தாகத் தெரிந்தால் மட்டுமே LinkGuard இனி எச்சரிக்கும்.</item>
+    </plurals>
+    <string name="memory_forget_brands">பிராண்டுகளை மற</string>
+    <string name="memory_forget_trusted">இணையதளங்களை மற</string>
 </resources>
