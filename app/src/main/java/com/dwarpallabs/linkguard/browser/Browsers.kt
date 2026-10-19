@@ -9,11 +9,17 @@ import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
 import android.net.Uri
 import android.os.Build
+import androidx.browser.customtabs.CustomTabsClient
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.net.toUri
+
 import com.dwarpallabs.linkguard.LinkInterceptActivity
 import com.dwarpallabs.linkguard.Prefs
 
 data class BrowserApp(val packageName: String, val label: String)
+
+/** True if the launch [intent] came from an app opening a Custom Tab (it always carries a session extra). */
+fun isCustomTabLaunch(intent: Intent?): Boolean = intent?.hasExtra(CustomTabsIntent.EXTRA_SESSION) == true
 
 /**
  * Everything that touches the system's browser list and default-browser role.
@@ -64,6 +70,10 @@ object Browsers {
             self = context.packageName,
         )
 
+    /** True if [packageName] offers a Custom Tabs service. */
+    fun supportsCustomTabs(context: Context, packageName: String): Boolean =
+        CustomTabsClient.getPackageName(context, listOf(packageName), true) == packageName
+
     fun isDefaultBrowser(context: Context): Boolean {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             val roles = context.getSystemService(RoleManager::class.java)
@@ -83,15 +93,20 @@ object Browsers {
      * other browser is installed or the chosen one cannot open it.
      *
      * Deliberately forwards only the URL: extras from the source app (for example Custom Tabs
-     * session binders) are dropped.
+     * session binders, which belong to LinkGuard's own no-op service) are dropped. When the app asked
+     * for a Custom Tab ([customTab]) and the chosen browser supports them, the link opens in a plain
+     * Custom Tab there, so the user still lands back in their app afterwards.
      */
-    fun forward(context: Context, uri: Uri) {
+    fun forward(context: Context, uri: Uri, customTab: Boolean = false) {
         val target = target(context)
         if (target != null) {
             try {
-                context.startActivity(
-                    browserIntent(uri).setPackage(target).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
-                )
+                val intent = if (customTab && supportsCustomTabs(context, target)) {
+                    CustomTabsIntent.Builder().build().intent.setData(uri).setPackage(target)
+                } else {
+                    browserIntent(uri).setPackage(target)
+                }
+                context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
                 return
             } catch (_: ActivityNotFoundException) {
                 // Fall through to the chooser.

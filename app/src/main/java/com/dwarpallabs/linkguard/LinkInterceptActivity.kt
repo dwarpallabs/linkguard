@@ -15,6 +15,8 @@ import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import com.dwarpallabs.linkguard.InterceptViewModel.State
 import com.dwarpallabs.linkguard.browser.Browsers
+import com.dwarpallabs.linkguard.browser.isCustomTabLaunch
+
 import com.dwarpallabs.linkguard.core.Verdict
 import com.dwarpallabs.linkguard.ui.CheckingCard
 import com.dwarpallabs.linkguard.ui.InterstitialModel
@@ -45,11 +47,12 @@ class LinkInterceptActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         if (!start(intent)) return
+
         lifecycleScope.launch {
             viewModel.state.collect { state ->
                 when (state) {
                     is State.Forward -> {
-                        Browsers.forward(this@LinkInterceptActivity, state.url.toUri())
+                        Browsers.forward(this@LinkInterceptActivity, state.url.toUri(), isCustomTabLaunch(intent))
                         finishWithoutAnimation()
                     }
                     State.CheckingSlow, is State.Warn -> showUi()
@@ -113,7 +116,7 @@ class LinkInterceptActivity : ComponentActivity() {
             }
         } else {
             val raw = intent?.data?.toString() ?: return finishWithoutAnimation()
-            Browsers.forward(this, InterceptViewModel.forwardUrl(raw, verdict).toUri())
+            Browsers.forward(this, InterceptViewModel.forwardUrl(raw, verdict).toUri(), isCustomTabLaunch(intent))
         }
         finishWithoutAnimation()
     }

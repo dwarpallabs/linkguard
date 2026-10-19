@@ -15,7 +15,12 @@
             <category android:name="android.intent.category.BROWSABLE" />
             <data android:scheme="https" />
         </intent>
+        <!-- Which installed browsers support Custom Tabs, to forward a Custom Tab as one. -->
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
     </queries>
+
 
     <application
         android:name=".LinkGuardApp"
@@ -63,7 +68,22 @@
         </activity>
 
         <!--
-            "Check with LinkGuard" in the share sheet. A separate ACTION_SEND target: it does not
+            RISK (default-browser flow): advertises Custom Tabs support, so apps that open links in a
+            Custom Tab of the default browser (Google Messages, Gmail, ...) send them to LinkGuard
+            instead of going straight to Chrome. The launch still arrives at LinkInterceptActivity's
+            VIEW filter above; the service itself does nothing (see LinkGuardCustomTabsService).
+        -->
+        <service
+            android:name=".browser.LinkGuardCustomTabsService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.support.customtabs.action.CustomTabsService" />
+            </intent-filter>
+        </service>
+
+        <!--
+            "Check with LinkGuard" in the share sheet.
+ A separate ACTION_SEND target: it does not
             change the VIEW filter above or the default-browser role. Every share opens in a new,
             hidden task (documentLaunchMode="always"), so a second share can never be dropped in
             favour of an older message restored from a task the system killed. Close or Back

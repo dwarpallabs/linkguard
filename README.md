@@ -37,6 +37,8 @@ One exception to "never stores": when you tap **Open anyway** on a warning, Link
 
 Full policy: [dwarpallabs.com/linkguard/privacy](https://dwarpallabs.com/linkguard/privacy).
 
+LinkGuard also checks links that apps like Google Messages and Gmail open in a Custom Tab: it tells them it supports Custom Tabs, checks the link, then opens it in your browser. Apps with their own built-in browser (Telegram, Instagram, Facebook, LinkedIn) still need that built-in browser switched off, as the app explains.
+
 ## Check a message before you tap
 Not sure about a message? Share it to LinkGuard: tap **Share** in WhatsApp, SMS or any app, then **Check with LinkGuard**. LinkGuard finds every link in the message (including `wa.me`, `t.me` and UPI payment links) and shows a verdict for each one, checked exactly as if you had tapped it. The message itself never leaves your phone.
 

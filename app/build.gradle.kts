@@ -75,6 +75,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
+    // Custom Tabs (roadmap CT1): AndroidX, Apache-2.0, no Google Play services. Lets apps that open
+    // links in Custom Tabs (Google Messages, Gmail, ...) send them to LinkGuard first.
+    implementation(libs.androidx.browser)
+
     implementation(libs.androidx.lifecycle.runtime.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
