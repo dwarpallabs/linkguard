@@ -2,6 +2,8 @@ package com.dwarpallabs.linkguard.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.consumeWindowInsets
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -36,10 +38,22 @@ import com.dwarpallabs.linkguard.ui.components.Banner
 import com.dwarpallabs.linkguard.ui.components.LineIcons
 import com.dwarpallabs.linkguard.ui.components.PrimaryButton
 
+/**
+ * Back, title and content. Edge-to-edge (forced from Android 15): the Scaffold pads for the system
+ * bars, and imePadding keeps the content above the keyboard, since adjustResize no longer resizes
+ * an edge-to-edge window; otherwise "Send report" would sit under the keyboard.
+ */
 @Composable
 private fun SubScreen(title: String, onBack: () -> Unit, content: @Composable (Modifier) -> Unit) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
-        Column(Modifier.padding(padding).padding(horizontal = 24.dp, vertical = 12.dp)) {
+        Column(
+            Modifier
+                .padding(padding)
+                .consumeWindowInsets(padding)
+                .imePadding()
+                .padding(horizontal = 24.dp, vertical = 12.dp),
+        ) {
+
             TextButton(onClick = onBack, modifier = Modifier.testTag("back")) { Text((if (isRtl()) "› " else "‹ ") + stringResource(R.string.back)) }
             Text(title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             content(Modifier.padding(top = 12.dp))

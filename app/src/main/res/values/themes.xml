@@ -3,7 +3,9 @@
 
     <style name="Theme.Linkguard" parent="android:Theme.Material.Light.NoActionBar" />
 
-    <!-- Invisible while forwarding: no background, no dim, no window animation. -->
+    <!-- Invisible while forwarding: no background, no dim, no window animation. The system bars are
+         made transparent by enableEdgeToEdge() in the activity, not here: statusBarColor and
+         navigationBarColor are deprecated from Android 15 (Play flags them). -->
     <style name="Theme.Linkguard.Intercept">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -11,7 +13,5 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowAnimationStyle">@null</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 </resources>
