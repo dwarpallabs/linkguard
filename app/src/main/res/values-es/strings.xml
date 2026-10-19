@@ -155,4 +155,11 @@
     </plurals>
     <string name="memory_forget_brands">Olvidar marcas</string>
     <string name="memory_forget_trusted">Olvidar sitios web</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">Este sitio web parece ser parte de un grupo de sitios de estafa. %d usuario de LinkGuard los reportó esta semana.</item>
+        <item quantity="many">Este sitio web parece ser parte de un grupo de sitios de estafa. %d usuarios de LinkGuard los reportaron esta semana.</item>
+        <item quantity="other">Este sitio web parece ser parte de un grupo de sitios de estafa. %d usuarios de LinkGuard los reportaron esta semana.</item>
+    </plurals>
 </resources>

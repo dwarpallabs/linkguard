@@ -151,4 +151,10 @@
     </plurals>
     <string name="memory_forget_brands">ବ୍ରାଣ୍ଡ ଭୁଲିଯାଆନ୍ତୁ</string>
     <string name="memory_forget_trusted">ୱେବସାଇଟ ଭୁଲିଯାଆନ୍ତୁ</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">ଏହି ୱେବସାଇଟ ଠକେଇ ୱେବସାଇଟଗୁଡ଼ିକର ଏକ ଗୋଷ୍ଠୀର ଅଂଶ ଭଳି ଲାଗୁଛି। ଏହି ସପ୍ତାହରେ %d ଜଣ LinkGuard ବ୍ୟବହାରକାରୀ ଏଗୁଡ଼ିକୁ ରିପୋର୍ଟ କରିଛନ୍ତି।</item>
+        <item quantity="other">ଏହି ୱେବସାଇଟ ଠକେଇ ୱେବସାଇଟଗୁଡ଼ିକର ଏକ ଗୋଷ୍ଠୀର ଅଂଶ ଭଳି ଲାଗୁଛି। ଏହି ସପ୍ତାହରେ %d ଜଣ LinkGuard ବ୍ୟବହାରକାରୀ ଏଗୁଡ଼ିକୁ ରିପୋର୍ଟ କରିଛନ୍ତି।</item>
+    </plurals>
 </resources>

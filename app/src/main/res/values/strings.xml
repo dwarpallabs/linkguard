@@ -151,4 +151,10 @@
     </plurals>
     <string name="memory_forget_brands">Forget brands</string>
     <string name="memory_forget_trusted">Forget websites</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">This website looks like part of a group of scam websites. %d LinkGuard user reported them this week.</item>
+        <item quantity="other">This website looks like part of a group of scam websites. %d LinkGuard users reported them this week.</item>
+    </plurals>
 </resources>

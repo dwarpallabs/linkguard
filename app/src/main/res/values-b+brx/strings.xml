@@ -151,4 +151,10 @@
     </plurals>
     <string name="memory_forget_brands">ब्रान्डफोरखौ बावगार</string>
     <string name="memory_forget_trusted">वेबसाइटफोरखौ बावगार</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">बे वेबसाइटआ थगनाय वेबसाइटफोरनि मोनसे दलनि बाहागो बादि नुयो। बे हप्ताआव %d LinkGuard बाहायग्राया बेफोरनि सायाव नालिस खालामदों।</item>
+        <item quantity="other">बे वेबसाइटआ थगनाय वेबसाइटफोरनि मोनसे दलनि बाहागो बादि नुयो। बे हप्ताआव %d LinkGuard बाहायग्राया बेफोरनि सायाव नालिस खालामदों।</item>
+    </plurals>
 </resources>

@@ -7,6 +7,7 @@ All notable changes to LinkGuard. Versions follow the GitHub releases.
 ### Added
 - **Check with LinkGuard** in the share sheet: share any message to LinkGuard to see a verdict for every link in it, including `wa.me`, `t.me` and UPI payment links, links glued to Hindi or Tamil words, and links broken up with invisible characters. Each result can be copied (website name only) or reported. The message itself never leaves the phone.
 - A tip on the home screen explains how to check a message.
+- **Scam campaigns**: websites that share their hosting or page with a confirmed scam website, and that several people reported, now get the strong warning: "This website looks like part of a group of scam websites. 7 LinkGuard users reported them this week."
 - **Trusted by me**: a website you answered *No, it was fine* about no longer gets the mild *Be careful* warning. It still gets every strong, app-download and UPI warning.
 - **Your banks and apps**: after you open a brand's real website three times, a fake of it gets a stronger warning that says you use it ("You use SBI…"). Both are learned only on the phone, stored as scrambled fingerprints, never sent, and can be cleared in Settings under *Learned on this phone*.
 

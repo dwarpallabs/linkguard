@@ -151,4 +151,10 @@
     </plurals>
     <string name="memory_forget_brands">ব্ৰেণ্ড পাহৰক</string>
     <string name="memory_forget_trusted">ৱেবছাইট পাহৰক</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">এই ৱেবছাইটটো প্ৰতাৰণাৰ ৱেবছাইটৰ এটা দলৰ অংশ যেন লাগিছে। এই সপ্তাহত %d জন LinkGuard ব্যৱহাৰকাৰীয়ে এইবোৰৰ ৰিপ’ৰ্ট কৰিছে।</item>
+        <item quantity="other">এই ৱেবছাইটটো প্ৰতাৰণাৰ ৱেবছাইটৰ এটা দলৰ অংশ যেন লাগিছে। এই সপ্তাহত %d জন LinkGuard ব্যৱহাৰকাৰীয়ে এইবোৰৰ ৰিপ’ৰ্ট কৰিছে।</item>
+    </plurals>
 </resources>

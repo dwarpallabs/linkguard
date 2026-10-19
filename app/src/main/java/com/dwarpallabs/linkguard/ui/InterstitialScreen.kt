@@ -233,6 +233,8 @@ internal fun reasonText(reason: Reason): String = when (reason) {
         ?: stringResource(R.string.warn_weird_host)
     Reason.Reputation -> stringResource(R.string.warn_reputation)
     is Reason.Community -> pluralStringResource(R.plurals.warn_community, reason.count, reason.count)
+    is Reason.Campaign -> pluralStringResource(R.plurals.warn_campaign, reason.count, reason.count)
+
     is Reason.DomainAge -> pluralStringResource(R.plurals.warn_domain_age, reason.days, reason.days)
     Reason.Generic -> stringResource(R.string.warn_generic)
 }

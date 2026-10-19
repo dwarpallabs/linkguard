@@ -171,4 +171,14 @@
     </plurals>
     <string name="memory_forget_brands">انسَ البنوك والتطبيقات</string>
     <string name="memory_forget_trusted">انسَ المواقع</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="zero">يبدو أن هذا الموقع جزء من مجموعة مواقع احتيال. أبلغ عنها %d من مستخدمي LinkGuard هذا الأسبوع.</item>
+        <item quantity="one">يبدو أن هذا الموقع جزء من مجموعة مواقع احتيال. أبلغ عنها %d من مستخدمي LinkGuard هذا الأسبوع.</item>
+        <item quantity="two">يبدو أن هذا الموقع جزء من مجموعة مواقع احتيال. أبلغ عنها %d من مستخدمي LinkGuard هذا الأسبوع.</item>
+        <item quantity="few">يبدو أن هذا الموقع جزء من مجموعة مواقع احتيال. أبلغ عنها %d من مستخدمي LinkGuard هذا الأسبوع.</item>
+        <item quantity="many">يبدو أن هذا الموقع جزء من مجموعة مواقع احتيال. أبلغ عنها %d من مستخدمي LinkGuard هذا الأسبوع.</item>
+        <item quantity="other">يبدو أن هذا الموقع جزء من مجموعة مواقع احتيال. أبلغ عنها %d من مستخدمي LinkGuard هذا الأسبوع.</item>
+    </plurals>
 </resources>

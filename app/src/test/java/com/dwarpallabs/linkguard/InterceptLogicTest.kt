@@ -154,6 +154,15 @@ class InterceptLogicTest {
     }
 
     @Test
+    fun campaignVerdictIsAStrongCampaignReason() {
+        val h = com.dwarpallabs.linkguard.core.sha256Hex("lg-campaign-one.example")
+        val engine = LinkEngine(data, null, null, reputation = { _, _ -> ServerVerdicts(campaign = mapOf(h to 7)) })
+        val model = InterstitialModel.from(engine.evaluate("http://lg-campaign-one.example/kyc"))
+        assertEquals(Reason.Campaign(7), model.reason)
+        assertTrue(model.strong)
+    }
+
+    @Test
     fun communityVerdictBecomesSoftCommunityReason() {
         val h = sha256Hex("lg-reported-three.example")
         val engine = LinkEngine(data, null, null, reputation = { _, _ -> ServerVerdicts(reported = mapOf(h to 3)) })

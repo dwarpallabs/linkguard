@@ -150,4 +150,10 @@
     </plurals>
     <string name="memory_forget_brands">ब्रँड विसरात</string>
     <string name="memory_forget_trusted">वेबसायटी विसरात</string>
+
+    <!-- Warning reason: the website belongs to a confirmed group of scam websites (roadmap A7). %d = people who reported the group. -->
+    <plurals name="warn_campaign">
+        <item quantity="one">ही वेबसायट फटोवपी वेबसायटींच्या एका गटाचो भाग दिसता. ह्या सप्तकांत %d LinkGuard वापरप्यान हांची तक्रार केल्या.</item>
+        <item quantity="other">ही वेबसायट फटोवपी वेबसायटींच्या एका गटाचो भाग दिसता. ह्या सप्तकांत %d LinkGuard वापरप्यांनी हांची तक्रार केल्या.</item>
+    </plurals>
 </resources>

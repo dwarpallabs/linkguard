@@ -1,0 +1,9 @@
+# Test-only campaign fixture: registrable domain<TAB>distinct reporters across its campaign this week.
+# The real campaigns are computed by the LinkGuard server (roadmap A7). Allowlisted domains are listed
+# here on purpose: the phone must still never warn about them.
+lg-campaign-one.example	7
+lg-campaign-two.example	7
+lg-campaign-three.example	12
+flipkart.com	5
+youtube.com	5
+rbi.org.in	5
