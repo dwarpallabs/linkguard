@@ -1,0 +1,60 @@
+name: Publish data
+
+# Daily public dataset (roadmap A3): scam websites confirmed by Dwarpal Labs plus PhishDestroy (MIT),
+# 48 hours delayed and expiring after 30 days, as a release of dwarpallabs/linkguard-data (ODbL 1.0).
+# Never published: unconfirmed community reports, URLhaus entries, dismissed or allowlisted sites.
+# The release files are the publication; this log prints counts only.
+on:
+  schedule:
+    - cron: "30 22 * * *" # 04:00 IST, an hour after the Feeds run
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-data
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+
+      - name: Build today's files
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          LINKGUARD_D1_ID: ${{ vars.LINKGUARD_D1_ID }}
+        run: ./gradlew :feeds:run --args="publish $RUNNER_TEMP/data" --console=plain -q
+
+      # DATA_REPO_TOKEN: a fine-grained token limited to dwarpallabs/linkguard-data, Contents: read and write.
+      - name: Publish a release
+        env:
+          GH_TOKEN: ${{ secrets.DATA_REPO_TOKEN }}
+          DIR: ${{ runner.temp }}/data
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::notice::DATA_REPO_TOKEN is not set, so nothing was published."
+            exit 0
+          fi
+          if [ -f "$DIR/unchanged" ]; then
+            echo "Nothing changed since the latest release."
+            exit 0
+          fi
+          tag=$(TZ=Asia/Kolkata date +%F)
+          if gh release view "$tag" --repo dwarpallabs/linkguard-data >/dev/null 2>&1; then
+            tag="$tag-$(TZ=Asia/Kolkata date +%H%M)"
+          fi
+          gh release create "$tag" \
+            "$DIR/confirmed.txt" "$DIR/latest.json" "$DIR/CHANGELOG.md" "$DIR/reports-summary.json" \
+            --repo dwarpallabs/linkguard-data --latest --title "$tag" \
+            --notes "Scam websites confirmed by LinkGuard on $tag. How to use and credit the data: see the README." >/dev/null
+          echo "Published release $tag."
