@@ -15,6 +15,9 @@ All notable changes to LinkGuard. Versions follow the GitHub releases.
 ### Data
 - Scam websites confirmed by LinkGuard are now published daily at [dwarpallabs/linkguard-data](https://github.com/dwarpallabs/linkguard-data) (ODbL 1.0), 48 hours after confirmation, with weekly report counts per brand. Unconfirmed reports and the links people open are never published.
 
+### Fixed
+- Android 15 and newer: the *Send report* button no longer hides under the keyboard on the *Report a link* screen. LinkGuard now draws edge-to-edge from the first frame on every screen and no longer uses the system-bar colour settings that Android 15 deprecated.
+
 ## 0.3.2 — 2026-10-19
 
 ### Added

@@ -39,6 +39,10 @@ class LinkInterceptActivity : ComponentActivity() {
     private var composed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Edge-to-edge from the first frame on every Android version (it is forced from Android 15):
+        // transparent system bars on the invisible translucent window, and the warning screen pads
+        // for the bars itself. This replaces the theme's deprecated statusBarColor/navigationBarColor.
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         if (!start(intent)) return
         lifecycleScope.launch {
@@ -58,8 +62,8 @@ class LinkInterceptActivity : ComponentActivity() {
     private fun showUi() {
         if (composed) return
         composed = true
-        enableEdgeToEdge()
         setContent {
+
             val state by viewModel.state.collectAsState()
             when (val s = state) {
                 State.Checking, is State.Forward -> Unit
