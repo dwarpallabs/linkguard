@@ -207,4 +207,7 @@
     <string name="brand_tip_body">%1$s ની સાચી વેબસાઇટ %2$s છે. હવે પછી, મેસેજમાં આવેલી લિંક પર ટૅપ કરવાને બદલે, તે જાતે ટાઇપ કરો અથવા %1$s ઍપ ખોલો.</string>
     <string name="brand_tip_body_no_site">હવે પછી, મેસેજમાં આવેલી લિંક પર ટૅપ કરવાને બદલે, %1$s ઍપ ખોલો અથવા તેની સાચી વેબસાઇટ જાતે ટાઇપ કરો.</string>
     <string name="brand_tip_done">થઈ ગયું</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s એ આ છેતરપિંડી હોવાની પુષ્ટિ કરી છે.</string>
 </resources>

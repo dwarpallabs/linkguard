@@ -200,4 +200,7 @@
     <string name="brand_tip_body">%1$s 真正的网站是 %2$s。下次请自己输入这个网站，或打开 %1$s 应用，不要点消息里的链接。</string>
     <string name="brand_tip_body_no_site">下次请打开 %1$s 应用，或自己输入它真正的网站，不要点消息里的链接。</string>
     <string name="brand_tip_done">完成</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s 已确认这是诈骗。</string>
 </resources>

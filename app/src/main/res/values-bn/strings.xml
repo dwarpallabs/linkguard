@@ -206,4 +206,7 @@
     <string name="brand_tip_body">%1$s-এর আসল ওয়েবসাইট হলো %2$s। পরের বার মেসেজে আসা লিংকে ট্যাপ না করে নিজেই এটা লিখুন, বা %1$s অ্যাপ খুলুন।</string>
     <string name="brand_tip_body_no_site">পরের বার মেসেজে আসা লিংকে ট্যাপ না করে %1$s অ্যাপ খুলুন, বা এর আসল ওয়েবসাইট নিজেই লিখুন।</string>
     <string name="brand_tip_done">হয়ে গেছে</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s এটাকে প্রতারণা বলে নিশ্চিত করেছে।</string>
 </resources>

@@ -205,4 +205,7 @@
     <string name="brand_tip_body">%1$s इत्यस्य वास्तविकं जालस्थानं %2$s अस्ति। अग्रिमवारं सन्देशे आगतस्य लिङ्कस्य स्पर्शनस्य स्थाने, तत् स्वयं लिखतु अथवा %1$s ऐप् उद्घाटयतु।</string>
     <string name="brand_tip_body_no_site">अग्रिमवारं सन्देशे आगतस्य लिङ्कस्य स्पर्शनस्य स्थाने, %1$s ऐप् उद्घाटयतु अथवा तस्य वास्तविकं जालस्थानं स्वयं लिखतु।</string>
     <string name="brand_tip_done">सम्पन्नम्</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s इत्यनेन एषा वञ्चना इति निश्चितम्।</string>
 </resources>

@@ -207,4 +207,7 @@
     <string name="brand_tip_body">%1$s ची खरी वेबसाइट %2$s आहे. पुढच्या वेळी, मेसेजमधील लिंकवर टॅप करण्याऐवजी, ती स्वतः टाइप करा किंवा %1$s ॲप उघडा.</string>
     <string name="brand_tip_body_no_site">पुढच्या वेळी, मेसेजमधील लिंकवर टॅप करण्याऐवजी, %1$s ॲप उघडा किंवा त्याची खरी वेबसाइट स्वतः टाइप करा.</string>
     <string name="brand_tip_done">झाले</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">ही फसवणूक असल्याची %1$s ने खात्री केली आहे.</string>
 </resources>

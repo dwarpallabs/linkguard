@@ -206,4 +206,7 @@
     <string name="brand_tip_body">%1$s سُنٛز اصلی ویب سایٹ چھےٚ %2$s۔ بیٚیہِ لٹہِ، میسجس منٛز آمتِس لِنکس پؠٹھ ٹیپ کرنہٕ بجاے، کٔرِو یہِ پانہٕ ٹائپ یا کٔرِو %1$s ایپ یَلہٕ۔</string>
     <string name="brand_tip_body_no_site">بیٚیہِ لٹہِ، میسجس منٛز آمتِس لِنکس پؠٹھ ٹیپ کرنہٕ بجاے، کٔرِو %1$s ایپ یَلہٕ یا کٔرِو اَمہِ سُنٛز اصلی ویب سایٹ پانہٕ ٹائپ۔</string>
     <string name="brand_tip_done">مُکمل</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s کوٚر تصدیق زِ یہِ چھُ دوکھہٕ۔</string>
 </resources>

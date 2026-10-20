@@ -206,4 +206,7 @@
     <string name="brand_tip_body">%1$s नि थार वेबसाइटआ %2$s। उनाव समाव मेसेजआव फैनाय लिंकआव टेप खालामनायनि सोलायाव, बेखौ गावनो लिर एबा %1$s एपखौ खेव।</string>
     <string name="brand_tip_body_no_site">उनाव समाव मेसेजआव फैनाय लिंकआव टेप खालामनायनि सोलायाव, %1$s एपखौ खेव एबा बेनि थार वेबसाइटखौ गावनो लिर।</string>
     <string name="brand_tip_done">जादों</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s आ बेखौ थगनाय महरै थार खालामदों।</string>
 </resources>

@@ -17,15 +17,18 @@ data class ServerVerdicts(
      * reported by several users): distinct reporters across the whole campaign this week.
      */
     val campaign: Map<String, Int> = emptyMap(),
+    /** Who confirmed a blocked domain, when a partner did ("HDFC Bank"); shown as "Confirmed by …". */
+    val sources: Map<String, String> = emptyMap(),
 ) {
     fun forPrefix(prefix: String) = ServerVerdicts(
         blocked.filter { it.startsWith(prefix) }.toSet(),
         reported.filterKeys { it.startsWith(prefix) },
         campaign.filterKeys { it.startsWith(prefix) },
+        sources.filterKeys { it.startsWith(prefix) },
     )
 
     operator fun plus(other: ServerVerdicts) =
-        ServerVerdicts(blocked + other.blocked, reported + other.reported, campaign + other.campaign)
+        ServerVerdicts(blocked + other.blocked, reported + other.reported, campaign + other.campaign, sources + other.sources)
 
     companion object {
         /**
@@ -37,6 +40,7 @@ data class ServerVerdicts(
             val blocked = HashSet<String>()
             val reported = HashMap<String, Int>()
             val campaign = HashMap<String, Int>()
+            val sources = HashMap<String, String>()
             for (line in body.lineSequence()) {
                 val fields = line.trim().split('\t')
                 val hash = fields[0]
@@ -45,11 +49,15 @@ data class ServerVerdicts(
                     null, "block" -> blocked += hash
                     "reported" -> fields.getOrNull(2)?.toIntOrNull()?.takeIf { it > 0 }?.let { reported[hash] = it }
                     "campaign" -> fields.getOrNull(2)?.toIntOrNull()?.takeIf { it > 0 }?.let { campaign[hash] = it }
+                    "source" -> fields.getOrNull(2)?.let(::cleanSource)?.let { sources[hash] = it }
                 }
             }
-            return ServerVerdicts(blocked, reported, campaign)
-
+            return ServerVerdicts(blocked, reported, campaign, sources)
         }
+
+        /** A partner's name as the phone shows it: printable, one line, at most 60 characters. */
+        private fun cleanSource(raw: String): String? =
+            raw.filter { !it.isISOControl() }.trim().take(60).takeIf { it.isNotEmpty() }
     }
 }
 

@@ -212,4 +212,7 @@
     <string name="brand_tip_body">O site de verdade de %1$s é %2$s. Da próxima vez, digite o site você mesmo ou abra o app de %1$s, em vez de tocar num link de mensagem.</string>
     <string name="brand_tip_body_no_site">Da próxima vez, abra o app de %1$s ou digite você mesmo o site de verdade, em vez de tocar num link de mensagem.</string>
     <string name="brand_tip_done">Pronto</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s confirmou que é um golpe.</string>
 </resources>
