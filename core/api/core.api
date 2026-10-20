@@ -1,0 +1,455 @@
+public final class com/dwarpallabs/linkguard/core/AllowlistBundle {
+	public static final field INSTANCE Lcom/dwarpallabs/linkguard/core/AllowlistBundle;
+	public final fun parse (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/AllowlistBundle$Parsed;
+	public final fun publicKey (Ljava/lang/String;)Ljava/security/PublicKey;
+	public final fun verifyAndParse (Ljava/lang/String;Ljava/lang/String;Ljava/security/PublicKey;)Lcom/dwarpallabs/linkguard/core/AllowlistBundle$Parsed;
+}
+
+public final class com/dwarpallabs/linkguard/core/AllowlistBundle$Parsed {
+	public fun <init> (Ljava/lang/String;Ljava/util/Set;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Set;
+	public final fun copy (Ljava/lang/String;Ljava/util/Set;)Lcom/dwarpallabs/linkguard/core/AllowlistBundle$Parsed;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/AllowlistBundle$Parsed;Ljava/lang/String;Ljava/util/Set;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/AllowlistBundle$Parsed;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHashes ()Ljava/util/Set;
+	public final fun getVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/Brand {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/Brand$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Lcom/dwarpallabs/linkguard/core/Brand;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/Brand;Ljava/lang/String;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/Brand;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getKeywords ()Ljava/util/List;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getOfficialDomains ()Ljava/util/List;
+	public fun hashCode ()I
+	public final fun owns (Ljava/lang/String;Ljava/lang/String;)Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/Brand$Companion {
+	public final fun parseTsv (Lkotlin/sequences/Sequence;)Ljava/util/List;
+}
+
+public final class com/dwarpallabs/linkguard/core/Budget {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/Budget$Companion;
+	public static final field MIN_LOOKUP_MS J
+	public fun <init> (JJJ)V
+	public synthetic fun <init> (JJJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()J
+	public final fun component2 ()J
+	public final fun component3 ()J
+	public final fun copy (JJJ)Lcom/dwarpallabs/linkguard/core/Budget;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/Budget;JJJILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/Budget;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLookupMs ()J
+	public final fun getNormalMs ()J
+	public final fun getShortenerMs ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/Budget$Companion {
+	public final fun getINTERACTIVE ()Lcom/dwarpallabs/linkguard/core/Budget;
+	public final fun getUNLIMITED ()Lcom/dwarpallabs/linkguard/core/Budget;
+}
+
+public abstract interface class com/dwarpallabs/linkguard/core/Check {
+	public abstract fun run (Lcom/dwarpallabs/linkguard/core/NormalisedUrl;)Lcom/dwarpallabs/linkguard/core/Signal;
+}
+
+public final class com/dwarpallabs/linkguard/core/CheckId : java/lang/Enum {
+	public static final field ALLOWLIST Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static final field APK_DOWNLOAD Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static final field BRAND_LOOKALIKE Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static final field DOMAIN_AGE Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static final field MANAGED Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static final field REPUTATION Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static final field UNWRAP Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static final field UPI_INTENT Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static final field WEIRD_HOST Lcom/dwarpallabs/linkguard/core/CheckId;
+	public final fun getCode ()Ljava/lang/String;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/CheckId;
+	public static fun values ()[Lcom/dwarpallabs/linkguard/core/CheckId;
+}
+
+public final class com/dwarpallabs/linkguard/core/DomainListSource : com/dwarpallabs/linkguard/core/ListSource {
+	public fun <init> (Ljava/util/Collection;Ljava/util/Collection;)V
+	public fun opinion (Ljava/lang/String;Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/Opinion;
+}
+
+public final class com/dwarpallabs/linkguard/core/EngineData {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/EngineData$Companion;
+	public fun <init> (Lcom/dwarpallabs/linkguard/core/PublicSuffixList;Lcom/dwarpallabs/linkguard/core/LayeredLists;Ljava/util/List;Ljava/util/Set;Ljava/util/Set;Ljava/util/Set;Lkotlin/jvm/functions/Function0;)V
+	public final fun getBrands ()Ljava/util/List;
+	public final fun getFileHosts ()Ljava/util/Set;
+	public final fun getFreeTlds ()Ljava/util/Set;
+	public final fun getLists ()Lcom/dwarpallabs/linkguard/core/LayeredLists;
+	public final fun getPsl ()Lcom/dwarpallabs/linkguard/core/PublicSuffixList;
+	public final fun getRdapServers ()Ljava/util/Map;
+	public final fun getShorteners ()Ljava/util/Set;
+}
+
+public final class com/dwarpallabs/linkguard/core/EngineData$Companion {
+	public final fun getRESTRICTED_SUFFIXES ()Ljava/util/List;
+	public final fun loadBundled (Ljava/util/List;Lcom/dwarpallabs/linkguard/core/HashedAllowlist;)Lcom/dwarpallabs/linkguard/core/EngineData;
+	public static synthetic fun loadBundled$default (Lcom/dwarpallabs/linkguard/core/EngineData$Companion;Ljava/util/List;Lcom/dwarpallabs/linkguard/core/HashedAllowlist;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/EngineData;
+}
+
+public final class com/dwarpallabs/linkguard/core/HashedAllowlist : com/dwarpallabs/linkguard/core/ListSource {
+	public fun <init> ()V
+	public final fun getSize ()I
+	public final fun getVersion ()Ljava/lang/String;
+	public fun opinion (Ljava/lang/String;Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/Opinion;
+	public final fun replace (Ljava/lang/String;Ljava/util/Set;)V
+}
+
+public abstract interface class com/dwarpallabs/linkguard/core/Http {
+	public abstract fun get (Ljava/lang/String;Ljava/lang/String;IILjava/util/Map;)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+	public static synthetic fun get$default (Lcom/dwarpallabs/linkguard/core/Http;Ljava/lang/String;Ljava/lang/String;IILjava/util/Map;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+	public abstract fun head (Ljava/lang/String;I)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+	public fun post (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+}
+
+public final class com/dwarpallabs/linkguard/core/Http$DefaultImpls {
+	public static synthetic fun get$default (Lcom/dwarpallabs/linkguard/core/Http;Ljava/lang/String;Ljava/lang/String;IILjava/util/Map;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+	public static fun post (Lcom/dwarpallabs/linkguard/core/Http;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+}
+
+public final class com/dwarpallabs/linkguard/core/HttpReputationLookup : com/dwarpallabs/linkguard/core/ReputationLookup {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/HttpReputationLookup$Companion;
+	public static final field PREFIX_LENGTH I
+	public fun <init> (Lcom/dwarpallabs/linkguard/core/Http;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Lcom/dwarpallabs/linkguard/core/Http;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun lookup (Ljava/util/List;I)Lcom/dwarpallabs/linkguard/core/ServerVerdicts;
+}
+
+public final class com/dwarpallabs/linkguard/core/HttpReputationLookup$Companion {
+}
+
+public final class com/dwarpallabs/linkguard/core/HttpResponse {
+	public fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/util/Map;
+	public final fun copy (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/HttpResponse;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBody ()Ljava/lang/String;
+	public final fun getContentType ()Ljava/lang/String;
+	public final fun getHeaders ()Ljava/util/Map;
+	public final fun getLocation ()Ljava/lang/String;
+	public final fun getStatus ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface annotation class com/dwarpallabs/linkguard/core/InternalLinkGuardApi : java/lang/annotation/Annotation {
+}
+
+public final class com/dwarpallabs/linkguard/core/LayeredLists {
+	public fun <init> (Ljava/util/List;)V
+	public final fun opinion (Ljava/lang/String;Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/Opinion;
+}
+
+public final class com/dwarpallabs/linkguard/core/LinkEngine {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/LinkEngine$Companion;
+	public static final field MANAGED_BLOCK_MESSAGE Ljava/lang/String;
+	public static final field MANAGED_BLOCK_SCORE D
+	public static final field MY_BRAND_BOOST D
+	public static final field MY_BRAND_MESSAGE Ljava/lang/String;
+	public fun <init> (Lcom/dwarpallabs/linkguard/core/EngineData;Lcom/dwarpallabs/linkguard/core/Http;Lcom/dwarpallabs/linkguard/core/checks/RegistrationDates;Lcom/dwarpallabs/linkguard/core/ReputationLookup;Lkotlin/jvm/functions/Function0;)V
+	public synthetic fun <init> (Lcom/dwarpallabs/linkguard/core/EngineData;Lcom/dwarpallabs/linkguard/core/Http;Lcom/dwarpallabs/linkguard/core/checks/RegistrationDates;Lcom/dwarpallabs/linkguard/core/ReputationLookup;Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun evaluate (Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/Budget;Ljava/util/Set;Ljava/util/Set;Lcom/dwarpallabs/linkguard/core/ManagedPolicy;)Lcom/dwarpallabs/linkguard/core/Verdict;
+	public static synthetic fun evaluate$default (Lcom/dwarpallabs/linkguard/core/LinkEngine;Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/Budget;Ljava/util/Set;Ljava/util/Set;Lcom/dwarpallabs/linkguard/core/ManagedPolicy;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/Verdict;
+	public final fun isShortener (Ljava/lang/String;)Z
+	public final fun ownerBrand (Lcom/dwarpallabs/linkguard/core/NormalisedUrl;)Lcom/dwarpallabs/linkguard/core/Brand;
+}
+
+public final class com/dwarpallabs/linkguard/core/LinkEngine$Companion {
+}
+
+public final class com/dwarpallabs/linkguard/core/LinkExtractor {
+	public static final field INSTANCE Lcom/dwarpallabs/linkguard/core/LinkExtractor;
+	public static final field MAX_LINKS I
+	public final fun extract (Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/PublicSuffixList;I)Lcom/dwarpallabs/linkguard/core/LinkExtractor$Result;
+	public static synthetic fun extract$default (Lcom/dwarpallabs/linkguard/core/LinkExtractor;Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/PublicSuffixList;IILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/LinkExtractor$Result;
+}
+
+public final class com/dwarpallabs/linkguard/core/LinkExtractor$Result {
+	public fun <init> (Ljava/util/List;Z)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Z
+	public final fun copy (Ljava/util/List;Z)Lcom/dwarpallabs/linkguard/core/LinkExtractor$Result;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/LinkExtractor$Result;Ljava/util/List;ZILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/LinkExtractor$Result;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLinks ()Ljava/util/List;
+	public final fun getMore ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/dwarpallabs/linkguard/core/ListSource {
+	public abstract fun opinion (Ljava/lang/String;Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/Opinion;
+}
+
+public final class com/dwarpallabs/linkguard/core/ListsKt {
+	public static final fun sha256Hex (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/ManagedPolicy {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/ManagedPolicy$Companion;
+	public static final field MAX_ENTRIES I
+	public fun <init> ()V
+	public fun <init> (Ljava/util/Collection;Ljava/util/Collection;Z)V
+	public synthetic fun <init> (Ljava/util/Collection;Ljava/util/Collection;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun allows (Lcom/dwarpallabs/linkguard/core/NormalisedUrl;)Z
+	public final fun blocks (Lcom/dwarpallabs/linkguard/core/NormalisedUrl;)Z
+	public final fun disabled (Ljava/util/Set;)Ljava/util/Set;
+	public final fun getAllowedCount ()I
+	public final fun getBlockedCount ()I
+	public final fun getKeepChecksOn ()Z
+	public final fun isActive ()Z
+}
+
+public final class com/dwarpallabs/linkguard/core/ManagedPolicy$Companion {
+	public final fun getNONE ()Lcom/dwarpallabs/linkguard/core/ManagedPolicy;
+	public final fun parseList (Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/PublicSuffixList;)Ljava/util/List;
+}
+
+public final class com/dwarpallabs/linkguard/core/MemoryCachedReputation : com/dwarpallabs/linkguard/core/ReputationLookup {
+	public fun <init> (Lcom/dwarpallabs/linkguard/core/ReputationLookup;JLkotlin/jvm/functions/Function0;I)V
+	public synthetic fun <init> (Lcom/dwarpallabs/linkguard/core/ReputationLookup;JLkotlin/jvm/functions/Function0;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun lookup (Ljava/util/List;I)Lcom/dwarpallabs/linkguard/core/ServerVerdicts;
+}
+
+public final class com/dwarpallabs/linkguard/core/MiniJson {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/MiniJson$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class com/dwarpallabs/linkguard/core/MiniJson$Companion {
+	public final fun parse (Ljava/lang/String;)Ljava/lang/Object;
+}
+
+public final class com/dwarpallabs/linkguard/core/NormalisedUrl {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/NormalisedUrl$Companion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContentType ()Ljava/lang/String;
+	public final fun getDecodedPathAndQuery ()Ljava/lang/String;
+	public final fun getFragment ()Ljava/lang/String;
+	public final fun getHost ()Ljava/lang/String;
+	public final fun getPath ()Ljava/lang/String;
+	public final fun getPort ()I
+	public final fun getPublicSuffix ()Ljava/lang/String;
+	public final fun getQuery ()Ljava/lang/String;
+	public final fun getQueryParams ()Ljava/util/Map;
+	public final fun getRegistrableDomain ()Ljava/lang/String;
+	public final fun getScheme ()Ljava/lang/String;
+	public final fun getSubdomainDepth ()I
+	public final fun getUnicodeHost ()Ljava/lang/String;
+	public final fun getUserInfo ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isIpLiteral ()Z
+	public final fun isUpi ()Z
+	public final fun isWeb ()Z
+	public fun toString ()Ljava/lang/String;
+	public final fun toUrlString ()Ljava/lang/String;
+	public final fun withContentType (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/NormalisedUrl;
+}
+
+public final class com/dwarpallabs/linkguard/core/NormalisedUrl$Companion {
+	public final fun getUPI_SCHEMES ()Ljava/util/Set;
+	public final fun parse (Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/PublicSuffixList;)Lcom/dwarpallabs/linkguard/core/NormalisedUrl;
+}
+
+public final class com/dwarpallabs/linkguard/core/Opinion : java/lang/Enum {
+	public static final field ALLOW Lcom/dwarpallabs/linkguard/core/Opinion;
+	public static final field BLOCK Lcom/dwarpallabs/linkguard/core/Opinion;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/Opinion;
+	public static fun values ()[Lcom/dwarpallabs/linkguard/core/Opinion;
+}
+
+public final class com/dwarpallabs/linkguard/core/PublicSuffixList {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/PublicSuffixList$Companion;
+	public fun <init> (Lkotlin/sequences/Sequence;)V
+	public final fun listedSuffix (Ljava/lang/String;)Ljava/lang/String;
+	public final fun publicSuffix (Ljava/lang/String;)Ljava/lang/String;
+	public final fun registrableDomain (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/PublicSuffixList$Companion {
+	public final fun fromCompact (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/PublicSuffixList;
+}
+
+public final class com/dwarpallabs/linkguard/core/RdapClient : com/dwarpallabs/linkguard/core/checks/RegistrationDates {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/RdapClient$Companion;
+	public fun <init> (Lcom/dwarpallabs/linkguard/core/Http;Ljava/util/Map;I)V
+	public synthetic fun <init> (Lcom/dwarpallabs/linkguard/core/Http;Ljava/util/Map;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun creationDate (Ljava/lang/String;I)Ljava/time/Instant;
+}
+
+public final class com/dwarpallabs/linkguard/core/RdapClient$Companion {
+	public final fun registrationEvent (Ljava/lang/String;)Ljava/time/Instant;
+}
+
+public abstract interface class com/dwarpallabs/linkguard/core/ReputationLookup {
+	public abstract fun lookup (Ljava/util/List;I)Lcom/dwarpallabs/linkguard/core/ServerVerdicts;
+}
+
+public final class com/dwarpallabs/linkguard/core/ServerVerdicts {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/ServerVerdicts$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/Set;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
+	public synthetic fun <init> (Ljava/util/Set;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/Set;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Ljava/util/Map;
+	public final fun component4 ()Ljava/util/Map;
+	public final fun copy (Ljava/util/Set;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lcom/dwarpallabs/linkguard/core/ServerVerdicts;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/ServerVerdicts;Ljava/util/Set;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/ServerVerdicts;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun forPrefix (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/ServerVerdicts;
+	public final fun getBlocked ()Ljava/util/Set;
+	public final fun getCampaign ()Ljava/util/Map;
+	public final fun getReported ()Ljava/util/Map;
+	public final fun getSources ()Ljava/util/Map;
+	public fun hashCode ()I
+	public final fun plus (Lcom/dwarpallabs/linkguard/core/ServerVerdicts;)Lcom/dwarpallabs/linkguard/core/ServerVerdicts;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/ServerVerdicts$Companion {
+	public final fun parse (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/ServerVerdicts;
+}
+
+public final class com/dwarpallabs/linkguard/core/Signal {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/Signal$Companion;
+	public fun <init> (Lcom/dwarpallabs/linkguard/core/CheckId;DLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+	public synthetic fun <init> (Lcom/dwarpallabs/linkguard/core/CheckId;DLjava/lang/String;Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lcom/dwarpallabs/linkguard/core/CheckId;
+	public final fun component2 ()D
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/util/Map;
+	public final fun copy (Lcom/dwarpallabs/linkguard/core/CheckId;DLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lcom/dwarpallabs/linkguard/core/Signal;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/Signal;Lcom/dwarpallabs/linkguard/core/CheckId;DLjava/lang/String;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/Signal;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCheck ()Lcom/dwarpallabs/linkguard/core/CheckId;
+	public final fun getDetails ()Ljava/util/Map;
+	public final fun getFired ()Z
+	public final fun getMessageKey ()Ljava/lang/String;
+	public final fun getReason ()Ljava/lang/String;
+	public final fun getScore ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/Signal$Companion {
+	public final fun none (Lcom/dwarpallabs/linkguard/core/CheckId;)Lcom/dwarpallabs/linkguard/core/Signal;
+}
+
+public final class com/dwarpallabs/linkguard/core/UrlConnectionHttp : com/dwarpallabs/linkguard/core/Http {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun get (Ljava/lang/String;Ljava/lang/String;IILjava/util/Map;)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+	public fun head (Ljava/lang/String;I)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+	public fun post (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Lcom/dwarpallabs/linkguard/core/HttpResponse;
+}
+
+public final class com/dwarpallabs/linkguard/core/Verdict {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/Verdict$Companion;
+	public static final field SOFT_THRESHOLD D
+	public static final field STRONG_THRESHOLD D
+	public fun <init> (DLcom/dwarpallabs/linkguard/core/Verdict$Level;Ljava/util/List;Lcom/dwarpallabs/linkguard/core/NormalisedUrl;)V
+	public final fun component1 ()D
+	public final fun component2 ()Lcom/dwarpallabs/linkguard/core/Verdict$Level;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Lcom/dwarpallabs/linkguard/core/NormalisedUrl;
+	public final fun copy (DLcom/dwarpallabs/linkguard/core/Verdict$Level;Ljava/util/List;Lcom/dwarpallabs/linkguard/core/NormalisedUrl;)Lcom/dwarpallabs/linkguard/core/Verdict;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/Verdict;DLcom/dwarpallabs/linkguard/core/Verdict$Level;Ljava/util/List;Lcom/dwarpallabs/linkguard/core/NormalisedUrl;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/Verdict;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFinalUrl ()Lcom/dwarpallabs/linkguard/core/NormalisedUrl;
+	public final fun getLevel ()Lcom/dwarpallabs/linkguard/core/Verdict$Level;
+	public final fun getScore ()D
+	public final fun getSignals ()Ljava/util/List;
+	public final fun getTop ()Lcom/dwarpallabs/linkguard/core/Signal;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/Verdict$Companion {
+	public final fun levelFor (D)Lcom/dwarpallabs/linkguard/core/Verdict$Level;
+	public final fun of (Ljava/util/List;Lcom/dwarpallabs/linkguard/core/NormalisedUrl;)Lcom/dwarpallabs/linkguard/core/Verdict;
+}
+
+public final class com/dwarpallabs/linkguard/core/Verdict$Level : java/lang/Enum {
+	public static final field SILENT Lcom/dwarpallabs/linkguard/core/Verdict$Level;
+	public static final field SOFT Lcom/dwarpallabs/linkguard/core/Verdict$Level;
+	public static final field STRONG Lcom/dwarpallabs/linkguard/core/Verdict$Level;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/Verdict$Level;
+	public static fun values ()[Lcom/dwarpallabs/linkguard/core/Verdict$Level;
+}
+
+public final class com/dwarpallabs/linkguard/core/checks/BrandMatcher {
+	public static final field Companion Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Companion;
+	public fun <init> (Ljava/util/List;)V
+	public final fun getBrands ()Ljava/util/List;
+	public final fun matchHost (Lcom/dwarpallabs/linkguard/core/NormalisedUrl;)Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Match;
+	public final fun mentionedIn (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/Brand;
+}
+
+public final class com/dwarpallabs/linkguard/core/checks/BrandMatcher$Companion {
+}
+
+public final class com/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind : java/lang/Enum {
+	public static final field DIGIT_SWAP Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;
+	public static final field EXACT Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;
+	public static final field HOMOGRAPH Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;
+	public static final field TYPO Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getReason ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;
+	public static fun values ()[Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;
+}
+
+public final class com/dwarpallabs/linkguard/core/checks/BrandMatcher$Match {
+	public fun <init> (Lcom/dwarpallabs/linkguard/core/Brand;Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;)V
+	public final fun component1 ()Lcom/dwarpallabs/linkguard/core/Brand;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;
+	public final fun copy (Lcom/dwarpallabs/linkguard/core/Brand;Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;)Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Match;
+	public static synthetic fun copy$default (Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Match;Lcom/dwarpallabs/linkguard/core/Brand;Ljava/lang/String;Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;ILjava/lang/Object;)Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Match;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBrand ()Lcom/dwarpallabs/linkguard/core/Brand;
+	public final fun getKeyword ()Ljava/lang/String;
+	public final fun getKind ()Lcom/dwarpallabs/linkguard/core/checks/BrandMatcher$Kind;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/dwarpallabs/linkguard/core/checks/MemoryCachedRegistrationDates : com/dwarpallabs/linkguard/core/checks/RegistrationDates {
+	public fun <init> (Lcom/dwarpallabs/linkguard/core/checks/RegistrationDates;I)V
+	public synthetic fun <init> (Lcom/dwarpallabs/linkguard/core/checks/RegistrationDates;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun creationDate (Ljava/lang/String;I)Ljava/time/Instant;
+}
+
+public abstract interface class com/dwarpallabs/linkguard/core/checks/RegistrationDates {
+	public abstract fun creationDate (Ljava/lang/String;I)Ljava/time/Instant;
+}
+

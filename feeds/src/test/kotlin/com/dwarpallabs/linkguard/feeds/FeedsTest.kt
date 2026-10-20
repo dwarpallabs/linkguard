@@ -99,6 +99,19 @@ class FeedsTest {
         val result = FeedBuilder(data, neverAllow).build(feeds, emptyList())
         assertEquals(mapOf("lg-both.example" to "urlhaus"), result.blockHosts)
         assertEquals(0, result.stats["phishdestroy_block_hosts"])
+        // Still commercial-safe: PhishDestroy lists it too, even though URLhaus was first.
+        assertEquals(setOf("lg-both.example"), result.commercialHosts)
+    }
+
+    @Test
+    fun urlhausOnlyHostsAreNotCommercial() {
+        val feeds = linkedMapOf(
+            "urlhaus" to listOf("http://lg-malware.example/a.apk"),
+            "phishtank" to listOf("http://lg-phish.example/login"),
+        )
+        val result = FeedBuilder(data, neverAllow).build(feeds, emptyList())
+        assertEquals(setOf("lg-phish.example"), result.commercialHosts)
+        assertEquals(1, result.stats["block_hosts_commercial"])
     }
 
     /** Records SQL instead of sending it. */
@@ -123,8 +136,40 @@ class FeedsTest {
         assertTrue("'new-site.example', '${sha256Hex("new-site.example")}', 'feed', $t" in sql)
         assertTrue("DELETE FROM allowlist WHERE source = 'feed' AND domain IN ('old-site.example')" in sql)
         assertFalse("irctc.co.in" in sql)
-        assertTrue("'feed', 'phishdestroy', $t, $t, ${t + ListWriter.EXPIRY_SECONDS})" in sql)
+        assertTrue("'feed', 'phishdestroy', $t, $t, ${t + ListWriter.EXPIRY_SECONDS}, 0)" in sql)
         assertTrue("DELETE FROM blocklist WHERE source = 'feed' AND expires_at < $t" in sql)
+    }
+
+    @Test
+    fun writerSetsTheCommercialFlagOnlyWhereItChanged() {
+        val db = FakeDb()
+        val existing = mapOf(
+            "lg-now-commercial.example" to ListWriter.Listed("feed", "urlhaus", t, commercial = false),
+            "lg-no-longer.example" to ListWriter.Listed("feed", "phishdestroy", t, commercial = true),
+            "lg-unchanged.example" to ListWriter.Listed("feed", "phishdestroy", t, commercial = true),
+            "lg-manual.example" to ListWriter.Listed("manual", null, t, commercial = true),
+        )
+        val hosts = (existing.keys + "lg-new-commercial.example").associateWith { "urlhaus" }
+        val commercial = setOf("lg-now-commercial.example", "lg-unchanged.example", "lg-new-commercial.example")
+        val summary = ListWriter(db, now = { t }).apply(FeedResult(hosts, emptySet(), emptyMap(), commercial), emptyMap(), existing)
+        assertEquals(2, summary.commercialChanged)
+        val sql = db.statements.joinToString("\n")
+        assertTrue("UPDATE blocklist SET commercial = 1 WHERE source = 'feed' AND domain IN ('lg-now-commercial.example')" in sql)
+        assertTrue("UPDATE blocklist SET commercial = 0 WHERE source = 'feed' AND domain IN ('lg-no-longer.example')" in sql)
+        assertTrue("'lg-new-commercial.example'" in sql && ", 1)" in sql)
+        assertFalse("lg-unchanged.example" in sql)
+        assertFalse("lg-manual.example" in sql)
+    }
+
+    @Test
+    fun aMissingCommercialFeedNeverClearsTheFlag() {
+        val db = FakeDb()
+        val existing = mapOf("lg-both.example" to ListWriter.Listed("feed", "urlhaus", t, commercial = true))
+        val result = FeedBuilder(data, neverAllow).build(linkedMapOf("urlhaus" to listOf("http://lg-both.example/a.apk")), emptyList())
+        assertTrue(result.commercialFeedsMissing)
+        val summary = ListWriter(db, now = { t }).apply(result, emptyMap(), existing)
+        assertEquals(0, summary.commercialChanged)
+        assertFalse(db.statements.any { "SET commercial = 0" in it })
     }
 
     @Test

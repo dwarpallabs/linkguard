@@ -10,6 +10,13 @@ data class FeedResult(
     /** Registrable domains to allow, from the top-sites list. */
     val allowDomains: Set<String>,
     val stats: Map<String, Int>,
+    /**
+     * Block hosts that at least one [FeedBuilder.COMMERCIAL_FEEDS] feed lists, whichever feed listed
+     * them first. Only these may be served to paying customers of the keyed lookup tier.
+     */
+    val commercialHosts: Set<String> = emptySet(),
+    /** A commercial-safe feed was not downloaded this run, so [commercialHosts] may be incomplete. */
+    val commercialFeedsMissing: Boolean = false,
 )
 
 /**
@@ -45,6 +52,7 @@ class FeedBuilder(
         val immune = ranked.toSet() + allow + existingAllow + data.brands.flatMap { it.officialDomains }.filterNot { it.startsWith(".") }
         val restrictedSuffixes = EngineData.RESTRICTED_SUFFIXES + data.brands.flatMap { it.officialDomains }.filter { it.startsWith(".") }
         val hosts = LinkedHashMap<String, String>()
+        val commercial = HashSet<String>()
         for ((feed, entries) in feeds) {
             var unparseable = 0
             var skippedShared = 0
@@ -63,6 +71,7 @@ class FeedBuilder(
                 if (shared) { skippedShared++; continue }
                 if (!HOST.matches(host)) { unparseable++; continue }
                 if (hosts.putIfAbsent(host, feed) == null) added++
+                if (feed in COMMERCIAL_FEEDS) commercial += host
             }
             stats["${feed}_entries"] = entries.size
             stats["${feed}_block_hosts"] = added
@@ -70,7 +79,8 @@ class FeedBuilder(
             stats["${feed}_skipped_unparseable"] = unparseable
         }
         stats["block_hosts"] = hosts.size
-        return FeedResult(hosts, allow, stats)
+        stats["block_hosts_commercial"] = commercial.size
+        return FeedResult(hosts, allow, stats, commercial, commercialFeedsMissing = !feeds.keys.containsAll(COMMERCIAL_FEEDS))
     }
 
     companion object {
@@ -79,5 +89,12 @@ class FeedBuilder(
         val DOMAIN = Regex("""^(?=.{1,253}$)([a-z0-9-]{1,63}\.)+[a-z0-9-]{2,63}$""")
         /** Feed names are stored in the database and used in log keys. */
         val FEED_NAME = Regex("""^[a-z][a-z0-9]{1,30}$""")
+
+        /**
+         * Feeds whose terms allow commercial use (feeds/SOURCES.md): PhishDestroy (MIT) and PhishTank
+         * ("free to everyone"). URLhaus is free for not-for-profit use only, so a host only URLhaus
+         * lists is never served to paying customers.
+         */
+        val COMMERCIAL_FEEDS = setOf("phishdestroy", "phishtank")
     }
 }

@@ -44,6 +44,11 @@ jobs:
       - name: Core and feeds tests (includes the corpus)
         run: ./gradlew :core:test :feeds:test --console=plain
 
+      - name: Library API unchanged and publishable (unsigned)
+        run: |
+          ./gradlew :core:checkLegacyAbi :core:publishAllPublicationsToStagingRepository :data:publishAllPublicationsToStagingRepository --console=plain
+          scripts/central_bundle.sh --dry-run
+
       - name: App unit tests, builds and lint
         run: ./gradlew :app:testFossDebugUnitTest :app:assembleFossDebug :app:assemblePlayDebug :app:lintFossDebug --console=plain
 

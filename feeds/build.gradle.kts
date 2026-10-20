@@ -15,6 +15,8 @@ java {
 kotlin {
     compilerOptions {
         jvmTarget.set(JvmTarget.JVM_11)
+        // LinkGuard's own modules may use @InternalLinkGuardApi declarations; library users must opt in.
+        optIn.add("com.dwarpallabs.linkguard.core.InternalLinkGuardApi")
     }
 }
 

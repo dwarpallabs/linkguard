@@ -2,6 +2,17 @@
 
 All notable changes to LinkGuard. Versions follow the GitHub releases.
 
+## Unreleased
+
+### Library
+- **linkguard-core 0.1.0** and **linkguard-data 0.1.0** for Maven Central (`com.dwarpallabs.linkguard`): the app's link checks as a Kotlin/JVM library, offline by default. See `core/README.md`.
+- `HttpReputationLookup` takes an optional API key for the keyed lookup tier.
+- The six checks, `Unwrapper` and `RdapBootstrap` are now internal; `BrandMatcher` and `MiniJson` need `@InternalLinkGuardApi`. The public API is dumped to `core/api/core.api` and checked in CI.
+- Jars carry `LICENSE` and `NOTICE` (Public Suffix List, MPL-2.0; IANA RDAP bootstrap) and build byte-for-byte reproducibly.
+
+### Data
+- The feeds pipeline records which blocklist entries come from sources whose terms allow commercial use (PhishDestroy, PhishTank), even when URLhaus listed them first.
+
 ## 0.4.0 — 2026-10-20
 
 ### Added

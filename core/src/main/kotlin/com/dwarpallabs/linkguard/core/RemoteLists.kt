@@ -72,13 +72,23 @@ fun interface ReputationLookup {
     fun lookup(prefixes: List<String>, timeoutMs: Int): ServerVerdicts?
 }
 
-class HttpReputationLookup(private val http: Http, private val baseUrl: String) : ReputationLookup {
+/**
+ * [ReputationLookup] against a LinkGuard server's `/v1/lookup`. Without [apiKey] it uses the anonymous
+ * endpoint, which is for LinkGuard and non-commercial apps; commercial apps pass the key Dwarpal Labs
+ * issued them, sent as `Authorization: Bearer <key>`.
+ */
+class HttpReputationLookup(
+    private val http: Http,
+    private val baseUrl: String,
+    private val apiKey: String? = null,
+) : ReputationLookup {
 
     override fun lookup(prefixes: List<String>, timeoutMs: Int): ServerVerdicts? {
         require(prefixes.all { it.length == PREFIX_LENGTH && it.all { c -> c in '0'..'9' || c in 'a'..'f' } }) {
             "prefixes must be 8 hex chars"
         }
-        val response = http.get("$baseUrl/v1/lookup?p=${prefixes.joinToString(",")}", "text/plain", timeoutMs, 64 * 1024)
+        val headers = apiKey?.let { mapOf("Authorization" to "Bearer $it") }.orEmpty()
+        val response = http.get("$baseUrl/v1/lookup?p=${prefixes.joinToString(",")}", "text/plain", timeoutMs, 64 * 1024, headers)
             ?: return null
         if (response.status != 200) return null
         return ServerVerdicts.parse(response.body.orEmpty())

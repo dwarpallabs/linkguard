@@ -75,10 +75,12 @@ class ListWriter(
         val blockDeferred: Int,
         val blockExpired: Int,
         val feedsSkipped: List<String>,
+        /** Feed rows whose commercial flag changed this run. */
+        val commercialChanged: Int = 0,
     )
 
     /** One existing blocklist row, as far as the writer cares. */
-    data class Listed(val source: String, val feed: String?, val lastSeen: Long)
+    data class Listed(val source: String, val feed: String?, val lastSeen: Long, val commercial: Boolean = false)
 
     fun existingAllowlist(): Map<String, String> =
         db.query("SELECT domain, source FROM allowlist").associate { it["domain"] as String to it["source"] as String }
@@ -89,10 +91,15 @@ class ListWriter(
         var after = ""
         while (true) {
             val page = db.query(
-                "SELECT domain, source, feed, last_seen FROM blocklist WHERE domain > ${lit(after)} ORDER BY domain LIMIT $PAGE",
+                "SELECT domain, source, feed, last_seen, commercial FROM blocklist WHERE domain > ${lit(after)} ORDER BY domain LIMIT $PAGE",
             )
             for (r in page) {
-                out[r["domain"] as String] = Listed(r["source"] as String, r["feed"] as String?, (r["last_seen"] as? Number)?.toLong() ?: 0L)
+                out[r["domain"] as String] = Listed(
+                    r["source"] as String,
+                    r["feed"] as String?,
+                    (r["last_seen"] as? Number)?.toLong() ?: 0L,
+                    (r["commercial"] as? Number)?.toInt() == 1,
+                )
             }
             if (page.size < PAGE) return out
             after = (page.last()["domain"] as String).also { require(FeedBuilder.HOST.matches(it)) { "unexpected domain in blocklist" } }
@@ -136,10 +143,11 @@ class ListWriter(
         val inserted = fresh.take(maxNew)
         inserted.chunked(BATCH).forEach { chunk ->
             db.query(
-                "INSERT OR IGNORE INTO blocklist (domain, hash, prefix, source, feed, added_at, last_seen, expires_at) VALUES " +
+                "INSERT OR IGNORE INTO blocklist (domain, hash, prefix, source, feed, added_at, last_seen, expires_at, commercial) VALUES " +
                     chunk.joinToString(",") { h ->
                         val hash = hash(host(h))
-                        "(${lit(h)}, '$hash', '${hash.take(8)}', 'feed', ${lit(feed(wanted.getValue(h)))}, $t, $t, $expires)"
+                        val commercial = if (h in result.commercialHosts) 1 else 0
+                        "(${lit(h)}, '$hash', '${hash.take(8)}', 'feed', ${lit(feed(wanted.getValue(h)))}, $t, $t, $expires, $commercial)"
                     },
             )
         }
@@ -152,11 +160,36 @@ class ListWriter(
                     chunk.joinToString(",") { lit(host(it)) } + ")",
             )
         }
+        // Commercial flag: written only where it changed (D1 bills every row written). A host loses it
+        // only when every commercial-safe feed was downloaded and applied today, so a failed download
+        // or a skipped feed never strips it.
+        val commercialSkipped = result.commercialFeedsMissing || skipped.any { it in FeedBuilder.COMMERCIAL_FEEDS }
+        val flags = wanted.keys.mapNotNull { h ->
+            val row = existingBlock[h]?.takeIf { it.source == "feed" } ?: return@mapNotNull null
+            val now = h in result.commercialHosts
+            when {
+                now && !row.commercial -> h to 1
+                !now && row.commercial && !commercialSkipped -> h to 0
+                else -> null
+            }
+        }
+        for (value in listOf(1, 0)) {
+            flags.filter { it.second == value }.map { it.first }.sorted().chunked(BATCH).forEach { chunk ->
+                db.query(
+                    "UPDATE blocklist SET commercial = $value WHERE source = 'feed' AND domain IN (" +
+                        chunk.joinToString(",") { lit(host(it)) } + ")",
+                )
+            }
+        }
+
         val expired = db.query("SELECT COUNT(*) AS n FROM blocklist WHERE source = 'feed' AND expires_at < $t")
             .firstOrNull()?.get("n").let { (it as? Number)?.toInt() ?: 0 }
         if (expired > 0) db.query("DELETE FROM blocklist WHERE source = 'feed' AND expires_at < $t")
 
-        return Summary(toAdd.size, toRemove.size, inserted.size, stale.size, fresh.size - inserted.size, expired, skipped)
+        return Summary(
+            toAdd.size, toRemove.size, inserted.size, stale.size, fresh.size - inserted.size, expired, skipped,
+            commercialChanged = flags.size,
+        )
     }
 
     private fun domain(d: String) = d.also { require(FeedBuilder.DOMAIN.matches(it)) { "invalid domain rejected" } }
