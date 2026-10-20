@@ -181,4 +181,19 @@ class RemoteListsTest {
         assertEquals(7, cache.lookup(listOf(h.take(8)), 100)?.campaign?.get(h))
         assertEquals(1, calls)
     }
+
+    @Test
+    fun partnerSourceIsShownForBlockedDomains() {
+        val h = sha256("lg-partner-scam.example")
+        val v = ServerVerdicts.parse("$h\tblock\n$h\tsource\tHDFC\u0007 Bank Fraud Desk\n${sha256("x.example")}\tsource\t")
+        assertEquals(mapOf(h to "HDFC Bank Fraud Desk"), v.sources)
+        val signal = LinkEngine(TestSupport.data, null, null, reputation = { _, _ -> v })
+            .evaluate("https://lg-partner-scam.example/kyc").signals.first { it.check == CheckId.REPUTATION }
+        assertEquals("warn_reputation", signal.messageKey)
+        assertEquals("HDFC Bank Fraud Desk", signal.details["source"])
+        // Blocked without a partner: no source.
+        val plain = LinkEngine(TestSupport.data, null, null, reputation = { _, _ -> ServerVerdicts(blocked = setOf(h)) })
+            .evaluate("https://lg-partner-scam.example/kyc").signals.first { it.check == CheckId.REPUTATION }
+        assertTrue(plain.details["source"] == null)
+    }
 }

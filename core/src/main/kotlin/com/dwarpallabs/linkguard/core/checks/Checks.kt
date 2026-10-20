@@ -171,7 +171,9 @@ class ReputationCheck(
         val hashes = listOfNotNull(url.host, url.registrableDomain).distinct().map(::sha256)
         val prefixes = hashes.map { it.take(HttpReputationLookup.PREFIX_LENGTH) }.distinct()
         val verdicts = remote.lookup(prefixes, timeoutMs) ?: return Signal.none(CheckId.REPUTATION)
-        if (hashes.any { it in verdicts.blocked }) return blocked()
+        hashes.firstOrNull { it in verdicts.blocked }?.let { hit ->
+            return blocked(hashes.firstNotNullOfOrNull { verdicts.sources[it] } ?: verdicts.sources[hit])
+        }
         hashes.mapNotNull { verdicts.campaign[it] }.maxOrNull()?.let { reporters ->
             return Signal(
                 CheckId.REPUTATION, CAMPAIGN_SCORE, "reputation.campaign", "warn_campaign",
@@ -187,7 +189,12 @@ class ReputationCheck(
         )
     }
 
-    private fun blocked() = Signal(CheckId.REPUTATION, SCORE, "reputation.blocklist", "warn_reputation")
+    /** [source]: the partner that confirmed it ("HDFC Bank"), shown as "Confirmed by …". */
+    private fun blocked(source: String? = null) = Signal(
+        CheckId.REPUTATION, SCORE, "reputation.blocklist", "warn_reputation",
+        source?.let { mapOf("source" to it) }.orEmpty(),
+    )
+
 
     companion object {
         const val SCORE = 0.9

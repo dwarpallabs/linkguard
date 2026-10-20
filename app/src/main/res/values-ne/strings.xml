@@ -206,4 +206,7 @@
     <string name="brand_tip_body">%1$s को साँचो वेबसाइट %2$s हो। अर्को पटक, म्यासेजमा आएको लिंक थिच्नुको सट्टा, यसलाई आफैं टाइप गर्नुहोस् वा %1$s एप खोल्नुहोस्।</string>
     <string name="brand_tip_body_no_site">अर्को पटक, म्यासेजमा आएको लिंक थिच्नुको सट्टा, %1$s एप खोल्नुहोस् वा यसको साँचो वेबसाइट आफैं टाइप गर्नुहोस्।</string>
     <string name="brand_tip_done">भयो</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s ले यो ठगी हो भनेर पुष्टि गरेको छ।</string>
 </resources>

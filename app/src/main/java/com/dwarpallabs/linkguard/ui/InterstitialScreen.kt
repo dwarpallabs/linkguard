@@ -108,7 +108,17 @@ fun InterstitialScreen(
                 modifier = Modifier.testTag("reason"),
             )
 
+            (model.reason as? Reason.Reputation)?.source?.let {
+                Text(
+                    stringResource(R.string.confirmed_by, it),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.testTag("confirmed_by"),
+                )
+            }
+
             if (fromSms) {
+
                 Text(
                     stringResource(R.string.warn_context_sms),
                     style = MaterialTheme.typography.bodyMedium,
@@ -283,7 +293,7 @@ internal fun reasonText(reason: Reason): String = when (reason) {
     }
     is Reason.WeirdHost -> reason.brand?.let { stringResource(R.string.warn_weird_host_brand, it) }
         ?: stringResource(R.string.warn_weird_host)
-    Reason.Reputation -> stringResource(R.string.warn_reputation)
+    is Reason.Reputation -> stringResource(R.string.warn_reputation)
     is Reason.Community -> pluralStringResource(R.plurals.warn_community, reason.count, reason.count)
     is Reason.Campaign -> pluralStringResource(R.plurals.warn_campaign, reason.count, reason.count)
 

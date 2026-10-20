@@ -208,4 +208,7 @@
     <string name="brand_tip_body">%1$s ᱨᱮᱭᱟᱜ ᱥᱟᱹᱨᱤ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱫᱚ %2$s ᱠᱟᱱᱟ ᱾ ᱫᱚᱥᱟᱨ ᱫᱷᱟᱣ ᱢᱮᱥᱮᱡ ᱨᱮ ᱦᱤᱡᱩᱜ ᱞᱤᱝᱠ ᱚᱛᱟ ᱵᱚᱫᱚᱞ ᱨᱮ, ᱚᱱᱟ ᱟᱡ ᱛᱮ ᱚᱞ ᱢᱮ ᱥᱮ %1$s ᱮᱯ ᱡᱷᱤᱡᱤ ᱢᱮ ᱾</string>
     <string name="brand_tip_body_no_site">ᱫᱚᱥᱟᱨ ᱫᱷᱟᱣ ᱢᱮᱥᱮᱡ ᱨᱮ ᱦᱤᱡᱩᱜ ᱞᱤᱝᱠ ᱚᱛᱟ ᱵᱚᱫᱚᱞ ᱨᱮ, %1$s ᱮᱯ ᱡᱷᱤᱡᱤ ᱢᱮ ᱥᱮ ᱚᱱᱟ ᱨᱮᱭᱟᱜ ᱥᱟᱹᱨᱤ ᱣᱮᱵᱥᱟᱭᱤᱴ ᱟᱡ ᱛᱮ ᱚᱞ ᱢᱮ ᱾</string>
     <string name="brand_tip_done">ᱦᱩᱭ ᱮᱱᱟ</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s ᱱᱚᱶᱟ ᱴᱷᱚᱜ ᱠᱟᱱᱟ ᱢᱮᱱᱛᱮ ᱥᱟᱹᱨᱤ ᱞᱮᱫᱼᱟᱭ ᱾</string>
 </resources>

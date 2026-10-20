@@ -204,4 +204,7 @@
     <string name="brand_tip_body">%1$s क असली वेबसाइट %2$s अछि। अगिला बेर, मैसेज मे आएल लिंक दबेबाक बदला, एकरा स्वयं टाइप करू वा %1$s ऐप खोलू।</string>
     <string name="brand_tip_body_no_site">अगिला बेर, मैसेज मे आएल लिंक दबेबाक बदला, %1$s ऐप खोलू वा ओकर असली वेबसाइट स्वयं टाइप करू।</string>
     <string name="brand_tip_done">भऽ गेल</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s एकरा ठकी होएबाक पुष्टि केलक अछि।</string>
 </resources>

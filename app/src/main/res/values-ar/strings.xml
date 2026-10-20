@@ -230,4 +230,7 @@
     <string name="brand_tip_body">موقع %1$s الحقيقي هو %2$s. في المرة القادمة، اكتبه بنفسك أو افتح تطبيق %1$s، بدلًا من الضغط على رابط في رسالة.</string>
     <string name="brand_tip_body_no_site">في المرة القادمة، افتح تطبيق %1$s أو اكتب موقعه الحقيقي بنفسك، بدلًا من الضغط على رابط في رسالة.</string>
     <string name="brand_tip_done">تم</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">أكّد %1$s أن هذا احتيال.</string>
 </resources>

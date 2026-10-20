@@ -201,4 +201,7 @@
     <string name="brand_tip_body">%1$s-இன் உண்மையான இணையதளம் %2$s. அடுத்த முறை, செய்தியில் வரும் இணைப்பைத் தட்டுவதற்குப் பதிலாக, அதை நீங்களே தட்டச்சு செய்யுங்கள் அல்லது %1$s ஆப்பைத் திறங்கள்.</string>
     <string name="brand_tip_body_no_site">அடுத்த முறை, செய்தியில் வரும் இணைப்பைத் தட்டுவதற்குப் பதிலாக, %1$s ஆப்பைத் திறங்கள் அல்லது அதன் உண்மையான இணையதளத்தை நீங்களே தட்டச்சு செய்யுங்கள்.</string>
     <string name="brand_tip_done">முடிந்தது</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">இது மோசடி என்று %1$s உறுதிப்படுத்தியுள்ளது.</string>
 </resources>

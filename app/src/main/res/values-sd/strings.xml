@@ -206,4 +206,7 @@
     <string name="brand_tip_body">%1$s جي اصلي ويب سائيٽ %2$s آهي. ايندڙ دفعي، ميسيج ۾ آيل لنڪ تي ٽيپ ڪرڻ بدران، ان کي پاڻ ٽائيپ ڪريو يا %1$s ايپ کوليو.</string>
     <string name="brand_tip_body_no_site">ايندڙ دفعي، ميسيج ۾ آيل لنڪ تي ٽيپ ڪرڻ بدران، %1$s ايپ کوليو يا ان جي اصلي ويب سائيٽ پاڻ ٽائيپ ڪريو.</string>
     <string name="brand_tip_done">ٿي ويو</string>
+
+    <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
+    <string name="confirmed_by">%1$s تصديق ڪئي آهي ته هي ٺڳي آهي.</string>
 </resources>

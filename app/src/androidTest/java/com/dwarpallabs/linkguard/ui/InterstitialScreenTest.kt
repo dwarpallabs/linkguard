@@ -126,6 +126,19 @@ class InterstitialScreenTest {
     }
 
     @Test
+    fun partnerConfirmationIsNamed() {
+        show(InterstitialModel(true, "lg-partner-scam.example", "lg-partner-scam.example", Reason.Reputation("HDFC Bank")))
+        compose.onNodeWithTag("confirmed_by").assertTextContains(res.getString(R.string.confirmed_by, "HDFC Bank"))
+        compose.onNodeWithTag("reason").assertTextContains(res.getString(R.string.warn_reputation))
+    }
+
+    @Test
+    fun noPartnerNoConfirmedLine() {
+        show(InterstitialModel(true, "lg-test-phish.com", "lg-test-phish.com", Reason.Reputation()))
+        compose.onNodeWithTag("confirmed_by").assertDoesNotExist()
+    }
+
+    @Test
     fun smsLineOnlyWhenTheLinkCameBySms() {
         compose.setContent { LinkguardTheme { InterstitialScreen(brand, {}, {}, fromSms = true) } }
         compose.onNodeWithTag("context_sms").assertTextContains(res.getString(R.string.warn_context_sms))

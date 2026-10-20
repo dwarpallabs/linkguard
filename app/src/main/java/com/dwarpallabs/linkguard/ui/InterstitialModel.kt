@@ -27,7 +27,8 @@ data class InterstitialModel(
             val brand: String? = null,
         ) : Reason
         data class WeirdHost(val brand: String?) : Reason
-        data object Reputation : Reason
+        /** A known scam website. [source]: the partner that confirmed it, if one did. */
+        data class Reputation(val source: String? = null) : Reason
         /** Reported as a scam by [count] distinct LinkGuard users this week. Always a soft warning. */
         data class Community(val count: Int) : Reason
         /** Part of a confirmed group of scam websites that [count] people reported this week. Strong. */
@@ -55,9 +56,10 @@ data class InterstitialModel(
                 )
 
                 "warn_weird_host" -> Reason.WeirdHost(details["brand"])
-                "warn_reputation" -> Reason.Reputation
+                "warn_reputation" -> Reason.Reputation(details["source"])
                 "warn_community" -> details["count"]?.toIntOrNull()?.let { Reason.Community(it) } ?: Reason.Generic
-                "warn_campaign" -> details["count"]?.toIntOrNull()?.let { Reason.Campaign(it) } ?: Reason.Reputation
+                "warn_campaign" -> details["count"]?.toIntOrNull()?.let { Reason.Campaign(it) } ?: Reason.Reputation()
+
 
                 "warn_domain_age" -> details["age_days"]?.toIntOrNull()?.let { Reason.DomainAge(it) } ?: Reason.Generic
                 else -> Reason.Generic
