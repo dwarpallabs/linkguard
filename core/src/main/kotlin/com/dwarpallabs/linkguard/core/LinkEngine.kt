@@ -34,7 +34,8 @@ data class Budget(val normalMs: Long, val shortenerMs: Long, val lookupMs: Long 
 /**
  * Runs every check on a link and returns a [Verdict]. Blocking: call it off the main thread.
  *
- * Order: normalise → (upi: only UpiIntent) → unwrap → ApkDownload → Allowlist (stops on a hit)
+ * Order: normalise → (upi: only UpiIntent) → unwrap → organisation's blocklist (stops on a hit)
+ * → ApkDownload → organisation's and LinkGuard's allowlists (stop on a hit)
  * → BrandLookalike, WeirdHost → Reputation (server, by hash prefix) → DomainAge (RDAP).
  * Verdict = max signal.
  *
@@ -70,14 +71,19 @@ class LinkEngine(
     /**
      * Runs every check on [raw]. [myBrands] are the names of brands the user opens often (learned
      * on the phone, never sent): a lookalike of one of them is warned about more strongly.
+     * [managed] is the organisation's policy, if the phone is managed: its blocked websites get a
+     * strong warning before any other check, its trusted ones are forwarded like allowlisted ones,
+     * and it can keep every check on whatever [disabled] says.
      */
     fun evaluate(
         raw: String,
         budget: Budget = Budget.UNLIMITED,
         disabled: Set<CheckId> = emptySet(),
         myBrands: Set<String> = emptySet(),
+        managed: ManagedPolicy = ManagedPolicy.NONE,
     ): Verdict {
         val start = clock()
+        @Suppress("NAME_SHADOWING") val disabled = managed.disabled(disabled)
         val parsed = NormalisedUrl.parse(raw, data.psl) ?: return Verdict.of(emptyList(), null)
         if (parsed.isUpi) return Verdict.of(listOfNotNull(upiSignal(parsed, disabled)), parsed)
 
@@ -88,7 +94,15 @@ class LinkEngine(
         if (url.isUpi) return Verdict.of(listOfNotNull(unwrapSignal, upiSignal(url, disabled)), url)
 
         val signals = mutableListOf(unwrapSignal)
+        if (managed.blocks(url) || managed.blocks(parsed)) {
+            signals += Signal(CheckId.MANAGED, MANAGED_BLOCK_SCORE, "managed.block", MANAGED_BLOCK_MESSAGE)
+            return Verdict.of(signals, url)
+        }
         if (CheckId.APK_DOWNLOAD !in disabled) signals += apk.run(url)
+        if (managed.allows(url)) {
+            signals += Signal.none(CheckId.MANAGED).copy(reason = "managed.allow")
+            return Verdict.of(signals, url)
+        }
         if (allowlist.isAllowed(url)) {
             signals += allowlist.run(url)
             return Verdict.of(signals, url)
@@ -132,5 +146,11 @@ class LinkEngine(
 
         /** "This website is pretending to be SBI, which you use…" */
         const val MY_BRAND_MESSAGE = "warn_brand_lookalike_mine"
+
+        /** A website the organisation marked as unsafe: a strong warning, still with Open anyway. */
+        const val MANAGED_BLOCK_SCORE = 0.9
+
+        /** "Your organisation has marked this website as unsafe." */
+        const val MANAGED_BLOCK_MESSAGE = "warn_managed_block"
     }
 }

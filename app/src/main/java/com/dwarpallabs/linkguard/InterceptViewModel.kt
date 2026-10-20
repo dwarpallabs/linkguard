@@ -75,9 +75,10 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
         job = viewModelScope.launch {
             val disabled = Prefs(app).disabledChecks
             val budget = Budget.INTERACTIVE
+            val managed = withContext(Dispatchers.IO) { app.managed() }
             val (myBrands, local, isShortener) = withContext(Dispatchers.IO) {
                 val mine = app.myBrands()
-                Triple(mine, app.localEngine.evaluate(raw, disabled = disabled, myBrands = mine), app.engine.isShortener(raw))
+                Triple(mine, app.localEngine.evaluate(raw, disabled = disabled, myBrands = mine, managed = managed), app.engine.isShortener(raw))
             }
             val slowCard = launch {
                 delay(budget.normalMs)
@@ -85,7 +86,7 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
             }
             val hardStop = maxOf(if (isShortener) budget.shortenerMs else budget.normalMs, budget.lookupMs) + HARD_STOP_MARGIN_MS
             val full = withTimeoutOrNull(hardStop) {
-                withContext(Dispatchers.IO) { runInterruptible { app.engine.evaluate(raw, budget, disabled, myBrands) } }
+                withContext(Dispatchers.IO) { runInterruptible { app.engine.evaluate(raw, budget, disabled, myBrands, managed) } }
             }
             var verdict = full ?: local
             // First run only: no allowlist in memory yet. A warning may be a false positive on a
@@ -102,7 +103,7 @@ class InterceptViewModel(application: Application) : AndroidViewModel(applicatio
                     }
                 }
                 if (app.hasAllowlist()) {
-                    val recheck = withContext(Dispatchers.IO) { app.localEngine.evaluate(raw, disabled = disabled, myBrands = myBrands) }
+                    val recheck = withContext(Dispatchers.IO) { app.localEngine.evaluate(raw, disabled = disabled, myBrands = myBrands, managed = managed) }
                     verdict = reconsider(verdict, recheck)
                 }
             }

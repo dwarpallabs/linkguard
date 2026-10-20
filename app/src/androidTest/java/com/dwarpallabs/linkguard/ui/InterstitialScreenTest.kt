@@ -139,6 +139,14 @@ class InterstitialScreenTest {
     }
 
     @Test
+    fun organisationBlockSaysWhoAndKeepsOpenAnyway() {
+        show(InterstitialModel(true, "lg-org-blocked.example", "lg-org-blocked.example", Reason.Managed))
+        compose.onNodeWithTag("title").assertTextContains(res.getString(R.string.interstitial_title_strong))
+        compose.onNodeWithTag("reason").assertTextContains(res.getString(R.string.warn_managed_block))
+        compose.onNodeWithTag("open_anyway").performScrollTo().assertIsDisplayed()
+    }
+
+    @Test
     fun smsLineOnlyWhenTheLinkCameBySms() {
         compose.setContent { LinkguardTheme { InterstitialScreen(brand, {}, {}, fromSms = true) } }
         compose.onNodeWithTag("context_sms").assertTextContains(res.getString(R.string.warn_context_sms))

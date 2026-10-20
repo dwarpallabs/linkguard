@@ -298,6 +298,7 @@ internal fun reasonText(reason: Reason): String = when (reason) {
     is Reason.Campaign -> pluralStringResource(R.plurals.warn_campaign, reason.count, reason.count)
 
     is Reason.DomainAge -> pluralStringResource(R.plurals.warn_domain_age, reason.days, reason.days)
+    Reason.Managed -> stringResource(R.string.warn_managed_block)
     Reason.Generic -> stringResource(R.string.warn_generic)
 }
 

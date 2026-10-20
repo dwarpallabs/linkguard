@@ -2,19 +2,23 @@ package com.dwarpallabs.linkguard.core
 
 import com.dwarpallabs.linkguard.core.TestSupport.corpus
 import com.dwarpallabs.linkguard.core.TestSupport.engine
+import com.dwarpallabs.linkguard.core.TestSupport.managed
 import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.DynamicTest.dynamicTest
 import org.junit.jupiter.api.TestFactory
 
-/** The project contract: every check change must keep both corpus files green. */
+/**
+ * The project contract: every check change must keep both corpus files green. Runs with a test
+ * organisation policy ([TestSupport.managed]), as on a managed phone.
+ */
 class CorpusTest {
 
     @TestFactory
     fun mustBlock(): List<DynamicTest> = corpus("must_block.txt").map { entry ->
         dynamicTest("block ${entry.url}") {
-            val verdict = engine.evaluate(entry.url)
+            val verdict = engine.evaluate(entry.url, managed = managed)
             assertTrue(verdict.score >= Verdict.STRONG_THRESHOLD) {
                 "${entry.note}: score ${verdict.score} < 0.7, signals=${describe(verdict)}"
             }
@@ -32,7 +36,7 @@ class CorpusTest {
     @TestFactory
     fun mustPass(): List<DynamicTest> = corpus("must_pass.txt").map { entry ->
         dynamicTest("pass ${entry.url}") {
-            val verdict = engine.evaluate(entry.url)
+            val verdict = engine.evaluate(entry.url, managed = managed)
             assertTrue(verdict.score < Verdict.SOFT_THRESHOLD) {
                 "${entry.note}: score ${verdict.score} >= 0.3, signals=${describe(verdict)}"
             }
@@ -42,7 +46,7 @@ class CorpusTest {
     @TestFactory
     fun ambiguousIsLoggedNotAsserted(): List<DynamicTest> = corpus("ambiguous.txt").map { entry ->
         dynamicTest("ambiguous ${entry.url}") {
-            val verdict = engine.evaluate(entry.url)
+            val verdict = engine.evaluate(entry.url, managed = managed)
             println("ambiguous ${verdict.level} ${"%.1f".format(verdict.score)} ${entry.url} — ${entry.note} ${describe(verdict)}")
         }
     }

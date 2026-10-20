@@ -1,13 +1,19 @@
 package com.dwarpallabs.linkguard
 
 import android.app.Application
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.ApplicationInfo
 import android.os.SystemClock
 import android.util.Log
+import androidx.core.content.ContextCompat
 import com.dwarpallabs.linkguard.core.EngineData
 import com.dwarpallabs.linkguard.core.HashedAllowlist
 import com.dwarpallabs.linkguard.core.HttpReputationLookup
 import com.dwarpallabs.linkguard.core.LinkEngine
+import com.dwarpallabs.linkguard.core.ManagedPolicy
 import com.dwarpallabs.linkguard.core.MemoryCachedReputation
 import com.dwarpallabs.linkguard.core.RdapClient
 import com.dwarpallabs.linkguard.core.UrlConnectionHttp
@@ -62,11 +68,32 @@ class LinkGuardApp : Application() {
         myBrandsCache = null
     }
 
+    @Volatile
+    private var managedCache: ManagedPolicy? = null
+
+    /**
+     * The organisation's policy, if device management set one (roadmap C5); [ManagedPolicy.NONE]
+     * otherwise. Cached until Android says it changed. Off the main thread.
+     */
+    fun managed(): ManagedPolicy =
+        managedCache ?: ManagedConfig.read(this, data.psl).also { managedCache = it }
+
 
     override fun onCreate() {
         super.onCreate()
         // The ":safeview" process (SafeViewActivity) needs none of this: no lists, no network.
         if (!isMainProcess()) return
+
+        ContextCompat.registerReceiver(
+            this,
+            object : BroadcastReceiver() {
+                override fun onReceive(context: Context, intent: Intent) {
+                    managedCache = null
+                }
+            },
+            IntentFilter(Intent.ACTION_APPLICATION_RESTRICTIONS_CHANGED),
+            ContextCompat.RECEIVER_NOT_EXPORTED,
+        )
 
         val worker = Executors.newSingleThreadExecutor { Thread(it, "engine-data") }
         dataFuture = worker.submit(Callable {

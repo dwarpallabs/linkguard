@@ -19,6 +19,12 @@ object TestSupport {
     }
 
 
+    /** The organisation policy the corpus runs with: test-only websites, as an admin would type them. */
+    val managed: ManagedPolicy by lazy {
+        fun list(name: String) = ManagedPolicy.parseList(resourceLines(name).joinToString("\n"), data.psl)
+        ManagedPolicy(list("fixture_managed_blocked.txt"), list("fixture_managed_allowed.txt"))
+    }
+
     /** Engine with a fake network: shorteners, RDAP and the blocklist server answer from fixtures. */
     val engine: LinkEngine by lazy { LinkEngine(data, http, dates, reputation) }
 

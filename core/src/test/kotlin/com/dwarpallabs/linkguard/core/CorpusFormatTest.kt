@@ -16,7 +16,7 @@ class CorpusFormatTest {
     private val corpusDir = File(System.getProperty("corpus.dir"))
     private val knownChecks = setOf(
         "allowlist", "unwrap", "apk_download", "brand_lookalike",
-        "upi_intent", "domain_age", "reputation", "weird_host",
+        "upi_intent", "domain_age", "reputation", "weird_host", "managed",
     )
     private val schemes = setOf("http", "https", "upi")
 

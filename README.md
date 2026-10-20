@@ -65,6 +65,17 @@ Each source's terms, and the Indian sources we checked but can't use yet, are in
 ## Where the lists live
 The scam blocklist and the safe-site allowlist are kept in the LinkGuard server database, not in this repository. Only the confirmed part of the blocklist is published, 48 hours late (see [Using the data](#using-the-data)). Phones check the blocklist by 4-byte hash prefix and receive the allowlist as signed hashes. The detection rules (look-alike brands, app downloads, unusual addresses, UPI requests) are all here in the open.
 
+## For organisations
+Banks, employers and schools that manage their phones can set LinkGuard through their device-management console (Android managed configuration):
+
+| Key | Type | What it does |
+| --- | --- | --- |
+| `blocked_websites` | text | Websites to warn about, one per line (subdomains included). They get the strong warning, which still offers *Open anyway*. |
+| `allowed_websites` | text | Websites to trust, such as your intranet. They open without a warning; app downloads are still checked. |
+| `keep_checks_on` | true/false | People on the phone cannot switch LinkGuard's checks off. |
+
+The settings stay on the phone; LinkGuard never sends them anywhere. Settings tells the person that their organisation manages LinkGuard.
+
 ## Languages
 LinkGuard follows your phone's language. On Android 13 and newer you can also pick a language just for LinkGuard in *Settings → Apps → LinkGuard → Language*.
 

@@ -89,6 +89,11 @@
             android:name="android.webkit.WebView.EnableSafeBrowsing"
             android:value="false" />
 
+        <!-- Managed configuration for organisations (roadmap C5): lists and forced-on checks, read by ManagedConfig. -->
+        <meta-data
+            android:name="android.content.APP_RESTRICTIONS"
+            android:resource="@xml/app_restrictions" />
+
         <!--
             RISK (default-browser flow): advertises Custom Tabs support
 , so apps that open links in a

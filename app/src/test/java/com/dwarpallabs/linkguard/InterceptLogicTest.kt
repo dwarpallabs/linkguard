@@ -194,6 +194,14 @@ class InterceptLogicTest {
         assertTrue(!model.strong)
     }
 
+    @Test
+    fun organisationBlockBecomesStrongManagedReason() {
+        val policy = com.dwarpallabs.linkguard.core.ManagedPolicy(blocked = listOf("lg-org-blocked.example"))
+        val model = InterstitialModel.from(LinkEngine(data, null, null).evaluate("https://pay.lg-org-blocked.example/", managed = policy))
+        assertEquals(Reason.Managed, model.reason)
+        assertTrue(model.strong)
+    }
+
     private companion object {
         val data: EngineData by lazy { EngineData.loadBundled() }
     }

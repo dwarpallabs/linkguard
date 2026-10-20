@@ -40,3 +40,6 @@ https://rbi.org.in/Scripts/banklinks.aspx	allowlist	allowlisted even if the serv
 https://www.rbi.org.in/upi/mandate-autopay-faq	upi_intent	page about UPI mandates on an allowlisted site, not a payment request
 https://www.google.com/search?q=tez+upi+pay	upi_intent	search about Google Pay, not a payment request
 https://www.npci.org.in/what-we-do/autopay/product-overview	upi_intent	page about UPI AutoPay, not a payment request
+https://sbi-staff-portal.xyz/login	managed	organisation-trusted portal that looks like an SBI lookalike (test fixture policy)
+https://hr.sbi-staff-portal.xyz/leave	managed	subdomain of an organisation-trusted portal (test fixture policy)
+https://lg-org-trusted.example/	managed	organisation-trusted website (test fixture policy)

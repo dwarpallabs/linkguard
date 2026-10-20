@@ -1,0 +1,2 @@
+# Test-only organisation blocklist, as an admin would type it into managed configuration.
+https://lg-org-blocked.example/login   # pasted links keep only the website

@@ -10,6 +10,9 @@ enum class CheckId(val code: String) {
     WEIRD_HOST("weird_host"),
     DOMAIN_AGE("domain_age"),
     REPUTATION("reputation"),
+
+    /** The organisation's own lists, from managed configuration ([ManagedPolicy]). Not a user toggle. */
+    MANAGED("managed"),
 }
 
 /**

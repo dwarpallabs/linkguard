@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Managed configuration for organisations (read by ManagedConfig). Shown in device-management consoles. -->
+<restrictions xmlns:android="http://schemas.android.com/apk/res/android">
+    <restriction
+        android:key="blocked_websites"
+        android:restrictionType="string"
+        android:title="@string/managed_blocked_title"
+        android:description="@string/managed_blocked_desc" />
+    <restriction
+        android:key="allowed_websites"
+        android:restrictionType="string"
+        android:title="@string/managed_allowed_title"
+        android:description="@string/managed_allowed_desc" />
+    <restriction
+        android:key="keep_checks_on"
+        android:restrictionType="bool"
+        android:defaultValue="false"
+        android:title="@string/managed_keep_checks_title"
+        android:description="@string/managed_keep_checks_desc" />
+</restrictions>

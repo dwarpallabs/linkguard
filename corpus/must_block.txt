@@ -35,3 +35,7 @@ http://lg-campaign-three.example/pay?amt=499	reputation	campaign member with a p
 https://is.gd/lgtestmandate	upi_intent	shortener to a UPI autopay mandate (test fixture)
 https://bit.ly/lgtestgpay	upi_intent	shortener to a Google Pay request posing as an SBI refund (test fixture)
 https://is.gd/lgtestphonepe	upi_intent	shortener to a PhonePe request posing as HDFC Bank KYC (test fixture)
+https://lg-org-blocked.example/login	managed	website the organisation marked unsafe (test fixture policy)
+https://pay.lg-org-blocked.example/upi	managed	subdomain of a website the organisation marked unsafe (test fixture policy)
+https://bit.ly/lgtestorg	managed	shortener to a website the organisation marked unsafe (test fixture policy)
+https://sbi-staff-portal.xyz/app/StaffApp.apk	apk_download	app download on an organisation-trusted website is still warned about (test fixture policy)
