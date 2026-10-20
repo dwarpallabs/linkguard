@@ -1,0 +1,52 @@
+name: Publish library
+
+# Publishes linkguard-core and linkguard-data to Maven Central (roadmap C4). Run it by hand, or push
+# a tag lib-v<libVersion>. Central validates the upload; a maintainer then presses Publish on
+# central.sonatype.com. Without the secrets below it builds and checks the bundle, then stops.
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["lib-v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      # Actions are pinned to commit SHAs (supply-chain safety); the comment is the tag.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+
+      - name: Tag matches libVersion
+        if: startsWith(github.ref, 'refs/tags/lib-v')
+        run: |
+          version=$(sed -n 's/^libVersion=//p' gradle.properties)
+          if [ "${GITHUB_REF_NAME}" != "lib-v${version}" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} does not match libVersion=${version} in gradle.properties."
+            exit 1
+          fi
+
+      - name: Tests, corpus and API check
+        run: ./gradlew :core:test :core:checkLegacyAbi --console=plain
+
+      - name: Build and sign
+        env:
+          LIB_SIGNING_KEY: ${{ secrets.LIB_SIGNING_KEY }}
+          LIB_SIGNING_PASSWORD: ${{ secrets.LIB_SIGNING_PASSWORD }}
+        run: ./gradlew :core:publishAllPublicationsToStagingRepository :data:publishAllPublicationsToStagingRepository --console=plain
+
+      - name: Upload to Maven Central
+        env:
+          CENTRAL_TOKEN_USER: ${{ secrets.CENTRAL_TOKEN_USER }}
+          CENTRAL_TOKEN_PASS: ${{ secrets.CENTRAL_TOKEN_PASS }}
+        run: scripts/central_bundle.sh

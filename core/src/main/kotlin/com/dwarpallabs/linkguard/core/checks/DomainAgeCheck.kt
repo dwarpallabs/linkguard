@@ -38,7 +38,7 @@ class MemoryCachedRegistrationDates(
 }
 
 /** Domain registered less than [maxAge] ago: scam sites are usually days old. */
-class DomainAgeCheck(
+internal class DomainAgeCheck(
     private val dates: RegistrationDates,
     private val timeoutMs: Int = 1_500,
     private val now: () -> Instant = Instant::now,

@@ -11,7 +11,7 @@ import com.dwarpallabs.linkguard.core.Signal
 import com.dwarpallabs.linkguard.core.sha256
 
 /** Hard allowlist. A hit makes the engine stop and forward silently. Always scores 0. */
-class AllowlistCheck(private val data: EngineData) : Check {
+internal class AllowlistCheck(private val data: EngineData) : Check {
 
     fun isAllowed(url: NormalisedUrl): Boolean =
         url.isWeb && !url.isIpLiteral &&
@@ -22,7 +22,7 @@ class AllowlistCheck(private val data: EngineData) : Check {
 }
 
 /** Links that download an Android app: the most common Indian scam payload ("install this KYC app"). */
-class ApkDownloadCheck(private val data: EngineData) : Check {
+internal class ApkDownloadCheck(private val data: EngineData) : Check {
 
     override fun run(url: NormalisedUrl): Signal {
         if (!url.isWeb) return Signal.none(CheckId.APK_DOWNLOAD)
@@ -48,7 +48,7 @@ class ApkDownloadCheck(private val data: EngineData) : Check {
 }
 
 /** Host imitates a bank, wallet, courier or government brand. */
-class BrandLookalikeCheck(private val matcher: BrandMatcher) : Check {
+internal class BrandLookalikeCheck(private val matcher: BrandMatcher) : Check {
 
     override fun run(url: NormalisedUrl): Signal {
         if (!url.isWeb || url.isIpLiteral) return Signal.none(CheckId.BRAND_LOOKALIKE)
@@ -71,7 +71,7 @@ class BrandLookalikeCheck(private val matcher: BrandMatcher) : Check {
  *  - the payee's name uses a brand (SBI, an electricity board on the brand list, …) while the UPI ID
  *    has nothing to do with that brand → 0.9: the classic fake-refund trick.
  */
-class UpiIntentCheck(private val matcher: BrandMatcher? = null) : Check {
+internal class UpiIntentCheck(private val matcher: BrandMatcher? = null) : Check {
 
     override fun run(url: NormalisedUrl): Signal {
         if (!url.isUpi) return Signal.none(CheckId.UPI_INTENT)
@@ -121,7 +121,7 @@ class UpiIntentCheck(private val matcher: BrandMatcher? = null) : Check {
  * Hosts real businesses rarely use: raw IPs, `user@host` tricks, very deep subdomains, throwaway TLDs.
  * Weak on its own (0.4); strong (0.8) when the URL also names a brand anywhere.
  */
-class WeirdHostCheck(private val data: EngineData, private val matcher: BrandMatcher) : Check {
+internal class WeirdHostCheck(private val data: EngineData, private val matcher: BrandMatcher) : Check {
 
     override fun run(url: NormalisedUrl): Signal {
         if (!url.isWeb) return Signal.none(CheckId.WEIRD_HOST)
@@ -158,7 +158,7 @@ class WeirdHostCheck(private val data: EngineData, private val matcher: BrandMat
  *    Community reports alone can never produce a strong warning (capped at [COMMUNITY_MAX]).
  * Local list sources (tests, future offline bundle) are consulted first.
  */
-class ReputationCheck(
+internal class ReputationCheck(
     private val data: EngineData,
     private val remote: ReputationLookup? = null,
     private val timeoutMs: Int = 1_500,

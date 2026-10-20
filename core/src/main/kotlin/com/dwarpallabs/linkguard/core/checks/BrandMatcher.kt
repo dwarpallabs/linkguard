@@ -1,6 +1,7 @@
 package com.dwarpallabs.linkguard.core.checks
 
 import com.dwarpallabs.linkguard.core.Brand
+import com.dwarpallabs.linkguard.core.InternalLinkGuardApi
 import com.dwarpallabs.linkguard.core.NormalisedUrl
 import java.text.Normalizer
 
@@ -11,6 +12,7 @@ import java.text.Normalizer
  * never match. Longer keywords also match inside a hyphen-less label (`income-tax-refund` →
  * `incometax`) or one edit away from a token (`phonpe` → `phonepe`).
  */
+@InternalLinkGuardApi
 class BrandMatcher(val brands: List<Brand>) {
 
     enum class Kind(val reason: String) {

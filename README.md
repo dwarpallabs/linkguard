@@ -76,6 +76,15 @@ Banks, employers and schools that manage their phones can set LinkGuard through 
 
 The settings stay on the phone; LinkGuard never sends them anywhere. Settings tells the person that their organisation manages LinkGuard.
 
+## Use the checks in your app
+LinkGuard's checks are a plain Kotlin/JVM library (Apache-2.0) for Android apps and JVM servers:
+
+```kotlin
+implementation("com.dwarpallabs.linkguard:linkguard-core:0.1.0")
+```
+
+It works offline by default and never sends anything unless you turn on an online check. See [core/README.md](core/README.md) for the API, the warning messages and what each online check sends. Commercial apps that want LinkGuard's known-scam lookups need a key: email support@dwarpallabs.com.
+
 ## Languages
 LinkGuard follows your phone's language. On Android 13 and newer you can also pick a language just for LinkGuard in *Settings → Apps → LinkGuard → Language*.
 

@@ -1,0 +1,23 @@
+LinkGuard
+Copyright 2026 Dwarpal Labs
+
+Licensed under the Apache License, Version 2.0 (see LICENSE). This includes
+the linkguard-core and linkguard-data libraries and the curated lists in
+linkguard-data (brands.tsv, shorteners.txt, file_hosts.txt, free_tlds.txt,
+never_allow.txt).
+
+Third-party data bundled in linkguard-data (and the LinkGuard app):
+
+1. Public Suffix List, by Mozilla and contributors
+   https://publicsuffix.org/list/public_suffix_list.dat
+   This Source Code Form is subject to the terms of the Mozilla Public
+   License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   You can obtain one at https://mozilla.org/MPL/2.0/.
+   linkguard/public_suffixes.txt is generated from it (rules converted to
+   ASCII, comments removed). The unmodified source is in the LinkGuard
+   repository at data/src/main/resources/linkguard/public_suffix_list.dat
+   (https://github.com/dwarpallabs/linkguard) and at the URL above.
+
+2. RDAP bootstrap registry for DNS, by IANA
+   https://data.iana.org/rdap/dns.json
+   linkguard/rdap_servers.tsv is generated from it (HTTPS servers only).

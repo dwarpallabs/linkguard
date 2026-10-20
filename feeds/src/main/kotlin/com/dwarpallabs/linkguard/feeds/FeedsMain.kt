@@ -78,6 +78,7 @@ fun main(args: Array<String>) {
     val summary = writer.apply(result, existingAllow, writer.existingBlocklist())
     println("allowlist: +${summary.allowAdded} -${summary.allowRemoved}")
     println("blocklist: ${summary.blockInserted} new, ${summary.blockRefreshed} refreshed, ${summary.blockDeferred} deferred to the next run, ${summary.blockExpired} expired removed")
+    println("blocklist: commercial flag changed on ${summary.commercialChanged} rows")
     summary.feedsSkipped.forEach { println("$it: not applied today (size changed implausibly)") }
 }
 

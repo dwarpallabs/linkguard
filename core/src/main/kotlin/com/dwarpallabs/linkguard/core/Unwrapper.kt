@@ -4,7 +4,7 @@ import java.net.URI
 import java.net.URISyntaxException
 
 /** Where a link really goes after following shortener redirects. */
-data class UnwrapResult(val url: NormalisedUrl, val hops: Int)
+internal data class UnwrapResult(val url: NormalisedUrl, val hops: Int)
 
 /**
  * Follows redirects through known link shorteners (bit.ly, t.co, ...) so every check sees the real
@@ -14,7 +14,7 @@ data class UnwrapResult(val url: NormalisedUrl, val hops: Int)
  * requests and no cookies or Referer. The final destination is never requested: LinkGuard must
  * not touch a possibly malicious server before the user decides to open it.
  */
-class Unwrapper(
+internal class Unwrapper(
     private val http: Http,
     private val data: EngineData,
     private val maxHops: Int = 5,

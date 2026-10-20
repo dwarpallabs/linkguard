@@ -6,7 +6,7 @@ import java.time.OffsetDateTime
 import java.time.format.DateTimeParseException
 
 /** Parses the IANA RDAP bootstrap file (https://data.iana.org/rdap/dns.json). */
-object RdapBootstrap {
+internal object RdapBootstrap {
 
     /** Parses the compact `tld<TAB>https-base-url` file the data module generates from the JSON at build time. */
     fun parseTsv(lines: Sequence<String>): Map<String, String> = lines

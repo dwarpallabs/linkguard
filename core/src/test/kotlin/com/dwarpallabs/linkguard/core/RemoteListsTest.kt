@@ -111,6 +111,21 @@ class RemoteListsTest {
     }
 
     @Test
+    fun apiKeyIsSentOnlyWhenSet() {
+        val sent = mutableListOf<Map<String, String>>()
+        val http = object : Http {
+            override fun head(url: String, timeoutMs: Int): HttpResponse? = null
+            override fun get(url: String, accept: String, timeoutMs: Int, maxBytes: Int, headers: Map<String, String>): HttpResponse? {
+                sent += headers
+                return HttpResponse(200, body = "")
+            }
+        }
+        HttpReputationLookup(http, "https://api.example").lookup(listOf("aaaaaaaa"), 500)
+        HttpReputationLookup(http, "https://api.example", apiKey = "k".repeat(64)).lookup(listOf("aaaaaaaa"), 500)
+        assertEquals(listOf(emptyMap(), mapOf("Authorization" to "Bearer ${"k".repeat(64)}")), sent)
+    }
+
+    @Test
     fun reputationCacheAsksOncePerPrefixUntilExpiry() {
         var calls = 0
         var now = 0L
