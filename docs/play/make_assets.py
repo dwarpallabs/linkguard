@@ -82,7 +82,7 @@ def feature(path):
     body = ImageFont.truetype(FONT, 34)
     d.text((454, 235), "Checks chat and SMS links", font=body, fill=WHITE)
     d.text((454, 280), "for scams before they open.", font=body, fill=WHITE)
-    d.text((454, 352), "23 languages  |  Free · Open source",
+    d.text((454, 352), "28 languages  |  Free · Open source",
            font=ImageFont.truetype(FONT, 24), fill=(199, 210, 254))
     img.convert("RGB").save(path, optimize=True)
 
