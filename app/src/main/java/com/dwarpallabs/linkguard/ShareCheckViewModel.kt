@@ -69,10 +69,10 @@ class ShareCheckViewModel(application: Application) : AndroidViewModel(applicati
             // message is not warned about only because the allowlist has not arrived yet.
             if (!app.hasAllowlist()) waitForAllowlist(app)
             val disabled = Prefs(app).disabledChecks
-            val myBrands = withContext(Dispatchers.IO) { app.myBrands() }
+            val (myBrands, managed) = withContext(Dispatchers.IO) { app.myBrands() to app.managed() }
             val io = Dispatchers.IO.limitedParallelism(PARALLEL_CHECKS)
             val items = found.links.map { link ->
-                async(io) { Item(link, runInterruptible { app.engine.evaluate(link, BUDGET, disabled, myBrands) }) }
+                async(io) { Item(link, runInterruptible { app.engine.evaluate(link, BUDGET, disabled, myBrands, managed) }) }
 
             }.awaitAll()
             _state.value = State.Results(items, found.more)

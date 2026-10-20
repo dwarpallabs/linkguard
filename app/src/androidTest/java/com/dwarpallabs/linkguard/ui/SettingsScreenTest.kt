@@ -4,6 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertIsOff
 import androidx.compose.ui.test.assertIsOn
 import androidx.compose.ui.test.assertTextContains
@@ -93,6 +94,43 @@ class SettingsScreenTest {
             }
         }
         ToggleableChecks.forEach { (check, _) -> compose.onNodeWithTag("toggle_${check.code}").performScrollTo().assertIsOn() }
+    }
+
+    @Test
+    fun notManagedShowsNoNotice() {
+        compose.setContent {
+            LinkguardTheme {
+                HomeScreen(
+                    isDefault = true, browsers = emptyList(), selected = null, disabledChecks = emptySet(),
+                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> }, onOpenHowItWorks = {}, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
+                )
+            }
+        }
+        compose.onNodeWithTag("managed_notice").assertDoesNotExist()
+        compose.onNodeWithTag("managed_checks_locked").assertDoesNotExist()
+    }
+
+    @Test
+    fun organisationKeepsChecksOnAndLockedSwitchesIgnoreTaps() {
+        val res = InstrumentationRegistry.getInstrumentation().targetContext.resources
+        var toggles = 0
+        compose.setContent {
+            LinkguardTheme {
+                HomeScreen(
+                    isDefault = true, browsers = emptyList(), selected = null, disabledChecks = setOf(CheckId.DOMAIN_AGE),
+                    onSetDefault = {}, onSelectBrowser = {}, onToggleCheck = { _, _ -> toggles++ }, onOpenHowItWorks = {}, onOpenReport = {}, onOpenFeedback = {}, onOpenAbout = {},
+                    managed = true, checksLocked = true,
+                )
+            }
+        }
+        compose.onNodeWithTag("managed_notice").performScrollTo()
+            .assertTextContains(res.getString(com.dwarpallabs.linkguard.R.string.managed_notice))
+        val toggle = compose.onNodeWithTag("toggle_domain_age").performScrollTo()
+        toggle.assertIsOn().assertIsNotEnabled()
+        toggle.performClick()
+        assertEquals(0, toggles)
+        compose.onNodeWithTag("managed_checks_locked").performScrollTo()
+            .assertTextContains(res.getString(com.dwarpallabs.linkguard.R.string.managed_checks_locked))
     }
 
     @Test

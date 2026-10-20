@@ -21,6 +21,7 @@ import androidx.lifecycle.lifecycleScope
 import com.dwarpallabs.linkguard.browser.BrowserApp
 import com.dwarpallabs.linkguard.browser.Browsers
 import com.dwarpallabs.linkguard.core.CheckId
+import com.dwarpallabs.linkguard.core.ManagedPolicy
 import com.dwarpallabs.linkguard.ui.AboutScreen
 import com.dwarpallabs.linkguard.ui.FeedbackScreen
 import com.dwarpallabs.linkguard.ui.HomeScreen
@@ -61,6 +62,9 @@ class MainActivity : ComponentActivity() {
 
     /** What LinkGuard learned on this phone, for Settings. */
     private var memory by mutableStateOf(MemoryUi())
+
+    /** What the organisation set through device management, if anything. */
+    private var managed by mutableStateOf(ManagedPolicy.NONE)
 
     private val app get() = application as LinkGuardApp
 
@@ -123,6 +127,8 @@ class MainActivity : ComponentActivity() {
                             app.memory.clearTrusted()
                             refreshMemory()
                         },
+                        managed = managed.isActive,
+                        checksLocked = managed.keepChecksOn,
                     )
                     Screen.ABOUT -> AboutScreen(
                         version = appVersion(),
@@ -163,6 +169,7 @@ class MainActivity : ComponentActivity() {
         selected = Browsers.target(this)
         disabledChecks = prefs.disabledChecks
         refreshMemory()
+        refreshManaged()
         // Keep a card that is sending or showing its thank-you; otherwise ask what is pending now.
         if (questionStatus == ReportStatus.IDLE || questionStatus == ReportStatus.FAILED) {
             question = AfterOpenStore.of(this).pending()
@@ -207,6 +214,10 @@ class MainActivity : ComponentActivity() {
                 MemoryUi(app.memory.trustedCount(), app.myBrands().sorted())
             }
         }
+    }
+
+    private fun refreshManaged() {
+        lifecycleScope.launch { managed = withContext(Dispatchers.IO) { app.managed() } }
     }
 
     /** Sends the report only now, because the user tapped Send report. */

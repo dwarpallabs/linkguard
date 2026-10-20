@@ -1,0 +1,2 @@
+# Test-only organisation allowlist: an internal portal that looks like a brand lookalike.
+*.sbi-staff-portal.xyz, lg-org-trusted.example

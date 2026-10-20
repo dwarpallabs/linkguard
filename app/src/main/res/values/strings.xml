@@ -212,4 +212,20 @@
 
     <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
     <string name="confirmed_by">Confirmed as a scam by %1$s.</string>
+
+    <!-- Managed mode (roadmap C5): the user's organisation (employer, bank branch, school) set LinkGuard through
+         device management. Reason on the strong warning for a website the organisation listed; Open anyway stays. -->
+    <string name="warn_managed_block">Your organisation has marked this website as unsafe.</string>
+    <!-- Settings, above the checks, when the organisation set anything. -->
+    <string name="managed_notice">Your organisation manages some LinkGuard settings on this phone.</string>
+    <!-- Settings, under the check switches, when the organisation keeps them on (the switches are greyed out). -->
+    <string name="managed_checks_locked">Your organisation keeps these checks on.</string>
+
+    <!-- Managed configuration as device-management consoles show it to IT admins (app_restrictions.xml). English only. -->
+    <string name="managed_blocked_title" translatable="false">Websites to warn about</string>
+    <string name="managed_blocked_desc" translatable="false">One website per line, for example example.com. Its subdomains are included. LinkGuard shows a strong warning that still offers Open anyway. Stays on the phone.</string>
+    <string name="managed_allowed_title" translatable="false">Websites to trust</string>
+    <string name="managed_allowed_desc" translatable="false">One website per line, for example intranet.example.com. Its subdomains are included. LinkGuard opens them without a warning, but still checks app downloads. Websites to warn about take priority.</string>
+    <string name="managed_keep_checks_title" translatable="false">Keep all checks on</string>
+    <string name="managed_keep_checks_desc" translatable="false">People using this phone cannot switch LinkGuard’s checks off.</string>
 </resources>

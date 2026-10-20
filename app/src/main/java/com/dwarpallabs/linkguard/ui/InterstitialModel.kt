@@ -34,6 +34,8 @@ data class InterstitialModel(
         /** Part of a confirmed group of scam websites that [count] people reported this week. Strong. */
         data class Campaign(val count: Int) : Reason
         data class DomainAge(val days: Int) : Reason
+        /** The user's organisation marked the website as unsafe (managed configuration). Strong. */
+        data object Managed : Reason
         data object Generic : Reason
     }
 
@@ -61,6 +63,7 @@ data class InterstitialModel(
                 "warn_campaign" -> details["count"]?.toIntOrNull()?.let { Reason.Campaign(it) } ?: Reason.Reputation()
 
 
+                "warn_managed_block" -> Reason.Managed
                 "warn_domain_age" -> details["age_days"]?.toIntOrNull()?.let { Reason.DomainAge(it) } ?: Reason.Generic
                 else -> Reason.Generic
             }

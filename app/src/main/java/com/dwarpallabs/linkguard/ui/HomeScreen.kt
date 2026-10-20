@@ -92,6 +92,10 @@ fun HomeScreen(
     memory: MemoryUi = MemoryUi(),
     onForgetBrands: () -> Unit = {},
     onForgetTrusted: () -> Unit = {},
+    /** The organisation set LinkGuard through device management (roadmap C5): say so above the checks. */
+    managed: Boolean = false,
+    /** The organisation keeps every check on: the switches show on and cannot be changed. */
+    checksLocked: Boolean = false,
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { padding ->
         Column(
@@ -166,14 +170,32 @@ fun HomeScreen(
             }
 
             SectionHeading(stringResource(R.string.settings_checks_heading))
+            if (managed) {
+                Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)) {
+                    Text(
+                        stringResource(R.string.managed_notice),
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(16.dp).testTag("managed_notice"),
+                    )
+                }
+            }
             Column {
                 ToggleableChecks.forEach { (check, label) ->
                     CheckRow(
                         check = check,
                         label = label,
                         description = CheckDescriptions[check],
-                        enabled = check !in disabledChecks,
+                        enabled = checksLocked || check !in disabledChecks,
+                        locked = checksLocked,
                         onToggle = { onToggleCheck(check, it) },
+                    )
+                }
+                if (checksLocked) {
+                    Text(
+                        stringResource(R.string.managed_checks_locked),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.testTag("managed_checks_locked"),
                     )
                 }
             }
@@ -314,11 +336,19 @@ internal fun isRtl(): Boolean = LocalLayoutDirection.current == LayoutDirection.
 private fun downRotation() = if (isRtl()) -90f else 90f
 
 @Composable
-private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes description: Int?, enabled: Boolean, onToggle: (Boolean) -> Unit) {
+private fun CheckRow(
+    check: CheckId,
+    @StringRes label: Int,
+    @StringRes description: Int?,
+    enabled: Boolean,
+    onToggle: (Boolean) -> Unit,
+    /** Set by the organisation: shown, read out, but not changeable. */
+    locked: Boolean = false,
+) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .toggleable(value = enabled, onValueChange = onToggle, role = Role.Switch)
+            .toggleable(value = enabled, enabled = !locked, onValueChange = onToggle, role = Role.Switch)
             .heightIn(min = 64.dp)
             .padding(vertical = 8.dp)
             .testTag("toggle_${check.code}"),
@@ -334,7 +364,7 @@ private fun CheckRow(check: CheckId, @StringRes label: Int, @StringRes descripti
                 )
             }
         }
-        Switch(checked = enabled, onCheckedChange = null)
+        Switch(checked = enabled, onCheckedChange = null, enabled = !locked)
     }
 }
 

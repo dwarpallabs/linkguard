@@ -208,4 +208,9 @@
 
     <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
     <string name="confirmed_by">%1$s इत्यनेन एषा वञ्चना इति निश्चितम्।</string>
+
+    <!-- Managed mode (roadmap C5) -->
+    <string name="warn_managed_block">भवतः संस्थया एतत् जालस्थानम् असुरक्षितम् इति अङ्कितम्।</string>
+    <string name="managed_notice">भवतः संस्था अस्यां दूरवाण्यां LinkGuard इत्यस्य कानिचन सेटिङ्ग्स् नियन्त्रयति।</string>
+    <string name="managed_checks_locked">भवतः संस्था एतानि परीक्षणानि सक्रियाणि स्थापयति।</string>
 </resources>

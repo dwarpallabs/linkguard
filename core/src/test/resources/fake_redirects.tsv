@@ -10,3 +10,4 @@ bit.ly/lgtest-irctc	https://www.irctc.co.in/nget/train-search
 is.gd/lgtestmandate	upi://mandate?pa=autopay.desk@ybl&pn=Loan%20Settlement&am=1999&mn=Monthly
 bit.ly/lgtestgpay	tez://upi/pay?pa=refund.helpdesk@axl&pn=SBI%20Refund%20Cell&am=1
 is.gd/lgtestphonepe	phonepe://pay?pa=bill.update@ibl&pn=HDFC%20Bank%20KYC&am=10
+bit.ly/lgtestorg	https://lg-org-blocked.example/offer

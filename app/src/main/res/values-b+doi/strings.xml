@@ -209,4 +209,9 @@
 
     <!-- Under the reason on a known-scam warning when a partner (a bank's or telco's fraud desk) confirmed it (roadmap C2). %1$s = partner name. -->
     <string name="confirmed_by">%1$s ने इसदे ठग्गी होने दी पुश्टी कीती ऐ।</string>
+
+    <!-- Managed mode (roadmap C5) -->
+    <string name="warn_managed_block">तुंदी संस्था ने इस वेबसाइट गी असुरक्षत दस्सेआ ऐ।</string>
+    <string name="managed_notice">तुंदी संस्था इस फोन पर LinkGuard दियां किश सैटिंग्ज़ संभालदी ऐ।</string>
+    <string name="managed_checks_locked">तुंदी संस्था इनें जांचें गी चालू रखदी ऐ।</string>
 </resources>
