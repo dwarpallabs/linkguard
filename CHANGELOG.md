@@ -2,7 +2,7 @@
 
 All notable changes to LinkGuard. Versions follow the GitHub releases.
 
-## Unreleased
+## 0.4.0 — 2026-10-20
 
 ### Added
 - **Check with LinkGuard** in the share sheet: share any message to LinkGuard to see a verdict for every link in it, including `wa.me`, `t.me` and UPI payment links, links glued to Hindi or Tamil words, and links broken up with invisible characters. Each result can be copied (website name only) or reported. The message itself never leaves the phone.
