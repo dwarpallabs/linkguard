@@ -82,10 +82,11 @@ configure<PublishingExtension> {
     }
 }
 
-val signingKey = providers.environmentVariable("LIB_SIGNING_KEY")
-if (signingKey.isPresent) {
+// GitHub Actions sets a missing secret to an empty string, so blank counts as "no key".
+val signingKey = providers.environmentVariable("LIB_SIGNING_KEY").orNull?.takeIf { it.isNotBlank() }
+if (signingKey != null) {
     configure<SigningExtension> {
-        useInMemoryPgpKeys(signingKey.get(), providers.environmentVariable("LIB_SIGNING_PASSWORD").orNull)
+        useInMemoryPgpKeys(signingKey, providers.environmentVariable("LIB_SIGNING_PASSWORD").orNull)
         sign(the<PublishingExtension>().publications["library"])
     }
 }
