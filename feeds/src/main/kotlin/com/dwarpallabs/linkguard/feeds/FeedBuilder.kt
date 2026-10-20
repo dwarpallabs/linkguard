@@ -15,6 +15,8 @@ data class FeedResult(
      * them first. Only these may be served to paying customers of the keyed lookup tier.
      */
     val commercialHosts: Set<String> = emptySet(),
+    /** A commercial-safe feed was not downloaded this run, so [commercialHosts] may be incomplete. */
+    val commercialFeedsMissing: Boolean = false,
 )
 
 /**
@@ -78,7 +80,7 @@ class FeedBuilder(
         }
         stats["block_hosts"] = hosts.size
         stats["block_hosts_commercial"] = commercial.size
-        return FeedResult(hosts, allow, stats, commercial)
+        return FeedResult(hosts, allow, stats, commercial, commercialFeedsMissing = !feeds.keys.containsAll(COMMERCIAL_FEEDS))
     }
 
     companion object {

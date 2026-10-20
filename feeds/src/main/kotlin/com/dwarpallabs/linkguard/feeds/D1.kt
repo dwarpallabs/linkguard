@@ -161,8 +161,9 @@ class ListWriter(
             )
         }
         // Commercial flag: written only where it changed (D1 bills every row written). A host loses it
-        // only when no commercial-safe feed was skipped today, so a skipped feed never strips it.
-        val commercialSkipped = skipped.any { it in FeedBuilder.COMMERCIAL_FEEDS }
+        // only when every commercial-safe feed was downloaded and applied today, so a failed download
+        // or a skipped feed never strips it.
+        val commercialSkipped = result.commercialFeedsMissing || skipped.any { it in FeedBuilder.COMMERCIAL_FEEDS }
         val flags = wanted.keys.mapNotNull { h ->
             val row = existingBlock[h]?.takeIf { it.source == "feed" } ?: return@mapNotNull null
             val now = h in result.commercialHosts

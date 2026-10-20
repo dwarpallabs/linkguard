@@ -162,6 +162,17 @@ class FeedsTest {
     }
 
     @Test
+    fun aMissingCommercialFeedNeverClearsTheFlag() {
+        val db = FakeDb()
+        val existing = mapOf("lg-both.example" to ListWriter.Listed("feed", "urlhaus", t, commercial = true))
+        val result = FeedBuilder(data, neverAllow).build(linkedMapOf("urlhaus" to listOf("http://lg-both.example/a.apk")), emptyList())
+        assertTrue(result.commercialFeedsMissing)
+        val summary = ListWriter(db, now = { t }).apply(result, emptyMap(), existing)
+        assertEquals(0, summary.commercialChanged)
+        assertFalse(db.statements.any { "SET commercial = 0" in it })
+    }
+
+    @Test
     fun writerInsertsOnlyNewHostsAndRefreshesWeekOldOnes() {
         val db = FakeDb()
         val existing = mapOf(
