@@ -18,9 +18,13 @@ VERSION=$(sed -n 's/^libVersion=//p' gradle.properties)
 rm -f "$BUNDLE"
 # Central builds maven-metadata.xml itself; it must not be in the bundle.
 (cd "$STAGING" && zip -qrX "../central-bundle.zip" . -x '*maven-metadata*')
-files=$(unzip -Z1 "$BUNDLE" | grep -cv '/$')
-unsigned=$(unzip -Z1 "$BUNDLE" | grep -E '\.(jar|pom|module)$' | while read -r f; do
-    unzip -Z1 "$BUNDLE" | grep -qxF "$f.asc" || echo "$f"; done | wc -l | tr -d ' ')
+# List once: piping unzip into an early-exiting grep -q would fail under pipefail (SIGPIPE).
+listing=$(unzip -Z1 "$BUNDLE")
+files=$(grep -cv '/$' <<<"$listing")
+unsigned=0
+while read -r f; do
+    grep -qxF "$f.asc" <<<"$listing" || unsigned=$((unsigned + 1))
+done < <(grep -E '\.(jar|pom|module)$' <<<"$listing")
 echo "Bundle for $VERSION: $files files, $unsigned unsigned."
 
 if [ "${1:-}" = "--dry-run" ] || [ -z "${CENTRAL_TOKEN_USER:-}" ]; then
